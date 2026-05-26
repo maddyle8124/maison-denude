@@ -19,6 +19,7 @@
 | **8. Cách làm việc** | Quy trình họp, bàn giao và quyền sở hữu nội dung |
 | **9. Ngoài phạm vi** | Những gì không thuộc hợp đồng này |
 | **10. Kết quả kỳ vọng — Trước và Sau** | Hành trình khách hàng trước và sau khi triển khai — từ nhận biết đến chuyển đổi |
+| **11. Câu hỏi để trao đổi thêm** | Một số hướng cần xác nhận trước khi bắt đầu |
 
 ---
 
@@ -28,7 +29,7 @@ Maison Denude đã tạo dựng được chỗ đứng thực sự trong phân k
 
 **Vấn đề cốt lõi:** Toàn bộ sức mạnh đó đang tồn tại ngoài tầm kiểm soát của thương hiệu. Chưa có hạ tầng dữ liệu để đo lường, chưa có nội dung SEO để giữ chân người tìm kiếm, và chưa có hiểu biết hệ thống về thị trường nào ở nước ngoài thực sự sẵn sàng cho Maison Denude.
 
-**Giải pháp của chúng tôi:**
+**Giải pháp của team:**
 
 Thiệu xây dựng hạ tầng số và SEO để Maison Denude có dữ liệu thực và hiện diện có kiểm soát trên Google. Song song, Maddy phân tích thị trường quốc tế và xác định 3 thị trường phù hợp nhất dựa trên dữ liệu, không phải cảm tính. Toàn bộ kết quả được tổng hợp thành một Digital Marketing Playbook với lộ trình hành động cụ thể cho từng thị trường trọng điểm. Kết thúc 6 tuần, Maison Denude có đủ nền tảng kỹ thuật, hiểu biết thị trường và kế hoạch triển khai để bắt đầu tiếp cận khách hàng quốc tế một cách có hệ thống và đo lường được.
 
@@ -123,9 +124,9 @@ Thông số targeting lấy trực tiếp từ kết quả nghiên cứu. Cài �
 Nếu ngân sách cho phép, Playbook cũng đề xuất hướng hợp tác với thương hiệu khác hoặc KOL tại từng thị trường, dựa trên chân dung đối tượng đã xác định trong nghiên cứu.
 
 **4. Giải pháp ứng dụng công nghệ (Digital Application Solution)**
-Ba thành phần trên được thiết kế để có thể triển khai theo cách truyền thống. Phần này mở rộng thêm một lớp: làm thế nào để deliver cả ba nhanh hơn và với ít nguồn lực hơn bằng công nghệ.
+Ba thành phần trên có thể triển khai theo cách truyền thống. Phần này bổ sung thêm một lớp: tự động hoá quy trình và tạo content hàng loạt bằng tool để deliver cả ba nhanh hơn với ít nguồn lực hơn.
 
-Maddy đề xuất các use case cụ thể — ví dụ: AI tự động cắt video từ footage thô, tự động thêm phụ đề theo vùng ngôn ngữ, lên lịch đăng tải đồng thời trên nhiều kênh — và đánh giá tính khả thi của từng giải pháp trong bối cảnh thực tế của Maison Denude. Nếu các use case được xác nhận phù hợp, việc triển khai sẽ được thực hiện trong Giai đoạn 2 với phí riêng *(xem mục 7)*.
+Maddy đề xuất các use case phù hợp với thực tế của Maison Denude. Nếu được xác nhận, việc triển khai sẽ thuộc Giai đoạn 2 với phí riêng *(xem mục 7)*.
 
 ---
 
@@ -140,7 +141,7 @@ Maddy đề xuất các use case cụ thể — ví dụ: AI tự động cắt 
 | **Tuần 5** | Điều chỉnh | Chỉnh sửa theo phản hồi | Hoàn thiện Playbook + giải pháp ứng dụng công nghệ | Thứ 7, 15:00 — Phản hồi & thống nhất |
 | **Tuần 6** | Hoàn thiện & bàn giao | Kiểm tra SEO cuối kỳ | Hoàn thiện Playbook + handover chuyển giao | Thứ 7, 15:00 — Đánh giá & bàn giao |
 
-> **Lịch cố định:** Thứ 7, 15:00 · 30 phút / buổi · mỗi tuần, ngoại trừ Tuần 2.
+> **Lịch đề xuất:** Thứ 7, 15:00 · 30 phút / buổi · mỗi tuần, ngoại trừ Tuần 2 *(chờ xác nhận từ Maison Denude trước khi chốt)*.
 
 ---
 
@@ -214,12 +215,7 @@ Giai đoạn 2 do **Maddy và Matthew** phụ trách chính, bao gồm hai phầ
 **Digital Automation & Mass Content Generation** *(Maddy + Matthew)*
 Triển khai các giải pháp ứng dụng công nghệ đã đề xuất trong mục 2.3.4: tự động hoá quy trình tạo nội dung theo vùng — cắt video, thêm phụ đề đa ngôn ngữ, lên lịch đăng tải đa kênh. Mức phí thay đổi tùy theo số lượng giải pháp được triển khai:
 
-| Phạm vi | Phí ước tính |
-|---------|-------------|
-| SEO maintenance + 1 giải pháp automation | ~1,500,000 VND / tháng |
-| SEO maintenance + 2–3 giải pháp automation | 2,000,000 – 3,000,000 VND / tháng |
-
-*Chi phí trên là phí nhân công. Phí công cụ (nếu phát sinh) sẽ được thông báo và xin phê duyệt trước — không có khoản phát sinh ngoài dự kiến.*
+Phí cụ thể sẽ được trao đổi và xác nhận tùy theo số lượng giải pháp Maison Denude lựa chọn triển khai.
 
 ---
 
@@ -262,10 +258,16 @@ IG / Facebook (organic + ads)
          ↓
   Chờ phản hồi — phụ thuộc vào giờ online của team
          ↓
-  Nếu chờ lâu hoặc không có hướng dẫn rõ ràng → quên → mất khách
+  ┌─────────────────────────────────────────┐
+  │ Chờ lâu / không có phản hồi kịp thời   │──→ ✗ Quên → Rời đi → Mất khách
+  └─────────────────────────────────────────┘
+         ↓ (nếu team phản hồi kịp)
+  Trao đổi qua lại để chốt lịch hẹn
+         ↓
+  Đặt lịch — nếu khách vẫn còn hứng thú
 ```
 
-Phễu hẹp. CTA không đủ mạnh — khách xem xong nhưng không biết bước tiếp theo là gì. Tốc độ chuyển đổi phụ thuộc hoàn toàn vào phản hồi thủ công và sự chủ động của khách.
+Phễu hẹp. CTA không đủ mạnh — khách xem xong nhưng không biết bước tiếp theo là gì. Phần lớn khách rời đi ngay tại điểm chờ phản hồi.
 
 ---
 
@@ -296,4 +298,15 @@ LinkedIn · RedNote (小红书) · Google Ads · Google Search (SEO)
 Phễu nhận biết rộng hơn nhờ phân phối đa kênh. Phễu chuyển đổi nhanh hơn vì website trở thành điểm đến tự phục vụ thay vì phụ thuộc vào inbox. Toàn bộ được đo lường để đưa ra quyết định dựa trên dữ liệu thực.
 
 **Định hướng phát triển website:**
-Trong phạm vi Phase 1, Playbook sẽ bao gồm đề xuất cụ thể để website trở thành một trung tâm chuyển đổi — bao gồm gợi ý cấu trúc nội dung theo ngôn ngữ từng thị trường và luồng điều hướng tối ưu cho việc đặt lịch. Việc triển khai kỹ thuật (tích hợp form đặt lịch, localization theo vùng) là add-on có thể thực hiện song song hoặc ngay sau Phase 1 tùy theo nhu cầu và nguồn lực của Maison Denude.
+Trong phạm vi Giai đoạn 1, Playbook sẽ bao gồm đề xuất cụ thể để website trở thành một trung tâm chuyển đổi — bao gồm gợi ý cấu trúc nội dung theo ngôn ngữ từng thị trường và luồng điều hướng tối ưu cho việc đặt lịch. Việc triển khai kỹ thuật (tích hợp form đặt lịch, localization theo vùng) là add-on có thể thực hiện song song hoặc ngay sau Giai đoạn 1.
+
+---
+
+## 11. Một vài câu hỏi để trao đổi thêm
+
+Trước khi chính thức bắt đầu, team muốn xác nhận thêm một số hướng để đảm bảo proposal phản ánh đúng mong muốn của Maison Denude:
+
+- **Our Clients / Our People** — Maison Denude có muốn hiển thị những người nổi tiếng đã mặc thiết kế của brand (Chi Pu, Băng Di, Văn Mai Hương...) trên website dưới dạng một mục riêng không? Đây có thể là một điểm nhấn tạo trust rất mạnh với khách quốc tế.
+- **Trang đặt lịch** — Có cân nhắc tích hợp form đặt lịch trực tiếp trên website không, để khách không cần qua inbox?
+- **Website đa ngôn ngữ** — Hiển thị nội dung theo vùng (tiếng Anh, Trung, Hàn) có phải là ưu tiên muốn triển khai sớm không?
+- **Ngân sách** — Mức phí đề xuất ở trên có phù hợp không, hay cần điều chỉnh để phù hợp hơn với kế hoạch hiện tại?
