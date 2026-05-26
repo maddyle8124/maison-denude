@@ -211,7 +211,7 @@ Nếu Maison Denude muốn có người thiết lập và vận hành thay vì t
 
 | Tài nguyên | Cần cho | Tuần cần có |
 |-----------|---------|-------------|
-| Quyền truy cập quản trị website (CMS + hosting) | Cài đặt GTM/GA4, đăng bài | Tuần 1 |
+| Quyền truy cập quản trị website | Cài đặt GTM/GA4, đăng bài | Tuần 1 |
 | Nội dung blog (bản thảo hoặc brief) | Team đăng tải & tối ưu | Tuần 1–2 |
 | Tài liệu nghiên cứu cũ (nếu có) | Nền tảng phân tích thị trường | Tuần 1 |
 | Dữ liệu thị trường Dubai / số liệu cũ | Khởi động nghiên cứu Dubai | Tuần 1 |
