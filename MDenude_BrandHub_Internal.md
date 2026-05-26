@@ -4,6 +4,18 @@
 
 ---
 
+## 0. Ghi chú nội bộ — Upsell & Sales Signals
+
+**Signal: Mass video creation**
+Nếu founder đề cập muốn chủ động trong việc sản xuất video hàng loạt → đây là tín hiệu rõ để đề xuất build tool. Chuyển từ "đề xuất use case" sang "chúng tôi build tool riêng cho Maison Denude" — charge riêng, phạm vi mở rộng.
+
+**Khi gửi proposal — kèm theo tin nhắn nhắc đến:**
+- Những người nổi tiếng đã mention Maison Denude (Chi Pu, Băng Di, Văn Mai Hương...) → có thể xuất hiện trên trang chủ website
+- Trang booking trực tiếp trên website — khách không cần DM để đặt lịch
+- Website đa ngôn ngữ theo vùng — khách Trung thấy tiếng Trung, khách Hàn thấy tiếng Hàn
+
+---
+
 ## 1. Brand Snapshot
 
 | | |
