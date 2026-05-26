@@ -18,6 +18,7 @@
 | **7. Chi phí** | Cấu trúc phí Giai đoạn 1 và Giai đoạn 2 |
 | **8. Cách làm việc** | Quy trình họp, bàn giao và quyền sở hữu nội dung |
 | **9. Ngoài phạm vi** | Những gì không thuộc hợp đồng này |
+| **10. Kết quả kỳ vọng — Trước và Sau** | Hành trình khách hàng trước và sau khi triển khai — từ nhận biết đến chuyển đổi |
 
 ---
 
@@ -263,3 +264,52 @@ Giai đoạn 2 bao gồm duy trì định kỳ kết hợp với vận hành cá
 ---
 
 *Mọi thắc mắc hoặc điều chỉnh về phạm vi — vui lòng liên hệ trước khi ký xác nhận.*
+
+---
+
+## 10. Kết quả kỳ vọng — Hành trình khách hàng Trước và Sau
+
+### Trước
+
+```
+IG / Facebook (organic)
+         ↓
+    Nhắn tin DM
+         ↓
+  Chờ phản hồi — phụ thuộc vào giờ online của team
+         ↓
+  Đặt lịch — nếu khách còn hứng thú sau thời gian chờ
+```
+
+Phễu hẹp, một chiều, không đo được. Tốc độ chuyển đổi phụ thuộc hoàn toàn vào phản hồi thủ công.
+
+---
+
+### Sau
+
+```
+Meta Ads (targeted theo từng thị trường)
+LinkedIn · RedNote (小红书) · Google Ads · Google Search (SEO)
+                        ↓
+           Website — Single Source of Truth
+      Khách Trung Quốc thấy nội dung tiếng Trung
+      Khách Hàn Quốc thấy nội dung tiếng Hàn
+                        ↓
+   Khám phá thiết kế · Đọc blog · Xem editorial · Tìm hiểu quy trình bespoke
+                        ↓
+        Đặt lịch trực tiếp — không cần chờ reply inbox
+                        ↓
+        Toàn bộ hành trình được theo dõi và đo lường
+```
+
+| Giai đoạn | Trước | Sau |
+|-----------|-------|-----|
+| **Nhận biết** | IG/FB organic — chỉ tiếp cận được tệp đang follow | Meta Ads, LinkedIn, RedNote, Google Ads, SEO — phân phối chủ động đến đúng thị trường và đúng tệp khán giả |
+| **Tìm hiểu** | Inbox DM, không có nơi để khám phá thêm | Website là trung tâm — thiết kế, quy trình, editorial, blog ở một nơi; nội dung hiển thị theo ngôn ngữ từng thị trường |
+| **Chuyển đổi** | Chờ phản hồi thủ công, dễ mất khách trong thời gian chờ | Đặt lịch trực tiếp trên website, khách ra quyết định theo nhịp của họ |
+| **Dữ liệu** | Không đo được — không biết ai đã ghé, nhìn gì, rời đi ở đâu | Toàn bộ hành trình được trace qua GTM và GA4 — biết kênh nào đang có traction, thị trường nào đang phản hồi |
+
+Phễu nhận biết rộng hơn nhờ phân phối đa kênh. Phễu chuyển đổi nhanh hơn vì website trở thành điểm đến tự phục vụ thay vì phụ thuộc vào inbox. Toàn bộ được đo lường để đưa ra quyết định dựa trên dữ liệu thực.
+
+**Định hướng phát triển website:**
+Trong phạm vi Phase 1, Playbook sẽ bao gồm đề xuất cụ thể để website trở thành một trung tâm chuyển đổi — bao gồm gợi ý cấu trúc nội dung theo ngôn ngữ từng thị trường và luồng điều hướng tối ưu cho việc đặt lịch. Việc triển khai kỹ thuật (tích hợp form đặt lịch, localization theo vùng) là add-on có thể thực hiện song song hoặc ngay sau Phase 1 tùy theo nhu cầu và nguồn lực của Maison Denude.
