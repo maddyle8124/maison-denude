@@ -5,20 +5,36 @@
 
 ---
 
+## Mục lục
+
+| Phần | Nội dung |
+|------|---------|
+| **1. Bức tranh hiện tại** | Vị thế hiện tại của Maison Denude, vấn đề cốt lõi và mục tiêu của dự án |
+| **2. Phạm vi công việc** | Ba hướng triển khai song song: SEO & hạ tầng số, Global Market Analytics, và Digital Marketing Playbook |
+| **3. Timeline & Lịch làm việc** | Kế hoạch 6 tuần theo từng giai đoạn, phân công và lịch họp cố định |
+| **4. Sản phẩm bàn giao** | Danh sách cụ thể các đầu ra của từng thành viên |
+| **5. KPIs** | Chỉ số đánh giá: bàn giao và triển khai thực tế |
+| **6. Yêu cầu từ Maison Denude** | Tài nguyên và quyền truy cập cần được cung cấp để đảm bảo tiến độ |
+| **7. Chi phí** | Cấu trúc phí Giai đoạn 1 và Giai đoạn 2 |
+| **8. Cách làm việc** | Quy trình họp, bàn giao và quyền sở hữu nội dung |
+| **9. Ngoài phạm vi** | Những gì không thuộc hợp đồng này |
+
+---
+
 ## 1. Bức tranh hiện tại
 
 Maison Denude đã tạo dựng được chỗ đứng thực sự trong phân khúc thời trang cao cấp tại Việt Nam — được lựa chọn bởi Chi Pu (Vạn Xuân Awards), Băng Di (WeChoice), Văn Mai Hương (MV *Vùng Xám*), Chau Bui, và xuất hiện trên L'Officiel Vietnam, ELLE Vietnam, Marie Claire. Đây là nền tảng truyền thông tự nhiên mà nhiều thương hiệu phải mất nhiều năm mới xây dựng được.
 
 **Vấn đề cốt lõi:** Toàn bộ sức mạnh đó đang tồn tại ngoài tầm kiểm soát của thương hiệu. Chưa có hạ tầng dữ liệu để đo lường, chưa có nội dung SEO để giữ chân người tìm kiếm, và chưa có hiểu biết hệ thống về thị trường nào ở nước ngoài thực sự sẵn sàng cho Maison Denude.
 
-**Để giải quyết điều này, chúng tôi triển khai 3 hướng song song:**
+**Giải pháp của chúng tôi:**
 
-Thiệu xây dựng toàn bộ hạ tầng số — từ hệ thống tracking, SEO, đến backlink — để thương hiệu bắt đầu thu dữ liệu thực và hiện diện có kiểm soát trên Google. Đồng thời, Maddy phân tích thị trường quốc tế để xác định đâu là 3 thị trường thực sự phù hợp, không chọn theo cảm tính. Toàn bộ kết quả đó — dữ liệu từ khóa, khoảng trống cạnh tranh, chân dung khách hàng từng thị trường — được tổng hợp thành một Digital Marketing Playbook: kế hoạch hành động cụ thể để Maison Denude tự triển khai sau khi nhận bàn giao, hoặc mở rộng nhanh hơn nếu có hỗ trợ kỹ thuật.
+Thiệu xây dựng hạ tầng số và SEO để Maison Denude có dữ liệu thực và hiện diện có kiểm soát trên Google. Song song, Maddy phân tích thị trường quốc tế và xác định 3 thị trường phù hợp nhất dựa trên dữ liệu, không phải cảm tính. Toàn bộ kết quả được tổng hợp thành một Digital Marketing Playbook với lộ trình hành động cụ thể cho từng thị trường trọng điểm. Kết thúc 6 tuần, Maison Denude có đủ nền tảng kỹ thuật, hiểu biết thị trường và kế hoạch triển khai để bắt đầu tiếp cận khách hàng quốc tế một cách có hệ thống và đo lường được.
 
-**Hành trình chúng tôi đang xây:**
+**Phạm vi dự án này bao gồm:**
 
 ```
-Củng cố nền tảng số  →  Phân tích thị trường toàn cầu  →  Xác định 3 thị trường trọng điểm  →  Triển khai & Test  →  Ghi nhận traction quốc tế  →  Mở rộng
+Củng cố nền tảng số  →  Phân tích thị trường toàn cầu  →  Xác định 3 thị trường trọng điểm  →  Triển khai & Test
 ```
 
 ---
