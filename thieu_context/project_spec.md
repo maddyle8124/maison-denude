@@ -49,22 +49,22 @@
 
 Optional — pending Maison Dénudé confirmation.
 
-When booking submitted: Supabase Edge Function creates Google Calendar event in sales manager's personal calendar. Event contains: client name, contact, preferred date/time, consultation type, notes. No manual data entry from team.
+When a booking is submitted, a calendar event is automatically created in the sales manager's personal Google Calendar with all booking details. No manual data entry needed. Implementation details → `backend.md`.
 
 ## Add-on B — Wishlist (+1,000,000 VND)
 
 Optional — pending Maison Dénudé confirmation.
 
-Users save design items to anonymous wishlist (localStorage, no login). When booking submitted, wishlist auto-included. Team receives booking email + wishlist → no screenshots needed from client. Supabase stores all wishlist data → Thiệu exports monthly report (included in maintenance).
+Users browse designs and save items to an anonymous wishlist (no login). When they submit a booking, the wishlist is included automatically — the team sees exactly what the client is interested in without needing screenshots. Monthly analytics report on most-liked items is included in maintenance. Implementation details → `backend.md`.
 
 ## Annual Maintenance (1,000,000 VND/year)
 
 - Cloudflare Pages configuration maintenance
-- Supabase health check (free tier limits, schema, edge functions)
+- Backend health monitoring (automated via n8n — see `backend.md`)
 - Booking form bug fixes
-- Monthly uptime check
-- Monthly wishlist/booking data export + report to Maison team (if Add-on B purchased)
-- SSL monitoring (auto-managed by Cloudflare, flagged if issues)
+- Monthly booking report to Maison Dénudé team
+- Monthly wishlist analytics report (if Add-on B purchased) — automated via n8n
+- SSL monitoring
 - Minor content updates (count TBD)
 
 ## KPIs
