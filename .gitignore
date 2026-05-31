@@ -1,0 +1,156 @@
+# =========================================================================
+# Maison Dénudé — Git Ignore Configuration
+# Designed for: Astro (Frontend) + Cloudflare Pages (Hosting) + Supabase (Backend)
+# =========================================================================
+
+# -------------------------------------------------------------------------
+# Security & Credentials (CRITICAL - Never commit secrets/private keys)
+# -------------------------------------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.local
+!*.env.example
+!*.env.template
+
+# SSH keys and Certificates
+*.pem
+*.key
+*.pub
+*.cert
+*.crt
+*.pfx
+*.p12
+
+# -------------------------------------------------------------------------
+# Dependencies & Package Managers
+# -------------------------------------------------------------------------
+node_modules/
+/jspm_packages/
+/web_stage/
+
+# Yarn files
+.pnp
+.pnp.js
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/patches/
+.yarn/plugins/
+.yarn/releases/
+.yarn/sdks/
+.yarn/versions/
+
+# -------------------------------------------------------------------------
+# Build & Compilation Outputs
+# -------------------------------------------------------------------------
+.astro/
+dist/
+/build/
+/out/
+/.output/
+/public/build/
+
+# Vite & Astro temporary cache
+.vite/
+.astro_types/
+.astro-cache/
+*.tsbuildinfo
+
+# -------------------------------------------------------------------------
+# Platform-Specific Services
+# -------------------------------------------------------------------------
+# Cloudflare Pages / Wrangler CLI
+.wrangler/
+.cloudflare/
+
+# Supabase Local Development
+# Note: The hidden .supabase directory stores local Postgres volumes, 
+# local credentials, and server states. Do NOT commit it.
+# Database schema, migrations, and config should be in 'supabase/', which IS tracked.
+.supabase/
+
+# -------------------------------------------------------------------------
+# Logs, Diagnostics & Cache
+# -------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Caches
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+
+# -------------------------------------------------------------------------
+# Editor & IDE-Specific Files
+# -------------------------------------------------------------------------
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, PhpStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text / Atom
+*.sublime-project
+*.sublime-workspace
+.directory
+
+# Vim/Emacs swap files
+*~
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# -------------------------------------------------------------------------
+# System & Operating System Files
+# -------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon\r
+._*
+.DocumentRevisions-V100
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.fseventsd
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# -------------------------------------------------------------------------
+# Miscellaneous & Temporary
+# -------------------------------------------------------------------------
+archieve/
+*.bak
+*.tmp
+*.temp

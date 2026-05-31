@@ -1,0 +1,62 @@
+# =========================================================================
+# Maison Dénudé — Git Attributes Configuration
+# Enforces consistent line endings and handling of text vs binary files.
+# =========================================================================
+
+# Set the default behavior to automatically handle line endings.
+# Text files will be normalized to LF (Line Feed) on commit.
+* text=auto eol=lf
+
+# -------------------------------------------------------------------------
+# Web Development / Source Code Files
+# -------------------------------------------------------------------------
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.astro text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.mdx text eol=lf
+*.graphql text eol=lf
+*.gql text eol=lf
+*.svg text eol=lf
+
+# Configuration & Scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# -------------------------------------------------------------------------
+# Binary Assets (Prevent line ending normalization or corruption)
+# -------------------------------------------------------------------------
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.svg binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.mp4 binary
+*.webm binary
+*.mov binary
+
+# Font formats
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
