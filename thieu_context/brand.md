@@ -19,6 +19,14 @@
 - **Provenance:** Made in Saigon — geographic marker + brand story
 - **Target buyer:** Women wanting unique items; occasion/event dressing; expats and international clients
 
+## Client Communication Style
+
+**Maison Dénudé's team is non-technical.** When presenting or communicating:
+- Never use technical terms (Supabase, Astro, Edge Functions, CDN, etc.)
+- Never lead with "free hosting" or "zero operating cost" — sounds cheap for a premium brand; their trust comes from quality and outcomes, not cost savings
+- Always translate tech into business outcomes: "Google tìm thấy nhanh hơn", "team nhận thông báo ngay", "không bỏ sót khách hàng"
+- Keep explanations short and visual — they trust results, not process
+
 ## Brand Voice
 
 - Confident, not loud

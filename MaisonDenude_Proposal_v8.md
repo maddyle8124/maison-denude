@@ -49,24 +49,26 @@ Củng cố nền tảng số  →  Phân tích thị trường toàn cầu  →
 
 #### Thiết lập hệ thống theo dõi
 
-| Công cụ | Vai trò |
-|---------|---------|
-| Google Tag Manager | Quản lý tập trung toàn bộ tag — bước nền tảng, cần có trước tất cả các bước còn lại |
-| Google Analytics 4 | Phân tích traffic: nguồn truy cập, vị trí địa lý, hành vi người dùng |
-| Google Search Console | Xếp hạng từ khóa, tình trạng crawl, mức độ hiển thị trên Google Search |
-| Google Business Profile | Quản lý hình ảnh thương hiệu trên Google Maps và tìm kiếm địa phương |
+Sau khi hoàn thiện, Maison Denude sẽ biết chính xác: có bao nhiêu người ghé website, họ đến từ đâu, họ xem gì, và họ rời đi ở đâu — thay vì chỉ nhìn vào lượt thích trên mạng xã hội.
+
+| Công cụ | Ý nghĩa thực tế |
+|---------|----------------|
+| Google Analytics 4 | Biết ai đang ghé website — từ nước nào, xem trang nào, ở lại bao lâu, đặt lịch hay không |
+| Google Search Console | Biết website đang xếp hạng từ khóa nào trên Google, và cần cải thiện ở đâu |
+| Google Business Profile | Maison Denude xuất hiện đúng và đẹp khi khách tìm trên Google Maps và Google Search |
+| Google Tag Manager | Hạ tầng kỹ thuật nền — kết nối toàn bộ các công cụ trên và đo lường chính xác từng hành động của khách |
 
 #### Xây dựng backlink
-Tạo lượng liên kết ban đầu từ các nguồn uy tín — báo thời trang, danh bạ ngành, đơn vị truyền thông đã đề cập thương hiệu — nhằm tăng tốc độ tin cậy trong mắt Google.
+Maison Denude đã được nhắc đến trên L'Officiel, ELLE, Marie Claire, Miss Universe Vietnam — nhưng những đề cập này chưa được liên kết về website. Thiệu sẽ kết nối các đề cập đó thành liên kết dẫn về website chính thức, đồng thời xây dựng thêm từ các nguồn uy tín trong ngành. Kết quả: Google nhìn thấy thương hiệu được nhiều nơi đề cập → xếp hạng cao hơn và nhanh hơn.
 
-#### Xác nhận thực thể (Entity Claiming)
-Rà soát và liên kết toàn bộ các đề cập bên ngoài (báo chí, trang tổng hợp, đánh giá) với website chính thức, củng cố tín hiệu nhận diện thương hiệu.
+#### Xác nhận thực thể
+Đảm bảo mọi nơi trên internet đề cập đến Maison Denude đều dẫn về đúng website — Facebook, Instagram, các bài báo cũ, trang thời trang, đơn vị tổ chức sự kiện. Google dùng những tín hiệu này để xác định thương hiệu là thật và đáng tin.
 
 #### Chiến lược từ khóa
 `bespoke saigon` · `bespoke ho chi minh` · `artisanal bespoke fashion` · `occasional wear vietnam` · `heritage inspired dress` · `asian inspired dress` · `bespoke ao dai`
 
-#### Bài viết SEO — đăng tải & tối ưu
-Team chịu trách nhiệm tiếp nhận nội dung từ Maison Denude, cấu trúc theo từ khóa và đăng tải lên website. **Nội dung do Maison Denude cung cấp** — giọng văn và bản sắc thương hiệu hoàn toàn thuộc về phía khách hàng.
+#### Bài viết SEO
+Bài viết blog được cấu trúc để xuất hiện khi khách quốc tế tìm kiếm trên Google. Maison Denude cung cấp nội dung (câu chuyện thương hiệu, quy trình bespoke, bộ sưu tập) — Thiệu tiếp nhận, cấu trúc đúng chuẩn SEO và đăng tải. Giọng văn và bản sắc thương hiệu hoàn toàn giữ nguyên.
 
 ---
 
@@ -134,38 +136,35 @@ Maddy đề xuất các use case phù hợp với thực tế của Maison Denud
 
 ### 2.4 Website — Thiệu
 
-Xây dựng website chính thức từ đầu trên stack hiện đại, tối ưu cho SEO và không phát sinh chi phí hosting.
+Xây dựng website chính thức từ đầu — chuẩn thương hiệu cao cấp, tối ưu để Google tìm thấy và chuyển đổi khách ghé thăm thành lịch hẹn thực.
 
-| Lớp | Công nghệ | Ghi chú |
-|------|-----------|----------|
-| Frontend | Astro | Tối ưu SEO, xuất file tĩnh, nhanh |
-| Hosting | Cloudflare Pages (miễn phí) | CDN toàn cầu, không mất phí hosting |
-| Backend / DB | Supabase (gói miễn phí) | Lưu booking, Edge Functions |
-| Domain | Maison Denude tự mua | Không bao gồm trong hợp đồng |
+**Website được xây dựng đúng chuẩn kỹ thuật ngay từ đầu:**
+- Tốc độ tải nhanh trên mọi thiết bị và mọi quốc gia
+- Cấu trúc kỹ thuật tối ưu để Google đọc và xếp hạng đúng cách
+- Bảo mật và ổn định 24/7
+- Domain thuộc sở hữu hoàn toàn của Maison Denude
 
-#### Trang sẽ được xây dựng
+#### Các trang trong website
 
-| Đường dẫn | Nội dung |
-|------------|----------|
-| `/` | Trang chủ / Landing page |
-| `/blog` | Blog (tối ưu SEO; từng bài tại `/blog/[slug]`) |
-| `/booking` | Trang đặt lịch tư vấn |
-| Modal đặt lịch | Hiện trên tất cả các trang; tự xuất hiện sau 30 giây |
+| Trang | Mục đích |
+|-------|---------|
+| **Trang chủ** | Giới thiệu thương hiệu, trưng bày thiết kế, dẫn dắt khách đến đặt lịch |
+| **Blog** | Nội dung SEO — thu hút khách tìm kiếm trên Google, xây dựng uy tín thương hiệu |
+| **Trang đặt lịch** | Form tư vấn trực tiếp — khách điền, team nhận ngay |
+| **Popup đặt lịch** | Xuất hiện tự động sau 30 giây trên mọi trang — chủ động mời khách đặt lịch khi họ đang xem |
 
-#### Booking System
+#### Quy trình đặt lịch — hoạt động như thế nào
 
-Khi khách gửi form đặt lịch:
-1. Supabase Edge Function xử lý form
-2. Dữ liệu được lưu vào Supabase
-3. Email thông báo được gửi đến team Maison Denude
-4. Sales manager liên lạc khách qua Zalo/WhatsApp để xác nhận lịch
+Khách điền form → **Team nhận thông báo ngay lập tức qua email** với đầy đủ tên, liên hệ, thời gian mong muốn và loại tư vấn → Sales manager liên lạc qua Zalo/WhatsApp để xác nhận.
+
+Không cần chờ reply inbox. Không mất khách vì chậm phản hồi.
 
 #### Add-ons (Maison Denude lựa chọn)
 
-| Add-on | Mô tả | Phí bổ sung |
-|--------|---------|-------------|
-| **A — Google Calendar** | Khi khách đặt lịch, tự động tạo sự kiện trong Google Calendar của sales manager | +500.000 VND |
-| **B — Wishlist** | Khách lưu thiết kế yêu thích (không cần đăng nhập); wishlist được gửi kèm form đặt lịch | +1.000.000 VND |
+| Add-on | Lợi ích thực tế | Phí bổ sung |
+|--------|----------------|-------------|
+| **A — Lịch tự động** | Khi khách đặt lịch, sự kiện tự động xuất hiện trong Google Calendar của sales manager — không cần nhập tay, không bỏ sót | +500.000 VND |
+| **B — Lưu thiết kế yêu thích** | Khách lưu các bộ đang quan tâm trong lúc xem. Khi đặt lịch, team thấy ngay khách thích bộ nào — tư vấn đúng trọng tâm hơn, tỷ lệ chốt cao hơn | +1.000.000 VND |
 
 ---
 
@@ -195,8 +194,8 @@ Khi khách gửi form đặt lịch:
 | 3 | Bài viết SEO — đã đăng tải & tối ưu | Nội dung do Maison Denude cung cấp |
 | 4 | Bản đồ từ khóa + xếp hạng cơ sở | Tài liệu |
 | 5 | Website hoàn chỉnh — `/`, `/blog`, `/booking` | Đã go-live trên Cloudflare Pages |
-| 6 | Booking system hoạt động — form → email notification | Đã kiểm thử end-to-end |
-| 7 | Tài liệu handover website | Hướng dẫn thêm blog, xem dữ liệu Supabase |
+| 6 | Booking system hoạt động — khách điền form, team nhận thông báo ngay qua email | Đã kiểm thử end-to-end |
+| 7 | Tài liệu bàn giao website | Hướng dẫn thêm bài blog và xem danh sách booking |
 
 ### Maddy
 | # | Sản phẩm | Ghi chú |
@@ -251,7 +250,7 @@ Khi khách gửi form đặt lịch:
 | **Giai đoạn 1 — SEO + Website** (7 tuần, toàn bộ phạm vi mục 2.1 + 2.2 + 2.3 + 2.4) | **8,000,000 VND** |
 | **Add-on A — Google Calendar** *(tùy chọn)* | **+500,000 VND** |
 | **Add-on B — Wishlist** *(tùy chọn)* | **+1,000,000 VND** |
-| **Bảo trì hàng năm** — uptime, Supabase, báo cáo dữ liệu booking hàng tháng | **1,000,000 VND / năm** |
+| **Bảo trì hàng năm** — đảm bảo website hoạt động ổn định, báo cáo booking hàng tháng, kiểm tra kỹ thuật định kỳ | **1,000,000 VND / năm** |
 | **Giai đoạn 2 — Duy trì & Tối ưu workflow, automation nội dung theo vùng** | **2,000,000 – 3,000,000 VND / tháng** |
 
 > **Lưu ý:** Domain không bao gồm trong hợp đồng — Maison Denude tự mua và sở hữu tên miền.
