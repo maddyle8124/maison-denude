@@ -12,7 +12,7 @@
 | Phần | Nội dung |
 |------|---------|
 | **1. Bức tranh hiện tại** | Vị thế hiện tại của Maison Denude, vấn đề cốt lõi và mục tiêu của dự án |
-| **2. Phạm vi công việc** | Bốn hướng triển khai song song: SEO & hạ tầng số, Website, Global Market Analytics, và Digital Marketing Playbook |
+| **2. Phạm vi công việc** | Năm hướng triển khai song song: SEO & hạ tầng số, Website, Global Market Analytics, Foreign Market in Vietnam Analysis, và Digital Marketing Playbook |
 | **3. Timeline & Lịch làm việc** | Kế hoạch 7 tuần theo từng giai đoạn, phân công và lịch họp cố định |
 | **4. Sản phẩm bàn giao** | Danh sách cụ thể các đầu ra của từng thành viên |
 | **5. KPIs** | Chỉ số đánh giá: bàn giao và triển khai thực tế |
@@ -135,6 +135,22 @@ Nghiên cứu chuyên sâu được thực hiện trực tiếp trên 3 thị tr
 
 ---
 
+### 2.5 Foreign Market in Vietnam Analysis — Maddy
+
+Deliverable độc lập — phân tích phân khúc khách hàng **người nước ngoài đang sinh sống và làm việc tại Việt Nam**, bổ sung cho Global Market Analytics quốc tế.
+
+Đây là tệp khách hàng đặc thù: đã hiện diện tại thị trường Việt Nam, tiếp cận được qua các kênh trong nước, nhưng mang nhu cầu và kỳ vọng của khách quốc tế. Nghiên cứu này xác định cụ thể:
+
+| Thành phần | Nội dung |
+|-----------|----------|
+| **Phân khúc mục tiêu** | Expat sinh sống tại TP.HCM và Hà Nội — quốc tịch, ngành nghề, thu nhập, nhu cầu thời trang |
+| **Hành vi tiêu dùng** | Họ tìm kiếm thời trang bespoke / cao cấp ở đâu? Kênh nào hiệu quả? |
+| **Value Fit** | Định vị bespoke artisanal của Maison Denude có phù hợp với kỳ vọng của tệp này không? |
+| **Kênh tiếp cận** | Community groups, expat networks, sự kiện, influencer phù hợp, quảng cáo địa phương nhắm expat |
+| **Cơ hội** | Khoảng trống nào trong phân khúc này mà Maison Denude có thể khai thác ngay từ trong nước? |
+
+---
+
 ### 2.4 Digital Marketing Playbook — Maddy
 
 Playbook không được soạn từ đầu — toàn bộ nội dung được **tổng hợp trực tiếp từ kết quả SEO và Global Market Analytics**. Dữ liệu từ khóa, phân bố địa lý của traffic, khoảng trống cạnh tranh và insight từng thị trường là nguyên liệu đầu vào. Kết quả là một kế hoạch hành động cụ thể cho **3 thị trường trọng điểm**.
@@ -202,8 +218,9 @@ Maddy đề xuất các use case phù hợp với thực tế của Maison Denud
 | # | Sản phẩm | Ghi chú |
 |---|---------|---------|
 | 5 | Global Market Analytics — 3 thị trường trọng điểm | Báo cáo đầy đủ |
-| 6 | Digital Marketing Playbook — 3 thị trường trọng điểm | Chiến lược nội dung · Chiến lược kênh · Cấu hình quảng cáo · Giải pháp công nghệ |
-| 7 | Handover chuyển giao Playbook | Tuần 6 · 1 buổi |
+| 6 | Foreign Market in Vietnam Analysis | Phân tích phân khúc expat tại Việt Nam — cơ hội tiếp cận từ trong nước |
+| 7 | Digital Marketing Playbook — 3 thị trường trọng điểm | Chiến lược nội dung · Chiến lược kênh · Cấu hình quảng cáo · Giải pháp công nghệ |
+| 8 | Handover chuyển giao Playbook | Tuần 6 · 1 buổi |
 
 ---
 
@@ -222,8 +239,9 @@ Maddy đề xuất các use case phù hợp với thực tế của Maison Denud
 ### Maddy — Chỉ số bàn giao
 | Chỉ số | Mục tiêu |
 |--------|---------|
-| Báo cáo thị trường | 3 nghiên cứu chuyên sâu hoàn chỉnh khi bàn giao |
+| Báo cáo thị trường toàn cầu | 3 nghiên cứu chuyên sâu hoàn chỉnh khi bàn giao |
 | Thị trường trọng điểm | 3 thị trường được thống nhất với Maison Denude từ Tuần 2 |
+| Foreign Market in Vietnam | Báo cáo phân tích expat tại Việt Nam được bàn giao hoàn chỉnh |
 | Playbook | Bàn giao đầy đủ 4 thành phần cho 3 thị trường |
 | Handover | Buổi chuyển giao Playbook đã diễn ra trước khi kết thúc hợp đồng |
 
