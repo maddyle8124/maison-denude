@@ -40,7 +40,7 @@ Astro → Cloudflare Pages (free) → Supabase (free tier) → GA4 + GTM + Searc
 | 2 | Core Build | `/`, `/booking`, booking form → email live, modal working | 2–3 |
 | 3 | Blog + Content | `/blog` live, first 2–3 SEO posts, backlinks started | 3–4 |
 | 4 | Review #1 | Saturday 15:00 call, feedback incorporated within 48h | 4 |
-| 5 | Add-ons + Polish | Add-ons A/B (if chosen), cross-browser QA, Lighthouse > 90 | 5–6 |
+| 5 | Tính năng thêm + Polish | Tính năng thêm A/B (if chosen), cross-browser QA, Lighthouse > 90 | 5–6 |
 | 6 | Go-Live | Full SEO audit passed, sitemap submitted, site live, handover docs | 7 |
 
 ## Open Questions (blocking or pending)

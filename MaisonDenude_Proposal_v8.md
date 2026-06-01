@@ -3,7 +3,7 @@
 **Ngày:** Tháng 5, 2026  
 **Thời gian dự án:** 7 tuần
 
-> **v8 — Cập nhật:** Bổ sung phạm vi xây dựng website (Astro + Cloudflare Pages + Supabase). Xem mục 2.4 và mục 7 để biết chi tiết.
+> **v8 — Cập nhật:** Bổ sung phạm vi xây dựng website (Astro + Cloudflare Pages + Supabase). Xem mục 2.2 và mục 7 để biết chi tiết.
 
 ---
 
@@ -72,7 +72,41 @@ Bài viết blog được cấu trúc để xuất hiện khi khách quốc tế
 
 ---
 
-### 2.2 Global Market Analytics — Maddy
+### 2.2 Website — Thiệu
+
+Xây dựng website chính thức từ đầu — chuẩn thương hiệu cao cấp, tối ưu để Google tìm thấy và chuyển đổi khách ghé thăm thành lịch hẹn thực.
+
+**Website được xây dựng đúng chuẩn kỹ thuật ngay từ đầu:**
+- Tốc độ tải nhanh trên mọi thiết bị và mọi quốc gia
+- Cấu trúc kỹ thuật tối ưu để Google đọc và xếp hạng đúng cách
+- Bảo mật và ổn định 24/7
+- Domain thuộc sở hữu hoàn toàn của Maison Denude
+
+#### Các trang trong website
+
+| Trang | Mục đích |
+|-------|---------|
+| **Trang chủ** | Giới thiệu thương hiệu, trưng bày thiết kế, dẫn dắt khách đến đặt lịch |
+| **Blog** | Nội dung SEO — thu hút khách tìm kiếm trên Google, xây dựng uy tín thương hiệu |
+| **Trang đặt lịch** | Form tư vấn trực tiếp — khách điền, team nhận ngay |
+| **Popup đặt lịch** | Xuất hiện tự động sau 30 giây trên mọi trang — chủ động mời khách đặt lịch khi họ đang xem |
+
+#### Quy trình đặt lịch — hoạt động như thế nào
+
+Khách điền form → **Team nhận thông báo ngay lập tức qua email** với đầy đủ tên, liên hệ, thời gian mong muốn và loại tư vấn → Sales manager liên lạc qua Zalo/WhatsApp để xác nhận.
+
+Không cần chờ reply inbox. Không mất khách vì chậm phản hồi.
+
+#### Tính năng thêm (Maison Denude lựa chọn)
+
+| Add-on | Lợi ích thực tế | Phí bổ sung |
+|--------|----------------|-------------|
+| **A — Lịch tự động** | Khi khách đặt lịch, sự kiện tự động xuất hiện trong Google Calendar của sales manager — không cần nhập tay, không bỏ sót | +500.000 VND |
+| **B — Lưu thiết kế yêu thích** | Khách lưu các bộ đang quan tâm trong lúc xem. Khi đặt lịch, team thấy ngay khách thích bộ nào — tư vấn đúng trọng tâm hơn, tỷ lệ chốt cao hơn | +1.000.000 VND |
+
+---
+
+### 2.3 Global Market Analytics — Maddy
 
 #### Giai đoạn 1: Khảo sát rộng → Chọn 5 thị trường
 
@@ -101,7 +135,7 @@ Nghiên cứu chuyên sâu được thực hiện trực tiếp trên 3 thị tr
 
 ---
 
-### 2.3 Digital Marketing Playbook — Maddy
+### 2.4 Digital Marketing Playbook — Maddy
 
 Playbook không được soạn từ đầu — toàn bộ nội dung được **tổng hợp trực tiếp từ kết quả SEO và Global Market Analytics**. Dữ liệu từ khóa, phân bố địa lý của traffic, khoảng trống cạnh tranh và insight từng thị trường là nguyên liệu đầu vào. Kết quả là một kế hoạch hành động cụ thể cho **3 thị trường trọng điểm**.
 
@@ -134,51 +168,17 @@ Maddy đề xuất các use case phù hợp với thực tế của Maison Denud
 
 ---
 
-### 2.4 Website — Thiệu
+## 3. Timeline & Lịch làm việc
 
-Xây dựng website chính thức từ đầu — chuẩn thương hiệu cao cấp, tối ưu để Google tìm thấy và chuyển đổi khách ghé thăm thành lịch hẹn thực.
-
-**Website được xây dựng đúng chuẩn kỹ thuật ngay từ đầu:**
-- Tốc độ tải nhanh trên mọi thiết bị và mọi quốc gia
-- Cấu trúc kỹ thuật tối ưu để Google đọc và xếp hạng đúng cách
-- Bảo mật và ổn định 24/7
-- Domain thuộc sở hữu hoàn toàn của Maison Denude
-
-#### Các trang trong website
-
-| Trang | Mục đích |
-|-------|---------|
-| **Trang chủ** | Giới thiệu thương hiệu, trưng bày thiết kế, dẫn dắt khách đến đặt lịch |
-| **Blog** | Nội dung SEO — thu hút khách tìm kiếm trên Google, xây dựng uy tín thương hiệu |
-| **Trang đặt lịch** | Form tư vấn trực tiếp — khách điền, team nhận ngay |
-| **Popup đặt lịch** | Xuất hiện tự động sau 30 giây trên mọi trang — chủ động mời khách đặt lịch khi họ đang xem |
-
-#### Quy trình đặt lịch — hoạt động như thế nào
-
-Khách điền form → **Team nhận thông báo ngay lập tức qua email** với đầy đủ tên, liên hệ, thời gian mong muốn và loại tư vấn → Sales manager liên lạc qua Zalo/WhatsApp để xác nhận.
-
-Không cần chờ reply inbox. Không mất khách vì chậm phản hồi.
-
-#### Add-ons (Maison Denude lựa chọn)
-
-| Add-on | Lợi ích thực tế | Phí bổ sung |
-|--------|----------------|-------------|
-| **A — Lịch tự động** | Khi khách đặt lịch, sự kiện tự động xuất hiện trong Google Calendar của sales manager — không cần nhập tay, không bỏ sót | +500.000 VND |
-| **B — Lưu thiết kế yêu thích** | Khách lưu các bộ đang quan tâm trong lúc xem. Khi đặt lịch, team thấy ngay khách thích bộ nào — tư vấn đúng trọng tâm hơn, tỷ lệ chốt cao hơn | +1.000.000 VND |
-
----
-
-
-| Tuần | Giai đoạn | Thiệu | Maddy | Cuộc họp |
-|------|-----------|-------|-------|----------|
-| **Tuần 1** | Khởi động & bàn giao thông tin | Thiết lập quyền truy cập, rà soát từ khóa, xác định phạm vi tracking; scaffold Astro project | Thu thập tài liệu nghiên cứu cũ, dữ liệu Dubai, số liệu social; khảo sát thị trường rộng | Thứ 7, 15:00 — Buổi khởi động |
-| **Tuần 2** | Tập trung triển khai | Cài đặt GTM, GA4, Search Console; xây dựng trang chủ và trang booking | Khảo sát rộng + thống nhất 3 thị trường trọng điểm | Không có họp tuần này — team tự triển khai, gửi báo cáo tiến độ cuối tuần |
-| **Tuần 3** | Tiến độ | Xây dựng backlink, xác nhận thực thể; ra mắt /blog và booking modal | Nghiên cứu chuyên sâu 3 thị trường | Thứ 7, 15:00 — Cập nhật tiến độ |
-| **Tuần 4** | Đánh giá lần 1 | Đăng tải bài viết SEO đợt đầu; kiểm thử booking end-to-end | Phác thảo Playbook | Thứ 7, 15:00 — Đánh giá chính thức lần 1 |
-| **Tuần 5** | Điều chỉnh | Chỉnh sửa theo phản hồi; triển khai add-on (nếu được chọn) | Hoàn thiện Playbook + giải pháp ứng dụng công nghệ | Thứ 7, 15:00 — Phản hồi & thống nhất |
-| **Tuần 6** | QA & Kiểm thử | Kiểm tra toàn diện website (mobile, cross-browser, SEO audit) | Hoàn thiện Playbook + handover chuyển giao | Thứ 7, 15:00 — Phản hồi & thống nhất |
-| **Tuần 7** | Hoàn thiện & bàn giao | SEO audit cuối kỳ; go-live; submit sitemap; handover tài liệu | Handover Playbook | Thứ 7, 15:00 — Đánh giá & bàn giao |
-
+| Tuần | Ngày | Giai đoạn | Thiệu | Maddy | Cuộc họp |
+|------|------|-----------|-------|-------|----------|
+| **Tuần 1** | 1–7/6 | Khởi động | Keyword research; giữa tuần: giao keyword research + 10 blog brief cho MD, nhận design brief từ MD | Thu thập tài liệu nghiên cứu cũ, dữ liệu Dubai, số liệu social; khảo sát thị trường rộng | Thứ 7, 7/6, 15:00 — Buổi khởi động |
+| **Tuần 2** | 8–14/6 | Build website | Convert design thành website; hết tuần: website có thể truy cập được *(blog chưa lên, SEO chưa config)* | Khảo sát rộng + thống nhất 3 thị trường trọng điểm | Không có họp — báo cáo tiến độ cuối tuần |
+| **Tuần 3** | 15–21/6 | QA & Tích hợp | QA website; test luồng booking → email; tích hợp Google Tag Manager | Nghiên cứu chuyên sâu 3 thị trường | Thứ 7, 21/6, 15:00 — Cập nhật tiến độ |
+| **Tuần 4** | 22–28/6 | Cài đặt analytics | Config GA4, Search Console, Google Business Profile | Phác thảo Playbook | Thứ 7, 28/6, 15:00 — Đánh giá lần 1 |
+| **Tuần 5** | 29/6–5/7 | SEO & Entity | Config SEO; claim entity; xây dựng backlink | Hoàn thiện Playbook + giải pháp công nghệ | Thứ 7, 5/7, 15:00 — Phản hồi & thống nhất |
+| **Tuần 6** | 6–12/7 | Nội dung & QC | Nhận blog content từ MD *(đầu tuần)*; đăng lên website; QC tracking & indexing (schema, lỗi crawl,...) | Hoàn thiện Playbook; handover chuyển giao | Thứ 7, 12/7, 15:00 — Phản hồi & thống nhất |
+| **Tuần 7** | 13–19/7 | Hoàn thiện & bàn giao | Confirm website live ổn định; blog được index đầy đủ; booking hoạt động; handover tài liệu | Final review + handover Playbook | Thứ 7, 19/7, 15:00 — Đánh giá & bàn giao |
 
 > **Lịch đề xuất:** Thứ 7, 15:00 · 30 phút / buổi · mỗi tuần, ngoại trừ Tuần 2 *(chờ xác nhận từ Maison Denude trước khi chốt)*.
 
@@ -189,13 +189,14 @@ Không cần chờ reply inbox. Không mất khách vì chậm phản hồi.
 ### Thiệu
 | # | Sản phẩm | Ghi chú |
 |---|---------|---------|
-| 1 | Hệ thống tracking hoạt động (GTM, GA4, Search Console, Business Profile) | Kèm tài liệu hướng dẫn |
-| 2 | Backlink đợt đầu + xác nhận thực thể | Báo cáo |
-| 3 | Bài viết SEO — đã đăng tải & tối ưu | Nội dung do Maison Denude cung cấp |
-| 4 | Bản đồ từ khóa + xếp hạng cơ sở | Tài liệu |
-| 5 | Website hoàn chỉnh — `/`, `/blog`, `/booking` | Đã go-live trên Cloudflare Pages |
-| 6 | Booking system hoạt động — khách điền form, team nhận thông báo ngay qua email | Đã kiểm thử end-to-end |
-| 7 | Tài liệu bàn giao website | Hướng dẫn thêm bài blog và xem danh sách booking |
+| 1 | Keyword research + 10 blog brief | Bàn giao giữa Tuần 1 (~4/6) |
+| 2 | Website hoàn chỉnh — `/`, `/blog`, `/booking` | Go-live Cloudflare Pages; preview từ hết Tuần 2 (14/6) |
+| 3 | Booking system hoạt động — khách điền form, team nhận thông báo ngay qua email | Đã kiểm thử end-to-end |
+| 4 | Hệ thống tracking hoạt động (GTM, GA4, Search Console, Business Profile) | Kèm tài liệu hướng dẫn |
+| 5 | Backlink đợt đầu + xác nhận thực thể | Báo cáo |
+| 6 | Bài viết SEO — đã đăng tải & tối ưu | Nội dung do Maison Denude cung cấp |
+| 7 | Bản đồ từ khóa + xếp hạng cơ sở | Tài liệu |
+| 8 | Tài liệu bàn giao website | Hướng dẫn thêm bài blog và xem danh sách booking |
 
 ### Maddy
 | # | Sản phẩm | Ghi chú |
@@ -230,15 +231,16 @@ Không cần chờ reply inbox. Không mất khách vì chậm phản hồi.
 
 ## 6. Yêu cầu từ Maison Denude
 
-| Tài nguyên | Cần cho | Tuần cần có |
-|-----------|---------|-------------|
+| Tài nguyên | Cần cho | Deadline |
+|-----------|---------|----------|
 | Domain Maison Denude (tên miền) | Cấu hình Cloudflare Pages | Tuần 1 |
-| Email nhận booking (địa chỉ cụ thể) | Cài đặt Supabase Edge Function | Tuần 1 |
-| Nội dung blog (bản thảo hoặc brief) | Team đăng tải & tối ưu | Tuần 1–2 |
+| Email nhận booking (địa chỉ cụ thể) | Cài đặt hệ thống booking | Tuần 1 |
+| **Design brief** (file thiết kế visual + website mẫu) | Thiệu convert design sang website | Giữa Tuần 1 (~4/6) |
 | Tài liệu nghiên cứu cũ (nếu có) | Nền tảng phân tích thị trường | Tuần 1 |
 | Dữ liệu thị trường Dubai / số liệu cũ | Khởi động nghiên cứu Dubai | Tuần 1 |
 | Quyền truy cập analytics social media (IG/FB) | Hiệu chỉnh cấu hình quảng cáo | Tuần 1–2 |
 | Tài nguyên thương hiệu (lookbook, ảnh chiến dịch, video gốc) | Bài viết blog + website | Tuần 1–2 |
+| **10 bài blog content** (theo brief Thiệu cung cấp) | Thiệu đăng tải & tối ưu | Đầu Tuần 6 (6/7) |
 | Sẵn sàng tham dự 6 buổi họp thứ 7 | Đánh giá & thống nhất | Mỗi tuần trừ Tuần 2 |
 
 ---
@@ -248,6 +250,8 @@ Không cần chờ reply inbox. Không mất khách vì chậm phản hồi.
 | Hạng mục | Mức phí |
 |----------|---------|
 | **Giai đoạn 1 — SEO + Website** (7 tuần, toàn bộ phạm vi mục 2.1 + 2.2 + 2.3 + 2.4) | **8,000,000 VND** |
+| — Cọc khởi động *(thanh toán trong Tuần 1, trước 7/6)* | **2,000,000 VND** |
+| — Còn lại *(thanh toán khi bàn giao cuối Tuần 7)* | **6,000,000 VND** |
 | **Add-on A — Google Calendar** *(tùy chọn)* | **+500,000 VND** |
 | **Add-on B — Wishlist** *(tùy chọn)* | **+1,000,000 VND** |
 | **Bảo trì hàng năm** — đảm bảo website hoạt động ổn định, báo cáo booking hàng tháng, kiểm tra kỹ thuật định kỳ | **1,000,000 VND / năm** |
@@ -360,4 +364,4 @@ Một số hướng cần xác nhận trước khi bắt đầu Tuần 1:
 - **Domain** — Maison Denude đã có tên miền chưa, hay cần mua mới? Tên miền dự kiến là gì?
 - **Ngôn ngữ blog** — Nội dung blog sẽ được cung cấp bằng tiếng Việt, tiếng Anh, hay cả hai?
 - **Booking popup** — Popup đặt lịch xuất hiện sau 30 giây — team xác nhận lại trước khi build.
-- **Add-ons** — Maison Denude có muốn kích hoạt Add-on A (Google Calendar, +500k) và/hoặc Add-on B (Wishlist, +1M) không?
+- **Tính năng thêm** — Maison Denude có muốn kích hoạt Add-on A (Google Calendar, +500k) và/hoặc Add-on B (Wishlist, +1M) không?

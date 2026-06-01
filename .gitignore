@@ -6,6 +6,7 @@
 # -------------------------------------------------------------------------
 # Security & Credentials (CRITICAL - Never commit secrets/private keys)
 # -------------------------------------------------------------------------
+tanhung-492410-ddb430cd19ef.json
 .env
 .env.local
 .env.development.local

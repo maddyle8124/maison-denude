@@ -20,7 +20,7 @@
 | MD-014 | 2026-05-31 | Add-on A: Google Calendar — sales manager's personal calendar | Simplest integration; shared calendar would require service account |
 | MD-015 | 2026-05-31 | Add-on B: Wishlist is anonymous, no auth required | Login = major scope increase; localStorage sufficient for use case |
 | MD-016 | 2026-05-31 | Add-on B analytics: Thiệu manually exports Supabase data monthly | Included in maintenance; no custom admin dashboard needed |
-| MD-017 | 2026-05-31 | Add-ons A & B are upsells — Maison Dénudé chooses | They are optional, not default scope |
+| MD-017 | 2026-05-31 | Tính năng thêm A & B are upsells — Maison Dénudé chooses | They are optional, not default scope |
 | MD-018 | 2026-05-31 | Add-on B wishlist price = 1,000,000 VND | Confirmed |
 | MD-019 | 2026-05-31 | Add-on A Google Calendar price = 500,000 VND | Confirmed |
 | MD-020 | 2026-05-31 | Supabase free tier limits acknowledged: 500MB DB, 500k Edge invocations/month | Within expected usage for MVP |
@@ -46,7 +46,7 @@
 
 **Blocked on:**
 - Cannot start Phase 0 until OQ-001 (email) and OQ-002 (domain) answered
-- Cannot confirm add-ons A & B until Maison Dénudé decides
+- Cannot confirm Tính năng thêm A & B until Maison Dénudé decides
 
 **Next priorities:**
 1. Send OQ-001, OQ-002, OQ-003, OQ-004 to Maison Dénudé

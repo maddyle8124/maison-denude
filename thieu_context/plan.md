@@ -99,9 +99,9 @@ Ship a production-grade website that:
 
 ---
 
-## Phase 5 — Add-ons + Polish (Week 5–6)
+## Phase 5 — Tính năng thêm + Polish (Week 5–6)
 
-**Goal:** Add-ons built (if chosen), full QA pass.
+**Goal:** Tính năng thêm built (if chosen), full QA pass.
 
 **If Add-on A chosen:**
 - [ ] Google Cloud project set up, Calendar API enabled
@@ -123,7 +123,7 @@ Ship a production-grade website that:
 - [ ] Booking flow end-to-end test (full user journey)
 - [ ] All images: WebP format, compressed, descriptive alt text
 
-**Exit criteria:** All chosen add-ons tested. Lighthouse performance > 90 (mobile).
+**Exit criteria:** All chosen Tính năng thêm tested. Lighthouse performance > 90 (mobile).
 
 ---
 
