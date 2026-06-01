@@ -188,7 +188,7 @@ Maddy đề xuất các use case phù hợp với thực tế của Maison Denud
 
 | Tuần | Ngày | Giai đoạn | Thiệu | Maddy | Cuộc họp |
 |------|------|-----------|-------|-------|----------|
-| **Tuần 1** | 1–7/6 | Khởi động | Keyword research; giữa tuần: giao keyword research + 10 blog brief cho MD, nhận design brief từ MD | Thu thập tài liệu nghiên cứu cũ, dữ liệu Dubai, số liệu social; khảo sát thị trường rộng | Thứ 7, 6/6, 15:00 — Buổi khởi động |
+| **Tuần 1** | 1–7/6 | Khởi động | *(Ký HĐ 2/6 — tasks bắt đầu sau ký)* Keyword research; giữa tuần: giao keyword research + 10 blog brief cho MD, nhận design brief từ MD | *(Ký HĐ 2/6 — tasks bắt đầu sau ký)* Thu thập tài liệu nghiên cứu cũ, dữ liệu Dubai, số liệu social; khảo sát thị trường rộng | **Ký hợp đồng: 2/6** · Thứ 7, 6/6, 15:00 — Buổi khởi động |
 | **Tuần 2** | 8–14/6 | Build website | Convert design thành website; hết tuần: website có thể truy cập được *(blog chưa lên, SEO chưa config)* | Khảo sát rộng + thống nhất 3 thị trường trọng điểm | Không có họp — báo cáo tiến độ cuối tuần |
 | **Tuần 3** | 15–21/6 | QA & Tích hợp | QA website; test luồng booking → email; tích hợp Google Tag Manager | Nghiên cứu chuyên sâu 3 thị trường | Thứ 7, 20/6, 15:00 — Cập nhật tiến độ |
 | **Tuần 4** | 22–28/6 | Cài đặt analytics | Config GA4, Search Console, Google Business Profile | Phác thảo Playbook | Thứ 7, 27/6, 15:00 — Đánh giá lần 1 |
@@ -268,7 +268,7 @@ Maddy đề xuất các use case phù hợp với thực tế của Maison Denud
 | Hạng mục | Mức phí |
 |----------|---------|
 | **Giai đoạn 1 — SEO + Website** (7 tuần, toàn bộ phạm vi mục 2.1 + 2.2 + 2.3 + 2.4) | **8,000,000 VND** |
-| — Cọc khởi động *(thanh toán trong Tuần 1, trước 6/6)* | **2,000,000 VND** |
+| — Cọc khởi động *(thanh toán ngày ký hợp đồng — 2/6)* | **2,000,000 VND** |
 | — Còn lại *(thanh toán khi bàn giao cuối Tuần 7)* | **6,000,000 VND** |
 | **Add-on A — Google Calendar** *(tùy chọn)* | **+500,000 VND** |
 | **Add-on B — Wishlist** *(tùy chọn)* | **+1,000,000 VND** |
