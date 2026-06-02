@@ -18,8 +18,7 @@
 | **8. Cách làm việc** | Quy trình họp và bàn giao |
 | **9. Ngoài phạm vi** | Những gì không thuộc hợp đồng này |
 | **10. Kết quả kỳ vọng** | Hành trình khách hàng trước và sau khi triển khai |
-| **11. Câu hỏi cần xác nhận** | Cần trả lời trước khi bắt đầu |
-| **12. Quyết định còn treo** | Cần thống nhất trước khi triển khai |
+| **11. Bước tiếp theo** | Xác nhận dịch vụ, ký hợp đồng và bắt đầu |
 
 ---
 
@@ -362,24 +361,39 @@ Meta Ads · LinkedIn · RedNote · Google Ads · SEO
 
 ---
 
-## 11. Câu hỏi cần xác nhận
+## 11. Bước tiếp theo
 
-| # | Câu hỏi | Ai xác nhận |
-|---|---------|------------|
-| 1 | Email nào nhận thông báo khi có booking từ website? | Maison Denude |
-| 2 | Tên miền website là gì? Còn quyền truy cập không? | Maison Denude |
-| 3 | Blog viết bằng tiếng Việt hay tiếng Anh? | Maison Denude + team |
-| 4 | Popup đặt lịch sau 30 giây — giữ nguyên hay muốn điều chỉnh thời gian? | Maison Denude |
-| 5 | Add-on A (Lịch tự động) và/hoặc Add-on B (Wishlist) — có muốn kích hoạt không? | Maison Denude |
-| 6 | Facebook auto-reply với link Zalo/WhatsApp — có nằm trong scope không? | Maison Denude + Thiệu |
+### Xác nhận dịch vụ
 
----
+Trước khi ký hợp đồng, Maison Denude xác nhận các lựa chọn sau:
 
-## 12. Quyết định còn treo
+| Hạng mục | Lựa chọn |
+|---------|---------|
+| **Giai đoạn 1** — SEO, Website, Market Analytics, Playbook (7 tuần · 8.000.000 VND) | ☐ Xác nhận |
+| **Add-on A** — Lịch tự động Google Calendar (+500.000 VND) | ☐ Có &nbsp;&nbsp; ☐ Không |
+| **Add-on B** — Wishlist thiết kế yêu thích (+1.000.000 VND) | ☐ Có &nbsp;&nbsp; ☐ Không |
+| **Bảo trì hàng năm** (1.000.000 VND/năm) | ☐ Có &nbsp;&nbsp; ☐ Không |
 
-| Quyết định | Trạng thái |
-|-----------|-----------|
-| **3 thị trường trọng điểm** — Chưa chọn. Maddy khảo sát rộng 5 ứng viên trước → trình bày → team chốt cuối Tuần 2 | 🔄 Maddy đang thực hiện |
-| **Add-on B Wishlist** — Chị Chi thấy giá trị nhưng cần xem lại giá. Thiệu đang requote | ⏳ Chờ Thiệu báo giá |
-| **Facebook auto-reply** — Chị Chi muốn có. Thiệu đang research feasibility, chưa có giá | ⏳ Thiệu xác nhận |
-| **Bên landing page cũ** — Cần xác nhận đã cancel hợp đồng chính thức chưa | ❓ Xác nhận với Maison Denude |
+### Quy trình ký kết & bắt đầu
+
+```
+Maison Denude xác nhận dịch vụ
+           ↓
+Maddy gửi hợp đồng qua email
+           ↓
+Maison Denude ký và chuyển cọc (2.000.000 VND)
+           ↓
+Maison Denude gửi thông tin cần thiết:
+  · Email nhận booking
+  · Tên miền
+  · Design brief (từ Hậu/Michelle)
+  · Tài nguyên thương hiệu (ảnh, lookbook, video)
+           ↓
+Bắt đầu làm việc ngay sau khi ký
+```
+
+### Ngay sau khi ký
+
+**Thiệu** — bắt đầu build demo website dựa theo design brief của Michelle. Demo sẽ được gửi cho Maison Denude review trước cuối Tuần 2.
+
+**Maddy** — bắt đầu thu thập dữ liệu và khởi động khảo sát rộng 5 thị trường ứng viên.
