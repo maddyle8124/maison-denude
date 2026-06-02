@@ -85,7 +85,7 @@ Nội dung do Maison Denude cung cấp (Linh Đan + Hải Hà mở rộng theo b
 
 ### 2.2 Website — Thiệu
 
-Xây dựng website chính thức từ đầu, thay thế hoàn toàn bên làm landing page cũ đã bị cancel. Tech stack: **Astro + Cloudflare Pages + Supabase** — tốc độ nhanh, hosting miễn phí, chuẩn SEO ngay từ cấu trúc.
+Xây dựng website chính thức từ đầu — chuẩn thương hiệu cao cấp, tối ưu để Google tìm thấy và chuyển đổi khách ghé thăm thành lịch hẹn thực.
 
 **Website được xây dựng đúng chuẩn kỹ thuật ngay từ đầu:**
 - Tốc độ tải nhanh trên mọi thiết bị và mọi quốc gia
@@ -93,43 +93,27 @@ Xây dựng website chính thức từ đầu, thay thế hoàn toàn bên làm 
 - Bảo mật và ổn định 24/7
 - Domain thuộc sở hữu hoàn toàn của Maison Denude
 
-#### Các trang trong website (MVP)
+#### Các trang trong website
 
 | Trang | Mục đích |
 |-------|---------|
-| **Trang chủ** | Hero nổi bật với ảnh KOL mặc thiết kế (Chi Pu, Băng Di, Văn Mai Hương) — ngay khi vào là thấy. Giới thiệu thương hiệu, dẫn dắt khách đến đặt lịch |
+| **Trang chủ** | Giới thiệu thương hiệu, trưng bày thiết kế, dẫn dắt khách đến đặt lịch |
 | **Blog** | Nội dung SEO — thu hút khách tìm kiếm trên Google, xây dựng uy tín thương hiệu |
-| **Trang đặt lịch** | Form tư vấn trực tiếp — khách điền, team nhận ngay qua email |
-| **Popup đặt lịch** | Xuất hiện tự động sau 30 giây trên mọi trang — chủ động mời khách đặt lịch khi đang xem *(cần xác nhận timing — OQ-004)* |
+| **Trang đặt lịch** | Form tư vấn trực tiếp — khách điền, team nhận ngay |
+| **Popup đặt lịch** | Xuất hiện tự động sau 30 giây trên mọi trang — chủ động mời khách đặt lịch khi họ đang xem |
 
-#### Quy trình đặt lịch — luồng CTA đã được xác nhận
+#### Quy trình đặt lịch — hoạt động như thế nào
 
-Facebook và Instagram là nơi khám phá và xem hình. Tất cả CTA — từ website, từ auto-reply Facebook — đều cho khách **2 con đường**:
-
-```
-Khách thấy hình trên IG/FB
-        ↓
-   [CTA xuất hiện]
-        ↓
-  ┌─────────────────┬──────────────────────┐
-  │  Điền form       │  Nhắn trực tiếp       │
-  │  đặt lịch        │  Zalo / WhatsApp      │
-  └─────────────────┴──────────────────────┘
-        ↓                    ↓
-  Team nhận email    Sales manager nhận tin
-  ngay lập tức       → confirm lịch hẹn
-```
+Khách điền form → **Team nhận thông báo ngay lập tức qua email** với đầy đủ tên, liên hệ, thời gian mong muốn và loại tư vấn → Sales manager liên lạc qua Zalo/WhatsApp để xác nhận.
 
 Không cần chờ reply inbox. Không mất khách vì chậm phản hồi.
 
-*Lưu ý: Facebook auto-reply với link Zalo/WhatsApp — đang được Thiệu research feasibility, chưa chốt scope và giá (xem Quyết định còn treo).*
-
 #### Tính năng thêm (Maison Denude lựa chọn)
 
-| Add-on | Lợi ích thực tế | Phí bổ sung | Trạng thái |
-|--------|----------------|-------------|-----------|
-| **A — Lịch tự động** | Khi khách đặt lịch, sự kiện tự động xuất hiện trong Google Calendar của sales manager | +500.000 VND | Đã có giá |
-| **B — Lưu thiết kế yêu thích** | Khách ghim các bộ quan tâm khi xem. Khi đặt lịch, team thấy ngay khách thích bộ nào — tư vấn đúng trọng tâm, tỷ lệ chốt cao hơn | **Đang requote** | Chờ Thiệu tính lại giá với độ phức tạp mới |
+| Add-on | Lợi ích thực tế | Phí bổ sung |
+|--------|----------------|-------------|
+| **A — Lịch tự động** | Khi khách đặt lịch, sự kiện tự động xuất hiện trong Google Calendar của sales manager — không cần nhập tay, không bỏ sót | +500.000 VND |
+| **B — Lưu thiết kế yêu thích** | Khách lưu các bộ đang quan tâm trong lúc xem. Khi đặt lịch, team thấy ngay khách thích bộ nào — tư vấn đúng trọng tâm hơn, tỷ lệ chốt cao hơn | +1.000.000 VND |
 
 ---
 
