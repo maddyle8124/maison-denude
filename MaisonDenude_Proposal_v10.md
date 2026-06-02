@@ -204,15 +204,16 @@ Tự động hoá quy trình tạo nội dung hàng loạt bằng tool — deliv
 
 | Tuần | Ngày | Thiệu | Maddy | Maison Denude cần cung cấp |
 |------|------|-------|-------|---------------------------|
-| **T1** | 2–7/6 | Keyword research; giao 10 blog brief; nhận design brief | Thu thập dữ liệu cũ; khởi động khảo sát 5 thị trường | Email nhận booking · Tên miền · Design brief (Hậu) · Tài liệu & dữ liệu Dubai · Quyền truy cập IG/FB analytics |
-| **T2** | 8–14/6 | Convert design → website *(preview cuối tuần)* | Khảo sát rộng + đề xuất 3 thị trường trọng điểm | Tài nguyên thương hiệu (lookbook, ảnh KOL, video) |
-| **T3** | 15–21/6 | QA website; test luồng booking; tích hợp GTM | Nghiên cứu chuyên sâu 3 thị trường | — |
-| **T4** | 22–28/6 | Config GA4, Search Console, Google Business Profile | Phác thảo Playbook | Tham dự Review #1 *(Thứ 7, 27/6)* |
-| **T5** | 29/6–5/7 | Config SEO kỹ thuật; entity claiming; backlink | Hoàn thiện Playbook + KOL shortlist + giải pháp công nghệ | Tiêu chí chọn KOL *(sau khi chốt 3 thị trường)* |
-| **T6** | 6–12/7 | Nhận blog content; đăng website; QC tracking & indexing | Hoàn thiện Playbook; chuẩn bị handover | **10 bài blog content** *(giao đầu tuần 6/7)* |
+| **T1** | 2–7/6 | Keyword research; giao 10 blog brief; nhận design brief | Thu thập dữ liệu cũ; khởi động khảo sát rộng 5 thị trường | Email nhận booking · Tên miền · Design brief (Hậu) · Dữ liệu Dubai · Quyền truy cập IG/FB · **Tài nguyên thương hiệu (lookbook, ảnh KOL, video)** |
+| **T2** | 8–14/6 | Convert design → website *(preview cuối tuần để Maison feedback)* | Ra insight từ 5 thị trường tổng quát → **1st Progress Presentation** cùng Maison chốt 3 thị trường trọng điểm | **1st Progress Presentation:** feedback website đầu tiên của Thiệu + xác nhận 3 thị trường + cung cấp tiêu chí chọn KOL |
+| **T3** | 15–21/6 | QA website; test luồng booking; tích hợp GTM | Nghiên cứu chuyên sâu 3 thị trường đã chốt | **Gửi cuốn chiếu blog** (theo brief Thiệu cấp ở T1) |
+| **T4** | 22–28/6 | Config GA4, Search Console, Google Business Profile; nhận blog content | Phác thảo Playbook + KOL shortlist | Tham dự Review *(Thứ 7, 27/6)* |
+| **T4–5** | Cuối T4–T5 | **1st version website hoàn chỉnh** | **1st version Market Analysis + Playbook** | **Review toàn bộ lần 1** — duyệt web, market analysis, playbook → feedback để tối ưu T5–6–7 |
+| **T5** | 29/6–5/7 | Đăng blog; config SEO kỹ thuật; entity claiming; backlink; chỉnh sửa theo feedback | Hoàn thiện Playbook + giải pháp công nghệ theo feedback | Phản hồi chi tiết để team tối ưu |
+| **T6** | 6–12/7 | QC tracking & indexing; hoàn thiện website theo góp ý | Hoàn thiện Playbook; chuẩn bị handover | Xác nhận các điều chỉnh cuối |
 | **T7** | 13–19/7 | Website live ổn định; blog indexed; tài liệu bàn giao | Final review + handover Playbook | Tham dự buổi bàn giao *(Thứ 7, 18/7)* |
 
-**Lịch họp cố định:** Thứ 7, 15:00 · 30 phút · mỗi tuần, ngoại trừ Tuần 2.
+**Lịch họp cố định:** Thứ 7, 15:00 · 30 phút · mỗi tuần. Tuần 2 có **1st Progress Presentation** thay cho họp thường.
 
 ---
 
