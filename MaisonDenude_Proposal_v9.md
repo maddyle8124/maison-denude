@@ -139,6 +139,8 @@ Không cần chờ reply inbox. Không mất khách vì chậm phản hồi.
 
 Rà soát các thị trường có nhu cầu thực với thời trang bespoke và luxury design. Ứng viên đã xác nhận với chị Chi: **Dubai, Hàn Quốc, Trung Quốc, Singapore, Nhật Bản**.
 
+*Lưu ý từ kickoff 2/6: Việt Nam (travel shopper + Việt kiều) và Cộng đồng gốc Hoa tại ĐNA được thảo luận như các thị trường ngách bổ sung — được xử lý riêng trong mục 2.4 thay vì đưa vào danh sách 5 ứng viên quốc tế chính.*
+
 | Trụ cột | Câu hỏi đặt ra |
 |---------|----------------|
 | **Value Fit** | Định vị của Maison Denude có phù hợp với tệp khách hàng tại thị trường này không? |
@@ -161,15 +163,50 @@ Kết quả: danh sách thị trường được xếp hạng ưu tiên → **th
 
 ### 2.4 Foreign Market in Vietnam Analysis — Maddy
 
-Phân tích phân khúc **người nước ngoài đang sinh sống và làm việc tại Việt Nam** — tệp khách đặc thù: đã có mặt tại Việt Nam, tiếp cận qua kênh trong nước, nhưng mang nhu cầu và kỳ vọng của khách quốc tế.
+*(Được làm rõ và mở rộng trong buổi kickoff 2/6)*
+
+Phần này phân tích **3 nhóm khách quốc tế có thể tiếp cận ngay tại hoặc từ Việt Nam** — không phải khách Việt trong nước. Đây là tệp đặc thù: mang tâm lý và kỳ vọng của khách quốc tế nhưng có thể reach qua kênh domestic.
+
+#### Nhóm 1 — Expat đang sinh sống & làm việc tại Việt Nam
+
+Người nước ngoài cư trú dài hạn tại TP.HCM và Hà Nội. Đã quen với thị trường Việt Nam, nhưng shopping cao cấp theo chuẩn quốc tế.
 
 | Thành phần | Nội dung |
 |-----------|----------|
-| **Phân khúc mục tiêu** | Expat tại TP.HCM và Hà Nội — quốc tịch, ngành nghề, thu nhập, nhu cầu thời trang |
-| **Hành vi tiêu dùng** | Họ tìm thời trang bespoke / cao cấp ở đâu? Kênh nào hiệu quả? |
-| **Value Fit** | Định vị bespoke artisanal của Maison Denude có phù hợp với kỳ vọng tệp này không? |
-| **Kênh tiếp cận** | Community groups, expat networks, sự kiện, influencer phù hợp, quảng cáo nhắm expat |
-| **Cơ hội** | Khoảng trống nào trong phân khúc này Maison Denude có thể khai thác từ trong nước? |
+| **Phân khúc** | Expat tại TP.HCM và Hà Nội — quốc tịch, ngành nghề, thu nhập, nhu cầu thời trang |
+| **Hành vi** | Họ tìm thời trang bespoke ở đâu? Kênh nào hiệu quả? |
+| **Value Fit** | Định vị artisanal bespoke có phù hợp với kỳ vọng tệp này không? |
+| **Kênh tiếp cận** | Community groups, expat networks, sự kiện, quảng cáo geo-targeted |
+
+#### Nhóm 2 — Travel Shopper: khách quốc tế đến Việt Nam mua sắm
+
+*Chị Chi nêu ra trong buổi họp: đây là xu hướng đang tăng rõ. Khách nước ngoài đến Việt Nam ngày càng nhiều và shopping thời trang khi đi du lịch đang rất cao.*
+
+Tâm lý mua sắm khi đi du lịch khác hoàn toàn so với mua ở nhà: không chần chừ, muốn thứ unique, mua như một dạng **souvenir cao cấp**. Khách quốc tế mua tại Maison thường thuộc 2 dạng:
+1. **Đặt từ nước ngoài trước** → ghé showroom lấy khi đến Việt Nam
+2. **Đến Việt Nam rồi mới tìm** → discovery tại chỗ
+
+| Thành phần | Nội dung |
+|-----------|----------|
+| **Phân khúc** | Khách du lịch quốc tế có spending cao, đặc biệt tại TP.HCM |
+| **Hành vi** | Tìm kiếm trước chuyến đi vs. khám phá tại chỗ — 2 hành trình khác nhau |
+| **Kênh tiếp cận** | SEO ("bespoke fashion saigon", "unique fashion ho chi minh city"), Google Maps, travel blogs, Instagram geo-tag |
+| **Cơ hội** | Pre-trip booking funnel — khách tìm và đặt trước khi bay sang |
+
+#### Nhóm 3 — Cộng đồng người gốc Hoa tại Đông Nam Á
+
+*Maddy đề xuất trong buổi họp — chị Chi thấy hướng này thú vị.*
+
+Cộng đồng người gốc Hoa tại Thái Lan, Indonesia, Philippines vẫn có appreciation sâu với trang phục truyền thống châu Á (sườn xám, ao dai). Đây là thị trường ngách nhưng có cultural alignment tự nhiên với sản phẩm của Maison Denude — không cần educate về giá trị của trang phục truyền thống.
+
+| Thành phần | Nội dung |
+|-----------|----------|
+| **Phân khúc** | Người gốc Hoa tại TH/ID/PH có thu nhập cao, mặc sườn xám / trang phục truyền thống châu Á dịp lễ |
+| **Cultural Fit** | Appreciation với craftsmanship và trang phục heritage — alignment tự nhiên với positioning của Maison |
+| **Kênh tiếp cận** | RedNote (小红书) — cộng đồng gốc Hoa tại ĐNA rất active trên nền tảng này; Instagram |
+| **Cơ hội** | Có thể tiếp cận từ xa qua digital — không cần hiện diện vật lý tại thị trường |
+
+> **Lưu ý scope:** Nhóm 3 chưa được chốt là trong hay ngoài phạm vi chính thức — cần xác nhận với Maison Denude xem có muốn đưa vào Giai đoạn 1 không hay để Giai đoạn 2.
 
 ---
 
@@ -263,7 +300,7 @@ THÁNG 6                                          THÁNG 7
 | # | Sản phẩm | Ghi chú |
 |---|---------|---------|
 | 1 | Global Market Analytics — 3 thị trường trọng điểm | Báo cáo nghiên cứu chuyên sâu đầy đủ |
-| 2 | Foreign Market in Vietnam Analysis | Phân tích phân khúc expat tại Việt Nam |
+| 2 | Foreign Market in Vietnam Analysis | 3 nhóm: Expat cư trú · Travel Shopper · Cộng đồng gốc Hoa ĐNA |
 | 3 | Digital Marketing Playbook — 3 thị trường | Chiến lược nội dung · Chiến lược kênh · Cấu hình quảng cáo · KOL shortlist · Giải pháp công nghệ |
 | 4 | Handover chuyển giao Playbook | Tuần 7 · 1 buổi walkthrough |
 
