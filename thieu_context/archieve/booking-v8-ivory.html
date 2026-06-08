@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Book a Visit — V8 Warm Ivory</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#8B6914;--gold-l:#C4A351;--gm:rgba(139,105,20,.1);--bg:#F3EFE7;--card:#FAFAF7;--blk:#1A1612;--mid:#3D3529;--gr:#9A9188;--lg:#7A7066}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--blk);font-weight:300;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 24px;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 20%,rgba(196,163,81,.08) 0%,transparent 60%);pointer-events:none}
+
+.wrap{width:100%;max-width:700px;position:relative;z-index:1}
+
+/* Header */
+.header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid rgba(139,105,20,.15)}
+.h-left{}
+.h-ey{font-size:8px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-l);display:block;margin-bottom:12px}
+.h-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,60px);font-weight:300;letter-spacing:.04em;line-height:1;color:var(--blk)}
+.h-title em{font-style:italic;color:var(--gold)}
+.h-right{text-align:right;flex-shrink:0;padding-left:24px}
+.h-addr{font-size:10px;letter-spacing:.12em;color:var(--gr);line-height:2;text-transform:uppercase}
+.h-addr strong{color:var(--gold);display:block;font-weight:400}
+
+/* Two-column form layout */
+.form-grid{display:grid;grid-template-columns:1fr 1px 1fr;gap:0;background:var(--card);border:1px solid rgba(139,105,20,.12)}
+.col{padding:52px 44px}
+.col-div{background:rgba(139,105,20,.08)}
+
+/* Column headings */
+.col-label{font-size:8px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-l);display:block;margin-bottom:28px;padding-bottom:12px;border-bottom:1px solid rgba(139,105,20,.12)}
+
+/* Fields */
+.f{display:flex;flex-direction:column;margin-bottom:24px}
+.f label{font-size:7.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gr);margin-bottom:9px;transition:.3s}
+.f:focus-within label{color:var(--gold)}
+.f input,.f select,.f textarea{background:transparent;border:none;border-bottom:1px solid rgba(139,105,20,.2);padding:10px 0;font-family:'Inter',sans-serif;font-size:12px;font-weight:300;letter-spacing:.08em;color:var(--blk);outline:none;transition:border-color .3s;appearance:none;width:100%}
+.f input::placeholder,.f textarea::placeholder{color:rgba(26,22,18,.3);font-size:10.5px}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--gold)}
+.f select option{background:#fff;color:var(--blk)}
+.f textarea{resize:none;height:88px;line-height:1.7}
+.sel-w{position:relative}.sel-w::after{content:'';position:absolute;right:0;bottom:14px;width:5px;height:5px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:rotate(45deg);opacity:.5;pointer-events:none}
+
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+
+/* Chips (light style) */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.chip{padding:8px 14px;border:1px solid rgba(139,105,20,.2);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--gr);cursor:pointer;transition:.25s;user-select:none}
+.chip:hover{border-color:rgba(139,105,20,.4);color:var(--mid)}.chip.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Time */
+.times{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:4px}
+.tsl{padding:10px 4px;border:1px solid rgba(139,105,20,.14);text-align:center;font-size:9px;letter-spacing:.1em;color:var(--gr);cursor:pointer;transition:.25s;user-select:none}
+.tsl:hover{border-color:rgba(139,105,20,.35);color:var(--mid)}.tsl.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Submit footer */
+.form-foot{grid-column:1/-1;padding:28px 44px;border-top:1px solid rgba(139,105,20,.1);display:flex;align-items:center;justify-content:space-between;background:rgba(139,105,20,.03)}
+.note{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gr)}
+.btn-s{display:inline-flex;align-items:center;gap:14px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:.3s}
+.btn-s:hover{background:var(--gold);color:#fff}
+.btn-s::after{content:'';display:block;width:16px;height:1px;background:currentColor}
+
+/* Success */
+.succ{display:none;text-align:center;padding:80px 24px;animation:fd .5s ease}
+@keyframes fd{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.succ.active{display:block}
+.succ-orb{width:64px;height:64px;border:1px solid rgba(139,105,20,.3);border-radius:50%;margin:0 auto 32px;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold)}
+.succ-t{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;letter-spacing:.05em;color:var(--blk);margin-bottom:14px}
+.succ-t em{font-style:italic;color:var(--gold)}
+.succ-m{font-size:10.5px;letter-spacing:.16em;color:var(--gr);text-transform:uppercase;line-height:2.1}
+
+@media(max-width:720px){.form-grid{grid-template-columns:1fr}.col-div{display:none}.col{padding:36px 28px}.row2{grid-template-columns:1fr}.header{flex-direction:column;align-items:flex-start;gap:20px}.h-right{text-align:left;padding-left:0}.form-foot{flex-direction:column;gap:16px;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- Header -->
+  <div class="header">
+    <div class="h-left">
+      <span class="h-ey">Private Atelier · By Appointment</span>
+      <h1 class="h-title">Book Your<br><em>Visit</em></h1>
+    </div>
+    <div class="h-right">
+      <p class="h-addr">
+        <strong>Ho Chi Minh City</strong>
+        District 1, Saigon<br>
+        By Appointment Only<br>
+        Response within 24h
+      </p>
+    </div>
+  </div>
+
+  <div id="mainForm">
+    <div class="form-grid">
+      <!-- Left col -->
+      <div class="col">
+        <span class="col-label">Your Details</span>
+        <div class="row2">
+          <div class="f"><label>First Name</label><input type="text" placeholder="First name"/></div>
+          <div class="f"><label>Last Name</label><input type="text" placeholder="Last name"/></div>
+        </div>
+        <div class="f"><label>Email Address</label><input type="email" placeholder="your@email.com"/></div>
+        <div class="f"><label>Phone / WhatsApp</label><input type="tel" placeholder="+84 (0) —"/></div>
+        <div class="f"><label>Country</label><div class="sel-w"><select><option value="" disabled selected>Select country</option><option>Vietnam</option><option>Singapore</option><option>UAE</option><option>South Korea</option><option>Japan</option><option>France</option><option>UK</option><option>USA</option><option>Other</option></select></div></div>
+        <div class="f"><label>How did you find us?</label><div class="sel-w"><select><option value="" disabled selected>Select one</option><option>Instagram</option><option>Referral</option><option>Press</option><option>Google</option><option>小红书</option><option>Other</option></select></div></div>
+      </div>
+      <!-- Divider -->
+      <div class="col-div"></div>
+      <!-- Right col -->
+      <div class="col">
+        <span class="col-label">Service &amp; Occasion</span>
+        <div class="chips" id="cps">
+          <div class="chip on">Bespoke Áo Dài</div>
+          <div class="chip">Occasion Wear</div>
+          <div class="chip">Bespoke Tailoring</div>
+          <div class="chip">Bridal</div>
+          <div class="chip">Swimwear</div>
+          <div class="chip">Consultation</div>
+        </div>
+        <div class="f"><label>Preferred Date</label><input type="date"/></div>
+        <div class="f"><label>Preferred Time</label>
+          <div class="times" id="tms" style="margin-top:12px">
+            <div class="tsl on">10:00</div><div class="tsl">11:30</div><div class="tsl">14:00</div>
+            <div class="tsl">15:30</div><div class="tsl">17:00</div><div class="tsl">Flexible</div>
+          </div>
+        </div>
+        <div class="f" style="margin-top:20px"><label>Occasion &amp; Vision</label><textarea placeholder="Your event, silhouette, mood, references — we listen before we create."></textarea></div>
+      </div>
+      <!-- Footer -->
+      <div class="form-foot">
+        <span class="note">Atelier hours by appointment · Response within 24 hours</span>
+        <button class="btn-s" id="sub">Request Appointment</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="succ" id="ok">
+    <div class="succ-orb">✦</div>
+    <h2 class="succ-t">Merci,<br><em>we'll be in touch.</em></h2>
+    <p class="succ-m">Your request has been received.<br>We respond within 24 hours.</p>
+  </div>
+</div>
+<script>
+document.getElementById('cps').onclick=e=>{if(e.target.classList.contains('chip')){document.querySelectorAll('#cps .chip').forEach(c=>c.classList.remove('on'));e.target.classList.add('on')}};
+document.getElementById('tms').onclick=e=>{if(e.target.classList.contains('tsl')){document.querySelectorAll('#tms .tsl').forEach(t=>t.classList.remove('on'));e.target.classList.add('on')}};
+document.getElementById('sub').onclick=()=>{document.getElementById('mainForm').style.display='none';document.getElementById('ok').classList.add('active')};
+</script>
+</body>
+</html>

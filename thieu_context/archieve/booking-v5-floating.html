@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Book a Visit — V5 Floating Labels</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C4A351;--gm:rgba(196,163,81,.1);--blk:#0D0D0D;--ch:#111;--dark:#1a1a1a;--ww:#F9F6F0;--gr:#888880;--lg:#C8C5BE}
+body{font-family:'Inter',sans-serif;background:var(--ch);color:var(--ww);font-weight:300;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 24px;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -5%,rgba(196,163,81,.06) 0%,transparent 65%);pointer-events:none}
+
+.wrap{width:100%;max-width:640px;position:relative;z-index:1}
+
+/* Header */
+.header{text-align:center;margin-bottom:60px}
+.ornament{width:48px;height:48px;border:1px solid rgba(196,163,81,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:16px;color:var(--gold)}
+.ey{font-size:8.5px;letter-spacing:.44em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px;opacity:.8}
+.title{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,56px);font-weight:300;letter-spacing:.05em;line-height:1.05;color:var(--ww)}
+.title em{font-style:italic;color:var(--gold)}
+.rule{width:1px;height:30px;background:rgba(196,163,81,.35);margin:22px auto}
+.sub{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gr)}
+
+/* Card with glass feel */
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(196,163,81,.12);padding:52px 56px;position:relative;backdrop-filter:blur(4px)}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.3}
+.card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(196,163,81,.2),transparent)}
+
+/* Floating label fields */
+.field-group{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:36px}
+.field-group.full{grid-template-columns:1fr}
+
+.fl{position:relative;margin-bottom:0}
+.fl input,.fl select,.fl textarea{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(196,163,81,.2);padding:22px 0 10px;font-family:'Inter',sans-serif;font-size:13px;font-weight:300;letter-spacing:.08em;color:var(--ww);outline:none;transition:border-color .3s;appearance:none}
+.fl input::placeholder,.fl textarea::placeholder{color:transparent}
+.fl input:focus,.fl select:focus,.fl textarea:focus{border-color:var(--gold)}
+.fl select option{background:#1a1a1a;color:var(--ww)}
+.fl textarea{resize:none;height:90px;line-height:1.7;padding-top:26px}
+.fl label{position:absolute;left:0;top:16px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gr);transition:all .3s ease;pointer-events:none;transform-origin:left center}
+.fl input:focus+label,.fl input:not(:placeholder-shown)+label,
+.fl textarea:focus+label,.fl textarea:not(:placeholder-shown)+label,
+.fl select:focus+label,.fl.has-val label{top:2px;font-size:7.5px;letter-spacing:.28em;color:var(--gold)}
+/* For date inputs which don't support :placeholder-shown */
+.fl input[type="date"]+label{top:2px;font-size:7.5px;letter-spacing:.28em;color:var(--gold)}
+.fl-line{position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width .35s ease}
+.fl input:focus~.fl-line,.fl textarea:focus~.fl-line,.fl select:focus~.fl-line{width:100%}
+.sel-arrow{position:absolute;right:0;bottom:14px;width:5px;height:5px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:rotate(45deg);opacity:.4;pointer-events:none}
+
+/* Service section */
+.sec-div{display:flex;align-items:center;gap:20px;margin:8px 0 24px}
+.sec-div-label{font-size:8px;letter-spacing:.36em;text-transform:uppercase;color:rgba(196,163,81,.5);white-space:nowrap}
+.sec-div-line{flex:1;height:1px;background:rgba(196,163,81,.1)}
+
+/* Chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.chip{padding:9px 18px;border:1px solid rgba(196,163,81,.18);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gr);cursor:pointer;transition:.25s;user-select:none}
+.chip:hover{border-color:rgba(196,163,81,.4);color:var(--lg)}.chip.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Submit */
+.nav{display:flex;align-items:center;justify-content:space-between;margin-top:44px;flex-wrap:wrap;gap:16px}
+.note{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+.btn-s{display:inline-flex;align-items:center;gap:14px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.3em;text-transform:uppercase;padding:15px 36px;cursor:pointer;transition:.3s}
+.btn-s:hover{background:var(--gold);color:var(--blk)}
+.btn-s::after{content:'';display:block;width:18px;height:1px;background:currentColor}
+
+/* Success */
+.succ{display:none;text-align:center;padding:16px 0;animation:fd .5s ease}
+@keyframes fd{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.succ.active{display:block}
+.succ-orb{width:64px;height:64px;border:1px solid rgba(196,163,81,.3);border-radius:50%;margin:0 auto 32px;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold)}
+.succ-t{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;letter-spacing:.06em;color:var(--ww);margin-bottom:14px}
+.succ-t em{font-style:italic;color:var(--gold)}
+.succ-m{font-size:10.5px;letter-spacing:.16em;color:var(--gr);text-transform:uppercase;line-height:2.1}
+
+@media(max-width:580px){.card{padding:32px 24px}.field-group{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="ornament">✦</div>
+    <span class="ey">Private Atelier · By Appointment</span>
+    <h1 class="title">Reserve Your<br><em>Consultation</em></h1>
+    <div class="rule"></div>
+    <p class="sub">Bespoke · Artisanal · Ho Chi Minh City</p>
+  </div>
+
+  <div class="card">
+    <div id="formBody">
+      <div class="field-group">
+        <div class="fl">
+          <input type="text" placeholder=" " id="fn"/>
+          <label for="fn">First Name</label>
+          <div class="fl-line"></div>
+        </div>
+        <div class="fl">
+          <input type="text" placeholder=" " id="ln"/>
+          <label for="ln">Last Name</label>
+          <div class="fl-line"></div>
+        </div>
+      </div>
+      <div class="field-group">
+        <div class="fl">
+          <input type="email" placeholder=" " id="em"/>
+          <label for="em">Email Address</label>
+          <div class="fl-line"></div>
+        </div>
+        <div class="fl">
+          <input type="tel" placeholder=" " id="ph"/>
+          <label for="ph">Phone / WhatsApp</label>
+          <div class="fl-line"></div>
+        </div>
+      </div>
+      <div class="field-group">
+        <div class="fl has-val">
+          <select id="co"><option value="" disabled selected></option><option>Vietnam</option><option>Singapore</option><option>UAE</option><option>South Korea</option><option>Japan</option><option>France</option><option>UK</option><option>USA</option><option>Other</option></select>
+          <label for="co">Country of Residence</label>
+          <div class="fl-line"></div>
+          <div class="sel-arrow"></div>
+        </div>
+        <div class="fl has-val">
+          <select id="src"><option value="" disabled selected></option><option>Instagram</option><option>Referral</option><option>Press / Editorial</option><option>Google</option><option>小红书</option><option>Other</option></select>
+          <label for="src">How did you find us?</label>
+          <div class="fl-line"></div>
+          <div class="sel-arrow"></div>
+        </div>
+      </div>
+
+      <div class="sec-div"><span class="sec-div-label">Service</span><div class="sec-div-line"></div></div>
+      <div class="chips" id="cps">
+        <div class="chip on">Bespoke Áo Dài</div>
+        <div class="chip">Occasion Wear</div>
+        <div class="chip">Bespoke Tailoring</div>
+        <div class="chip">Bridal / Ăn Hỏi</div>
+        <div class="chip">Swimwear</div>
+        <div class="chip">Consultation Only</div>
+      </div>
+
+      <div class="sec-div"><span class="sec-div-label">Appointment</span><div class="sec-div-line"></div></div>
+      <div class="field-group">
+        <div class="fl">
+          <input type="date" id="dt"/>
+          <label for="dt">Preferred Date</label>
+          <div class="fl-line"></div>
+        </div>
+        <div class="fl">
+          <input type="text" placeholder=" " id="occ"/>
+          <label for="occ">Occasion / Event</label>
+          <div class="fl-line"></div>
+        </div>
+      </div>
+
+      <div class="sec-div"><span class="sec-div-label">Your Vision</span><div class="sec-div-line"></div></div>
+      <div class="field-group full">
+        <div class="fl">
+          <textarea placeholder=" " id="msg"></textarea>
+          <label for="msg">Tell us your story — silhouette, mood, references</label>
+          <div class="fl-line"></div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <span class="note">Response within 24 hours</span>
+        <button class="btn-s" id="sub">Request Appointment</button>
+      </div>
+    </div>
+    <div class="succ" id="ok">
+      <div class="succ-orb">✦</div>
+      <h2 class="succ-t">Merci,<br><em>we'll be in touch.</em></h2>
+      <p class="succ-m">Your request has been received.<br>We respond within 24 hours.</p>
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById('cps').onclick=e=>{if(e.target.classList.contains('chip')){document.querySelectorAll('#cps .chip').forEach(c=>c.classList.remove('on'));e.target.classList.add('on')}};
+document.getElementById('sub').onclick=()=>{document.getElementById('formBody').style.display='none';document.getElementById('ok').classList.add('active')};
+</script>
+</body>
+</html>

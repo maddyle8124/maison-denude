@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Book a Visit — V1 Multi-Step</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C4A351;--gm:rgba(196,163,81,.12);--blk:#0D0D0D;--ch:#111;--ww:#F9F6F0;--gr:#888880;--lg:#C8C5BE}
+body{font-family:'Inter',sans-serif;background:var(--ch);color:var(--ww);font-weight:300;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 24px;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 50% -10%,rgba(196,163,81,.07) 0%,transparent 70%);pointer-events:none}
+
+.wrap{width:100%;max-width:620px;position:relative;z-index:1}
+
+/* Progress */
+.progress{display:flex;align-items:center;gap:0;margin-bottom:52px}
+.p-dot{width:32px;height:32px;border:1px solid rgba(196,163,81,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:.05em;color:var(--gr);transition:.4s;flex-shrink:0}
+.p-dot.active{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+.p-dot.done{border-color:var(--gold);background:var(--gold);color:var(--blk);font-size:11px}
+.p-dot.done span{display:none}.p-dot.done::after{content:'✓'}
+.p-line{flex:1;height:1px;background:rgba(196,163,81,.15);position:relative;overflow:hidden}
+.p-fill{position:absolute;left:0;top:0;bottom:0;background:var(--gold);width:0;transition:width .5s ease}
+
+/* Header */
+.header{text-align:center;margin-bottom:48px}
+.eyebrow{font-size:8.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px;opacity:.85}
+.title{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,58px);font-weight:300;letter-spacing:.05em;line-height:1.05;color:var(--ww)}
+.title em{font-style:italic;color:var(--gold)}
+.rule{width:1px;height:32px;background:rgba(196,163,81,.35);margin:24px auto}
+.sub{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gr)}
+
+/* Card */
+.card{background:rgba(255,255,255,.025);border:1px solid rgba(196,163,81,.12);padding:48px 52px;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.35}
+
+/* Steps */
+.step{display:none;animation:fd .35s ease}
+.step.active{display:block}
+@keyframes fd{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sh{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:.07em;color:var(--ww);margin-bottom:4px}
+.sd{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gr);margin-bottom:36px}
+
+/* Fields */
+.row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+.row.full{grid-template-columns:1fr}
+.f{display:flex;flex-direction:column}
+.f label{font-size:8px;letter-spacing:.32em;text-transform:uppercase;color:var(--gr);margin-bottom:10px;transition:.3s}
+.f:focus-within label{color:var(--gold)}
+.f input,.f select,.f textarea{background:transparent;border:none;border-bottom:1px solid rgba(196,163,81,.2);padding:11px 0;font-family:'Inter',sans-serif;font-size:12px;font-weight:300;letter-spacing:.1em;color:var(--ww);outline:none;transition:border-color .3s;appearance:none;width:100%}
+.f input::placeholder,.f textarea::placeholder{color:rgba(255,255,255,.18);font-size:10.5px}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--gold)}
+.f select option{background:#1a1a1a;color:var(--ww)}
+.f textarea{resize:none;height:88px;line-height:1.7}
+.sel-wrap{position:relative}
+.sel-wrap::after{content:'';position:absolute;right:0;bottom:16px;width:5px;height:5px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:rotate(45deg);opacity:.5;pointer-events:none}
+
+/* Chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{padding:9px 18px;border:1px solid rgba(196,163,81,.2);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gr);cursor:pointer;transition:.25s;user-select:none}
+.chip:hover{border-color:rgba(196,163,81,.5);color:var(--lg)}
+.chip.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Time */
+.times{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tsl{padding:11px 6px;border:1px solid rgba(196,163,81,.15);text-align:center;font-size:9.5px;letter-spacing:.12em;color:var(--gr);cursor:pointer;transition:.25s;user-select:none}
+.tsl:hover{border-color:rgba(196,163,81,.4);color:var(--lg)}
+.tsl.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Nav */
+.nav{display:flex;align-items:center;justify-content:space-between;margin-top:44px}
+.btn-b{font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gr);background:transparent;border:none;cursor:pointer;display:flex;align-items:center;gap:10px;transition:.3s;font-family:'Inter',sans-serif}
+.btn-b:hover{color:var(--lg)}
+.btn-b::before{content:'';display:block;width:18px;height:1px;background:currentColor}
+.btn-n,.btn-s{display:inline-flex;align-items:center;gap:12px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;padding:15px 36px;cursor:pointer;transition:.3s}
+.btn-n:hover,.btn-s:hover{background:var(--gold);color:var(--blk)}
+.btn-n::after{content:'';display:block;width:18px;height:1px;background:currentColor}
+.note{margin-top:20px;font-size:9px;letter-spacing:.12em;color:rgba(255,255,255,.18);text-align:center;text-transform:uppercase}
+
+/* Success */
+.succ{display:none;text-align:center;padding:12px 0}
+.succ.active{display:block;animation:fd .5s ease}
+.succ-orb{width:64px;height:64px;border:1px solid rgba(196,163,81,.3);border-radius:50%;margin:0 auto 32px;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold)}
+.succ-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;letter-spacing:.06em;color:var(--ww);margin-bottom:14px}
+.succ-title em{font-style:italic;color:var(--gold)}
+.succ-msg{font-size:10.5px;letter-spacing:.15em;color:var(--gr);text-transform:uppercase;line-height:2}
+
+@media(max-width:580px){.card{padding:32px 24px}.row{grid-template-columns:1fr}.times{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <span class="eyebrow">Private Atelier · By Appointment</span>
+    <h1 class="title">Reserve Your<br><em>Appointment</em></h1>
+    <div class="rule"></div>
+    <p class="sub">Consultation · Bespoke · Occasion Wear</p>
+  </div>
+
+  <div class="progress" id="prog">
+    <div class="p-dot active" id="d1"><span>1</span></div>
+    <div class="p-line"><div class="p-fill" id="l1"></div></div>
+    <div class="p-dot" id="d2"><span>2</span></div>
+    <div class="p-line"><div class="p-fill" id="l2"></div></div>
+    <div class="p-dot" id="d3"><span>3</span></div>
+  </div>
+
+  <div class="card">
+    <!-- Step 1 -->
+    <div class="step active" id="s1">
+      <p class="sh">Who are you?</p>
+      <p class="sd">Step 1 of 3 — Contact information</p>
+      <div class="row"><div class="f"><label>First Name</label><input type="text" placeholder="First name"/></div><div class="f"><label>Last Name</label><input type="text" placeholder="Last name"/></div></div>
+      <div class="row"><div class="f"><label>Email</label><input type="email" placeholder="your@email.com"/></div><div class="f"><label>Phone / WhatsApp</label><input type="tel" placeholder="+84 (0) —"/></div></div>
+      <div class="row full"><div class="f"><label>Country of Residence</label><div class="sel-wrap"><select><option value="" disabled selected>Select country</option><option>Vietnam</option><option>Singapore</option><option>UAE</option><option>South Korea</option><option>Japan</option><option>France</option><option>UK</option><option>USA</option><option>Other</option></select></div></div></div>
+      <div class="nav"><div></div><button class="btn-n" id="n1">Continue</button></div>
+    </div>
+    <!-- Step 2 -->
+    <div class="step" id="s2">
+      <p class="sh">What brings you in?</p>
+      <p class="sd">Step 2 of 3 — Service & preferred time</p>
+      <label style="font-size:8px;letter-spacing:.32em;text-transform:uppercase;color:var(--gr);display:block;margin-bottom:12px">Service</label>
+      <div class="chips" id="cps"><div class="chip on" data-v="Bespoke Áo Dài">Bespoke Áo Dài</div><div class="chip" data-v="Occasion Wear">Occasion Wear</div><div class="chip" data-v="Bespoke Tailoring">Bespoke Tailoring</div><div class="chip" data-v="Bridal">Bridal</div><div class="chip" data-v="Swimwear">Swimwear</div><div class="chip" data-v="Consultation">Consultation</div></div>
+      <div class="row"><div class="f"><label>Preferred Date</label><input type="date"/></div><div class="f"><label>Preferred Time</label><div class="times" id="tms"><div class="tsl on">10:00</div><div class="tsl">11:30</div><div class="tsl">14:00</div><div class="tsl">15:30</div></div></div></div>
+      <div class="nav"><button class="btn-b" id="b2">Back</button><button class="btn-n" id="n2">Continue</button></div>
+    </div>
+    <!-- Step 3 -->
+    <div class="step" id="s3">
+      <p class="sh">Tell us your story.</p>
+      <p class="sd">Step 3 of 3 — Your occasion</p>
+      <div class="row full"><div class="f"><label>Occasion or Event</label><input type="text" placeholder="Wedding, gala, personal wardrobe…"/></div></div>
+      <div class="row full"><div class="f"><label>Event Date (if applicable)</label><input type="date"/></div></div>
+      <div class="row full"><div class="f"><label>Your Vision</label><textarea placeholder="Silhouette, mood, references — we listen before we create."></textarea></div></div>
+      <div class="row full"><div class="f"><label>How did you find us?</label><div class="sel-wrap"><select><option value="" disabled selected>Select one</option><option>Instagram</option><option>Referral</option><option>Press / Editorial</option><option>Google</option><option>小红书</option><option>Other</option></select></div></div></div>
+      <div class="nav"><button class="btn-b" id="b3">Back</button><button class="btn-s" id="sub">Request Appointment</button></div>
+    </div>
+    <!-- Success -->
+    <div class="succ" id="ok">
+      <div class="succ-orb">✦</div>
+      <h2 class="succ-title">Thank you,<br><em>we will be in touch.</em></h2>
+      <p class="succ-msg">Your request has been received.<br>We respond within 24 hours.</p>
+    </div>
+  </div>
+  <p class="note">Atelier hours by appointment only</p>
+</div>
+<script>
+function go(n){
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+  const p=document.getElementById('s'+n);if(p)p.classList.add('active');
+  [1,2,3].forEach(i=>{
+    const d=document.getElementById('d'+i);
+    d.classList.remove('active','done');
+    if(i<n)d.classList.add('done');
+    if(i===n)d.classList.add('active');
+  });
+  if(document.getElementById('l1'))document.getElementById('l1').style.width=n>=2?'100%':'0';
+  if(document.getElementById('l2'))document.getElementById('l2').style.width=n>=3?'100%':'0';
+}
+document.getElementById('n1').onclick=()=>go(2);
+document.getElementById('n2').onclick=()=>go(3);
+document.getElementById('b2').onclick=()=>go(1);
+document.getElementById('b3').onclick=()=>go(2);
+document.getElementById('sub').onclick=()=>{
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('prog').style.display='none';
+  document.getElementById('ok').classList.add('active');
+};
+document.getElementById('cps').onclick=e=>{if(e.target.classList.contains('chip')){document.querySelectorAll('#cps .chip').forEach(c=>c.classList.remove('on'));e.target.classList.add('on')}};
+document.getElementById('tms').onclick=e=>{if(e.target.classList.contains('tsl')){document.querySelectorAll('#tms .tsl').forEach(t=>t.classList.remove('on'));e.target.classList.add('on')}};
+</script>
+</body>
+</html>

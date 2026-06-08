@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Book a Visit — V7 Accordion</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C4A351;--gm:rgba(196,163,81,.08);--blk:#0D0D0D;--ch:#111;--ww:#F9F6F0;--gr:#888880;--lg:#C8C5BE}
+body{font-family:'Inter',sans-serif;background:var(--ch);color:var(--ww);font-weight:300;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 24px;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 40% at 50% 0%,rgba(196,163,81,.05) 0%,transparent 65%);pointer-events:none}
+
+.wrap{width:100%;max-width:680px;position:relative;z-index:1}
+
+/* Header */
+.hdr{margin-bottom:52px}
+.hdr-ey{font-size:8.5px;letter-spacing:.44em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px;opacity:.8}
+.hdr-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,60px);font-weight:300;letter-spacing:.04em;line-height:1;color:var(--ww)}
+.hdr-title em{font-style:italic;color:var(--gold)}
+.hdr-rule{width:40px;height:1px;background:rgba(196,163,81,.4);margin:22px 0}
+.hdr-sub{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gr)}
+
+/* Accordion */
+.acc-item{border-top:1px solid rgba(196,163,81,.12);overflow:hidden}
+.acc-item:last-of-type{border-bottom:1px solid rgba(196,163,81,.12)}
+
+.acc-head{display:flex;align-items:center;justify-content:space-between;padding:24px 0;cursor:pointer;user-select:none;transition:background .25s}
+.acc-head:hover{background:rgba(196,163,81,.02)}
+.acc-head-left{display:flex;align-items:center;gap:24px}
+.acc-num{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:rgba(196,163,81,.25);line-height:1;width:28px;flex-shrink:0}
+.acc-item.open .acc-num{color:var(--gold)}
+.acc-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gr);transition:.3s}
+.acc-item.open .acc-label{color:var(--gold)}
+.acc-summary{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.04em;color:rgba(249,246,240,.35);margin-top:4px;display:block;transition:.3s}
+.acc-item.open .acc-summary{color:rgba(249,246,240,.5)}
+.acc-arrow{width:16px;height:16px;border-right:1px solid rgba(196,163,81,.35);border-bottom:1px solid rgba(196,163,81,.35);transform:rotate(-45deg);transition:transform .35s ease,border-color .3s}
+.acc-item.open .acc-arrow{transform:rotate(45deg);border-color:var(--gold)}
+
+/* Accordion body */
+.acc-body{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.acc-body-inner{padding:8px 0 36px 52px}
+
+/* Fields */
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+.row1{margin-bottom:24px}
+.f{display:flex;flex-direction:column}
+.f label{font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--gr);margin-bottom:10px;transition:.3s}
+.f:focus-within label{color:var(--gold)}
+.f input,.f select,.f textarea{background:transparent;border:none;border-bottom:1px solid rgba(196,163,81,.18);padding:11px 0;font-family:'Inter',sans-serif;font-size:12px;font-weight:300;letter-spacing:.09em;color:var(--ww);outline:none;transition:border-color .3s;appearance:none;width:100%}
+.f input::placeholder,.f textarea::placeholder{color:rgba(255,255,255,.15);font-size:10px}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--gold)}
+.f select option{background:#1a1a1a;color:var(--ww)}
+.f textarea{resize:none;height:88px;line-height:1.7}
+.sel-w{position:relative}.sel-w::after{content:'';position:absolute;right:0;bottom:14px;width:5px;height:5px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:rotate(45deg);opacity:.4;pointer-events:none}
+
+/* Chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0}
+.chip{padding:9px 18px;border:1px solid rgba(196,163,81,.18);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gr);cursor:pointer;transition:.25s;user-select:none}
+.chip:hover{border-color:rgba(196,163,81,.4);color:var(--lg)}.chip.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Time */
+.times{display:flex;gap:8px;flex-wrap:wrap}
+.tsl{padding:10px 16px;border:1px solid rgba(196,163,81,.12);font-size:9.5px;letter-spacing:.12em;color:var(--gr);cursor:pointer;transition:.25s;user-select:none}
+.tsl:hover{border-color:rgba(196,163,81,.35);color:var(--lg)}.tsl.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Next section btn */
+.btn-next-sec{display:inline-flex;align-items:center;gap:10px;background:transparent;border:none;color:var(--gold);font-family:'Inter',sans-serif;font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;padding:0;cursor:pointer;margin-top:20px;transition:.3s}
+.btn-next-sec:hover{opacity:.7}
+.btn-next-sec::after{content:'';display:block;width:16px;height:1px;background:currentColor}
+
+/* Submit */
+.submit-row{display:flex;align-items:center;justify-content:space-between;margin-top:44px;flex-wrap:wrap;gap:16px}
+.note{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+.btn-s{display:inline-flex;align-items:center;gap:14px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;padding:15px 36px;cursor:pointer;transition:.3s}
+.btn-s:hover{background:var(--gold);color:var(--blk)}
+.btn-s::after{content:'';display:block;width:18px;height:1px;background:currentColor}
+
+/* Success */
+.succ{display:none;text-align:center;padding:40px 0;animation:fd .5s ease}
+@keyframes fd{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.succ.active{display:block}
+.succ-orb{width:64px;height:64px;border:1px solid rgba(196,163,81,.3);border-radius:50%;margin:0 auto 32px;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold)}
+.succ-t{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;letter-spacing:.05em;color:var(--ww);margin-bottom:14px}
+.succ-t em{font-style:italic;color:var(--gold)}
+.succ-m{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gr);line-height:2.1}
+
+@media(max-width:560px){.row2{grid-template-columns:1fr}.acc-body-inner{padding-left:28px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <span class="hdr-ey">Private Atelier · By Appointment</span>
+    <h1 class="hdr-title">Book Your<br><em>Visit</em></h1>
+    <div class="hdr-rule"></div>
+    <p class="hdr-sub">Bespoke · Artisanal · Ho Chi Minh City</p>
+  </div>
+
+  <div id="formBody">
+    <!-- Accordion 1 -->
+    <div class="acc-item open" id="ac1">
+      <div class="acc-head" onclick="toggle(1)">
+        <div class="acc-head-left">
+          <span class="acc-num">01</span>
+          <div><span class="acc-label">Contact</span><span class="acc-summary">Name, email, phone</span></div>
+        </div>
+        <div class="acc-arrow"></div>
+      </div>
+      <div class="acc-body" id="ab1">
+        <div class="acc-body-inner">
+          <div class="row2">
+            <div class="f"><label>First Name</label><input type="text" placeholder="First name"/></div>
+            <div class="f"><label>Last Name</label><input type="text" placeholder="Last name"/></div>
+          </div>
+          <div class="row2">
+            <div class="f"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+            <div class="f"><label>Phone / WhatsApp</label><input type="tel" placeholder="+84 (0) —"/></div>
+          </div>
+          <div class="row1">
+            <div class="f"><label>Country</label><div class="sel-w"><select><option value="" disabled selected>Select country</option><option>Vietnam</option><option>Singapore</option><option>UAE</option><option>South Korea</option><option>Japan</option><option>France</option><option>UK</option><option>USA</option><option>Other</option></select></div></div>
+          </div>
+          <button class="btn-next-sec" onclick="openNext(1)">Continue to Service</button>
+        </div>
+      </div>
+    </div>
+    <!-- Accordion 2 -->
+    <div class="acc-item" id="ac2">
+      <div class="acc-head" onclick="toggle(2)">
+        <div class="acc-head-left">
+          <span class="acc-num">02</span>
+          <div><span class="acc-label">Service</span><span class="acc-summary">What brings you in?</span></div>
+        </div>
+        <div class="acc-arrow"></div>
+      </div>
+      <div class="acc-body" id="ab2">
+        <div class="acc-body-inner">
+          <div class="chips" id="cps">
+            <div class="chip on">Bespoke Áo Dài</div>
+            <div class="chip">Occasion Wear</div>
+            <div class="chip">Bespoke Tailoring</div>
+            <div class="chip">Bridal / Ăn Hỏi</div>
+            <div class="chip">Swimwear</div>
+            <div class="chip">Consultation</div>
+          </div>
+          <button class="btn-next-sec" onclick="openNext(2)">Continue to Appointment</button>
+        </div>
+      </div>
+    </div>
+    <!-- Accordion 3 -->
+    <div class="acc-item" id="ac3">
+      <div class="acc-head" onclick="toggle(3)">
+        <div class="acc-head-left">
+          <span class="acc-num">03</span>
+          <div><span class="acc-label">Appointment</span><span class="acc-summary">Date &amp; time preference</span></div>
+        </div>
+        <div class="acc-arrow"></div>
+      </div>
+      <div class="acc-body" id="ab3">
+        <div class="acc-body-inner">
+          <div class="row2" style="margin-bottom:20px">
+            <div class="f"><label>Preferred Date</label><input type="date"/></div>
+            <div class="f"><label>Event Date (if applicable)</label><input type="date"/></div>
+          </div>
+          <div class="f" style="margin-bottom:20px"><label>Preferred Time</label>
+            <div class="times" id="tms" style="margin-top:12px">
+              <div class="tsl on">10:00</div><div class="tsl">11:30</div><div class="tsl">14:00</div><div class="tsl">15:30</div><div class="tsl">17:00</div>
+            </div>
+          </div>
+          <button class="btn-next-sec" onclick="openNext(3)">Continue to Vision</button>
+        </div>
+      </div>
+    </div>
+    <!-- Accordion 4 -->
+    <div class="acc-item" id="ac4">
+      <div class="acc-head" onclick="toggle(4)">
+        <div class="acc-head-left">
+          <span class="acc-num">04</span>
+          <div><span class="acc-label">Your Vision</span><span class="acc-summary">Tell us your story</span></div>
+        </div>
+        <div class="acc-arrow"></div>
+      </div>
+      <div class="acc-body" id="ab4">
+        <div class="acc-body-inner">
+          <div class="row1"><div class="f"><label>Occasion</label><input type="text" placeholder="Wedding, gala, personal wardrobe…"/></div></div>
+          <div class="row1"><div class="f"><label>Your Vision</label><textarea placeholder="Silhouette, mood, references — we listen before we create."></textarea></div></div>
+          <div class="row1"><div class="f"><label>How did you find us?</label><div class="sel-w"><select><option value="" disabled selected>Select one</option><option>Instagram</option><option>Referral</option><option>Press</option><option>Google</option><option>小红书</option><option>Other</option></select></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-row">
+      <span class="note">Response within 24 hours</span>
+      <button class="btn-s" id="sub">Request Appointment</button>
+    </div>
+  </div>
+
+  <div class="succ" id="ok">
+    <div class="succ-orb">✦</div>
+    <h2 class="succ-t">Merci,<br><em>we'll be in touch.</em></h2>
+    <p class="succ-m">Your request has been received.<br>We respond within 24 hours.</p>
+  </div>
+</div>
+<script>
+const MH={1:0,2:0,3:0,4:0};
+function toggle(n){
+  const item=document.getElementById('ac'+n);
+  const body=document.getElementById('ab'+n);
+  const isOpen=item.classList.contains('open');
+  if(isOpen){item.classList.remove('open');body.style.maxHeight='0'}
+  else{item.classList.add('open');if(!MH[n]){body.style.maxHeight='1000px'}else{body.style.maxHeight=MH[n]+'px'};setTimeout(()=>{MH[n]=body.scrollHeight;body.style.maxHeight=body.scrollHeight+'px'},50)}
+}
+function openNext(n){
+  const next=n+1;
+  if(next<=4){
+    const cur=document.getElementById('ac'+n);
+    const curB=document.getElementById('ab'+n);
+    cur.classList.remove('open');curB.style.maxHeight='0';
+    toggle(next);
+  }
+}
+// Open first by default
+document.getElementById('ab1').style.maxHeight='1000px';
+document.getElementById('cps').onclick=e=>{if(e.target.classList.contains('chip')){document.querySelectorAll('#cps .chip').forEach(c=>c.classList.remove('on'));e.target.classList.add('on')}};
+document.getElementById('tms').onclick=e=>{if(e.target.classList.contains('tsl')){document.querySelectorAll('#tms .tsl').forEach(t=>t.classList.remove('on'));e.target.classList.add('on')}};
+document.getElementById('sub').onclick=()=>{document.getElementById('formBody').style.display='none';document.getElementById('ok').classList.add('active')};
+</script>
+</body>
+</html>

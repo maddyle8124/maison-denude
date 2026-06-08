@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Book a Visit — V10 Magazine</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C4A351;--gm:rgba(196,163,81,.08);--blk:#0D0D0D;--ch:#111;--dark:#181818;--ww:#F9F6F0;--ow:#EFEFEC;--gr:#888880;--lg:#C8C5BE}
+body{font-family:'Inter',sans-serif;background:var(--ow);color:var(--blk);font-weight:300;-webkit-font-smoothing:antialiased}
+
+/* MASTHEAD */
+.masthead{background:var(--blk);padding:0 60px;display:flex;align-items:center;justify-content:space-between;height:72px;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(196,163,81,.12)}
+.mast-logo{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold)}
+.mast-center{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gr)}
+.mast-right{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+
+/* HERO STRIP */
+.hero-strip{background:var(--blk);padding:80px 60px 72px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:48px;border-bottom:1px solid rgba(196,163,81,.15)}
+.hs-left{}
+.hs-kicker{font-size:8.5px;letter-spacing:.44em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:20px}
+.hs-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,96px);font-weight:300;letter-spacing:.04em;line-height:.92;color:var(--ww)}
+.hs-title em{font-style:italic;color:var(--gold)}
+.hs-right{text-align:right}
+.hs-desc{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gr);line-height:2;max-width:200px;margin-left:auto}
+.hs-issue{display:block;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.2em;color:rgba(196,163,81,.5);margin-top:12px;font-style:italic}
+
+/* FORM BODY */
+.form-body{max-width:1100px;margin:0 auto;padding:72px 60px;display:grid;grid-template-columns:5fr 4fr;gap:72px}
+
+/* Left — fields */
+.fields-col{}
+
+/* Magazine section label */
+.mag-sec{display:flex;align-items:center;gap:0;margin-bottom:40px}
+.mag-sec-num{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.15em;color:var(--gold);padding-right:20px;border-right:1px solid rgba(139,105,20,.25);margin-right:20px}
+.mag-sec-label{font-size:8px;letter-spacing:.36em;text-transform:uppercase;color:#7A7066}
+
+/* Field styles — light mode */
+.f{display:flex;flex-direction:column;margin-bottom:28px}
+.f label{font-size:7.5px;letter-spacing:.3em;text-transform:uppercase;color:#9A9188;margin-bottom:10px;transition:.3s}
+.f:focus-within label{color:var(--gold)}
+.f input,.f select,.f textarea{background:transparent;border:none;border-bottom:1px solid rgba(139,105,20,.18);padding:11px 0;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:300;letter-spacing:.08em;color:var(--blk);outline:none;transition:border-color .3s;appearance:none;width:100%}
+.f input::placeholder,.f textarea::placeholder{color:rgba(26,22,18,.25);font-size:11px}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--gold)}
+.f select option{background:#fff;color:var(--blk)}
+.f textarea{resize:none;height:92px;line-height:1.7}
+.sel-w{position:relative}.sel-w::after{content:'';position:absolute;right:0;bottom:15px;width:5px;height:5px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:rotate(45deg);opacity:.5;pointer-events:none}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}
+
+/* Right sidebar panel */
+.sidebar-panel{background:var(--blk);padding:44px 36px;position:sticky;top:72px;height:fit-content}
+.sp-label{font-size:8px;letter-spacing:.36em;text-transform:uppercase;color:rgba(196,163,81,.55);display:block;margin-bottom:20px}
+
+/* Chips (dark) */
+.chips{display:flex;flex-direction:column;gap:1px;background:rgba(196,163,81,.08);border:1px solid rgba(196,163,81,.1);margin-bottom:28px}
+.chip{padding:14px 16px;background:var(--blk);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gr);cursor:pointer;transition:.25s;user-select:none;display:flex;align-items:center;gap:12px}
+.chip::before{content:'';display:block;width:5px;height:5px;border:1px solid rgba(196,163,81,.25);border-radius:50%;flex-shrink:0;transition:.25s}
+.chip:hover{background:rgba(196,163,81,.04);color:var(--lg)}.chip.on{background:var(--gm);color:var(--gold)}
+.chip.on::before{background:var(--gold);border-color:var(--gold)}
+
+/* Times grid */
+.sp-times{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-bottom:28px}
+.tsl{padding:11px 4px;border:1px solid rgba(196,163,81,.1);text-align:center;font-size:9.5px;letter-spacing:.1em;color:var(--gr);cursor:pointer;transition:.25s;user-select:none;background:var(--blk)}
+.tsl:hover{border-color:rgba(196,163,81,.3);color:var(--lg)}.tsl.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Date field in sidebar */
+.sp-date{background:transparent;border:none;border-bottom:1px solid rgba(196,163,81,.2);padding:11px 0;font-family:'Inter',sans-serif;font-size:12px;font-weight:300;letter-spacing:.08em;color:var(--ww);outline:none;transition:border-color .3s;appearance:none;width:100%;margin-bottom:24px}
+.sp-date:focus{border-color:var(--gold)}
+.sp-field-label{font-size:7.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gr);display:block;margin-bottom:9px}
+
+/* Submit */
+.submit-area{margin-top:0}
+.btn-s{display:flex;align-items:center;justify-content:space-between;width:100%;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;padding:16px 20px;cursor:pointer;transition:.3s}
+.btn-s:hover{background:var(--gold);color:var(--blk)}
+.btn-s-arrow{width:18px;height:1px;background:currentColor;flex-shrink:0}
+.sp-note{margin-top:16px;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.2);text-align:center;line-height:1.9}
+
+/* Horizontal rule */
+.hr{height:1px;background:rgba(139,105,20,.12);margin:8px 0 36px}
+
+/* Success */
+.succ{display:none;min-height:60vh;align-items:center;justify-content:center;text-align:center;padding:80px 60px}
+.succ.active{display:flex;flex-direction:column}
+.succ-orb{width:72px;height:72px;border:1px solid rgba(139,105,20,.25);border-radius:50%;margin:0 auto 36px;display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--gold)}
+.succ-t{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;letter-spacing:.04em;color:var(--blk);margin-bottom:16px}
+.succ-t em{font-style:italic;color:var(--gold)}
+.succ-m{font-size:10.5px;letter-spacing:.18em;color:#9A9188;text-transform:uppercase;line-height:2.2}
+
+@media(max-width:900px){.form-body{grid-template-columns:1fr;padding:48px 28px;gap:40px}.hero-strip{grid-template-columns:1fr;padding:60px 28px}.masthead{padding:0 28px}.grid2{grid-template-columns:1fr}.sidebar-panel{position:static}.sp-times{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <span class="mast-logo">Private Atelier</span>
+  <span class="mast-center">Booking Request</span>
+  <span class="mast-right">Ho Chi Minh City</span>
+</header>
+
+<div class="hero-strip">
+  <div class="hs-left">
+    <span class="hs-kicker">Private Consultation · By Appointment</span>
+    <h1 class="hs-title">Reserve<br>Your <em>Visit</em></h1>
+  </div>
+  <div class="hs-right">
+    <p class="hs-desc">Artisanal bespoke fashion.<br>Every piece made to commission — for you, alone.</p>
+    <span class="hs-issue">Consultation · Áo Dài · Occasion Wear · Bridal</span>
+  </div>
+</div>
+
+<div id="formMain">
+  <div class="form-body">
+    <!-- Fields column -->
+    <div class="fields-col">
+      <div class="mag-sec">
+        <span class="mag-sec-num">01</span>
+        <span class="mag-sec-label">Contact Information</span>
+      </div>
+      <div class="grid2">
+        <div class="f"><label>First Name</label><input type="text" placeholder="First name"/></div>
+        <div class="f"><label>Last Name</label><input type="text" placeholder="Last name"/></div>
+      </div>
+      <div class="f"><label>Email Address</label><input type="email" placeholder="your@email.com"/></div>
+      <div class="f"><label>Phone / WhatsApp</label><input type="tel" placeholder="+84 (0) —"/></div>
+      <div class="grid2">
+        <div class="f"><label>Country</label><div class="sel-w"><select><option value="" disabled selected>Select</option><option>Vietnam</option><option>Singapore</option><option>UAE</option><option>South Korea</option><option>Japan</option><option>France</option><option>UK</option><option>USA</option><option>Other</option></select></div></div>
+        <div class="f"><label>How did you find us?</label><div class="sel-w"><select><option value="" disabled selected>Select</option><option>Instagram</option><option>Referral</option><option>Press</option><option>Google</option><option>小红书</option><option>Other</option></select></div></div>
+      </div>
+
+      <div class="hr"></div>
+      <div class="mag-sec">
+        <span class="mag-sec-num">02</span>
+        <span class="mag-sec-label">Your Vision</span>
+      </div>
+      <div class="f"><label>Occasion or Event</label><input type="text" placeholder="Wedding ceremony, gala, editorial, personal wardrobe…"/></div>
+      <div class="f"><label>Event Date (if applicable)</label><input type="date"/></div>
+      <div class="f"><label>Your Vision</label><textarea placeholder="Silhouette, mood, references — or simply say hello. We listen before we create."></textarea></div>
+    </div>
+
+    <!-- Sidebar panel -->
+    <div class="sidebar-panel">
+      <span class="sp-label">Service</span>
+      <div class="chips" id="cps">
+        <div class="chip on">Bespoke Áo Dài</div>
+        <div class="chip">Occasion Wear</div>
+        <div class="chip">Bespoke Tailoring</div>
+        <div class="chip">Bridal / Ăn Hỏi</div>
+        <div class="chip">Swimwear</div>
+        <div class="chip">Consultation Only</div>
+      </div>
+      <span class="sp-field-label">Preferred Date</span>
+      <input class="sp-date" type="date"/>
+      <span class="sp-label">Preferred Time</span>
+      <div class="sp-times" id="tms">
+        <div class="tsl on">10:00</div><div class="tsl">11:30</div><div class="tsl">14:00</div>
+        <div class="tsl">15:30</div><div class="tsl">17:00</div><div class="tsl">Flexible</div>
+      </div>
+      <div class="submit-area">
+        <button class="btn-s" id="sub">Request Appointment <div class="btn-s-arrow"></div></button>
+        <p class="sp-note">Atelier hours by appointment<br>Response within 24 hours</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="succ" id="ok">
+  <div class="succ-orb">✦</div>
+  <h2 class="succ-t">Merci,<br><em>we'll be in touch.</em></h2>
+  <p class="succ-m">Your request has been received.<br>We respond within 24 hours to confirm your appointment.</p>
+</div>
+
+<script>
+document.getElementById('cps').onclick=e=>{if(e.target.classList.contains('chip')){document.querySelectorAll('#cps .chip').forEach(c=>c.classList.remove('on'));e.target.classList.add('on')}};
+document.getElementById('tms').onclick=e=>{if(e.target.classList.contains('tsl')){document.querySelectorAll('#tms .tsl').forEach(t=>t.classList.remove('on'));e.target.classList.add('on')}};
+document.getElementById('sub').onclick=()=>{document.getElementById('formMain').style.display='none';document.querySelector('.hero-strip').style.display='none';document.getElementById('ok').classList.add('active')};
+</script>
+</body>
+</html>

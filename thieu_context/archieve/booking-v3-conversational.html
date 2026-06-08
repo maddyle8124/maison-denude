@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Book a Visit — V3 Conversational</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C4A351;--gm:rgba(196,163,81,.1);--blk:#0D0D0D;--ch:#111;--ww:#F9F6F0;--gr:#888880;--lg:#C8C5BE}
+body{font-family:'Inter',sans-serif;background:var(--blk);color:var(--ww);font-weight:300;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;-webkit-font-smoothing:antialiased;overflow:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(196,163,81,.05) 0%,transparent 70%);pointer-events:none}
+
+/* One question at a time — conversational */
+.conv-wrap{width:100%;max-width:560px;position:relative;z-index:1}
+.conv-logo{text-align:center;margin-bottom:64px}
+.conv-logo-text{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);opacity:.7;display:block;margin-bottom:6px}
+.conv-logo-line{width:40px;height:1px;background:rgba(196,163,81,.3);margin:0 auto}
+
+/* Question block */
+.q-block{display:none;text-align:center;animation:appear .5s ease}
+.q-block.active{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.q-num{font-size:8px;letter-spacing:.4em;text-transform:uppercase;color:rgba(196,163,81,.5);display:block;margin-bottom:28px}
+.q-text{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,44px);font-weight:300;letter-spacing:.03em;line-height:1.2;color:var(--ww);margin-bottom:8px}
+.q-text em{font-style:italic;color:var(--gold)}
+.q-hint{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gr);margin-bottom:52px}
+
+/* Answer input */
+.a-wrap{position:relative;max-width:400px;margin:0 auto 40px}
+.a-wrap input,.a-wrap textarea,.a-wrap select{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(196,163,81,.25);padding:16px 0;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:.04em;color:var(--ww);outline:none;transition:border-color .3s;text-align:center;appearance:none}
+.a-wrap input::placeholder,.a-wrap textarea::placeholder{color:rgba(255,255,255,.2);font-size:18px}
+.a-wrap input:focus,.a-wrap textarea:focus,.a-wrap select:focus{border-color:var(--gold)}
+.a-wrap textarea{resize:none;height:80px;line-height:1.6}
+.a-wrap select{cursor:pointer;font-size:18px}
+.a-wrap select option{background:#1a1a1a;color:var(--ww);font-family:Inter,sans-serif;font-size:14px}
+.a-line{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:1px;background:var(--gold);transition:width .4s ease;pointer-events:none}
+.a-wrap:focus-within .a-line{width:100%}
+
+/* Chip options (centered) */
+.q-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:440px;margin:0 auto 40px}
+.q-chip{padding:10px 22px;border:1px solid rgba(196,163,81,.2);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gr);cursor:pointer;transition:.25s;user-select:none}
+.q-chip:hover{border-color:rgba(196,163,81,.5);color:var(--lg)}.q-chip.on{border-color:var(--gold);color:var(--gold);background:var(--gm)}
+
+/* Nav */
+.q-nav{display:flex;align-items:center;justify-content:center;gap:24px}
+.btn-next{display:inline-flex;align-items:center;gap:12px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:.3s}
+.btn-next:hover{background:var(--gold);color:var(--blk)}
+.btn-next::after{content:'';display:block;width:16px;height:1px;background:currentColor}
+.btn-back{font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gr);background:transparent;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:.3s}
+.btn-back:hover{color:var(--lg)}
+
+/* Progress bar */
+.prog-bar{width:100%;height:1px;background:rgba(196,163,81,.1);margin-top:60px;position:relative;overflow:hidden}
+.prog-fill{height:100%;background:var(--gold);transition:width .5s ease}
+.prog-label{text-align:center;margin-top:12px;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:rgba(196,163,81,.4)}
+
+/* Success */
+.succ{display:none;text-align:center;animation:appear .6s ease}
+.succ.active{display:block}
+.succ-orb{width:72px;height:72px;border:1px solid rgba(196,163,81,.3);border-radius:50%;margin:0 auto 36px;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--gold)}
+.succ-t{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,52px);font-weight:300;letter-spacing:.04em;line-height:1.1;color:var(--ww);margin-bottom:14px}
+.succ-t em{font-style:italic;color:var(--gold)}
+.succ-m{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gr);line-height:2.2}
+</style>
+</head>
+<body>
+<div class="conv-wrap">
+  <div class="conv-logo">
+    <span class="conv-logo-text">Private Atelier · By Appointment</span>
+    <div class="conv-logo-line"></div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="q-block active" id="q1">
+    <span class="q-num">01 / 06</span>
+    <h1 class="q-text">What is your <em>name?</em></h1>
+    <p class="q-hint">How shall we address you?</p>
+    <div class="a-wrap"><input type="text" placeholder="Your full name" id="v1"/><div class="a-line"></div></div>
+    <div class="q-nav"><button class="btn-next" onclick="go(2)">Continue</button></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q-block" id="q2">
+    <span class="q-num">02 / 06</span>
+    <h1 class="q-text">How do we <em>reach you?</em></h1>
+    <p class="q-hint">Email &amp; phone / WhatsApp</p>
+    <div class="a-wrap" style="margin-bottom:20px"><input type="email" placeholder="your@email.com"/><div class="a-line"></div></div>
+    <div class="a-wrap"><input type="tel" placeholder="+84 (0) —"/><div class="a-line"></div></div>
+    <div class="q-nav" style="margin-top:40px"><button class="btn-back" onclick="go(1)">← Back</button><button class="btn-next" onclick="go(3)">Continue</button></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="q-block" id="q3">
+    <span class="q-num">03 / 06</span>
+    <h1 class="q-text">What brings you <em>to the atelier?</em></h1>
+    <p class="q-hint">Choose a service</p>
+    <div class="q-chips" id="sc">
+      <div class="q-chip on">Bespoke Áo Dài</div>
+      <div class="q-chip">Occasion Wear</div>
+      <div class="q-chip">Bespoke Tailoring</div>
+      <div class="q-chip">Bridal</div>
+      <div class="q-chip">Swimwear</div>
+      <div class="q-chip">Consultation</div>
+    </div>
+    <div class="q-nav"><button class="btn-back" onclick="go(2)">← Back</button><button class="btn-next" onclick="go(4)">Continue</button></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="q-block" id="q4">
+    <span class="q-num">04 / 06</span>
+    <h1 class="q-text">When would you <em>like to visit?</em></h1>
+    <p class="q-hint">We are open by appointment</p>
+    <div class="a-wrap"><input type="date" id="vdate"/><div class="a-line"></div></div>
+    <div class="q-nav" style="margin-top:40px"><button class="btn-back" onclick="go(3)">← Back</button><button class="btn-next" onclick="go(5)">Continue</button></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="q-block" id="q5">
+    <span class="q-num">05 / 06</span>
+    <h1 class="q-text">Tell us about your <em>occasion.</em></h1>
+    <p class="q-hint">Wedding, gala, personal wardrobe…</p>
+    <div class="a-wrap"><textarea placeholder="Share your story, silhouette, mood, or references — we listen before we create."></textarea><div class="a-line"></div></div>
+    <div class="q-nav" style="margin-top:40px"><button class="btn-back" onclick="go(4)">← Back</button><button class="btn-next" onclick="go(6)">Continue</button></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="q-block" id="q6">
+    <span class="q-num">06 / 06</span>
+    <h1 class="q-text">How did you <em>find us?</em></h1>
+    <p class="q-hint">Optional — helps us understand you better</p>
+    <div class="a-wrap">
+      <select><option value="" disabled selected>Select one</option><option>Instagram</option><option>A friend's recommendation</option><option>Press / Editorial</option><option>Google</option><option>小红书 (RedNote)</option><option>Other</option></select>
+      <div class="a-line"></div>
+    </div>
+    <div class="q-nav" style="margin-top:40px"><button class="btn-back" onclick="go(5)">← Back</button><button class="btn-next" onclick="done()">Send Request</button></div>
+  </div>
+
+  <!-- Success -->
+  <div class="succ" id="ok">
+    <div class="succ-orb">✦</div>
+    <h2 class="succ-t">Merci,<br><em>we will be in touch.</em></h2>
+    <p class="succ-m">Your request has been received.<br>We respond within 24 hours to confirm your appointment.</p>
+  </div>
+
+  <div class="prog-bar" id="pb"><div class="prog-fill" id="pf" style="width:16.6%"></div></div>
+  <p class="prog-label" id="pl">Step 1 of 6</p>
+</div>
+<script>
+let cur=1;
+function go(n){
+  document.querySelectorAll('.q-block').forEach(q=>q.classList.remove('active'));
+  const el=document.getElementById('q'+n);if(el)el.classList.add('active');
+  cur=n;
+  document.getElementById('pf').style.width=(n/6*100)+'%';
+  document.getElementById('pl').textContent='Step '+n+' of 6';
+}
+function done(){
+  document.querySelectorAll('.q-block').forEach(q=>q.classList.remove('active'));
+  document.getElementById('pb').style.display='none';
+  document.getElementById('pl').style.display='none';
+  document.getElementById('ok').classList.add('active');
+}
+document.getElementById('sc').onclick=e=>{if(e.target.classList.contains('q-chip')){document.querySelectorAll('#sc .q-chip').forEach(c=>c.classList.remove('on'));e.target.classList.add('on')}};
+</script>
+</body>
+</html>

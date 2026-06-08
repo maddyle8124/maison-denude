@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Visit — Maison Dénudée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C4A351;
+      --gold-light: #D4B870;
+      --gold-muted: rgba(196,163,81,0.12);
+      --black: #0D0D0D;
+      --charcoal: #111111;
+      --dark: #181818;
+      --warm-white: #F9F6F0;
+      --grey: #888880;
+      --light-grey: #C8C5BE;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--charcoal);
+      color: var(--warm-white);
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle ambient glow */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(196,163,81,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 80% 100%, rgba(196,163,81,0.04) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .form-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 680px;
+    }
+
+    /* Header */
+    .form-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .eyebrow {
+      font-size: 9px;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+      opacity: 0.85;
+    }
+
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(40px, 7vw, 64px);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      line-height: 1.05;
+      color: var(--warm-white);
+    }
+
+    .form-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .header-rule {
+      width: 1px;
+      height: 36px;
+      background: rgba(196,163,81,0.35);
+      margin: 28px auto 24px;
+    }
+
+    .form-subtitle {
+      font-size: 10.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--grey);
+      line-height: 1.9;
+    }
+
+    /* Steps indicator */
+    .steps-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 48px;
+    }
+
+    .step-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(196,163,81,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      color: var(--grey);
+      transition: all 0.4s ease;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .step-dot.active {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--gold-muted);
+    }
+
+    .step-dot.done {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .step-dot.done::after {
+      content: '✓';
+      font-size: 10px;
+    }
+
+    .step-dot.done span { display: none; }
+
+    .step-line {
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: rgba(196,163,81,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-line-fill {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      background: var(--gold);
+      width: 0;
+      transition: width 0.5s ease;
+    }
+
+    .step-label {
+      font-size: 8px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--grey);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .steps-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      padding: 0 2px;
+    }
+
+    .steps-labels span {
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey);
+      opacity: 0.6;
+      flex: 1;
+      text-align: center;
+    }
+
+    .steps-labels span.active-label {
+      color: var(--gold);
+      opacity: 1;
+    }
+
+    /* Form card */
+    .form-card {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(196,163,81,0.12);
+      padding: 52px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
+    }
+
+    /* Steps */
+    .step-panel {
+      display: none;
+      animation: fadeStep 0.4s ease;
+    }
+
+    .step-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeStep {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: var(--warm-white);
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      color: var(--grey);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    /* Field grid */
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+
+    .field-row.single {
+      grid-template-columns: 1fr;
+    }
+
+    /* Individual field */
+    .field {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field label {
+      font-size: 8.5px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 12px;
+      transition: color 0.3s ease;
+    }
+
+    .field:focus-within label {
+      color: var(--gold);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(196,163,81,0.2);
+      padding: 12px 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--warm-white);
+      outline: none;
+      transition: border-color 0.3s ease;
+      appearance: none;
+      -webkit-appearance: none;
+      width: 100%;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: rgba(255,255,255,0.18);
+      font-size: 11px;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .field select {
+      cursor: pointer;
+      color: var(--warm-white);
+      background: transparent;
+    }
+
+    .field select option {
+      background: #1a1a1a;
+      color: var(--warm-white);
+    }
+
+    .field textarea {
+      resize: none;
+      height: 96px;
+      line-height: 1.7;
+    }
+
+    /* Select arrow */
+    .select-wrap {
+      position: relative;
+    }
+
+    .select-wrap::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 18px;
+      width: 6px;
+      height: 6px;
+      border-right: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+      transform: rotate(45deg);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    /* Service choice chips */
+    .service-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .chip {
+      padding: 10px 20px;
+      border: 1px solid rgba(196,163,81,0.2);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--grey);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      user-select: none;
+      background: transparent;
+    }
+
+    .chip:hover {
+      border-color: rgba(196,163,81,0.5);
+      color: var(--light-grey);
+    }
+
+    .chip.selected {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--gold-muted);
+    }
+
+    /* Date / time slots */
+    .time-slots {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .time-slot {
+      padding: 12px 8px;
+      border: 1px solid rgba(196,163,81,0.15);
+      text-align: center;
+      font-size: 9.5px;
+      letter-spacing: 0.15em;
+      color: var(--grey);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      user-select: none;
+    }
+
+    .time-slot:hover {
+      border-color: rgba(196,163,81,0.4);
+      color: var(--light-grey);
+    }
+
+    .time-slot.selected {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--gold-muted);
+    }
+
+    /* Navigation buttons */
+    .form-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 48px;
+    }
+
+    .btn-back {
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--grey);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-back:hover { color: var(--light-grey); }
+
+    .btn-back::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .btn-next,
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-next:hover,
+    .btn-submit:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn-next::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    /* Privacy note */
+    .form-note {
+      margin-top: 24px;
+      font-size: 9.5px;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* Success state */
+    .success-panel {
+      display: none;
+      text-align: center;
+      padding: 16px 0;
+    }
+
+    .success-panel.active { display: block; animation: fadeStep 0.5s ease; }
+
+    .success-ornament {
+      width: 72px;
+      height: 72px;
+      border: 1px solid rgba(196,163,81,0.3);
+      border-radius: 50%;
+      margin: 0 auto 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--gold);
+    }
+
+    .success-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: var(--warm-white);
+      margin-bottom: 16px;
+    }
+
+    .success-title em { font-style: italic; color: var(--gold); }
+
+    .success-msg {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--grey);
+      text-transform: uppercase;
+      line-height: 2;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .form-card { padding: 36px 28px; }
+      .field-row { grid-template-columns: 1fr; gap: 20px; }
+      .time-slots { grid-template-columns: repeat(2, 1fr); }
+      .service-chips { gap: 8px; }
+      .chip { font-size: 8px; padding: 9px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-wrapper">
+
+  <!-- Header -->
+  <div class="form-header">
+    <span class="eyebrow">Private Atelier · Saigon</span>
+    <h1 class="form-title">Book Your<br><em>Visit</em></h1>
+    <div class="header-rule"></div>
+    <p class="form-subtitle">
+      194 Lê Thánh Tôn, District 1&nbsp;·&nbsp;By appointment only
+    </p>
+  </div>
+
+  <!-- Steps nav -->
+  <div class="steps-nav" id="stepsNav">
+    <div class="step-dot active" id="dot1"><span>1</span></div>
+    <div class="step-line"><div class="step-line-fill" id="line1"></div></div>
+    <div class="step-dot" id="dot2"><span>2</span></div>
+    <div class="step-line"><div class="step-line-fill" id="line2"></div></div>
+    <div class="step-dot" id="dot3"><span>3</span></div>
+  </div>
+
+  <div class="steps-labels">
+    <span class="active-label" id="lbl1">Your Details</span>
+    <span id="lbl2">Service &amp; Date</span>
+    <span id="lbl3">Occasion</span>
+  </div>
+
+  <!-- Form card -->
+  <div class="form-card">
+
+    <!-- STEP 1 -->
+    <div class="step-panel active" id="panel1">
+      <p class="step-heading">Hello, who are you?</p>
+      <p class="step-desc">Step 1 of 3 — Contact information</p>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Linh" />
+        </div>
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Nguyễn" />
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your@email.com" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone / WhatsApp</label>
+          <input type="tel" id="phone" placeholder="+84 (0) —" />
+        </div>
+      </div>
+
+      <div class="field-row single">
+        <div class="field">
+          <label for="country">Country of Residence</label>
+          <div class="select-wrap">
+            <select id="country">
+              <option value="" disabled selected>Select country</option>
+              <option>Vietnam</option>
+              <option>Singapore</option>
+              <option>United Arab Emirates</option>
+              <option>South Korea</option>
+              <option>Japan</option>
+              <option>France</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <div></div>
+        <button class="btn-next" id="next1">Continue</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-panel" id="panel2">
+      <p class="step-heading">What brings you in?</p>
+      <p class="step-desc">Step 2 of 3 — Service &amp; appointment</p>
+
+      <label style="font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:14px;">Service</label>
+      <div class="service-chips" id="serviceChips">
+        <div class="chip selected" data-val="Bespoke Áo Dài">Bespoke Áo Dài</div>
+        <div class="chip" data-val="Occasion Wear">Occasion Wear</div>
+        <div class="chip" data-val="Bespoke Tailoring">Bespoke Tailoring</div>
+        <div class="chip" data-val="Bridal / Ăn Hỏi">Bridal / Ăn Hỏi</div>
+        <div class="chip" data-val="Swimwear">Swimwear</div>
+        <div class="chip" data-val="Consultation Only">Consultation Only</div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="prefDate">Preferred Date</label>
+          <input type="date" id="prefDate" />
+        </div>
+        <div class="field">
+          <label>Preferred Time</label>
+          <div class="time-slots" id="timeSlots">
+            <div class="time-slot selected" data-val="10:00">10:00</div>
+            <div class="time-slot" data-val="11:30">11:30</div>
+            <div class="time-slot" data-val="14:00">14:00</div>
+            <div class="time-slot" data-val="15:30">15:30</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" id="back2">Back</button>
+        <button class="btn-next" id="next2">Continue</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-panel" id="panel3">
+      <p class="step-heading">Tell us your story.</p>
+      <p class="step-desc">Step 3 of 3 — Your occasion</p>
+
+      <div class="field-row single">
+        <div class="field">
+          <label for="occasion">Occasion or Event</label>
+          <input type="text" id="occasion" placeholder="Wedding ceremony, gala, personal wardrobe…" />
+        </div>
+      </div>
+
+      <div class="field-row single">
+        <div class="field">
+          <label for="eventDate">Event Date (if applicable)</label>
+          <input type="date" id="eventDate" />
+        </div>
+      </div>
+
+      <div class="field-row single">
+        <div class="field">
+          <label for="message">Your Vision</label>
+          <textarea id="message" placeholder="Silhouette, mood, references, or simply say hello — we listen before we create."></textarea>
+        </div>
+      </div>
+
+      <div class="field-row single">
+        <div class="field">
+          <label for="heardFrom">How did you find us?</label>
+          <div class="select-wrap">
+            <select id="heardFrom">
+              <option value="" disabled selected>Select one</option>
+              <option>Instagram</option>
+              <option>A friend's recommendation</option>
+              <option>Press / Editorial</option>
+              <option>Google Search</option>
+              <option>小红书 (RedNote)</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" id="back3">Back</button>
+        <button class="btn-submit" id="submitBtn">Request Appointment</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="success-panel" id="successPanel">
+      <div class="success-ornament">✦</div>
+      <h2 class="success-title">Merci,<br><em>we'll be in touch.</em></h2>
+      <p class="success-msg">
+        Your request has been received.<br>
+        We respond within 24 hours to confirm your appointment.
+      </p>
+    </div>
+
+  </div><!-- /form-card -->
+
+  <p class="form-note">Atelier hours by appointment only &nbsp;·&nbsp; Ho Chi Minh City</p>
+
+</div><!-- /form-wrapper -->
+
+<script>
+  let currentStep = 1;
+
+  function goTo(step) {
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel' + step).classList.add('active');
+
+    const dots = [1,2,3];
+    dots.forEach(i => {
+      const dot = document.getElementById('dot' + i);
+      const lbl = document.getElementById('lbl' + i);
+      dot.classList.remove('active','done');
+      lbl && lbl.classList.remove('active-label');
+      if (i < step) dot.classList.add('done');
+      if (i === step) { dot.classList.add('active'); lbl && lbl.classList.add('active-label'); }
+    });
+
+    if (document.getElementById('line1')) {
+      document.getElementById('line1').style.width = step >= 2 ? '100%' : '0';
+    }
+    if (document.getElementById('line2')) {
+      document.getElementById('line2').style.width = step >= 3 ? '100%' : '0';
+    }
+
+    currentStep = step;
+  }
+
+  document.getElementById('next1').addEventListener('click', () => goTo(2));
+  document.getElementById('next2').addEventListener('click', () => goTo(3));
+  document.getElementById('back2').addEventListener('click', () => goTo(1));
+  document.getElementById('back3').addEventListener('click', () => goTo(2));
+
+  document.getElementById('submitBtn').addEventListener('click', () => {
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('stepsNav').style.display = 'none';
+    document.querySelector('.steps-labels').style.display = 'none';
+    document.getElementById('successPanel').classList.add('active');
+  });
+
+  // Service chip toggle
+  document.getElementById('serviceChips').addEventListener('click', e => {
+    if (e.target.classList.contains('chip')) {
+      document.querySelectorAll('#serviceChips .chip').forEach(c => c.classList.remove('selected'));
+      e.target.classList.add('selected');
+    }
+  });
+
+  // Time slot toggle
+  document.getElementById('timeSlots').addEventListener('click', e => {
+    if (e.target.classList.contains('time-slot')) {
+      document.querySelectorAll('#timeSlots .time-slot').forEach(s => s.classList.remove('selected'));
+      e.target.classList.add('selected');
+    }
+  });
+</script>
+
+</body>
+</html>
