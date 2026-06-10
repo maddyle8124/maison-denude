@@ -236,7 +236,7 @@ Tự động hoá quy trình tạo nội dung hàng loạt bằng tool — deliv
 ### Thiệu
 | Chỉ số | Mục tiêu |
 |--------|---------|
-| Website | 3/3 trang live; Lighthouse performance > 90 |
+| Website | 3 trang chính và hệ trang blog live; Lighthouse performance > 80 |
 | Booking system | Form → email hoạt động; đã kiểm thử end-to-end |
 | Hệ thống tracking | 4/4 công cụ thu dữ liệu khi bàn giao |
 | Bài viết SEO | Toàn bộ bài đã được đăng tải |
