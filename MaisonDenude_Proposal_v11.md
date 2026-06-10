@@ -80,11 +80,7 @@ Xây dựng website chính thức từ đầu — chuẩn thương hiệu cao c�
 | **Trang đặt lịch** | Form tư vấn trực tiếp — khách điền, team nhận ngay |
 | **Popup đặt lịch** | Xuất hiện tự động sau 30 giây trên mọi trang |
 
-#### Quy trình đặt lịch
-
-Khách điền form → **Team nhận thông báo ngay lập tức qua email** → Sales manager liên lạc qua Zalo/WhatsApp để xác nhận. Không cần chờ reply inbox.
-
-#### Tính năng thêm (Maison Denude lựa chọn)
+#### Tính năng thêm
 
 | Add-on | Lợi ích | Phí bổ sung |
 |--------|---------|-------------|
