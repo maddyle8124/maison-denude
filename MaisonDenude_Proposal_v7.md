@@ -60,9 +60,6 @@ Tạo lượng liên kết ban đầu từ các nguồn uy tín — báo thời 
 #### Xác nhận thực thể (Entity Claiming)
 Rà soát và liên kết toàn bộ các đề cập bên ngoài (báo chí, trang tổng hợp, đánh giá) với website chính thức, củng cố tín hiệu nhận diện thương hiệu.
 
-#### Chiến lược từ khóa
-`bespoke saigon` · `bespoke ho chi minh` · `artisanal bespoke fashion` · `occasional wear vietnam` · `heritage inspired dress` · `asian inspired dress` · `bespoke ao dai`
-
 #### Bài viết SEO — đăng tải & tối ưu
 Team chịu trách nhiệm tiếp nhận nội dung từ Maison Denude, cấu trúc theo từ khóa và đăng tải lên website. **Nội dung do Maison Denude cung cấp** — giọng văn và bản sắc thương hiệu hoàn toàn thuộc về phía khách hàng.
 

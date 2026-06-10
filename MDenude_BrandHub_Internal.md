@@ -258,30 +258,7 @@ Auto-schedule và publish
 
 ---
 
-## 7. SEO — Keyword Intelligence
-
-### Từ khóa mục tiêu (Thiệu)
-
-| Từ khóa | Loại | Ghi chú |
-|---------|------|---------|
-| `bespoke saigon` | Geo + service | Volume thấp nhưng high intent |
-| `bespoke ho chi minh` | Geo + service | Tiếng Anh, nhắm khách quốc tế tìm kiếm khi đến VN |
-| `artisanal bespoke fashion` | Category | Broad, build authority |
-| `occasional wear vietnam` | Occasion + geo | Wedding/event segment |
-| `heritage inspired dress` | Aesthetic | Align với brand story |
-| `asian inspired dress` | Aesthetic | International search |
-| `bespoke ao dai` | Product-specific | Niche nhưng high intent |
-
-### Nội dung blog — hướng gợi ý
-- Câu chuyện đằng sau một bộ áo dài bespoke (process)
-- Maison Denude xuất hiện tại [sự kiện lớn] — câu chuyện outfit
-- Hướng dẫn chọn occasional wear cho người phụ nữ hiện đại
-- Vietnamese fashion trên bản đồ thế giới
-- Bespoke vs. may sẵn — tại sao khác biệt
-
----
-
-## 8. Tracking — Những gì cần measure từ đầu
+## 7. Tracking — Những gì cần measure từ đầu
 
 | Metric | Công cụ | Ý nghĩa |
 |--------|---------|---------|

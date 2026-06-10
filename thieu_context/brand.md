@@ -87,14 +87,3 @@ High-priority social proof to feature on the website homepage:
 - Chi Pu — Vạn Xuân Awards (recognizable name, 6.2K)
 - Editorial logos: L'Officiel, ELLE, Marie Claire, Miss Universe Vietnam
 
-## SEO Keyword Context (informs website copy & blog)
-
-| Keyword | Intent |
-|---------|--------|
-| `bespoke saigon` | High intent, geo-specific |
-| `bespoke ho chi minh` | International visitors to VN |
-| `artisanal bespoke fashion` | Category authority |
-| `occasional wear vietnam` | Wedding/event segment |
-| `heritage inspired dress` | Brand story alignment |
-| `asian inspired dress` | International search |
-| `bespoke ao dai` | Niche, very high intent |
