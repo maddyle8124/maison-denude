@@ -57,14 +57,6 @@ Maison Denude đã được nhắc đến trên L'Officiel, ELLE, Marie Claire, 
 #### Xác nhận thực thể
 Đảm bảo mọi nơi trên internet đề cập đến Maison Denude đều dẫn về đúng website — Facebook, Instagram, các bài báo cũ, trang thời trang, đơn vị tổ chức sự kiện.
 
-#### Chiến lược từ khóa — 3 phân khúc
-
-| Phân khúc | Từ khóa mục tiêu |
-|-----------|-----------------|
-| **Áo dài truyền thống** | `bespoke ao dai` · `ao dai saigon` · `heritage ao dai` |
-| **Bridal / Cô dâu** | `bridal ao dai` · `wedding dress vietnam` · `bespoke wedding saigon` |
-| **Designer / Occasion Wear** | `evening wear saigon` · `evening dress ho chi minh` · `artisanal bespoke fashion` · `occasional wear vietnam` · `asian inspired dress` |
-
 #### Bài viết SEO
 Nội dung do Maison Denude cung cấp — Thiệu tiếp nhận, cấu trúc đúng chuẩn SEO và đăng tải. Giọng văn và bản sắc thương hiệu hoàn toàn giữ nguyên.
 
