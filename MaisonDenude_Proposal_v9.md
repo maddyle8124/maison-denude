@@ -5,7 +5,6 @@
 
 > **v9 — Cập nhật sau buổi kickoff 2/6:**
 > - Phạm vi website đã chốt (bên cũ đã bị cancel trong buổi họp)
-> - Chiến lược từ khóa mở rộng thành 3 phân khúc riêng biệt
 > - Bổ sung KOL shortlist vào scope của Maddy
 > - Xác nhận luồng CTA: tất cả về Zalo/WhatsApp hoặc form đặt lịch
 > - Cập nhật câu hỏi còn mở + quyết định còn treo từ buổi họp
@@ -67,16 +66,6 @@ Maison Denude đã được nhắc đến trên L'Officiel, ELLE, Marie Claire, 
 
 #### Xác nhận thực thể
 Đảm bảo mọi nơi trên internet đề cập đến Maison Denude đều dẫn về đúng website — Facebook, Instagram, các bài báo cũ, trang thời trang, đơn vị tổ chức sự kiện.
-
-#### Chiến lược từ khóa — 3 phân khúc riêng biệt
-
-*Được xác nhận trong buổi kickoff 2/6 — chính chị Chi chỉ ra đây là 3 chiến trường độc lập, mỗi cái cần bộ từ khóa và content riêng.*
-
-| Phân khúc | Từ khóa mục tiêu | Ghi chú |
-|-----------|-----------------|---------|
-| **Áo dài truyền thống** | `bespoke ao dai` · `ao dai saigon` · `heritage ao dai` | Thị trường gốc, heritage positioning |
-| **Bridal / Cô dâu** | `bridal ao dai` · `wedding dress vietnam` · `bespoke wedding saigon` | Phân khúc đám cưới — nhu cầu cao, willingness to pay cao |
-| **Designer / Occasion Wear** | `evening wear saigon` · `evening dress ho chi minh` · `artisanal bespoke fashion` · `occasional wear vietnam` · `asian inspired dress` | Dành cho khách quốc tế không biết "áo dài" là gì nhưng nhận ra đây là đồ dự tiệc |
 
 #### Bài viết SEO
 Nội dung do Maison Denude cung cấp (Linh Đan + Hải Hà mở rộng theo brief của Thiệu) — Thiệu tiếp nhận, cấu trúc đúng chuẩn SEO và đăng tải. Giọng văn và bản sắc thương hiệu hoàn toàn giữ nguyên.
