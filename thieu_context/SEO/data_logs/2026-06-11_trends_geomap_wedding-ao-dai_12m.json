@@ -1,0 +1,17 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SerpApi -> Google Trends",
+    "tool": "mcp__serpapi__search",
+    "params": { "engine": "google_trends", "q": "wedding ao dai", "data_type": "GEO_MAP_0", "date": "today 12-m", "geo": "" }
+  },
+  "interest_by_region": [
+    { "geo": "AU", "location": "Australia", "value": 100 },
+    { "geo": "US", "location": "United States", "value": 100 },
+    { "geo": "VN", "location": "Vietnam", "value": "<1" },
+    { "geo": "CA", "location": "Canada", "value": "<1" },
+    { "geo": "GB", "location": "United Kingdom", "value": "<1" },
+    { "geo": "DE", "location": "Germany", "value": "<1" }
+  ],
+  "note": "Demand for 'wedding ao dai' is almost entirely AU + US diaspora; Vietnam <1."
+}

@@ -1,0 +1,15 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SimilarWeb MCP",
+    "tool": "get-keywords-overview",
+    "params": { "keyword": "ao dai", "country": "ww", "granularity": "monthly", "start_date": "2026-03", "end_date": "2026-05", "metrics": ["volume","transactional_intent_volume","informational_intent_volume","local_intent_volume"] },
+    "data_credits_charged": 1
+  },
+  "data": [
+    { "date": "2026-03-01", "volume": 72296, "transactional_intent_volume": 0.0, "informational_intent_volume": 72296.0, "local_intent_volume": 0.0 },
+    { "date": "2026-04-01", "volume": 62244, "transactional_intent_volume": 0.0, "informational_intent_volume": 62244.0, "local_intent_volume": 0.0 },
+    { "date": "2026-05-01", "volume": 71402, "transactional_intent_volume": 0.0, "informational_intent_volume": 71402.0, "local_intent_volume": 0.0 }
+  ],
+  "note": "Head term: ~62K-72K/mo worldwide, 100% informational intent."
+}

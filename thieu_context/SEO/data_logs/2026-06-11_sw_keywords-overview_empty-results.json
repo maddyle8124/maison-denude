@@ -1,0 +1,16 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SimilarWeb MCP",
+    "tool": "get-keywords-overview",
+    "note": "Consolidated log of queries that returned EMPTY data[] (no measurable volume) or were rate-limited. Logged together since payloads were empty.",
+    "data_credits_charged": 0
+  },
+  "results": [
+    { "keyword": "ao dai saigon", "country": "ww", "params": {"granularity":"monthly","start_date":"2026-03","end_date":"2026-05"}, "data": [], "verdict": "no measurable WW volume" },
+    { "keyword": "bespoke ao dai", "country": "ww", "params": {"granularity":"monthly","start_date":"2026-03","end_date":"2026-05"}, "data": [], "verdict": "no measurable WW volume (true long-tail / positioning term)" }
+  ],
+  "rate_limited_attempts": [
+    { "keyword": "bespoke ao dai", "error": "HTTP 429 RATE_LIMITED", "resolved": "succeeded on retry after backoff -> returned empty data[]" }
+  ]
+}
