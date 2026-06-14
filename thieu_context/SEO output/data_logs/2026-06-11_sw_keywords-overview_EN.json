@@ -1,0 +1,39 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SimilarWeb MCP get-keywords-overview",
+    "params_common": { "granularity": "monthly", "start_date": "2026-03", "end_date": "2026-05", "web_source": "total", "metrics": ["volume","clicks","difficulty","competition","cpc_low_bid","cpc_high_bid","transactional_intent_volume","informational_intent_volume","local_intent_volume"] },
+    "note": "English market-keyword candidates. Monthly rows for 2026-03/04/05 (latest 3 months available; SimilarWeb monthly granularity caps at last 3 months). volume = monthly search volume. clicks = total search clicks (traffic). cpc_*_bid are in USD micros (divide by 1e6). intent_volume fields show the dominant intent. data[]=[] means returned empty (too small to measure).",
+    "credits_charged_total_approx": 25
+  },
+  "worldwide": {
+    "cocktail dress":     [{"m":"03","volume":178634,"clicks":54471,"difficulty":26,"intent":"transactional","cpc_low":0.010,"cpc_high":2.847},{"m":"04","volume":121773,"clicks":38574,"difficulty":19},{"m":"05","volume":147389,"clicks":55653,"difficulty":27}],
+    "haute couture":      [{"m":"03","volume":94367,"clicks":14384,"difficulty":40,"intent":"informational","cpc_low":0.010,"cpc_high":14.809},{"m":"04","volume":97873,"clicks":16369,"difficulty":42,"cpc_high":16.450},{"m":"05","volume":94961,"clicks":15415,"difficulty":38}],
+    "formal dress":       [{"m":"03","volume":82354,"clicks":26387,"difficulty":17,"intent":"transactional","cpc_low":0.015,"cpc_high":2.407},{"m":"04","volume":68635,"clicks":22295,"difficulty":20},{"m":"05","volume":76158,"clicks":23962,"difficulty":23}],
+    "ao dai":             [{"m":"03","volume":72296,"clicks":15685,"difficulty":14,"intent":"informational","cpc":null},{"m":"04","volume":62244,"clicks":15339,"difficulty":17},{"m":"05","volume":71402,"clicks":16228,"difficulty":18}],
+    "evening dresses":    [{"m":"03","volume":18881,"clicks":7447,"difficulty":13,"intent":"transactional","cpc_low":0.017,"cpc_high":2.608},{"m":"04","volume":24733,"clicks":12808,"difficulty":18},{"m":"05","volume":22949,"clicks":10806,"difficulty":21}],
+    "evening gown":       [{"m":"03","volume":21940,"clicks":4429,"difficulty":34,"intent":"transactional","cpc_low":0.015,"cpc_high":3.520},{"m":"04","volume":15271,"clicks":3607,"difficulty":28},{"m":"05","volume":22431,"clicks":7805,"difficulty":37}],
+    "evening dress":      [{"m":"03","volume":15793,"clicks":6747,"difficulty":24,"intent":"transactional","cpc_low":0.030,"cpc_high":2.613},{"m":"04","volume":12901,"clicks":4071,"difficulty":20},{"m":"05","volume":15928,"clicks":5207,"difficulty":15}],
+    "bespoke suit":       [{"m":"03","volume":13270,"clicks":2187,"difficulty":43,"intent":"local/commercial","cpc_low":0.043,"cpc_high":11.097},{"m":"04","volume":9097,"clicks":1021,"difficulty":52},{"m":"05","volume":13491,"clicks":1584,"difficulty":43}],
+    "evening wear":       [{"m":"03","volume":4837,"clicks":654,"difficulty":23,"intent":"transactional/local","cpc_low":0.019,"cpc_high":4.610},{"m":"04","volume":4947,"clicks":410,"difficulty":24},{"m":"05","volume":3714,"clicks":274,"difficulty":23}],
+    "bespoke tailor":     [{"m":"03","volume":3496,"clicks":139,"difficulty":61,"intent":"local/commercial","cpc_low":0.070,"cpc_high":7.740},{"m":"04","volume":3969,"clicks":120,"difficulty":29},{"m":"05","volume":4039,"clicks":383,"difficulty":34}],
+    "formal gown":        [{"m":"03","volume":3503,"clicks":1210,"difficulty":29,"intent":"transactional"},{"m":"04","volume":1294,"clicks":428},{"m":"05","volume":2266,"clicks":871}],
+    "black evening dress":[{"m":"03","volume":3340,"clicks":644,"difficulty":2,"intent":"transactional"},{"m":"04","volume":3227,"clicks":411},{"m":"05","volume":3796,"clicks":879}],
+    "long evening dress": [{"m":"03","volume":1998,"clicks":202,"difficulty":16,"intent":"transactional"},{"m":"04","volume":2064,"clicks":239},{"m":"05","volume":2015,"clicks":164}],
+    "couture dress":      [{"m":"04","volume":2128,"clicks":822,"difficulty":43,"intent":"local"},{"m":"05","volume":1245,"clicks":322,"difficulty":50}],
+    "wedding ao dai":     [{"m":"04","volume":826,"clicks":232,"intent":"informational"},{"m":"05","volume":25,"clicks":10}]
+  },
+  "vietnam": {
+    "ao dai":          [{"m":"03","volume":10874,"clicks":2646},{"m":"04","volume":8655,"clicks":1855},{"m":"05","volume":6815,"clicks":1545},{"intent":"informational"}],
+    "haute couture":   [{"m":"03","volume":2779,"clicks":401},{"m":"04","volume":3679,"clicks":543},{"m":"05","volume":1831,"clicks":311},{"intent":"informational"}],
+    "cocktail dress":  [{"m":"03","volume":142,"clicks":22},{"m":"05","volume":1522,"clicks":129}],
+    "bespoke suit":    [{"m":"03","volume":803,"clicks":130},{"m":"04","volume":76,"clicks":0}],
+    "evening gown":    [{"m":"03","volume":295,"clicks":75},{"m":"04","volume":285,"clicks":67}],
+    "formal dress":    [{"m":"03","volume":185,"clicks":168},{"m":"05","volume":191,"clicks":86}],
+    "evening dresses": "data[]=[] (empty)",
+    "evening dress":   "data[]=[] (empty)",
+    "evening wear":    "data[]=[] (empty)",
+    "bespoke tailor":  "data[]=[] (empty)",
+    "black evening dress": "data[]=[] (empty)"
+  }
+}

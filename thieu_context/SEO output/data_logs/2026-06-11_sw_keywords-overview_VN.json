@@ -1,0 +1,37 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SimilarWeb MCP get-keywords-overview",
+    "params_common": { "granularity": "monthly", "start_date": "2026-03", "end_date": "2026-05", "web_source": "total", "metrics": ["volume","clicks","difficulty","competition","cpc_low_bid","cpc_high_bid","transactional_intent_volume","informational_intent_volume","local_intent_volume"] },
+    "note": "Vietnamese-language market-keyword candidates. Monthly rows for 2026-03/04/05. volume = monthly search volume, clicks = search clicks (traffic). cpc in USD micros (divide by 1e6). data[]=[] means empty (too small to measure). Both country=vn (primary) and country=ww captured.",
+    "credits_charged_total_approx": 28
+  },
+  "vietnam": {
+    "áo dài":              [{"m":"03","volume":47216,"clicks":19878,"difficulty":null},{"m":"04","volume":35003,"clicks":13600,"difficulty":29},{"m":"05","volume":31237,"clicks":16559,"difficulty":21},{"intent":"informational","cpc_low":0.025,"cpc_high":0.132}],
+    "áo dài cách tân":     [{"m":"03","volume":21028,"clicks":6438,"difficulty":18},{"m":"04","volume":1521,"clicks":632,"difficulty":18},{"m":"05","volume":6714,"clicks":1857,"difficulty":20},{"intent":"informational","cpc_low":0.021,"cpc_high":0.097,"note":"March spike"}],
+    "áo dài nam":          [{"m":"03","volume":6242,"clicks":3296},{"m":"04","volume":5899,"clicks":2348},{"m":"05","volume":4991,"clicks":1813},{"intent":"informational","cpc_low":0.020,"cpc_high":0.262}],
+    "váy dạ hội":          [{"m":"03","volume":3133,"clicks":1197,"difficulty":56},{"m":"04","volume":6784,"clicks":2965},{"m":"05","volume":4156,"clicks":1962},{"intent":"transactional","cpc_low":0.038,"cpc_high":0.102}],
+    "áo dài truyền thống": [{"m":"03","volume":1870,"clicks":516},{"m":"04","volume":3515,"clicks":1473,"difficulty":3},{"m":"05","volume":3493,"clicks":1427,"difficulty":2},{"intent":"informational","cpc_low":0.018,"cpc_high":0.071}],
+    "đầm dạ hội":          [{"m":"03","volume":1410,"clicks":598},{"m":"04","volume":2642,"clicks":1535},{"m":"05","volume":1299,"clicks":743},{"intent":"transactional","cpc_low":0.025,"cpc_high":0.110}],
+    "áo dài đẹp":          [{"m":"03","volume":2728,"clicks":1730,"difficulty":18},{"m":"04","volume":2124,"clicks":1542,"difficulty":18},{"m":"05","volume":167,"clicks":69,"difficulty":23},{"intent":"informational","cpc_low":0.023,"cpc_high":0.085}],
+    "áo dài cưới":         [{"m":"03","volume":935,"clicks":770,"difficulty":7},{"m":"04","volume":755,"clicks":488,"difficulty":2},{"m":"05","volume":1863,"clicks":1027},{"intent":"informational/transactional","cpc_low":0.057,"cpc_high":0.120}],
+    "đầm dự tiệc":         [{"m":"04","volume":276,"clicks":81},{"m":"05","volume":904,"clicks":461,"difficulty":4},{"intent":"transactional","cpc_low":0.013,"cpc_high":0.120}],
+    "thuê áo dài":         [{"m":"03","volume":632,"clicks":395,"difficulty":2},{"m":"04","volume":677,"clicks":489},{"m":"05","volume":93,"clicks":1},{"intent":"local","cpc_low":0.068,"cpc_high":0.154}],
+    "áo dài lụa":          [{"m":"03","volume":233,"clicks":149},{"m":"04","volume":83,"clicks":3}],
+    "may áo dài":          "data[]=[] (empty)",
+    "đầm dạ hội cao cấp":  "data[]=[] (empty)",
+    "áo dài cô dâu":       "data[]=[] (empty)"
+  },
+  "worldwide": {
+    "áo dài":              [{"m":"03","volume":53046,"clicks":22031},{"m":"04","volume":40515,"clicks":15231},{"m":"05","volume":37001,"clicks":18118},{"intent":"informational"}],
+    "áo dài cách tân":     [{"m":"03","volume":21527,"clicks":6543},{"m":"04","volume":1521,"clicks":632},{"m":"05","volume":6714,"clicks":1857}],
+    "áo dài nam":          [{"m":"03","volume":6954,"clicks":3644},{"m":"04","volume":6086,"clicks":2349},{"m":"05","volume":4991,"clicks":1813}],
+    "váy dạ hội":          [{"m":"03","volume":3133,"clicks":1197},{"m":"04","volume":7097,"clicks":2976},{"m":"05","volume":4659,"clicks":1982}],
+    "áo dài truyền thống": [{"m":"03","volume":2038,"clicks":516},{"m":"04","volume":3515,"clicks":1473},{"m":"05","volume":3493,"clicks":1427}],
+    "đầm dạ hội":          [{"m":"03","volume":1647,"clicks":598},{"m":"04","volume":2642,"clicks":1535},{"m":"05","volume":1299,"clicks":743}],
+    "áo dài đẹp":          [{"m":"03","volume":2728,"clicks":1730},{"m":"04","volume":2124,"clicks":1542},{"m":"05","volume":167,"clicks":69}],
+    "áo dài cưới":         [{"m":"03","volume":935,"clicks":770},{"m":"04","volume":893,"clicks":631},{"m":"05","volume":1882,"clicks":1027}],
+    "đầm dự tiệc":         [{"m":"04","volume":276,"clicks":81},{"m":"05","volume":904,"clicks":461}],
+    "thuê áo dài":         [{"m":"03","volume":979,"clicks":517},{"m":"04","volume":680,"clicks":490},{"m":"05","volume":93,"clicks":1}]
+  }
+}

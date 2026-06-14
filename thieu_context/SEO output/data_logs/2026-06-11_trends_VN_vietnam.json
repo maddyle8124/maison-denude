@@ -1,0 +1,36 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SerpApi google_trends engine",
+    "data_type": "TIMESERIES",
+    "date_window": "today 12-m (2025-06-08 .. 2026-06-13, weekly)",
+    "geo": "VN",
+    "region_label": "Vietnam",
+    "method": "4 batches of 5 queries; 'áo dài' included as a shared anchor (avg ~42-43 every batch). Values are Google Trends relative interest 0-100, NOT absolute volume. 'áo dài' dominates VN interest (Tet peak = 100 in Feb 2026), so smaller occasion-wear terms read low on this anchored scale; absolute demand is verified separately via SimilarWeb.",
+    "batches": [
+      "áo dài,áo dài cưới,áo dài nam,áo dài cách tân,áo dài truyền thống",
+      "áo dài,áo dài đẹp,may áo dài,thuê áo dài,áo dài lụa",
+      "áo dài,đầm dạ hội,váy dạ hội,đầm dạ hội cao cấp,đầm dự tiệc",
+      "áo dài,couture là gì,haute couture là gì,bespoke là gì,áo dài cô dâu"
+    ]
+  },
+  "averages_12m": [
+    { "query": "áo dài",                "avg_12m": 43, "note": "Tet peak 100 (Feb 1-7 2026); seasonal" },
+    { "query": "áo dài nam",            "avg_12m": 5,  "note": "rises Tet" },
+    { "query": "áo dài đẹp",            "avg_12m": 3 },
+    { "query": "thuê áo dài",           "avg_12m": 2,  "note": "rental intent" },
+    { "query": "may áo dài",            "avg_12m": 2,  "note": "tailoring intent" },
+    { "query": "áo dài cưới",           "avg_12m": 1 },
+    { "query": "áo dài cách tân",       "avg_12m": 1 },
+    { "query": "áo dài truyền thống",   "avg_12m": 1 },
+    { "query": "áo dài lụa",            "avg_12m": 1 },
+    { "query": "đầm dự tiệc",           "avg_12m": 1 },
+    { "query": "đầm dạ hội",            "avg_12m": 0, "note": "~0 vs áo dài anchor; real volume via SimilarWeb" },
+    { "query": "váy dạ hội",            "avg_12m": 0 },
+    { "query": "đầm dạ hội cao cấp",    "avg_12m": 0 },
+    { "query": "áo dài cô dâu",         "avg_12m": 0 },
+    { "query": "couture là gì",         "avg_12m": 0 },
+    { "query": "haute couture là gì",   "avg_12m": 0 },
+    { "query": "bespoke là gì",         "avg_12m": 0 }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SerpApi google_trends engine",
+    "data_type": "TIMESERIES",
+    "date_window": "today 12-m (2025-06-08 .. 2026-06-13, weekly)",
+    "geo": "",
+    "region_label": "Worldwide",
+    "method": "5 batches of 5 queries; 'evening dress' included as a shared anchor (avg ~15-16 every batch) so 12-month averages are cross-batch comparable. Values are Google Trends relative interest 0-100, NOT absolute volume.",
+    "batches": [
+      "evening dress,evening gown,evening dresses,formal dress,formal gown",
+      "evening dress,long evening dress,black evening dress,cocktail dress,evening wear",
+      "evening dress,haute couture,couture dress,bespoke suit,bespoke tailor",
+      "evening dress,bespoke tailoring,ao dai,ao dai dress,wedding ao dai",
+      "evening dress,ao dai vietnam,designer evening gown,evening gown for women,formal evening dress"
+    ]
+  },
+  "averages_12m_and_peak": [
+    { "query": "formal dress",          "avg_12m": 33, "peak_value": 72,  "peak_window": "Feb 15-21 2026" },
+    { "query": "cocktail dress",        "avg_12m": 16, "peak_value": 42,  "peak_window": "Feb 15-21 2026" },
+    { "query": "evening dress",         "avg_12m": 15, "peak_value": 100, "peak_window": "Feb 15-21 2026" },
+    { "query": "evening dresses",       "avg_12m": 8,  "peak_value": 35,  "peak_window": "Feb 15-21 2026" },
+    { "query": "evening gown",          "avg_12m": 6,  "peak_value": 18,  "peak_window": "Feb 15-21 2026" },
+    { "query": "haute couture",         "avg_12m": 5,  "peak_value": 10,  "peak_window": "Jan 25-31 2026" },
+    { "query": "formal gown",           "avg_12m": 4,  "peak_value": 10,  "peak_window": "May 17-23 2026" },
+    { "query": "ao dai",                "avg_12m": 3,  "peak_value": 6,   "peak_window": "Feb 15-21 2026" },
+    { "query": "couture dress",         "avg_12m": 3,  "peak_value": 10,  "peak_window": "Apr 12-18 2026" },
+    { "query": "long evening dress",    "avg_12m": 3,  "peak_value": 37,  "peak_window": "Feb 15-21 2026" },
+    { "query": "evening wear",          "avg_12m": 3,  "peak_value": 6,   "peak_window": "Feb 15-21 2026" },
+    { "query": "bespoke suit",          "avg_12m": 2,  "peak_value": 6,   "peak_window": "May 3-9 2026" },
+    { "query": "black evening dress",   "avg_12m": 2,  "peak_value": 18,  "peak_window": "Feb 15-21 2026" },
+    { "query": "formal evening dress",  "avg_12m": 2,  "peak_value": 14,  "peak_window": "Feb 15-21 2026" },
+    { "query": "bespoke tailor",        "avg_12m": 1,  "peak_value": 1,   "peak_window": "flat" },
+    { "query": "bespoke tailoring",     "avg_12m": 0,  "peak_value": 1,   "peak_window": "flat" },
+    { "query": "ao dai dress",          "avg_12m": 0,  "peak_value": 1,   "peak_window": "flat" },
+    { "query": "wedding ao dai",        "avg_12m": 0,  "peak_value": 0,   "peak_window": "flat" },
+    { "query": "ao dai vietnam",        "avg_12m": 0,  "peak_value": 0,   "peak_window": "flat" },
+    { "query": "designer evening gown", "avg_12m": 0,  "peak_value": 0,   "peak_window": "flat" },
+    { "query": "evening gown for women","avg_12m": 0,  "peak_value": 2,   "peak_window": "Feb 15-21 2026" }
+  ]
+}
