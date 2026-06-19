@@ -1,6 +1,6 @@
 # Maison Denude — Brand Intelligence Hub (Nội bộ)
 *Tài liệu làm việc nội bộ — không dùng cho client*  
-*Cập nhật lần cuối: Tháng 5, 2026*
+*Cập nhật lần cuối: 19/6/2026 — bổ sung tư vấn expert (anh TK): §3.3 & §4.3*
 
 ---
 
@@ -120,6 +120,27 @@ Dữ liệu từ toàn bộ kết quả tìm kiếm public trên Facebook (thán
 - **Southeast Asian designers** đang được thị trường quốc tế quan tâm nhiều hơn (Châu Á trong thời trang toàn cầu đang có moment)
 - Bespoke là **dịch vụ không thể outsource hay thay thế bằng online** → tạo lý do để khách hàng tìm đến trực tiếp
 
+> ⚠️ **Lưu ý (tư vấn TK, 19/6):** Điểm "không thay thế bằng online" là *con dao hai lưỡi*. Tại VN nó là lý do khách tìm đến trực tiếp; nhưng với khách **nước ngoài**, chính nó là **rào cản** (không deliver được trải nghiệm bespoke từ xa) — xem §3.3 và §4.3.
+
+### 3.3 Lỗ hổng định vị — Tư vấn expert (anh TK · 19/6)
+
+*Nguồn: [debrief_expert_fashion.md](debrief_expert_fashion.md). Góc nhìn một người — dùng để phản tư, không phải kết luận tuyệt đối.*
+
+| Lỗ hổng | Biểu hiện |
+|---------|-----------|
+| **Chưa lấy khách hàng làm trọng tâm** | Thiết kế thiên về art quá; không tối ưu UX trên các touchpoint social; không social listening — không aware khách đang nói gì về mình |
+| **Định vị không tự truyền đạt được** | Maddy & Matthew nhìn lần đầu không nhận ra occasion/áo dài wear; người có sense (TK) nhìn ra ngay → brand chưa "tự nói" được mình là ai |
+| **Brand "khô", thiếu ham muốn** | Thiết kế đẹp/ấn tượng nhưng show diễn yếu (hình chụp thường, chụp trước gương) → cứng, xa cách; perception không thống nhất. Lỗi chung của fashion brand VN |
+| **Nhà thiết kế — trụ chưa khai thác** | "Mặc đồ Nguyễn Công Trí" đã tạo desire; "mặc đồ Chi Bùi" chưa gợi được gì. Founder muốn low-key, nhưng nghệ sĩ nên có tiếng nói về sản phẩm |
+
+**Sequencing quan trọng:**
+
+```
+Định vị (positioning)  →  Digital marketing  →  Tối ưu digital UX (phần việc của team)
+```
+
+Định vị phải sửa **trước**. Maison có thể đang hỏng ngay ở bước đầu này (hoặc đang struggle mà chưa tìm ra) → nếu tối ưu "phần đầu" khi nền positioning chưa chắc, hiệu quả sẽ bị giới hạn.
+
 ---
 
 ## 4. Bottleneck Phân tích — Vấn đề cốt lõi cho Global Expansion
@@ -144,6 +165,22 @@ Cần khách quốc tế để tạo WOM quốc tế
 | **Event / pop-up tại thị trường mục tiêu** | Tham dự fashion events, wedding expos ở các thị trường mục tiêu | Chi phí cao, logistics phức tạp |
 
 *Không có hướng nào hoàn hảo — cần kết hợp và ưu tiên dựa trên kết quả market research.*
+
+### 4.3 Bespoke không scale ra nước ngoài → entry nên là "fit giữa" (Tư vấn TK · 19/6)
+
+- **Bespoke = một chuỗi trải nghiệm cảm giác**: sờ vải, có người đo, soi vải có tôn màu da, cảm nhận chất liệu. Khách nước ngoài nghe "bespoke" sẽ kỳ vọng **toàn bộ** trải nghiệm đó.
+- Maison hiện **chỉ thu số đo qua tin nhắn** → không deliver được full experience → **friction & rào cản lớn**.
+- Muốn deliver bespoke thật ở nước ngoài → cần **đối tác/hiện diện tại chính thành phố/quốc gia đó**.
+- Bespoke vừa **khó scale** vừa **mắc** → để expand, entry nên là **product "fit giữa"**: giữa bespoke và mass (semi-size, ready-to-wear, dễ mặc). Tham chiếu mô hình **Lalune** (collection + fixed size, may lẻ sau).
+
+**Hai điều chỉnh hướng cần cân nhắc:**
+
+| Vấn đề | Hàm ý |
+|--------|-------|
+| **VN market chưa tap trọn vẹn** — hiện diện "nửa nửa" | Cân nhắc củng cố dư địa nội địa **trước/song song** go global, thay vì all-in nước ngoài |
+| **Phạm vi team** — M&M chỉ với tới "phần đầu" (digital front/UX) | Business model + định vị cốt lõi là việc của brand → đặt kỳ vọng đúng với Maison, tránh over-promise |
+
+> **Tác động tới đề bài research:** indicator nên đo nhu cầu **"unique ready-to-wear / fit giữa"** (bespoke = upsell cần hiện diện tại chỗ), không thuần "cần bespoke". Xem [Week 2 plan](MaisonDenude_Week2_Plan.md).
 
 ---
 
