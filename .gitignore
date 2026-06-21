@@ -154,3 +154,6 @@ $RECYCLE.BIN/
 *.bak
 *.tmp
 *.temp
+
+# Personal machine-local Claude settings
+thieu/.claude/settings.local.json
