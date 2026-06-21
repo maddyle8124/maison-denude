@@ -119,3 +119,53 @@ Nhiều kết quả top là **Facebook group** ("Địa Chỉ May Áo Dài Đẹ
 - Cập nhật bằng **Google Search Console** thật sau go-live: thay ước lượng bằng vị trí xếp hạng thật của Maison so với các domain trên (mốc Tuần 7).
 
 > Liên kết: chiến lược từ khoá & gap map [`01_seo_landscape.md`](./01_seo_landscape.md) · 10 blog brief [`02_blog_briefs.md`](./02_blog_briefs.md).
+
+---
+
+## 7. Hồ sơ đặc biệt — HUONG Boutique: đối thủ **"lưỡng cư"** (vừa VN vừa quốc tế/diaspora)
+
+*Bổ sung 21/6/2026. Raw: [`data_logs/2026-06-21_huongboutique_traffic_and_serp.json`](./data_logs/2026-06-21_huongboutique_traffic_and_serp.json). Nguồn: SimilarWeb (ww + `country=vn`, total web, TB tháng 3–5/2026, cập nhật 2026-05-31) · SerpApi Google.com.vn 6/2026.*
+
+HUONG Boutique (`huongboutique.com` quốc tế · `huongboutique.vn` social, lập **2007**) **không vừa với khung "đối thủ VN" của tài liệu này** — nên tách riêng. Đã thấy nó ở §1's log (organic #8 cho `áo dài cưới cao cấp`), nhưng đo kỹ thì đây là **người chơi lớn nhất toàn cụm áo dài**, vận hành đa kênh, và phần lớn traffic **không đến từ VN**.
+
+### 7.1 Quy mô & nguồn traffic — diaspora là chính, VN chỉ là phần nhỏ
+
+| Chỉ số | Giá trị | Ghi chú |
+|:--|:--|:--|
+| Lượt **toàn cầu**/tháng (TB 3–5/2026) | **~70.000** | Mar 89.860 → Apr 60.769 → May 59.376 — **đang giảm** |
+| Lượt **từ VN**/tháng (TB) | **~5.619** | Mar 6.938 → Apr 5.025 → May 4.894 — cũng giảm |
+| **VN chiếm bao nhiêu %** tổng | **chỉ ~8%** (hạng 5 về địa lý) | — |
+
+**Top địa lý theo share (3–5/2026):** 🇺🇸 Mỹ **24,7%** · 🇫🇷 Pháp **15,0%** · 🇦🇺 Úc **8,9%** · 🇨🇦 Canada **8,8%** · 🇻🇳 VN **8,0%** · 🇬🇧 Anh 7,4%.
+
+➡️ **Đọc ra:** HUONG là **đối thủ diaspora trá hình** — khách chủ yếu là người Việt ở Mỹ/Pháp/Úc/Canada mua online, ship toàn cầu. So với leader diaspora cũ trong bản đồ ([`01_seo_landscape.md`](./01_seo_landscape.md), East Meets Dress ~58K ww), HUONG **~70K ww còn lớn hơn**. Nếu Maison nhắm khách Việt kiều/quốc tế (định vị "Designed in Vietnam, shipped worldwide"), **đây mới là đối thủ số 1 cần dè chừng — không phải nhóm atelier VN ở §1.**
+
+### 7.2 Khác biệt cấu trúc: omnichannel + **có chạy quảng cáo trả phí**
+
+Kênh traffic toàn cầu (SimilarWeb, 5/2026):
+
+| Kênh | % | Đối chiếu nhóm VN §1 |
+|:--|:--|:--|
+| Organic Search | ~50% | tương tự |
+| Direct (gõ thẳng/brand) | ~26% | **cao — brand mạnh** |
+| **Paid Search** | ~15% | nhóm VN gần như không chạy |
+| **Paid Social** | ~4,5% | — |
+| Display + Organic Social + Mail + Referral | còn lại | — |
+
+→ **~21% traffic là trả phí** (paid search + paid social + display). Đây là điểm tách HUONG khỏi toàn bộ atelier VN ở §1 (vốn sống bằng organic + social tự nhiên + truyền miệng). HUONG **đầu tư mua traffic** để phục vụ mảng e-commerce quốc tế. Direct ~26% cho thấy **sức mạnh thương hiệu thật** (khách gõ thẳng tên).
+
+### 7.3 Mô hình & định vị
+
+- **Omnichannel đầy đủ:** chuỗi cửa hàng vật lý **Hà Nội** (108 Thái Hà, 276 & 248 Bà Triệu) + **TP.HCM** (357 Võ Văn Tần, B3 Union Square — 171 Đồng Khởi) **+** e-commerce `.com` ship toàn cầu **+** Shopee Mall **+** phân phối qua kênh **cho thuê** (hizu.com.vn ~620k/lần, yumerent.com — áo dài niêm yết ~5,5 triệu, thuê ~1,1 triệu).
+- **Social cực mạnh:** Facebook **~472,8K** follower, Instagram **~367K**. Bio IG: *"Designed in Vietnam. Structure meets softness. Resort · Bridal · Ready to Wear Worldwide."*
+- **Định vị sản phẩm:** *"taffeta structure meets silk softness"* — RTW thanh lịch/hiện đại + cưới + resort, **không phải bespoke couture thuần**. Tầm giá retail ~5,5 triệu/áo dài.
+- **Làm chủ SERP thương hiệu:** gõ `huong boutique áo dài` (6/2026) → **Local Pack** 2 cửa hàng (357 Võ Văn Tần 4.6★/186; Union Square 5.0★/219) + organic toàn tài sản của chính họ (FB, IG, .com, blog, Shopee, đối tác thuê). Cầu thương hiệu rõ ràng.
+
+### 7.4 Ý nghĩa cho Maison Dénudé
+
+1. **Phân loại đúng đối thủ:** với khách **VN nội địa**, HUONG chỉ ngang phân khúc (~5,6K lượt VN/tháng — sẽ đứng hạng ~4 trong bảng §1, giữa Nicole 7,5K và Overa 5,2K). Nhưng với khách **Việt kiều/quốc tế**, HUONG là **đối thủ nặng ký nhất** đã đo được — trùng định vị "thiết kế tại VN, ship toàn cầu" với Maison nhiều nhất.
+2. **Bài học omnichannel + paid:** HUONG cho thấy con đường scale ra quốc tế là **kết hợp brand mạnh (direct 26%) + organic + mua paid search/social**, không chỉ SEO. Maison nếu nhắm quốc tế phải tính ngân sách paid, không thể chỉ trông vào organic.
+3. **Khoảng trống để Maison tách biệt:** HUONG là **RTW/resort/cưới thanh lịch tầm 5,5 triệu**, phân phối cả qua kênh **cho thuê** (làm loãng cảm giác cao cấp/độc bản). Maison có thể tách bằng **bespoke couture thật + vốn editorial/KOL (ELLE, L'Officiel, Miss Universe)** — định vị cao hơn HUONG, không bán qua rental.
+4. **Theo dõi:** traffic HUONG **đang giảm** (89K→59K trong 3 tháng) — cửa sổ tốt để Maison chen vào mảng diaspora/quốc tế khi đối thủ lớn nhất đang đi xuống.
+
+> **Tóm tắt một câu:** HUONG Boutique không phải "thêm một atelier VN" — nó là **đối thủ diaspora/quốc tế lớn nhất** trong toàn bộ nghiên cứu, đa kênh và có chạy quảng cáo; xếp nó vào bản đồ **quốc tế** ([`01_seo_landscape.md`](./01_seo_landscape.md)), không phải bản đồ VN nội địa.

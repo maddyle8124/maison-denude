@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "fetched": "2026-06-21",
+    "scope": "HUONG Boutique (huongboutique.com) — single-competitor deep dive appended to competitor.md. Straddles BOTH the VN domestic market and the international/diaspora market.",
+    "sources": {
+      "serpapi": "engine=google, google_domain=google.com.vn, gl=vn, hl=vi, location=Ho Chi Minh City, live June 2026",
+      "similarweb": "get-websites-traffic-and-engagement (ww + country=vn), get-websites-geography-agg, get-websites-traffic-channels; total web; last_updated 2026-05-31; visits are estimates"
+    }
+  },
+  "similarweb_visits_monthly": {
+    "worldwide": {"2026-03": 89860, "2026-04": 60769, "2026-05": 59376, "avg": 70002, "trend": "down"},
+    "vietnam_only": {"2026-03": 6938, "2026-04": 5025, "2026-05": 4894, "avg": 5619, "trend": "down", "note": "VN is only ~8% of total traffic — site is diaspora/international-dominated"}
+  },
+  "similarweb_geography_share_mar-may_2026": {
+    "note": "top geographies by traffic share — VN ranks only #5",
+    "us": {"share_pct": 24.7, "rank": 1},
+    "fr": {"share_pct": 15.0, "rank": 2},
+    "au": {"share_pct": 8.9, "rank": 3},
+    "ca": {"share_pct": 8.8, "rank": 4},
+    "vn": {"share_pct": 8.0, "rank": 5},
+    "gb": {"share_pct": 7.4, "rank": 6}
+  },
+  "similarweb_traffic_channels_ww_2026-05": {
+    "total_visits": 56789,
+    "organic_search": {"visits": 28164, "pct": 49.6},
+    "direct": {"visits": 14566, "pct": 25.6},
+    "paid_search": {"visits": 8351, "pct": 14.7},
+    "paid_social": {"visits": 2576, "pct": 4.5},
+    "display_ads": {"visits": 919, "pct": 1.6},
+    "organic_social": {"visits": 873, "pct": 1.5},
+    "mail": {"visits": 690, "pct": 1.2},
+    "referrals": {"visits": 651, "pct": 1.1},
+    "paid_total_pct": 20.8,
+    "note": "~21% paid acquisition (paid search + paid social + display) — unlike the VN domestic competitors who rely on organic/social only"
+  },
+  "engagement_vn_2026-05": {"bounce_rate": 0.13, "avg_visit_duration_sec": 190, "pages_per_visit": 4.96},
+  "profile": {
+    "established": 2007,
+    "model": "omnichannel — VN bricks-and-mortar chain + international e-commerce with worldwide shipping",
+    "domains": {"huongboutique.com": "international/online (.com, English, worldwide shipping)", "huongboutique.vn": "VN social handle"},
+    "positioning_instagram_bio": "Designed in Vietnam. Structure meets softness. Resort | Bridal | Ready to Wear Worldwide",
+    "positioning_site": "Designs and produces in Vietnam, blending taffeta structure with silk softness, worldwide shipping",
+    "social": {"facebook_followers": 472800, "instagram_followers": 367000, "instagram_posts": 591},
+    "stores": {
+      "hanoi": ["108 Thai Ha", "276 Ba Trieu", "248 Ba Trieu"],
+      "hcmc": ["357 Vo Van Tan", "B3 Union Square (171 Dong Khoi)"]
+    },
+    "rental_distribution": ["hizu.com.vn (thue ~620k)", "yumerent.com (ao dai ~5.5M retail / 1.1M rental)"],
+    "marketplace": "shopee.vn/huongboutique (Shopee Mall)"
+  },
+  "serp_brand_huong_boutique_ao_dai_VN_2026-06": {
+    "local_pack": ["HUONG Boutique 357 Vo Van Tan 4.6*/186", "HUONG Boutique Union Square 5.0*/219", "Huong Collection Hai Ba Trung 5.0*/1"],
+    "organic": ["1 facebook huongboutique.vn (472.8K followers)", "2 huongboutique.com blog (Tet ao dai collection)", "3 instagram huong.boutique (367K)", "4 huongboutique.com home", "5 shopee.vn/huongboutique (Shopee Mall)", "6 hizu.com.vn (rental)", "7 yumerent.com (rental)", "8 facebook huongboutique.vn post"],
+    "note": "brand owns its own SERP across own site + social + marketplace + rental partners; strong brand demand"
+  },
+  "cross_ref": {
+    "appears_in_VN_market_log": "2026-06-21_competitor_VN-market_traffic_and_serp.json — listed at organic #8 (facebook HUONG Boutique) for 'ao dai cuoi cao cap'",
+    "vs_diaspora_leader": "East Meets Dress ~58K ww (from 01_seo_landscape diaspora map); HUONG ~70K ww — larger"
+  }
+}

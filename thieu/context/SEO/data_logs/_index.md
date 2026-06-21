@@ -17,6 +17,9 @@
 | [`2026-06-11_trends_full34_batch-averages.json`](./2026-06-11_trends_full34_batch-averages.json) | SerpApi/Google Trends | search · TIMESERIES ×4 batch | 34 từ khoá · 12m · neo `wedding ao dai` | 11/6 | — | **Chấm điểm chuẩn hoá cả 34 từ.** Phát hiện: `traditional ao dai`=57 (mạnh nhất), `vietnamese couture`=1 (blip) |
 | [`2026-06-11_serp_positions_2queries_us.json`](./2026-06-11_serp_positions_2queries_us.json) | SerpApi/Google | search · google engine | `bespoke ao dai saigon` + `wedding ao dai` · US | 11/6 | — | Vị trí trang 1 (US). Bổ sung thêm bởi file ma trận bên dưới |
 | [`2026-06-11_serp_multilocation_matrix.json`](./2026-06-11_serp_multilocation_matrix.json) | SerpApi/Google | search · google engine | 2 truy vấn × **VN·US·AU** | 11/6 | — | Ma trận đa địa điểm: từ VN có atelier Việt + Local Pack; US/AU là diaspora. Khoảng trống theo thị trường |
+| [`2026-06-21_competitor_traffic_and_serp.json`](./2026-06-21_competitor_traffic_and_serp.json) | SimilarWeb + SerpApi | traffic-and-engagement · google | Đối thủ tổng hợp (diaspora + VN) | 21/6 | — | Dữ liệu nền cho [`competitor.md`](../competitor.md) |
+| [`2026-06-21_competitor_VN-market_traffic_and_serp.json`](./2026-06-21_competitor_VN-market_traffic_and_serp.json) | SimilarWeb + SerpApi | traffic-and-engagement · google | **Thị trường VN** · `country=vn` · SERP google.com.vn | 21/6 | — | Bảng xếp hạng đối thủ VN + 3 SERP tiếng Việt → [`competitor.md`](../competitor.md) §1–6 |
+| [`2026-06-21_huongboutique_traffic_and_serp.json`](./2026-06-21_huongboutique_traffic_and_serp.json) | SimilarWeb + SerpApi | traffic-and-engagement · geography-agg · traffic-channels · google | **HUONG Boutique** deep-dive · ww + `country=vn` | 21/6 | 65 | Đối thủ "lưỡng cư" ~70K ww / chỉ 8% VN; ~21% paid; omnichannel → [`competitor.md`](../competitor.md) §7 |
 
 ## Nguồn định tính (WebSearch — không phải số liệu, lưu để truy vết)
 
