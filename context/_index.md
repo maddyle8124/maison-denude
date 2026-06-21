@@ -31,6 +31,7 @@ When master and any other doc disagree, **master wins**. `decisions.md` is the l
 | `client-context/brand.md` | Brand snapshot, products, tone | seeded |
 | `client-context/positioning.md` | Value prop, differentiators | seeded |
 | `client-context/stakeholders.md` | Client decision-makers (Chi, Michelle) | seeded |
+| `client-context/founder-signals.md` | Founders' intent: positioning/voice boundaries + how to work with them | seeded |
 | `client-context/personas.md` | End-customer personas | skeleton |
 | `client-context/competitors.md` | Competitive landscape | skeleton |
 | `markets/_pointer.md` | Market research + Playbook (pointer only) | pointer |

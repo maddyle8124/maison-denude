@@ -2,6 +2,17 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-21 — Founder signals synthesis (Maddy)
+
+- Added `client-context/founder-signals.md`: reads the founders' intent from the WhatsApp chat (5/16–6/12) across **brand positioning, brand personality/voice, and how to work with the founders** — captures the boundaries (no "high end", "we are not tailor", not "shopping haul") and a quick do/don't table. Companion to `stakeholders.md` / `positioning.md` / `brand.md`.
+
+## 2026-06-21 — Research direction reframe (Maddy)
+
+- `timeline.md`: research delivery slipped to T5 (Thursday) due to pending finance/legal; market-entry thesis reframed.
+- `markets/_pointer.md`: added **Working thesis** — inbound tourism + accessible/shippable "fit giữa" line; flagged positioning-vs-commercial tension; listed the two in-progress outputs.
+- `open-questions.md`: added **OQ-008** (founder brand references + long-term direction) and **OQ-009** (accessible/shippable non-bespoke line); founder-input blocker note.
+- `decisions.md`: session-log entry; no MD-xxx (working hypothesis, not a binding decision).
+
 ## 2026-06-21 — Client context from WhatsApp chat
 
 - Analyzed full project WhatsApp chat (5/16–6/18) and rewrote `client-context/stakeholders.md` from observed behavior.

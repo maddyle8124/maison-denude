@@ -21,7 +21,9 @@ Detailed phase checklists live in `/thieu/context/management/plan.md` (personal)
 
 - **Deposit received 6/18 → project live.** Domain resolved (maisondenude.com, MD-025); still need OQ-001 (booking email) before booking can be tested end-to-end.
 - **Design delayed** — MD's graphic designer resigned; Thiệu builds the site shell + tracking first, applies visual design when ready (MD-029).
-- **This week (T2, 19–25/6):** 1st Progress Presentation on Saturday — demo website (HTML form first) + 5-market insight → confirm 3 target markets; validate keyword set; confirm UX/UI direction.
+- **Research delivery slipped to T5 (Thursday).** Work on research outputs only started Thursday this week because of pending finance/legal items → today's (6/21) research outputs run slightly behind the Week-2 plan.
+- **This week (T2, 19–25/6):** 1st Progress Presentation on Saturday — demo website (HTML form first) + market insight → confirm target markets; validate keyword set; confirm UX/UI direction.
+- **Market-entry thesis reframed (Maddy, 6/21):** moving from "export bespoke abroad" toward **inbound tourism** + an **accessible/shippable line** — see `markets/_pointer.md` working thesis.
 
 ## Milestones
 

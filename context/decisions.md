@@ -59,6 +59,13 @@ _Append-only: add the next `MD-xxx`; never rewrite history. Last updated: 2026-0
 - Logged MD-025 (domain), MD-026 (blog language), MD-027 (niche-first SEO), MD-028 (net payment), MD-029 (deposit in, build shell first / design delayed), MD-030 (SimilarWeb not SEMrush).
 - Resolved OQ-002, OQ-003; added OQ-007 (competitor list to scrape). Deposit received 6/18 — project live.
 
+### 2026-06-21 — Research direction reframe (Maddy)
+- **Timeline:** research delivery slipped to Thursday (T5) this week due to pending finance/legal; today's outputs run behind the Week-2 plan. Logged in `timeline.md`.
+- **Market-entry reframe (working thesis, not yet team/client-confirmed):** (1) target **inbound tourism** — markets that send tourists to Vietnam for an in-person bespoke/made-to-measure experience, vs. exporting bespoke abroad; (2) consider an **accessible/shippable "fit giữa" line** for anything that travels. Extends BrandHub TK §4.3. Captured in `markets/_pointer.md`.
+- **Tension flagged:** engagement leans branding/positioning, but sales need a commercial hook, and Chi resists mass/commercialization → positioning must be fixed first (BrandHub §3.3); research without it risks being non-actionable.
+- Added **OQ-008** (founder brand references + long-term direction) and **OQ-009** (does an accessible/shippable non-bespoke line exist?) — both gate the Playbook thesis.
+- No MD-xxx logged: this is a research hypothesis to validate at the presentation, not a binding decision yet.
+
 ## Commit protocol
 
 Commit after each session from `c:\maison`:

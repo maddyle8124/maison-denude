@@ -15,6 +15,10 @@ When an OQ is resolved:
 | OQ-004 | Booking popup trigger timing: confirm ~30s default? | Maison (Chi) | ❌ Open | — | — |
 | OQ-006 | KOL selection criteria (for the Playbook KOL section) | Maison (Chi) | ❌ Open | — | — |
 | OQ-007 | Which competitor brands to scrape for keyword data? Chi asked for the list. | Maison (Chi) | ❌ Open | — | — |
+| OQ-008 | Founder direction: which brands does Chi admire/reference, and what is her long-term positioning/vision for Maison Dénudé? Needed so research & Playbook don't diverge from founder intent. | Maison (Chi) | ❌ Open | — | — |
+| OQ-009 | Does Maison have (or want) an accessible, shippable product line that does NOT require the bespoke experience — i.e. a "fit giữa" / semi-size / ready-to-wear line? | Maison (Chi) | ❌ Open | — | — |
+
+**Founder-input blocker (6/21):** OQ-008 + OQ-009 gate the market-entry thesis and Playbook. Chi resists mass/commercial framing, so positioning intent must come from her before research locks — see `markets/_pointer.md` working thesis.
 
 **Phase 0 partially unblocked:** domain resolved (OQ-002), deposit received 6/18. Still need OQ-001 (booking email) before the booking flow can be tested end-to-end.
 

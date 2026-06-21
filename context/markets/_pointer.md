@@ -13,6 +13,22 @@ The Digital Marketing Playbook for **3 target export markets** is a named Phase-
 - **5 candidates:** Dubai/UAE · Hàn Quốc (Korea) · Singapore · Trung Quốc (China) · Nhật Bản (Japan).
 - **Decision point:** confirm 3 markets at the 1st Progress Presentation (Saturday). Until then, this is open.
 
+## Working thesis (Maddy, 2026-06-21)
+
+Refines the BrandHub TK insight (§4.3 "bespoke doesn't scale abroad → fit-giữa entry"). Two shifts in how the market question is framed:
+
+1. **Inbound, not outbound.** Instead of "which foreign market do we export bespoke to," ask "**which markets send tourists to Vietnam** who'd want a premium fashion / made-to-measure *experience* while travelling." Bespoke is a sensory, in-person chain (fabric, fitting, skin-tone matching) — it makes sense done **in Saigon**, not shipped overseas. This favours high inbound-tourism source markets (China, Korea, Japan overlap with the existing candidate list).
+2. **Accessible line, not pure bespoke.** For anything that travels home with the buyer or ships, Maison needs a **"fit giữa" / shippable ready-to-wear** line that does *not* require the bespoke experience. **Open whether such a line exists or should** — needs founder input (OQ-009).
+
+### Tension to resolve (flag for the team)
+
+This engagement leans **branding/positioning**, but booking-sales need a **commercial** hook — and Chi explicitly resists commercialization / mass / "đại trà." Per BrandHub §3.3, **positioning must be fixed before digital marketing/UX pays off.** So: market research that ignores the positioning gap risks being "nice-to-have" rather than actionable. Resolve founder direction (OQ-008) before locking the Playbook thesis — we cannot propose a plan that diverges from the founder's intent.
+
+### Outputs in progress (2026-06-21)
+
+1. **General research** — inbound tourists to Vietnam with appetite for premium fashion / made-to-measure experiences (broad; demand evidence, not "rich market").
+2. **Accessible-line feasibility + founder Q&A** — can Maison offer a shippable, non-bespoke line? Paired with a list of questions the founder must answer (brand references, long-term direction) to unblock positioning. Drives OQ-008 / OQ-009.
+
 ## Evaluation framework (5 pillars)
 
 Each market scored on: **Value Fit · Market Share & White Space · Policy & Barriers · WOM & Referral Readiness · Channel Fit.** Full framework + per-market tactical intel in `/MDenude_BrandHub_Internal.md` §5–6 (internal only).
