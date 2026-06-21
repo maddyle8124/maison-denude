@@ -1,0 +1,386 @@
+<title>Maison Dénudé — Báo cáo & Kế hoạch hành động</title>
+<style>
+  :root{
+    --ivory:#f6f1e9; --paper:#fffdf9; --ink:#2a2521; --muted:#7c736a; --soft:#9a9087;
+    --line:#e6ddcf; --line2:#d8cdb9; --gold:#a9824e; --goldbg:#f0e7d6;
+    --up:#5d7a4f; --upbg:#e8efe2; --down:#b15a40; --downbg:#f6e6df; --flat:#9a9087;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 22px 80px;color:var(--ink);font-family:var(--sans);
+    background:var(--ivory);line-height:1.62;font-size:15px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;color:var(--ink)}
+  h1{font-size:33px;margin:0 0 6px}
+  h2{font-size:24px;margin:52px 0 4px}
+  h3{font-size:17px;margin:0 0 4px}
+  .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:var(--gold);font-weight:600;margin:0 0 10px}
+  .sub{color:var(--muted);font-size:13.5px;margin:0 0 4px}
+  .secnum{color:var(--gold);font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.06em}
+  .rule{height:1px;background:var(--line2);border:0;margin:8px 0 0}
+  .lead{font-size:16px;color:#473f38;margin:14px 0 0;max-width:80ch}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line2)} a:hover{border-color:var(--gold)}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  p{margin:10px 0 0}
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 0}
+  .metric{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .metric .n{font-family:var(--serif);font-size:25px;font-weight:600;line-height:1.05}
+  .metric .l{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0 0}
+  @media(max-width:640px){.two{grid-template-columns:1fr}}
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .panel h3{margin:0 0 4px}
+  .panel .t{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 6px}
+  .panel p{margin:0;font-size:13.5px;color:#4d453d}
+  table{border-collapse:collapse;width:100%;margin:14px 0 0;font-size:13px;background:var(--paper);border-radius:10px;overflow:hidden}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+  th{background:var(--goldbg);color:#5a4628;font-weight:600;font-size:12px}
+  td{color:#433c34;vertical-align:top}
+  .tbl-wrap{overflow-x:auto}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:13px;margin:16px 0 0}
+  .chartbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0 0}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted);margin:0 0 10px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+  .comp{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0 0}
+  .comp.watch{border-color:var(--gold);border-width:2px}
+  .comp-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;justify-content:space-between}
+  .comp-head .nm{font-family:var(--serif);font-size:19px;font-weight:600}
+  .comp-head .dm{font-size:12px;color:var(--soft)}
+  .pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .pill.up{background:var(--upbg);color:var(--up)} .pill.down{background:var(--downbg);color:var(--down)}
+  .pill.flat{background:#efe9df;color:var(--flat)} .pill.watch{background:var(--goldbg);color:var(--gold)}
+  .comp-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:18px;margin-top:12px}
+  @media(max-width:640px){.comp-grid{grid-template-columns:1fr}}
+  .stat-l{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--soft);font-weight:600;margin:11px 0 5px}
+  .bars .row{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12px}
+  .bars .rl{width:64px;color:var(--muted);flex:none;text-align:right}
+  .bars .rt{width:84px;flex:none;color:var(--muted)}
+  .bars .track{flex:1;background:#efe9dd;border-radius:4px;height:9px;overflow:hidden}
+  .bars .fill{height:100%;border-radius:4px}
+  .bars .rv{width:34px;flex:none;font-variant-numeric:tabular-nums;color:#4d453d}
+  .facts dt{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);font-weight:600;margin-top:10px}
+  .facts dd{margin:2px 0 0;font-size:12.5px;color:#433c34}
+  .imp{background:var(--goldbg);border-radius:9px;padding:9px 12px;margin-top:12px;font-size:12.5px;color:#5a4628}
+  .imp b{color:#3f3118}
+  .seg{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin:12px 0 0;border-left:4px solid var(--gold)}
+  .seg .rank{font-family:var(--serif);font-size:22px;color:var(--gold);font-weight:600;margin-right:8px}
+  .seg h3{display:inline}
+  .seg .badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--upbg);color:var(--up);margin-left:8px}
+  .seg .badge.mid{background:var(--goldbg);color:var(--gold)}
+  .seg p{margin:7px 0 0;font-size:13.5px;color:#473f38}
+  .road{margin:14px 0 0}
+  .road .wk{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
+  .road .wn{font-family:var(--serif);font-weight:600;color:var(--gold);font-size:14px}
+  .road .wt b{color:var(--ink)} .road .wt{font-size:13.5px;color:#473f38}
+  .conf{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;margin:14px 0 0}
+  .conf .col{border-radius:12px;padding:15px 17px;border:1px solid var(--line);background:var(--paper)}
+  .conf .col.ok{border-top:4px solid var(--up)} .conf .col.try{border-top:4px solid var(--gold)} .conf .col.no{border-top:4px solid var(--down)}
+  .conf h3{font-family:var(--sans);font-size:14px;margin:0 0 8px}
+  .conf ul{margin:0;padding-left:17px} .conf li{font-size:12.5px;color:#4d453d;margin:5px 0}
+  .ask{background:var(--ink);color:#f1e7d6;border-radius:14px;padding:20px 24px;margin:14px 0 0}
+  .ask h3{color:#f6efe1;font-family:var(--serif);margin:0 0 4px;font-size:18px}
+  .ask ol{margin:10px 0 0;padding-left:20px} .ask li{font-size:14px;margin:8px 0;color:#e7dccb}
+  .ask li b{color:#f0c98a}
+  .ws{background:var(--ink);color:#f6f1e9;border-radius:14px;padding:20px 24px;margin:14px 0 0}
+  .ws h3{color:#f6f1e9;font-family:var(--serif);margin:0 0 8px;font-size:18px} .ws p{color:#e3d8c6;font-size:14px;margin:0} .ws .hl{color:#e7c489;font-weight:600}
+  .flag{background:var(--downbg);border:1px solid #e6c3b5;border-radius:10px;padding:12px 15px;margin:14px 0 0;font-size:13px;color:#6e3a28}
+  .flag b{color:#5a2e20}
+  .note{font-size:12px;color:var(--muted);background:var(--paper);border:1px dashed var(--line2);border-radius:10px;padding:14px 16px;margin-top:16px}
+  .demand .v-cao{color:var(--up);font-weight:600} .demand .v-mong{color:var(--down)}
+</style>
+
+<div class="wrap">
+  <h2 class="sr-only">Báo cáo nghiên cứu thị trường và kế hoạch hành động cho Maison Dénudé: bối cảnh, cầu theo dòng, đối thủ, nhóm khách, thị trường, định vị trọng điểm.</h2>
+  <p class="kicker">Maison Dénudé · Nghiên cứu nội bộ · 21/6/2026 · Maddy</p>
+  <h1>Báo cáo thị trường & Kế hoạch hành động</h1>
+  <p class="sub">Bối cảnh · cầu theo dòng sản phẩm · đối thủ · nhóm khách / thị trường / định vị trọng điểm</p>
+  <hr class="rule"/>
+  <p class="lead"><b>Maison là nhà thiết kế may đo cao cấp đa dòng, xuất phát từ con số 0 về kênh số nhưng giàu vốn truyền thông trong nước.</b> Thị trường có hai hệ cầu tách biệt; cầu mua ra nước ngoài chỉ rõ ở áo dài cưới (người Việt ở Mỹ + Úc). Khuyến nghị: tập trung một mũi nhọn — áo dài cưới cho cộng đồng Việt + Việt kiều về nước — định vị nhà mốt kể chuyện theo lối tạp chí.</p>
+
+  <div class="metrics" id="metrics"></div>
+
+  <div class="flag"><b>Lưu ý trung thực:</b> "Áo dài cưới bán ra nước ngoài" là <b>giả thuyết tốt nhất hiện có, chưa phải điều đã chứng minh tuyệt đối</b> (số liệu đối thủ đo trang phục cưới Á Đông nói chung, không tách riêng áo dài Việt). Cần làm rõ 5 điều nền móng với founder trước khi cam kết — xem phần cuối.</div>
+
+  <h2><span class="secnum">A ·</span> Phát hiện cốt lõi — hai hệ cầu tách biệt</h2>
+  <p class="sub">Hai nhóm khách cần hai thông điệp khác nhau, không trộn lẫn.</p>
+  <div class="two">
+    <div class="panel"><p class="t">Hệ 1 · Khách đến Việt Nam may tại chỗ</p><p>Lớn, đa ngôn ngữ — nhưng <b>vô hình trên web tiếng Anh</b> (sống trên RedNote/Ctrip của Trung Quốc, trang hướng dẫn tiếng Nhật, blog du lịch, TripAdvisor). Bao gồm cả Việt kiều về nước.</p></div>
+    <div class="panel"><p class="t">Hệ 2 · Mua giao hàng ra nước ngoài</p><p>Chỉ thật sự rõ ở <b>một dòng — áo dài cưới</b>, tập trung trong cộng đồng người Việt tại <b>Mỹ và Úc</b>. Mọi dòng khác đều mỏng hoặc chỉ để định vị.</p></div>
+  </div>
+  <div class="panel" style="margin-top:13px"><p class="t">Đánh đổi cứng: may đo ↔ giao hàng</p><p>May đo theo người gần như không giao quốc tế hiệu quả; muốn bán ra nước ngoài <b>buộc phải chuẩn hoá size</b> (đồ may sẵn). Fancì Club & La Lune chứng minh nhà thiết kế Saigon có thể bán toàn cầu mà vẫn cao cấp — nhưng nhờ size cố định. Đây chính là trục founder e ngại ("không đại trà") → cần chị Chi quyết.</p></div>
+
+  <h2><span class="secnum">A ·</span> Cầu theo dòng sản phẩm × địa lý</h2>
+  <div class="tbl-wrap demand"><table>
+    <tr><th>Dòng sản phẩm</th><th>Mỹ</th><th>Úc</th><th>Việt Nam</th><th>Trung/Nhật</th><th>Chế độ phù hợp</th></tr>
+    <tr><td><b>Áo dài cưới</b></td><td class="v-cao">Cao</td><td class="v-cao">Cao</td><td>Trung</td><td>Thấp</td><td>Giao xa + Việt kiều</td></tr>
+    <tr><td><b>Áo dài di sản</b></td><td>TB</td><td>TB</td><td class="v-cao">Cao</td><td>TB–Cao</td><td>May tại chỗ (khách đến VN)</td></tr>
+    <tr><td><b>Đầm dạ tiệc</b></td><td class="v-mong">Thấp</td><td class="v-mong">Thấp</td><td>Trung</td><td>Thấp</td><td>Dựng định vị (khoảng trống cao cấp)</td></tr>
+    <tr><td>Couture (từ khoá)</td><td class="v-mong">Mỏng</td><td class="v-mong">Mỏng</td><td class="v-mong">Mỏng</td><td>—</td><td>Chỉ ngôn ngữ định vị</td></tr>
+    <tr><td>Đồ may sẵn</td><td>Thấp</td><td>Thấp</td><td>Thấp</td><td>Thấp</td><td>Thử nghiệm (giao được)</td></tr>
+  </table></div>
+  <p class="sub" style="margin-top:8px">"Con voi Hội An": mọi kênh tiếng Anh đẩy nhu cầu "may đồ ở Việt Nam" về Hội An theo khung rẻ–nhanh–du lịch → gió ngược cho nhà cao cấp Saigon. Maison đua trên <b>dịp · hình ảnh · trải nghiệm</b>, không đua từ khoá "may đồ".</p>
+
+  <h2><span class="secnum">B ·</span> Tăng trưởng đối thủ 12 tháng</h2>
+  <p class="sub">% thay đổi lượt truy cập (tháng 6/2025 → 5/2026). Lượt là ước lượng.</p>
+  <div class="chartbox">
+    <div class="legend"><span><i class="dot" style="background:var(--up)"></i>Tăng</span><span><i class="dot" style="background:var(--down)"></i>Giảm</span></div>
+    <svg id="growth" width="100%" viewBox="0 0 720 300" role="img" aria-label="Biểu đồ tăng trưởng phần trăm lượt truy cập theo đối thủ"></svg>
+  </div>
+
+  <h2><span class="secnum">B ·</span> Quy mô & quỹ đạo</h2>
+  <div class="chartbox"><div id="scale"></div></div>
+
+  <h2><span class="secnum">B ·</span> Năm mẫu hình chiến lược</h2>
+  <div class="cards">
+    <div class="panel"><p class="t">Mặt trận mới</p><h3 style="font-family:var(--sans);font-size:15px">Tìm kiếm AI là "SEO" mới</h3><p>Nicole nhận ~72% lượt từ công cụ AI; BeBe có ChatGPT ~18%. Thắng nhờ bài so sánh dễ được AI trích dẫn.</p></div>
+    <div class="panel"><p class="t">Khoảng trống</p><h3 style="font-family:var(--sans);font-size:15px">Chưa ai chiếm cao cấp đa dòng</h3><p>LAHAVA gần nhất nhưng ở tầng giá rẻ hơn. Vị trí "nhà mốt Saigon kể theo lối tạp chí" còn trống.</p></div>
+    <div class="panel"><p class="t">Gap rõ</p><h3 style="font-family:var(--sans);font-size:15px">Đầm dạ tiệc gần như trống</h3><p>Chỉ LAHAVA có dòng này ở tầng cao cấp. Đúng dòng chị Chi nêu đích danh.</p></div>
+    <div class="panel"><p class="t">Tăng trưởng</p><h3 style="font-family:var(--sans);font-size:15px">Hai động cơ</h3><p>Nội dung/được-AI-trích (Nicole, BeBe) và bề rộng sản phẩm + Pinterest (LAHAVA). Nhóm giảm dựa legacy/quảng cáo.</p></div>
+    <div class="panel"><p class="t">Giá</p><h3 style="font-family:var(--sans);font-size:15px">Minh bạch giá phân đôi</h3><p>Nhóm giá trị công khai giá; nhóm cao cấp giấu giá. Maison giấu giá là hợp với định vị.</p></div>
+    <div class="panel"><p class="t">Cảnh báo</p><h3 style="font-family:var(--sans);font-size:15px">Đừng đua "may đồ" với Hội An</h3><p>Nhóm thợ may du lịch thống trị từ khoá đó với khung giá rẻ. Đua trên dịp/hình ảnh/trải nghiệm.</p></div>
+  </div>
+
+  <h2><span class="secnum">B ·</span> Hồ sơ từng đối thủ</h2>
+  <p class="sub">Mỗi thẻ: quỹ đạo · quốc gia khách · kênh · từ khoá · trang nổi bật · phân khúc · vì sao tăng/giảm · hàm ý.</p>
+  <div id="comps"></div>
+
+  <div class="ws"><h3>Khoảng trống cho Maison</h3><p>Không đối thủ nào sở hữu <span class="hl">"nhà mốt Saigon cao cấp, đa dòng (áo dài + đầm dạ tiệc), kể theo lối tạp chí — may đo tại chỗ cho khách đến Việt Nam + dòng may sẵn ký tên nhà thiết kế để đi xa"</span>. LAHAVA đứng gần nhất nhưng tầng giá rẻ hơn, và đang lên nhanh (+246%) → ô trống này có <span class="hl">cửa sổ thời gian</span>.</p></div>
+
+  <h2><span class="secnum">C ·</span> Nhóm khách trọng điểm</h2>
+  <p class="sub">Xếp theo độ chắc chắn của bằng chứng, không theo cảm tính.</p>
+  <div class="seg"><span class="rank">①</span><h3 style="font-family:var(--serif);font-size:18px">Cô dâu gốc Việt tại Mỹ + Úc — áo dài cưới</h3><span class="badge">Giả thuyết mạnh nhất</span><p>Nữ 24–34, lớn lên ở Mỹ/Úc, cần áo dài cho lễ ăn hỏi/gia tiên; mẹ đồng quyết định. Cầu mua xuyên biên giới rõ nhất — nhưng phải giải bài toán <b>niềm tin + vừa vặn</b> khi mua online không thử.</p></div>
+  <div class="seg"><span class="rank">②</span><h3 style="font-family:var(--serif);font-size:18px">Việt kiều VỀ Việt Nam may tại chỗ</h3><span class="badge">Mũi nhọn ít rủi ro</span><p>Giao điểm tốt nhất (nghiên cứu ban đầu bỏ sót): là người Việt (muốn áo dài thật), ở lại đủ lâu để thử đồ (giải bài toán may đo), có sức chi Mỹ/Úc, tự mang đồ về (giải bài toán giao hàng + size). Về đúng mùa cao điểm. → Hỏi founder xem đã có sẵn tệp này chưa.</p></div>
+  <div class="seg"><span class="rank">③</span><h3 style="font-family:var(--serif);font-size:18px">Khách quốc tế cao cấp đến VN — di sản & đầm dạ tiệc</h3><span class="badge mid">Dựng định vị</span><p>Tầng tìm "nhà thiết kế thật", không tìm "may rẻ Hội An". Đã tồn tại nhưng chưa ai kể chuyện. Nơi câu chuyện tạp chí + vốn nghệ sĩ phát huy mạnh nhất.</p></div>
+  <p class="sub" style="margin-top:10px">⏸ <b>Hoãn (chỉ thử có cổng dừng):</b> khách Trung/Nhật/Hàn mua đồ cao cấp tại chỗ (lượng lớn nhưng cầu mua chưa chứng minh — chủ yếu thuê + chụp ảnh). <b>Không cam kết:</b> vùng Vịnh.</p>
+
+  <h2><span class="secnum">C ·</span> Thị trường trọng điểm</h2>
+  <div class="tbl-wrap"><table>
+    <tr><th>Hạng</th><th>Thị trường</th><th>Dòng dẫn</th><th>Vì sao</th></tr>
+    <tr><td><b>1</b></td><td>Mỹ + Úc (cộng đồng Việt)</td><td>Áo dài cưới</td><td>Cầu mua xuyên biên giới rõ nhất; cộng đồng đông, sức chi cao</td></tr>
+    <tr><td><b>2</b></td><td>Việt Nam (khách đến + Việt kiều về + nội địa cao cấp)</td><td>Áo dài di sản + đầm dạ tiệc</td><td>Giải được bài toán may đo + giao hàng; sân khoảng trống cao cấp</td></tr>
+    <tr><td>Thử</td><td>Trung Quốc (qua RedNote)</td><td>Trải nghiệm may + chụp ảnh cao cấp</td><td>Lượng lớn nhưng chưa chứng minh → cổng dừng tuần 6</td></tr>
+    <tr><td>Hoãn</td><td>Ấn Độ, vùng Vịnh</td><td>—</td><td>Suy đoán / chưa có bằng chứng</td></tr>
+  </table></div>
+
+  <h2><span class="secnum">C ·</span> Định vị trọng điểm</h2>
+  <div class="panel" style="border-left:4px solid var(--gold);border-radius:0 12px 12px 0">
+    <p class="t">Thông điệp một câu</p>
+    <p style="font-family:var(--serif);font-size:17px;color:#3f3118;margin:0">"Maison Dénudé — nhà mốt Saigon nơi áo dài và đầm dạ tiệc được thiết kế riêng và kể như một trang tạp chí: mỗi thiết kế có câu chuyện, có hình ảnh, có tên người mặc."</p>
+  </div>
+  <div class="cards" style="margin-top:12px">
+    <div class="panel"><p class="t">Trụ 1</p><p><b>Đa dòng dưới một bàn tay thiết kế</b> (áo dài + đầm dạ tiệc) — khác các nhà một dòng.</p></div>
+    <div class="panel"><p class="t">Trụ 2</p><p><b>Tầng cao hơn LAHAVA + giọng tạp chí</b> — biên tập hình ảnh + câu chuyện, không bảng giá phẳng.</p></div>
+    <div class="panel"><p class="t">Trụ 3</p><p><b>Bằng chứng đẳng cấp có thật</b> — nghệ sĩ đã mặc + tạp chí lớn (đối thủ hải ngoại không có).</p></div>
+    <div class="panel"><p class="t">Trụ 4</p><p><b>Đầm dạ tiệc cao cấp có thương hiệu</b> — chiếm ô trống thị trường bỏ ngỏ.</p></div>
+  </div>
+  <div class="flag" style="background:var(--goldbg);border-color:#e0d2b5;color:#5a4628"><b>Tránh bẫy đối thủ:</b> KHÔNG sao chép chiến thuật "tự viết bài tự xếp mình số 1" của Nicole/BeBe — giọng tự tâng bốc là DNA của nhóm tiệm may du lịch, đi thẳng vào ranh giới founder cấm. Maison làm nội dung biên tập trung thực, để bằng chứng báo chí/nghệ sĩ nói thay. Nếu làm dòng may sẵn: gọi là <b>"tủ đồ ký tên nhà thiết kế"</b> (tên bộ sưu tập riêng, không giảm giá, kể theo câu chuyện, dẫn về may đo), KHÔNG phải "hàng may sẵn".</div>
+
+  <h2><span class="secnum">C ·</span> Lộ trình Giai đoạn 1 (tuần 2 → 7)</h2>
+  <div class="road" id="road"></div>
+  <p class="sub" style="margin-top:10px"><b>Chỉ số ngôi sao Bắc Đẩu:</b> số lịch hẹn riêng được xác nhận + lượt hỏi giá thật từ Mỹ/Úc. Phụ: số lần được AI nhắc tên (với khung "nhà thiết kế"), số trang được Google lập chỉ mục. Vì xuất phát từ 0 → đo "phễu có chạy", không đo doanh số.</p>
+
+  <h2><span class="secnum">C ·</span> Bản đồ độ tin cậy</h2>
+  <div class="conf">
+    <div class="col ok"><h3>✅ Chắc — xây được</h3><ul>
+      <li>Maison có vốn truyền thông tiếng Việt thật</li>
+      <li>Xuất phát từ 0 → KPI đo phễu, không đo doanh số</li>
+      <li>Đội 2 người → một mũi nhọn, không dàn trải</li>
+      <li>Ranh giới ngôn ngữ founder rõ; "con voi Hội An" là gió ngược</li>
+    </ul></div>
+    <div class="col try"><h3>🟡 Nên thử — có cổng dừng</h3><ul>
+      <li>Áo dài cưới giao xa (cược tốt nhất, chưa chứng minh trực tiếp)</li>
+      <li>Việt kiều về nước may tại chỗ (kiểm tra ngay)</li>
+      <li>Được AI trích nhờ nội dung có cấu trúc</li>
+      <li>Đầm dạ tiệc làm mũi định vị (không phải doanh thu)</li>
+    </ul></div>
+    <div class="col no"><h3>🔴 Đừng cam kết</h3><ul>
+      <li>Coi áo dài cưới giao xa là "chắc chắn"</li>
+      <li>Chiến thuật tự xếp số 1; khan hiếm giả</li>
+      <li>Khách du lịch Á mua đồ cao cấp tại chỗ</li>
+      <li>Vùng Vịnh; mọi con số doanh số tuyệt đối GĐ1</li>
+    </ul></div>
+  </div>
+
+  <h2><span class="secnum">D ·</span> Năm điều bắt buộc làm rõ với founder (họp thứ Bảy)</h2>
+  <div class="ask"><h3>Điểm mù chung của mọi đề xuất — phải hỏi TRƯỚC khi cam kết</h3><ol>
+    <li><b>Founder có đồng ý làm dòng đồ may sẵn để bán ra nước ngoài không?</b> Toàn bộ trụ doanh thu xuyên biên giới phụ thuộc câu này. Nếu "không" → cần phương án B (tập trung khách đến VN + Việt kiều về nước).</li>
+    <li><b>Áo dài cưới giao xa có thật khả thi không?</b> Bài toán niềm tin + vận hành: chính sách vừa vặn/đổi sửa, thời gian may có kịp ngày cưới không (cưới thường đặt trước 3–9 tháng — dài hơn cả Giai đoạn 1).</li>
+    <li><b>Vận hành & thanh toán quốc tế đã sẵn sàng chưa?</b> Cổng thanh toán nhận thẻ Mỹ/Úc, phí ship, thuế, đổi trả. Phễu vô dụng nếu đầu ra nghẽn.</li>
+    <li><b>Website hiện chạy nền tảng gì?</b> Quyết định mọi ước lượng công sức kỹ thuật.</li>
+    <li><b>Founder có sẵn quan hệ trong cộng đồng Việt kiều không?</b> Đòn bẩy rẻ nhất cho nhóm khách ① và ②.</li>
+  </ol></div>
+
+  <div class="note" id="method"></div>
+</div>
+
+<script>
+const DATA=[
+ {nm:"East Meets Dress",dm:"eastmeetsdress.com",tag:"Diaspora bridal · Mỹ",watch:0,
+  v:[58600,59143,66039,85112,64853,61520,54748,68972,62841,65200,53416,57565],g:-2,
+  geo:[["Mỹ",61],["Canada",9],["Úc",6],["Anh",5],["VN",4]],
+  ch:[["Tìm kiếm",54],["Trực tiếp",36],["Mạng XH",4],["Giới thiệu",4]],
+  kw:"trang phục cưới Trung Hoa, sườn xám, áo dài chỉ là dòng phụ",
+  pg:"Bộ sưu tập may đo, hàng giao ngay, blog 11+ bài",
+  seg:"Sườn xám là chủ lực; áo dài ~5 mẫu, gần như không có đánh giá → chỉ làm rộng từ khoá",
+  why:"Leader bão hoà (-2%). Mạnh nhờ tối ưu tìm kiếm (54%). Mỹ 61%, VN 4% → thuần người Việt/Hoa hải ngoại.",
+  imp:"Chiếm thị trường giao xa cho diaspora ở tầm giá 500–700 USD, NHƯNG coi áo dài là phụ → trống cho nhà áo dài Việt cao cấp thực thụ."},
+ {nm:"LAHAVA",dm:"lahava.com",tag:"Đa dòng · ĐỐI THỦ THEO DÕI",watch:1,
+  v:[3586,4492,3931,4187,3273,3120,7863,12396,13989,8681,12485,12394],g:246,
+  geo:[["Mỹ",66],["Úc",13],["Canada",11],["Anh",8]],
+  ch:[["Trực tiếp",44],["Tìm kiếm",35],["Mạng XH",13],["Giới thiệu",6]],
+  kw:"áo dài may đo, áo dài cưới, đầm dạ tiệc, áo dài nam, ship áo dài từ VN",
+  pg:"Áo dài may đo (341 mẫu), áo dài hiện đại (158), cưới (141), đầm dạ tiệc (98)",
+  seg:"Áo dài may đo + hiện đại là lõi; CÓ hẳn 98 mẫu đầm dạ tiệc (hiếm trong nhóm)",
+  why:"+246%! Khách Mỹ 66%/Úc 13% = người Việt hải ngoại. Trực tiếp 44% (nhận diện cộng đồng) + Pinterest mạnh.",
+  imp:"Chơi giá trị/giá rẻ, không cao cấp — nhưng TRÙNG định vị 'đa dòng cao cấp' nhất → theo dõi sát. Điểm yếu: giá thấp, thiếu giọng tạp chí."},
+ {nm:"Nicole Bridal",dm:"nicolebridal.vn",tag:"Cưới + áo dài cưới",watch:0,
+  v:[7981,16813,13669,14500,13961,17874,23023,34778,21061,15053,19281,20838],g:161,
+  geo:[["VN",43],["Mỹ",28],["Úc",14],["Canada",10]],
+  ch:[["Tìm kiếm",40],["Trực tiếp",30],["Mạng XH",18],["Giới thiệu",12]],
+  kw:"váy cưới cao cấp, áo dài cưới tphcm — bài 'Top tiệm ở Saigon' tự xếp số 1",
+  pg:"Bài listicle tự viết tự xếp #1; bộ sưu tập cưới theo mùa",
+  seg:"Váy cưới may đo là chính; áo dài cưới phụ. KHÔNG có đầm dạ tiệc",
+  why:"+161%. Bùng nổ nhờ ~72% lượt từ công cụ AI + 57% khách nước ngoài. Tự viết bài 'Top N Saigon' → AI trích dẫn.",
+  imp:"BÀI HỌC: nội dung được AI trích là kênh mới rất rẻ. Nhưng chiêu 'tự xếp số 1' đi vào ranh giới founder cấm — Maison làm biên tập trung thực thay vì tự tâng bốc."},
+ {nm:"BeBe Tailor",dm:"bebetailor.com",tag:"Thợ may du lịch Hội An",watch:0,
+  v:[8771,10012,10216,11566,15693,10410,10187,11507,14001,14177,13583,26625],g:204,
+  geo:[["Mỹ",40],["VN",32],["Úc",15],["Anh",10]],
+  ch:[["Tìm kiếm",47],["Trực tiếp",36],["Mạng XH",8],["Giới thiệu",7]],
+  kw:"thợ may Hội An, giá vest Hội An, may đầm Hội An (giá rẻ du lịch)",
+  pg:"Trang giới thiệu, 'cách hoạt động', không có catalog",
+  seg:"Vest + đồ Tây + sao chép mẫu thiết kế. Áo dài/cưới phụ",
+  why:"+204% (bùng nổ). KHÔNG do thương hiệu: bài hướng dẫn du lịch (Úc 50+) + ChatGPT ~18% + báo nước ngoài.",
+  imp:"Trùng lắp thấp (không áo dài/cao cấp). Bài học: traffic này từ bài hướng dẫn + AI, không phải trang sản phẩm. Là ranh giới cảnh báo, không phải hình mẫu."},
+ {nm:"A Dong Silk",dm:"adongsilk.com",tag:"Thợ may du lịch Hội An",watch:0,
+  v:[14040,14863,15509,15733,21000,12033,11190,11349,13246,38977,28605,24546],g:75,
+  geo:[["Mỹ",35],["VN",33],["Anh",12],["Úc",10],["Đức",5]],
+  ch:[["Tìm kiếm",60],["Giới thiệu",25],["Trực tiếp",13]],
+  kw:"thợ may tốt nhất Hội An, giá vest, vest 24h — áo dài chỉ 1 trang mỏng",
+  pg:"Trang vest (công cụ thiết kế 3D), bài 'giá vest', bài 'top thợ may'",
+  seg:"Vest thống trị; cưới thứ 2; áo dài cuối, marginal",
+  why:"+75%. Nhờ bài SEO 'giá - thợ may tốt nhất' bắt khách du lịch + giao DHL toàn cầu.",
+  imp:"Chiếm từ khoá 'may áo dài' du lịch giá rẻ → Maison KHÔNG đua từ khoá này."},
+ {nm:"Yaly Couture",dm:"yalycouture.com",tag:"Thợ may legacy Hội An",watch:0,
+  v:[13589,23364,9661,15046,13098,12577,11248,11709,12572,11724,7723,11525],g:-15,
+  geo:[["Mỹ",38],["VN",34],["Úc",10],["Anh",8],["Canada",6]],
+  ch:[["Trực tiếp",43],["Tìm kiếm",40],["Mạng XH",9],["Giới thiệu",7]],
+  kw:"thợ may Hội An, vest linen, váy cưới may đo — áo dài yếu, không có mục riêng",
+  pg:"Danh mục sản phẩm, mục cưới, mục nam (vest)",
+  seg:"Vest & linen là chủ lực; cưới là upsell; áo dài là khoảng trống của họ",
+  why:"-15%. Du lịch hậu COVID hạ nhiệt + thua nhà DTC/mạng xã hội. 'Giá phải chăng' chặn lực kéo cao cấp.",
+  imp:"Không phải đối thủ thật. Nhưng sở hữu từ khoá 'váy cưới may đo Hội An' mà nhà cao cấp có thể giành — áo dài là gap của họ."},
+ {nm:"Duan Tailor",dm:"duantailor.com",tag:"May đo Saigon (lõi vest)",watch:0,
+  v:[0,667,1973,3183,2790,2885,1822,2561,1369,8409,2933,4519],g:0,
+  geo:[["Mỹ",38],["VN",30],["Úc",23],["Anh",4]],
+  ch:[["Tìm kiếm",100]],
+  kw:"vest may đo VN, may đo cao cấp HCM, áo dài may đo Saigon — KHÔNG có cưới/đồ tiệc",
+  pg:"Trang vest (chính), trang áo dài truyền thống, trang giao nhanh, có site tiếng Pháp",
+  seg:"Vest nam may đo (từ 1990) là chính; áo dài là dòng phụ heritage",
+  why:"Tăng từ 0 (~2.8K). Site tiếng Anh mới bắt thị trường 'vest may đo Saigon' cho expat/diaspora.",
+  imp:"Dù tự nhận 'may đo Saigon', thực chất là nhà VEST — sở hữu ZERO mảng cưới/đầm dạ tiệc → lane đó còn trống cho Maison."},
+ {nm:"Linh Nga Bridal",dm:"linhnga.vn",tag:"Cưới cao cấp legacy (VN)",watch:0,
+  v:[19973,13306,11857,6341,10940,16196,14315,14145,7550,14117,13568,11526],g:-42,
+  geo:[["VN",71],["Mỹ",22],["Canada",2],["Úc",2]],
+  ch:[["Tìm kiếm",45],["Mạng XH",30],["Giới thiệu",16],["Trực tiếp",9]],
+  kw:"áo dài cưới luxury, váy cưới cao cấp, thuê váy cưới",
+  pg:"Áo dài cưới luxury/limited, bảng giá váy cưới (nam châm SEO)",
+  seg:"Váy cưới là chính (4 hạng); áo dài cưới phụ (~23 mẫu)",
+  why:"-42%. KHÔNG phải category sụp — 'áo dài cưới 2026' đang phân mảnh; đây là MẤT thị phần vào nhà mới + phụ thuộc quảng cáo/cho thuê.",
+  imp:"Lane áo dài bespoke / đầm dạ tiệc mà Linh Nga coi phụ chính là nơi cầu đang tăng → cửa cho Maison."}
+];
+const ROAD=[
+ ["Tuần 2","<b>Nền móng + họp:</b> trình báo cáo + hỏi 5 điều nền móng. Bắt đầu trang đặt lịch hẹn + trang áo dài cưới (Thiệu)."],
+ ["Tuần 3","<b>Nội dung trụ cột:</b> 3 bài biên tập (cưới / di sản / đầm dạ tiệc), gắn dữ liệu có cấu trúc. Maddy viết theo bộ lọc ngôn ngữ."],
+ ["Tuần 4","<b>Bằng chứng + phát hành:</b> trang 'Báo chí & Người nổi tiếng'. Lập Pinterest. Bắt đầu thử RedNote."],
+ ["Tuần 5","<b>Khuếch đại:</b> mời 1–2 người ảnh hưởng cộng đồng Việt Mỹ/Úc (mảng cưới). Tối ưu bài theo từ khoá AI."],
+ ["Tuần 6","<b>Đo & quyết định:</b> cổng dừng RedNote. Đánh giá kênh nào kéo lịch hẹn tốt nhất → dồn lực."],
+ ["Tuần 7","<b>Củng cố & bàn giao:</b> viết thêm bài vào dòng hiệu quả nhất; tổng kết chỉ số; đề xuất Giai đoạn 2."]
+];
+
+const fmt=n=>Math.round(n).toLocaleString('en-US');
+const avg=a=>a.reduce((x,y)=>x+y,0)/a.length;
+
+const rising=DATA.filter(d=>d.g>20).length, declining=DATA.filter(d=>d.g<0).length;
+document.getElementById('metrics').innerHTML=[
+ ["2","hệ cầu tách biệt"],["1","dòng có cầu mua ra nước ngoài (áo dài cưới)"],
+ [rising+" / "+declining,"đối thủ đang tăng mạnh / đang giảm"],["~72%","lượt của Nicole đến từ công cụ AI"]
+].map(m=>`<div class="metric"><div class="n">${m[0]}</div><div class="l">${m[1]}</div></div>`).join('');
+
+document.getElementById('road').innerHTML=ROAD.map(r=>`<div class="wk"><div class="wn">${r[0]}</div><div class="wt">${r[1]}</div></div>`).join('');
+
+(function(){
+ const s=[...DATA].sort((a,b)=>b.g-a.g);
+ const W=720,rowH=33,padL=140,padR=52;
+ const minG=Math.min(...s.map(d=>d.g)), maxG=Math.max(...s.map(d=>d.g));
+ const range=(maxG-minG)||1, plotW=W-padL-padR, scale=plotW/range;
+ const h=s.length*rowH+16;
+ const svg=document.getElementById('growth'); svg.setAttribute('viewBox',`0 0 ${W} ${h}`);
+ const zeroX=padL+(0-minG)*scale;
+ let out=`<line x1="${zeroX.toFixed(1)}" y1="6" x2="${zeroX.toFixed(1)}" y2="${h-10}" stroke="#d8cdb9" stroke-width="1" stroke-dasharray="2 3"/>`;
+ s.forEach((d,i)=>{
+   const y=12+i*rowH, w=(d.g-minG)*scale;
+   const col=d.g>5?'#5d7a4f':(d.g<0?'#b15a40':'#9a9087');
+   out+=`<text x="${padL-8}" y="${y+13}" text-anchor="end" font-family="Georgia,serif" font-size="13" fill="#433c34">${d.nm}</text>`;
+   out+=`<rect x="${padL}" y="${y+3}" width="${Math.max(w,0).toFixed(1)}" height="16" rx="3" fill="${col}"/>`;
+   out+=`<text x="${(padL+w+6).toFixed(1)}" y="${y+15}" text-anchor="start" font-size="12" font-family="Georgia,serif" fill="${col}">${d.g>0?'+':''}${d.g}%</text>`;
+ });
+ svg.innerHTML=out;
+})();
+
+(function(){
+ const s=[...DATA].sort((a,b)=>avg(b.v)-avg(a.v));
+ const maxA=Math.max(...s.map(d=>avg(d.v)));
+ document.getElementById('scale').innerHTML=s.map(d=>{
+   const a=avg(d.v), w=a/maxA*100;
+   return `<div style="display:flex;align-items:center;gap:12px;margin:9px 0">
+     <div style="width:135px;flex:none;font-size:13px;color:#433c34;font-family:Georgia,serif">${d.nm}</div>
+     <div style="flex:1;background:#efe9dd;border-radius:5px;height:18px;overflow:hidden"><div style="width:${w}%;height:100%;background:${d.g>5?'#5d7a4f':(d.g<0?'#b15a40':'#a9824e')};border-radius:5px"></div></div>
+     <div style="width:78px;flex:none;text-align:right;font-variant-numeric:tabular-nums;font-size:13px;color:#433c34">${fmt(a)}/th</div>
+     <div style="width:80px;flex:none">${spark(d.v,d.g)}</div></div>`;
+ }).join('');
+})();
+function spark(v,g){
+ const w=76,h=22,mn=Math.min(...v),mx=Math.max(...v),r=mx-mn||1;
+ const pts=v.map((y,i)=>`${(i/(v.length-1)*w).toFixed(1)},${(h-2-((y-mn)/r)*(h-4)).toFixed(1)}`).join(' ');
+ const col=g>5?'#5d7a4f':(g<0?'#b15a40':'#a9824e');
+ return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.6" stroke-linejoin="round"/></svg>`;
+}
+
+(function(){
+ function rows(arr,col){return arr.map(([l,val])=>`<div class="row"><div class="rt">${l}</div><div class="track"><div class="fill" style="width:${val}%;background:${col}"></div></div><div class="rv">${val}%</div></div>`).join('');}
+ function geoRows(arr){return arr.map(([l,val])=>`<div class="row"><div class="rl">${l}</div><div class="track"><div class="fill" style="width:${val}%;background:#a9824e"></div></div><div class="rv">${val}%</div></div>`).join('');}
+ function line(v){
+   const W=300,H=70,p=6,mn=Math.min(...v),mx=Math.max(...v),r=mx-mn||1;
+   const xs=i=>p+i/(v.length-1)*(W-2*p), ys=y=>H-p-((y-mn)/r)*(H-2*p);
+   const pts=v.map((y,i)=>`${xs(i).toFixed(1)},${ys(y).toFixed(1)}`).join(' ');
+   const last=v[v.length-1],first=v[0],col=last>=first?'#5d7a4f':'#b15a40';
+   return `<polygon points="${p},${H-p} ${pts} ${W-p},${H-p}" fill="${col}" opacity="0.08"/><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2" stroke-linejoin="round"/><circle cx="${xs(v.length-1)}" cy="${ys(last)}" r="3" fill="${col}"/>`;
+ }
+ document.getElementById('comps').innerHTML=DATA.map(d=>{
+   const pc=d.g>5?'up':(d.g<0?'down':'flat'), pt=(d.g>0?'+':'')+d.g+'%';
+   return `<div class="comp${d.watch?' watch':''}">
+     <div class="comp-head"><div><span class="nm">${d.nm}</span> <span class="dm">${d.dm}</span></div>
+       <div>${d.watch?'<span class="pill watch">★ Theo dõi</span> ':''}<span class="pill ${pc}">${pt} · ${fmt(avg(d.v))}/th</span></div></div>
+     <div style="font-size:12px;color:#7c736a;margin-top:3px">${d.tag}</div>
+     <div class="comp-grid">
+       <div>
+         <div class="stat-l">Quỹ đạo 12 tháng</div>
+         <svg width="100%" viewBox="0 0 300 70" role="img" aria-label="đường lượt truy cập ${d.nm}">${line(d.v)}</svg>
+         <div class="stat-l">Quốc gia khách</div><div class="bars">${geoRows(d.geo)}</div>
+         <div class="stat-l">Kênh</div><div class="bars">${rows(d.ch,'#7c9b8a')}</div>
+       </div>
+       <div class="facts">
+         <dt>Từ khoá</dt><dd>${d.kw}</dd>
+         <dt>Trang nổi bật</dt><dd>${d.pg}</dd>
+         <dt>Phân khúc chính</dt><dd>${d.seg}</dd>
+         <dt>Vì sao ${d.g>5?'tăng':(d.g<0?'giảm':'biến động')}</dt><dd>${d.why}</dd>
+       </div>
+     </div>
+     <div class="imp"><b>Hàm ý cho Maison →</b> ${d.imp}</div>
+   </div>`;
+ }).join('');
+})();
+
+document.getElementById('method').innerHTML='<b>Phương pháp & độ tin cậy.</b> Lượt/quốc gia/kênh = SimilarWeb (ước lượng, TB 6/2025–5/2026). Gói SimilarWeb này không có từ khoá & trang phổ biến → phần đó lấy từ khảo sát website + kết quả tìm kiếm trực tiếp (có thể sai số). "Phân khúc chính" suy từ tín hiệu trưng bày (số mẫu, vị trí menu), KHÔNG phải doanh số thật. Con số 63.000 lượt của East Meets Dress đo trang phục cưới Á Đông nói chung (lõi sườn xám), không tách riêng áo dài Việt → "cầu áo dài cưới đã chứng minh" thực chất là suy luận mạnh. Kế hoạch hành động xây qua hội đồng 4 chiến lược gia + 3 giám khảo + 1 phản biện. Báo cáo chữ đầy đủ: bao-cao-tong-hop.md · Dữ liệu thô: data_logs/';
+</script>

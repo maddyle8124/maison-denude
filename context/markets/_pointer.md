@@ -35,7 +35,8 @@ Each market scored on: **Value Fit · Market Share & White Space · Policy & Bar
 
 ## Where the research lives
 
-- **Broad market research (multi-line, de-biased) → [`broad-market-research.md`](./broad-market-research.md)** ← primary research deliverable; feeds the 5→3 market decision. SimilarWeb raw → [`data_logs/`](./data_logs/).
+- **FULL report + action plan → [`bao-cao-tong-hop.md`](./bao-cao-tong-hop.md)** (Vietnamese) ← the canonical aggregated deliverable: context + demand + competitors + customer-groups/markets/positioning + action plan. Visual showcase (with charts): [`bao-cao-tong-hop.html`](./bao-cao-tong-hop.html).
+- **Broad market research (detail) → [`broad-market-research.md`](./broad-market-research.md)** ← research-detail text feeding the full report. SimilarWeb raw → [`data_logs/`](./data_logs/).
 - Strategic framework + tactical intel → `/MDenude_BrandHub_Internal.md` (internal only).
 - SEO / keyword research + data logs → `/thieu/context/SEO/`, `/thieu/context/google_trend/`.
 - Keyword deliverable → `/thieu/context/deliverables/`, `/client_sources/`.

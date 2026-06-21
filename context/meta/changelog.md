@@ -2,6 +2,12 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-21 — Full aggregated report + action plan (Maddy)
+
+- Added `markets/bao-cao-tong-hop.md` (+ `.html` showcase) — the canonical full report aggregating all research (context, demand, competitors) plus an action plan: target customer groups, markets, positioning, Phase-1 roadmap, KPIs, what-not-to-do, founder questions. Clean Vietnamese, minimal English code-switching (per Maddy feedback).
+- Action plan built via a strategy panel (4 proposals × distinct lenses → 3 judges → 1 adversarial critic). Key corrections folded in: "wedding áo dài abroad" downgraded from "proven" to "strongest hypothesis"; added the overlooked **Việt-kiều-returning-home** segment; surfaced operations/trust/lead-time/platform gaps + 5 foundational founder questions.
+- Removed standalone `competitor-deepdive.html` (folded into the full report).
+
 ## 2026-06-21 — Competitor deep-dive + HTML showcase (Maddy)
 
 - Added `markets/competitor-deepdive.html` — interactive showcase (traffic 12-mo trajectory, geo/channel mix, keywords, notable subpages, product segments, growth drivers) for 8 search competitors.
