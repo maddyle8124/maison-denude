@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"[Triage check] If this prompt contains a durable decision, constraint, scope change, or correction, log it to the active project BEFORE proceeding: a new D-row in decisions.md (the legal source of truth) for binding decisions, or refresh management/CONTINUITY.md for in-flight state. If it is just a routine task or question, ignore this.\"}}'",
+            "suppressOutput": true
+          },
+          {
+            "type": "command",
+            "command": "p=$(jq -r '.prompt // empty'); if printf '%s' \"$p\" | grep -qiE 'brainstorm|think about it together|think this through together|let.?s think together'; then printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"[Brainstorm trigger] The user invoked brainstorming. Enter Brainstorm Mode as defined in .claude/commands/brainstorm.md: interview in short rounds using AskUserQuestion, verify direction, surface assumptions, and challenge the idea to clarify context BEFORE any implementation plan. Do not jump to solutions. End with a tight handoff brief and a ready-to-plan checkpoint.\"}}'; fi",
+            "suppressOutput": true
+          }
+        ]
+      }
+    ]
+  }
+}

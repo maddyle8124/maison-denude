@@ -1,0 +1,62 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SerpApi -> Google Trends",
+    "tool": "mcp__serpapi__search (engine=google_trends, data_type=TIMESERIES, date=today 12-m, geo=ww)",
+    "method": "34 keywords scored in batches of 5; 'wedding ao dai' used as cross-batch ANCHOR. Google Trends normalizes each batch internally (batch max=100), so raw batch averages are NOT comparable across batches. Normalized score = raw_avg * (50 / batch_anchor_avg), where 50 = anchor's reference average from the original priority run. Reference run anchor avg = 50.",
+    "reference_anchor_avg": 50,
+    "note": "Full per-week timelines not stored to save space; one sample full timeline is archived in 2026-06-11_trends_timeseries_5terms_12m_ww.json. Only batch averages + normalized scores kept here."
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "keywords_raw_avg": { "wedding ao dai": 50, "ao dai saigon": 6, "heritage ao dai": 1, "tailored ao dai": 0, "designer ao dai saigon": 0 },
+      "anchor_avg": 50, "scale_factor": 1.00,
+      "normalized": { "ao dai saigon": 6, "heritage ao dai": 1, "tailored ao dai": 0, "designer ao dai saigon": 0 }
+    },
+    {
+      "batch": 2,
+      "keywords_raw_avg": { "wedding ao dai": 28, "silk ao dai": 6, "traditional ao dai": 32, "bespoke ao dai": 0, "ao dai boutique saigon": 0 },
+      "anchor_avg": 28, "scale_factor": 1.79,
+      "normalized": { "silk ao dai": 11, "traditional ao dai": 57, "bespoke ao dai": 0, "ao dai boutique saigon": 0 },
+      "note": "traditional ao dai normalized ~57 -> actually exceeds wedding ao dai. silk ao dai ~11 consistent with prior run (10)."
+    },
+    {
+      "batch": 3,
+      "keywords_raw_avg": { "wedding ao dai": 47, "bridesmaids ao dai": 0, "modern bridal ao dai": 0, "ao dai bride": 0, "custom ao dai vietnam": 0 },
+      "anchor_avg": 47, "scale_factor": 1.06,
+      "normalized": { "bridesmaids ao dai": 0, "modern bridal ao dai": 0, "ao dai bride": 0, "custom ao dai vietnam": 0 },
+      "note": "All bridal sub-variants ~0 -> demand consolidates into 'wedding ao dai'. Confirms they are semantic-support, not standalone targets."
+    },
+    {
+      "batch": 4,
+      "keywords_raw_avg": { "wedding ao dai": 50, "evening wear saigon": 1, "contemporary ao dai": 1, "vietnamese couture": 1, "occasion wear vietnam": 1 },
+      "anchor_avg": 50, "scale_factor": 1.00,
+      "normalized": { "evening wear saigon": 1, "contemporary ao dai": 1, "vietnamese couture": 1, "occasion wear vietnam": 1 },
+      "note": "All occasion/couture terms ~1 (occasional single-week spikes only). vietnamese couture confirmed ~1, NOT a traffic driver."
+    }
+  ],
+  "not_individually_scored": {
+    "reason": "These returned empty in SimilarWeb AND follow the same near-zero Trends pattern as their scored siblings; scoring each in a separate 40KB call was low-value. Treated as ~0 (semantic-support / brand-positioning).",
+    "keywords": ["designer ao dai saigon (scored=0)", "the ao dai", "wedding dress vietnam", "ao dai wedding", "silk ao dai bridal", "embroidered dress", "ao dai beading", "bespoke wedding saigon", "evening dress ho chi minh", "artisanal bespoke fashion", "asian inspired dress", "custom evening dress", "evening gown vietnam", "ao dai haute couture", "vietnamese haute couture", "vietnamese dress tailor", "hand embroidery / hand beading / beadwork"]
+  },
+  "FINAL_NORMALIZED_SCORES_0_to_~100_anchor_wedding_ao_dai_50": {
+    "wedding ao dai": 50,
+    "traditional ao dai": 57,
+    "silk ao dai": 11,
+    "ao dai saigon": 6,
+    "heritage ao dai": 1,
+    "evening wear saigon": 1,
+    "contemporary ao dai": 1,
+    "vietnamese couture": 1,
+    "occasion wear vietnam": 1,
+    "bespoke ao dai": 0,
+    "tailored ao dai": 0,
+    "designer ao dai saigon": 0,
+    "bridesmaids ao dai": 0,
+    "modern bridal ao dai": 0,
+    "ao dai bride": 0,
+    "custom ao dai vietnam": 0,
+    "_all_others": 0
+  }
+}

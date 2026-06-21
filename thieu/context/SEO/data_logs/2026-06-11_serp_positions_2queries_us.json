@@ -1,0 +1,41 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SerpApi -> Google (live SERP)",
+    "tool": "mcp__serpapi__search (engine=google, location=United States, gl=us, hl=en, num=10)",
+    "note": "Full raw payloads (~55KB & ~80KB) saved by harness to tool-results/; only organic positions + SERP features extracted here to save tokens."
+  },
+  "queries": [
+    {
+      "q": "bespoke ao dai saigon",
+      "ai_overview": true,
+      "people_also_ask": ["How much does an Ao Dai cost in Vietnam?", "Can foreigners wear the Ao Dai?", "Where to buy Ao Dai in Ho Chi Minh City?", "How much does it cost to get a custom dress in Vietnam?"],
+      "organic_top10": [
+        {"pos": 1, "domain": "Reddit r/VietNam", "type": "forum/UGC", "title": "Where do I get a nice quality custom tailored Ao Dai?"},
+        {"pos": 2, "domain": "Kim Travel", "type": "travel blog", "title": "Where to buy Vietnamese national costume Ao Dai"},
+        {"pos": 3, "domain": "LAHAVA", "type": "online seller", "title": "Vietnamese Ao dai Custom 2026 Online"},
+        {"pos": 4, "domain": "Facebook (Vietnam Local Adventures)", "type": "forum/UGC", "title": "Anyone know where I can get customized Ao Dai in Saigon?"},
+        {"pos": 5, "domain": "Instagram aodaibaohan (San Jose, CA)", "type": "social/diaspora", "title": "AO DAI BAO HAN"},
+        {"pos": 6, "domain": "Tripadvisor", "type": "forum/UGC", "title": "Custom Ao Dai - Review of Elegant Silk, HCMC"},
+        {"pos": 7, "domain": "Mark&Vy Ao Dai", "type": "atelier (VN, EN site)", "title": "Wedding Ao Dai"},
+        {"pos": 8, "domain": "MadebyGaia", "type": "online seller (VN)", "title": "Where to buy traditional Vietnamese dress?"}
+      ],
+      "verdict": "Page 1 = ~100% UGC/forum/aggregator/seller. NO premium bespoke atelier owns its own editorial content. Mark&Vy (pos7) is the only VN atelier and it's a thin product page. WHITE SPACE confirmed."
+    },
+    {
+      "q": "wedding ao dai",
+      "ai_overview": false,
+      "people_also_ask": [],
+      "organic_top10": [
+        {"pos": 1, "domain": "Dream Dresses by P.M.N.", "type": "diaspora seller (US)", "title": "Ao Dai - Mermaid Gowns Collection"},
+        {"pos": 2, "domain": "Pinterest (dreamdressesbypmn)", "type": "social", "title": "Ao Dai / Vietnamese Traditional Bridal Dress"},
+        {"pos": 3, "domain": "linh bridal", "type": "diaspora/bridal seller", "title": "Vietnamese Wedding Ao Dai"},
+        {"pos": 4, "domain": "Instagram (baonynguyen.bridal)", "type": "social/diaspora", "title": "traditional Vietnamese wedding ao dai"},
+        {"pos": 5, "domain": "East Meets Dress", "type": "diaspora seller (US)", "title": "Kathy Bespoke Dress | White Vietnamese Wedding Ao Dai"},
+        {"pos": 6, "domain": "The Knot", "type": "wedding media", "title": "What Is an Ao Dai Dress for Vietnamese Weddings?"},
+        {"pos": 7, "domain": "Amazon.com", "type": "marketplace", "title": "Vietnamese Traditional Wedding Ao Dai (Pink, S)"}
+      ],
+      "verdict": "Page 1 = 100% US diaspora sellers + social + marketplace + wedding media. NO Saigon-based bespoke atelier. 'Made in Saigon' angle is uncontested."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SerpApi -> Google (live SERP)",
+    "tool": "mcp__serpapi__search (engine=google, hl=en, num=10)",
+    "purpose": "CORRECTION of earlier US-only SERP claim. User correctly noted US != world and that VN SERP shows Vietnamese brands ranking. This matrix samples VN + US + AU.",
+    "note": "Full raw payloads saved by harness to tool-results/. Only positions + types extracted here.",
+    "key_correction": "Earlier doc claimed 'page 1 = all forums/travel, no professional atelier'. That was a US-LOCATION ARTIFACT. From Vietnam, professional ateliers DO rank (local pack + own sites). The white-space claim must be qualified BY LOCATION."
+  },
+  "matrix": [
+    {
+      "q": "bespoke ao dai saigon", "location": "Ho Chi Minh City, Vietnam", "google_domain": "google.com.vn", "gl": "vn",
+      "local_pack": [
+        {"pos": 1, "name": "Byfas Premium Tailoring Saigon", "rating": 4.1, "reviews": 104, "site": "byfas.com", "type": "Custom tailor"},
+        {"pos": 2, "name": "MINH CHAU BESPOKE (since 1975)", "rating": 5.0, "reviews": 116, "site": "minhchautailor.com", "type": "Haute couture fashion house"},
+        {"pos": 3, "name": "Kim Bespoke", "rating": 4.9, "reviews": 606, "site": "kimbespokesg.com", "type": "Men's tailor"}
+      ],
+      "organic_top8": [
+        {"pos": 1, "domain": "Tripadvisor", "type": "forum/UGC"},
+        {"pos": 2, "domain": "Maydo Saigon (maydosaigon.com)", "type": "ATELIER own site"},
+        {"pos": 3, "domain": "Kim Travel", "type": "travel blog"},
+        {"pos": 4, "domain": "Mark&Vy (Facebook)", "type": "atelier social"},
+        {"pos": 5, "domain": "TNK Travel", "type": "travel blog"},
+        {"pos": 6, "domain": "Duan Tailor (duantailor.com)", "type": "ATELIER own site — snippet: 'bespoke Traditional Ao Dai... hand-stitching. Crafted in Saigon'"},
+        {"pos": 7, "domain": "Culture Trip", "type": "travel blog"},
+        {"pos": 8, "domain": "Lemon8", "type": "social"}
+      ],
+      "video_carousel": true,
+      "verdict": "Atelier sites DO rank (Maydo #2, Duan #6) + a 3-pack of real bespoke houses above organic. NOT a forum-only SERP. Competition from real ateliers is REAL here."
+    },
+    {
+      "q": "bespoke ao dai saigon", "location": "United States", "google_domain": "google.com", "gl": "us",
+      "local_pack": null,
+      "organic_top8": [
+        {"pos": 1, "domain": "Reddit", "type": "forum/UGC"}, {"pos": 2, "domain": "Kim Travel", "type": "travel"},
+        {"pos": 3, "domain": "LAHAVA", "type": "seller"}, {"pos": 4, "domain": "Facebook", "type": "forum/UGC"},
+        {"pos": 5, "domain": "Instagram (San Jose)", "type": "social/diaspora"}, {"pos": 6, "domain": "Tripadvisor", "type": "forum/UGC"},
+        {"pos": 7, "domain": "Mark&Vy", "type": "atelier"}, {"pos": 8, "domain": "MadebyGaia", "type": "seller"}
+      ],
+      "ai_overview": true,
+      "verdict": "From US: NO local pack, mostly forum/UGC/seller; only 1 atelier (Mark&Vy #7). This is the SERP the earlier draft over-generalized from."
+    },
+    {
+      "q": "wedding ao dai", "location": "Ho Chi Minh City, Vietnam", "google_domain": "google.com.vn", "gl": "vn",
+      "organic_top9": [
+        {"pos": 1, "domain": "Nicole Bridal (nicolebridal.vn)", "type": "VN bridal house — product page"},
+        {"pos": 2, "domain": "Pinterest", "type": "social"},
+        {"pos": 3, "domain": "LAHAVA (lahava.com)", "type": "VN seller"},
+        {"pos": 4, "domain": "Instagram baonynguyen.bridal", "type": "social"},
+        {"pos": 5, "domain": "Etsy", "type": "marketplace"},
+        {"pos": 6, "domain": "Pinterest (linhbridal)", "type": "social"},
+        {"pos": 7, "domain": "AoDaiChiDau (aodaichidau.com)", "type": "seller, $309"},
+        {"pos": 8, "domain": "The Knot", "type": "wedding media"},
+        {"pos": 9, "domain": "Nicole Bridal — BLOG article", "type": "VN bridal house — editorial (ranks too!)"}
+      ],
+      "verdict": "VN bridal houses own it: Nicole Bridal ranks with BOTH product page (#1) AND blog (#9). Confirms a VN brand with content can rank. Diaspora US sellers pushed to image block, not organic top."
+    },
+    {
+      "q": "wedding ao dai", "location": "United States", "google_domain": "google.com", "gl": "us",
+      "organic_top7": [
+        {"pos": 1, "domain": "Dream Dresses PMN", "type": "US diaspora seller"}, {"pos": 2, "domain": "Pinterest", "type": "social"},
+        {"pos": 3, "domain": "linh bridal", "type": "diaspora seller"}, {"pos": 4, "domain": "Instagram", "type": "social"},
+        {"pos": 5, "domain": "East Meets Dress", "type": "US diaspora seller"}, {"pos": 6, "domain": "The Knot", "type": "wedding media"},
+        {"pos": 7, "domain": "Amazon", "type": "marketplace"}
+      ],
+      "verdict": "US diaspora sellers + Amazon. No Saigon atelier, no VN bridal house."
+    },
+    {
+      "q": "wedding ao dai", "location": "Australia", "google_domain": "google.com.au", "gl": "au",
+      "organic_top8": [
+        {"pos": 1, "domain": "Dream Dresses PMN", "type": "diaspora seller"},
+        {"pos": 2, "domain": "Le Vow Bridal", "type": "local-AU bridal"},
+        {"pos": 3, "domain": "Instagram baonynguyen.bridal", "type": "social"},
+        {"pos": 4, "domain": "Pinterest", "type": "social"},
+        {"pos": 5, "domain": "Ao Dai Sydney", "type": "local-AU Vietnamese bridal"},
+        {"pos": 6, "domain": "Reddit r/weddingplanning", "type": "forum/UGC"},
+        {"pos": 7, "domain": "Etsy", "type": "marketplace"},
+        {"pos": 8, "domain": "LAHAVA", "type": "VN seller"}
+      ],
+      "verdict": "Mix: diaspora sellers + LOCAL AU Vietnamese bridal (Le Vow, Ao Dai Sydney) + social. No Saigon atelier — but local-AU competitors exist."
+    }
+  ],
+  "synthesis": {
+    "vietnam_serp": "Professional ateliers + local pack DO rank. Maison competes against real Saigon houses (Maydo, Duan, Minh Chau, Kim Bespoke, Nicole Bridal) — NOT empty space. Differentiation must be brand/heritage/editorial depth + Google Business Profile (for the local pack).",
+    "us_au_serp": "Owned by diaspora sellers + marketplaces + (AU) local Vietnamese-bridal shops. Maison's 'made in Saigon bespoke' angle is genuinely uncontested THERE, but must reach those users via content that ranks in US/AU — harder for a brand-new VN domain.",
+    "implication": "White space is LOCATION-DEPENDENT: weakest competition for Maison's exact positioning is the US/AU diaspora SERP (no real Saigon atelier there); but the easiest-to-win + highest-intent traffic (people physically in/coming to Saigon) is the VN SERP, where competition from real ateliers is strong and a Google Business Profile + reviews matter as much as blog content."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "fetched": "2026-06-21",
+    "scope": "VIETNAM MARKET ONLY — competitors for VN-based search demand (Vietnamese-language queries + expat/tourist English in VN)",
+    "sources": {
+      "serpapi": "engine=google, google_domain=google.com.vn, gl=vn, hl=vi, location=Ho Chi Minh City, live June 2026",
+      "similarweb": "get-websites-traffic-and-engagement; country=vn; total web; last_updated 2026-05-31; visits are estimates"
+    }
+  },
+  "similarweb_visits_monthly_VN": {
+    "linhnga.vn":            {"label": "Linh Nga Bridal", "2026-03": 9650, "2026-04": 8467, "2026-05": 6561, "avg": 8226, "trend": "down"},
+    "nicolebridal.vn":       {"label": "Nicole Bridal",   "2026-03": 5369, "2026-04": 7977, "2026-05": 9235, "avg": 7527, "trend": "rising"},
+    "aodaiovera.com":        {"label": "Ao Dai Overa",    "2026-03": 6978, "2026-04": 4020, "2026-05": 4722, "avg": 5240},
+    "lahava.vn":             {"label": "LAHAVA (.vn = VN site)", "2026-03": 3682, "2026-04": 3282, "2026-05": 3576, "avg": 3513, "note": "lahava.com (~11K) is the separate international/online-custom domain"},
+    "quyennguyen.vn":        {"label": "Ao Dai Quyen Nguyen", "2026-03": 3188, "2026-04": 2910, "2026-05": 2144, "avg": 2747, "trend": "down"},
+    "marymy.vn":             {"label": "MARYMY", "2026-03": 2684, "2026-04": 2661, "2026-05": 2140, "avg": 2495, "note": "ranks #1 organic for 'ao dai cuoi cao cap' yet only ~2.5K VN visits -> thin VN search volume"},
+    "baonynguyenbridal.vn":  {"label": "Bao Ny Nguyen Bridal", "2026-03": 1427, "2026-04": 1205, "2026-05": 1002, "avg": 1211, "trend": "down"},
+    "maydosaigon.com":       {"label": "Maydo Saigon (atelier, expat/tourist)", "note": "ww ~993/mo; mostly foreign segment, not VN-language demand"},
+    "duantailor.com":        {"label": "Duan Tailor (atelier, expat/tourist)", "note": "ww ~5,300/mo; mostly foreign/expat traffic"}
+  },
+  "serp_ao_dai_cuoi_cao_cap_VN_2026-06": {
+    "knowledge_graph": "LAHAVA (lahava.vn) 4.1*/111, Phu Nhuan",
+    "organic": ["1 marymy.vn (MARYMY)", "2 aodaiovera.com", "3 linhnga.vn (Linh Nga Bridal — Ao dai cuoi Luxury)", "4 baonynguyenbridal.vn", "5 thaituanonline.com (Thai Tuan fabric)", "6 nicolebridal.vn BLOG (listicle Top 6)", "7 hanahbridal.com", "8 facebook HUONG Boutique", "9 quyennguyen.vn"],
+    "related": ["ao dai cuoi truyen thong", "ao dai cuoi hien dai", "ao dai cuoi trang", "Ao Dai Cuoi Thai Tuan", "ao dai cuoi dau re", "ao dai cuoi nam", "May ao dai cuoi"]
+  },
+  "serp_nha_may_ao_dai_thiet_ke_cao_cap_tphcm_VN_2026-06": {
+    "knowledge_graph": "Ao dai Miss Van 4.9*/8",
+    "note": "TOP of SERP dominated by LISTICLE/aggregator blogs + FB groups + news, NOT brand sites",
+    "organic": ["1 toplist.vn (Top 10 listicle)", "2 lahava.vn (Top 5 listicle)", "3 onoff.vn (listicle)", "4 facebook group", "5 nicolebridal.vn (Top 6 listicle)", "6 aodaitailoc.com", "7 nonstudio.vn (Ao Dai Non — may do)", "8 thanhnien.vn (news)", "9 facebook Ao Dai Chu Ba"],
+    "related": ["Tiem may ao dai dep o TPHCM", "Nha may ao dai noi tieng o Sai Gon", "Ao dai may san Thai Tuan", "Ao dai Hanh"]
+  },
+  "serp_dam_da_hoi_thiet_ke_cao_cap_saigon_VN_2026-06": {
+    "note": "OCCASION/EVENING market in VN is low-end + rental + wholesale + listicles — NOT premium",
+    "local_pack": ["Gott Wow (rental 4.8*/66)", "Shop Dam Vay Dep (3.6*/16)", "AlvinStore (wholesale 4.2*/45)"],
+    "organic": ["1 alvinstore.vn (wholesale)", "2 thieuhoa.com.vn (listicle)", "3 lahava.vn (Tiem May Dam Da Hoi — may do)", "4 shop-hanghieu.com", "5 facebook BELLA", "6 saigonreview.vn (rental listicle)", "7 damdahoidep.org (BiAn rental)", "8 phongcachsaigon.vn (650-850k products)"],
+    "implication": "Premium evening-wear search in VN is thin and crowded by cheap/rental; price points 650k-850k VND. LAHAVA is the only one bridging may-do bespoke."
+  }
+}

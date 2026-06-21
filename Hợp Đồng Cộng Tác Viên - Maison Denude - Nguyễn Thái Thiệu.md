@@ -64,6 +64,7 @@ Bên A cam kết phản hồi các sản phẩm bàn giao từ Bên B trong vòn
 ## **ĐIỀU 6: QUYỀN SỞ HỮU VÀ BẢO MẬT**
 
 * Toàn bộ Digital Marketing Playbook, Tài liệu SEO và mã nguồn website thuộc quyền sở hữu của Bên A.  
+* Ngay khi thiết lập xong mỗi tài khoản kỹ thuật phục vụ dự án (domain, Cloudflare, Google Analytics 4, Google Tag Manager, Google Search Console, Google Business Profile), Bên B cấp quyền quản trị đầy đủ cho Bên A trong vòng 24 giờ. Bên A sở hữu và kiểm soát các tài khoản này từ thời điểm đó, độc lập với tiến độ thực hiện hợp đồng.  
 * Bên B cam kết bảo mật tuyệt đối các thông tin, dữ liệu kinh doanh của Bên A trong và sau thời hạn hợp đồng.
 
 ## **ĐIỀU 7: DUY TRÌ WEBSITE & GIAI ĐOẠN 2**
@@ -93,7 +94,17 @@ Năm đầu tiên (12 tháng kể từ ngày website được đưa vào vận h
 
 **7.4.** Phạm vi công việc và đề xuất chi tiết của toàn bộ dự án (Giai đoạn 1, sản phẩm bàn giao, timeline, KPIs) được trình bày đầy đủ trong tài liệu **Đề xuất hợp tác (Proposal)** đã gửi cho Maison Denude — đính kèm Hợp đồng như **Phụ lục** và là một phần không tách rời của Hợp đồng này.
 
-## **ĐIỀU 8: ĐIỀU KHOẢN CHUNG**
+## **ĐIỀU 8: BẤT KHẢ KHÁNG**
+
+8.1. Sự kiện bất khả kháng là sự kiện xảy ra khách quan, không thể lường trước và không thể khắc phục (theo Điều 156, BLDS 2015), bao gồm: ốm đau hoặc tai nạn cần điều trị nội trú có xác nhận y tế, thiên tai, hoặc tình trạng khẩn cấp được cơ quan nhà nước có thẩm quyền công bố. Bận việc khác hoặc lý do cá nhân thông thường không được công nhận là bất khả kháng.
+
+8.2. Bên bị ảnh hưởng — hoặc người đại diện thay mặt — thông báo cho bên còn lại trong vòng **48 giờ** kể từ khi sự kiện xảy ra, kèm bằng chứng xác thực (nếu có thể). Quá thời hạn này mà không có thông báo, sự kiện không được công nhận là bất khả kháng.
+
+8.3. Hợp đồng tạm hoãn tối đa **14 ngày** kể từ ngày thông báo. Trong thời gian tạm hoãn, Bên bị sự kiện bất khả kháng chỉ định người thay thế (có đủ năng lực chuyên môn tương đương) để hỗ trợ công việc tối thiểu — qua văn bản hoặc cuộc gọi — nhằm giúp Bên còn lại duy trì tiến độ trong thời gian chờ. Người được chỉ định chỉ tham gia trong phạm vi **14 ngày tạm hoãn**, không thay thế vai trò của Bên bị ảnh hưởng trong hợp đồng, và không làm phát sinh bất kỳ nghĩa vụ tài chính hay điều chỉnh giá trị giao dịch nào giữa hai Bên.
+
+8.4. Nếu sau 14 ngày hợp đồng vẫn không thể tiếp tục thực hiện, hợp đồng chấm dứt: Bên B hoàn trả toàn bộ tiền cọc đã nhận cho Bên A và bàn giao toàn bộ sản phẩm, tài liệu đã hoàn thành tính đến thời điểm đó — trong vòng 07 ngày làm việc. Hai bên không yêu cầu bồi thường thêm.
+
+## **ĐIỀU 9: ĐIỀU KHOẢN CHUNG**
 
 Hai bên cam kết thực hiện đúng các điều khoản nêu trên. Mọi tranh chấp phát sinh sẽ được giải quyết trên tinh thần hợp tác. Nếu không đạt được thỏa thuận, vụ việc được giải quyết theo quy định của pháp luật Việt Nam tại cơ quan có thẩm quyền.
 

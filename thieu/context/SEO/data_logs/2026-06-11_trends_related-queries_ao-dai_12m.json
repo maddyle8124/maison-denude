@@ -1,0 +1,24 @@
+{
+  "_meta_log": {
+    "fetched_date": "2026-06-11",
+    "source": "SerpApi -> Google Trends",
+    "tool": "mcp__serpapi__search",
+    "params": { "engine": "google_trends", "q": "ao dai", "data_type": "RELATED_QUERIES", "date": "today 12-m", "geo": "" },
+    "note": "Portuguese-language noise from the 'dai' substring (fado, azulejo, 'jesus manso e humilde de coracao', 'dai um coracao igual ao teu', etc.) recorded in raw_noise but EXCLUDED from relevant lists."
+  },
+  "top_relevant": [
+    {"q":"vietnam","v":100},{"q":"ao dai vietnam","v":98},{"q":"ao dai vietnamese","v":80},
+    {"q":"ao dai dress","v":67},{"q":"ao dai do","v":51},{"q":"ao dai nam","v":43},
+    {"q":"áo dài","v":34},{"q":"em ao dai","v":34},{"q":"traditional ao dai","v":34},
+    {"q":"men ao dai","v":31},{"q":"ao dai wedding","v":28},{"q":"what is ao dai","v":27},
+    {"q":"vietnamese dress","v":24},{"q":"ao dai modern","v":24},{"q":"ai dai","v":23},
+    {"q":"ao dai trang","v":22},{"q":"ao dai women","v":19},{"q":"ao dai viet nam","v":19},
+    {"q":"red ao dai","v":19},{"q":"ao dai tet","v":18},{"q":"tet","v":18},{"q":"ao dai shop","v":17}
+  ],
+  "rising_relevant": [
+    {"q":"pho ho chi minh mekong delta ao dai","v":"Breakout"},
+    {"q":"ai dai","v":"+120%"},{"q":"what is ao dai","v":"+100%"},
+    {"q":"hanoi","v":"+100%"},{"q":"black ao dai","v":"+100%"}
+  ],
+  "raw_noise_excluded": ["jesus manso e humilde de coração","fado","azulejo","busan","seoul","coq au vin","lunar new year 2026","onigiri","lisbon","ramen","panna cotta","boeuf bourguignon","azulejo meaning","fado meaning","porto","cannoli","kimchi","tempura","dai um coração igual ao teu","dai me um coração igual ao teu","dai graças ao senhor"]
+}
