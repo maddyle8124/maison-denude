@@ -2,6 +2,13 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-21 — Broad market research delivered (Maddy)
+
+- Added `markets/broad-market-research.md` — multi-line (de-biased from áo dài) competitor + demand + inbound-tourism research, Vietnamese.
+- Data: SimilarWeb API pulls (visits/geo/channels for 10 competitors) cached to `markets/data_logs/` (no API key in repo) + 5-agent web research + adversarial verify pass.
+- Key findings: two separate demand systems (inbound-tailor vs cross-border-ship); bespoke↔shippable trade-off; only proven foreign money = US/AU diaspora bridal; China/India = high arrivals but premium purchase unproven; LAHAVA = watch-competitor; "đồ tiệc"/evening = white-space upsell not a search channel; swimwear = the shippable candidate.
+- Updated `markets/_pointer.md` (headline read + link). Added **OQ-010** (second shippable RTW/resort capsule decision).
+
 ## 2026-06-21 — Founder signals synthesis (Maddy)
 
 - Added `client-context/founder-signals.md`: reads the founders' intent from the WhatsApp chat (5/16–6/12) across **brand positioning, brand personality/voice, and how to work with the founders** — captures the boundaries (no "high end", "we are not tailor", not "shopping haul") and a quick do/don't table. Companion to `stakeholders.md` / `positioning.md` / `brand.md`.

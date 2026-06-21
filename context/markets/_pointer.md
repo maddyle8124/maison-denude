@@ -35,10 +35,19 @@ Each market scored on: **Value Fit · Market Share & White Space · Policy & Bar
 
 ## Where the research lives
 
+- **Broad market research (multi-line, de-biased) → [`broad-market-research.md`](./broad-market-research.md)** ← primary research deliverable; feeds the 5→3 market decision. SimilarWeb raw → [`data_logs/`](./data_logs/).
 - Strategic framework + tactical intel → `/MDenude_BrandHub_Internal.md` (internal only).
 - SEO / keyword research + data logs → `/thieu/context/SEO/`, `/thieu/context/google_trend/`.
 - Keyword deliverable → `/thieu/context/deliverables/`, `/client_sources/`.
 - Research owner: **Maddy**.
+
+## Headline read (2026-06-21, from broad-market-research.md)
+
+- **Two separate demand systems:** inbound (tailor in VN — large, multilingual, invisible to EN web) vs cross-border ship (real in **one line only: bridal áo dài, US+AU diaspora**).
+- **Bespoke ↔ shippable trade off** (Aquamarine ships VN-only; standardized-RTW Fancì/Aprilpoolday ship globally) → shippability is bought with standardization, the axis Chi resists.
+- **Proven foreign money = US/AU diaspora bridal.** China/India = high arrivals but premium *purchase* unproven (rent-and-photo behavior) → probe, don't bank. Gulf = defer (a shippable-product question, not inbound).
+- **Watch-competitor: LAHAVA** (premium multi-line, dual-domain, the only one circling Maison's space).
+- Don't compete on "tailoring" search (Hoi An owns it, cheap frame) → compete on occasion/image/experience; SEO is support, brand/social/WOM is the engine.
 
 ## To build out (after 3 markets confirmed)
 

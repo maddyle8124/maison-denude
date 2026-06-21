@@ -17,8 +17,9 @@ When an OQ is resolved:
 | OQ-007 | Which competitor brands to scrape for keyword data? Chi asked for the list. | Maison (Chi) | ❌ Open | — | — |
 | OQ-008 | Founder direction: which brands does Chi admire/reference, and what is her long-term positioning/vision for Maison Dénudé? Needed so research & Playbook don't diverge from founder intent. | Maison (Chi) | ❌ Open | — | — |
 | OQ-009 | Does Maison have (or want) an accessible, shippable product line that does NOT require the bespoke experience — i.e. a "fit giữa" / semi-size / ready-to-wear line? | Maison (Chi) | ❌ Open | — | — |
+| OQ-010 | Will Maison run a SECOND, deliberately-bounded designer RTW/resort capsule (shippable by design, fixed/semi-size, beside — not replacing — bespoke)? Lead candidate: premium swimwear/resort. Shippability requires standardized sizing (the axis Chi resists), but Fancì Club / La Lune prove a Saigon designer can ship globally while staying premium/artisanal (not "mass"/"tailor"). Decision frame in `markets/broad-market-research.md` §6. | Maison (Chi) | ❌ Open | — | — |
 
-**Founder-input blocker (6/21):** OQ-008 + OQ-009 gate the market-entry thesis and Playbook. Chi resists mass/commercial framing, so positioning intent must come from her before research locks — see `markets/_pointer.md` working thesis.
+**Founder-input blocker (6/21):** OQ-008 + OQ-009 + OQ-010 gate the market-entry thesis and Playbook. Chi resists mass/commercial framing, so positioning intent must come from her before research locks — see `markets/_pointer.md` and `markets/broad-market-research.md`.
 
 **Phase 0 partially unblocked:** domain resolved (OQ-002), deposit received 6/18. Still need OQ-001 (booking email) before the booking flow can be tested end-to-end.
 
