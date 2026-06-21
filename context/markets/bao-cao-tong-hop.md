@@ -13,9 +13,9 @@ _Bản trình bày có biểu đồ + bản đồ định vị: [bao-cao-tong-ho
 **Vì sao quan trọng cho Maison:** Tài sản lớn nhất của Maison hiện nay là "nghệ sĩ đã mặc + tạp chí lớn đưa tin". Tungvu chứng minh thẳng: vinh quang ngoài đời **không tự biến thành lượt truy cập** nếu không có hạ tầng để khách tìm ra (nội dung cho máy đọc, tín hiệu mạng xã hội). Đây là cái bẫy Maison dễ rơi vào.
 **Nguồn:** [vietnamnews.vn](https://vietnamnews.vn/life-style/1764989) (Paris) · tungvuatelier.com · SimilarWeb 5/2026.
 
-### 2. Tầng "đồ may sẵn dễ tiếp cận" mới là nơi có lưu lượng và tăng trưởng, không phải tầng cưới cao cấp.
-**Số:** Nhóm đồ dự tiệc may sẵn tăng vọt — MEAN BLVD 106K/th (**+179%**), Chuui 32K (**+155%**), Kisserine 14K (**+373%**). Ngược lại nhóm couture/cưới cao cấp đang teo — Truvelle **−66%**, Serene Hill **−32%**.
-**Vì sao quan trọng:** Trực giác "càng cao cấp càng đáng theo đuổi" bị dữ liệu bác. Sức hút online dồn về tầng "với tới được", còn tầng đỉnh thì internet gần như im lặng.
+### 2. Tệp khách dồn ở tầng giá dễ tiếp cận — vì dịch vụ đó mainstream, KHÔNG phải vì couture "hết thời".
+**Dữ liệu:** Cụm đồ dự tiệc may sẵn cộng lại **>200.000 lượt/tháng** (MEAN BLVD 106K, HUONG 56K, Chuui 32K, Kisserine 14K), tăng +30% đến +373%. Cụm couture nhỏ hơn nhiều bậc (Tungvu 182, Meera 2,5K, La Fée 2,4K).
+**Phân tích:** Giá thấp → tệp khách rộng (mua được không cần đắn đo lớn) → nhiều lượt + lan nhanh. Giá cao → tệp vốn hẹp → ít lượt. Đây là **quan hệ cấu trúc giữa giá và quy mô tệp**, KHÔNG phải "couture đang chết" — bằng chứng: Truvelle giảm 66% nhưng vẫn sống, chỉ đổi kênh bán (Phát hiện 9). → Nếu Maison đứng giá cao, ít traffic là điều phải lường trước và bù bằng cách khác (nội dung/AI/vốn nghệ sĩ), không đọc nó là "thị trường ruồng bỏ".
 **Nguồn:** SimilarWeb 5/2026 · [meanblvd.com](https://meanblvd.com/pages/aboutus).
 
 ### 3. Khách vùng Vịnh (Trung Đông) là cầu THẬT đang được phục vụ, không phải giả thuyết.
@@ -68,7 +68,26 @@ Khi xác minh giá thật từng website, **ranh giới "2 cụm" ban đầu ho�
 | **4 — Couture / cưới cao cấp** | atelier may đo, phần lớn giấu giá | $1.700+ (Tây bridal) | Truvelle, Serene Hill, Tungvu, Meera Meera, La Fée (đại lý Galia Lahav/Elie Saab) | **Teo hoặc giấu giá** |
 | **5 — May đo đa dòng (gần Maison nhất)** | áo dài + đầm dạ tiệc + cưới, may đo | $365–560 (áo dài cưới) | **LAHAVA** | **+246%, nhắm Việt kiều Mỹ/Úc** |
 
-**Maison nằm đâu:** Về *cách làm* (may đo, đa dòng, cao cấp) Maison thuộc cụm 4 — nhưng cụm 4 đang là **tấm gương cảnh báo** (may đo + giấu giá + couture châu Âu thuần = website teo). **Hình mẫu sát nhất để học là LAHAVA (cụm 5)**: cùng mô hình may-đo-đa-dòng, có áo dài, nhưng tăng +246% nhờ nhắm đúng tệp Việt kiều Mỹ/Úc.
+**Maison nằm phân khúc giá nào?** Theo định vị premium bespoke designer (áo dài/đầm dạ tiệc thiết kế ≈ **$300–900** theo mặt bằng designer áo dài), Maison thuộc tầng **giá vừa–cao** — nhưng tệp khách online hiện **= 0** (chưa đo được lượt). Trên bản đồ định vị, Maison là chấm rỗng ở đáy cột "giá vừa–cao".
+
+**Đọc bản đồ cho đúng (rất quan trọng):** KHÔNG phải "couture trên $1.700 đang hết thời". Giá cao thì tệp khách vốn dĩ nhỏ → ít lượt là **chuyện hiển nhiên**, không phải suy tàn. Điều đáng học là **3 ngoại lệ phá luật**: **MEAN BLVD** (106K vì là sàn ~80 brand → dịch vụ đồ dự tiệc may sẵn mainstream nhất), **La Fée** (+318% dù giá cao vì bán tên tuổi couture quốc tế Elie Saab/Vera Wang), **LAHAVA** (+246% ở giá vừa — playbook dưới). Maison ở giá vừa–cao với tệp = 0 → phải chọn một cách "phá luật", không thể "đứng giá cao rồi chờ".
+
+**Maison nằm đâu:** Về *cách làm* (may đo, đa dòng, cao cấp) Maison thuộc cụm 4 — nhưng cụm 4 đang là **tấm gương cảnh báo** (may đo + giấu giá = website không kéo được khách). **Hình mẫu sát nhất để học là LAHAVA (cụm 5)** — chi tiết playbook ngay dưới.
+
+### LAHAVA — đối thủ trực tiếp đã làm gì cụ thể (Maison học được)
+
+LAHAVA +246% (7.533 lượt/th, khách Mỹ 66% / Úc 13% / Canada 11%) — cùng mô hình may-đo-đa-dòng-có-áo-dài như Maison. 6 việc cụ thể (đã kiểm trên lahava.com + lahava.vn ngày 21/6):
+
+| LAHAVA làm gì | Cụ thể | Maison học gì |
+|---|---|---|
+| **Tách 2 website theo thị trường** | `lahava.com` (tiếng Anh, USD, nhắm Việt kiều) + `lahava.vn` (tiếng Việt, blog listicle + 5 kênh mạng xã hội cho khách nội địa) | Một site tiếng Anh đặt-mua-được cho Việt kiều, tách khỏi nội dung tiếng Việt |
+| **Niêm yết giá + đa tiền tệ** | Giá hiện rõ (áo dài cưới $365–560); thanh toán **USD / CAD / AUD / VND** | Khách Việt kiều mua được ngay, không phải nhắn hỏi giá — khác hẳn cụm couture giấu giá |
+| **Bộ công cụ mua-từ-xa** (trị "sợ không thử") | Trang **"How to measure" + bảng size**, **mẫu vải (swatches)**, **ảnh khách thật**, trang Payment/Delivery/Returns | Đây mới là thứ chốt đơn xuyên biên giới: hướng dẫn đo + mẫu vải + ảnh khách + chính sách đổi rõ ràng |
+| **Bề rộng theo dịp** | Áo dài may đo (~341 mẫu), hiện đại (~158), cưới (~141), **đầm dạ tiệc (~98)**, áo dài nam (~61), cặp đôi (~31) | Phủ nhiều dịp để bắt nhiều từ khoá — gồm cả dòng đầm dạ tiệc Maison đang bỏ trống |
+| **Tiêu đề/đường dẫn chuẩn tìm kiếm** | Tiêu đề kiểu "wedding ao dai 2026 online custom made"; đường dẫn song ngữ "ao-dai-cuoi-cap-doi" | Viết tiêu đề trang theo đúng cách khách gõ tìm (Anh + Việt) |
+| **Kênh không phụ thuộc quảng cáo** | Truy cập trực tiếp 44% (nhận diện thương hiệu) + Pinterest mạnh | Xây nhận diện + Pinterest (rẻ, hợp ảnh đẹp) thay vì đốt tiền quảng cáo |
+
+**Maison có thể VƯỢT LAHAVA:** LAHAVA chỉ ở tầng $365–560 và không có vốn truyền thông. Maison có **nghệ sĩ đã mặc + tạp chí lớn** → đủ để đứng giá cao hơn mà vẫn thuyết phục, miễn sao chép đúng 6 cơ chế bán trên.
 
 > ⚠️ **Một cảnh báo trung thực:** Có vẻ tồn tại "khe trống giá" khoảng $640–1.750 (giữa đồ may sẵn và couture) — Maison rơi đúng vào đây. Nhưng **đây là giả thuyết, chưa phải sự thật chắc chắn**: giá của cụm couture (Tungvu, Meera Meera, Lililala) phần lớn **không niêm yết công khai**, nên "sàn $1.750" là ước lượng. Khe trống có thể trống *vì không có cầu* ở mức giá đó, chứ không chỉ vì "chưa ai chiếm". Cần test giá thật trước khi xây chiến lược lên nó.
 
