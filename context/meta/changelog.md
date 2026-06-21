@@ -2,6 +2,13 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-21 — Báo cáo dựng lại theo hướng INSIGHT-FIRST (Maddy)
+
+- Theo phản hồi: báo cáo cũ nặng đề xuất, nhiều claim không nguồn, ẩn dụ khó hiểu ("con voi Hội An"). Dựng lại `bao-cao-tong-hop.md` + `.html` thành **9 phát hiện bất ngờ, mỗi cái có nguồn dẫn link**; đề xuất gói gọn thành mục phụ; tiếng Việt phẳng.
+- Thêm 2 cụm brand mới (14 brand: HUONG/kisserine/meanblvd/metiseko... và Tungvu/meerameera/truvelle/lililala/serenehill/lafee...) — đã pull SimilarWeb thật.
+- Phát hiện đắt: tầng đồ may sẵn dễ tiếp cận lớn gấp 10–50 lần couture (meanblvd 106K vs Tungvu 182 dù lên Paris); vùng Vịnh là cầu thật (meanblvd ship Saudi/UAE + Modest Edit); thuế nhập >50% là vũ khí của nhà may đo tại VN; "khe trống giá" chỉ là giả thuyết (giá couture không công khai).
+- Quy trình: 5 agent khai thác → 1 agent kiểm nguồn (loại "Nicole 72% AI" + claim không nguồn) → 1 agent xếp hạng. Thêm **bản đồ định vị** (giá × tăng trưởng × lưu lượng × cụm) làm hình chủ đạo.
+
 ## 2026-06-21 — Full aggregated report + action plan (Maddy)
 
 - Added `markets/bao-cao-tong-hop.md` (+ `.html` showcase) — the canonical full report aggregating all research (context, demand, competitors) plus an action plan: target customer groups, markets, positioning, Phase-1 roadmap, KPIs, what-not-to-do, founder questions. Clean Vietnamese, minimal English code-switching (per Maddy feedback).

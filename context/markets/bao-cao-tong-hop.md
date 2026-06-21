@@ -1,208 +1,95 @@
-# Maison Dénudé — Báo Cáo Nghiên Cứu Thị Trường & Kế Hoạch Hành Động
+# Maison Dénudé — Báo Cáo Insight Thị Trường
 
-_Người thực hiện: Maddy (phụ trách nghiên cứu). Ngày: 21/6/2026._
-_Đây là bản tổng hợp đầy đủ: gộp toàn bộ nghiên cứu (bối cảnh thị trường, cầu theo dòng sản phẩm, du lịch đến Việt Nam, phân tích đối thủ) và đưa ra kế hoạch hành động đề xuất nhóm khách / thị trường / định vị trọng điểm._
-_Tài liệu chi tiết kèm theo: phân tích đối thủ có biểu đồ ở [bao-cao-tong-hop.html](./bao-cao-tong-hop.html); dữ liệu thô ở [data_logs/](./data_logs/)._
-
----
-
-## TÓM TẮT ĐIỀU HÀNH
-
-**Bức tranh.** Maison Dénudé là nhà thiết kế may đo cao cấp ở Saigon, đa dòng (áo dài & di sản, áo dài cưới, đầm dạ tiệc, couture, đồ thiết kế may sẵn). Tài sản lớn nhất là độ phủ truyền thông tự nhiên trong nước (nhiều nghệ sĩ đã mặc, được các tạp chí thời trang lớn đưa tin) — nhưng website gần như không có lượt truy cập, chưa có khách quốc tế, tức **xuất phát từ con số 0 về kênh số (digital)**.
-
-**Phát hiện cốt lõi.** Thị trường có **hai hệ cầu gần như không chồng lấn**: (1) khách đến Việt Nam may tại chỗ — lớn, đa ngôn ngữ, nhưng vô hình trên web tiếng Anh; (2) cầu mua giao hàng ra nước ngoài — chỉ thật sự rõ ở **một dòng duy nhất là áo dài cưới**, tập trung trong cộng đồng người Việt tại **Mỹ và Úc**. Đi kèm là một đánh đổi cứng: **may đo theo người gần như không giao quốc tế hiệu quả; muốn bán ra nước ngoài buộc phải chuẩn hoá size (đồ may sẵn)** — đúng cái founder e ngại ("không đại trà").
-
-**Khuyến nghị một dòng.** Giai đoạn 1 nên tập trung **một mũi nhọn**: phục vụ **cô dâu gốc Việt ở Mỹ/Úc và Việt kiều về nước**, dòng **áo dài cưới**, định vị **nhà mốt kể chuyện theo lối tạp chí** (dùng vốn nghệ sĩ/báo chí làm bằng chứng đẳng cấp), thắng bằng **nội dung được công cụ tìm kiếm AI trích dẫn** + **phễu đặt lịch hẹn riêng**. Dòng **đầm dạ tiệc** giữ vai trò **dựng định vị** (khoảng trống cao cấp), chưa phải nguồn doanh thu.
-
-**Cảnh báo trung thực (rất quan trọng).** "Áo dài cưới bán ra nước ngoài" là **giả thuyết tốt nhất hiện có, KHÔNG phải điều đã được chứng minh tuyệt đối**. Trước khi đổ công sức, phải làm rõ với founder và kiểm tra 5 điều nền móng ở [Phần D](#phần-d--những-điều-bắt-buộc-phải-làm-rõ-trước) — nhất là: founder có đồng ý làm dòng may sẵn không, và bài toán **niềm tin + vận hành giao hàng quốc tế** (vừa vặn, đổi sửa, thuế, thanh toán) có giải được không.
+_Người thực hiện: Maddy. Ngày: 21/6/2026._
+_Mục tiêu tài liệu: **những phát hiện bất ngờ về thị trường** (đã kiểm nguồn từng cái), để cả nhóm và chị Chi nhìn thấy điều chưa ai nói ra. Phần đề xuất chỉ là một mục nhỏ ở cuối — cách tận dụng insight, không phải trọng tâm._
+_Bản trình bày có biểu đồ + bản đồ định vị: [bao-cao-tong-hop.html](./bao-cao-tong-hop.html). Dữ liệu thô: [data_logs/](./data_logs/). Mọi số lượt truy cập là ước lượng SimilarWeb tháng 5/2026; mọi nhận định về giá/hành vi đều dẫn link gốc đã kiểm tra ngày 21/6/2026._
 
 ---
 
-## PHẦN A — BỐI CẢNH & PHÁT HIỆN
+## 9 PHÁT HIỆN CHÍNH (xếp theo độ bất ngờ)
 
-### A1. Maison đang đứng ở đâu
+### 1. Một nhà thiết kế từng lên Paris Haute Couture mà website gần như không ai vào — danh tiếng sàn diễn KHÔNG tự bán được hàng.
+**Số:** Tungvu Atelier (nhà thiết kế Việt, ra mắt tại Paris Haute Couture) chỉ có **~182 lượt truy cập/tháng**, 90% đến từ tìm kiếm tên brand. Cùng lúc, một sàn bán đồ may sẵn (MEAN BLVD) có **106.000 lượt/tháng**.
+**Vì sao quan trọng cho Maison:** Tài sản lớn nhất của Maison hiện nay là "nghệ sĩ đã mặc + tạp chí lớn đưa tin". Tungvu chứng minh thẳng: vinh quang ngoài đời **không tự biến thành lượt truy cập** nếu không có hạ tầng để khách tìm ra (nội dung cho máy đọc, tín hiệu mạng xã hội). Đây là cái bẫy Maison dễ rơi vào.
+**Nguồn:** [vietnamnews.vn](https://vietnamnews.vn/life-style/1764989) (Paris) · tungvuatelier.com · SimilarWeb 5/2026.
 
-| Hạng mục | Hiện trạng |
-|---|---|
-| Định vị | Nhà thiết kế may đo cao cấp, đa dòng; KHÔNG phải tiệm may, KHÔNG đại trà |
-| Tài sản mạnh nhất | Truyền thông tự nhiên trong nước: nghệ sĩ đã mặc (Chi Pu, Văn Mai Hương, Châu Bùi, Băng Di...), được các tạp chí thời trang lớn và Miss Universe Vietnam đưa tin |
-| Điểm yếu | ~4.4K người theo dõi Facebook; **chưa có khách quốc tế**; website gần như **không có lượt truy cập** → xuất phát từ 0 về kênh số |
-| Ranh giới thương hiệu (founder) | Dùng "cao cấp/premium", cấm "high end"; là "nhà thiết kế/atelier", cấm "thợ may/tiệm may"; cấm khung "đại trà / hàng rẻ / mua sắm du lịch giá hời" |
+### 2. Tầng "đồ may sẵn dễ tiếp cận" mới là nơi có lưu lượng và tăng trưởng, không phải tầng cưới cao cấp.
+**Số:** Nhóm đồ dự tiệc may sẵn tăng vọt — MEAN BLVD 106K/th (**+179%**), Chuui 32K (**+155%**), Kisserine 14K (**+373%**). Ngược lại nhóm couture/cưới cao cấp đang teo — Truvelle **−66%**, Serene Hill **−32%**.
+**Vì sao quan trọng:** Trực giác "càng cao cấp càng đáng theo đuổi" bị dữ liệu bác. Sức hút online dồn về tầng "với tới được", còn tầng đỉnh thì internet gần như im lặng.
+**Nguồn:** SimilarWeb 5/2026 · [meanblvd.com](https://meanblvd.com/pages/aboutus).
 
-### A2. Phát hiện cốt lõi — hai hệ cầu tách biệt
+### 3. Khách vùng Vịnh (Trung Đông) là cầu THẬT đang được phục vụ, không phải giả thuyết.
+**Số:** MEAN BLVD có **6% khách từ Ả Rập Xê Út** (cao hơn cả Việt Nam), mở giao hàng Saudi/Qatar/UAE và có hẳn dòng **"Modest Edit"** (đồ kín đáo). HUONG Boutique treo băng-rôn *"Orders to the Middle East are now shipping as usual"*.
+**Vì sao quan trọng:** Phom áo dài và đầm dài tay, kín cổ vô tình khớp đúng chuẩn ăn mặc kín đáo của vùng Vịnh — một tệp khách giàu, ngoài trục Việt kiều Mỹ/Úc, mà không nhà áo dài/cưới Việt nào nhắm tới. _Lưu ý: cầu này chuộng đồ may sẵn ship nhanh, không phải may đo chờ 5 tuần._
+**Nguồn:** [meanblvd.com](https://meanblvd.com/pages/aboutus) · [huongboutique.com](https://www.huongboutique.com/) (kiểm tra 21/6/2026).
 
-1. **Cầu khách đến Việt Nam may tại chỗ:** lớn, đa ngôn ngữ, nhưng nằm ngoài tầm nhìn của web tiếng Anh (sống trên các nền tảng Trung Quốc như RedNote/Ctrip, các trang hướng dẫn tiếng Nhật, blog du lịch, diễn đàn TripAdvisor).
-2. **Cầu mua giao hàng ra nước ngoài:** chỉ thật sự rõ ở **một dòng — áo dài cưới**, tập trung ở người Việt tại **Mỹ + Úc**.
+### 4. Thuế nhập khẩu có thể đội +50% giá đầm — đây là vũ khí cạnh tranh của một nhà may đo tại Việt Nam.
+**Số:** Đối thủ lớn nhất mảng cưới gốc Việt (East Meets Dress, 63K/th) tự ghi trên trang hỏi-đáp: chi phí hải quan/VAT *"đôi khi lên tới hơn 50% giá đầm"* và khách phải tự chịu.
+**Vì sao quan trọng:** Một chiếc đầm $1.000 mua từ Mỹ về tay khách có thể thành ~$1.500. Maison may tại nguồn ở Việt Nam → có thể biến **"mua tại gốc, không phụ phí thuế"** thành lý do mua. Giá niêm yết càng cao thì cú sốc thuế càng lớn — đây là lý do cấu trúc khiến tầng giá vừa dễ chốt đơn xuyên biên giới hơn tầng couture.
+**Nguồn:** [eastmeetsdress.com/pages/faq](https://eastmeetsdress.com/pages/faq).
 
-→ Hai hệ này cần hai thông điệp khác nhau, không trộn lẫn.
+### 5. Thị trường cưới phần lớn chạy bằng CHO THUÊ và đồ size cố định — không phải may đo.
+**Số:** Nicole Bridal (nhà cưới Việt tăng nóng, 18K/th, +161%) lõi là **cho thuê**: thuê áo dài cưới **1,2–2,0 triệu/ngày**, trong khi may đo **4,5–8,0 triệu/3–5 tuần** — thuê rẻ hơn 3–4 lần và được đặt lên đầu trang. Khách Trung/Hàn/Nhật quanh áo dài gần như toàn bộ là **thuê để chụp ảnh du lịch**.
+**Vì sao quan trọng:** Maison định vị "nhà thiết kế may đo", nhưng phần lớn nhu cầu thực tế đang chảy vào kênh THUÊ + đồ may sẵn. Maison không cạnh tranh trực tiếp với nhóm này — nhưng phải hiểu cầu "may đo để mua và giữ lâu" là một ô hẹp hơn nhiều so với cảm giác "thị trường cưới sôi động".
+**Nguồn:** [nicolebridal.vn](https://nicolebridal.vn/en/rent-aodai-vietnam-wedding-dress/) · [klook](https://www.klook.com/en-AU/activity/115060-traditional-ao-dai-rental-photoshoot-hoi-an/) · [realgirlreview.com](https://www.realgirlreview.com/hoi-an-ao-dai-photoshoot-experience/).
 
-### A3. Đánh đổi cứng: may đo ↔ giao hàng quốc tế
+### 6. Cầu "wedding ao dai" tiếng Anh gần như 100% từ Úc + Mỹ, Việt Nam dưới 1%.
+**Số:** Google Trends cho thấy người tìm "wedding ao dai" gần như toàn bộ ở **Úc và Mỹ**, VN <1%. Đã hình thành cả một lớp tiệm áo dài cưới bản địa tại Sydney/Melbourne.
+**Vì sao quan trọng:** Một brand Sài Gòn dễ mặc định "đánh sân nhà", nhưng cầu tiếng Anh sinh ra ở hải ngoại. Đối thủ thật ở áo dài cưới không phải nhà cưới Sài Gòn — mà là các tiệm ngay cạnh cô dâu ở Úc. Lợi thế Maison phải là thứ tiệm Úc không có: tay nghề thiết kế + nghệ sĩ đã mặc + tạp chí.
+**Nguồn:** Google Trends ([01_seo_landscape.md §8.2](../../thieu/context/SEO/01_seo_landscape.md)) · [aodaisydney.com](https://www.aodaisydney.com/), [ceciaodai.com](http://www.ceciaodai.com/).
 
-- May đo theo người (đo từng khách) **gần như không giao quốc tế hiệu quả** — không thể đo chuẩn qua màn hình rồi giữ phom couture.
-- Muốn có doanh thu xuyên biên giới → **buộc phải chuẩn hoá size** (làm đồ may sẵn). Hai nhà thiết kế Saigon là **Fancì Club** và **La Lune** chứng minh: có thể bán toàn cầu mà vẫn là "nhà thiết kế cao cấp", không bị gọi là "tiệm" — nhưng nhờ size cố định, không phải may đo.
-- Hệ quả: nếu Maison muốn bán ra nước ngoài, **phải chấp nhận một dòng may sẵn** (đây là quyết định của founder — xem [Phần D](#phần-d--những-điều-bắt-buộc-phải-làm-rõ-trước)).
+### 7. Tăng trưởng nóng nhất nằm ở các brand NHỎ, không phải brand lớn — tức xuất phát từ 0 vẫn có đường lên.
+**Số:** Kisserine **+373%**, La Fée **+318%**, RNT Wardrobe **+239%** (83% khách Philippines — một tệp diaspora khác), LAHAVA **+246%** (66% khách Mỹ). Trong khi brand lớn ổn định (East Meets Dress) đi ngang.
+**Vì sao quan trọng:** Maison xuất phát gần 0 lượt truy cập. Các brand nhỏ này chứng minh có công thức để lên nhanh — thường là nhắm đậm một tệp diaspora cụ thể, không dàn trải.
+**Nguồn:** SimilarWeb 5/2026.
 
-### A4. Cầu theo dòng sản phẩm × địa lý
+### 8. Tham chiếu từ công cụ AI (ChatGPT/Perplexity) đang thành kênh khám phá thật của ngành.
+**Số:** Lượng giới thiệu từ AI tăng **+357% so với năm trước**; tỷ lệ chuyển đổi của khách đến từ ChatGPT ~**7,1%** (gần ngang quảng cáo trả tiền 7,8%). Một tiệm may Hội An (Bebe Tailor, +204%) có ~18% lượt đến từ ChatGPT.
+**Vì sao quan trọng:** Ngách may đo tưởng "ngoài cuộc chơi digital", nhưng đối thủ đã hưởng lợi từ AI. Đây là kênh đang lớn rất nhanh mà tầng couture đỉnh (Tungvu) bỏ trống hoàn toàn.
+**Nguồn:** [Similarweb GenAI stats](https://www.similarweb.com/blog/marketing/geo/gen-ai-stats/).
+_Đã loại: con số "Nicole Bridal 72% lượt từ AI" — không tìm được nguồn công khai kiểm chứng, nên không dùng làm bằng chứng._
 
-| Dòng sản phẩm | Mỹ | Úc | Việt Nam | Trung Quốc | Nhật | Chế độ phù hợp | Đọc ra |
-|---|---|---|---|---|---|---|---|
-| **Áo dài cưới** | Cao | Cao | Trung | Thấp | Thấp | Giao xa + Việt kiều | Dòng duy nhất có cầu mua xuyên biên giới rõ |
-| **Áo dài di sản** | TB | TB | Cao | TB–Cao | TB–Cao | May tại chỗ (khách đến VN) | Cầu mua là khách đến VN; tầng cao cấp tồn tại nhưng chưa ai kể chuyện |
-| **Đầm dạ tiệc** | Thấp | Thấp | Trung | Thấp | Thấp | May tại chỗ / dựng định vị | Cầu tìm kiếm mỏng NHƯNG là khoảng trống cao cấp (thị trường VN toàn hàng rẻ/cho thuê) |
-| **Couture / "bespoke" (từ khoá)** | Mỏng | Mỏng | Mỏng | — | — | Chỉ định vị | Gần như không có lượt tìm kiếm; chỉ dùng làm ngôn ngữ đẳng cấp |
-| **Đồ thiết kế may sẵn** | Thấp | Thấp | Thấp | Thấp | Thấp | Thử nghiệm (giao được) | Chưa có tín hiệu tìm kiếm riêng; là câu hỏi sản phẩm |
-
-**Lưu ý về "đầm dạ tiệc":** đây là dòng founder nêu đích danh, và là **khoảng trống cao cấp gần như hoàn toàn** (không thương hiệu premium nào thống trị). Nhưng cầu **tìm kiếm** mỏng → nên dùng để **dựng định vị**, không đặt làm chỉ tiêu doanh thu/lưu lượng trong Giai đoạn 1.
-
-### A5. Du lịch đến Việt Nam & "con voi Hội An"
-
-- Năm 2025: ~21,2 triệu lượt khách quốc tế. Lớn nhất: Trung Quốc 5,3 triệu (+41%), Hàn 4,3 triệu, Mỹ 849K, Nhật 814K, Ấn Độ 746K (+49%), Úc 548K (+54%).
-- **"Con voi Hội An":** mọi kênh tiếng Anh đẩy nhu cầu "may đồ ở Việt Nam" về **Hội An** với khung *rẻ - nhanh - quà du lịch*. Đây là **gió ngược** cho một nhà cao cấp ở Saigon → Maison KHÔNG nên đua trên từ khoá "may đồ/tailoring", mà đua trên **dịp - hình ảnh - trải nghiệm**.
-- **Khách châu Á (Trung/Nhật/Hàn) chủ yếu THUÊ áo dài + chụp ảnh**, giữ lại ảnh chứ chưa chứng minh sẵn sàng MUA đồ may đo cao cấp → coi là giả thuyết để thử, không đặt cược.
-
----
-
-## PHẦN B — PHÂN TÍCH ĐỐI THỦ
-
-_Số liệu lượt truy cập là ước lượng (SimilarWeb), trung bình tháng 6/2025–5/2026. Phần keyword/trang/phân khúc lấy từ khảo sát website + kết quả tìm kiếm trực tiếp. Chi tiết có biểu đồ ở [bao-cao-tong-hop.html](./bao-cao-tong-hop.html)._
-
-### B1. Xếp hạng đối thủ theo sức mạnh tìm kiếm & xu hướng
-
-| Đối thủ | Lượt/tháng | Xu hướng | Bản chất |
-|---|---|---|---|
-| **East Meets Dress** | ~63.000 | Ổn định | Người Việt/Hoa hải ngoại ở Mỹ; **lõi là sườn xám Trung Hoa, áo dài chỉ là dòng phụ**; bán cả may đo lẫn may sẵn, có giao hàng |
-| **Nicole Bridal** | ~21.000 | **+161%** | Nhà cưới Việt; bùng nổ vì **~72% lượt giới thiệu đến từ công cụ AI** (tự viết bài "Top N" tự xếp mình số 1) |
-| **A Dong Silk** | ~24.500 | +75% | Thợ may du lịch Hội An, lõi là vest; SEO bài "giá - tốt nhất"; giao toàn cầu |
-| **BeBe Tailor** | ~26.600 | **+204%** | Thợ may du lịch Hội An; tăng nhờ bài hướng dẫn du lịch + AI + báo nước ngoài; gần như không có catalog |
-| **LAHAVA** ⚠️ | ~12.400 | **+246%** | **Đối thủ cần theo dõi nhất**: đa dòng (áo dài + đầm dạ tiệc + cưới) may đo, giá minh bạch tầm trung, mạnh Pinterest |
-| **Linh Nga Bridal** | ~11.500 | **−42%** | Nhà cưới cao cấp lâu năm; đang giảm, mất thị phần vào nhà mới |
-| **Yaly Couture** | ~11.500 | −15% | Thợ may legacy Hội An; "giá phải chăng"; đang giảm |
-| **Duan Tailor** | ~2.800 | Tăng từ 0 | Nhà may đo Saigon nhưng **lõi là vest nam**, áo dài là dòng phụ, KHÔNG có mảng cưới/đồ tiệc |
-
-### B2. Năm mẫu hình chiến lược (quan trọng hơn từng con số)
-
-1. **Công cụ tìm kiếm AI là mặt trận mới.** Nicole nhận ~72% lượt từ AI; BeBe có ChatGPT ~18%. Người thắng = bài so sánh có cấu trúc dễ được AI trích dẫn.
-2. **Không ai sở hữu "nhà thiết kế Saigon cao cấp đa dòng, kể theo lối tạp chí".** LAHAVA đứng gần nhất nhưng ở tầng giá rẻ hơn.
-3. **Đầm dạ tiệc gần như là khoảng trống cao cấp hoàn toàn** (chỉ LAHAVA có dòng này).
-4. **Hai động cơ tăng trưởng:** nội dung/được-AI-trích (Nicole, BeBe) và bề rộng sản phẩm + Pinterest (LAHAVA). Nhóm giảm (Linh Nga, Yaly) dựa vào legacy/quảng cáo.
-5. **Minh bạch giá phân đôi:** nhóm giá trị công khai giá; nhóm cao cấp giấu giá → Maison (cao cấp) giấu giá là hợp.
-
-### B3. Khoảng trống cho Maison
-
-Không đối thủ nào sở hữu vị trí: **"nhà mốt Saigon cao cấp, đa dòng (áo dài + đầm dạ tiệc), kể chuyện theo lối tạp chí, may đo tại chỗ cho khách đến Việt Nam + một dòng may sẵn ký tên nhà thiết kế để đi xa"**. Đây là ô trống Maison nên chiếm — và có **cửa sổ thời gian** vì LAHAVA đang lên nhanh (+246%).
+### 9. Một đối thủ "giảm 66%" thật ra không chết — chỉ đổi kênh bán. Bài học về cách đọc số traffic.
+**Số:** Truvelle giảm traffic mạnh nhất cả nghiên cứu (**−66%**) nhưng vẫn ra **bộ sưu tập 2026** (8 mẫu mới) — họ chuyển sang **bán qua cửa hàng đối tác**, website chỉ còn là catalog.
+**Vì sao quan trọng:** Đừng đo sức khỏe brand bằng lượt truy cập website nếu mô hình bán không nằm trên website đó. Ngược lại, với Maison thì website PHẢI là nơi bán được (có đường đặt cọc/đặt lịch), không chỉ để ngắm.
+**Nguồn:** [truvelle.com](https://truvelle.com/blogs/journal/the-truvelle-2026-collection) · giá $2.650–4.000 ([a&bé](https://aandbebridalshop.com/designer/truvelle-wedding-dresses)).
 
 ---
 
-## PHẦN C — KHUYẾN NGHỊ CHIẾN LƯỢC (KẾ HOẠCH HÀNH ĐỘNG)
+## Bản đồ định vị & 5 cụm đối thủ
 
-_Tổng hợp từ hội đồng 4 chiến lược gia + 3 giám khảo + 1 phản biện. Nguyên tắc: đội 2 người, ngân sách thấp, còn ~5 tuần Giai đoạn 1 → **một mũi nhọn, không dàn trải**._
+Khi xác minh giá thật từng website, **ranh giới "2 cụm" ban đầu hoà vào nhau** quanh vùng $270–640. Thực tế thị trường gom thành 5 cụm:
 
-### C1. Nhóm khách trọng điểm (xếp theo độ chắc chắn của bằng chứng)
+| Cụm | Định vị | Tầng giá (đã kiểm) | Brand tiêu biểu | Quy mô / xu hướng |
+|---|---|---|---|---|
+| **1 — Đồ dự tiệc may sẵn** | thương hiệu thiết kế, size cố định, ship toàn cầu | $40–650 | MEAN BLVD (sàn 80 brand), HUONG, Kisserine, Chuui, metiseko | **Lớn nhất, tăng mạnh** |
+| **2 — Bán cho Việt kiều (giao xa)** | áo dài/cưới gốc Việt cho hải ngoại | trung | East Meets Dress, RNT (Philippines) | Lớn, ổn định/tăng |
+| **3 — Thợ may du lịch (Hội An/Saigon)** | may nhanh, giá rẻ-du lịch | trung | Bebe, A Dong, Yaly, Duan, Maydo | Tăng nhờ du lịch + AI |
+| **4 — Couture / cưới cao cấp** | atelier may đo, phần lớn giấu giá | $1.700+ (Tây bridal) | Truvelle, Serene Hill, Tungvu, Meera Meera, La Fée (đại lý Galia Lahav/Elie Saab) | **Teo hoặc giấu giá** |
+| **5 — May đo đa dòng (gần Maison nhất)** | áo dài + đầm dạ tiệc + cưới, may đo | $365–560 (áo dài cưới) | **LAHAVA** | **+246%, nhắm Việt kiều Mỹ/Úc** |
 
-**① Cô dâu gốc Việt tại Mỹ + Úc — dòng áo dài cưới.** _(Giả thuyết mạnh nhất.)_
-Nữ 24–34, lớn lên ở Mỹ/Úc, gia đình gốc Việt, cần áo dài cho lễ ăn hỏi/gia tiên. Nói tiếng Anh là chính; mẹ là người đồng quyết định. Đây là **cầu mua xuyên biên giới rõ nhất**, nhưng phải giải bài toán **niềm tin + vừa vặn khi mua online không thử** (xem Phần D).
+**Maison nằm đâu:** Về *cách làm* (may đo, đa dòng, cao cấp) Maison thuộc cụm 4 — nhưng cụm 4 đang là **tấm gương cảnh báo** (may đo + giấu giá + couture châu Âu thuần = website teo). **Hình mẫu sát nhất để học là LAHAVA (cụm 5)**: cùng mô hình may-đo-đa-dòng, có áo dài, nhưng tăng +246% nhờ nhắm đúng tệp Việt kiều Mỹ/Úc.
 
-**② Việt kiều VỀ Việt Nam may tại chỗ.** _(Mũi nhọn ít rủi ro — nên đưa vào ngay.)_
-Đây là giao điểm tốt nhất mà nghiên cứu ban đầu bỏ sót: họ **là người Việt** (muốn áo dài thật, không phải thuê chụp ảnh), **ở lại đủ lâu để thử đồ** (giải bài toán may đo), có **sức chi của thị trường Mỹ/Úc**, và **tự mang đồ về** (giải bài toán giao hàng + rủi ro size). Về đúng mùa cao điểm (Tết, hè). → Nên hỏi founder xem đã có sẵn tệp/quan hệ này chưa.
+> ⚠️ **Một cảnh báo trung thực:** Có vẻ tồn tại "khe trống giá" khoảng $640–1.750 (giữa đồ may sẵn và couture) — Maison rơi đúng vào đây. Nhưng **đây là giả thuyết, chưa phải sự thật chắc chắn**: giá của cụm couture (Tungvu, Meera Meera, Lililala) phần lớn **không niêm yết công khai**, nên "sàn $1.750" là ước lượng. Khe trống có thể trống *vì không có cầu* ở mức giá đó, chứ không chỉ vì "chưa ai chiếm". Cần test giá thật trước khi xây chiến lược lên nó.
 
-**③ Khách quốc tế cao cấp đến Việt Nam — áo dài di sản & đầm dạ tiệc may tại chỗ.** _(Dựng định vị.)_
-Tầng khách tìm "nhà thiết kế thật" chứ không tìm "may rẻ ở Hội An". Tầng cao cấp này đã tồn tại nhưng chưa ai kể chuyện. Đây là nơi câu chuyện tạp chí + vốn nghệ sĩ phát huy mạnh nhất.
-
-**Tạm hoãn (chỉ thử có kiểm soát, có cổng dừng):** khách Trung Quốc/Ấn Độ/Hàn/Nhật mua đồ cao cấp (lượng lớn nhưng cầu mua **chưa chứng minh**). **Không cam kết:** vùng Vịnh/Trung Đông (chưa có bằng chứng).
-
-### C2. Thị trường trọng điểm
-
-| Hạng | Thị trường | Dòng dẫn | Vì sao |
-|---|---|---|---|
-| **1** | **Mỹ + Úc** (cộng đồng người Việt) | Áo dài cưới | Cầu mua xuyên biên giới rõ nhất; cộng đồng đông, sức chi cao |
-| **2** | **Việt Nam** (khách đến + Việt kiều về + nội địa cao cấp) | Áo dài di sản + đầm dạ tiệc | Giải được bài toán may đo + giao hàng; là sân khoảng trống cao cấp |
-| Thử | **Trung Quốc** (qua RedNote) | Trải nghiệm may + chụp ảnh cao cấp | Lượng khách lớn nhất nhưng cầu mua chưa chứng minh → có cổng dừng tuần 6 |
-| Hoãn | Ấn Độ, vùng Vịnh | — | Suy đoán / chưa có bằng chứng |
-
-### C3. Định vị trọng điểm
-
-**Thông điệp một câu:**
-> _"Maison Dénudé — nhà mốt Saigon nơi áo dài và đầm dạ tiệc được thiết kế riêng và kể như một trang tạp chí: mỗi thiết kế có câu chuyện, có hình ảnh, có tên người mặc."_
-
-**Bốn trụ khác biệt (mỗi trụ đối lập một đối thủ):**
-1. **Đa dòng dưới một bàn tay thiết kế** (áo dài + đầm dạ tiệc) — khác các nhà một dòng.
-2. **Tầng cao hơn LAHAVA + giọng tạp chí** — không bảng giá phẳng, mà biên tập hình ảnh + câu chuyện.
-3. **Bằng chứng đẳng cấp có thật** — nghệ sĩ đã mặc + tạp chí lớn đưa tin (đối thủ hải ngoại không có).
-4. **Đầm dạ tiệc cao cấp có thương hiệu** — chiếm ô trống thị trường bỏ ngỏ.
-
-**Về dòng may sẵn (nếu founder đồng ý bán ra nước ngoài):** làm như **"tủ đồ ký tên nhà thiết kế"**, KHÔNG phải "hàng may sẵn đại trà". Năm lằn ranh cứng:
-1. Đặt **tên bộ sưu tập riêng**, không gọi là "size có sẵn".
-2. **Không giảm giá, không khung du lịch giá hời.**
-3. **Bán theo câu chuyện**, không liệt kê size.
-4. May sẵn **dẫn về** may đo, không thay thế.
-5. Couture giữ ở tầng cao nhất, **không đặt cạnh nút mua hàng**.
-
-**Bộ lọc ngôn ngữ (áp cho mọi nội dung):** Dùng — cao cấp/premium, nhà thiết kế, atelier, nhà mốt, di sản, thiết kế riêng, biên tập. Cấm — high end, thợ may, tiệm may đo, đại trà, giá hời, mua sắm du lịch, "rẻ", "nhanh".
-
-> ⚠️ **Tránh bẫy đối thủ:** KHÔNG sao chép chiến thuật "tự viết bài tự xếp mình số 1" của Nicole/BeBe — giọng tự tâng bốc đó là DNA của nhóm tiệm may du lịch, đi thẳng vào ranh giới founder cấm. Maison làm **nội dung biên tập trung thực** (so sánh khách quan, nêu cả đối thủ), và để **bằng chứng báo chí/nghệ sĩ** nói thay.
-
-### C4. Kế hoạch hành động Giai đoạn 1 (tuần 2 → tuần 7)
-
-| Tuần | Trọng tâm | Việc chốt (ai làm) |
-|---|---|---|
-| **2 (nay)** | Nền móng + buổi họp | Họp thứ Bảy: trình báo cáo này + hỏi 5 điều nền móng (Phần D). Bắt đầu dựng trang đặt lịch hẹn (Thiệu) + trang sản phẩm áo dài cưới (Thiệu). |
-| **3** | Nội dung trụ cột | 3 bài biên tập: áo dài cưới (cho Việt kiều), áo dài di sản (cho khách đến VN), đầm dạ tiệc (định vị). Gắn dữ liệu có cấu trúc cho máy đọc (Thiệu). Maddy viết, theo bộ lọc ngôn ngữ. |
-| **4** | Bằng chứng + phát hành | Trang "Báo chí & Người nổi tiếng" gom nghệ sĩ + tạp chí (Maddy + Thiệu). Lập Pinterest, đăng đều. Bắt đầu thử RedNote (cần hỗ trợ tiếng Trung). |
-| **5** | Khuếch đại | Mời 1–2 người có ảnh hưởng trong cộng đồng Việt ở Mỹ/Úc (mảng cưới) hợp tác nhỏ (đổi sản phẩm, không tiền mặt). Tối ưu bài theo từ khoá AI đang trích. |
-| **6** | Đo & quyết định | **Cổng dừng RedNote.** Đánh giá kênh nào kéo lịch hẹn/hỏi giá tốt nhất → dồn lực. |
-| **7** | Củng cố & bàn giao | Viết thêm bài vào dòng hiệu quả nhất; tổng kết chỉ số; đề xuất Giai đoạn 2. |
-
-**Kênh ưu tiên:** (1) nội dung được công cụ tìm kiếm AI trích dẫn — rẻ, hợp đội 2 người; (2) phễu đặt lịch hẹn riêng (biến khách đến VN thành đơn); (3) Pinterest (tận dụng kho ảnh đẹp sẵn có); (4) hợp tác người có ảnh hưởng chọn lọc; (5) RedNote — chỉ thử, có cổng dừng.
-
-### C5. Chỉ số đo lường (vì xuất phát từ 0 → đo "phễu có chạy", không đo doanh số)
-
-- **Chỉ số ngôi sao Bắc Đẩu:** số **lịch hẹn riêng được xác nhận** (tại atelier hoặc tư vấn từ xa) + số **lượt hỏi giá thật** từ Mỹ/Úc. Mọi kênh quy về đây.
-- Số lần Maison được công cụ AI (ChatGPT/Perplexity/Gemini) nhắc tên khi hỏi "nhà thiết kế áo dài/đầm dạ tiệc cao cấp ở Saigon" — mục tiêu: xuất hiện ở ≥1–2 công cụ cuối Giai đoạn 1, **với khung "nhà thiết kế" chứ không phải "thợ may"**.
-- Số trang được Google lập chỉ mục; lượt truy cập từ tìm kiếm + AI (so với mốc gần-0 hiện tại).
-
-### C6. Điều CỐ TÌNH KHÔNG làm trong Giai đoạn 1
-
-1. Không đặt chỉ tiêu **doanh thu** cho đầm dạ tiệc (cầu mỏng) — chỉ dùng dựng định vị.
-2. Không nhắm khách du lịch Trung/Nhật/Hàn mua đồ cao cấp (chưa chứng minh + lệch khung Hội An) — chỉ thử RedNote có cổng dừng.
-3. Không tốn công SEO cho "couture/bespoke" (gần như không ai tìm).
-4. Không cố giao quốc tế đồ may đo theo người.
-5. Không bắt chước thợ may du lịch Hội An (giá rẻ, tự xếp số 1).
-6. Không cam kết nguồn lực cho vùng Vịnh.
-
-### C7. Rủi ro & cổng dừng
-
-- **Phụ thuộc một người (Thiệu):** mọi việc kỹ thuật đổ lên Thiệu → nếu nghẽn, cả phễu đứng. Cần xếp thứ tự ưu tiên rõ và phương án giãn việc.
-- **Mọi đặt cược suy đoán phải có cổng dừng** (RedNote ở tuần 6; và "được AI trích nhờ báo chí Việt" cũng là giả thuyết — kiểm tra hằng tuần, đừng coi là chắc thắng).
-- **Quá tải thì cắt theo thứ tự:** RedNote trước → hợp tác KOL → giữ chặt nội dung AI + phễu đặt lịch.
+**Khác biệt riêng của Maison so với cả 16 đối thủ:** không brand nào có **nghệ sĩ đã mặc + tạp chí lớn đưa tin**. Cụm 1 bán bằng "ra bộ sưu tập mới", cụm 4 bán bằng "đặt lịch tư vấn giấu giá" — Maison có thể bán bằng **chứng thực văn hoá** (nghệ sĩ + báo chí), một góc chưa ai trong tập đối thủ khai thác.
 
 ---
 
-## PHẦN D — NHỮNG ĐIỀU BẮT BUỘC PHẢI LÀM RÕ TRƯỚC
+## Cách tận dụng insight (đề xuất ngắn — phần phụ)
 
-_Đây là phần quan trọng nhất và là điểm mù chung của mọi đề xuất: cả kế hoạch đang đứng trên vài giả định chưa được kiểm chứng. Dành nửa buổi họp thứ Bảy cho 5 điều này TRƯỚC khi cam kết bất kỳ dòng công việc nào._
-
-1. **Founder có đồng ý làm dòng đồ may sẵn (size cố định) để bán ra nước ngoài không?** Toàn bộ trụ doanh thu xuyên biên giới phụ thuộc câu trả lời này. Nếu chị Chi nói "không" → phải có phương án B (tập trung khách đến Việt Nam may tại chỗ + Việt kiều về nước).
-2. **Áo dài cưới bán giao xa có thật sự khả thi không?** Đây là bài toán **niềm tin + vận hành**, không phải SEO: chính sách vừa vặn/đổi sửa, thời gian may có kịp ngày cưới không (đám cưới thường đặt trước 3–9 tháng — **dài hơn cả Giai đoạn 1**), đo từ xa thế nào, đã từng gửi đồ cưới đi Mỹ/Úc chưa.
-3. **Vận hành & thanh toán quốc tế đã sẵn sàng chưa?** Cổng thanh toán nhận thẻ Mỹ/Úc, phí ship, thuế nhập khẩu, đổi trả quốc tế. Phễu marketing vô dụng nếu đầu ra bị nghẽn ở khâu này.
-4. **Website hiện tại chạy trên nền tảng gì?** Quyết định mọi ước lượng công sức kỹ thuật của Thiệu (2 ngày hay 2 tuần).
-5. **Founder có sẵn quan hệ trong cộng đồng Việt kiều (Mỹ/Úc, hoặc người về nước) không?** Đây là đòn bẩy rẻ nhất cho cả nhóm khách ① và ②.
-
-**Câu hỏi định hướng dài hạn (gắn với câu hỏi mở OQ-008):** chị Chi ngưỡng mộ những nhà mốt nào (để chốt giọng kể & mức giá); dòng nào là "đứa con tinh thần" chị muốn được biết đến nhất; chị có thoải mái xuất hiện như "nhà thiết kế có gương mặt" (kể chuyện cá nhân, hậu trường atelier) không.
+1. **Đánh vào lỗ hổng thuế nhập (Phát hiện 4):** thông điệp "may tại nguồn, không phụ phí thuế >50% như mua couture từ Âu/Mỹ" — nhắm Việt kiều Úc/Mỹ (Phát hiện 6).
+2. **Biến tài sản nghệ sĩ + tạp chí thành nội dung máy đọc được (Phát hiện 1 & 8):** để công cụ AI/Google dẫn khách về — đây là thứ Tungvu bỏ lỡ, và là kênh đang +357%/năm.
+3. **Website phải BÁN được, không chỉ trưng (Phát hiện 9):** có đường đặt cọc/đặt lịch đo online rõ ràng.
+4. **Cân nhắc một dòng "tiếp cận được" làm phễu kéo khách, giữ may đo couture làm tầng uy tín (Phát hiện 2):** nhưng kiểm chứng cầu ở mức giá giữa trước khi cam kết (xem cảnh báo khe trống).
 
 ---
 
-## PHẦN E — MỨC ĐỘ TIN CẬY & PHƯƠNG PHÁP
+## Độ tin cậy & nguồn
 
-**Bản đồ độ tin cậy:**
+- **Vững (đã kiểm nguồn 21/6/2026):** toàn bộ 9 phát hiện — số traffic/geo từ SimilarWeb 5/2026; mọi nhận định giá/hành vi đều dẫn link gốc đã fetch (giá brand, thuê-vs-mua, vùng Vịnh, thuế nhập, cầu Úc/Mỹ).
+- **Đã loại vì không có nguồn:** "Nicole 72% lượt từ AI"; "Lililala đã đóng cửa" (chỉ là rớt khỏi ngưỡng đo); giá niêm yết cụm couture (phần lớn không công khai).
+- **Giả thuyết cần test:** "khe trống giá $640–1.750"; cầu vùng Vịnh cho đồ Maison (tín hiệu có thật nhưng chưa test); dòng giá giữa có cầu hay không.
+- Nguồn dữ liệu: SimilarWeb (lượt/geo/kênh, ước lượng); website từng brand; Google Trends; thống kê ngành (Similarweb GenAI). Dữ liệu thô: [data_logs/](./data_logs/).
 
-- ✅ **Chắc (xây được):** Maison có tài sản truyền thông tiếng Việt thật; xuất phát từ 0 về kênh số (KPI phải đo "phễu chạy", không đo doanh số); đội 2 người buộc phải một mũi nhọn; ranh giới ngôn ngữ founder rõ; "con voi Hội An" là gió ngược có thật.
-- 🟡 **Nên thử (có cổng dừng, gọi đúng tên "giả thuyết"):** áo dài cưới giao xa cho Việt kiều Mỹ/Úc (cược tốt nhất nhưng chưa chứng minh trực tiếp); Việt kiều về nước may tại chỗ (đáng kiểm tra ngay); được AI trích nhờ nội dung có cấu trúc; đầm dạ tiệc làm mũi định vị (không phải doanh thu).
-- 🔴 **Đừng cam kết:** coi "áo dài cưới giao xa" là điều chắc chắn (chỉ là giả thuyết tốt nhất); chiến thuật tự-xếp-số-1; khan hiếm giả ("lịch có hạn" khi chưa đông khách); khách du lịch Á mua đồ cao cấp tại chỗ; vùng Vịnh; mọi con số doanh số tuyệt đối cho Giai đoạn 1.
-
-**Một lưu ý phản biện cần nhớ:** con số 63.000 lượt/tháng của East Meets Dress đo **trang phục cưới Á Đông cho cộng đồng gốc Á ở Mỹ** (lõi sườn xám Trung Hoa), KHÔNG tách riêng được cầu áo dài cưới Việt. Vì vậy "cầu áo dài cưới đã chứng minh" thực chất là **suy luận mạnh**, không phải dữ liệu trực tiếp.
-
-**Phương pháp & nguồn:** SimilarWeb (lượt/geo/kênh/giới thiệu/mạng xã hội — ước lượng); Google Trends + khảo sát website & kết quả tìm kiếm trực tiếp (cho từ khoá/trang/phân khúc, vì gói SimilarWeb này không có dữ liệu đó); social listening trên diễn đàn/blog; đối chiếu với nghiên cứu nội bộ ([01_seo_landscape.md](../../thieu/context/SEO/01_seo_landscape.md), [competitor.md](../../thieu/context/SEO/competitor.md), [BrandHub](../../MDenude_BrandHub_Internal.md), [founder-signals.md](../client-context/founder-signals.md)). Dữ liệu thô: [data_logs/](./data_logs/). Kế hoạch hành động được xây qua hội đồng 4 chiến lược gia + 3 giám khảo + 1 phản biện (21/6/2026).
-
----
-
-_Tài liệu sống — cập nhật sau buổi họp thứ Bảy (khi chị Chi trả lời 5 điều nền móng + OQ-008) và khi có dữ liệu kênh thật. Bản trình bày có biểu đồ: [bao-cao-tong-hop.html](./bao-cao-tong-hop.html)._
+_Báo cáo này thay phần phân tích thị trường trong các bản trước; tập trung vào insight có nguồn thay vì đề xuất. Bản trình bày có biểu đồ + bản đồ định vị: [bao-cao-tong-hop.html](./bao-cao-tong-hop.html)._
