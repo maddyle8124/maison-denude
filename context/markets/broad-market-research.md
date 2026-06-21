@@ -4,7 +4,7 @@ _Người thực hiện: Maddy (research lead). Ngày: 2026-06-21. Ngôn ngữ: 
 _Phương pháp: SimilarWeb API (traffic, geo, channel — ước lượng, T6/2025–T5/2026), Google Trends + WebSearch/WebFetch (≈118 lượt tra cứu, có trích nguồn), social listening, và đối chiếu với research nội bộ ([01_seo_landscape.md](../../thieu/context/SEO/01_seo_landscape.md), [competitor.md](../../thieu/context/SEO/competitor.md), [BrandHub](../../MDenude_BrandHub_Internal.md))._
 _Raw SimilarWeb: [`data_logs/`](./data_logs/). Mọi số traffic là **ước lượng**, dùng để xếp hạng tương quan, không tuyệt đối hoá._
 
-> **Lưu ý đọc tài liệu — đã sửa thiên lệch áo dài.** Research cũ thiên ~70% về áo dài. Maison là **nhà mốt bespoke đa dòng**: áo dài/heritage · **bridal** · **đồ tiệc / evening wear (Nhóm 3 của chị Chi)** · couture · **swimwear/resort** · designer RTW. Tài liệu này cố tình cân lại cho đủ các dòng.
+> **Lưu ý đọc tài liệu — đã sửa thiên lệch áo dài.** Research cũ thiên ~70% về áo dài. Maison là **nhà mốt bespoke đa dòng**: áo dài/heritage · **bridal** · **đồ tiệc / evening wear (Nhóm 3 của chị Chi)** · couture · designer RTW. Tài liệu này cố tình cân lại cho đủ các dòng. _(Swimwear đã loại khỏi phạm vi theo chỉ đạo — không relevant trong phân khúc này.)_
 
 ---
 
@@ -16,14 +16,14 @@ _Raw SimilarWeb: [`data_logs/`](./data_logs/). Mọi số traffic là **ước l
 2. **Cầu cross-border (ship ra nước ngoài)** — *chỉ thực sự tồn tại ở ĐÚNG MỘT dòng: bridal/wedding áo dài*, tập trung ở **diaspora Mỹ + Úc**. Mọi dòng khác đều mỏng hoặc chỉ là định vị.
 
 **Đánh đổi cốt lõi (bằng chứng cứng): bespoke ↔ shippable không thể có cả hai.**
-- **Aquamarine** (Saigon, nhà swimwear thủ công 50 năm, có made-to-measure) → **chỉ ship trong VN**.
-- **Fancì Club / Aprilpoolday / HÁI** (RTW size cố định) → **ship toàn cầu**.
+- **Bespoke (đo theo người)** không kéo được khách xa: **Maydo Saigon** (site tiếng Anh) 98% khách VN; **Duan** ("giao toàn cầu") chỉ ~2.8K/tháng → trần thấp.
+- **RTW designer size cố định** ship toàn cầu: **Fancì Club / La Lune** (Saigon, lên SSENSE/Depop, IG 136K).
 → Muốn ship được phải **chuẩn hoá size** — đúng cái trục mà chị Chi từ chối ("không mass"). Đây là trung tâm của câu hỏi chiến lược.
 
 **3 kết luận hành động:**
 - **Nền móng chắc chắn (làm ngay):** diaspora **Mỹ + Úc**, dòng **bridal áo dài** — thị trường *duy nhất* có cầu mua xuyên biên giới đã được chứng minh. Kênh: SEO tiếng Anh + pre-trip funnel + social diaspora.
 - **Inbound premium (thử, đừng đặt cược):** TQ/Nhật có lượng khách khổng lồ NHƯNG hành vi chủ đạo là **thuê + chụp ảnh**, *chưa* chứng minh sẵn sàng mua bespoke. Reach qua RedNote/editorial, không phải Google.
-- **Dòng shippable (1 câu hỏi mở cho founder):** swimwear/resort là dòng ship được duy nhất khả tín — nhưng phải là **capsule designer cao cấp**, không phải bikini du lịch $15–30.
+- **Dòng shippable (1 câu hỏi mở cho founder):** nếu Maison muốn bán ra nước ngoài thì phải là một **capsule designer RTW (fit giữa)** chuẩn hoá size — kiểu La Lune/Fancì Club — chứ KHÔNG ship bespoke. _(Swimwear đã loại khỏi phạm vi — không relevant trong phân khúc này.)_
 
 **Maison hiện ở đâu:** `maisondenude.com` **không đo được traffic** (quá nhỏ) → xuất phát từ số 0 về digital. Vốn liếng thật nằm ở **earned media VN** (KOL/editorial) — tài sản không đối thủ search nào có.
 
@@ -36,7 +36,6 @@ _Raw SimilarWeb: [`data_logs/`](./data_logs/). Mọi số traffic là **ước l
 | **Bridal / wedding áo dài** | Mũi nhọn cross-border | **Cao** (Trends 50; ~100% AU+US) | Ship + diaspora **và** inbound (pre-trip) |
 | **Áo dài / heritage** | Cốt lõi thương hiệu | Đầu phễu = info; mua = **inbound** | Inbound (may tại Saigon) |
 | **Đồ tiệc / evening wear** | Chị Chi nêu rõ (Nhóm 3) | **Mỏng** như từ khoá; nhưng **white-space premium** | Upsell cho khách inbound; không phải kênh acquisition |
-| **Swimwear / resort** | Ít "ma sát heritage" nhất | Không có head-term; cầu inbound + ship | **Dòng ship được duy nhất** (nếu làm premium) |
 | **Couture** | Tông thương hiệu | ~0 (noise: Juicy Couture, YSL…) | Chỉ định vị, KHÔNG đặt KPI traffic |
 | **Designer / indie RTW ("fit giữa")** | Câu hỏi mở | Không tách được tín hiệu | Thử nghiệm sản phẩm, không phải SEO |
 
@@ -60,17 +59,16 @@ _Raw SimilarWeb: [`data_logs/`](./data_logs/). Mọi số traffic là **ước l
 | **nicolebridal.vn** | bridal + wedding áo dài | MTM + rental | Claims worldwide | **Content/listicle SEO** | 18K (US 28%, AU 14%) |
 | **linhnga.vn** | bridal "áo dài cưới Luxury" | MTM | VN | Legacy + search | 12.8K ↓ |
 | **La Lune** (laluneofficial) | **indie RTW demi-couture** | RTW size cố định | Quốc tế | **Social/IG 136K** | (quá nhỏ cho SW) |
-| **Aquamarine** (swimaquamarine) | **swimwear/resort** | RTW + MTM, thủ công | **CHỈ VN** | Brand/social | (n/a) |
 | **Fancì Club** | indie RTW (Saigon) | RTW size cố định | **Toàn cầu** (SSENSE, Depop) | Social + marketplace | (n/a) |
 
 **Đối thủ cần theo dõi sát nhất — LAHAVA.** Đây là đối thủ trùng định vị "premium custom đa dòng" với Maison nhiều nhất: 2 domain (`.com` quốc tế đang tăng mạnh, `.vn` cho VN), phủ áo dài + **evening gown** + bridal, made-to-measure, đa tiền tệ, tông "nhà thiết kế/artisanal" (không phải "tailor"). Đáng chú ý: họ thắng bằng **Direct/Social (Pinterest 530K)**, KHÔNG phải search — xác nhận: ở phân khúc này **brand + social thắng SEO**.
 
 ### Đối thủ thành công nhờ gì? (5 điểm)
 
-1. **Sản phẩm lai (RTW + bespoke) reach tốt hơn bespoke thuần.** Mọi player traffic cao đều ghép "ready-to-ship" với custom (East Meets Dress, A Dong, Aquamarine). Bespoke-thuần-ra-nước-ngoài đụng trần thấp (Duan 2.8K, Maydo 0.8K). → **Bằng chứng trực tiếp cho luận điểm: bespoke abroad = chỉ in-person/khách có ý định đến VN; engine ship được là RTW/swimwear/fit-giữa.**
+1. **Sản phẩm lai (RTW + bespoke) reach tốt hơn bespoke thuần.** Player traffic cao ghép "ready-to-ship" với custom (East Meets Dress). Bespoke-thuần-ra-nước-ngoài đụng trần thấp (Duan 2.8K, Maydo 0.8K). → **Bằng chứng trực tiếp cho luận điểm: bespoke abroad = chỉ in-person/khách có ý định đến VN; engine ship được là RTW designer (fit-giữa).**
 2. **Hai kênh thắng khác nhau theo intent:** **Search** thắng intent "tìm chỗ may khi đi du lịch" (EMD 54%, BeBe 47%); **Direct/Social/brand** thắng intent "nhà thiết kế cao cấp" (LAHAVA, La Lune, Aquamarine). Luật thương hiệu của Maison (editorial, KOL, không "deal") đặt Maison vào **nhóm 2** → **SEO là kênh hỗ trợ; brand/social/WOM mới là engine.**
-3. **Định vị tách làm 2 thế giới, ở giữa bỏ trống.** Một bên: tour tailor giá rẻ Hoi An. Một bên: bridal luxury VN bán qua PR/social. **Không ai sở hữu "premium artisanal Saigon đa dòng, kể editorial, ship nơi hợp lý (RTW/resort) + fit tại chỗ nơi bắt buộc (bespoke)".** LAHAVA là người duy nhất đang vòng quanh khoảng này.
-4. **Ship đã là chuyện thường; rào cản thật là "cái gì travels".** Áo dài heritage = bán cảm giác in-person, cầu non-diaspora ≈ 0. Cái ship được = **swimwear/resort + fit-giữa RTW**, không phải áo dài heritage. Gulf mua **đồ tiệc/modest wear**, là sản phẩm khác.
+3. **Định vị tách làm 2 thế giới, ở giữa bỏ trống.** Một bên: tour tailor giá rẻ Hoi An. Một bên: bridal luxury VN bán qua PR/social. **Không ai sở hữu "premium artisanal Saigon đa dòng, kể editorial, ship nơi hợp lý (RTW fit-giữa) + fit tại chỗ nơi bắt buộc (bespoke)".** LAHAVA là người duy nhất đang vòng quanh khoảng này.
+4. **Ship đã là chuyện thường; rào cản thật là "cái gì travels".** Áo dài heritage = bán cảm giác in-person, cầu non-diaspora ≈ 0. Cái ship được = **fit-giữa RTW designer** (size cố định), không phải áo dài heritage. Gulf mua **đồ tiệc/modest wear**, là sản phẩm khác.
 5. **Diaspora (US + AU) = cầu nước ngoài DUY NHẤT đã chứng minh.** "wedding ao dai" ~100% AU+US ([01_seo_landscape §8.2](../../thieu/context/SEO/01_seo_landscape.md)). Mục tiêu bespoke abroad chắc ăn nhất = **diaspora + cô dâu đang định về VN** (đúng pre-trip funnel).
 
 ---
@@ -82,9 +80,8 @@ _Raw SimilarWeb: [`data_logs/`](./data_logs/). Mọi số traffic là **ước l
 | **Bridal/wedding áo dài** | Cao | Cao | TB | Thấp-TB | Thấp | — | **Ship + diaspora** (+ inbound) | Dòng duy nhất có head-term thật + sẵn sàng mua từ xa |
 | **Áo dài heritage** | TB(info) | TB | Cao | **TB-Cao** | **TB-Cao** | Thấp-TB | **Inbound** | Cầu mua là inbound, đa ngôn ngữ; tier premium ($300+) đã có nhưng **chưa được kể** |
 | **Đồ tiệc / evening** | Thấp | Thấp | TB | Thấp | Thấp | — | **Inbound / upsell** | "evening gown" toàn cầu có cầu nhưng **không gắn geo VN**; chỉ là upsell cho khách inbound |
-| **Swimwear/resort** | Thấp-TB | **TB** | Thấp-TB | Thấp | Thấp | — | **Inbound + ship (duy nhất khả tín)** | Ma sát thấp nhất; nhưng cầu hiện tại giá rẻ → cần góc designer |
 | **Bespoke / Couture (từ khoá)** | Mỏng | Mỏng | Mỏng | — | — | — | **Chỉ định vị** | "bespoke"=suit/Savile Row/Dubai; "couture"=noise. KHÔNG đặt KPI |
-| **Designer RTW "fit giữa"** | Thấp | Thấp | Thấp-TB | Thấp | Thấp | — | **Thử nghiệm** | Không có tín hiệu search sạch |
+| **Designer RTW "fit giữa"** | Thấp | Thấp | Thấp-TB | Thấp | Thấp | — | **Thử nghiệm (capsule ship được)** | Không có tín hiệu search sạch; La Lune/Fancì chứng minh model ship được |
 
 **Điểm cần nhớ về "đồ tiệc":** chị Chi nêu đúng là một dòng, nhưng dữ liệu nói nó **không phải kênh acquisition bằng search** (cầu ~1/50, đối thủ EN ≈ 0). Nó **defensible như một upsell** cho khách áo dài/bridal inbound + long-tail rẻ để rank — không phải nam châm traffic. Đừng để KPI traffic dính vào đây hay vào "couture".
 
@@ -120,7 +117,7 @@ _Raw SimilarWeb: [`data_logs/`](./data_logs/). Mọi số traffic là **ước l
 
 1. **Bridal áo dài (diaspora US/AU + pre-trip)** — *ưu tiên #1, cầu đã chứng minh.* Customer voice cho thấy người mua-ship lo lắng về fit/độ tin (ảnh stock, sợ sai số đo). **Narrative bespoke của Maison chính là thuốc chữa nỗi lo đó**: ảnh/video món đồ *của chính họ* đang may, atelier có tên, fitting khi tới VN. Kênh: SEO Pillar B + social diaspora. _Bổ sung: áo dài chú rể/nam (`ao dai nam`=43) đang bị bỏ trống._ ✅ on-brand.
 2. **Áo dài/occasion inbound** — sở hữu **tier premium** qua RedNote/editorial + content pre-trip đa ngôn ngữ. Tài sản có thật nhưng **chưa được kể**: "Saigon hơn Hoi An về chất lượng áo dài" (khách đọc tiếng Anh đã công nhận). ✅ on-brand.
-3. **Swimwear/resort** — **capsule designer cao cấp** = engine ship được để test (xem §6). ⚠️ chỉ on-brand nếu premium, không đua band $15–30.
+3. **Capsule RTW designer (fit-giữa)** — engine ship được duy nhất để test (xem §6), kiểu La Lune/Fancì: collection + size cố định, vẫn artisanal/designer. ⚠️ chỉ on-brand nếu premium, không "mass".
 4. **Đồ tiệc/evening** — upsell cho khách inbound + long-tail rẻ; KHÔNG kỳ vọng traffic. ✅ on-brand.
 5. **KHÔNG đua** "tailoring"/"couture"/"bespoke" như KPI SEO; KHÔNG sao chép mô hình tour-tailor Hoi An (vi phạm luật thương hiệu). ✅ tuân ranh giới.
 
@@ -128,11 +125,11 @@ _Raw SimilarWeb: [`data_logs/`](./data_logs/). Mọi số traffic là **ước l
 
 ---
 
-## 6. Câu hỏi mở cho founder — dòng RTW/resort shippable (khung quyết định)
+## 6. Câu hỏi mở cho founder — dòng RTW designer shippable (khung quyết định)
 
 **Câu hỏi KHÔNG phải "bespoke hay mass".** Mà là:
 
-> **Maison có chạy một DÒNG SẢN PHẨM THỨ HAI — một capsule RTW/resort nhỏ, được thiết kế, có sẵn kho, *ship được by design* — đặt BÊN CẠNH (không thay thế) nhà bespoke không?**
+> **Maison có chạy một DÒNG SẢN PHẨM THỨ HAI — một capsule RTW designer nhỏ (size cố định), được thiết kế, có sẵn kho, *ship được by design* — đặt BÊN CẠNH (không thay thế) nhà bespoke không?**
 
 Cách đặt này hoá giải mâu thuẫn giả. Chị Chi từ chối *mass* (rẻ, deal, "haul"). Chị **không** buộc phải từ chối một **capsule designer giới hạn** — **Fancì Club** (Saigon, RTW size cố định, lên SSENSE, khách Bella Hadid/BLACKPINK) và **La Lune** (demi-couture) chứng minh nhà thiết kế Saigon **ship toàn cầu mà vẫn premium/artisanal, KHÔNG "tailor", KHÔNG "mass"**. Nhượng bộ duy nhất là **vận hành** (size cố định/bán-cố định), không phải **định vị**.
 
@@ -140,11 +137,10 @@ Cách đặt này hoá giải mâu thuẫn giả. Chị Chi từ chối *mass* (
 
 | Nếu Maison ship dòng non-bespoke… | Lợi | Hại / căng với ranh giới |
 |-----------------------------------|-----|--------------------------|
-| **Swimwear/resort** | Ma sát thấp nhất; SEA đã chứng minh ship được; gần aesthetic hiện tại; có proof Linh An | Aquamarine (Saigon, artisanal) **chọn không ship** → margin/ops có thể không bõ; category dễ bị commoditize |
-| **Fit-giữa RTW (kiểu La Lune)** | Vẫn "designer/artisanal", không "mass" | Hoặc chấp nhận no-return lệch chuẩn, hoặc đầu tư hạ tầng fit (chi phí) |
+| **Fit-giữa RTW designer (kiểu La Lune/Fancì)** | Vẫn "designer/artisanal", không "mass"; đã chứng minh ship toàn cầu (SSENSE/Depop); gần tông editorial hiện tại | Hoặc chấp nhận no-return lệch chuẩn (như La Lune), hoặc đầu tư hạ tầng size/fit-guide (chi phí + ops) |
 | **Gulf modest occasion** | Thị trường chi cao; lụa/thêu/occasion chuyển được | Cần SKU chuẩn hoá + **xoay aesthetic sang modest** → gần "mass" nhất; **quyết định founder, không phải đèn xanh** |
 
-**Việc cần làm trước khi cam kết:** pull thêm SimilarWeb traffic + geo cho `aprilpoolday.com`, `hai-the-label.com`, `fanciclub.com`, `swimaquamarine.com` để **đo cầu shippable** và xem geo nào thật sự convert (diaspora US/AU vs Gulf vs SEA) trước khi chọn capsule.
+**Việc cần làm trước khi cam kết:** pull thêm SimilarWeb traffic + geo cho `fanciclub.com`, `laluneofficial.com` (các nhà RTW designer Saigon ship toàn cầu) để **đo cầu shippable** và xem geo nào thật sự convert (diaspora US/AU vs SEA) trước khi chọn capsule.
 
 → **Open question này gắn với OQ-009** (xem [open-questions.md](../open-questions.md)).
 
@@ -177,4 +173,4 @@ Cách đặt này hoá giải mâu thuẫn giả. Chị Chi từ chối *mass* (
 
 ---
 
-_Tài liệu sống — cập nhật khi có pull SimilarWeb vòng 2 (swim/RTW benchmarks) và sau khi chị Chi trả lời OQ-008/009. Đầu vào trực tiếp cho việc chốt thị trường tại Progress Presentation._
+_Tài liệu sống — cập nhật khi có pull SimilarWeb vòng 2 (RTW designer benchmarks) và sau khi chị Chi trả lời OQ-008/009/010. Đầu vào trực tiếp cho việc chốt thị trường tại Progress Presentation. Deep-dive đối thủ + biểu đồ: xem `competitor-deepdive.html`._

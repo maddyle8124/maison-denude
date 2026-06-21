@@ -1,0 +1,305 @@
+<title>Maison Dénudé — Competitor Deep-Dive</title>
+<style>
+  :root{
+    --ivory:#f6f1e9; --paper:#fffdf9; --ink:#2a2521; --muted:#7c736a; --soft:#9a9087;
+    --line:#e6ddcf; --line2:#d8cdb9; --gold:#a9824e; --goldbg:#f0e7d6;
+    --up:#5d7a4f; --upbg:#e8efe2; --down:#b15a40; --downbg:#f6e6df; --flat:#9a9087;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 22px 80px;color:var(--ink);font-family:var(--sans);
+    background:var(--ivory);line-height:1.6;font-size:15px}
+  .wrap{-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;color:var(--ink)}
+  h1{font-size:34px;margin:0 0 6px} h2{font-size:23px;margin:46px 0 6px}
+  h3{font-size:18px;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 4px}
+  .kicker{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:11px;
+    color:var(--gold);font-weight:600;margin:0 0 10px}
+  .rule{height:1px;background:var(--line2);border:0;margin:8px 0 0}
+  .lead{font-size:16.5px;color:#473f38;margin:14px 0 0;max-width:78ch}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line2)}
+  a:hover{border-color:var(--gold)}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:24px 0 0}
+  .metric{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .metric .n{font-family:var(--serif);font-size:27px;font-weight:600;line-height:1}
+  .metric .l{font-size:12.5px;color:var(--muted);margin-top:6px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:18px 0 0}
+  .insight{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .insight .tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 6px}
+  .insight h3{font-size:15.5px;font-family:var(--sans);font-weight:600;margin:0 0 6px}
+  .insight p{margin:0;font-size:13.5px;color:#4d453d}
+
+  .chartbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:16px 0 0}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted);margin:0 0 12px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+  .comp{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0 0}
+  .comp.watch{border-color:var(--gold);border-width:2px}
+  .comp-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;justify-content:space-between}
+  .comp-head .nm{font-family:var(--serif);font-size:20px;font-weight:600}
+  .comp-head .dm{font-size:12.5px;color:var(--soft)}
+  .pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .pill.up{background:var(--upbg);color:var(--up)} .pill.down{background:var(--downbg);color:var(--down)}
+  .pill.flat{background:#efe9df;color:var(--flat)} .pill.watch{background:var(--goldbg);color:var(--gold)}
+  .comp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;margin-top:14px}
+  @media(max-width:640px){.comp-grid{grid-template-columns:1fr}}
+  .stat-l{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--soft);font-weight:600;margin:12px 0 5px}
+  .bars .row{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12.5px}
+  .bars .rl{width:64px;color:var(--muted);flex:none;text-align:right}
+  .bars .rt{width:90px;flex:none;color:var(--muted)}
+  .bars .track{flex:1;background:#efe9dd;border-radius:4px;height:9px;overflow:hidden}
+  .bars .fill{height:100%;border-radius:4px}
+  .bars .rv{width:34px;flex:none;font-variant-numeric:tabular-nums;color:#4d453d}
+  .facts dt{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);font-weight:600;margin-top:11px}
+  .facts dd{margin:2px 0 0;font-size:13px;color:#433c34}
+  .imp{background:var(--goldbg);border-radius:9px;padding:10px 13px;margin-top:13px;font-size:13px;color:#5a4628}
+  .imp b{color:#3f3118}
+  .spark{margin-top:4px}
+  .note{font-size:12.5px;color:var(--muted);background:var(--paper);border:1px dashed var(--line2);border-radius:10px;padding:14px 16px;margin-top:14px}
+  ul.tight{margin:8px 0 0;padding-left:18px} ul.tight li{margin:4px 0;font-size:14px;color:#433c34}
+  .ws{background:var(--ink);color:#f6f1e9;border-radius:14px;padding:22px 24px;margin:16px 0 0}
+  .ws h3{color:#f6f1e9;font-family:var(--serif);font-size:19px;margin:0 0 8px}
+  .ws p{margin:0;color:#e3d8c6;font-size:14.5px} .ws .hl{color:#e7c489;font-weight:600}
+</style>
+
+<div class="wrap">
+  <h2 class="sr-only">Phân tích search của đối thủ Maison Dénudé: traffic, nguồn, tăng trưởng, từ khoá, subpage và phân khúc sản phẩm.</h2>
+  <p class="kicker">Maison Dénudé · Nghiên cứu nội bộ · 21/6/2026</p>
+  <h1>Đối thủ trên Search — Đào sâu</h1>
+  <p class="sub">Traffic · nguồn · tăng trưởng 12 tháng · từ khoá · subpage nổi bật · phân khúc sản phẩm</p>
+  <hr class="rule"/>
+  <p class="lead">Dữ liệu SimilarWeb (ước lượng, T6/2025–T5/2026) ghép với khảo sát site + SERP trực tiếp. Đã loại dòng <b>swimwear</b> (không relevant trong phân khúc này). Mọi số traffic là ước lượng — dùng để xếp hạng tương quan.</p>
+
+  <div class="metrics" id="metrics"></div>
+
+  <h2>5 mẫu hình chiến lược</h2>
+  <p class="sub">Rút ra từ toàn bộ đối thủ — quan trọng hơn từng con số lẻ.</p>
+  <div class="cards">
+    <div class="insight"><p class="tag">Mặt trận mới</p><h3>AI search là "SEO" mới</h3><p>Nicole Bridal nhận <b>~72% referral từ AI engine</b> (Perplexity 38%, Gemini 18%, ChatGPT 15%); bebetailor ChatGPT 18%; EMD 6.5%. Người thắng = bài <b>listicle so sánh</b> dễ được AI trích dẫn.</p></div>
+    <div class="insight"><p class="tag">White space</p><h3>Không ai chiếm bespoke áo dài premium</h3><p>EMD = cheongsam-first; LAHAVA = mid-market value; Nicole/Linh Nga = gown-first; Duan = suits-first; Hoi An = tourist. Áo dài cao cấp đúng nghĩa <b>bỏ trống</b>.</p></div>
+    <div class="insight"><p class="tag">Gap rõ rệt</p><h3>"Đồ tiệc" gần như trống</h3><p>Chỉ LAHAVA có evening (98 SKU); tất cả còn lại bỏ qua occasion/đồ tiệc. Đúng dòng chị Chi nêu (Nhóm 3) — white-space định vị.</p></div>
+    <div class="insight"><p class="tag">2 engine tăng trưởng</p><h3>Content/AI vs SKU+Pinterest</h3><p>Tăng mạnh: Nicole/bebe (listicle + AI-citation), LAHAVA (SKU breadth + Pinterest). Giảm: Linh Nga, Yaly (dựa legacy/paid).</p></div>
+    <div class="insight"><p class="tag">Giá</p><h3>Minh bạch giá phân đôi</h3><p>Value players show giá (LAHAVA $365–560, EMD $448–918, A Dong $150–400); premium/couture <b>giấu giá</b> (Nicole, Duan, Linh Nga gown). Maison premium → giấu giá là on-brand.</p></div>
+    <div class="insight"><p class="tag">Cảnh báo</p><h3>Đừng đua "tailoring" với Hoi An</h3><p>bebe/A Dong/Yaly thống trị search "custom ao dai / tailor" giá rẻ du lịch. Maison đua trên <b>occasion · image · experience</b>, không phải từ khoá tailor.</p></div>
+  </div>
+
+  <h2>Tăng trưởng traffic 12 tháng</h2>
+  <p class="sub">% thay đổi từ T6/2025 → T5/2026 (lượt/tháng đầu so với cuối kỳ).</p>
+  <div class="chartbox">
+    <div class="legend"><span><i class="dot" style="background:var(--up)"></i>Tăng</span><span><i class="dot" style="background:var(--down)"></i>Giảm</span></div>
+    <svg id="growth" width="100%" viewBox="0 0 720 360" role="img" aria-label="Biểu đồ tăng trưởng % traffic theo đối thủ"></svg>
+  </div>
+
+  <h2>Quy mô & quỹ đạo</h2>
+  <p class="sub">Lượt truy cập trung bình/tháng + đường xu hướng 12 tháng.</p>
+  <div class="chartbox"><div id="scale"></div></div>
+
+  <h2>Hồ sơ từng đối thủ</h2>
+  <p class="sub">Mỗi thẻ: traffic · geo · kênh · từ khoá · subpage · phân khúc · giá · vì sao tăng/giảm · hàm ý cho Maison.</p>
+  <div id="comps"></div>
+
+  <div class="ws">
+    <h3>Khoảng trống cho Maison Dénudé</h3>
+    <p>Không đối thủ nào sở hữu <span class="hl">"nhà mốt premium artisanal Saigon đa dòng — bespoke áo dài + đồ tiệc, kể theo lối editorial, fit tại chỗ cho khách đến VN + capsule RTW designer ship được"</span>. LAHAVA là người duy nhất đang vòng quanh khoảng này (nhưng ở tầng value, không couture). Mũi vào chắc chắn: <span class="hl">diaspora Mỹ + Úc, dòng bridal áo dài</span> (cầu duy nhất đã chứng minh) + chiến thuật <span class="hl">listicle tiếng Anh được AI-engine trích dẫn</span> (sao chép Nicole). Đồ tiệc/occasion là white-space định vị, không phải kênh traffic.</p>
+  </div>
+
+  <div class="note" id="method"></div>
+</div>
+
+<script>
+const DATA=[
+ {nm:"East Meets Dress",dm:"eastmeetsdress.com",tag:"Diaspora bridal · Mỹ",watch:0,
+  v:[58600,59143,66039,85112,64853,61520,54748,68972,62841,65200,53416,57565],g:-2,
+  geo:[["Mỹ",61],["Canada",9],["Úc",6],["Anh",5],["VN",4]],
+  ch:[["Search",54],["Direct",36],["Social",4],["Referral",4]],
+  price:"$448–918 (hiện)",model:"Hybrid bespoke + RTW ship",
+  kw:"chinese wedding dress · cheongsam · qipao · qun kwa — áo dài chỉ phụ: vietnamese wedding dress, bridal ao dai",
+  pg:"/collections/bespoke-collection · /ships-now · blog 11+ bài (tea-ceremony, traditions)",
+  seg:"Cheongsam bespoke là hero (Customer Favorites toàn cheongsam). Áo dài ~5 SKU, review 0–1 → breadth-for-SEO.",
+  pos:"Thiết kế cheongsam/áo dài custom online từ Mỹ — không cần bay về VN.",
+  why:"Leader bão hoà (-2%). Search 54% = SEO moat (blog + breadth). US 61% / VN 4% → thuần diaspora.",
+  imp:"Chiếm 'ship custom diaspora' ở $500–700, NHƯNG coi áo dài là dòng phụ review≈0 → trống cho couture áo dài Saigon cao cấp hơn."},
+ {nm:"LAHAVA",dm:"lahava.com",tag:"Đa dòng · made-to-measure · ĐỐI THỦ THEO DÕI",watch:1,
+  v:[3586,4492,3931,4187,3273,3120,7863,12396,13989,8681,12485,12394],g:246,
+  geo:[["Mỹ",66],["Úc",13],["Canada",11],["Anh",8]],
+  ch:[["Direct",44],["Search",35],["Social",13],["Referral",6]],
+  price:"$365–560 (minh bạch)",model:"Made-to-measure, ship toàn cầu",
+  kw:"custom ao dai · wedding ao dai 2026 online custom made · modern/men's/couple ao dai · ao dai online USA · evening dresses custom",
+  pg:"/custom-ao-dai (341 SKU) · /modern-ao-dai (158) · /wedding-ao-dai (141) · /evening-dresses (98) · /mens-ao-dai (61)",
+  seg:"SKU depth: custom (341) + modern (158) áo dài là lõi; wedding (141) trụ 2; CÓ evening 98 SKU (hiếm trong nhóm).",
+  pos:"Áo dài + bridal + evening made-to-measure giá hợp lý, ship toàn cầu cho diaspora.",
+  why:"+246%! Geo US66/AU13/CA11 = diaspora cưới+Tết. Direct 44% (recall cộng đồng) + Pinterest 100% social (phễu cưới visual) + collection page SEO bilingual.",
+  imp:"Chơi VOLUME/VALUE, không couture — nhưng TRÙNG định vị 'premium custom đa dòng' nhất → theo dõi sát. Điểm yếu: giá thấp, thiếu tông couture/editorial."},
+ {nm:"Nicole Bridal",dm:"nicolebridal.vn",tag:"Bridal gown + áo dài cưới",watch:0,
+  v:[7981,16813,13669,14500,13961,17874,23023,34778,21061,15053,19281,20838],g:161,
+  geo:[["VN",43],["Mỹ",28],["Úc",14],["Canada",10]],
+  ch:[["Search",40],["Direct",30],["Social",18],["Referral",12]],
+  price:"Ẩn (chỉ 'từ $499')",model:"Custom + rental, tư vấn video",
+  kw:"váy cưới cao cấp · áo dài cưới đẹp tphcm · vietnamese bridal gown — listicle EN: top bridal/ao dai shops saigon, custom wedding dress vietnam overseas brides",
+  pg:"Listicle tự viết: /en/top-6-...wedding-ao-dai-shops-in-saigon (tự xếp #1) · BST: the-contrast, te-amo, the-vow",
+  seg:"Custom wedding gown 2 tier (Luxury/Premium) là chính; áo dài cưới phụ. KHÔNG có occasion/đồ tiệc.",
+  pos:"Couture cưới custom+rental cho cô dâu VN & hải ngoại, tư vấn từ xa qua video.",
+  why:"+161%. Bùng nổ nhờ ~72% referral từ AI engine + 57% khách nước ngoài. Tự viết listicle 'Top N Saigon' → Perplexity/Gemini/ChatGPT trích dẫn khi diaspora hỏi. 'Từ $499' + đo qua FaceTime chốt khách xa.",
+  imp:"BÀI HỌC LỚN: sở hữu listicle so sánh tiếng Anh → được AI trích → bán diaspora. Maison nên sao chép. Điểm yếu Nicole: 0 footprint đồ tiệc/occasion."},
+ {nm:"BeBe Tailor",dm:"bebetailor.com",tag:"Tailor du lịch Hoi An",watch:0,
+  v:[8771,10012,10216,11566,15693,10410,10187,11507,14001,14177,13583,26625],g:204,
+  geo:[["Mỹ",40],["VN",32],["Úc",15],["Anh",10]],
+  ch:[["Search",47],["Direct",36],["Social",8],["Referral",7]],
+  price:"Ẩn / mặc cả",model:"Bespoke chỉ may tại chỗ (không ship-online)",
+  kw:"hoi an tailor · best tailor in hoi an · hoi an suit price · custom dress hoi an · designer reproduction (copy)",
+  pg:"Editorial, không e-com: Our Story, How It Works, See Our Work, Blog (không có collection/SKU)",
+  seg:"Suits + formalwear/evening gown + copy designer. Áo dài/bridal incidental. Không merchandising signal.",
+  pos:"Tiệm may được tin nhất Hoi An — bespoke du lịch nhanh, giá mặc cả được.",
+  why:"+204% (bùng nổ). KHÔNG do brand/product: guide Citro (Úc 50+) 18% + ChatGPT 18% + travel NYT 15% + rebound du lịch hậu-COVID. Site gần như không có catalog.",
+  imp:"Overlap thấp (không áo dài/couture). Bài học: traffic này 100% từ content guide + AI-citation, không phải product page."},
+ {nm:"A Dong Silk",dm:"adongsilk.com",tag:"Tailor du lịch Hoi An",watch:0,
+  v:[14040,14863,15509,15733,21000,12033,11190,11349,13246,38977,28605,24546],g:75,
+  geo:[["Mỹ",35],["VN",33],["Anh",12],["Úc",10],["Đức",5]],
+  ch:[["Search",60],["Referral",25],["Direct",13]],
+  price:"Suits $150–400 (hiện)",model:"Bespoke 24–48h, DHL toàn cầu",
+  kw:"best tailor in hoi an · custom suits hoi an · hoi an suit price · 24 hour tailor — áo dài chỉ 1 trang mỏng",
+  pg:"/custom-suits (3D builder) · /hoi-an-suit-price · /top-rated-tailor... (SEO rank-bait) · /ao-dai-... (lone)",
+  seg:"Suits thống trị (nav, banner, builder, blog). Wedding thứ 2, áo dài cuối — marginal.",
+  pos:"Tiệm suit custom 24h top Hoi An — thiết kế online, ship DHL toàn cầu.",
+  why:"+75%. Engine SEO price-guide ('best tailor / suit price') bắt intent du lịch + 3D builder + DHL. Geo US/UK/AU/DE = du khách pre-plan.",
+  imp:"Chiếm search 'custom ao dai' du lịch giá rẻ → Maison KHÔNG đua từ khoá này."},
+ {nm:"Yaly Couture",dm:"yalycouture.com",tag:"Tailor legacy Hoi An",watch:0,
+  v:[13589,23364,9661,15046,13098,12577,11248,11709,12572,11724,7723,11525],g:-15,
+  geo:[["Mỹ",38],["VN",34],["Úc",10],["Anh",8],["Canada",6]],
+  ch:[["Direct",43],["Search",40],["Social",9],["Referral",7]],
+  price:"RTW $45–279; bridal ẩn",model:"Bespoke 'affordable', ship toàn cầu",
+  kw:"custom suit hoi an · bespoke tailor hoi an · custom linen suit vietnam · bespoke wedding dress hoi an — áo dài: yếu, không có category EN",
+  pg:"/en/list-catalogs · /catalogs/wedding · /catalogs/men (suits) · /tailoring-guide",
+  seg:"Suits & linen là bread-and-butter; wedding là upsell ('contact'); áo dài là GAP trên site EN.",
+  pos:"Tiệm may Hoi An ship toàn cầu, giá phải chăng — suit, đầm, váy cưới.",
+  why:"-15%. Tourism hậu-COVID hạ nhiệt + thua DTC/IG-native. Direct 43% = recall khách cũ, ít engine cầu mới. 'Affordable' chặn lực kéo premium.",
+  imp:"Không phải đối thủ thật (mid-market tailor). Nhưng sở hữu SERP 'bespoke wedding/custom dress Hoi An' mà brand couture có thể giành — áo dài là gap của Yaly."},
+ {nm:"Duan Tailor",dm:"duantailor.com",tag:"Bespoke Saigon (suits-first)",watch:0,
+  v:[0,667,1973,3183,2790,2885,1822,2561,1369,8409,2933,4519],g:0,
+  geo:[["Mỹ",38],["VN",30],["Úc",23],["Anh",4]],
+  ch:[["Search",100]],
+  price:"Ẩn / inquiry",model:"Bespoke + MTM, ship toàn cầu (DHL/Fedex)",
+  kw:"bespoke suits vietnam · luxury custom tailoring hcmc · made to measure saigon · bespoke ao dai saigon — KHÔNG có bridal/đồ tiệc",
+  pg:"/bespoke (suits) · /traditional-ao-dai (hub áo dài) · /express-tailoring · fr.duantailor.eu (EU)",
+  seg:"Men's bespoke suits/veston (since 1990) là chính; áo dài là sideline heritage. Site chặn bot → ít data.",
+  pos:"3 đời bespoke Saigon (veston từ 1990), suits-first + dòng áo dài truyền thống, giao toàn cầu.",
+  why:"Tăng từ 0 (~2.8K). Site EN mới bắt market 'Saigon bespoke suit' expat/diaspora. 100% Google. US38/AU23.",
+  imp:"Dù 'aligned nhất' về 'Saigon bespoke', thực chất là nhà SUITS — sở hữu ZERO bridal/occasion/đồ tiệc → lane đó còn trống cho Maison."},
+ {nm:"Linh Nga Bridal",dm:"linhnga.vn",tag:"Bridal luxury legacy (VN)",watch:0,
+  v:[19973,13306,11857,6341,10940,16196,14315,14145,7550,14117,13568,11526],g:-42,
+  geo:[["VN",71],["Mỹ",22],["Canada",2],["Úc",2]],
+  ch:[["Search",45],["Social",30],["Referral",16],["Direct",9]],
+  price:"Áo dài cưới 10–20M; gown tới 180M VND",model:"Couture + rental, tiered",
+  kw:"áo dài cưới luxury/limited/cao cấp · váy cưới cao cấp · thuê váy cưới · wedding dress haute couture",
+  pg:"/ao-dai-cuoi-luxury · /ao-dai-cuoi-limited · /bang-gia-vay-cuoi (price list — SEO magnet) · BST PFW SS2026",
+  seg:"Wedding GOWN là chính (4 tier Grace<Luxury<Limited<Haute Couture, 900+ mẫu); áo dài cưới phụ (~23 SKU, 2 tier).",
+  pos:"Nhà couture cưới hạng celebrity VN — thang từ Grace tới Haute Couture 180M; áo dài là vai phụ cho gown.",
+  why:"-42%. KHÔNG phải category sụp — 'áo dài cưới 2026' đang khỏe & phân mảnh (LAHAVA, Cong Studio thắng). Đây là MẤT SHARE: lệ thuộc rental gown (niche nhạy suy thoái) + paid/social, ít bắt cầu organic mới.",
+  imp:"Lane bespoke áo dài / đồ tiệc mà Linh Nga coi phụ chính là nơi cầu đang tăng → cửa cho Maison."}
+];
+
+const fmt=n=>Math.round(n).toLocaleString('en-US');
+const avg=a=>a.reduce((x,y)=>x+y,0)/a.length;
+
+// metrics
+const rising=DATA.filter(d=>d.g>20).length, declining=DATA.filter(d=>d.g<0).length;
+const M=[["8","đối thủ đào sâu"],[rising+"","đang tăng mạnh (>20%)"],[declining+"","đang giảm"],["~72%","referral AI của Nicole"]];
+document.getElementById('metrics').innerHTML=M.map(m=>`<div class="metric"><div class="n">${m[0]}</div><div class="l">${m[1]}</div></div>`).join('');
+
+// growth diverging bar chart
+(function(){
+ const s=[...DATA].sort((a,b)=>b.g-a.g);
+ const W=720,rowH=33,padL=140,padR=52;
+ const minG=Math.min(...s.map(d=>d.g)), maxG=Math.max(...s.map(d=>d.g));
+ const range=(maxG-minG)||1, plotW=W-padL-padR, scale=plotW/range;
+ const h=s.length*rowH+16;
+ const svg=document.getElementById('growth'); svg.setAttribute('viewBox',`0 0 ${W} ${h}`);
+ const zeroX=padL+(0-minG)*scale;
+ let out=`<line x1="${zeroX.toFixed(1)}" y1="6" x2="${zeroX.toFixed(1)}" y2="${h-10}" stroke="#d8cdb9" stroke-width="1" stroke-dasharray="2 3"/>`;
+ s.forEach((d,i)=>{
+   const y=12+i*rowH, w=(d.g-minG)*scale;
+   const col=d.g>5?'#5d7a4f':(d.g<0?'#b15a40':'#9a9087');
+   out+=`<text x="${padL-8}" y="${y+13}" text-anchor="end" font-family="Georgia,serif" font-size="13" fill="#433c34">${d.nm}</text>`;
+   out+=`<rect x="${padL}" y="${y+3}" width="${Math.max(w,0).toFixed(1)}" height="16" rx="3" fill="${col}"/>`;
+   out+=`<text x="${(padL+w+6).toFixed(1)}" y="${y+15}" text-anchor="start" font-size="12" font-family="Georgia,serif" fill="${col}">${d.g>0?'+':''}${d.g}%</text>`;
+ });
+ svg.innerHTML=out;
+})();
+
+// scale + sparklines
+(function(){
+ const s=[...DATA].sort((a,b)=>avg(b.v)-avg(a.v));
+ const maxA=Math.max(...s.map(d=>avg(d.v)));
+ let html='';
+ s.forEach(d=>{
+   const a=avg(d.v), w=a/maxA*100;
+   html+=`<div style="display:flex;align-items:center;gap:12px;margin:9px 0">
+     <div style="width:135px;flex:none;font-size:13px;color:#433c34;font-family:Georgia,serif">${d.nm}</div>
+     <div style="flex:1;background:#efe9dd;border-radius:5px;height:18px;overflow:hidden"><div style="width:${w}%;height:100%;background:${d.g>5?'#5d7a4f':(d.g<0?'#b15a40':'#a9824e')};border-radius:5px"></div></div>
+     <div style="width:74px;flex:none;text-align:right;font-variant-numeric:tabular-nums;font-size:13px;color:#433c34">${fmt(a)}/th</div>
+     <div style="width:80px;flex:none">${spark(d.v,d.g)}</div></div>`;
+ });
+ document.getElementById('scale').innerHTML=html;
+})();
+
+function spark(v,g){
+ const w=76,h=22,mn=Math.min(...v),mx=Math.max(...v),r=mx-mn||1;
+ const pts=v.map((y,i)=>`${(i/(v.length-1)*w).toFixed(1)},${(h-2-((y-mn)/r)*(h-4)).toFixed(1)}`).join(' ');
+ const col=g>5?'#5d7a4f':(g<0?'#b15a40':'#a9824e');
+ return `<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.6" stroke-linejoin="round"/></svg>`;
+}
+
+// competitor cards
+(function(){
+ const months=['T6','T7','T8','T9','T10','T11','T12','T1','T2','T3','T4','T5'];
+ function barRows(arr,colVal){
+   const tot=100;
+   return arr.map(([l,val])=>`<div class="row"><div class="rt">${l}</div><div class="track"><div class="fill" style="width:${val}%;background:${colVal}"></div></div><div class="rv">${val}%</div></div>`).join('');
+ }
+ function geoRows(arr){
+   return arr.map(([l,val])=>`<div class="row"><div class="rl">${l}</div><div class="track"><div class="fill" style="width:${val}%;background:#a9824e"></div></div><div class="rv">${val}%</div></div>`).join('');
+ }
+ let html='';
+ DATA.forEach(d=>{
+   const pillCls=d.g>5?'up':(d.g<0?'down':'flat'), pillTxt=(d.g>0?'+':'')+d.g+'%';
+   html+=`<div class="comp${d.watch?' watch':''}">
+     <div class="comp-head"><div><span class="nm">${d.nm}</span> <span class="dm">${d.dm}</span></div>
+       <div>${d.watch?'<span class="pill watch">★ Theo dõi</span> ':''}<span class="pill ${pillCls}">${pillTxt} · ${fmt(avg(d.v))}/th</span></div></div>
+     <div style="font-size:12.5px;color:#7c736a;margin-top:3px">${d.tag} · ${d.model} · ${d.price}</div>
+     <div class="comp-grid">
+       <div>
+         <div class="stat-l">Quỹ đạo 12 tháng</div>
+         <svg width="100%" viewBox="0 0 300 70" role="img" aria-label="đường traffic ${d.nm}">${lineChart(d.v)}</svg>
+         <div class="stat-l">Quốc gia khách</div><div class="bars">${geoRows(d.geo)}</div>
+         <div class="stat-l">Kênh traffic</div><div class="bars">${barRows(d.ch,'#7c9b8a')}</div>
+       </div>
+       <div class="facts">
+         <dt>Từ khoá</dt><dd>${d.kw}</dd>
+         <dt>Subpage nổi bật</dt><dd>${d.pg}</dd>
+         <dt>Phân khúc / bán chạy</dt><dd>${d.seg}</dd>
+         <dt>Vì sao ${d.g>5?'tăng':(d.g<0?'giảm':'biến động')}</dt><dd>${d.why}</dd>
+       </div>
+     </div>
+     <div class="imp"><b>Hàm ý cho Maison →</b> ${d.imp}</div>
+   </div>`;
+ });
+ document.getElementById('comps').innerHTML=html;
+
+ function lineChart(v){
+   const W=300,H=70,p=6,mn=Math.min(...v),mx=Math.max(...v),r=mx-mn||1;
+   const xs=i=>p+i/(v.length-1)*(W-2*p), ys=y=>H-p-((y-mn)/r)*(H-2*p);
+   const pts=v.map((y,i)=>`${xs(i).toFixed(1)},${ys(y).toFixed(1)}`).join(' ');
+   const area=`${p},${H-p} ${pts} ${W-p},${H-p}`;
+   const last=v[v.length-1],first=v[0],col=last>=first?'#5d7a4f':'#b15a40';
+   return `<polygon points="${area}" fill="${col}" opacity="0.08"/><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2" stroke-linejoin="round"/><circle cx="${xs(v.length-1)}" cy="${ys(last)}" r="3" fill="${col}"/>`;
+ }
+})();
+
+document.getElementById('method').innerHTML='<b>Phương pháp & độ tin cậy.</b> Traffic/geo/kênh/social/referral = SimilarWeb API (ước lượng, TB T6/2025–T5/2026); SimilarWeb plan này KHÔNG có keyword & popular-pages → từ khoá, subpage, phân khúc lấy từ khảo sát site + SERP trực tiếp (WebFetch/WebSearch, có thể sai số). Site nhỏ (maisondenude.com, dreamdressesbypmn, markandvy, lalune) không đo được. Duan Tailor chặn bot → chỉ dùng SERP snippet. "Phân khúc bán chạy" suy từ tín hiệu merchandising (SKU depth, vị trí nav, review) — KHÔNG phải dữ liệu doanh số thật. Raw JSON: context/markets/data_logs/. Báo cáo chữ đầy đủ: broad-market-research.md.';
+</script>

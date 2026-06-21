@@ -2,6 +2,12 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-21 — Competitor deep-dive + HTML showcase (Maddy)
+
+- Added `markets/competitor-deepdive.html` — interactive showcase (traffic 12-mo trajectory, geo/channel mix, keywords, notable subpages, product segments, growth drivers) for 8 search competitors.
+- Topped up SimilarWeb `social` + `referrals` for the relevant set. Found: AI engines (ChatGPT/Perplexity/Gemini) now major referrers (Nicole ~72%); rising LAHAVA +246% / bebetailor +204% / Nicole +161% vs declining Linh Nga −42%.
+- **Swimwear descoped** from `broad-market-research.md` (not relevant in this segment); shippable-line candidate reframed to designer RTW (fit-giữa, La Lune/Fancì). OQ-010 updated.
+
 ## 2026-06-21 — Broad market research delivered (Maddy)
 
 - Added `markets/broad-market-research.md` — multi-line (de-biased from áo dài) competitor + demand + inbound-tourism research, Vietnamese.
