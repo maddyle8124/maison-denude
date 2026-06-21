@@ -6,7 +6,7 @@ _Last updated: 2026-06-21._
 
 | Person | Role | Owns |
 |--------|------|------|
-| **Thiệu** (= Matthew) | Dev + SEO lead | Front-end → SEO → back-end; all website implementation; tracking infra; SEO structure & publishing. "Matthew" is the English name used in client-facing docs. |
+| **Thiệu** (= Matthew) | Dev + SEO lead; project admin/legal/finance | Front-end → SEO → back-end; all website implementation; tracking infra; SEO structure & publishing. **Also owns all admin, legal, and financing** — contract drafting & signing (sole signatory, Bên B), tax handling, and accounting coordination with the client. "Matthew" is the English name used in client-facing docs. |
 | **Maddy** | Research lead | Market research, keyword research, 5→3 market selection, Playbook research inputs. Owns the GitHub repo (`maddyle8124/maison-denude`). |
 
 Team is **two people only** — no third member; design is handled within the two (MD-024).
