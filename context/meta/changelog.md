@@ -2,6 +2,13 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-22 — Báo cáo stakeholder: tái cấu trúc + ma trận định vị (Maddy)
+
+- Theo phản hồi (gửi stakeholder): bỏ từ casual ("không nói suông") → nêu nguồn chuyên nghiệp; mỗi insight có Dữ liệu → Phân tích → box "ý nghĩa"; thêm bối cảnh ngành/du lịch/fashion mở đầu; bản đồ định vị đổi sang **ma trận 2×2** (giá × may sẵn↔bespoke), Maison đặt ở ô mục tiêu (không để đáy=0); thêm bảng **từ khoá đối thủ** + giải thích cheongsam.
+- **Đính chính factual:** brand ra mắt Paris Haute Couture là **Phan Huy** (không phải Tung Vu); khách thuê áo dài chụp ảnh chủ yếu Nhật/Sing/Phil/Hàn/Tây (không phải TQ); traffic brand may sẵn = Việt kiều.
+- **Đối thủ trực diện** xác định lại = **Meera Meera** (bespoke couture, từ chối thuê/may sẵn) — LAHAVA hạ xuống "tham chiếu chiến thuật phân phối" (mass made-to-measure, khác mô hình).
+- Dữ liệu từ 14 brand mới + workflow 5 agent (Tung Vu/Meera, service offering Trung Đông + The Viet Concept, bản đồ từ khoá, bối cảnh ngành, cầu thuê/may sẵn).
+
 ## 2026-06-21 — Báo cáo dựng lại theo hướng INSIGHT-FIRST (Maddy)
 
 - Theo phản hồi: báo cáo cũ nặng đề xuất, nhiều claim không nguồn, ẩn dụ khó hiểu ("con voi Hội An"). Dựng lại `bao-cao-tong-hop.md` + `.html` thành **9 phát hiện bất ngờ, mỗi cái có nguồn dẫn link**; đề xuất gói gọn thành mục phụ; tiếng Việt phẳng.

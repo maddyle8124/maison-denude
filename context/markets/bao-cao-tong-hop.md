@@ -8,10 +8,11 @@ _Bản trình bày có biểu đồ + bản đồ định vị: [bao-cao-tong-ho
 
 ## 9 PHÁT HIỆN CHÍNH (xếp theo độ bất ngờ)
 
-### 1. Một nhà thiết kế từng lên Paris Haute Couture mà website gần như không ai vào — danh tiếng sàn diễn KHÔNG tự bán được hàng.
-**Số:** Tungvu Atelier (nhà thiết kế Việt, ra mắt tại Paris Haute Couture) chỉ có **~182 lượt truy cập/tháng**, 90% đến từ tìm kiếm tên brand. Cùng lúc, một sàn bán đồ may sẵn (MEAN BLVD) có **106.000 lượt/tháng**.
-**Vì sao quan trọng cho Maison:** Tài sản lớn nhất của Maison hiện nay là "nghệ sĩ đã mặc + tạp chí lớn đưa tin". Tungvu chứng minh thẳng: vinh quang ngoài đời **không tự biến thành lượt truy cập** nếu không có hạ tầng để khách tìm ra (nội dung cho máy đọc, tín hiệu mạng xã hội). Đây là cái bẫy Maison dễ rơi vào.
-**Nguồn:** [vietnamnews.vn](https://vietnamnews.vn/life-style/1764989) (Paris) · tungvuatelier.com · SimilarWeb 5/2026.
+### 1. Danh tiếng couture/sàn diễn KHÔNG tự biến thành lượt truy cập — phải chủ động xây kênh khám phá.
+**Số:** Tung Vu Atelier (atelier designer Việt, đào tạo ở Sydney) chỉ **~182 lượt/tháng**, 90% từ tìm chính tên brand. **Phan Huy** — nhà thiết kế Việt thật sự ra mắt **Paris Haute Couture 2026** — bán qua "đặt lịch tư vấn", không có SEO sản phẩm. Cùng lúc một sàn đồ may sẵn (MEAN BLVD) có **106.000 lượt/tháng**.
+**Vì sao quan trọng cho Maison:** cả hai brand có đẳng cấp/danh tiếng cao nhưng website chỉ đón người *đã biết tên* — không tạo khách lạ. Tài sản "nghệ sĩ đã mặc + tạp chí" của Maison là vốn danh tiếng giống vậy, sẽ lãng phí nếu chỉ để đó → phải có **kế hoạch phân phối chủ động** (Thiệu phụ trách SEO + biến bài báo/nghệ sĩ thành nội dung máy đọc được + chủ động rải link), không chỉ "tối ưu SEO là xong".
+_(Đính chính: brand lên Paris là **Phan Huy**, không phải Tung Vu.)_
+**Nguồn:** [vietnamnews.vn — Phan Huy/Paris](https://vietnamnews.vn/life-style/1764989) · tungvuatelier.com · SimilarWeb 5/2026.
 
 ### 2. Tệp khách dồn ở tầng giá dễ tiếp cận — vì dịch vụ đó mainstream, KHÔNG phải vì couture "hết thời".
 **Dữ liệu:** Cụm đồ dự tiệc may sẵn cộng lại **>200.000 lượt/tháng** (MEAN BLVD 106K, HUONG 56K, Chuui 32K, Kisserine 14K), tăng +30% đến +373%. Cụm couture nhỏ hơn nhiều bậc (Tungvu 182, Meera 2,5K, La Fée 2,4K).
@@ -72,9 +73,9 @@ Khi xác minh giá thật từng website, **ranh giới "2 cụm" ban đầu ho�
 
 **Đọc bản đồ cho đúng (rất quan trọng):** KHÔNG phải "couture trên $1.700 đang hết thời". Giá cao thì tệp khách vốn dĩ nhỏ → ít lượt là **chuyện hiển nhiên**, không phải suy tàn. Điều đáng học là **3 ngoại lệ phá luật**: **MEAN BLVD** (106K vì là sàn ~80 brand → dịch vụ đồ dự tiệc may sẵn mainstream nhất), **La Fée** (+318% dù giá cao vì bán tên tuổi couture quốc tế Elie Saab/Vera Wang), **LAHAVA** (+246% ở giá vừa — playbook dưới). Maison ở giá vừa–cao với tệp = 0 → phải chọn một cách "phá luật", không thể "đứng giá cao rồi chờ".
 
-**Maison nằm đâu:** Về *cách làm* (may đo, đa dòng, cao cấp) Maison thuộc cụm 4 — nhưng cụm 4 đang là **tấm gương cảnh báo** (may đo + giấu giá = website không kéo được khách). **Hình mẫu sát nhất để học là LAHAVA (cụm 5)** — chi tiết playbook ngay dưới.
+**Đối thủ trực diện là ai (sửa lại):** "Trực diện" = cùng **mô hình bespoke/may đo couture thật** (từ chối may sẵn hàng loạt & cho thuê) + **đa dòng** + cùng **tệp/đấu trường tìm kiếm**. Theo tiêu chí này, **LAHAVA KHÔNG phải đối thủ trực diện** — nó là **may-đo-hàng-loạt** (giá hiện $365–560, bán online theo quy trình số đo), một "loài" khác. **Đối thủ trực diện thật sự = Meera Meera**: atelier bespoke couture (công khai *"Not available for rent or ready-to-wear"*), giấu giá, lead time 2–8 tháng, đa dòng (cưới + dạ tiệc + phụ dâu), đua trên đúng từ khoá "bespoke/couture wedding Saigon". **Khoảng trống Maison đánh:** Meera lấy váy cưới Tây làm lõi — Maison lấy **áo dài làm lõi văn hoá** rồi mở sang dạ tiệc/cưới/couture. _(Tung Vu = bán-trực diện: đẹp nhưng theo size, không có áo dài. Phan Huy = đối thủ khát vọng tầng trên.)_
 
-### LAHAVA — đối thủ trực tiếp đã làm gì cụ thể (Maison học được)
+### LAHAVA — tham chiếu CHIẾN THUẬT PHÂN PHỐI (không phải đối thủ cùng mô hình, nhưng đáng học cách bán)
 
 LAHAVA +246% (7.533 lượt/th, khách Mỹ 66% / Úc 13% / Canada 11%) — cùng mô hình may-đo-đa-dòng-có-áo-dài như Maison. 6 việc cụ thể (đã kiểm trên lahava.com + lahava.vn ngày 21/6):
 
