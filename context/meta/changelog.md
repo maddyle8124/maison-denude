@@ -2,6 +2,13 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-22 — Báo cáo v5: cầu thật từ Reddit, biểu đồ tương tác, breakdown từng đối thủ (Maddy)
+
+- Theo phản hồi chi tiết: xuống dòng nhiều hơn; **bỏ số liệu báo cáo ngành/báo chí** (CAGR, VnExpress) → thay bằng (a) **chart nguồn khách** đến VN, (b) **tín hiệu cầu thật từ Reddit/forum** (quote + link, đặc biệt nỗi đau Việt kiều: giá Mỹ $170–400, nhờ người nhà mua hộ).
+- Bỏ Công Trí / Phan Huy / chữ "couture" khỏi phần bối cảnh; tập trung **đối thủ áo dài có khách Mỹ/Úc** với **breakdown geo đầy đủ từng brand (gồm % Trung Đông)** + nước của brand (East Meets Dress = Mỹ, không phải VN).
+- **Ma trận + brand clickable** (mở website); **chart tổng kết thị trường nào đông/bỏ trống** (outlier: Trung Đông ngầm; Nhật/Hàn vắng mặt online); **highlight ngách sườn xám**.
+- Insight rút gọn còn 4 (dựa lưu lượng/site, không báo chí); **evidence card Trung Đông** (banner HUONG + Modest Edit). **Đối thủ trực diện = Meera Meera** + **bảng so sánh** Maison/Meera/Tung Vu (bỏ LAHAVA, bỏ Phan Huy). Thêm **mục câu hỏi mở + hướng pivot** để gửi nhóm.
+
 ## 2026-06-22 — Báo cáo stakeholder: tái cấu trúc + ma trận định vị (Maddy)
 
 - Theo phản hồi (gửi stakeholder): bỏ từ casual ("không nói suông") → nêu nguồn chuyên nghiệp; mỗi insight có Dữ liệu → Phân tích → box "ý nghĩa"; thêm bối cảnh ngành/du lịch/fashion mở đầu; bản đồ định vị đổi sang **ma trận 2×2** (giá × may sẵn↔bespoke), Maison đặt ở ô mục tiêu (không để đáy=0); thêm bảng **từ khoá đối thủ** + giải thích cheongsam.

@@ -4,222 +4,307 @@
     --ivory:#f6f1e9; --paper:#fffdf9; --ink:#2a2521; --muted:#7c736a; --soft:#9a9087;
     --line:#e6ddcf; --line2:#d8cdb9; --gold:#a9824e; --goldbg:#f0e7d6; --downbg:#f6e6df;
     --up:#5d7a4f; --down:#b15a40;
-    --vn:#8a6a86; --dia:#5b7a9a; --west:#9a8c78;
+    --vn:#8a6a86; --dia:#5b7a9a; --west:#9a8c78; --me:#c08a3e;
     --serif:Georgia,'Times New Roman',serif; --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box}
-  .wrap{max-width:1060px;margin:0 auto;padding:32px 22px 80px;color:var(--ink);font-family:var(--sans);background:var(--ivory);line-height:1.62;font-size:15px;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.22}
-  h1{font-size:31px;margin:0 0 6px} h2{font-size:22px;margin:44px 0 4px} h3{font-size:17px;margin:0 0 4px}
+  .wrap{max-width:1060px;margin:0 auto;padding:32px 22px 80px;color:var(--ink);font-family:var(--sans);background:var(--ivory);line-height:1.66;font-size:15px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.25}
+  h1{font-size:31px;margin:0 0 6px} h2{font-size:22px;margin:46px 0 4px} h3{font-size:16px;margin:0 0 4px}
   .secnum{color:var(--gold);font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.05em}
   .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:var(--gold);font-weight:600;margin:0 0 10px}
-  .sub{color:var(--muted);font-size:13.5px;margin:2px 0 0}
+  .sub{color:var(--muted);font-size:13.5px;margin:4px 0 0}
   .rule{height:1px;background:var(--line2);border:0;margin:10px 0 0}
-  .lead{font-size:16px;color:#473f38;margin:14px 0 0;max-width:82ch}
-  p{margin:11px 0 0;max-width:84ch}
+  p{margin:12px 0 0;max-width:86ch}
   a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line2)} a:hover{border-color:var(--gold)}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .src{font-size:11.5px;color:var(--soft);margin-top:6px} .src a{font-size:11.5px}
-  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 0}
-  .metric{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-  .metric .n{font-family:var(--serif);font-size:23px;font-weight:600;line-height:1.05;color:var(--ink)}
-  .metric .l{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}
-  .srcbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 17px;margin:16px 0 0;font-size:13px;color:#4d453d}
-  .srcbox b{color:var(--ink)}
+  .srcbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 17px;margin:16px 0 0;font-size:13px;color:#4d453d} .srcbox b{color:var(--ink)}
   .chartbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 16px 10px;margin:14px 0 0;overflow-x:auto}
-  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin:0 2px 10px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin:0 2px 12px}
   .legend span{display:inline-flex;align-items:center;gap:6px}
   .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
-  .readbox{background:var(--goldbg);border-radius:10px;padding:13px 16px;margin:12px 0 0;font-size:13.5px;color:#5a4628} .readbox b{color:#3f3118}
+  .readbox{background:var(--goldbg);border-radius:10px;padding:14px 16px;margin:12px 0 0;font-size:13.5px;color:#5a4628} .readbox b{color:#3f3118} .readbox p{margin:8px 0 0;max-width:none}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:14px 0 0}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:12px;border-left:3px solid var(--dia);padding:13px 15px}
+  .q .tag{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--dia);margin:0 0 5px}
+  .q .tag.gap{color:var(--down)}
+  .q blockquote{margin:0;font-size:13px;color:#3a342e;font-style:italic;line-height:1.5}
+  .q .meta{font-size:11px;color:var(--soft);margin-top:7px}
+  .comp{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:15px 17px;margin:12px 0 0}
+  .comp-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;justify-content:space-between}
+  .comp-h .nm{font-family:var(--serif);font-size:17px;font-weight:600} .comp-h .nm a{border:0;color:var(--ink)} .comp-h .nm a:hover{color:var(--gold)}
+  .comp-h .flag{font-size:12px;color:var(--muted)}
+  .pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .pill.up{background:#e8efe2;color:var(--up)} .pill.down{background:var(--downbg);color:var(--down)} .pill.flat{background:#efe9df;color:var(--soft)}
+  .comp-geo{display:flex;height:16px;border-radius:5px;overflow:hidden;margin:10px 0 5px;border:1px solid var(--line)}
+  .comp-geo i{height:100%} .geo-key{font-size:11px;color:var(--muted);display:flex;flex-wrap:wrap;gap:9px}
+  .geo-key b{color:#433c34;font-weight:600}
+  .comp-meta{font-size:12.5px;color:#473f38;margin-top:9px} .comp-meta b{color:var(--ink)}
+  .me-tag{display:inline-block;font-size:10.5px;font-weight:600;background:#f4e7d0;color:#8a5a1e;border-radius:5px;padding:1px 7px;margin-left:6px}
   .tbl-wrap{overflow-x:auto;margin:12px 0 0}
   table{border-collapse:collapse;width:100%;font-size:12.5px;background:var(--paper);border-radius:10px;overflow:hidden}
-  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{background:var(--goldbg);color:#5a4628;font-weight:600;font-size:11.5px} td{color:#433c34}
-  td b{color:var(--ink)}
-  .ins{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0 0;display:flex;gap:15px}
-  .ins .no{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--gold);line-height:1;flex:none;width:32px}
-  .ins .body{flex:1;min-width:0}
-  .ins h3{font-family:var(--sans);font-size:16px;font-weight:600;margin:0 0 9px;line-height:1.35}
-  .ins .lab{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px}
-  .ins .lab.d{color:var(--dia)} .ins .lab.a{color:var(--gold)}
-  .ins .data{font-size:13px;color:#433c34;background:var(--ivory);border-radius:8px;padding:8px 11px;margin:0 0 9px;border-left:3px solid var(--dia)} .ins .data b{color:var(--ink)}
-  .ins .ana{font-size:13.5px;color:#473f38;margin:0 0 9px}
-  .ins .take{font-size:13px;color:#5a4628;background:var(--goldbg);border-radius:8px;padding:9px 12px;margin:0 0 8px} .ins .take b{color:#3f3118}
-  @media(max-width:600px){.ins{flex-direction:column;gap:6px}.ins .no{width:auto}}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top} th{background:var(--goldbg);color:#5a4628;font-weight:600;font-size:11.5px} td{color:#433c34} td b{color:var(--ink)}
+  .ins{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0 0}
+  .ins h3{font-family:var(--sans);font-size:16px;font-weight:600;margin:0 0 10px;line-height:1.4}
+  .ins .lab{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin:12px 0 3px} .ins .lab.d{color:var(--dia)} .ins .lab.a{color:var(--gold)}
+  .ins .data{font-size:13px;color:#433c34;background:var(--ivory);border-radius:8px;padding:9px 12px;border-left:3px solid var(--dia)} .ins .data b{color:var(--ink)}
+  .ins .ana{font-size:13.5px;color:#473f38;margin:6px 0 0}
+  .ins .take{font-size:13px;color:#5a4628;background:var(--goldbg);border-radius:8px;padding:10px 13px;margin:12px 0 0} .ins .take b{color:#3f3118}
+  .evcard{background:var(--paper);border:1px solid var(--line2);border-radius:12px;padding:0;overflow:hidden;margin:12px 0 0}
+  .evcard .banner{background:#23408a;color:#fff;font-size:12.5px;padding:8px 14px;text-align:center;letter-spacing:.02em}
+  .evcard .ttl{background:#3a342e;color:#f0e7d6;font-size:12px;padding:7px 14px;font-style:italic}
+  .evcard .bd{padding:13px 16px;font-size:13px;color:#473f38}
+  .evcard .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px} .evcard .chip{font-size:11.5px;background:var(--ivory);border:1px solid var(--line);border-radius:6px;padding:3px 9px;color:#5a4628}
   .deep{background:var(--paper);border:2px solid var(--gold);border-radius:14px;padding:18px 22px;margin:14px 0 0}
   .deep h3{font-family:var(--serif);font-size:18px;margin:0 0 6px}
-  .flag{background:var(--downbg);border:1px solid #e6c3b5;border-radius:10px;padding:12px 15px;margin:14px 0 0;font-size:12.5px;color:#6e3a28} .flag b{color:#5a2e20}
+  .oq{background:var(--ink);color:#f1e7d6;border-radius:14px;padding:20px 24px;margin:14px 0 0}
+  .oq h3{color:#f6efe1;font-family:var(--serif);margin:0 0 4px;font-size:18px} .oq ol{margin:12px 0 0;padding-left:20px} .oq li{font-size:14px;margin:10px 0;color:#e7dccb} .oq li b{color:#f0c98a}
+  .flag{background:var(--downbg);border:1px solid #e6c3b5;border-radius:10px;padding:12px 15px;margin:14px 0 0;font-size:12.5px;color:#6e3a28} .flag b{color:#5a2e20} .flag p{margin:7px 0 0;max-width:none}
   .note{font-size:12px;color:var(--muted);background:var(--paper);border:1px dashed var(--line2);border-radius:10px;padding:14px 16px;margin-top:18px}
+  .cheong{background:#f0e7d6;border-radius:12px;padding:14px 17px;margin:12px 0 0;border-left:4px solid var(--gold)} .cheong b{color:#3f3118}
 </style>
 
 <div class="wrap">
-  <h2 class="sr-only">Báo cáo thị trường và cạnh tranh cho Maison Dénudé: bối cảnh ngành, ma trận định vị đối thủ, phân tích từ khoá, insight có dữ liệu, và đối thủ trực diện.</h2>
-  <p class="kicker">Maison Dénudé · Báo cáo nội bộ · 21/6/2026 · Maddy (nghiên cứu)</p>
+  <h2 class="sr-only">Báo cáo thị trường và cạnh tranh Maison Dénudé: nguồn khách, tín hiệu cầu thật từ Reddit, ma trận định vị, phân tích từng đối thủ, đối thủ trực diện Meera Meera, câu hỏi mở.</h2>
+  <p class="kicker">Maison Dénudé · Báo cáo nội bộ · 22/6/2026 · Maddy (nghiên cứu)</p>
   <h1>Báo cáo thị trường &amp; cạnh tranh</h1>
-  <p class="sub">Bối cảnh ngành → ma trận cạnh tranh → từ khoá → insight → đối thủ trực diện</p>
+  <p class="sub">Nguồn khách → cầu thật → ma trận cạnh tranh → từng đối thủ → đối thủ trực diện → câu hỏi mở</p>
   <hr class="rule"/>
-  <div class="srcbox"><b>Nguồn &amp; phương pháp.</b> Báo cáo được nghiên cứu và phân tích dựa trên: <b>(1)</b> dữ liệu lưu lượng truy cập, phân bố quốc gia khách và kênh của <b>24 thương hiệu</b> qua SimilarWeb (trung bình tháng, đo T6/2025–T5/2026); <b>(2)</b> khảo sát trực tiếp website từng thương hiệu (sản phẩm, giá, mô hình, từ khoá) ngày 21–22/6/2026; <b>(3)</b> Google Trends; <b>(4)</b> số liệu du lịch &amp; thị trường thời trang từ VnExpress, Expert Market Research, Global Growth Insights; <b>(5)</b> báo chí (VnExpress, Kenh14, WWD, VietnamNews). Số lưu lượng là <b>ước lượng</b>; mọi nhận định về giá/hành vi đều kèm đường dẫn nguồn gốc.</div>
+  <div class="srcbox"><b>Nguồn &amp; phương pháp.</b> Báo cáo dựa trên: <b>(1)</b> dữ liệu lưu lượng &amp; phân bố quốc gia khách của 24 thương hiệu qua SimilarWeb (TB tháng, T6/2025–T5/2026); <b>(2)</b> tín hiệu cầu thật từ <b>Reddit &amp; forum</b> (tiếng nói người dùng, có đường dẫn); <b>(3)</b> khảo sát trực tiếp website từng thương hiệu. Báo cáo <b>không dựa vào số liệu báo cáo ngành hay báo chí</b> (khó kiểm chứng) — chỉ dùng dữ liệu lưu lượng đo được + bằng chứng người dùng có thể bấm vào kiểm tra. Số lưu lượng là ước lượng.</div>
 
-  <h2><span class="secnum">A ·</span> Bối cảnh ngành &amp; thị trường</h2>
-  <div class="metrics">
-    <div class="metric"><div class="n">9,56%/năm</div><div class="l">Tăng trưởng thị trường may đo toàn cầu ($54,8B → $124,6B đến 2033)</div></div>
-    <div class="metric"><div class="n">12,8%/năm</div><div class="l">Tăng trưởng thị trường quần áo Việt Nam ($5,26B → $17,5B đến 2035)</div></div>
-    <div class="metric"><div class="n">14,4%/năm</div><div class="l">Phân khúc Premium &amp; Luxury VN — tăng nhanh nhất</div></div>
-    <div class="metric"><div class="n">21,2 triệu</div><div class="l">Khách quốc tế đến VN 2025 (+20%, kỷ lục)</div></div>
+  <h2><span class="secnum">A ·</span> Nguồn khách quốc tế đến Việt Nam (2025)</h2>
+  <p class="sub">21,2 triệu khách quốc tế — phân bố theo nước (nghìn lượt). Đây là "bể" khách mà mọi mô hình inbound đều rút từ đó.</p>
+  <div class="chartbox"><svg id="arrivals" width="100%" viewBox="0 0 720 250" role="img" aria-label="Biểu đồ nguồn khách quốc tế đến Việt Nam theo nước"></svg></div>
+  <p class="sub">Quan sát: lượng khách lớn nhất là <b>Trung Quốc &amp; Hàn</b>, nhưng (xem mục C) hai nước này gần như <b>vắng mặt trên web</b> của các đối thủ — họ chuyển đổi qua thuê/chụp ảnh tại chỗ, không qua thương mại điện tử. <b>Mỹ &amp; Úc</b> nhỏ hơn về lượng khách nhưng là tệp <b>mua online</b> chính (Việt kiều).</p>
+
+  <h2><span class="secnum">A ·</span> Cầu thật — tiếng nói người dùng trên Reddit / forum</h2>
+  <p class="sub">Thay vì trích báo chí, đây là câu hỏi thật người dùng đăng công khai (bấm vào để kiểm chứng). Phân nhóm theo độ mạnh của tín hiệu.</p>
+  <div class="quotes" id="quotes"></div>
+  <div class="readbox"><b>Đọc tín hiệu cầu:</b>
+    <p>• <b>Mạnh nhất — Việt kiều đặt từ xa:</b> nỗi đau lặp lại rõ — giá ở Mỹ đắt ($170–400/bộ), không thử được tại chỗ, e ngại mua online từ VN, hiện phải "nhờ họ hàng về VN mua hộ". Đây là <b>khoảng trống thị trường rõ nhất</b>.</p>
+    <p>• <b>Rất mạnh — áo dài (cưới &amp; thường):</b> chủ đề nóng nhất; cầu may đo rõ.</p>
+    <p>• <b>Mạnh — may đo nói chung ở VN:</b> du khách &amp; khách công tác chủ động hỏi nơi may chất lượng.</p>
+    <p>• <b>Yếu/whitespace — đầm dạ tiệc:</b> trung thực — tiếng nói người dùng còn mỏng (chủ yếu gộp trong "đầm dự tiệc/dự cưới"), là cơ hội mở chứ chưa phải cầu lớn.</p>
   </div>
-  <p><b>Mô hình của Maison nằm trên đường tăng trưởng, không đi ngược dòng.</b> May đo / cá nhân hoá là xu hướng toàn cầu (+9,56%/năm), và tại Việt Nam phân khúc <b>cao cấp tăng nhanh nhất (14,4%/năm)</b> nhờ tầng lớp thu nhập cao đô thị — đúng tệp khách lõi của một nhà couture <span class="src">(Global Growth Insights; <a href="https://www.expertmarketresearch.com/reports/vietnam-clothing-market">Expert Market Research</a>).</span></p>
-  <p><b>"Đi du lịch để may đồ" là hành vi có thật.</b> Du lịch VN đạt kỷ lục 21,2 triệu khách 2025 (Trung Quốc 5,2tr · Hàn 4,3tr · Mỹ 848K · Nhật 814K · Ấn 746K · Úc 548K). Hội An là bằng chứng: cả một ngành may đo phục vụ khách quốc tế — nhưng định vị lõi là <b>vest/giá rẻ</b> ($20–30/món), để ngỏ khoảng trống couture/áo dài cao cấp <span class="src">(<a href="https://e.vnexpress.net/news/travel/vietnam-wraps-up-2025-with-21-2-million-foreign-arrivals-an-all-time-high-5002041.html">VnExpress</a>).</span></p>
-  <p><b>Việt kiều là tệp khách văn hoá bền vững</b> — đặt may áo dài từ xa, giao toàn cầu (khớp với việc các đối thủ áo dài đều có tỷ trọng khách Mỹ/Úc cao). Và couture Việt đã có <b>bệ phóng danh tiếng quốc tế</b>: Nguyễn Công Trí (khách Beyoncé, Michelle Obama, BLACKPINK; thành viên Asia Couture Federation 2014), Phan Huy (ra mắt Paris Haute Couture 2026) <span class="src">(<a href="https://congtri.com/atelier/">congtri.com</a>; <a href="https://vietnamnews.vn/life-style/1764989">VietnamNews</a>).</span></p>
 
   <h2><span class="secnum">B ·</span> Ma trận cạnh tranh — Maison đứng giữa một thị trường rất đông</h2>
-  <p class="sub"><b>Trục ngang</b> = giá. <b>Trục dọc</b> = mô hình: dưới = may sẵn / cho thuê (chuẩn hoá), trên = may đo / bespoke (cá nhân hoá). <b>Độ lớn chấm</b> = lưu lượng/tháng. <b>Màu</b> = tệp khách chính.</p>
+  <p class="sub"><b>Ngang</b> = giá. <b>Dọc</b> = mô hình (dưới: may sẵn/cho thuê · trên: may đo/bespoke). <b>Cỡ chấm</b> = lưu lượng. <b>Màu</b> = tệp khách chính. <b>Bấm vào tên brand để mở website của họ.</b></p>
   <div class="chartbox">
     <div class="legend">
       <span><i class="dot" style="background:var(--vn)"></i>Khách Việt Nam</span>
       <span><i class="dot" style="background:var(--dia)"></i>Việt kiều (Mỹ/Úc)</span>
-      <span><i class="dot" style="background:var(--west)"></i>Khách phương Tây / quốc tế</span>
-      <span><i class="dot" style="background:transparent;border:2px solid var(--gold)"></i>◆ Maison (định vị mục tiêu)</span>
-      <span style="color:var(--gold)">⬦ = phục vụ Trung Đông</span>
+      <span><i class="dot" style="background:var(--west)"></i>Phương Tây / quốc tế</span>
+      <span><i class="dot" style="background:transparent;border:2px solid var(--gold)"></i>◆ Maison (mục tiêu)</span>
     </div>
-    <svg id="matrix" width="100%" viewBox="0 0 900 620" role="img" aria-label="Ma trận định vị: trục ngang giá, trục dọc mô hình may sẵn đến bespoke, Maison ở góc trên phải"></svg>
+    <svg id="matrix" width="100%" viewBox="0 0 900 600" role="img" aria-label="Ma trận định vị, các thương hiệu bấm được để mở website"></svg>
   </div>
-  <div class="readbox"><b>Đọc ma trận:</b> Maison bước vào một thị trường <b>rất đông và phân mảnh theo vùng khách</b> (VN / Việt kiều / phương Tây) và theo mô hình (may sẵn–thuê ↔ bespoke). Lưu lượng lớn dồn ở <b>góc dưới-trái</b> (đồ may sẵn giá thấp, tệp Việt kiều — chấm to). Góc <b>trên-phải</b> (bespoke couture cao cấp) chấm nhỏ vì tệp vốn hẹp — nhưng <b>gần như chưa ai sở hữu rõ ô "atelier đa dòng có áo dài làm lõi"</b>. Maison đặt mục tiêu ở đây: cùng mô hình bespoke với Meera Meera nhưng khác điểm tựa sản phẩm (áo dài văn hoá), đứng trên LAHAVA về tầng giá/đẳng cấp.</p></div>
+  <div class="readbox"><b>Đọc ma trận:</b> Maison vào một thị trường <b>rất đông, phân mảnh theo vùng khách và theo mô hình</b>. Lưu lượng lớn dồn ở <b>góc dưới-trái</b> (may sẵn giá thấp). Góc <b>trên-phải</b> (bespoke cao cấp) chấm nhỏ vì tệp hẹp — nhưng <b>gần như chưa ai sở hữu rõ ô "atelier đa dòng lấy áo dài làm lõi"</b>. Câu hỏi cốt lõi: Maison sẽ cạnh tranh trực diện với <b><a href="https://meerameera.net/">Meera Meera</a>, <a href="https://tungvuatelier.com/">Tung Vu</a>, <a href="https://lafeevietnam.com/">La Fée</a></b> ở góc này bằng gì? (xem mục E).</p></div>
 
-  <h2><span class="secnum">C ·</span> Đối thủ &amp; từ khoá họ đang đua (SimilarWeb + khảo sát site)</h2>
-  <div class="tbl-wrap"><table>
-    <tr><th>Thương hiệu</th><th>Lượt/th</th><th>Khách chính</th><th>Mô hình</th><th>Đua trên từ khoá</th></tr>
-    <tr><td><b>MEAN BLVD</b></td><td>106K (+179%)</td><td>Mỹ47 · Ả-Rập6</td><td>Sàn ~80 NTK, may sẵn theo size</td><td>vietnamese designer dresses, couture evening gowns, "Modest Edit"</td></tr>
-    <tr><td><b>East Meets Dress</b></td><td>63K (ổn định)</td><td>Mỹ61</td><td>May-theo-size, lõi <b>sườn xám</b></td><td>chinese wedding dress, cheongsam, qipao, qun kwa (áo dài chỉ phụ)</td></tr>
-    <tr><td><b>HUONG Boutique</b></td><td>56K (+30%)</td><td>Mỹ49</td><td>May sẵn (RTW), ship Trung Đông</td><td>cocktail, event &amp; gala, pre-wedding, resort</td></tr>
-    <tr><td><b>Kisserine</b></td><td>14K (+373%)</td><td>Mỹ37 · VN35</td><td>May sẵn giá thấp (&lt;$100–570)</td><td>satin/silk dress, bridal, đầm đi tiệc giá rẻ</td></tr>
-    <tr><td><b>LAHAVA</b></td><td>7,5K (+246%)</td><td>Mỹ66 · Úc13</td><td><b>May đo hàng loạt</b> ($365–560)</td><td>custom ao dai, wedding ao dai 2026 online, evening dresses custom</td></tr>
-    <tr><td><b>Nicole Bridal</b></td><td>18K (+161%)</td><td>VN43 · Mỹ28</td><td><b>Cho thuê</b> + may đo cưới</td><td>váy cưới cao cấp, thuê áo dài cưới, áo dài cưới tphcm</td></tr>
-    <tr><td><b>Meera Meera</b> ★</td><td>2,6K</td><td>VN77 · Mỹ23</td><td><b>Bespoke couture</b> (từ chối thuê/may sẵn)</td><td>vietnamese bridal couture, bespoke/custom wedding dress, đầm dạ tiệc cao cấp</td></tr>
-    <tr><td><b>Tung Vu Atelier</b></td><td>182</td><td>Mỹ100</td><td>Prêt-à-couture (theo size) + sỉ Gulf</td><td>evening gown, cocktail (KHÔNG có áo dài)</td></tr>
-    <tr><td><b>Truvelle / Serene Hill</b></td><td>19,6K / 11K</td><td>Mỹ/Canada</td><td>Bridal phương Tây (RTW/bán sỉ)</td><td>modern bridalwear, 2026 wedding collection</td></tr>
-    <tr><td>Bebe / A Dong / Yaly</td><td>11–27K</td><td>Mỹ + VN</td><td>Thợ may du lịch Hội An (lõi vest)</td><td>hoi an tailor, hoi an suit price, custom suit hoi an</td></tr>
-  </table></div>
-  <p class="sub" style="margin-top:8px"><b>"Sườn xám" (cheongsam/qipao)</b> là đầm ôm body cổ tàu, cài vạt chéo, xẻ tà của phụ nữ Hoa — gốc Thượng Hải 1920. East Meets Dress chiếm gần như độc quyền ngách <b>cưới Hoa-Mỹ</b> này → KHÔNG phải đối thủ áo dài trực diện, nhưng là <b>hình mẫu</b> "chiếm 1 từ khoá ngách + bespoke online + nhắm diaspora Mỹ" <span class="src">(<a href="https://en.wikipedia.org/wiki/Qipao">Wikipedia</a>; eastmeetsdress.com).</span></p>
-  <div class="readbox"><b>Khoảng trống từ khoá (chưa ai mạnh ở tầng trên):</b> (1) <b>"đầm dạ tiệc couture đo người cao cấp"</b> — LAHAVA chiếm nhưng ở tầng may-đo-hàng-loạt; MEAN BLVD/HUONG chỉ bán gown may sẵn. (2) <b>"atelier đa dòng bespoke: áo dài + dạ tiệc + cưới trong một nhà"</b> — mọi đối thủ đều đơn-lõi. (3) <b>"áo dài couture cao cấp (sự kiện/Tết, không phải cưới)"</b>. _Lưu ý: từ khoá suy từ tiêu đề/slug/SERP của site (plan SimilarWeb không có dữ liệu keyword) → nên xác thực bằng Ahrefs/SEMrush trước khi đặt ngân sách._</div>
+  <h2><span class="secnum">C ·</span> Phân tích từng đối thủ áo dài có khách Mỹ/Úc</h2>
+  <p class="sub">Mỗi thẻ: <b>nước của brand</b> · lưu lượng + đà · phân bố quốc gia khách (đầy đủ, gồm Trung Đông) · mô hình · từ khoá. Bấm tên brand để mở site.</p>
+  <div id="comps"></div>
 
-  <h2><span class="secnum">D ·</span> Insight chính (dữ liệu → phân tích → ý nghĩa)</h2>
+  <div class="cheong"><b>⬦ Phát hiện ngách: "sườn xám" (cheongsam / qipao).</b> Đây là đầm ôm body cổ tàu, cài vạt chéo, xẻ tà của phụ nữ Hoa (gốc Thượng Hải 1920) — <b>khác hẳn áo dài</b>. <b>East Meets Dress là brand MỸ (Mỹ-gốc-Á), KHÔNG phải Việt Nam</b>, và họ chiếm gần như độc quyền ngách <b>cưới sườn xám Hoa-Mỹ</b> (63K lượt, Mỹ 61%) — áo dài chỉ là dòng phụ. Bài học: họ thắng nhờ <b>sở hữu một từ khoá ngách + bán bespoke online + nhắm đúng một cộng đồng diaspora</b>. Maison không nên đua sườn xám, nhưng nên học cách "chiếm trọn một ngách văn hoá".</div>
+
+  <h2><span class="secnum">C ·</span> Tổng kết: thị trường nào đông, thị trường nào bỏ trống</h2>
+  <p class="sub">Số thương hiệu có thị phần đáng kể (≥5% lưu lượng, riêng Trung Đông ≥2%) ở mỗi thị trường.</p>
+  <div class="chartbox"><svg id="markets" width="100%" viewBox="0 0 720 230" role="img" aria-label="Số thương hiệu nhắm mỗi thị trường"></svg></div>
+  <div class="readbox"><b>Điểm chung &amp; điểm khác (outlier):</b>
+    <p>• <b>Điểm chung:</b> gần như mọi brand đều có <b>Mỹ</b> là chiến trường (Việt kiều); <b>Úc + Canada</b> theo sau (diaspora).</p>
+    <p>• <b>Outlier 1 — Trung Đông là thị trường "ngầm" có thật:</b> chỉ ~3 brand chạm tới (MEAN BLVD 8,6%, Serene Hill 2,3%, HUONG 1,1%) nhưng họ <b>chủ động</b> mở dòng modest + ship Trung Đông → thị phần nhỏ nhưng cố ý, chưa bão hoà.</p>
+    <p>• <b>Outlier 2 — Nhật &amp; Hàn gần như VẮNG MẶT trên web</b> dù là 2 nguồn khách du lịch lớn nhất → họ tiêu qua thuê/chụp ảnh tại chỗ, không qua thương mại điện tử. Một khoảng trống (hoặc một lời cảnh báo: đừng kỳ vọng bán online cho tệp này).</p>
+  </div>
+
+  <h2><span class="secnum">D ·</span> Insight chính (ít mà chắc — dựa trên lưu lượng &amp; site, không dựa báo chí)</h2>
   <div id="insights"></div>
 
-  <h2><span class="secnum">E ·</span> Đối thủ trực diện của Maison là ai?</h2>
-  <p class="sub">Tiêu chí "trực diện" = giao của 3 điều kiện: (1) cùng mô hình <b>bespoke/may đo couture thật</b> — từ chối may sẵn hàng loạt &amp; cho thuê; (2) <b>đa dòng</b> (≥2 trong: áo dài / dạ tiệc / cưới / couture); (3) cùng <b>tệp khách &amp; đấu trường tìm kiếm</b>. → Theo tiêu chí này, <b>LAHAVA KHÔNG phải đối thủ trực diện</b> (là may-đo-hàng-loạt, giá hiện $365–560, bán online theo quy trình số đo) — nó là một "loài" khác.</p>
-  <div class="deep">
-    <h3>★ Meera Meera — đối thủ trực diện nhất (cùng mô hình)</h3>
-    <p style="margin-top:4px"><b>Là ai:</b> "famous Vietnamese luxury bridal couture atelier… established since 2012… meticulous luxurious wedding dresses that are unique and <b>custom-made</b> to you". Đa dòng: cưới + đầm dạ tiệc + phụ dâu. Bộ sưu tập: <i>SEN–Lotus, Bản Năng, Dòng Suối Hoa Hồng</i>.</p>
-    <p><b>Mô hình giống Maison nhất:</b> <b>bespoke đo người thật</b>, công khai <i>"Not available for rent or ready-to-wear"</i>; giấu giá (web hiện 0₫), tư vấn 1-1, lead time <b>2–8 tháng</b>, giá ~$1.200–1.500+; có hạ tầng phục vụ khách quốc tế (FedEx). Đua trên đúng từ khoá Maison sẽ vào: "vietnamese bridal couture / bespoke wedding dress Saigon".</p>
-    <p><b>Khoảng trống để Maison đánh:</b> Meera lấy <b>váy cưới Tây làm lõi, áo dài chỉ là phụ</b>. Maison có thể định vị là atelier đa dòng <b>lấy áo dài làm lõi văn hoá</b> rồi mở sang dạ tiệc/cưới/couture — cùng mô hình bespoke (giành cùng tệp) nhưng khác điểm tựa sản phẩm (tránh đối đầu trực tiếp dòng váy cưới Tây mà Meera đã dẫn 14 năm).</p>
-    <p class="src">Nguồn: <a href="https://meerameera.net/">meerameera.net</a> · <a href="https://meerameera.net/pages/instruction-for-international-customers">instruction-for-international-customers</a></p>
-    <hr class="rule" style="margin:14px 0 0"/>
-    <p style="margin-top:12px"><b>Hai cái tên cạnh đó (không hoàn toàn trực diện):</b> <b>Tung Vu Atelier</b> — đầm dạ tiệc/bridal đẹp, nhưng bán theo size (prêt-à-couture, giá $1.650–5.800), <b>không có áo dài</b>, sống bằng brand-name + sỉ Gulf (chỉ 182 lượt). <b>Phan Huy</b> — couture ra mắt Paris Haute Couture, là <b>đối thủ khát vọng</b> ở phân khúc trên (PR/thảm đỏ quốc tế), áo dài không phải lõi thương mại.</p>
+  <h3 style="margin-top:22px">Bằng chứng cầu Trung Đông (tái dựng từ chính website đối thủ)</h3>
+  <div class="evcard">
+    <div class="banner">"Orders to the Middle East are now shipping as usual" — băng-rôn đầu trang HUONG Boutique</div>
+    <div class="ttl">MEAN BLVD · bộ sưu tập riêng: "The New Modest Edit" — <i>"the beauty of restraint… clean lines, graceful proportions"</i></div>
+    <div class="bd">
+      Sản phẩm chiếu cho tệp Trung Đông (kín/dài tay, may sẵn theo size — KHÔNG phải bespoke):
+      <div class="chips"><span class="chip">Maxi Dresses (35)</span><span class="chip">Long-Sleeved Tops (9)</span><span class="chip">Gown Dresses (9)</span><span class="chip">Rougea Draped Maxi $416</span><span class="chip">Celestine Maxi $636</span></div>
+      <div style="margin-top:9px">Bộ chọn giao hàng có <b>Saudi Arabia · Qatar · UAE</b>. Lưu lượng SimilarWeb xác nhận: <b>MEAN BLVD = 8,6% khách Trung Đông</b> (Ả Rập Xê Út 6%). Sàn mới <b><a href="https://www.thevietconcept.com/">The Viet Concept</a></b> (Dubai) bán abaya/kaftan designer Việt + giao GCC miễn phí + tiền AED.</div>
+      <div class="src">Nguồn: <a href="https://meanblvd.com/collections/the-modest-edit">meanblvd.com/collections/the-modest-edit</a> · <a href="https://www.huongboutique.com/">huongboutique.com</a> · SimilarWeb 5/2026</div>
+    </div>
   </div>
 
-  <h2><span class="secnum">F ·</span> Trung Đông &amp; phân khúc thuê/may sẵn — Maison có nên vào?</h2>
-  <p><b>Trung Đông:</b> cầu THẬT, nhưng mô hình thắng là <b>sản phẩm may sẵn modest + ship nhanh + thanh toán địa phương</b> — KHÔNG phải bespoke. MEAN BLVD có dòng "Modest Edit" (maxi/dài tay), HUONG ship Trung Đông "as usual", và một sàn mới — <b>The Viet Concept (Dubai)</b> — bán abaya/kaftan/đầm designer Việt với "Complimentary GCC Delivery" + tiền AED. → Một nhà bespoke như Maison không khớp tự nhiên; muốn vào phải có <b>capsule modest may-theo-size</b> hoặc đi qua sàn, không phải bán quy trình đo may <span class="src">(<a href="https://meanblvd.com/collections/the-modest-edit">meanblvd Modest Edit</a>; <a href="https://www.thevietconcept.com/">thevietconcept.com</a>).</span></p>
-  <p><b>Thuê &amp; may sẵn ở VN:</b> với đầm dạ tiệc, khách VN chuộng <b>thuê</b> (200–400k/lần) hơn mua (vài triệu) — lý do kinh tế thuần ("không thể chi vài triệu cho một buổi tối"). Cho thuê chỉ "hot" ở nhóm <b>cưới/cho thuê</b> (Nicole), không phải nhóm couture. → <b>Khuyến nghị: KHÔNG cho thuê / may sẵn đại trà</b> (đúng ranh giới chị Chi). Hai cửa hẹp cao cấp đáng cân nhắc: (a) <b>gói "trải nghiệm áo dài couture"</b> cho du khách thượng lưu (bán trải nghiệm, không bán giá rẻ); (b) <b>capsule prêt-à-couture giới hạn</b> cho Việt kiều — cả hai đều cần website trước <span class="src">(<a href="https://vnexpress.net/nhon-nhip-thue-vay-ao-di-tiec-cuoi-nam-4701634.html">VnExpress</a>; <a href="https://nicolebridal.vn/thue-ao-dai-cuoi/">Nicole Bridal</a>).</span></p>
+  <h2><span class="secnum">E ·</span> Đối thủ trực diện: Meera Meera</h2>
+  <p class="sub">Tiêu chí "trực diện" = cùng <b>mô hình bespoke may đo thật</b> (từ chối may sẵn/cho thuê) + <b>đa dòng</b> + cùng <b>tệp &amp; đấu trường tìm kiếm</b>.</p>
+  <div class="deep">
+    <h3>★ <a href="https://meerameera.net/">Meera Meera</a> — đối thủ trực diện nhất về mô hình</h3>
+    <p style="margin-top:4px"><b>Là ai:</b> atelier bridal couture Việt (từ 2012), tự nhận <i>"luxury bridal couture atelier… wedding dresses unique and custom-made to you"</i>. Khách: Việt Nam 77%, Mỹ 23%.</p>
+    <p><b>Vì sao trực diện:</b></p>
+    <p>1. May đo thật — công khai <i>"Not available for rent or ready-to-wear"</i> (đúng lập trường "không mass" của Maison).</p>
+    <p>2. Giấu giá, tư vấn 1-1, thời gian làm 2–8 tháng, giá ~$1.200–1.500+.</p>
+    <p>3. Đa dòng: cưới + đầm dạ tiệc + phụ dâu.</p>
+    <p>4. Đua trên đúng từ khoá Maison sẽ vào: "bespoke/custom wedding dress Vietnam", "đầm dạ tiệc cao cấp".</p>
+    <p><b>Khoảng trống Maison đánh:</b> Meera lấy <b>váy cưới phương Tây làm lõi, áo dài chỉ phụ</b> → Maison có thể là atelier đa dòng <b>lấy áo dài làm lõi văn hoá</b> rồi mở sang dạ tiệc/cưới, tránh đối đầu trực tiếp dòng váy cưới Tây mà Meera đã dẫn 14 năm.</p>
+  </div>
+  <h3 style="margin-top:18px">So sánh Maison vs Meera Meera vs Tung Vu Atelier</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Tiêu chí</th><th>Maison Dénudé</th><th><a href="https://meerameera.net/">Meera Meera</a></th><th><a href="https://tungvuatelier.com/">Tung Vu Atelier</a></th></tr>
+    <tr><td><b>Mô hình</b></td><td>Bespoke may đo đa dòng</td><td>Bespoke may đo (cưới)</td><td>Prêt-à-couture (theo size)</td></tr>
+    <tr><td><b>Phân khúc sản phẩm</b></td><td>Áo dài (lõi) + dạ tiệc + cưới</td><td>Cưới (lõi) + dạ tiệc + phụ dâu</td><td>Đầm dạ tiệc + bridal, <b>KHÔNG áo dài</b></td></tr>
+    <tr><td><b>Áo dài là lõi?</b></td><td>✅ Có (khác biệt)</td><td>❌ Phụ</td><td>❌ Không có</td></tr>
+    <tr><td><b>Giá</b></td><td>Chưa chốt (định vị cao cấp)</td><td>Giấu giá (~$1.200–1.500+)</td><td>Hiện giá $1.650–5.800</td></tr>
+    <tr><td><b>Người nổi tiếng / báo</b></td><td>✅ Mạnh (KOL + tạp chí VN)</td><td>⚠️ Vừa (giải Wedding Inspirasi)</td><td>⚠️ Sỉ boutique Gulf</td></tr>
+    <tr><td><b>Cho thuê?</b></td><td>Không (giữ định vị)</td><td>Không (từ chối)</td><td>Không</td></tr>
+    <tr><td><b>Tệp khách</b></td><td>(chưa đo) — nhắm Việt kiều + nội địa cao cấp</td><td>VN 77% · Mỹ 23%</td><td>Mỹ 100% (sỉ Gulf)</td></tr>
+    <tr><td><b>Kênh chính</b></td><td>(xây mới) — KOL/tạp chí chưa khai thác online</td><td>SEO "bespoke wedding VN" + web</td><td>Brand-name + sỉ, gần như không SEO</td></tr>
+    <tr><td><b>Lợi thế Maison</b></td><td colspan="2"><b>Áo dài làm lõi văn hoá + vốn KOL/tạp chí</b> — hai thứ Meera &amp; Tung Vu đều thiếu</td><td>—</td></tr>
+  </table></div>
 
-  <div class="flag"><b>Đính chính &amp; lưu ý độ tin cậy (minh bạch với người đọc):</b> (1) Brand ra mắt Paris Haute Couture là <b>Phan Huy</b>, không phải Tung Vu (nguồn từng dễ nhầm). (2) Khách thuê áo dài chụp ảnh chủ yếu là <b>Nhật/Singapore/Philippines/Hàn + khách Tây</b>, KHÔNG phải Trung Quốc (VnExpress/Kenh14). (3) Tỷ trọng "Mỹ 47–49%" của brand may sẵn gần như là <b>Việt kiều</b>, không phải người Tây mua áo dài (hệ sinh thái "Ao Dai USA" + dịch vụ mua hộ). (4) Từ khoá suy từ site/SERP, không phải volume đo được. (5) "Khe giá giữa $640–1.700" là giả thuyết (giá couture phần lớn giấu).</div>
+  <h2><span class="secnum">F ·</span> Câu hỏi mở &amp; hướng pivot (gửi cả nhóm + chị Chi xác nhận)</h2>
+  <p class="sub">Toàn bộ chiến lược nhắm nước ngoài đứng trên vài giả định CHƯA được xác nhận. Cần chốt các câu này trước khi cam kết nguồn lực.</p>
+  <div class="oq"><h3>Phải xác nhận trước khi pivot sản phẩm / nhắm nước ngoài</h3><ol>
+    <li><b>Maison có thực sự muốn nhắm thị trường nước ngoài không?</b> Nếu CÓ → tệp rõ nhất theo dữ liệu là <b>Việt kiều Mỹ/Úc</b> (cầu áo dài cưới, đang phải nhờ người nhà mua hộ). Nếu KHÔNG → tập trung khách cao cấp đến VN may tại chỗ.</li>
+    <li><b>Có chấp nhận làm một dòng "may sẵn / capsule giới hạn" để ship được không?</b> Bespoke thuần gần như không ship hiệu quả; muốn chạm Việt kiều/Trung Đông phải có sản phẩm theo-size. Đây là quyết định định vị (giữ "không mass" tới đâu).</li>
+    <li><b>Áo dài cưới bán giao xa có khả thi về vận hành không?</b> Chính sách vừa-vặn/đổi-sửa, thời gian may kịp ngày cưới (khách đặt trước 3–9 tháng), thanh toán &amp; ship quốc tế.</li>
+    <li><b>Gu thương hiệu &amp; định hướng dài hạn của chị Chi</b> (câu hỏi mở OQ-008): chị muốn Maison đứng cạnh những nhà mốt nào? Dòng nào là "đứa con tinh thần"? — quyết định giọng kể &amp; mức giá.</li>
+    <li><b>Chị có sẵn quan hệ trong cộng đồng Việt kiều</b> (Mỹ/Úc) không? Đây là đòn bẩy rẻ nhất cho tệp đã chứng minh có cầu.</li>
+  </ol></div>
+
+  <div class="flag"><b>Đính chính &amp; lưu ý độ tin cậy:</b>
+    <p>(1) Brand ra mắt Paris Haute Couture là <b>Phan Huy</b>, không phải Tung Vu (không đưa vào báo cáo này vì ở phân khúc khác).</p>
+    <p>(2) Khách thuê áo dài chụp ảnh chủ yếu <b>Nhật/Singapore/Philippines/Hàn + khách Tây</b> (Reddit), không phải Trung Quốc.</p>
+    <p>(3) Tỷ trọng "Mỹ" của brand may sẵn gần như là <b>Việt kiều</b> (đã đối chiếu hệ sinh thái "Ao Dai USA"), không phải người Tây mua áo dài.</p>
+    <p>(4) Trích dẫn Reddit là snippet kết quả tìm kiếm (Reddit chặn fetch) — URL thật, mở được. Từ khoá đối thủ suy từ tiêu đề/slug/SERP (gói SimilarWeb không có dữ liệu keyword) → nên xác thực bằng Ahrefs/SEMrush.</p>
+  </div>
 
   <div class="note" id="method"></div>
 </div>
 
 <script>
-const INSIGHTS=[
- {t:"Danh tiếng couture/sàn diễn KHÔNG tự thành lượt truy cập — phải chủ động xây kênh khám phá.",
-  data:"Tung Vu Atelier (atelier designer Việt, đào tạo ở Sydney) chỉ <b>182 lượt/tháng</b>, 90% từ tìm chính tên brand. Phan Huy — ra mắt <b>Paris Haute Couture</b> — bán qua \"đặt lịch tư vấn\", không có SEO sản phẩm.",
-  ana:"Cả hai có đẳng cấp/danh tiếng cao nhưng website gần như chỉ đón người <i>đã biết tên</i> — không tạo khách lạ. Uy tín ngoài đời ≠ khả năng được tìm thấy online.",
-  take:"<b>Cho Maison:</b> tài sản nghệ sĩ + tạp chí của Maison là 'vốn danh tiếng' giống vậy — sẽ lãng phí nếu chỉ để đó. Phải có <b>kế hoạch phân phối chủ động</b> (Thiệu phụ trách SEO + biến bài báo/nghệ sĩ thành nội dung máy đọc được + chủ động rải link), không chỉ 'tối ưu SEO là xong'.",
-  src:[["vietnamnews.vn (Phan Huy/Paris)","https://vietnamnews.vn/life-style/1764989"],["tungvuatelier.com",null],["SimilarWeb 5/2026",null]]},
- {t:"Với đầm dạ tiệc ở Việt Nam, khách chuộng THUÊ + may sẵn hơn may đo (lý do kinh tế).",
-  data:"VnExpress: thuê đầm dự tiệc <b>200–400k/lần</b> vs mua/may <b>vài triệu</b>; khách nói thẳng <i>\"không thể chi vài triệu cho một buổi tối\"</i>. Hàng chục shop cho thuê đầm dạ hội ở TP.HCM.",
-  ana:"Đầm dạ tiệc chỉ mặc 1–2 lần → thuê/may sẵn thắng may đo ở phân khúc phổ thông. Cho thuê chỉ 'hot' ở nhóm cưới/cho thuê (Nicole), KHÔNG ở nhóm couture.",
-  take:"<b>Cho Maison:</b> KHÔNG nên nhảy vào cho thuê/may sẵn đại trà — tự hạ định vị, đúng điều chị Chi tránh. Nếu muốn chạm dịp này, đi cửa <b>'trải nghiệm couture cao cấp'</b>, bán trải nghiệm chứ không bán giá.",
-  src:[["VnExpress","https://vnexpress.net/nhon-nhip-thue-vay-ao-di-tiec-cuoi-nam-4701634.html"]]},
- {t:"Trào lưu khách quốc tế THUÊ áo dài chụp ảnh đang bùng nổ — nhưng là tệp giá rẻ, không phải khách couture.",
-  data:"VnExpress (1/2026): khách ngoại thuê áo dài chụp Tết tăng <b>gấp 10 lần</b>, chủ yếu <b>Nhật/Singapore/Philippines</b>; giá thuê chỉ <b>150–350k</b>. Kenh14: ngày thường nhiều khách <b>Hàn</b>, áp Tết thêm Mỹ/Ý/Ấn/Pháp.",
-  ana:"Đây là <b>trải nghiệm du lịch giá rẻ</b> (thuê/may-nóng), KHÔNG phải mua đồ couture. Tệp dẫn đầu KHÔNG phải Trung Quốc như thường nghĩ.",
-  take:"<b>Cho Maison:</b> cầu trải nghiệm có thật và đang tăng mạnh → cửa hẹp = <b>gói atelier-experience áo dài couture cao cấp</b> cho du khách thượng lưu (vài triệu, kèm stylist/không gian), tách hẳn khỏi mảng thuê 150k. Chưa brand couture VN nào làm rõ → khoảng trống.",
-  src:[["VnExpress","https://vnexpress.net/khach-tay-san-ao-dai-chup-anh-tet-viet-5002970.html"],["Kenh14","https://kenh14.vn/khach-tay-may-nong-ao-dai-du-trend-chup-anh-tet-viet-215260126211130438.chn"]]},
- {t:"Khách vùng Vịnh là cầu thật — nhưng họ mua đồ MAY SẴN modest, không mua quy trình bespoke.",
-  data:"MEAN BLVD: khách <b>Ả Rập Xê Út 6%</b>, có dòng <b>\"Modest Edit\"</b> (maxi/dài tay) + ship Saudi/Qatar/UAE. HUONG ship Trung Đông \"as usual\". Sàn mới <b>The Viet Concept (Dubai)</b>: abaya/kaftan + giao GCC miễn phí + tiền AED.",
-  ana:"Mô hình thắng ở Trung Đông = catalog có sẵn + logistics + thanh toán địa phương, vận hành ở quy mô. Phom áo dài/đầm dài kín khớp 'modest fashion' tự nhiên — nhưng họ mua mẫu có sẵn ship đi, không bay sang fitting.",
-  take:"<b>Cho Maison:</b> bespoke-ship không khớp tệp này. Muốn vào phải đóng gói cái đẹp thành <b>capsule modest may-theo-size</b> (ship được) hoặc lên sàn (The Viet Concept) — không bán quy trình đo may.",
-  src:[["meanblvd Modest Edit","https://meanblvd.com/collections/the-modest-edit"],["thevietconcept.com","https://www.thevietconcept.com/"]]},
- {t:"Thuế nhập +50% giá đầm → xuất ra Mỹ nhiều rào cản → nên nhắm Việt kiều ĐẾN Việt Nam may tại chỗ.",
-  data:"East Meets Dress tự ghi: hải quan/VAT <i>\"đôi khi hơn 50% giá đầm\"</i>, khách tự chịu. Một đầm $1.000 thành ~$1.500 tới tay.",
-  ana:"Bất kỳ brand nào ship đồ giá cao từ VN ra Mỹ đều khiến khách gánh khoản thuế lớn → rào cản chuyển đổi. Đầm càng đắt, cú sốc thuế càng đau.",
-  take:"<b>Cho Maison:</b> thay vì ship couture ra Mỹ (gánh thuế), nhắm <b>Việt kiều Mỹ/Úc có ý định về VN</b> — tranh thủ may đồ couture ngay khi đến Saigon (không thuế, được fitting thật). 'May tại nguồn' là lợi thế.",
-  src:[["eastmeetsdress.com/faq","https://eastmeetsdress.com/pages/faq"]]},
- {t:"Lưu lượng của các brand 'may sẵn' chủ yếu là VIỆT KIỀU ở nước ngoài — không phải người Tây mua áo dài.",
-  data:"HUONG (Mỹ49), MEAN BLVD (Mỹ47), Kisserine (Mỹ37/VN35) — traffic chủ yếu Mỹ/Úc. Có cả hệ sinh thái 'Ao Dai USA' + dịch vụ mua hộ A2EShip cho khách hải ngoại.",
-  ana:"\"Mỹ 47–49%\" gần như chắc là <b>cộng đồng người Việt</b> ở Mỹ/Úc/Canada cần áo dài/đồ thiết kế cho Tết, cưới hỏi, sự kiện — mua online ship về vì không có thợ may VN tốt tại chỗ.",
-  take:"<b>Cho Maison:</b> đây là thị trường thật, đang tăng mạnh (HUONG +30%, MEAN BLVD +179%, Kisserine +373%) và nằm ở <b>nước ngoài</b>. Muốn quy mô + traffic đo được thì đây là hướng có cầu — nhưng đòi sản phẩm ship được (capsule giới hạn), và <b>bắt buộc có website trước</b>.",
-  src:[["SimilarWeb 5/2026",null],["a2eship.com","https://a2eship.com/en/elevate-your-lunar-new-year-with-huong-boutiques-ao-dai-collection/"]]},
- {t:"Đối thủ trực diện là cùng MÔ HÌNH, không phải cùng sản phẩm — và đó là Meera Meera, không phải LAHAVA.",
-  data:"LAHAVA = may-đo-hàng-loạt, giá hiện $365–560, bán online theo quy trình số đo, +246%. Meera Meera = bespoke couture thật, <i>từ chối thuê &amp; may sẵn</i>, giấu giá, lead time 2–8 tháng.",
-  ana:"Cùng 'custom' nhưng khác loài: LAHAVA scale số lượng (mass made-to-measure); Meera/Maison là atelier mỗi-mẫu-một-khách. Đối thủ trực diện phải khớp mô hình + đa dòng + cùng tệp tìm kiếm.",
-  take:"<b>Cho Maison:</b> học LAHAVA về <b>cơ chế phân phối</b> (2 site, niêm yết giá, công cụ mua-từ-xa), nhưng coi <b>Meera Meera là đối thủ trực diện</b> phải vượt — bằng cách lấy <b>áo dài làm lõi văn hoá</b> (Meera lấy váy cưới Tây làm lõi).",
-  src:[["meerameera.net","https://meerameera.net/pages/instruction-for-international-customers"],["lahava.com","https://lahava.com/"]]},
-];
-document.getElementById('insights').innerHTML=INSIGHTS.map((x,i)=>{
-  const src=x.src.map(s=>s[1]?`<a href="${s[1]}">${s[0]}</a>`:`<span>${s[0]}</span>`).join(' · ');
-  return `<div class="ins"><div class="no">${i+1}</div><div class="body">
-    <h3>${x.t}</h3>
-    <div class="lab d">Dữ liệu</div><div class="data">${x.data}</div>
-    <div class="lab a">Phân tích</div><div class="ana">${x.ana}</div>
-    <div class="take">${x.take}</div>
-    <div class="src">Nguồn: ${src}</div></div></div>`;
-}).join('');
+// ---------- A. Arrivals ----------
+(function(){
+ const D=[['Trung Quốc',5200],['Hàn Quốc',4300],['Đài Loan',1230],['Mỹ',848],['Nhật',814],['Ấn Độ',746],['Úc',548]];
+ const W=720,rowH=30,padL=92,padR=70,max=Math.max(...D.map(d=>d[1]));
+ const h=D.length*rowH+10, svg=document.getElementById('arrivals'); svg.setAttribute('viewBox',`0 0 ${W} ${h}`);
+ const fmt=n=>n>=1000?(n/1000).toFixed(1)+'tr':n+'K';
+ let s='';
+ D.forEach((d,i)=>{const y=8+i*rowH,w=d[1]/max*(W-padL-padR);
+  s+=`<text x="${padL-8}" y="${y+14}" text-anchor="end" font-size="12" fill="#433c34">${d[0]}</text>`;
+  s+=`<rect x="${padL}" y="${y+3}" width="${w.toFixed(1)}" height="17" rx="3" fill="${i<2?'#9a8c78':'#5b7a9a'}"/>`;
+  s+=`<text x="${padL+w+6}" y="${y+16}" font-size="11.5" fill="#5f574e">${fmt(d[1])}</text>`;});
+ svg.innerHTML=s;
+})();
 
+// ---------- A. Quotes ----------
+const QUOTES=[
+ {grp:'gap',tag:'Việt kiều · khoảng trống rõ nhất',q:'I\'m getting married... I\'m a bit sticker shocked by the ao dai prices in the US ($170-$400 each)... reliable ones in Vietnam?',who:'Cô dâu Việt kiều · r/weddingplanning',url:'https://www.reddit.com/r/weddingplanning/comments/107r83a/affordable_ao_dai_in_the_us_or_reliable_ones_in/'},
+ {grp:'gap',tag:'Việt kiều · nỗi đau lặp lại',q:'I want to get some custom ao dai made in Vietnam for myself and wedding party which are affordable and not hundreds of dollars like the US.',who:'Việt kiều · r/VietNam',url:'https://www.reddit.com/r/VietNam/comments/y7s850/affordable_custom_ao_dai_for_overseas_client/'},
+ {grp:'gap',tag:'Việt kiều · hành vi hiện tại',q:'I\'m a little weary about ordering it online from Vietnam... "I\'m getting mine from Vietnam when my cousin goes over there this week."',who:'WeddingWire forum (2017)',url:'https://www.weddingwire.com/wedding-forums/vietnamese-ao-dai-online/f333cf8ce0793fc8.html'},
+ {grp:'gap',tag:'Việt kiều · không thử được',q:'Despite living in a large city, we can\'t find a local shop where we can try them on.',who:'Cưới vào gia đình Việt · r/VietNam',url:'https://www.reddit.com/r/VietNam/comments/1chn772/best_place_to_buy_a_wedding_ao_dai/'},
+ {grp:'',tag:'Áo dài · tín hiệu rất mạnh',q:'Where do I get a nice quality custom tailored Ao Dai? I wanted to wear an Ao dai for my formal but I have no idea where to get a nice one.',who:'Người trẻ gốc Việt · r/VietNam',url:'https://www.reddit.com/r/VietNam/comments/183abyx/where_do_i_get_a_nice_quality_custom_tailored_ao/'},
+ {grp:'',tag:'Áo dài · du khách may nhanh',q:'I\'m visiting Saigon for a friend\'s wedding... good express tailor shops in District 1 where I could get a tailored ao dai within 24-48 hours?',who:'Du khách · r/travel',url:'https://www.reddit.com/r/travel/comments/17hka38/tailored_ao_dai_in_saigon/'},
+ {grp:'',tag:'May đo nói chung · mạnh',q:'Is Vietnam still a good place to get tailored clothes made? ...wanted to see if it\'s still a good value.',who:'Du khách · r/TravelNoPics',url:'https://www.reddit.com/r/TravelNoPics/comments/zsqv3b/is_vietnam_still_a_good_place_to_get_tailored/'},
+ {grp:'',tag:'Đầm dạ tiệc · whitespace (mỏng)',q:'Recommendations for tailors in Hanoi that do... dresses for formal occasions (e.g. wedding guest dress, not traditional Vietnamese dress).',who:'Expat/du khách · r/VietNam',url:'https://www.reddit.com/r/VietNam/comments/18gd8km/tailor_shop_recommendations_in_hanoi_for_female/'},
+];
+document.getElementById('quotes').innerHTML=QUOTES.map(x=>`<div class="q"><div class="tag ${x.grp}">${x.tag}</div><blockquote>"${x.q}"</blockquote><div class="meta">${x.who} · <a href="${x.url}">nguồn ↗</a></div></div>`).join('');
+
+// ---------- B. Matrix (clickable) ----------
 const M=[
- {n:'Chuui',x:.12,y:.12,t:32156,r:'dia'},{n:'HUONG',x:.20,y:.14,t:56476,r:'dia',g:1},
- {n:'Kisserine',x:.18,y:.22,t:14191,r:'dia'},{n:'Libé',x:.15,y:.18,t:14766,r:'vn'},
- {n:'Metiseko',x:.30,y:.24,t:15185,r:'vn'},{n:'MEAN BLVD',x:.40,y:.12,t:106278,r:'dia',g:1},
- {n:'East Meets Dress',x:.46,y:.50,t:63000,r:'dia'},{n:'LAHAVA',x:.50,y:.56,t:7533,r:'dia'},
- {n:'Nicole',x:.46,y:.30,t:18236,r:'vn'},{n:'Linh Nga',x:.58,y:.36,t:11500,r:'vn'},
- {n:'Truvelle',x:.74,y:.30,t:19627,r:'west'},{n:'Serene Hill',x:.68,y:.26,t:10943,r:'west'},
- {n:'Tung Vu',x:.80,y:.54,t:182,r:'west'},{n:'Meera Meera',x:.76,y:.88,t:2585,r:'vn'},
- {n:'La Fée',x:.93,y:.66,t:2458,r:'west'},{n:'Phan Huy',x:.93,y:.92,t:600,r:'west'},
- {n:'Bebe (Hội An)',x:.42,y:.66,t:26600,r:'dia'},
+ {n:'Chuui',x:.12,y:.12,t:32156,r:'dia',u:'https://chuuicollection.com/'},
+ {n:'HUONG',x:.20,y:.14,t:56476,r:'dia',u:'https://www.huongboutique.com/'},
+ {n:'Kisserine',x:.18,y:.22,t:14191,r:'dia',u:'https://kisserine.com/'},
+ {n:'Metiseko',x:.30,y:.24,t:15185,r:'vn',u:'https://metiseko.com/'},
+ {n:'MEAN BLVD',x:.40,y:.12,t:106278,r:'dia',u:'https://meanblvd.com/'},
+ {n:'East Meets Dress',x:.46,y:.50,t:63000,r:'dia',u:'https://eastmeetsdress.com/'},
+ {n:'LAHAVA',x:.50,y:.56,t:7533,r:'dia',u:'https://lahava.com/'},
+ {n:'Nicole',x:.46,y:.30,t:18236,r:'vn',u:'https://nicolebridal.vn/en/'},
+ {n:'Linh Nga',x:.58,y:.36,t:11500,r:'vn',u:'https://linhnga.vn/'},
+ {n:'Truvelle',x:.74,y:.30,t:19627,r:'west',u:'https://truvelle.com/'},
+ {n:'Serene Hill',x:.68,y:.26,t:10943,r:'west',u:'https://serenehilldress.com/'},
+ {n:'Tung Vu',x:.80,y:.54,t:1500,r:'west',u:'https://tungvuatelier.com/'},
+ {n:'Meera Meera',x:.76,y:.88,t:2585,r:'vn',u:'https://meerameera.net/'},
+ {n:'La Fée',x:.93,y:.66,t:2458,r:'vn',u:'https://lafeevietnam.com/'},
 ];
 const RC={vn:'#8a6a86',dia:'#5b7a9a',west:'#9a8c78'};
 (function(){
- const W=900,H=620,padL=58,padR=30,padT=30,pb=52;
+ const W=900,H=600,padL=58,padR=30,padT=30,pb=52;
  const x0=padL,x1=W-padR,y0=padT,y1=H-pb;
- const X=v=>x0+v*(x1-x0), Y=v=>y1-v*(y1-y0);
- const R=t=>Math.max(5,5+8*(Math.log10(t)-2.2));
- let s='';
- // quadrant tints
- const mx=X(.5),my=Y(.5);
- s+=`<rect x="${x0}" y="${y0}" width="${mx-x0}" height="${my-y0}" fill="#efe9dd" opacity="0.35"/>`;
+ const X=v=>x0+v*(x1-x0), Y=v=>y1-v*(y1-y0), R=t=>Math.max(5,5+8*(Math.log10(t)-2.2));
+ const mx=X(.5),my=Y(.5); let s='';
  s+=`<rect x="${mx}" y="${y0}" width="${x1-mx}" height="${my-y0}" fill="#f0e7d6" opacity="0.5"/>`;
- s+=`<rect x="${x0}" y="${my}" width="${mx-x0}" height="${y1-my}" fill="#f1efe8" opacity="0.4"/>`;
- s+=`<rect x="${mx}" y="${my}" width="${x1-mx}" height="${y1-my}" fill="#efe9dd" opacity="0.3"/>`;
+ s+=`<rect x="${x0}" y="${my}" width="${mx-x0}" height="${y1-my}" fill="#f1efe8" opacity="0.45"/>`;
  s+=`<line x1="${mx}" y1="${y0}" x2="${mx}" y2="${y1}" stroke="#d8cdb9"/><line x1="${x0}" y1="${my}" x2="${x1}" y2="${my}" stroke="#d8cdb9"/>`;
- // quadrant labels
- s+=`<text x="${X(.74)}" y="${Y(.96)}" text-anchor="middle" font-size="11.5" fill="#a9824e" font-style="italic">Bespoke couture cao cấp ← khoảng trống</text>`;
- s+=`<text x="${X(.22)}" y="${Y(.04)+4}" text-anchor="middle" font-size="11" fill="#9a9087">Đồ may sẵn giá thấp (đông khách)</text>`;
- // axis labels
+ s+=`<text x="${X(.74)}" y="${Y(.97)}" text-anchor="middle" font-size="11.5" fill="#a9824e" font-style="italic">Bespoke cao cấp ← khoảng trống cho Maison</text>`;
+ s+=`<text x="${X(.22)}" y="${Y(.03)+4}" text-anchor="middle" font-size="11" fill="#9a9087">May sẵn giá thấp (đông khách nhất)</text>`;
  s+=`<text x="${x0}" y="${y1+30}" font-size="12" fill="#7c736a">Giá thấp</text><text x="${x1}" y="${y1+30}" text-anchor="end" font-size="12" fill="#7c736a">Giá cao</text>`;
  s+=`<text x="16" y="${y1}" font-size="11" fill="#7c736a" transform="rotate(-90 16 ${y1})">May sẵn / Cho thuê</text>`;
- s+=`<text x="16" y="${y0+88}" font-size="11" fill="#7c736a" transform="rotate(-90 16 ${y0+88})">May đo / Bespoke</text>`;
- // bubbles
+ s+=`<text x="16" y="${y0+78}" font-size="11" fill="#7c736a" transform="rotate(-90 16 ${y0+78})">May đo / Bespoke</text>`;
  M.forEach(d=>{const cx=X(d.x),cy=Y(d.y),rr=R(d.t),c=RC[d.r];
-  s+=`<circle cx="${cx}" cy="${cy}" r="${rr}" fill="${c}" fill-opacity="0.78" stroke="${c}"/>`;
-  if(d.g) s+=`<text x="${cx+rr+2}" y="${cy-rr+2}" font-size="11" fill="#a9824e">⬦</text>`;
-  s+=`<text x="${cx}" y="${cy-rr-3}" text-anchor="middle" font-size="9.5" fill="#433c34">${d.n}</text>`;
- });
- // Maison star (target)
- const mxs=X(.80),mys=Y(.86);
- s+=`<polygon points="${star(mxs,mys,13,6)}" fill="#fffdf9" stroke="#a9824e" stroke-width="2.5"/>`;
- s+=`<text x="${mxs}" y="${mys-19}" text-anchor="middle" font-size="12.5" font-weight="600" fill="#a9824e" font-family="Georgia,serif">◆ MAISON</text>`;
- s+=`<text x="${mxs}" y="${mys+24}" text-anchor="middle" font-size="9" fill="#9a9087">định vị mục tiêu</text>`;
+  s+=`<a href="${d.u}" target="_blank"><circle cx="${cx}" cy="${cy}" r="${rr}" fill="${c}" fill-opacity="0.78" stroke="${c}"/>`;
+  s+=`<text x="${cx}" y="${cy-rr-3}" text-anchor="middle" font-size="9.7" fill="#433c34" text-decoration="underline">${d.n}</text></a>`;});
+ const sx=X(.80),sy=Y(.86);
+ s+=`<polygon points="${star(sx,sy,13,6)}" fill="#fffdf9" stroke="#a9824e" stroke-width="2.5"/>`;
+ s+=`<text x="${sx}" y="${sy-19}" text-anchor="middle" font-size="12.5" font-weight="600" fill="#a9824e" font-family="Georgia,serif">◆ MAISON</text>`;
+ s+=`<text x="${sx}" y="${sy+24}" text-anchor="middle" font-size="9" fill="#9a9087">định vị mục tiêu</text>`;
  document.getElementById('matrix').innerHTML=s;
- function star(cx,cy,ro,n){let p='';for(let i=0;i<n*2;i++){const ra=i%2?ro*0.45:ro;const a=Math.PI/n*i-Math.PI/2;p+=`${(cx+ra*Math.cos(a)).toFixed(1)},${(cy+ra*Math.sin(a)).toFixed(1)} `;}return p.trim();}
+ function star(cx,cy,ro,n){let p='';for(let i=0;i<n*2;i++){const ra=i%2?ro*0.45:ro,a=Math.PI/n*i-Math.PI/2;p+=`${(cx+ra*Math.cos(a)).toFixed(1)},${(cy+ra*Math.sin(a)).toFixed(1)} `;}return p.trim();}
 })();
 
-document.getElementById('method').innerHTML='<b>Phương pháp &amp; độ tin cậy.</b> Lưu lượng/geo/kênh = SimilarWeb 5/2026 (ước lượng, 24 brand); giá/mô hình/từ khoá = khảo sát trực tiếp website + SERP (21–22/6/2026); bối cảnh ngành/du lịch = VnExpress, Expert Market Research, Global Growth Insights, VietnamNews. Từ khoá là <i>từ khoá brand đang nhắm</i> suy từ tiêu đề/slug/SERP (plan SimilarWeb không có dữ liệu keyword) — cần xác thực bằng Ahrefs/SEMrush trước khi đặt ngân sách. Vị trí Maison trên ma trận là <i>định vị mục tiêu giả định</i> (Maison chưa có website đo được). Bản chữ đầy đủ: bao-cao-tong-hop.md · Dữ liệu thô: data_logs/.';
+// ---------- C. Competitor cards ----------
+const GEOCOL={'Mỹ':'#5b7a9a','Úc':'#7c9b8a','Canada':'#9aaa8c','Anh':'#b0a890','VN':'#8a6a86','Trung Đông':'#c08a3e','Khác':'#d8cdb9'};
+const COMP=[
+ {n:'MEAN BLVD',o:'🇻🇳 Việt Nam (sàn ~80 NTK)',u:'https://meanblvd.com/',t:'106K',g:'+179%',gd:'up',geo:[['Mỹ',47],['Úc',7],['Trung Đông',9],['VN',6],['Khác',31]],model:'Sàn may sẵn theo size + dòng Modest cho Trung Đông',kw:'vietnamese designer dresses, evening gowns, modest edit',me:1},
+ {n:'East Meets Dress',o:'🇺🇸 Mỹ (Mỹ-gốc-Á) — KHÔNG phải VN',u:'https://eastmeetsdress.com/',t:'63K',g:'ổn định',gd:'flat',geo:[['Mỹ',61],['Canada',9],['Úc',6],['Anh',5],['VN',4],['Khác',15]],model:'May-theo-size, lõi sườn xám (cheongsam); áo dài phụ',kw:'chinese wedding dress, cheongsam, qipao, qun kwa'},
+ {n:'HUONG Boutique',o:'🇻🇳 Việt Nam',u:'https://www.huongboutique.com/',t:'56K',g:'+30%',gd:'up',geo:[['Mỹ',49],['VN',12],['Úc',9],['Canada',5],['Trung Đông',1],['Khác',24]],model:'May sẵn (RTW) dịp tiệc; ship Trung Đông',kw:'cocktail, event & gala, pre-wedding, resort',me:1},
+ {n:'Nicole Bridal',o:'🇻🇳 Việt Nam',u:'https://nicolebridal.vn/en/',t:'18K',g:'+161%',gd:'up',geo:[['VN',43],['Mỹ',28],['Úc',14],['Canada',10],['Khác',5]],model:'Cho thuê (lõi) + may đo cưới',kw:'váy cưới cao cấp, thuê áo dài cưới, áo dài cưới tphcm'},
+ {n:'Kisserine',o:'🇻🇳 Việt Nam',u:'https://kisserine.com/',t:'14K',g:'+373%',gd:'up',geo:[['Mỹ',37],['VN',35],['Úc',17],['Canada',6],['Khác',5]],model:'May sẵn giá thấp (đầm tiệc <$100–570)',kw:'satin/silk dress, bridal, đầm đi tiệc'},
+ {n:'LAHAVA',o:'🇻🇳 Việt Nam',u:'https://lahava.com/',t:'7,5K',g:'+246%',gd:'up',geo:[['Mỹ',66],['Úc',13],['Canada',11],['Anh',8],['VN',2]],model:'May đo hàng loạt ($365–560), đa dòng',kw:'custom ao dai, wedding ao dai online, evening dresses custom'},
+ {n:'Meera Meera',o:'🇻🇳 Việt Nam',u:'https://meerameera.net/',t:'2,6K',g:'—',gd:'flat',geo:[['VN',77],['Mỹ',23]],model:'Bespoke couture thật (từ chối thuê/may sẵn)',kw:'bespoke wedding dress vietnam, đầm dạ tiệc cao cấp'},
+ {n:'Serene Hill',o:'🇺🇸/global',u:'https://serenehilldress.com/',t:'11K',g:'−32%',gd:'down',geo:[['Mỹ',81],['Anh',11],['Úc',3],['Trung Đông',2],['Khác',3]],model:'Bridal/dạ tiệc phương Tây (xưởng VN)',kw:'evening dress, wedding dress manufacturer',me:1},
+];
+document.getElementById('comps').innerHTML=COMP.map(c=>{
+ const bar=c.geo.map(([k,v])=>`<i style="width:${v}%;background:${GEOCOL[k]||'#d8cdb9'}"></i>`).join('');
+ const key=c.geo.filter(g=>g[0]!=='Khác').map(([k,v])=>`<span><b>${k}</b> ${v}%</span>`).join('');
+ const me=c.me?`<span class="me-tag">⬦ có khách Trung Đông</span>`:'';
+ return `<div class="comp"><div class="comp-h"><div><span class="nm"><a href="${c.u}" target="_blank">${c.n} ↗</a></span> <span class="flag">${c.o}</span></div>
+   <span class="pill ${c.gd}">${c.t}/th · ${c.g}</span></div>
+   <div class="comp-geo">${bar}</div><div class="geo-key">${key}${me}</div>
+   <div class="comp-meta"><b>Mô hình:</b> ${c.model}<br><b>Đua từ khoá:</b> ${c.kw}</div></div>`;
+}).join('');
+
+// ---------- C. Market focus summary ----------
+(function(){
+ const D=[['Mỹ',12,'#5b7a9a'],['Việt Nam',8,'#8a6a86'],['Úc',8,'#7c9b8a'],['Canada',6,'#9aaa8c'],['Anh',5,'#b0a890'],['Trung Đông (≥2%)',3,'#c08a3e'],['Nhật / Hàn',0,'#c89a9a']];
+ const W=720,rowH=27,padL=130,padR=60,max=12;
+ const h=D.length*rowH+10,svg=document.getElementById('markets');svg.setAttribute('viewBox',`0 0 ${W} ${h}`);
+ let s='';
+ D.forEach((d,i)=>{const y=8+i*rowH,w=d[1]/max*(W-padL-padR);
+  s+=`<text x="${padL-8}" y="${y+14}" text-anchor="end" font-size="12" fill="#433c34">${d[0]}</text>`;
+  s+=`<rect x="${padL}" y="${y+3}" width="${Math.max(w,2).toFixed(1)}" height="16" rx="3" fill="${d[2]}"/>`;
+  s+=`<text x="${padL+Math.max(w,2)+6}" y="${y+15}" font-size="11.5" fill="#5f574e">${d[1]} brand</text>`;});
+ svg.innerHTML=s;
+})();
+
+// ---------- D. Insights ----------
+const INS=[
+ {t:"Khoảng trống rõ nhất là Việt kiều Mỹ/Úc đặt áo dài từ xa — cầu có thật, đang bị phục vụ kém.",
+  d:"Lưu lượng: các brand áo dài đều đậm Mỹ/Úc — LAHAVA Mỹ66/Úc13, HUONG Mỹ49, Nicole Mỹ28/Úc14, East Meets Dress Mỹ61. Tiếng nói người dùng (Reddit/WeddingWire): giá Mỹ $170–400/bộ, không thử được, phải nhờ người nhà về VN mua hộ.",
+  a:"Hai nguồn độc lập (lưu lượng + lời người dùng) cùng chỉ về một tệp: <b>người Việt ở Mỹ/Úc cần áo dài nhưng nguồn cung tại chỗ vừa đắt vừa khó thử</b>. Đây không phải suy đoán — là cầu đang tồn tại và chưa ai phục vụ tốt ở tầng cao cấp.",
+  k:"<b>Cho Maison:</b> tệp có cầu chắc nhất để nhắm. Nhưng cần (a) website đặt-được + công cụ đo từ xa/đổi-sửa để trị nỗi sợ 'mua online không thử', (b) chấp nhận một dòng theo-size để ship."},
+ {t:"Đầm dạ tiệc ở VN: mô hình THUÊ + may sẵn đang thắng — đo bằng chính lưu lượng đối thủ.",
+  d:"Nicole Bridal (lõi cho thuê) = 18K lượt/th, <b>+161%</b> — tăng nhanh nhất nhóm cưới. Các brand may sẵn dạ tiệc (HUONG 56K, Kisserine 14K +373%) cũng tăng mạnh. Reddit có cầu thuê áo dài chụp ảnh lặp lại.",
+  a:"Đo bằng lưu lượng (không dùng báo chí): các brand <b>thuê + may sẵn</b> đang tăng mạnh; brand may-đo couture (Meera 2,6K) lưu lượng nhỏ. Tức ở phân khúc phổ thông, thuê/may sẵn hút khách hơn — vì đầm tiệc mặc 1–2 lần.",
+  k:"<b>Cho Maison:</b> KHÔNG nên làm thuê/may sẵn đại trà (hạ định vị). Nếu chạm dịp này thì đi cửa 'trải nghiệm áo dài couture cao cấp' — bán trải nghiệm, không bán giá rẻ."},
+ {t:"Trung Đông là thị trường 'ngầm' có thật, nhưng mua đồ may sẵn modest — không mua bespoke.",
+  d:"MEAN BLVD: <b>8,6% khách Trung Đông</b> (Ả Rập Xê Út 6%), có dòng 'Modest Edit' + ship Saudi/Qatar/UAE. Serene Hill 2,3% (Qatar). HUONG ship Trung Đông. Sàn The Viet Concept (Dubai) bán abaya/kaftan + giao GCC.",
+  a:"Phom áo dài/đầm dài kín khớp 'modest fashion'. Nhưng cả 3 brand phục vụ tệp này bằng <b>sản phẩm may sẵn theo size, ship nhanh</b> — không phải đo may. (Xem thẻ bằng chứng phía trên.)",
+  k:"<b>Cho Maison:</b> bespoke-ship không khớp. Muốn vào phải có capsule modest may-theo-size, hoặc lên sàn (The Viet Concept) — đây là quyết định pivot, cần chị Chi đồng ý."},
+ {t:"Danh tiếng (KOL/tạp chí) KHÔNG tự thành lưu lượng — phải chủ động phân phối.",
+  d:"Tung Vu Atelier (designer Việt, sỉ boutique Gulf) chỉ 182 lượt/th, 90% từ tìm tên brand. Meera Meera (couture 14 năm) chỉ 2,6K.",
+  a:"Brand có đẳng cấp nhưng website chỉ đón người đã biết tên — không tạo khách lạ. Vốn KOL/tạp chí của Maison giống vậy: sẽ vô hình nếu không biến thành nội dung tìm-được.",
+  k:"<b>Cho Maison (Thiệu phụ trách):</b> kế hoạch phân phối chủ động — biến bài báo/KOL thành nội dung máy đọc được, chủ động rải link, tối ưu để công cụ AI/Google dẫn khách về. Không chỉ 'làm SEO là xong'."},
+];
+document.getElementById('insights').innerHTML=INS.map((x,i)=>`<div class="ins"><h3>${i+1}. ${x.t}</h3>
+  <div class="lab d">Dữ liệu</div><div class="data">${x.d}</div>
+  <div class="lab a">Phân tích</div><div class="ana">${x.a}</div>
+  <div class="take">${x.k}</div></div>`).join('');
+
+document.getElementById('method').innerHTML='<b>Phương pháp.</b> Lưu lượng/geo = SimilarWeb 5/2026 (ước lượng, 24 brand); cầu thật = Reddit/forum (snippet, URL mở được); mô hình/giá/từ khoá = khảo sát site trực tiếp 21–22/6/2026. KHÔNG dùng số báo cáo ngành/báo chí. Từ khoá cần xác thực bằng Ahrefs/SEMrush trước khi đặt ngân sách. Vị trí Maison trên ma trận là định vị mục tiêu giả định (chưa có website đo được). Bản chữ: bao-cao-tong-hop.md · Dữ liệu thô: data_logs/.';
 </script>
