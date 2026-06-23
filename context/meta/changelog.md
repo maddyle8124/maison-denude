@@ -2,6 +2,11 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-22 — SOP tạo báo cáo/deliverable (Maddy)
+
+- Thêm `meta/report-sop.md`: đóng khung 10+ vòng phản hồi thành tiêu chuẩn cho mọi báo cáo — insight-first (3 lớp dữ liệu/phân tích/ý nghĩa), mọi claim có nguồn bấm-được (tránh báo chí/CAGR), ngôn ngữ tiếng Việt rõ ràng câu tròn ý (không jargon/ẩn dụ), nhiều visual + chart diễn giải đúng, cấu trúc tổng→cụ thể, brand-language founder, cơ chế giao hàng (HTML + git + GitHub Pages, không lộ secret). Có checklist trước khi gửi.
+- Đã lưu memory tương ứng để tự áp dụng cross-session.
+
 ## 2026-06-22 — Báo cáo v5: cầu thật từ Reddit, biểu đồ tương tác, breakdown từng đối thủ (Maddy)
 
 - Theo phản hồi chi tiết: xuống dòng nhiều hơn; **bỏ số liệu báo cáo ngành/báo chí** (CAGR, VnExpress) → thay bằng (a) **chart nguồn khách** đến VN, (b) **tín hiệu cầu thật từ Reddit/forum** (quote + link, đặc biệt nỗi đau Việt kiều: giá Mỹ $170–400, nhờ người nhà mua hộ).
