@@ -5,7 +5,7 @@ export const landingSections: Section[] = [
     type: 'hero',
     id: 'introduction',
     imageDesktop: 'renaissanceBridalReclingHero',
-    imageMobile: 'heroSilkHalter',
+    imageMobile: 'heroEmbroideredGown',
     frameInset: false,
   },
   {
