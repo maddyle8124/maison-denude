@@ -1,0 +1,18 @@
+# Raw source assets — large binaries (149MB). Web-ready optimized copies live in
+# main-dev/src/assets/. Originals stay on disk only, out of git history.
+context/reference/maison_denude_assets/
+
+# Secrets — never commit (main-dev/.env is also ignored by main-dev/.gitignore)
+.env
+.env.*
+!.env.example
+*.dev.vars
+
+# Node / build
+node_modules/
+dist/
+.astro/
+
+# OS / editor
+.DS_Store
+Thumbs.db

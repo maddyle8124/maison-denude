@@ -1,0 +1,16 @@
+---
+interface Props {
+  variant?: 'white' | 'black';
+  width?: number;
+}
+const { variant = 'white', width = 240 } = Astro.props;
+const src = variant === 'white' ? '/logo_white.svg' : '/logo_black.svg';
+---
+
+<img src={src} alt="Maison Dénudé" width={width} class="logo" style={`width: ${width}px; height: auto;`} />
+
+<style>
+  .logo {
+    display: block;
+  }
+</style>

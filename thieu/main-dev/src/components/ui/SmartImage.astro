@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets';
+import { getAsset } from '../../lib/assets';
+import type { ImageKey } from '../../lib/assets';
+
+/*
+ * SmartImage is the single component every site image flows through (invariant 3).
+ * It owns image SIZING as well as path indirection, so distortion can't recur
+ * per-component.
+ *
+ * The `fit` contract:
+ *   - 'cover' (default): the image fills its container box and is cropped to fit.
+ *     The container (the parent in the section component) defines width AND height
+ *     (or aspect-ratio). The <img> is forced to width:100% height:100% object-fit:cover.
+ *   - 'contain': the image keeps its natural aspect ratio, scaling to the container
+ *     width with height following automatically (width:100% height:auto). Use this
+ *     when the image's own proportions should drive the layout height.
+ *
+ * Either way the <img> NEVER keeps astro:assets' intrinsic width/height attributes as
+ * fixed CSS pixels — that is exactly what caused the stretching. We let the attributes
+ * stay (good for CLS / lazy reservation) but override their rendered size via .smart-img.
+ */
+interface Props {
+  src: ImageKey;
+  alt: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  widths?: number[];
+  sizes?: string;
+  fit?: 'cover' | 'contain';
+}
+
+const {
+  src,
+  alt,
+  class: className,
+  loading = 'lazy',
+  widths = [400, 800, 1200],
+  sizes = '(max-width: 768px) 100vw, 50vw',
+  fit = 'cover',
+} = Astro.props;
+
+const image = getAsset(src);
+---
+
+<Image
+  src={image}
+  alt={alt}
+  class:list={['smart-img', `smart-img--${fit}`, className]}
+  loading={loading}
+  widths={widths}
+  sizes={sizes}
+/>
+
+<style>
+  /* Foundational: an Image rendered through SmartImage can never display at its raw
+     intrinsic pixel box. */
+  .smart-img {
+    display: block;
+    max-width: 100%;
+  }
+  /* contain: width drives, height follows natural ratio — no crop, no stretch. */
+  .smart-img--contain {
+    width: 100%;
+    height: auto;
+  }
+  /* cover: fill the container box (which must define the height/aspect-ratio) and crop. */
+  .smart-img--cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

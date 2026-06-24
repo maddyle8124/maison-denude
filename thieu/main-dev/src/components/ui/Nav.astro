@@ -1,0 +1,154 @@
+---
+import { navItems } from '../../content/nav';
+---
+
+<nav class="nav" aria-label="Main navigation">
+  <!-- Desktop rail -->
+  <ul class="nav__rail" role="list">
+    {navItems.map(item => (
+      <li><a href={item.href} class="nav__link">{item.label}</a></li>
+    ))}
+  </ul>
+
+  <!-- Mobile hamburger -->
+  <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+    <span class="nav__bar"></span>
+    <span class="nav__bar"></span>
+    <span class="nav__bar"></span>
+  </button>
+  <div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation" hidden>
+    <button class="nav__close" aria-label="Close menu">✕</button>
+    <ul class="nav__overlay-list" role="list">
+      {navItems.map(item => (
+        <li><a href={item.href} class="nav__overlay-link">{item.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.querySelector('.nav__hamburger') as HTMLButtonElement;
+  const overlay = document.querySelector('.nav__overlay') as HTMLElement;
+  const close = document.querySelector('.nav__close') as HTMLButtonElement;
+
+  hamburger?.addEventListener('click', () => {
+    overlay.hidden = false;
+    hamburger.setAttribute('aria-expanded', 'true');
+  });
+  close?.addEventListener('click', () => {
+    overlay.hidden = true;
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.hidden = true;
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+<style>
+  /* Desktop rail */
+  .nav__rail {
+    position: fixed;
+    right: var(--nav-right);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav__rail::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--color-rule);
+    margin-left: auto;
+    margin-bottom: 8px;
+  }
+  .nav__link {
+    font-size: var(--text-nav);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .nav__link:hover { opacity: 0.6; }
+
+  /* Hamburger — hidden desktop */
+  .nav__hamburger {
+    display: none;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 200;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+  }
+  .nav__bar {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--color-text);
+  }
+
+  /* Overlay */
+  .nav__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .nav__overlay[hidden] { display: none; }
+  .nav__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .nav__overlay-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .nav__overlay-link {
+    font-size: 24px;
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .nav__overlay-link:hover { opacity: 0.6; }
+
+  /* Mobile: show hamburger, hide rail */
+  @media (max-width: 767px) {
+    .nav__rail { display: none; }
+    .nav__hamburger { display: flex; }
+  }
+</style>

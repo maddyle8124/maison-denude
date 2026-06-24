@@ -1,0 +1,46 @@
+---
+interface SocialItem {
+  label: string;
+  href: string;
+  icon: 'zalo' | 'facebook' | 'instagram';
+}
+interface Props {
+  items: SocialItem[];
+}
+const { items } = Astro.props;
+---
+
+<ul class="socials" role="list">
+  {items.map(item => (
+    <li>
+      <a href={item.href} class="socials__link" aria-label={item.label} target="_blank" rel="noopener noreferrer">
+        {item.icon === 'zalo' && <span class="socials__icon">Zalo</span>}
+        {item.icon === 'facebook' && <span class="socials__icon">Facebook</span>}
+        {item.icon === 'instagram' && <span class="socials__icon">Instagram</span>}
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .socials {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  .socials__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: var(--text-footer-body);
+    font-weight: var(--fw-extralight);
+    letter-spacing: var(--ls-nav);
+    transition: opacity 0.2s;
+  }
+  .socials__link:hover { opacity: 0.7; }
+  .socials__icon {
+    text-transform: uppercase;
+  }
+</style>

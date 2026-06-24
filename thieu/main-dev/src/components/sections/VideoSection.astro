@@ -1,0 +1,92 @@
+---
+import type { VideoSection as VideoSectionType } from '../../content/types';
+import SmartImage from '../ui/SmartImage.astro';
+
+type Props = VideoSectionType;
+const { id, label, poster, videoUrl, orientation } = Astro.props;
+---
+
+<section class:list={['video-section', `video-section--${orientation}`]} id={id}>
+  <div class="video-section__bg" aria-hidden="true">
+    <SmartImage src={poster} alt="" fit="cover" class="video-section__poster" widths={[800, 1200, 1920]} sizes="100vw" />
+  </div>
+  <div class="video-section__overlay" aria-hidden="true"></div>
+  <div class="video-section__content">
+    <span class="video-section__label">{label}</span>
+    {videoUrl && (
+      <button class="video-section__play" type="button" aria-label={`Play ${label}`}>
+        ▶
+      </button>
+    )}
+  </div>
+</section>
+
+<style>
+  .video-section {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--color-bg);
+  }
+  .video-section--full {
+    width: 100%;
+    height: 65vh;
+  }
+  .video-section--portrait {
+    width: 40%;
+    height: 70vh;
+    margin: 0 auto;
+  }
+  .video-section__bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  /* sizing (cover, fills __bg) is owned by SmartImage; here only the editorial blur. */
+  .video-section__poster {
+    filter: blur(8px) brightness(0.7);
+    transform: scale(1.1);
+  }
+  .video-section__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--color-overlay);
+  }
+  .video-section__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 24px;
+  }
+  .video-section__label {
+    font-size: var(--text-video-label);
+    font-weight: var(--fw-regular);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-video);
+    color: var(--color-text);
+    text-align: center;
+  }
+  .video-section__play {
+    background: transparent;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    font-size: 24px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 767px) {
+    .video-section--portrait {
+      width: 90%;
+      height: 60vh;
+    }
+  }
+</style>

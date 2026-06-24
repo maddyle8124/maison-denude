@@ -1,0 +1,71 @@
+---
+import type { FeatureCollectionSection } from '../../content/types';
+import SmartImage from '../ui/SmartImage.astro';
+
+type Props = FeatureCollectionSection;
+const { id, label, feature, grid } = Astro.props;
+---
+
+<section class="feature-col" id={id}>
+  <div class="feature-col__label">
+    <span class="feature-col__label-line1">{label.line1}</span>
+    <span class="feature-col__label-line2">{label.line2}</span>
+  </div>
+  <SmartImage
+    src={feature}
+    alt=""
+    fit="contain"
+    class="feature-col__feature"
+    widths={[800, 1200, 1920]}
+    sizes="100vw"
+  />
+  <div class="feature-col__grid">
+    {grid.map((key) => (
+      <div class="feature-col__cell">
+        <SmartImage src={key} alt="" fit="cover" class="feature-col__grid-img" />
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .feature-col {
+    background: var(--color-bg);
+    padding-top: var(--gap-section);
+  }
+  .feature-col__label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 0 var(--label-bottom) var(--label-left);
+  }
+  .feature-col__label-line1 {
+    font-size: var(--text-collection-name);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    color: var(--color-text);
+  }
+  .feature-col__label-line2 {
+    font-size: var(--text-collection-sub);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-collection-sub);
+    color: var(--color-text);
+  }
+  /* Feature image keeps its natural ratio (contain) — it drives the strip height. */
+  .feature-col__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-image);
+    margin-top: var(--gap-image);
+  }
+  /* Each grid cell defines the box (portrait 3:4); SmartImage cover fills + crops. */
+  .feature-col__cell {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+  @media (max-width: 767px) {
+    .feature-col__grid { grid-template-columns: 1fr; }
+  }
+</style>

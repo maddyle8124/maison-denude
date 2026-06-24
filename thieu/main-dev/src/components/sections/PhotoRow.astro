@@ -1,0 +1,65 @@
+---
+import type { PhotoRowSection } from '../../content/types';
+import SmartImage from '../ui/SmartImage.astro';
+
+type Props = PhotoRowSection;
+const { images, columns, label, id } = Astro.props;
+---
+
+<section class="photo-row" id={id}>
+  {label && (
+    <div class="photo-row__label">
+      <span class="photo-row__label-line1">{label.line1}</span>
+      {label.line2 && <span class="photo-row__label-line2">{label.line2}</span>}
+    </div>
+  )}
+  <div class:list={['photo-row__grid', `photo-row__grid--${columns}col`]}>
+    {images.map((key) => (
+      <div class="photo-row__cell">
+        <SmartImage src={key} alt="" fit="cover" class="photo-row__img" />
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .photo-row {
+    background: var(--color-bg);
+    padding-top: var(--gap-section);
+  }
+  .photo-row__label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 0 var(--label-bottom) var(--label-left);
+  }
+  .photo-row__label-line1 {
+    font-size: var(--text-collection-name);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    color: var(--color-text);
+  }
+  .photo-row__label-line2 {
+    font-size: var(--text-collection-sub);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-collection-sub);
+    color: var(--color-text);
+  }
+  .photo-row__grid {
+    display: grid;
+    gap: var(--gap-image);
+  }
+  .photo-row__grid--3col { grid-template-columns: repeat(3, 1fr); }
+  .photo-row__grid--2col { grid-template-columns: repeat(2, 1fr); }
+  /* The cell defines the box (portrait 3:4); SmartImage cover fills + crops it. */
+  .photo-row__cell {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+  @media (max-width: 767px) {
+    .photo-row__grid--3col,
+    .photo-row__grid--2col { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import type { Section } from '../content/types';
+import Hero from './sections/Hero.astro';
+import PhotoRow from './sections/PhotoRow.astro';
+import FeatureCollection from './sections/FeatureCollection.astro';
+import VideoSection from './sections/VideoSection.astro';
+import Footer from './sections/Footer.astro';
+
+interface Props { section: Section; }
+const { section } = Astro.props;
+---
+
+{section.type === 'hero' && <Hero {...section} />}
+{section.type === 'photoRow' && <PhotoRow {...section} />}
+{section.type === 'featureCollection' && <FeatureCollection {...section} />}
+{section.type === 'video' && <VideoSection {...section} />}
+{section.type === 'footer' && <Footer {...section} />}

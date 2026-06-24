@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Maison Dénudé',
+  description = 'Vietnamese fashion house — couture áo dài and bridal.',
+} = Astro.props;
+
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
+// GA4 is configured inside GTM (see tracking-setup.md — recommended approach is GTM tag, not
+// a separate snippet). PUBLIC_GA4_ID is read here for reference/future use but no snippet
+// is emitted from Base.astro — all GA4 tagging lives in the GTM container.
+const ga4Id = import.meta.env.PUBLIC_GA4_ID; // eslint-disable-line @typescript-eslint/no-unused-vars
+const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link
+      rel="preload"
+      href="/fonts/ABChanelCorpo-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    {gtmId && (
+      <script is:inline define:vars={{ gtmId }}>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer',gtmId);
+      </script>
+    )}
+
+    {clarityId && (
+      <script is:inline define:vars={{ clarityId }}>
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", clarityId);
+      </script>
+    )}
+  </head>
+
+  <body>
+    {gtmId && (
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        ></iframe>
+      </noscript>
+    )}
+
+    <slot />
+  </body>
+</html>

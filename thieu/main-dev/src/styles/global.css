@@ -1,0 +1,53 @@
+@import "./tokens.css";
+
+/*
+ * ABChanel Corpo — the brand primary typeface (design-system.md §Typography).
+ * Two source weights ship as woff2 in /public/fonts:
+ *   Light   → mapped to weights 200 & 300 (design uses Extra Light 200 + Light 300)
+ *   Regular → weight 400 (video titles, footer tagline)
+ * The design uses no bold/medium, so no heavier faces are declared.
+ * To swap or add weights later, edit only these @font-face blocks + the file in /public/fonts.
+ */
+@font-face {
+  font-family: "ABChanel Corpo";
+  src: url("/fonts/ABChanelCorpo-Light.woff2") format("woff2");
+  font-weight: 200 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABChanel Corpo";
+  src: url("/fonts/ABChanelCorpo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-weight: var(--fw-extralight);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

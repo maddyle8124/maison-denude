@@ -1,0 +1,53 @@
+---
+export const prerender = true;
+
+import Base from '../layouts/Base.astro';
+import Nav from '../components/ui/Nav.astro';
+import BookingForm from '../components/ui/BookingForm.astro';
+---
+
+<Base title="Booking — Maison Dénudé" description="Request a private consultation with Maison Dénudé.">
+  <Nav />
+  <main class="booking-page">
+    <header class="booking-page__intro">
+      <h1 class="booking-page__title">Booking</h1>
+      <p class="booking-page__lede">
+        Request a private consultation. Share your details and we'll be in touch.
+      </p>
+    </header>
+    <BookingForm />
+  </main>
+</Base>
+
+<style>
+  .booking-page {
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-section);
+    padding: var(--gap-section) var(--label-left);
+    max-width: var(--form-max-width);
+  }
+  .booking-page__intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-label-gap);
+  }
+  .booking-page__title {
+    font-family: var(--font-primary);
+    font-size: var(--text-collection-name);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-label);
+    margin: 0;
+  }
+  .booking-page__lede {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-body);
+    font-weight: var(--fw-extralight);
+    color: var(--color-text);
+    margin: 0;
+  }
+</style>
