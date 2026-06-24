@@ -37,6 +37,14 @@ _Append-only: add the next `MD-xxx`; never rewrite history. Last updated: 2026-0
 | MD-028 | 2026-06-15 | Payment terms = **Net** 9,500,000 (gross debated, reverted to net) | Chi: quality + commitment matter more than fee mechanics; net keeps it simple |
 | MD-029 | 2026-06-18 | Deposit received → project officially started; build site shell first, apply design later | MD's graphic designer resigned → visual design delayed; decouple tracking/shell from design |
 | MD-030 | 2026-06-15 | SEO tooling = SimilarWeb Pro (API) + manual workflow; no SEMrush | Cost-efficient, tailored; SEMrush features mostly unused for this scope |
+| MD-031 | 2026-06-21 | **Reverses MD-012** — add a minimal client-editable CMS (`/admin`) for collections CRUD | Ownership principle: client should control their own site; non-tech staff usability required |
+| MD-032 | 2026-06-21 | **Extends MD-008** — add `/collections` as a data-driven page type | Wishlist + metrics need real product records sourced from Supabase |
+| MD-033 | 2026-06-21 | **Reverses MD-015** — wishlist is anonymous **server-stored** (anon cookie id), not localStorage | Persistence across cache clears + queryable for metrics |
+| MD-034 | 2026-06-21 | Interaction metrics (views/wishlists/attach-to-booking) stored in Supabase; team consumes a report Thiệu prepares (**MD-016 stays**) | No team-facing metrics dashboard/login built |
+| MD-035 | 2026-06-21 | **Reaffirms MD-005** with explicit **hybrid** render: `/`+`/blog` static, `/collections` static shell+live read, wishlist client-side | Protects SEO/Lighthouse on content; dynamic only where needed |
+| MD-036 | 2026-06-21 | **Single backend = Supabase** for collections + wishlist + metrics (one project, Maison's email, Thiệu admin) | Consolidate once a DB is committed; avoid two backends |
+| MD-037 | 2026-06-21 | **No price increase** — CMS + server-stored wishlist + metrics absorbed into current scope | Thiệu's call on ownership principle; maintenance burden knowingly absorbed |
+| MD-038 | 2026-06-21 | **Supersedes GCS** — media on **Cloudflare R2**; only URL stored in Supabase | Same vendor as Pages, no egress fees, one-vendor media path |
 
 ## Session Log
 
@@ -58,6 +66,13 @@ _Append-only: add the next `MD-xxx`; never rewrite history. Last updated: 2026-0
 - Captured Chi's **brand-language rules** in `client-context/positioning.md` (no "high end"; bespoke = luxury; not a "tailor").
 - Logged MD-025 (domain), MD-026 (blog language), MD-027 (niche-first SEO), MD-028 (net payment), MD-029 (deposit in, build shell first / design delayed), MD-030 (SimilarWeb not SEMrush).
 - Resolved OQ-002, OQ-003; added OQ-007 (competitor list to scrape). Deposit received 6/18 — project live.
+
+### 2026-06-21 — Foundation rethink (brainstorm)
+- Pressure-tested the stack after the wishlist scope grew. Confirmed Astro + Cloudflare Pages + Supabase base; made the render model hybrid (MD-035).
+- Wishlist → anonymous server-stored + interaction metrics in Supabase (MD-033, MD-034).
+- Added a minimal collections CMS (`/admin`), reversing "no CMS" on ownership principle, no price increase (MD-031, MD-037).
+- `/collections` now a data-driven page (MD-032); single backend on Supabase (MD-036); media moved GCS → Cloudflare R2 (MD-038).
+- Logged MD-031–038. New OQs: OQ-008 (admin auth), OQ-009 (collection data shape — R2 confirmed), OQ-010 (metrics events/report), OQ-011 (`/collections` SEO), OQ-012 (keep-alive robustness, now load-bearing).
 
 ## Commit protocol
 

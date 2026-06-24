@@ -12,16 +12,20 @@ Ship a production-grade website that:
 
 | Constraint | Decision |
 |-----------|---------|
-| Tech stack | Astro + Cloudflare adapter |
+| Tech stack | Astro + Cloudflare adapter, **hybrid render** (MD-035) |
 | Hosting | Cloudflare Pages (free tier) |
-| Database | Supabase (free tier) |
+| Database | Supabase (free tier) — **single backend** (MD-036) |
+| Media | **Cloudflare R2**, URL stored in Supabase (MD-038) |
 | Booking | Supabase Edge Function → email |
-| Domain | Purchased by Maison Dénudé (OQ-002) |
+| Domain | maisondenude.com (Mắt Bão), Thiệu = technical manager (MD-025) |
 | Language default | English |
 | Multi-language | Deferred (OQ-005) |
-| CMS | None — Thiệu manages all content |
-| Wishlist auth | Anonymous — localStorage only |
+| CMS | **Minimal collections CMS** at `/admin` (MD-031) — blog still Thiệu/MDX |
+| Wishlist | Anonymous, **server-stored** (anon cookie id, MD-033) — not localStorage |
+| Metrics | `interaction_events` in Supabase → monthly report by Thiệu (MD-034) |
 | Analytics | GA4 + GTM + Search Console |
+
+> **Note (2026-06-21):** foundation rethink logged MD-031–038. New build items: `/collections` page, `/admin` CMS, server-stored wishlist, metrics pipeline, R2 media. No price increase. Full implementation planning deferred (user instruction).
 
 ---
 
@@ -109,13 +113,17 @@ Ship a production-grade website that:
 - [ ] Edge Function updated: booking → Calendar event created
 - [ ] Test: submit booking → verify Calendar event appears
 
-**If Add-on B chosen:**
-- [ ] WishlistButton component built (heart/bookmark)
-- [ ] localStorage wishlist logic implemented
+**If Add-on B chosen (server-stored wishlist + collections + metrics — MD-031/032/033/034):**
+- [ ] `/collections` page — static shell + live Supabase read (hybrid)
+- [ ] `/admin` CMS — Supabase Auth login + collections CRUD; image upload → R2 (OQ-008)
+- [ ] `design_items`, `wishlists`, `wishlist_items`, `booking_wishlist`, `interaction_events` tables (see backend.md)
+- [ ] WishlistButton component — server-stored via anon cookie id (calls `wishlist` fn)
 - [ ] Wishlist pre-populated in booking form on open
-- [ ] `wishlist_submissions` table in Supabase (see UI.md for schema)
-- [ ] Edge Function updated to save wishlist items with booking
-- [ ] Test: save items → submit booking → verify in Supabase
+- [ ] Edge Function saves attached items to `booking_wishlist` + logs `attached_to_booking`
+- [ ] `track-event` wired (item_viewed / wishlisted) → `interaction_events`
+- [ ] Confirm `/collections` keeps Lighthouse>90 + is indexable (OQ-011)
+- [ ] Redundant Supabase keep-alive + failure alert (load-bearing now — OQ-012)
+- [ ] Test: save items → submit booking → verify in Supabase; admin edit → live on /collections
 
 **General polish:**
 - [ ] Cross-browser QA: Chrome, Safari, Firefox, mobile

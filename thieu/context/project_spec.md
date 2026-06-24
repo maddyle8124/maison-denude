@@ -34,11 +34,15 @@
 ### Website Build
 - `/` — Home / Landing page (full brand landing page UI)
 - `/blog` — Blog listing + individual posts at `/blog/[slug]`
+- `/collections` — data-driven catalog from Supabase (MD-032), hybrid-rendered
 - `/booking` — Booking consultation page
+- `/admin` — minimal client-editable CMS: collections CRUD (MD-031)
 - Booking modal (all pages, auto-triggers at 30s — OQ-004)
 - Booking → email notification (Supabase Edge Function → team email — OQ-001)
-- Cloudflare Pages deployment (free tier)
+- Cloudflare Pages deployment (free tier); media on Cloudflare R2 (MD-038)
 - GA4 + GTM + Search Console installed on new Astro site
+
+> **Architecture update (2026-06-21, MD-031–038):** scope grew from a 3-page brochure to a small catalog app. Supabase is now the single backend for collections + server-stored wishlist + interaction metrics; render model is hybrid; a minimal collections CMS was added on ownership principle. **No price increase** (MD-037). See `backend.md` / `frontend/UI.md`.
 
 ### Handover Documentation
 - How to add blog posts (MDX workflow)
@@ -55,7 +59,7 @@ When a booking is submitted, a calendar event is automatically created in the sa
 
 Optional — pending Maison Dénudé confirmation.
 
-Users browse designs and save items to an anonymous wishlist (no login). When they submit a booking, the wishlist is included automatically — the team sees exactly what the client is interested in without needing screenshots. Monthly analytics report on most-liked items is included in maintenance. Implementation details → `backend.md`.
+Users browse designs and save items to an anonymous wishlist (no login). The wishlist is now **server-stored** (anon cookie id, MD-033) so it persists across cache clears and feeds interaction metrics. When they submit a booking, the wishlist is included automatically — the team sees exactly what the client is interested in without needing screenshots. Monthly behaviour-metrics report (views, wishlists, conversion) is prepared by Thiệu and included in maintenance (MD-034/MD-016). Implementation details → `backend.md`.
 
 ## Annual Maintenance (1,000,000 VND/year)
 
@@ -72,7 +76,7 @@ Users browse designs and save items to an anonymous wishlist (no login). When th
 - 4/4 tracking tools live and collecting data (GTM, GA4, GSC, Business Profile)
 - All Maison Dénudé blog content published + structured for target keywords
 - Baseline keyword rankings documented for all 7 keywords
-- 3/3 website pages live on Cloudflare Pages
+- All website pages live on Cloudflare Pages (`/`, `/blog`, `/collections`, `/booking`, `/admin`)
 - Booking form → email flow functional (test submission confirmed)
 - Lighthouse performance score > 90 (mobile)
 - 3 months post-launch: Top 10 ranking for at least 3 target keywords
@@ -93,12 +97,12 @@ Users browse designs and save items to an anonymous wishlist (no login). When th
 - Domain purchase or registration
 - Custom email domain
 - Writing blog content (Maison Dénudé provides; Thiệu structures & publishes)
-- CMS for client self-editing
+- CMS for **blog/page** self-editing (the `/admin` CMS is collections-only, MD-031; blog stays MDX managed by Thiệu)
 - Multi-language site ZH/KO (deferred — OQ-005)
 - Social media management
 - Managing ad spend
 - KOL outreach & negotiation
-- Custom admin dashboard
+- Team-facing metrics dashboard/login (metrics delivered as a report Thiệu prepares — MD-034)
 
 ## Open Questions
 

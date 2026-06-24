@@ -25,6 +25,14 @@
 | MD-019 | 2026-05-31 | Add-on A Google Calendar price = 500,000 VND | Confirmed |
 | MD-020 | 2026-05-31 | Supabase free tier limits acknowledged: 500MB DB, 500k Edge invocations/month | Within expected usage for MVP |
 | MD-021 | 2026-05-31 | Thiệu = Matthew — same person | Matthew is the English name used in client-facing proposals |
+| MD-031 | 2026-06-21 | **Reverses MD-012** — add a minimal client-editable CMS (custom `/admin`) for collections CRUD | Moral/ownership principle: client should be able to control their own site. Non-technical staff usability is a hard requirement |
+| MD-032 | 2026-06-21 | **Extends MD-008** — add `/collections` as a data-driven page type | Wishlist + metrics need real product records; collections are now first-class, sourced from Supabase |
+| MD-033 | 2026-06-21 | **Reverses MD-015** — wishlist is now anonymous **server-stored** (anon ID/cookie), not localStorage | Team wants persistence across cache clears + full interaction metrics; needs a DB-backed wishlist |
+| MD-034 | 2026-06-21 | Interaction metrics (item views / wishlists / attach-to-booking) stored in Supabase; team consumes via a report Thiệu prepares (**MD-016 stays**) | No team-facing metrics admin/login built; the custom admin is for collections CRUD only |
+| MD-035 | 2026-06-21 | **Reaffirms MD-005** — Astro + Cloudflare Pages + Supabase, with an explicit **hybrid** render model | `/` + `/blog` static (SEO-perfect); `/collections` static shell + live DB read; wishlist client-side + Supabase |
+| MD-036 | 2026-06-21 | **Single backend = Supabase** for both collections and wishlist/metrics (one project, Maison's email, Thiệu admin) | Consolidate once a DB is committed; avoids two backends. Best-tool-per-job rejected here in favor of one DB |
+| MD-037 | 2026-06-21 | **No price increase** — CMS + server-stored wishlist + metrics absorbed into current scope | Thiệu's call on principle; maintenance burden (admin + live DB + keep-alive) knowingly absorbed |
+| MD-038 | 2026-06-21 | **Supersedes GCS** — media hosted on **Cloudflare R2**; only the URL is stored in Supabase | Same vendor as Pages, no egress fees, simpler one-vendor media path; keeps DB lean |
 
 ## Session Log
 
@@ -52,6 +60,19 @@
 1. Send OQ-001, OQ-002, OQ-003, OQ-004 to Maison Dénudé
 2. Present add-on A & B upsells to client
 3. Start Phase 0 as soon as answers received
+
+### 2026-06-21 — Foundation rethink (brainstorm)
+
+**What happened:**
+- Brainstormed the website foundation after the wishlist scope grew. Confirmed Astro + Cloudflare Pages + Supabase is still the right base (MD-035).
+- Wishlist reframed: anonymous **server-stored** + full interaction metrics → needs a DB-backed wishlist, not localStorage (MD-033, MD-034).
+- Added a minimal client-editable **collections CMS** (`/admin`), reversing the "no CMS" stance — on ownership principle, no price increase (MD-031, MD-037).
+- `/collections` is now a data-driven page type (MD-032); render model is hybrid (MD-035).
+- Single backend consolidated on Supabase (MD-036).
+- Media moved from GCS → **Cloudflare R2**, URL stored in Supabase (MD-038).
+- Logged MD-031 to MD-038.
+
+**Open questions raised:** admin auth method, collection data shape, exact metrics events + report contents, dynamic `/collections` SEO strategy, Supabase keep-alive robustness (now load-bearing). See `management/open_questions.md`.
 
 ## Commit Protocol
 

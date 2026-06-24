@@ -29,7 +29,7 @@ Thiệu and Matthew are the same person. Matthew is the English name used in cli
 
 ## Tech Stack (one-liner)
 
-Astro → Cloudflare Pages (free) → Supabase (free tier) → GA4 + GTM + Search Console
+Astro (hybrid render) → Cloudflare Pages (free) → Supabase (single backend) + Cloudflare R2 (media) → GA4 + GTM + Search Console. Includes a minimal collections CMS (`/admin`) and a server-stored wishlist + metrics (MD-031–038).
 
 ## Phase Summary
 

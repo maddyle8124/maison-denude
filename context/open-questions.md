@@ -15,6 +15,11 @@ When an OQ is resolved:
 | OQ-004 | Booking popup trigger timing: confirm ~30s default? | Maison (Chi) | ❌ Open | — | — |
 | OQ-006 | KOL selection criteria (for the Playbook KOL section) | Maison (Chi) | ❌ Open | — | — |
 | OQ-007 | Which competitor brands to scrape for keyword data? Chi asked for the list. | Maison (Chi) | ❌ Open | — | — |
+| OQ-008 | Admin (`/admin`) auth method — shared Supabase account vs. magic-link to Maison's email? | Internal + Maison | ❌ Open | — | — |
+| OQ-009 | Collection data shape — final fields + ordering? (image hosting resolved: Cloudflare R2, MD-038) | Internal | ⚠ Partly | — | — |
+| OQ-010 | Exact interaction-metrics events + monthly report contents | Internal + Maison | ❌ Open | — | — |
+| OQ-011 | SEO/indexability + Lighthouse>90 strategy for dynamic `/collections` | Internal | ❌ Open | — | — |
+| OQ-012 | Supabase keep-alive robustness — now load-bearing for the live site (redundant pinger + alert)? | Internal | ❌ Open | — | — |
 
 **Phase 0 partially unblocked:** domain resolved (OQ-002), deposit received 6/18. Still need OQ-001 (booking email) before the booking flow can be tested end-to-end.
 
