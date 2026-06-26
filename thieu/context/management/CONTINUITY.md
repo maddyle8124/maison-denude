@@ -4,12 +4,12 @@
 >
 > **Doc map:** `context/management/` = plan.md, open_questions.md, CONTINUITY.md, status_log.md (project-wide). `context/frontend/` = frontend specs + decisions.md (D-rows). `context/decision.md` = master legal decisions (MD-rows).
 
-_Last refreshed: 2026-06-24 (Phase 5 COMPLETE pm-PASSED; live booking insert verified end-to-end)_
+_Last refreshed: 2026-06-26 (tracking fully live; domain maisondenude.com on prod; preview+booking phases complete)_
 
 ---
 
 ## Now-line
-Building a **deployed landing-page preview** for Maison Dénudé whose headline purpose is to **validate GTM/GA4/Clarity tracking on real traffic**, matching the brand's editorial design, plus an insert-only booking form. Multi-session, spec-driven. Approved plan: `C:\Users\Thieu\.claude\plans\dynamic-snacking-pond.md`.
+Landing page + booking form **live on maisondenude.com** (Cloudflare Workers, thieuxmaison account). All tracking verified: GTM, GA4, Microsoft Clarity, Google Search Console. Site is in production. Next work follows **plan.md Phase 2 → 3 → 6** roadmap: complete booking email, booking modal, then blog + SEO audit.
 
 ## Source-of-truth paths (for worker spawns)
 - **Legal truth:** `context/frontend/decisions.md` (if anything disagrees, decisions win)
@@ -33,15 +33,16 @@ Building a **deployed landing-page preview** for Maison Dénudé whose headline 
 ## Last pm-PASSED state
 **Phase 5 — COMPLETE (2026-06-24).** Live booking insert verified end-to-end: FormData POST to `/_actions/createBooking` → `{"success":1}`; row confirmed in Supabase via MCP; test row deleted. Key lessons: (1) Phase 4 lesson — PUBLIC_* vars must be in .env + wrangler.jsonc [vars] for prerendered pages (Worker secrets are runtime-only, invisible at build time). (2) Phase 5 lesson — `Astro.locals.runtime.env` was removed in Astro v6+; canonical env-access for Astro 7 / @astrojs/cloudflare adapter v14 is `import { env } from 'cloudflare:workers'` in server-side modules.
 
-## Next 1–3 actions
-1. **GA4 + Clarity IDs (PT-02/PT-03):** When IDs are ready, add PUBLIC_GA4_ID + PUBLIC_CLARITY_ID to .env + wrangler.jsonc [vars], rebuild + redeploy (same build-time-var pattern as GTM fix).
-2. **Booking email mini-phase:** Wire `lib/email.ts` sendBookingNotification (currently no-op stub) when email provider is chosen — seam is in place per D-BOOK-01 deferred half.
-3. **Cleanup:** Delete stray `main-dev` Worker in `nguyenthaithieu@gmail.com` CF account via Cloudflare dashboard (wrangler CLI cannot cross-account delete).
-- Non-blocking content task: 4 landing ImageKeys still resolve to `_placeholder` — content-config keys not pointing at real files; swap in via config when assets are ready.
+## Next 1–3 actions (plan.md Phase 2 completion → Phase 3)
+1. **Booking email (plan.md Phase 2):** Wire `lib/email.ts` sendBookingNotification (currently no-op stub) — choose email provider (Resend recommended), get API key, wire to D-BOOK-01 seam. Unblocks OQ-001 (need team email from Maison Dénudé).
+2. **Booking modal (plan.md Phase 2):** Auto-trigger modal at 30s on all pages (MD-009). Seam not yet built — new component + JS trigger needed.
+3. **Blog (plan.md Phase 3):** `/blog` listing + `/blog/[slug]` MDX pages. Content from Maison Dénudé; Thiệu structures for SEO. First 2–3 posts targeting priority keywords (see plan.md SEO Blog Strategy).
+- Non-blocking: 4 landing ImageKeys still `_placeholder` — swap content-config keys when clean images ready (PT-01). Video files/URLs from Maison still pending (PT-06).
 
 ## Active blockers / watch-items
-- **D-DEPLOY-03:** Worker currently targets the WRONG CF account. At Phase 4: `wrangler whoami` → pin thieuxmaison `account_id` in `wrangler.jsonc` → deploy → delete stray Worker. Same login, switch account.
-- Non-blocking open deps: video URLs (FQ-04), clean KOL/Sable images (PT-01/03), nav-item meanings (FQ-01..03). All swap in via config — never block the build.
+- **OQ-001 (booking email):** Maison Dénudé hasn't confirmed the team inbox. `lib/email.ts` stub is in place; unblocks when email provider chosen + OQ-001 answered.
+- **Non-blocking open deps:** video URLs (FQ-04), clean KOL/Sable images (PT-01), nav-item meanings (FQ-01..03), blog language (OQ-003). All swap in via config — never block the build.
+- **D-DEPLOY-03:** ✅ Resolved 2026-06-26 — stray Worker deleted.
 
 ## Change-tolerance invariants (every pm gate checks these)
 1. No hardcoded content in markup — all from `content/*`.

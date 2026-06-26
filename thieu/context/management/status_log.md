@@ -4,6 +4,20 @@
 
 ---
 
+## 2026-06-26 — Prod go-live: domain connected, all tracking verified
+
+- **Domain:** maisondenude.com connected to the thieuxmaison CF Worker — site is now live on prod domain.
+- **GTM:** ✅ confirmed firing on maisondenude.com.
+- **GA4:** ✅ property created, Measurement ID wired, receiving live data.
+- **Microsoft Clarity:** ✅ project created, confirmed live via GTM.
+- **Google Search Console:** ✅ domain property verified for maisondenude.com.
+- **Stray Worker cleanup (D-DEPLOY-03):** ✅ stray `main-dev` Worker in nguyenthaithieu account deleted.
+- **OQ-002 resolved:** domain = maisondenude.com (was open since kickoff).
+- **Context updated:** CONTINUITY.md, frontend/decisions.md tracking table, open_questions.md OQ-002.
+- **Where we are in plan.md:** Phase 0 ✅ (infra + tracking), Phase 1 tracking items ✅ — remaining Phase 1 items (Google Business Profile, keyword baseline) + Phase 2 remaining (booking email, booking modal) are next.
+
+---
+
 ## 2026-06-24 — Phase 5 COMPLETE — pm PASSED (live booking insert verified)
 
 - **Code built + pm-verified PASS:** `src/lib/supabase.ts` (supabaseAdmin + supabasePublic factories — invariant 6 held, createClient only here), `src/lib/email.ts` (sendBookingNotification no-op stub, NOT called — D-BOOK-01 email half deferred), `src/actions/index.ts` (createBooking action: accept:'form', astro:schema zod input, supabaseAdmin insert, camelCase→snake_case field mapping, ActionError INTERNAL_SERVER_ERROR on failure), `src/components/ui/BookingForm.astro` (PE form, no-JS, actions.createBooking, success/error states), `src/pages/booking.astro` (prerender=true, Base + Nav). 9 form tokens added to tokens.css.

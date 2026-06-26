@@ -72,10 +72,10 @@ _Use this as the approval record before implementation starts._
 
 | Tool | Status | Detail |
 |------|--------|--------|
-| GTM | ✅ Ready | Container ID `GTM-PKQ647S4` — scripts in `reference/gg_tag_manager/` |
-| GA4 | ⏳ Needs setup | Property not yet created; Thiệu to create |
-| Microsoft Clarity | ⏳ Needs setup | Thiệu will create the project independently |
-| Google Search Console | ⏳ Needs setup | After domain DNS is accessible |
+| GTM | ✅ Live | Container ID `GTM-PKQ647S4` — confirmed firing on maisondenude.com |
+| GA4 | ✅ Live | Property created, Measurement ID wired, confirmed receiving data |
+| Microsoft Clarity | ✅ Live | Project created, confirmed live via GTM |
+| Google Search Console | ✅ Live | Domain property verified, maisondenude.com |
 
 ---
 
@@ -95,10 +95,10 @@ _Use this as the approval record before implementation starts._
 | ID | Task |
 |----|------|
 | PT-01 | Manually download clean KOL images from Instagram (Section 2 + Section 7 col 2 & 3) |
-| PT-02 | Create Clarity project at clarity.microsoft.com |
-| PT-03 | Create GA4 property, get Measurement ID |
-| PT-04 | Create `logo_white.svg` (invert fill on `logo_black.svg`) |
-| PT-05 | Confirm ABChanel Corpo font files are available |
+| PT-02 | ✅ Done | Clarity project created and live |
+| PT-03 | ✅ Done | GA4 property created, Measurement ID wired and live |
+| PT-04 | ✅ Done | `logo_white.svg` exists |
+| PT-05 | ✅ Done | ABChanel Corpo woff2 files wired and serving |
 | PT-06 | Get video URLs/files from Maison (3 video sections) |
 | PT-07 | Source botanical/garden B&W photo for footer (or confirm not needed with standard footer) |
 
@@ -110,12 +110,12 @@ _Use this as the approval record before implementation starts._
 |----|----------|--------|
 | D-DEPLOY-01 | **Hosting = Cloudflare Workers, not Pages** | `main-dev/` is already scaffolded with `@astrojs/cloudflare` + `wrangler deploy` + `ASSETS` binding (Workers Static Assets model). Keep as-is — no Pages migration. Static assets are unmetered on free tier; the 100k/day free limit applies only to Worker invocations (SSR/API), which is ample for preview + launch. Cloudflare steers new projects to Workers; Pages is maintenance-mode. |
 | D-DEPLOY-02 | **CF account** | Account `thieuxmaison@gmail.com`; login via `nguyenthaithieu@gmail.com`. Worker name `main-dev` (rename later if desired). |
-| D-DEPLOY-03 | **Worker must deploy to the thieuxmaison account, NOT the default** | The current scaffold deploys under the wrong account (the login `nguyenthaithieu@gmail.com`'s default account). The login CAN access the `thieuxmaison@gmail.com` account (same login, multiple accounts). Fix: pin `account_id` of the thieuxmaison account in `wrangler.jsonc`, deploy there, then DELETE the stray Worker in the wrong account. Get the account_id from `wrangler whoami` (lists all accessible accounts). No code re-creation needed — same login, switch account target. This MUST happen before/at the Phase 4 deploy. |
+| D-DEPLOY-03 | **Worker must deploy to the thieuxmaison account, NOT the default** ✅ RESOLVED | account_id pinned in wrangler.jsonc; stray Worker in nguyenthaithieu account deleted 2026-06-26. |
 | D-SCOPE-01 | **This effort = Preview + Booking** | Deliver: (1) landing page demo matching old Maison Dénudé design, (2) GTM/GA4/Clarity firing & verified on the live URL (GSC deferred to real-domain phase), (3) a working booking form (Supabase + email). **Deferred:** collections, admin CMS, wishlist, blog. |
 | D-SCOPE-02 | **Collections + admin = NEXT effort, not this one** | User's roadmap "seed demo collections in Supabase → render /collections → build admin" is confirmed correct but belongs to the FULL-site follow-up. The preview landing + booking need ZERO collection data: landing imagery is hardcoded editorial photos (not DB rows); base booking form has no collections dependency (wishlist pre-load is deferred Add-on B). Do not seed collections or build /collections or /admin this round. |
 | D-DOC-01 | **Doc structure = full harness layout** | Reorganize `context/frontend/` into: `decisions.md` (legal truth, rename from decisions-log.md), `design-system.md` + `tracking-setup.md` (conventions), `sitemap/` (per-page specs: `_index.md`, `landing.md`, `booking.md`), `management/` (CONTINUITY.md, status_log.md, task.md). Spec-driven: each page's spec is the single source of truth for its build. |
 | D-ASSET-01 | **Assets = placeholder-driven, config-swappable** | Demo is never blocked on manual asset tasks (PT-01..07). An agent converts HEIC→JPG, renames per asset-rename-list.md, wires clean assets where they exist + tasteful placeholders for gaps (video→static poster+play stub; footer botanical→dark fallback; logo_white→invert logo_black). All image/video paths config-driven so real files swap in with no code change. |
-| D-DOMAIN-01 | **Domain = workers.dev first** | Deploy to free `<name>.workers.dev` immediately; GTM/GA4/Clarity verify there. GSC + real domain (maisondenude.com or preview subdomain) deferred until domain is in the thieuxmaison CF account. |
+| D-DOMAIN-01 | ~~**Domain = workers.dev first**~~ → **SUPERSEDED 2026-06-26** | maisondenude.com is now connected to the thieuxmaison CF Worker and is the live prod domain. workers.dev URL still works as fallback but prod is maisondenude.com. |
 | D-ARCH-01 | **Code quality bar = editability without breakage (first-principles)** | The roadmap will change a LOT (collections, admin, wishlist, blog all incoming). High-quality code here means *change-tolerant*: single source of truth for every value (content/config/design tokens never hardcoded in markup), clear separation of concerns (content vs presentation vs behavior), small composable components with explicit typed props, no duplication (DRY), config-driven asset/tracking paths, and additive extension points so new pages/sections drop in without touching existing ones. Every phase's pm gate must check this, not just "does it render." |
 | D-BOOK-01 | **Booking backend = Supabase insert + email** | Booking POST → Astro Worker route (`/api/booking` or SSR action) → insert into Supabase `bookings` table + send notification email to `TEAM_EMAIL` (= thieu.dachill@gmail.com until OQ-001 resolved). Env names in `main-dev/.env`: `SUPABASE_URL`, `SUPABASE_ANON`, `SUPABASE_SERVICE_ROLE`. Email transport TBD (Resend/SMTP) — log as open question if not yet chosen. |
 
