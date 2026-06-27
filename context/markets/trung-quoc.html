@@ -1,0 +1,233 @@
+<title>Maison Dénudé — Nghiên cứu thị trường Trung Quốc</title>
+<style>
+  :root{
+    --ivory:#f6f1e9; --paper:#fffdf9; --ink:#2a2521; --muted:#7c736a; --soft:#9a9087;
+    --line:#e6ddcf; --line2:#d8cdb9; --gold:#a9824e; --goldbg:#f0e7d6; --downbg:#f6e6df;
+    --up:#5d7a4f; --down:#b15a40; --cn:#b1402f;
+    --vn:#8a6a86; --dia:#5b7a9a; --west:#9a8c78; --me:#c08a3e;
+    --serif:Georgia,'Times New Roman',serif; --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  .wrap{max-width:1060px;margin:0 auto;padding:32px 22px 80px;color:var(--ink);font-family:var(--sans);background:var(--ivory);line-height:1.66;font-size:15px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.25}
+  h1{font-size:31px;margin:0 0 6px} h2{font-size:22px;margin:46px 0 4px} h3{font-size:16px;margin:0 0 4px}
+  .secnum{color:var(--cn);font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.05em}
+  .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:var(--cn);font-weight:600;margin:0 0 10px}
+  .sub{color:var(--muted);font-size:13.5px;margin:4px 0 0}
+  .rule{height:1px;background:var(--line2);border:0;margin:10px 0 0}
+  p{margin:12px 0 0;max-width:86ch}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line2)} a:hover{border-color:var(--gold)}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .src{font-size:11.5px;color:var(--soft);margin-top:6px} .src a{font-size:11.5px}
+  .chartbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 16px 10px;margin:14px 0 0;overflow-x:auto}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin:0 2px 12px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .readbox{background:var(--goldbg);border-radius:10px;padding:14px 16px;margin:12px 0 0;font-size:13.5px;color:#5a4628} .readbox b{color:#3f3118} .readbox p{margin:8px 0 0;max-width:none}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:14px 0 0}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:12px;border-left:3px solid var(--dia);padding:13px 15px}
+  .q .tag{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--dia);margin:0 0 5px}
+  .q .tag.gap{color:var(--down)}
+  .q blockquote{margin:0;font-size:13px;color:#3a342e;font-style:italic;line-height:1.5}
+  .q .meta{font-size:11px;color:var(--soft);margin-top:7px}
+  .tbl-wrap{overflow-x:auto;margin:12px 0 0}
+  table{border-collapse:collapse;width:100%;font-size:12.5px;background:var(--paper);border-radius:10px;overflow:hidden}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top} th{background:var(--goldbg);color:#5a4628;font-weight:600;font-size:11.5px} td{color:#433c34} td b{color:var(--ink)}
+  .ins{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0 0}
+  .ins h3{font-family:var(--sans);font-size:16px;font-weight:600;margin:0 0 10px;line-height:1.4}
+  .ins .lab{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin:12px 0 3px} .ins .lab.d{color:var(--dia)} .ins .lab.a{color:var(--gold)}
+  .ins .data{font-size:13px;color:#433c34;background:var(--ivory);border-radius:8px;padding:9px 12px;border-left:3px solid var(--dia)} .ins .data b{color:var(--ink)}
+  .ins .ana{font-size:13.5px;color:#473f38;margin:6px 0 0}
+  .ins .take{font-size:13px;color:#5a4628;background:var(--goldbg);border-radius:8px;padding:10px 13px;margin:12px 0 0} .ins .take b{color:#3f3118}
+  .evcard{background:var(--paper);border:1px solid var(--line2);border-radius:12px;padding:0;overflow:hidden;margin:12px 0 0}
+  .evcard .banner{background:var(--cn);color:#fff;font-size:12.5px;padding:8px 14px;text-align:center;letter-spacing:.02em}
+  .evcard .ttl{background:#3a342e;color:#f0e7d6;font-size:12px;padding:7px 14px;font-style:italic}
+  .evcard .bd{padding:13px 16px;font-size:13px;color:#473f38}
+  .evcard .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px} .evcard .chip{font-size:11.5px;background:var(--ivory);border:1px solid var(--line);border-radius:6px;padding:3px 9px;color:#5a4628}
+  .oq{background:var(--ink);color:#f1e7d6;border-radius:14px;padding:20px 24px;margin:14px 0 0}
+  .oq h3{color:#f6efe1;font-family:var(--serif);margin:0 0 4px;font-size:18px} .oq ol{margin:12px 0 0;padding-left:20px} .oq li{font-size:14px;margin:10px 0;color:#e7dccb} .oq li b{color:#f0c98a}
+  .note{font-size:12px;color:var(--muted);background:var(--paper);border:1px dashed var(--line2);border-radius:10px;padding:14px 16px;margin-top:18px}
+  .exec{background:var(--paper);border:1px solid var(--line2);border-left:4px solid var(--cn);border-radius:12px;padding:18px 22px;margin:18px 0 0}
+  .exec h2{font-size:20px;margin:0 0 8px}
+  .exec p{margin:10px 0 0;font-size:14.5px;color:#3e3830;max-width:none}
+  .verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:14px 0 0}
+  .vc{border-radius:12px;padding:14px 16px;border:1px solid var(--line);background:var(--paper)}
+  .vc .vh{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px;font-family:var(--serif)}
+  .vc .badge{font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap}
+  .vc.test{border-left:4px solid var(--gold)} .vc.test .badge{background:var(--goldbg);color:#8a5a1e}
+  .vc.no{border-left:4px solid var(--down)} .vc.no .badge{background:var(--downbg);color:var(--down)}
+  .vc.yes{border-left:4px solid var(--up)} .vc.yes .badge{background:#e8efe2;color:var(--up)}
+  .vc p{font-size:12.5px;color:#473f38;margin:8px 0 0}
+  .conf{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:5px;margin-right:5px}
+  .conf.ok{background:#e8efe2;color:var(--up)} .conf.try{background:var(--goldbg);color:#8a5a1e} .conf.no{background:var(--downbg);color:var(--down)}
+  html{scroll-behavior:smooth}
+  [id^="s-"]{scroll-margin-top:64px}
+  .nav{position:sticky;top:0;z-index:20;background:rgba(246,241,233,0.97);border-bottom:1px solid var(--line2);margin:0 -22px;padding:9px 22px;display:flex;flex-wrap:wrap;gap:7px}
+  .nav a{font-size:12px;font-weight:600;color:#5a4628;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:5px 12px;text-decoration:none;white-space:nowrap}
+  .nav a:hover{background:var(--goldbg);border-color:var(--gold);color:#3f3118}
+</style>
+
+<div class="wrap">
+  <p class="kicker">Maison Dénudé · Nghiên cứu thị trường — 27/06/2026</p>
+  <h1>Tệp khách Trung Quốc có tiềm năng thật cho Maison không?</h1>
+  <p class="sub">Quy trình: nhiều agent (5 góc + một vòng kiểm nguồn/chốt). Mọi con số đều kèm nguồn bấm-được; chỗ suy luận dán nhãn rõ. Phân khúc nói rõ ở từng đoạn vì product/service của Maison vừa mới chốt (làm theo số đo, hai lối) nhưng <b>phân khúc sản phẩm còn mở</b>.</p>
+  <h2 class="sr-only">Báo cáo thị trường Trung Quốc: bối cảnh, kênh xuyên biên giới, tiền lệ, hợp gu văn hoá, đòn bẩy Chi Pu, rủi ro, phép thử rẻ và phán quyết.</h2>
+
+  <nav class="nav">
+    <a href="#s-exec">Tóm tắt</a>
+    <a href="#s-a">A. Bối cảnh</a>
+    <a href="#s-b">B. Kênh xuyên biên</a>
+    <a href="#s-c">C. Tiền lệ</a>
+    <a href="#s-d">D. Hợp gu / 新中式</a>
+    <a href="#s-e">E. Đòn bẩy Chi Pu</a>
+    <a href="#s-f">F. Rủi ro</a>
+    <a href="#s-g">G. Phép thử &amp; điều kiện</a>
+  </nav>
+
+  <div class="exec" id="s-exec">
+    <h2>Tóm tắt cho lãnh đạo (đọc trước)</h2>
+    <p><b>Có tiềm năng — nhưng KHÔNG qua kênh bán hàng, mà qua kênh KHÁCH ĐẾN (inbound trải nghiệm).</b> Bằng chứng hội tụ rất mạnh về một hướng: hành vi của người Trung Quốc quanh áo dài là <b>thuê + chụp ảnh</b> (旅拍, "lữ phách"), và khi có mua thì ở <b>tầng kỷ niệm 15–90 USD</b>, tại <b>Hội An / Đà Nẵng</b> — không phải đặt may cao cấp giữ-lại tại Saigon. Đây là phân khúc <b>lệch hẳn</b> với Maison.</p>
+    <div class="verdict">
+      <div class="vc test"><div class="vh">(a) Trải nghiệm áo dài cao cấp tại VN <span class="badge">🟡 NÊN THỬ</span></div><p>Cửa hẹp nhưng đúng hướng nhất. Cầu inbound TQ thật &amp; lớn, nhưng nằm ở tầng thuê giá rẻ — cửa cho Maison là <b>dịch vụ trải nghiệm cao cấp tại Saigon</b>, tức tạo phân khúc mới, không bắt cầu sẵn.</p></div>
+      <div class="vc no"><div class="vh">(b) Bán xuyên biên giới (RedNote / Tmall) <span class="badge">🔴 ĐỪNG CAM KẾT</span></div><p>Mọi kênh xuyên biên giới chỉ phục vụ <b>hàng ship được</b>; Maison chưa chốt có dòng đó (OQ-009). Không có sản phẩm giao được → câu hỏi "kênh nào" tự nó vô nghĩa.</p></div>
+      <div class="vc test"><div class="vh">(c) Đòn bẩy KOL qua Chi Pu <span class="badge">🟡 CÓ ĐIỀU KIỆN</span></div><p>Earned-association có thật &amp; còn nóng, nhưng <b>chưa xác minh "Chi Pu mặc Maison"</b> và <b>không có tiền lệ chị kéo được cầu mua thời trang ở TQ</b>.</p></div>
+    </div>
+    <p style="margin-top:14px"><b>Sự thật cứng phải nói với stakeholder:</b> không tìm thấy <b>một tiền lệ nào</b> về thương hiệu thời trang cao cấp Việt/Đông Nam Á bán thành công cho người tiêu dùng TQ qua kênh xuyên biên giới ở đúng phân khúc Maison. Tiền lệ chỉ tồn tại ở (a) phân khúc <b>bình dân qua sao</b> (Chi Pu × đầm 40 USD) và (b) <b>premium nhưng qua thị trường phương Tây / K-pop</b> (Fancì Club). Maison nằm ở <b>ô trống chưa ai lấp</b> — đây là dữ kiện, không phải lỗ hổng tìm kiếm.</p>
+  </div>
+
+  <h2 id="s-a"><span class="secnum">A ·</span> Bối cảnh: TQ là thị trường lớn nhất, nhưng "lớn" không tự thành "mua premium"</h2>
+  <p class="sub">Lượng khách rất lớn, nhưng hành vi đo được là chi tiêu cho <b>trải nghiệm tại chỗ</b>, không phải mua sản phẩm cao cấp mang về.</p>
+  <div class="chartbox">
+    <div class="legend"><span><i class="dot" style="background:var(--cn)"></i>Tầng chi tiêu quanh áo dài (USD/lần)</span></div>
+    <svg id="tiers" width="100%" viewBox="0 0 720 220" role="img" aria-label="Các tầng chi tiêu của khách Trung Quốc quanh áo dài"></svg>
+  </div>
+  <div class="readbox"><b>Đọc biểu đồ:</b> cầu đo được của khách TQ nằm ở <b>tầng thuê + chụp ảnh ($5–48)</b> và <b>may kỷ niệm tại Hội An ($14–90, giao 24–48h)</b>. Tầng <b>đặt may cao cấp giữ-lại</b> (phân khúc Maison) gần như <b>không có dữ liệu cầu</b> — không phải vì thiếu tìm, mà vì hành vi thực tế không nằm ở đó.
+    <p>• Khách TQ đến VN 2025: <b>hơn 5,28 triệu lượt, +40%, ~25% tổng khách quốc tế</b> — thị trường nguồn lớn nhất. <span class="conf ok">đã chứng minh</span></p>
+    <p>• <b>Vì sao cách đọc hiển nhiên là sai:</b> con số 5,28 triệu dễ khiến kết luận "thị trường khổng lồ, vào ngay". Nhưng số đó đo <i>lượt du lịch</i>, và hành vi đo được là <i>thuê đồ chụp ảnh</i>. Tín hiệu <b>mạnh</b> cho mô hình inbound trải nghiệm tại Saigon; tín hiệu <b>yếu</b> cho bán hàng cao cấp xuyên biên giới.</p>
+    <div class="src">Nguồn: <a href="https://macaonews.org/travel/vietnam-china-tourism-statistics-2025/">macaonews</a> · <a href="https://activities.marriott.com/asia/vietnam/ho-chi-minh-city/activities/vietnamese_ao_dai_photoshoot_at_iconic_landmarks_in_ho_chi_minh-XGQ2V8">Marriott Activities (áo dài photoshoot)</a> · <a href="https://www.klook.com/en-AU/activity/115060-traditional-ao-dai-rental-photoshoot-hoi-an/">Klook Hội An rental/tailoring</a></div>
+  </div>
+
+  <h2 id="s-b"><span class="secnum">B ·</span> Kênh xuyên biên giới: bốn cánh cửa, tất cả đều cho hàng GIAO ĐƯỢC</h2>
+  <p class="sub">Câu hỏi thật không phải "kênh nào" mà là "Maison có dòng giao được không".</p>
+  <div class="tbl-wrap"><table>
+    <tr><th>Kênh</th><th>Cơ chế</th><th>Rào cản / chi phí</th><th>Phù hợp Maison?</th></tr>
+    <tr><td><b>Tmall Global</b></td><td>Sàn xuyên biên giới Alibaba; bán vào TQ không cần lập công ty TQ</td><td><b>Ký quỹ 25.000 USD + 5.000/năm</b> + hoa hồng + nhãn tiếng Trung</td><td>🔴 Quá nặng &amp; sai mô hình</td></tr>
+    <tr><td><b>WeChat mini-program</b></td><td>Bán trực tiếp qua mini-program, không cần sàn</td><td>Nhẹ hơn Tmall nhiều</td><td>🟡 Khả thi nếu có dòng giao được, quy mô nhỏ</td></tr>
+    <tr><td><b>Daigou (代购 — mua hộ)</b></td><td>Người mua hộ mua ở nước ngoài, bán lại qua WeChat</td><td>Gần như không rào cản</td><td>🟡 Rẻ nhất nhưng <b>không kiểm soát được cách trình bày brand</b></td></tr>
+    <tr><td><b>RedNote / Xiaohongshu</b></td><td>Kênh tạo NHU CẦU; 300M+ MAU, &gt;70% nữ trẻ đô thị tier-1</td><td>Xem chi phí seeding mục G</td><td>🟡 Hợp nhất — nhưng để <i>tạo tiếng</i>, không bán trực tiếp ngay</td></tr>
+  </table></div>
+  <div class="readbox"><b>Insight cốt lõi:</b> người ta hay hỏi "Maison vào Tmall hay RedNote?" như thể đó là chọn kênh. <b>Sai khung.</b> Cả bốn cửa đều giả định có <b>một sản phẩm ship qua biên giới được</b>. Maison vừa chốt mô hình <b>làm theo số đo, hai lối</b> — lối "chọn mẫu có sẵn rồi chỉnh theo số đo" là <b>ứng viên</b> cho dòng ship được (đúng cơ chế LAHAVA đã ship cho Việt kiều), <b>nhưng chỉ thành thật nếu</b> (a) bộ mẫu là tập cố định, lặp lại được, và (b) đã dựng bộ công cụ mua-từ-xa (hướng dẫn đo, mẫu vải, ảnh khách thật, đổi trả). Chưa có hai thứ đó → kênh online TQ vẫn vô nghĩa.
+    <div class="src">Nguồn: <a href="https://influchina.com/tmall-global/">influchina (Tmall Global)</a> · <a href="https://www.scmp.com/lifestyle/fashion-beauty/article/3102727/how-chinese-professional-shoppers-or-daigou-operate-buying">SCMP (daigou)</a> · <a href="https://wpic.co/blog/guide-to-xiaohongshu-red-in-china/">WPIC (Xiaohongshu)</a></div>
+  </div>
+
+  <h2 id="s-c"><span class="secnum">C ·</span> Tiền lệ: có thật, nhưng lệch phân khúc — đi qua "người", không qua "thương hiệu"</h2>
+  <div class="quotes">
+    <div class="q"><div class="tag">Tiền lệ A — sao là vehicle</div><blockquote>Sau 浪姐 (2023), Chi Pu mặc local brand VN, "nhiều món cháy hàng". <b>Nhưng</b> các món dẫn chứng là đầm <b>~990.000đ (40 USD)</b> — phân khúc bình dân.</blockquote><div class="meta"><a href="https://e.vnexpress.net/photo/vogue/singer-favors-vietnamese-brands-outfits-on-chinese-tv-shows-4665453.html">VnExpress ↗</a></div></div>
+    <div class="q"><div class="tag gap">Tiền lệ B — đi đường Tây</div><blockquote>Fancì Club mặc bởi Bella Hadid, Dua Lipa, BLACKPINK… <b>nhưng</b> không một bài nào nhắc thị trường / sao TQ — đường của họ là phương Tây + K-pop.</blockquote><div class="meta"><a href="https://www.papermag.com/internet-favorite-brands-vietnam">PAPER ↗</a></div></div>
+  </div>
+  <div class="ins">
+    <h3>Vì sao cách đọc lạc quan là sai — ở cả hai tiền lệ</h3>
+    <div class="lab d">Đọc kỹ tiền lệ A</div>
+    <div class="data">"Chi Pu chứng minh brand VN bán được cho khách TQ" → cái chứng minh được là <b>đầm 40 USD</b>, động lực là <b>độ nổi của ngôi sao</b>, không phải sức hút thương hiệu. Đây là <b>phản tiền lệ</b> cho premium — cho thấy đường vào TQ dễ nhất là <i>giá rẻ + sao đỡ đầu</i>, đúng thứ founder (chị Chi) từ chối.</div>
+    <div class="lab d">Đọc kỹ tiền lệ B</div>
+    <div class="data">"Brand VN làm được ở quốc tế" → họ làm được ở mọi nơi <b>TRỪ TQ</b> trong dữ liệu công khai.</div>
+    <div class="take"><b>Kết luận:</b> Maison nằm ở ô trống chưa ai lấp. <span class="conf ok">dữ kiện từng tiền lệ: đã chứng minh</span> <span class="conf try">kết luận "khoảng trống": nên thận trọng</span> — nền tảng TQ chặn fetch nên không loại trừ tiền lệ ngách chưa lộ.</div>
+  </div>
+
+  <h2 id="s-d"><span class="secnum">D ·</span> Hợp gu / văn hoá: 新中式 (tân Trung thức) KHÔNG mở cửa cho áo dài</h2>
+  <p class="sub">Đây là phần dễ tự huyễn hoặc nhất — nhiều người tưởng "trend đồ truyền thống đang lên thì áo dài cũng được hưởng lợi". Sai.</p>
+  <div class="ins">
+    <h3>1. Trend 新中式 bản chất là 国潮 (quốc triều) — chủ nghĩa tự tôn văn hoá Trung, hướng NỘI</h3>
+    <div class="lab d">Dữ liệu</div>
+    <div class="data">Nó bật cầu cho <b>đồ Trung</b> (hán phục, sườn xám, mã diện quần), không phải đồ ngoại. GMV "new Chinese-style apparel" tăng <b>&gt;100% trong 3 năm</b>, vượt 1 tỷ NDT (2023); JD tìm kiếm "New Chinese Style" +328% dịp Tết 2025. <span class="conf ok">đã chứng minh</span></div>
+    <div class="ana">→ 🔴 <b>Đừng định vị Maison "ăn theo 新中式"</b>. Cửa duy nhất là định vị "couture phương Đông / Oriental elegance" — giao thoa thẩm mỹ (lụa, đứng dáng, thêu thủ công), KHÔNG gắn nhãn 新中式, KHÔNG tranh chấp quốc tịch.</div>
+  </div>
+  <div class="ins">
+    <h3>2. Bẫy lớn nhất: "Trung Hoa hoá áo dài" gây phản ứng dữ — ở chính Việt Nam</h3>
+    <div class="lab d">Dữ liệu</div>
+    <div class="data">Một show Việt làm "中式奥黛" (áo dài kiểu Trung) bị giới văn hoá Việt phê <i>"đặc trưng áo dài truyền thống đã biến mất hoàn toàn"</i>; hoạ tiết rồng bị nhận là phong cách Trung. Nhiều nguồn TQ còn nói áo dài "一衣同源" (cùng gốc với đồ Trung). <span class="conf ok">đã chứng minh</span></div>
+    <div class="ana">→ 🔴 <b>Đừng "Trung Hoa hoá" thiết kế áo dài để chiều khách TQ</b> — vừa mất chất Việt, vừa rước phản ứng truyền thông trong nước, thiệt hại lớn hơn doanh thu thêm. Rồng / phượng phải theo chuẩn Việt và nói rõ điều đó.</div>
+    <div class="take"><b>Trả lời thẳng:</b> áo dài được người TQ xem là <b>"đẹp, đáng trải nghiệm — nhưng của nước bạn"</b>, CHƯA phải <b>"khao khát sở hữu"</b> trong gu mua sắm cao cấp. Nó nằm giữa: không bị ghét, nhưng cũng không kéo được hành vi mua may đo mang về.</div>
+    <div class="src">Nguồn: <a href="https://daxueconsulting.com/guochao-cultural-confidence-in-china/">Daxue (Guochao)</a> · <a href="https://heuritech.com/articles/china-fashion-heritage/">Heuritech</a> · <a href="https://www.thepaper.cn/newsDetail_forward_1354375">The Paper ("中式奥黛" gây tranh cãi)</a> · <a href="https://www.sohu.com/a/280051800_100017035">Sohu (奥黛 vs 旗袍)</a></div>
+  </div>
+
+  <h2 id="s-e"><span class="secnum">E ·</span> Đòn bẩy Chi Pu: có thật &amp; còn nóng — nhưng đừng nhầm "view" với "sức mua"</h2>
+  <div class="chartbox">
+    <div class="legend"><span><i class="dot" style="background:var(--cn)"></i>Độ phủ Chi Pu tại TQ — view ≠ follower ≠ sức mua</span></div>
+    <svg id="chipu" width="100%" viewBox="0 0 720 200" role="img" aria-label="Độ phủ của Chi Pu tại Trung Quốc"></svg>
+  </div>
+  <div class="readbox"><b>✅ Đã chứng minh:</b> hạng 6/33 chung kết 浪姐 (2023); video hashtag Douyin &gt;320 triệu view; fan club TQ riêng "芝芙堡"; diễn trước ~30.000 khán giả ở Nam Kinh; gala đón năm mới Dragon TV Thượng Hải 31/12/2024; super-topic Weibo đang hoạt động.
+    <p><b>🟡/🔴 Giới hạn quan trọng:</b> "320 triệu" là <b>view hashtag, KHÔNG phải follower</b> — hashtag Weibo AYMF chỉ ~217K đọc → fan core trung thành nhưng <b>quy mô vừa</b>. <b>Không tìm thấy nguồn</b> chứng minh Chi Pu kéo được cầu mua thời trang ở TQ (các hợp đồng đại sứ Geely/Yamaha/Dove/OPPO <b>đều là thị trường VN</b>). Và <b>"Chi Pu đã mặc Maison" CHƯA XÁC MINH</b> — phải chốt bằng chứng (ảnh + ngày + dịp) trước khi dùng; earned ≠ paid.</p>
+    <div class="src">Nguồn: <a href="https://e.vnexpress.net/news/arts/vietnamese-singer-wins-sixth-highest-score-on-chinese-show-4623765.html">VnExpress EN (hạng 6 &amp; 320M)</a> · <a href="https://vnexpress.net/chi-pu-khuay-dong-san-khau-cung-30-000-khan-gia-trung-quoc-4670675.html">VnExpress (30.000 khán giả &amp; Weibo 217K)</a> · <a href="https://vnexpress.net/chi-pu-dien-show-don-nam-moi-o-trung-quoc-4834288.html">VnExpress (gala 31/12/2024)</a></div>
+  </div>
+
+  <h2 id="s-f"><span class="secnum">F ·</span> Rủi ro lớn nhất</h2>
+  <div class="evcard">
+    <div class="banner">⚠️ Rủi ro số 1 — đã xác minh: liên tưởng "奥黛店 / 日本街" = nightlife / đèn đỏ</div>
+    <div class="bd">
+      Cụm "奥黛店" (tiệm áo dài) ở "phố Nhật" Saigon đã thành <b>một thể loại du lịch có tên riêng</b> trên Zhihu / Bilibili / TikTok TQ, nhắm <b>khách nam</b>. Khách nam TQ gõ "胡志明 奥黛" dễ chạm nội dung nightlife trước nội dung thời trang.
+      <div class="chips"><span class="chip">→ Nội dung tiếng Trung của Maison BẮT BUỘC định vị "高定 / 设计师 / 婚纱晚礼服"</span><span class="chip">+ atelier rõ ràng</span><span class="chip">+ hình cưới / dạ tiệc cao cấp để tách bạch</span></div>
+      <div style="margin-top:9px">Daigou — kênh rẻ nhất — lại <b>không kiểm soát được</b> cách trình bày brand → rủi ro kéo Maison về vùng nhiễm này cao nhất.</div>
+    </div>
+  </div>
+  <div class="readbox"><b>Rủi ro khác:</b> (2) bẫy "Trung Hoa hoá áo dài" gây phản ứng trong nước (mục D); (3) <b>phân khúc lệch giới + lệch tầng</b> — fan Chi Pu / nội dung nightlife nhắm tệp khác hẳn khách nữ mua couture → rủi ro chính là <b>nhiễu hình ảnh thương hiệu</b>, không phải cạnh tranh khách.</div>
+
+  <h2 id="s-g"><span class="secnum">G ·</span> Một phép thử rẻ + điều kiện tiên quyết</h2>
+  <div class="ins">
+    <h3>Phép thử rẻ (trước khi cam kết bất cứ gì)</h3>
+    <div class="lab a">Làm gì</div>
+    <div class="data">Đăng <b>3–5 bài lookbook tiếng Trung trên RedNote / Xiaohongshu</b>, định vị rõ "<b>高定 / 设计师 / 晚礼服 / 婚纱</b>" (haute couture / nhà thiết kế / dạ tiệc / cưới) gắn bối cảnh Saigon + 1 bài "phong cách thảm đỏ".</div>
+    <div class="lab a">Đo gì (4–6 tuần)</div>
+    <div class="data">Lượt lưu (collect), bình luận <b>hỏi giá / hỏi đặt lịch</b>, DM từ người TQ — tín hiệu <b>ý định</b> rẻ nhất.</div>
+    <div class="take"><b>Vì sao đúng:</b> gần như miễn phí; không cần dòng RTW giao được, không cần ký quỹ Tmall, không cần hợp đồng KOL. Kiểm chứng đồng thời (1) tệp TQ có phản ứng với định vị <b>cao cấp</b> không, (2) từ khoá "高定/设计师" có <b>tách Maison khỏi vùng nhiễm "奥黛店"</b> không. Im ắng → tiết kiệm <b>20–42K USD</b> seeding. Có hỏi giá → mới đáng bàn bước tiếp.<br>Chi phí seeding "vào cho đàng hoàng" (tham chiếu): <b>¥150.000–300.000 ≈ 20.000–42.000 USD / 6 tháng</b> — và đó mới chỉ tạo <i>nhận biết</i>.</div>
+    <div class="src">Nguồn: <a href="https://ecommercechinaagency.com/xiaohongshu-rednote-marketing-strategy-brands/">ecommercechinaagency (chi phí seeding)</a> · <a href="https://www.businessoffashion.com/articles/beauty/china-rednote-beauty-proya-cosmetics-kilian-paris/">BoF "Win China? Start on RedNote"</a></div>
+  </div>
+  <div class="oq">
+    <h3>Điều kiện tiên quyết — gửi founder quyết trước khi làm gì</h3>
+    <ol>
+      <li><b>Chốt OQ-009:</b> Maison có/sẽ có <b>dòng giao được</b> (bộ mẫu cố định + bộ công cụ mua-từ-xa) không? Không có → bỏ hẳn nhánh bán online TQ (b), chỉ còn inbound (a).</li>
+      <li><b>Chốt bằng chứng "Chi Pu mặc Maison":</b> ảnh + ngày + dịp + phân khúc. Không có → mô hình (c) chưa được phép kích hoạt.</li>
+      <li><b>Chốt phân khúc sản phẩm</b> (áo dài / dạ tiệc / cưới) — cả ba mô hình đổi kết luận theo điều này.</li>
+    </ol>
+  </div>
+
+  <div class="note">
+    <b>Liên hệ — Trung Đông KHÔNG phải Trung Quốc:</b> cùng kỳ nghiên cứu, dữ liệu SimilarWeb cho thấy <b><a href="https://www.thevietconcept.com/">The Viet Concept</a></b> (sàn designer Việt đặt tại Dubai) có <b>~19% khách từ vùng Vịnh (Ả Rập Xê Út 17,2%)</b> — bằng chứng rõ nhất về kênh "Việt → Trung Đông" ở quy mô thật. Đây là <b>cơ hội khác</b>, không nằm trong tệp Trung Quốc; xem báo cáo cạnh tranh tổng hợp.
+  </div>
+
+  <div class="note" id="method">
+    <b>Phương pháp &amp; giới hạn trung thực.</b> Quy trình: 5 agent khai thác (RedNote/Douyin, chi tiêu khách TQ, kênh xuyên biên giới, hợp gu 新中式, đòn bẩy Chi Pu) → 1 agent kiểm nguồn &amp; chốt (hoài nghi). Nền tảng TQ (Xiaohongshu / Douyin / Weibo / Tmall) <b>chặn fetch &amp; WebSearch chạy vùng Mỹ</b> → toàn bộ dựa nguồn thứ cấp kiểm chứng được (macaonews, Jiemian, Sohu, BoF, WPIC, SCMP, Daxue, The Paper, VnExpress). Zhihu trả 403 → một số trích dẫn áo dài là inferred-từ-snippet. Không tồn tại công khai số "X% khách TQ liên tưởng áo dài ↔ nightlife" — dùng proxy mật độ nội dung thay vì bịa số. Bản chữ đầy đủ: <a href="china-segment.md">china-segment.md</a>.
+  </div>
+</div>
+
+<script>
+function bars(id,data,opts){
+  opts=opts||{};
+  var svg=document.getElementById(id); if(!svg) return;
+  var W=720, rowH=opts.rowH||38, padL=opts.padL||150, padR=60, padT=10;
+  var H=padT+data.length*rowH+12;
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  var max=opts.max||Math.max.apply(null,data.map(function(d){return d.v;}));
+  var bw=W-padL-padR;
+  var s='';
+  data.forEach(function(d,i){
+    var y=padT+i*rowH;
+    var w=max>0?Math.max(2,d.v/max*bw):2;
+    var col=d.c||'var(--cn)';
+    s+='<text x="'+(padL-10)+'" y="'+(y+rowH/2)+'" text-anchor="end" dominant-baseline="middle" font-size="12" fill="#473f38" font-family="var(--sans)">'+d.l+'</text>';
+    s+='<rect x="'+padL+'" y="'+(y+6)+'" width="'+w+'" height="'+(rowH-16)+'" rx="3" fill="'+col+'"/>';
+    s+='<text x="'+(padL+w+8)+'" y="'+(y+rowH/2)+'" dominant-baseline="middle" font-size="11.5" fill="#7c736a" font-family="var(--sans)">'+d.t+'</text>';
+  });
+  svg.innerHTML=s;
+}
+bars('tiers',[
+  {l:'Thuê + chụp ảnh (旅拍)',v:48,t:'$5–48 / lần',c:'var(--dia)'},
+  {l:'May kỷ niệm tại Hội An',v:90,t:'$14–90 · giao 24–48h',c:'var(--me)'},
+  {l:'Đặt may cao cấp giữ-lại',v:8,t:'≈ phân khúc Maison · gần như không có dữ liệu cầu',c:'var(--down)'}
+],{max:100,padL:175});
+bars('chipu',[
+  {l:'View hashtag Douyin',v:320,t:'320 triệu — view, KHÔNG phải follower',c:'var(--cn)'},
+  {l:'Khán giả show Nam Kinh',v:30,t:'~30.000 (live)',c:'var(--dia)'},
+  {l:'Đọc hashtag Weibo AYMF',v:0.217,t:'~217.000 — fan core quy mô vừa',c:'var(--soft)'}
+],{max:320,padL:175,rowH:42});
+</script>

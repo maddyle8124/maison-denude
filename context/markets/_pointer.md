@@ -47,7 +47,7 @@ Each market scored on: **Value Fit · Market Share & White Space · Policy & Bar
 - **Two separate demand systems:** inbound (tailor in VN — large, multilingual, invisible to EN web) vs cross-border ship (real in **one line only: bridal áo dài, US+AU diaspora**).
 - **Bespoke ↔ shippable trade off** (Aquamarine ships VN-only; standardized-RTW Fancì/Aprilpoolday ship globally) → shippability is bought with standardization, the axis Chi resists.
 - **Proven foreign money = US/AU diaspora bridal.** China/India = high arrivals but premium *purchase* unproven (rent-and-photo behavior) → probe, don't bank. Gulf = defer (a shippable-product question, not inbound).
-- **Watch-competitor: LAHAVA** (premium multi-line, dual-domain, the only one circling Maison's space).
+- **Direct competitor on path-1 (existing-model → measurements): LAHAVA** — runs the exact catalog-then-fit playbook for the same US/AU/CA diaspora. Upgraded from "watch-competitor" after OQ-011 confirmed Maison's made-to-measure dual-path model (the earlier "not a direct competitor" call was an over-correction on the *scale* axis, not the *model* axis). But a **different tier**: LAHAVA is high-volume made-to-measure ($365–560), Maison is artisanal/low-volume → beat it on credibility (artist-worn + editorial), not price. Rank is **segment-contingent** (weakens if Maison turns out evening-led, not áo-dài-led). On path-2 (design-from-scratch), the direct competitor is **Meera Meera**, which also shares Maison's bespoke-artisanal identity.
 - Don't compete on "tailoring" search (Hoi An owns it, cheap frame) → compete on occasion/image/experience; SEO is support, brand/social/WOM is the engine.
 
 ## To build out (after 3 markets confirmed)

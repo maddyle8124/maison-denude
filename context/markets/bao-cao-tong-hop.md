@@ -31,7 +31,7 @@ _(Đính chính: brand lên Paris là **Phan Huy**, không phải Tung Vu.)_
 
 ### 5. Thị trường cưới phần lớn chạy bằng CHO THUÊ và đồ size cố định — không phải may đo.
 **Số:** Nicole Bridal (nhà cưới Việt tăng nóng, 18K/th, +161%) lõi là **cho thuê**: thuê áo dài cưới **1,2–2,0 triệu/ngày**, trong khi may đo **4,5–8,0 triệu/3–5 tuần** — thuê rẻ hơn 3–4 lần và được đặt lên đầu trang. Khách Trung/Hàn/Nhật quanh áo dài gần như toàn bộ là **thuê để chụp ảnh du lịch**.
-**Vì sao quan trọng:** Maison định vị "nhà thiết kế may đo", nhưng phần lớn nhu cầu thực tế đang chảy vào kênh THUÊ + đồ may sẵn. Maison không cạnh tranh trực tiếp với nhóm này — nhưng phải hiểu cầu "may đo để mua và giữ lâu" là một ô hẹp hơn nhiều so với cảm giác "thị trường cưới sôi động".
+**Vì sao quan trọng:** Maison định vị "nhà thiết kế / atelier làm theo số đo từng khách", nhưng phần lớn nhu cầu thực tế đang chảy vào kênh THUÊ + đồ may sẵn. Maison không cạnh tranh trực tiếp với nhóm này — nhưng phải hiểu cầu "may đo để mua và giữ lâu" là một ô hẹp hơn nhiều so với cảm giác "thị trường cưới sôi động".
 **Nguồn:** [nicolebridal.vn](https://nicolebridal.vn/en/rent-aodai-vietnam-wedding-dress/) · [klook](https://www.klook.com/en-AU/activity/115060-traditional-ao-dai-rental-photoshoot-hoi-an/) · [realgirlreview.com](https://www.realgirlreview.com/hoi-an-ao-dai-photoshoot-experience/).
 
 ### 6. Cầu "wedding ao dai" tiếng Anh gần như 100% từ Úc + Mỹ, Việt Nam dưới 1%.
@@ -73,11 +73,17 @@ Khi xác minh giá thật từng website, **ranh giới "2 cụm" ban đầu ho�
 
 **Đọc bản đồ cho đúng (rất quan trọng):** KHÔNG phải "couture trên $1.700 đang hết thời". Giá cao thì tệp khách vốn dĩ nhỏ → ít lượt là **chuyện hiển nhiên**, không phải suy tàn. Điều đáng học là **3 ngoại lệ phá luật**: **MEAN BLVD** (106K vì là sàn ~80 brand → dịch vụ đồ dự tiệc may sẵn mainstream nhất), **La Fée** (+318% dù giá cao vì bán tên tuổi couture quốc tế Elie Saab/Vera Wang), **LAHAVA** (+246% ở giá vừa — playbook dưới). Maison ở giá vừa–cao với tệp = 0 → phải chọn một cách "phá luật", không thể "đứng giá cao rồi chờ".
 
-**Đối thủ trực diện là ai (sửa lại):** "Trực diện" = cùng **mô hình bespoke/may đo couture thật** (từ chối may sẵn hàng loạt & cho thuê) + **đa dòng** + cùng **tệp/đấu trường tìm kiếm**. Theo tiêu chí này, **LAHAVA KHÔNG phải đối thủ trực diện** — nó là **may-đo-hàng-loạt** (giá hiện $365–560, bán online theo quy trình số đo), một "loài" khác. **Đối thủ trực diện thật sự = Meera Meera**: atelier bespoke couture (công khai *"Not available for rent or ready-to-wear"*), giấu giá, lead time 2–8 tháng, đa dòng (cưới + dạ tiệc + phụ dâu), đua trên đúng từ khoá "bespoke/couture wedding Saigon". **Khoảng trống Maison đánh:** Meera lấy váy cưới Tây làm lõi — Maison lấy **áo dài làm lõi văn hoá** rồi mở sang dạ tiệc/cưới/couture. _(Tung Vu = bán-trực diện: đẹp nhưng theo size, không có áo dài. Phan Huy = đối thủ khát vọng tầng trên.)_
+**Đối thủ trực diện là ai (cập nhật theo mô hình đã chốt — OQ-011):** Maison nay xác nhận làm **theo số đo, hai lối** — (1) chọn một mẫu thiết kế độc bản của nhà mốt rồi tái tạo theo số đo, (2) khách thiết kế riêng từ đầu. Vì vậy **không có một "đối thủ trực diện" duy nhất, mà có HAI — trên hai trục khác nhau:**
 
-### LAHAVA — tham chiếu CHIẾN THUẬT PHÂN PHỐI (không phải đối thủ cùng mô hình, nhưng đáng học cách bán)
+- **Lối (1) "mẫu có sẵn → chỉnh số đo": LAHAVA là đối thủ trực diện.** (Nâng từ vai "tham chiếu phân phối" — báo cáo trước loại LAHAVA khỏi danh sách là **quá tay**.) LAHAVA chạy đúng cơ chế catalog-rồi-chỉnh-số-đo (~341 mẫu áo dài + ~98 mẫu dạ tiệc + bộ công cụ đo/swatch/đổi-trả), cùng tệp Việt kiều **Mỹ 66% / Úc 13% / Canada 11%**, cùng đấu trường tìm kiếm "custom ao dai online". **NHƯNG khác TẦNG/QUY MÔ:** LAHAVA là may-đo-**hàng loạt** giá $365–560; Maison là **thủ công/độc bản, ít sản lượng** (founder: "bespoke & artisanal, NOT mass"). Cùng cơ chế nhưng khác "loài" trên trục thủ-công-vs-số-lượng — chỉ thực sự đối đầu ở đúng chỗ trùng cả **sản phẩm + dịch vụ + tầng giá**. Vậy LAHAVA = **đối thủ phải THẮNG ở lối (1) bằng uy tín/editorial**, không phải đua giá.
 
-LAHAVA +246% (7.533 lượt/th, khách Mỹ 66% / Úc 13% / Canada 11%) — cùng mô hình may-đo-đa-dòng-có-áo-dài như Maison. 6 việc cụ thể (đã kiểm trên lahava.com + lahava.vn ngày 21/6):
+- **Lối (2) "thiết kế riêng từ đầu": Meera Meera là đối thủ trực diện** — và cũng là brand chia sẻ **DNA thủ công-bespoke** mà chị Chi tự nhận (đừng hạ Meera xuống dưới LAHAVA). Meera công khai *"Not available for rent or ready-to-wear"*, giấu giá, lead time 2–8 tháng — nhưng là **nhà váy cưới châu Âu, KHÔNG đa dòng, không có áo dài**, nên chỉ trùng Maison ở **ô custom đồ cưới từ đầu**, không phải toàn bộ.
+
+**Lưu ý quan trọng (segment-contingent):** vì **phân khúc sản phẩm của Maison chưa chốt** (áo dài / dạ tiệc / cưới — OQ-011), thứ hạng đối thủ còn **đổi theo phân khúc**: nếu Maison thiên dạ tiệc, không áo dài → LAHAVA yếu đi, **Chloe Design / Tung Vu** mạnh lên. **Khoảng trống Maison đánh:** không đối thủ trực diện nào lấy **áo dài làm lõi văn hoá** — đó là ô trống. _(Tung Vu = liền kề: đẹp nhưng theo size cố định, không áo dài. Phan Huy = đối thủ khát vọng tầng trên.)_
+
+### LAHAVA — đối thủ trực diện ở lối (1) "mẫu có sẵn → số đo"; thắng bằng uy tín, khác tầng quy mô
+
+LAHAVA +246% (7.533 lượt/th, khách Mỹ 66% / Úc 13% / Canada 11%) — chạy đúng cơ chế làm-theo-số-đo-từ-mẫu-có-sẵn như lối (1) của Maison (khác tầng: LAHAVA hàng loạt, Maison thủ công/độc bản). 6 việc cụ thể (đã kiểm trên lahava.com + lahava.vn ngày 21/6):
 
 | LAHAVA làm gì | Cụ thể | Maison học gì |
 |---|---|---|
@@ -90,7 +96,7 @@ LAHAVA +246% (7.533 lượt/th, khách Mỹ 66% / Úc 13% / Canada 11%) — cùn
 
 **Maison có thể VƯỢT LAHAVA:** LAHAVA chỉ ở tầng $365–560 và không có vốn truyền thông. Maison có **nghệ sĩ đã mặc + tạp chí lớn** → đủ để đứng giá cao hơn mà vẫn thuyết phục, miễn sao chép đúng 6 cơ chế bán trên.
 
-> ⚠️ **Một cảnh báo trung thực:** Có vẻ tồn tại "khe trống giá" khoảng $640–1.750 (giữa đồ may sẵn và couture) — Maison rơi đúng vào đây. Nhưng **đây là giả thuyết, chưa phải sự thật chắc chắn**: giá của cụm couture (Tungvu, Meera Meera, Lililala) phần lớn **không niêm yết công khai**, nên "sàn $1.750" là ước lượng. Khe trống có thể trống *vì không có cầu* ở mức giá đó, chứ không chỉ vì "chưa ai chiếm". Cần test giá thật trước khi xây chiến lược lên nó.
+> ⚠️ **Một cảnh báo trung thực:** Có vẻ tồn tại "khe trống giá" khoảng $640–1.750 (giữa đồ may sẵn và couture) — Maison rơi đúng vào đây. Nhưng **đây là giả thuyết, chưa phải sự thật chắc chắn**: giá của cụm couture (Tungvu, Meera Meera, Lililala) phần lớn **không niêm yết công khai**, nên "sàn $1.750" là ước lượng. Khe trống có thể trống *vì không có cầu* ở mức giá đó, chứ không chỉ vì "chưa ai chiếm". Cần test giá thật trước khi xây chiến lược lên nó. **Thêm (hậu OQ-011):** vì LAHAVA giờ là đối thủ trực diện ở lối "mẫu có sẵn → số đo" tại tầng $365–560, **sàn dưới** của khe trống chính là điểm Maison phải đứng **cao hơn LAHAVA** — và lý do đứng cao hơn (nghệ sĩ đã mặc + tạp chí + thủ công độc bản) là một **giả thuyết định giá phải test**, không phải dữ kiện.
 
 **Khác biệt riêng của Maison so với cả 16 đối thủ:** không brand nào có **nghệ sĩ đã mặc + tạp chí lớn đưa tin**. Cụm 1 bán bằng "ra bộ sưu tập mới", cụm 4 bán bằng "đặt lịch tư vấn giấu giá" — Maison có thể bán bằng **chứng thực văn hoá** (nghệ sĩ + báo chí), một góc chưa ai trong tập đối thủ khai thác.
 

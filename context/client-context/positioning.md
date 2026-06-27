@@ -6,7 +6,7 @@ _Last updated: 2026-06-21. Source: BrandHub §3._
 
 | Element | Content |
 |---------|---------|
-| **Core offer** | Bespoke design — not off-the-rack, made to the person (a designer house, **not** a tailoring shop) |
+| **Core offer** | **Made-to-measure designer house, two intake paths** (confirmed 6/2026, OQ-011): (1) a signature model reproduced to the client's measurements, (2) full custom design from scratch (true *bespoke*). Not off-the-rack, not a tailoring shop. |
 | **Aesthetic** | Heritage-inspired × sultry × feminine power — the intersection of Vietnamese tradition and modern style |
 | **Provenance** | Made in Saigon — geographic anchor and brand story |
 | **Target buyer** | Women who want to wear what no one else has; buyers seeking a standout outfit for an important occasion; expats and international clients interested in a Vietnamese designer |
@@ -28,7 +28,7 @@ _Last updated: 2026-06-21. Source: BrandHub §3._
 Chi has explicit, non-negotiable wording preferences (WhatsApp 6/11–6/12):
 
 - **Never "high end"** — she finds it cheap-sounding ("nghe stupid"). Use **premium** or **upscale**.
-- **"Bespoke" already implies luxury** — don't stack "luxury bespoke."
+- **"Bespoke" already implies luxury** — don't stack "luxury bespoke." **Scope note (post-OQ-011):** "bespoke" now strictly means the *design-from-scratch* path; the *existing-model → measurements* path is "made-to-measure," not "bespoke." Don't use flat "bespoke" as the blanket label for the whole house — use "made-to-measure designer house" and reserve "bespoke" for the full-custom route.
 - **Not a "tailor"** — Maison Dénudé is a designer house, not a tailoring shop. Avoid "tailor" / "may đo" as the brand's own descriptor.
 - Lean into **artisanal / heritage / hand-craft** vocabulary: hand embroidery, hand-guided embroidery, hand embellished, hand beading, embroidery art.
 
