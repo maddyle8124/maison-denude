@@ -37,3 +37,36 @@ These are research leads for the ICP, not confirmed personas:
 - A formal ICP (served / aspired / classification criteria) is the gating deliverable — see OQ-012. Personas firm up once MD team returns the draft.
 - Foreign-market personas wait on the domestic ICP (ICP-first sequencing, MD-036) — see `../markets/_pointer.md`.
 - Buyer-intent boundaries (premium not "high end", designer not "tailor") in `founder-signals.md` / `positioning.md`.
+
+## ICP criteria framework (template — for OQ-012)
+
+Bộ tiêu chí phân loại khách. Dẫn dắt bằng **#1 + #2 + #3** (quyết định bán được hàng); để **#7 nhân khẩu học** làm vai phụ (chỉ nhắm quảng cáo). Team MD điền bảng bên dưới cho từng persona — Persona 1 đã điền sẵn làm mẫu.
+
+1. **Động lực / sự kiện mua hàng** ⭐ — lý do khiến họ mua ngay lúc này. Bespoke luôn gắn với một dịp cụ thể.
+   *Ví dụ:* đám cưới · lễ ăn hỏi · mẹ cô dâu dự tiệc · gala/sự kiện · Tết – Lễ · chụp bộ ảnh kỷ niệm · muốn một bộ đồ cưới khác biệt.
+2. **Sức mua (mức sẵn sàng chi trả)** ⭐ — *output là con số.*
+   *Ví dụ:* 15–60 triệu/bộ · hoặc tổng chi 100–200 triệu/năm cho đồ đặt may.
+3. **Vị trí địa lý & khả năng tiếp cận** — ở đâu, đến atelier trải nghiệm được hay phải giao từ xa.
+   *Ví dụ:* khách Sài Gòn đến thử trực tiếp · Việt Kiều về nước theo đợt · Việt Kiều không về được → đo từ xa + ship.
+4. **Vòng xã hội (nơi tìm thấy họ)** — họ thuộc nhóm/môi trường nào để biết đường đi câu.
+   *Ví dụ:* phụ huynh trường quốc tế · khách ngân hàng cao cấp (HSBC Premier) · người mua BĐS cao cấp · khách quen khách sạn 5 sao · cộng đồng Việt Kiều.
+5. **Hành vi mua sắm** — loại sản phẩm họ tìm, kênh tiếp cận, mức độ gắn bó.
+   *Ví dụ:* tìm áo dài / đầm dạ tiệc / sườn xám / váy cưới · biết đến qua tiệc cưới lan truyền + Instagram · quay lại mỗi dịp lớn hoặc giới thiệu bạn bè.
+6. **Tâm lý & giá trị sống** — cách họ nhìn nhận bản thân và điều họ trân trọng.
+   *Ví dụ:* cá tính độc lập, không thích kiểu truyền thống · tự hào di sản Việt, mê thủ công · "IT-girl" mua để tạo dấu ấn · coi trọng sự độc bản hơn logo.
+7. **Nhân khẩu học** *(phụ — chỉ để nhắm quảng cáo)* — tuổi, nghề, thu nhập, ngôn ngữ, đời sống gia đình.
+   *Ví dụ:* nữ 28–40, đã đi làm / sắp cưới, nói được Anh + Việt, gốc Việt.
+
+### Bảng persona (điền)
+
+| Tiêu chí | **P1 — Cô dâu Việt Kiều ở Mỹ** *(mẫu)* | P2 — Quý cô yêu spotlight *(điền)* | P3 — Khách nội địa cao cấp *(điền)* | P4 — Mẹ cô dâu / trung niên dư dả *(điền)* |
+|---|---|---|---|---|
+| **1. Động lực / sự kiện** | Đám cưới của chính mình + chụp ảnh cưới | _Gala / sự kiện thảm đỏ?_ | … | … |
+| **2. Sức mua** | 30–60 triệu/bộ áo dài cưới | … | … | … |
+| **3. Vị trí & tiếp cận** | Sống ở Mỹ, về VN cưới theo đợt → đến atelier 1–2 lần; nếu không kịp về thì đo từ xa + ship | … | … | … |
+| **4. Vòng xã hội** | Cộng đồng Việt Kiều, hội nhóm cưới, bạn bè từng cưới ở VN | … | … | … |
+| **5. Hành vi mua sắm** | Tìm "áo dài cưới hiện đại"; biết qua Instagram + tiệc cưới bạn bè lan truyền; có thể quay lại cho mẹ / em gái | … | … | … |
+| **6. Tâm lý & giá trị** | Tự hào gốc Việt; muốn áo dài cưới vừa truyền thống vừa khác biệt, không đụng hàng; trân trọng câu chuyện thủ công | … | … | … |
+| **7. Nhân khẩu học** | Nữ 27–35, sống ở Mỹ (California/Texas…), thu nhập khá, song ngữ Anh–Việt | … | … | … |
+
+→ Điền cho **2 cấp**: (a) khách đã từng phục vụ, (b) khách kỳ vọng phục vụ — ra đủ yêu cầu call 27/6 và đóng OQ-012.

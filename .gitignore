@@ -157,3 +157,17 @@ $RECYCLE.BIN/
 
 # Personal machine-local Claude settings
 thieu/.claude/settings.local.json
+
+# -------------------------------------------------------------------------
+# Heavy local assets — keep OUT of git (large binaries / vendored tools)
+# -------------------------------------------------------------------------
+# Cloned third-party crawler (~549MB, has its own .git + .venv) — local tool only
+MediaCrawler/
+# Audio/video recordings of calls (large; keep locally, not in repo)
+*.MP3
+*.mp3
+*.mp4
+*.wav
+*.m4a
+# Meeting transcripts/subtitles
+*.srt
