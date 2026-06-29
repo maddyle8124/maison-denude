@@ -1,7 +1,7 @@
 # Maison Dénudé — Master Context
 
 _The single source of truth for the Maison Dénudé engagement. Read this first._
-_Last updated: 2026-06-21._
+_Last updated: 2026-06-27._
 
 ## What this is
 
@@ -32,18 +32,18 @@ When master and any other doc disagree, **master wins**. `decisions.md` is the l
 | `client-context/positioning.md` | Value prop, differentiators | seeded |
 | `client-context/stakeholders.md` | Client decision-makers (Chi, Michelle) | seeded |
 | `client-context/founder-signals.md` | Founders' intent: positioning/voice boundaries + how to work with them | seeded |
-| `client-context/personas.md` | End-customer personas | skeleton |
-| `client-context/competitors.md` | Competitive landscape | skeleton |
+| `client-context/personas.md` | End-customer personas | draft (27/6 signals; ICP pending OQ-012) |
+| `client-context/competitors.md` | Competitive landscape | seeded (3-layer model, 27/6) |
 | `markets/_pointer.md` | Market research + Playbook (pointer only) | pointer |
 | `meta/changelog.md` | Change log for this context repo | seeded |
 
 ## Key facts (30-second brief)
 
-- **Client:** Maison Dénudé — premium bespoke / artisanal fashion (áo dài, occasion wear, swimwear), Saigon. NOT fast fashion.
+- **Client:** Maison Dénudé — premium bespoke / artisanal fashion (áo dài + occasion/evening wear, ~50/50), Saigon. NOT fast fashion.
 - **Engagement:** Phase 1, 7 weeks, kickoff 2026-05-31, target go-live ~2026-07-19. **8M VND** base (+ optional add-ons).
 - **Deliverables:** SEO-optimized Astro website (3 pages) + digital tracking infra (GA4/GTM/GSC/GBP) + Digital Marketing Playbook (3 markets).
 - **Team:** Thiệu/Matthew (dev + SEO), Maddy (research).
-- **Status:** kicked off; Phase 0 blocked on OQ-001 (booking email) + OQ-002 (domain).
+- **Status:** project live (deposit 6/18, domain resolved). Site to lead the next collection ~early July. **#1 blocker = ICP not yet defined (OQ-012);** still need OQ-001 (booking email). Buyer base shifting VN → Việt Kiều.
 
 ## Related (outside master)
 

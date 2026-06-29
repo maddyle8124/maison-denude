@@ -12,6 +12,7 @@ The Digital Marketing Playbook for **3 target export markets** is a named Phase-
 - **Funnel:** broad scan → 5 deep-dive markets → align with Maison → **3 pivot markets** for the Playbook.
 - **5 candidates:** Dubai/UAE · Hàn Quốc (Korea) · Singapore · Trung Quốc (China) · Nhật Bản (Japan).
 - **Decision point:** confirm 3 markets at the 1st Progress Presentation (Saturday). Until then, this is open.
+- **ICP-first sequencing (27/6, MD-036):** lock the **domestic ICP first** (OQ-012 — the current #1 blocker), then reuse its criteria to scrape foreign markets. Foreign-market selection now waits on the domestic profile. Add **Xiaohongshu / RedNote** for the Chinese-speaking segment; **Seoul Lee (HK)** as a near-positioning foreign reference.
 
 ## Working thesis (Maddy, 2026-06-21)
 

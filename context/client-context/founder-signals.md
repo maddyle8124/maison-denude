@@ -43,6 +43,16 @@ _Companion to [`stakeholders.md`](stakeholders.md), [`positioning.md`](positioni
 - Warm, emoji-heavy rapport, but **business is business** — proposal/contract fully documented, both sides sign to record commitment.
 - Meetings shift often and last-minute → stay flexible.
 
+## 4. Customer signals the team surfaced (27/6 call)
+
+The MD team's own read of who they serve — treat as founder-stated signal feeding the ICP (OQ-012), detail in [`personas.md`](personas.md):
+
+- **Base shifting VN locals → Việt Kiều** (US/AU/CA; maybe SG/FR/DE). The diaspora is becoming the centre of gravity.
+- **Áo dài vs sườn xám / occasion wear now ~50/50** (áo dài was the majority before last year) — the brand is broader than "áo dài house."
+- **Foreigners ask "do you have a website?"** — the team reads this as a clear demand signal for online presence (the reason for this build).
+- **Acquisition = social + WOM via viral weddings;** customers rarely recall the source. → measurable attribution is weak; the site/tracking is partly to fix this.
+- **Reaffirmed self-image:** designer / bespoke / **private appointment**, high-invest, personalized A-to-Z — consistent with §1's "not mass, not tailor."
+
 ## Quick do / don't
 
 | Do | Don't |

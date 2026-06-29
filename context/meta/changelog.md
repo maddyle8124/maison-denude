@@ -2,6 +2,16 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-27 — Cập nhật context từ call 27/6 (Maddy)
+
+- **Quyết định mới (MD-031→036) + session log** trong `decisions.md`: nhịp báo cáo (weekly 3–5 bullet + monthly chi tiết, MD-031); stack tracking thêm screen-recording/heatmap + rate-limit/bot-detection, bật bảo mật sau khi traffic ổn (MD-032); chiến thuật launch content độc quyền lên web trước rồi mới FB/IG (MD-033); web phải sẵn sàng trước BST mới, target đầu tháng 7 (MD-034); **đối thủ chia 3 lớp** keyword / sức mua / loại sản phẩm — benchmark định vị chỉ từ lớp 2–3 (MD-035); **ICP-first** chốt ICP nội địa trước khi cào nước ngoài (MD-036).
+- **`open-questions.md`:** thêm **OQ-012 = blocker #1** (chưa có ICP: khách đã serve / kỳ vọng serve / tiêu chí phân loại — MD team trả draft ~28/6). OQ-007 → 🟡 đang xử lý (reframe thành brand-list-by-category; seed names + caveat Đỗ Long/Lê Thanh Hòa showbiz, Huy Võ chỉ overlap áo dài). OQ-008 → owner **Hà**, câu hỏi aspirational, tuần sau.
+- **`personas.md`:** dựng lại từ skeleton — dịch chuyển VN→Việt Kiều (US/AU/CA), áo dài vs occasion ~50/50, "do you have a website?", nguồn = social + WOM tiệc cưới viral; tệp sức mua cao (HSBC Premier, phụ huynh trường QT, penthouse, đồng hồ/trang sức); Seoul Lee (HK) + Xiaohongshu.
+- **`competitors.md`:** thay skeleton bằng mô hình 3 lớp + danh sách seed theo category + đối thủ research cũ (LAHAVA/Meera).
+- **`timeline.md`:** current status 27/6 (web lead collection, launch tactic, tracking live, ICP blocker) + milestone đầu-tháng-7 + ~28/6 ICP draft.
+- **`founder-signals.md`:** thêm §4 tín hiệu khách từ team. **`markets/_pointer.md`:** ICP-first sequencing + Xiaohongshu + Seoul Lee.
+- Nguồn: recap call 27/6 (`~/Downloads/Meeting Recap — Web MD.md`). Không commit/host trừ khi được yêu cầu.
+
 ## 2026-06-27 — Gộp đối thủ về MỘT §C + trực quan hoá đầy đủ (Maddy)
 
 - **Gộp §C + §C+ + §C++ thành một block "C · Phân tích từng đối thủ"** (theo yêu cầu — trước bị tách 3 chỗ). Render data-driven (`COMP2` + `compCard()`), mỗi đối thủ một thẻ đầy đủ.
