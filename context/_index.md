@@ -1,7 +1,7 @@
 # Maison Dénudé — Master Context
 
 _The single source of truth for the Maison Dénudé engagement. Read this first._
-_Last updated: 2026-06-27._
+_Last updated: 2026-07-03._
 
 ## What this is
 
@@ -44,7 +44,7 @@ When master and any other doc disagree, **master wins**. `decisions.md` is the l
 - **Engagement:** Phase 1, 7 weeks, kickoff 2026-05-31, target go-live ~2026-07-19. **8M VND** base (+ optional add-ons).
 - **Deliverables:** SEO-optimized Astro website (3 pages) + digital tracking infra (GA4/GTM/GSC/GBP) + Digital Marketing Playbook (3 markets).
 - **Team:** Thiệu/Matthew (dev + SEO), Maddy (research).
-- **Status:** project live (deposit 6/18, domain resolved). Site to lead the next collection ~early July. **#1 blocker = ICP not yet defined (OQ-012);** still need OQ-001 (booking email). Buyer base shifting VN → Việt Kiều.
+- **Status:** project live (deposit 6/18, domain resolved). Site to lead the next collection ~early July. **ICP delivered (4 personas, OQ-012 resolved); RTW line confirmed (OQ-009).** Next: data-sourcing sign-off (OQ-013) + pick 1–2 competitors to race keywords. Still need OQ-001 (booking email). Buyer base shifting VN → Việt Kiều.
 
 ## Related (outside master)
 

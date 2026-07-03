@@ -6,7 +6,8 @@ _Last updated: 2026-06-27. Source: BrandHub §3 + Week-1 call transcript (27/6).
 
 | Element | Content |
 |---------|---------|
-| **Core offer** | **Made-to-measure designer house, two intake paths** (confirmed 6/2026, OQ-011): (1) a signature model reproduced to the client's measurements, (2) full custom design from scratch (true *bespoke*). Not off-the-rack, not a tailoring shop. |
+| **Core offer** | **Made-to-measure designer house, two intake paths** (confirmed 6/2026, OQ-011): (1) a signature model reproduced to the client's measurements, (2) full custom design from scratch (true *bespoke*). **Plus a third tier confirmed 7/2026 (OQ-009/MD-039): an RTW / may-sẵn line** (~5tr+, persona P4) — buy online, no repeat fittings, ship-capable. Not a tailoring shop. |
+| **Price bands** | Áo dài **16–50tr** · áo dài cưới **30–100tr+** · RTW **5tr+** (MD, 7/2026) |
 | **Aesthetic** | Heritage-inspired × sultry × feminine power — the intersection of Vietnamese tradition and modern style |
 | **Provenance** | Made in Saigon — geographic anchor and brand story |
 | **Target buyer** | Women who want to wear what no one else has; buyers seeking a standout outfit for an important occasion; expats and international clients interested in a Vietnamese designer |

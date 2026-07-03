@@ -2,6 +2,15 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-07-03 — Nhận ICP từ MD team → fold vào context + proposal (Maddy)
+
+- **ICP draft (MD team) → `personas.md`:** 4 persona theo khung 7 tiêu chí — P1 Cô dâu (bespoke bridal, 30–<100tr), P2 The Event Connoisseur (20–70tr, có thể >100tr; tệp chi cao nhất), P3 Artistic Lifestyle (20–50tr, cộng đồng sáng tạo), P4 **Conscious Muse = dòng RTW** (10–25tr, mua online). P1–P3 = nhóm "Heritage Seeker". **Resolve OQ-012.**
+- **RTW line xác nhận có (MD-039) → resolve OQ-009**; OQ-010 reframed ("RTW có phải capsule ship-được có chủ đích?"). Giá: áo dài 16–50tr / cưới 30–100tr+ / RTW 5tr+ → `positioning.md` + `brand.md`.
+- **Danh sách đối thủ (MD) → `competitors.md` (resolve OQ-007):** bảng theo category + URL + note. Sửa tên **Sau Lee** (không phải Seoul Lee/Shuo Lei), bỏ Kim Shui, thêm La Hằng/Hà Cúc/Phan Huy/Phương My/Li Lam + bảng foreign đầy đủ. Selling-point cùng giá = chỉ Huy Võ + Thuỷ Design House.
+- **⭐ Bước tiếp theo (MD giao):** Maddy chọn **1–2 brand website mạnh nhất** + shortlist đua từ khoá (POV 1) → đã ghi vào proposal.
+- **Proposal `de-xuat-data-sourcing.md`:** đánh dấu ICP + brand list ĐÃ NHẬN; thêm giá + danh sách brand thật + việc chọn-1-2.
+- Nguồn: `/Maison Denude - Persona criterias.md`.
+
 ## 2026-06-27 — JTBD + đọc sâu transcript đầy đủ call 27/6 (Maddy)
 
 - **File mới `client-context/jtbd.md`:** 2 lăng kính JTBD — (A) Maison-là-khách-của-mình (data→hành động, online presence, ICP đúng, giữ định vị designer House, học đối thủ đúng cách) + (B) khách cuối của Maison (độc bản cho cột mốc; cảm xúc "đặc biệt, không quá cô-dâu-truyền-thống"; xã hội status/di sản). Là thước đo cho proposal.

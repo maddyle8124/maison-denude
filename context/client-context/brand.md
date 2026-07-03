@@ -12,7 +12,7 @@ _Last updated: 2026-06-27. Source: BrandHub, social proof, overview + Week-1 cal
 | **Positioning** | Premium bespoke & artisanal fashion — unique design, NOT fast fashion |
 | **Core products** | Made-to-measure áo dài + occasion/evening wear (sườn xám, đầm tiệc) + bridal — now ~**50/50 áo dài vs occasion** (was áo-dài-majority last year). Occasion grew on re-wearability; áo dài is being commoditized/price-cut. (Swimwear descoped 6/21.) Split áo dài vs occasion into separate site sub-pages (MD-038) |
 | **Tone** | Sultry, feminine power (nữ quyền), heritage-inspired, luxury Saigon |
-| **Price segment** | £££ (premium) |
+| **Price segment** | £££ (premium) — áo dài 16–50tr · áo dài cưới 30–100tr+ · **RTW 5tr+** (MD, 7/2026) |
 | **Facebook followers** | ~4.4K |
 | **Provenance** | Made in Saigon — both a positioning anchor and a brand story |
 

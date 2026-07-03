@@ -45,8 +45,17 @@ _Append-only: add the next `MD-xxx`; never rewrite history. Last updated: 2026-0
 | MD-036 | 2026-06-27 | **ICP-first sequencing**: lock the domestic Ideal Customer Profile first, then reuse its criteria to scrape foreign markets | Without a clear ICP all research is diluted; the domestic profile is the firmer base to extend abroad |
 | MD-037 | 2026-06-27 | Competitor-selection criterion = **consideration set** (brands a real Maison customer would cross-shop), operationalized via Michelle's **3-POV "triangle"** (keyword ↔ purchasing-power ↔ brand-category, rotate between them). Refines MD-035 | Chi: *"không có khách nào consider Maison với Xéo Sọ hết"* — audience-overlap/keyword picks pulled in mass brands from the wrong segment |
 | MD-038 | 2026-06-27 | Product **sub-pages split áo dài vs occasion/evening** (never combined); occasion/evening keyword research done **internationally** (English term), not domestically | Different customers/needs; and foreigners read áo dài *as* occasion/evening wear, not traditional dress → separate pages help SEO + wishlist UX |
+| MD-039 | 2026-07-03 | Maison **has an RTW / may-sẵn line** (from ~5tr+), distinct from bespoke — a 4th ICP persona ("Conscious Muse": buys online, no repeat fittings, fast decision). Resolves OQ-009 | ICP draft (MD team) confirms an accessible, shippable-capable line beside bespoke; price bands: áo dài 16–50tr, cưới 30–100tr+, RTW 5tr+ |
 
 ## Session Log
+
+### 2026-07-03 — ICP delivered by MD team → folded into context + proposal
+- MD team returned the **ICP draft** on the 7-criteria framework: **4 personas** — P1 Cô dâu (bespoke bridal, 30–<100tr), P2 The Event Connoisseur (20–70tr, can >100tr; highest-spend, business/banking/RE/5★-hotel circle), P3 Artistic Lifestyle (20–50tr, creative community), P4 **Conscious Muse = RTW line** (10–25tr, online, no repeat fittings). P1–P3 = a shared "Heritage Seeker" identity. → `personas.md`. **Resolves OQ-012.**
+- **RTW line confirmed (MD-039) → resolves OQ-009**; OQ-010 reframed to "is the RTW line a bounded shippable-by-design capsule?".
+- **Competitor list delivered (resolves OQ-007):** MD's categorized list with URLs/notes → `competitors.md`. Corrections vs earlier: **Sau Lee** (HK) is the right name (not "Seoul Lee/Shuo Lei"); Kim Shui dropped; added La Hằng, Hà Cúc, Phan Huy, Phương My, Li Lam + a full foreign table (JINZA, Qipology, Yi-ming, Shiatzy Chen, Guo Pei, Heaven Gaia, Shanghai Tang, Samuel Gui Yang, Jacques Wei, AO-YES). **Price bands** logged. Selling-point match = only Huy Võ + Thuỷ Design House.
+- **⭐ Next research step (MD ask):** Maddy picks **1–2 competitors with the best website metrics** + a short keyword-race list (POV 1).
+- **Proposal updated** (`markets/de-xuat-data-sourcing.md`): ICP + brand list marked received; price bands + real brand lists + the pick-1–2 ask folded in.
+- Source: `/Maison Denude - Persona criterias.md`.
 
 ### 2026-06-27 — Deep transcript pass: JTBD + expectations + direction (full 27/6 call)
 - Read the full 2,720-line call transcript (recap was a thin summary). Logged two **JTBD lenses** in new `client-context/jtbd.md`: (A) Maison-as-client (data→action, online presence, correct ICP, hold designer-House position, learn from competitors correctly) + (B) end-customer (one-of-a-kind for a milestone; emotional "special, not too-traditional-bride"; social status/heritage).

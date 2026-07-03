@@ -55,6 +55,7 @@ _Người gửi: Maddy (research) · Ngày: (giữa tuần sau) · Trạng thái
 ## 4. Ba góc nhìn (POV) — cụ thể hoá
 
 **POV 1 — Từ khoá / SEO.** Từ keyword Maison đưa → xem brand/data nào nổi lên. Nếu lệch phân khúc thì **đổi góc**, không đào tiếp. *Deliverable:* giải pháp **kéo traffic từ khoá đó về Maison** (SEO + **quảng cáo branded chạy ẩn** — khi khách search tên đối thủ thì thấy Maison, nhưng **không nêu tên đối thủ** trong nội dung hiển thị). Từ khoá dùng: *custom dress / custom bridal / Asian bridal core*; tránh liên tưởng "may đo 24h".
+   - **⭐ Bước cụ thể tiếp theo (MD yêu cầu):** từ danh sách brand theo category, mình **chọn 1–2 brand có chỉ số website mạnh nhất** (lưu lượng + độ phủ từ khoá qua SimilarWeb/SEMrush) + shortlist để **đua từ khoá** với các web đó. Đây là output đầu tiên mình trả sau khi duyệt.
 
 **POV 2 — Sức mua / tầm giá.** Lọc brand giá ≈ Maison → ai trả tiền / ai không, nguồn + từ khoá của họ. Gồm cả ngành xa xỉ khác (đồng hồ, trang sức) để tìm tệp chi mạnh.
 
@@ -79,10 +80,12 @@ _Người gửi: Maddy (research) · Ngày: (giữa tuần sau) · Trạng thái
 
 ## 6. Cần Maison cung cấp (để chạy)
 
-1. **ICP draft** — khách đã serve + kỳ vọng serve (theo bộ tiêu chí ở [`../client-context/personas.md`](../client-context/personas.md)).
-2. **Brand-list theo category** — áo dài / occasion-evening / bridal.
-3. **Foreign brand list** — brand nước ngoài Asian-inspired chung tệp (Kim Shui, Seoul Lee/Shuo Lei…).
-4. **Xác nhận bộ từ khoá** (Hà note giúp).
+1. ✅ **ICP draft** — ĐÃ NHẬN (4 persona: Cô dâu / Event Connoisseur / Artistic Lifestyle / Conscious Muse-RTW) → [`../client-context/personas.md`](../client-context/personas.md).
+2. ✅ **Brand-list theo category** — ĐÃ NHẬN (áo dài / designer full-range / foreign) → [`../client-context/competitors.md`](../client-context/competitors.md).
+3. ✅ **Foreign brand list** — ĐÃ NHẬN (JINZA, Sau Lee, Qipology, Yi-ming, Shiatzy Chen, Guo Pei, Heaven Gaia, Shanghai Tang, Samuel Gui Yang, Jacques Wei, AO-YES).
+4. 🔲 **Xác nhận bộ từ khoá** cuối (Hà note giúp) — còn thiếu.
+
+**Giá tham chiếu Maison (đã có):** áo dài 16–50tr · áo dài cưới 30–100tr+ · RTW 5tr+. Cùng tầm giá (selling-point) = **Huy Võ + Thuỷ Design House**.
 
 ---
 
