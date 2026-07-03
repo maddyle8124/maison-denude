@@ -1,6 +1,6 @@
 # Maison Dénudé — Founder Signals (reading the founders' intent)
 
-_Last updated: 2026-06-21. Source: WhatsApp project chat (5/16–6/12), synthesized._
+_Last updated: 2026-06-27. Source: WhatsApp project chat (5/16–6/12) + Week-1 call transcript (27/6), synthesized._
 _Companion to [`stakeholders.md`](stakeholders.md), [`positioning.md`](positioning.md), [`brand.md`](brand.md). Where those define facts, this captures the **signals and boundaries** the founders revealed in conversation — the "why" behind their reactions._
 
 ## 1. Brand positioning — the lines the founders drew
@@ -52,6 +52,18 @@ The MD team's own read of who they serve — treat as founder-stated signal feed
 - **Foreigners ask "do you have a website?"** — the team reads this as a clear demand signal for online presence (the reason for this build).
 - **Acquisition = social + WOM via viral weddings;** customers rarely recall the source. → measurable attribution is weak; the site/tracking is partly to fix this.
 - **Reaffirmed self-image:** designer / bespoke / **private appointment**, high-invest, personalized A-to-Z — consistent with §1's "not mass, not tailor."
+
+## 5. What they hired us to do (Maison-as-client JTBD) — 27/6
+
+Full breakdown in [`jtbd.md`](jtbd.md). The signals behind it:
+- **They want direction + action, not data.** Chi: *"Chị cần solution… cái gì là action của team."* Michelle: *"số liệu nhiều quá chị rối, chị không đọc được đâu."* → Every deliverable must end in a recommended action; **clarity over completeness.**
+- **They co-produce insight, don't receive conclusions.** Founders hold the market knowledge; team is the data/execution engine. Don't hand them a finished verdict — hand them a read + options and decide together.
+- **"Understand my brand's specialness."** The sharpest friction on the call was feeling mis-understood (wrong-segment competitors, misspelled brand name). Chi privately reassured Maddy it's fine to "đi vòng vòng" because *"brand của chị hơi đặc thù"* — but the bar is: show you get the designer-House positioning.
+- **They will NOT copy mass-brand transparency** (return tables, flat-rate shipping, size charts). Prefer FAQ + 1:1 experience — *"mỗi phát sinh mình tạo một solution cho họ."*
+
+## 6. Brand-name QA (hard rule)
+
+The Week-1 deck repeatedly **misspelled/mis-cased "Maison Dénudé"** (wrong accents, all-caps, "De Nuit"-style slips) and Chi called it out. **Render the name exactly right in every deliverable** — confirm the canonical accented form with the founders and never all-caps or re-accent it.
 
 ## Quick do / don't
 

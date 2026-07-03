@@ -4,10 +4,10 @@ _Last updated: 2026-06-27. Early signals from the 27/6 call (MD team). Still a d
 
 ## Headline shifts (MD team, 27/6)
 
-- **Buyer base is moving VN locals → Việt Kiều.** Clear shift toward diaspora — US, Australia, Canada (possibly expanding to Singapore, France, Germany).
+- **Buyer base is moving VN locals → Việt Kiều** (now the majority). US, Australia, Canada (possibly SG/FR/DE); profile = gốc Việt / married to Vietnamese / gốc Hoa/Á. **They order bespoke online and ship — they do NOT need to fly to VN** (Michelle corrected the "inbound only" frame; she already serves remote buyers).
 - **Product mix is rebalancing.** Áo dài vs. sườn xám / occasion (đầm) wear is now **roughly 50/50** (before last year, áo dài was the majority).
 - **Online presence is a felt need.** Foreign customers routinely ask *"Do you have a website?"* — a direct demand signal that motivated this build.
-- **Acquisition = social + word of mouth.** Mostly social media + WOM via viral weddings; customers often can't name the source ("saw it somewhere online").
+- **Acquisition = social-media-LED** (their own IG/FB/Messenger), *more* than word of mouth (this surprised the team). Personal referrals have small reach; only **industry referrers** (wedding planners, stylists) have books big enough to convert; **viral weddings** amplify + earn "cross credit" from suppliers' pages. Customers often can't name the source ("saw it somewhere online") → attribution is fuzzy, which is part of what website tracking is for.
 - **Maison = designer / bespoke / private appointment.** Not a mass brand. Buyers invest heavily and expect a personalized A-to-Z experience.
 
 ## Persona map
@@ -20,12 +20,13 @@ _Last updated: 2026-06-27. Early signals from the 27/6 call (MD team). Still a d
 
 ## High-purchasing-power segments to probe (domestic, 27/6)
 
-These are research leads for the ICP, not confirmed personas:
+These are research leads for the ICP (Michelle, 27/6), not confirmed personas:
 
-- Banking premier customers (HSBC Premier, etc.)
-- Parents of children at top international schools (ISS, SSIS — VN-tier families only)
-- Penthouse / luxury real-estate buyers
-- Luxury watch / fine-jewelry buyers
+- **Banking premier** (HSBC Premier, etc.) — note: **HSBC is inviting Maison to co-host an event** → a warm channel to pursue.
+- **Parents at top international schools** (e.g. BIS) — **VN-tier families only; exclude expat/foreign parents** (company-paid, not the buyer profile).
+- **Luxury real estate** — riverside villas, 500–800m² penthouses. _(Data feasibility: needs validation.)_
+- **Luxury watch / fine-jewelry** buyers. _(Feasibility: likely scrapeable.)_
+- **5-star hotel bookings** (suite / presidential) — reach via **OTAs (Booking.com, Agoda)** rather than hotel sites.
 
 ## Foreign reference & data sources
 
@@ -40,7 +41,7 @@ These are research leads for the ICP, not confirmed personas:
 
 ## ICP criteria framework (template — for OQ-012)
 
-Bộ tiêu chí phân loại khách. Dẫn dắt bằng **#1 + #2 + #3** (quyết định bán được hàng); để **#7 nhân khẩu học** làm vai phụ (chỉ nhắm quảng cáo). Team MD điền bảng bên dưới cho từng persona — Persona 1 đã điền sẵn làm mẫu.
+Bộ tiêu chí phân loại khách. Dẫn dắt bằng **#1 + #2 + #3** (quyết định bán được hàng); để **#7 nhân khẩu học** làm vai phụ (chỉ nhắm quảng cáo). Team MD điền bảng bên dưới cho từng persona — Persona 1 đã điền sẵn làm mẫu. Nền JTBD (job × trigger × segment) ở [`jtbd.md`](jtbd.md) §B — mỗi persona = một job × một dịp × một tệp.
 
 1. **Động lực / sự kiện mua hàng** ⭐ — lý do khiến họ mua ngay lúc này. Bespoke luôn gắn với một dịp cụ thể.
    *Ví dụ:* đám cưới · lễ ăn hỏi · mẹ cô dâu dự tiệc · gala/sự kiện · Tết – Lễ · chụp bộ ảnh kỷ niệm · muốn một bộ đồ cưới khác biệt.

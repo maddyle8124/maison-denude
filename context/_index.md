@@ -33,7 +33,8 @@ When master and any other doc disagree, **master wins**. `decisions.md` is the l
 | `client-context/stakeholders.md` | Client decision-makers (Chi, Michelle) | seeded |
 | `client-context/founder-signals.md` | Founders' intent: positioning/voice boundaries + how to work with them | seeded |
 | `client-context/personas.md` | End-customer personas | draft (27/6 signals; ICP pending OQ-012) |
-| `client-context/competitors.md` | Competitive landscape | seeded (3-layer model, 27/6) |
+| `client-context/jtbd.md` | Jobs-to-be-Done — Maison-as-client + end-customer | seeded (27/6 transcript) |
+| `client-context/competitors.md` | Competitive landscape | seeded (consideration-set + 3-POV, 27/6) |
 | `markets/_pointer.md` | Market research + Playbook (pointer only) | pointer |
 | `meta/changelog.md` | Change log for this context repo | seeded |
 

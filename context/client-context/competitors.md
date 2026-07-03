@@ -2,29 +2,37 @@
 
 _Last updated: 2026-06-27. Reframed at the 27/6 call (MD-035). Named lists below are seeds; MD team to deliver the full brand-list-by-category (OQ-007) tomorrow / early next week._
 
-## 3-layer competitor model (27/6)
+## The real criterion: consideration set (27/6)
 
-The earlier keyword-only list (MiraMira, Tùng Vũ, Xéo Xọ) positioned Maison against mass / lower-price / different-behavior brands — **not a positioning benchmark.** Restructured into three layers, each with a different purpose:
+Chi's test — a competitor is a brand a **real Maison customer would actually cross-shop** for the same job (see `jtbd.md`). *"Không có khách nào consider Maison với Xéo Sọ hết."* Keyword-match and SimilarWeb audience-overlap pulled in mass/lower-price brands from the wrong segment → **not** the benchmark. (MD-037)
 
-| Layer | Lens | Purpose |
-|-------|------|---------|
-| 1 | **Keyword / SEO** (Maddy's existing work) | Learn keywords + traffic tactics. **NOT** a positioning benchmark. |
-| 2 | **Selling point / purchasing power** | Designer-segment brands at a price tier comparable to Maison. **MD supplies the list.** |
-| 3 | **Product category** | Áo dài specialists + full-range designer brands. |
+## Michelle's 3-POV "triangle" (how to operationalize it)
 
-→ Benchmark positioning from **layers 2–3 only**. Layer 1 stays a tactics/keyword source.
+Three interchangeable POVs you **rotate** between (from any one, radiate to the others; if a POV surfaces irrelevant brands, switch POV rather than dig — *"rà một đài chưa trúng thì rà tiếp đài tiếp theo"*):
+
+| POV | Lens | Purpose / deliverable |
+|-----|------|-----------------------|
+| 1 | **Keyword / SEO** | Learn keywords + traffic tactics. Deliverable: *how does Maison capture traffic when users search these terms and land on Mira/Tùng Vũ?* (incl. **hidden branded ads** — surface Maison on competitor-name searches, never naming them in visible content). NOT a positioning benchmark. |
+| 2 | **Purchasing power / price tier** | Brands priced ≈ Maison → who pays / who doesn't, their sources + keywords. Even unrelated luxury verticals count (watches/jewelry). |
+| 3 | **Brand / product category** | Designer + áo dài brands Maison named → include them all (*"người đã tìm designer brand rồi thì họ sẽ xem qua mình trước"*). Borrow traffic first, funnel later. |
+
+Logic: **wide net first, then funnel.** Benchmark positioning from **POV 2–3**; POV 1 is a tactics/keyword source.
 
 ## Named seeds (to confirm with MD's full list)
 
-**Layer 3a — áo dài specialists:** Huy Võ, Trịnh Hoàng Diệu, Vũ Việt Hà.
+**Áo dài specialists (POV 3):** Huy Trần, Huy Võ, Trịnh Hoàng Diệu, Vũ Việt Hà (Hà Nội), Minh Hạnh, Thủy Design House, Hà Linh Thư.
 
-**Layer 3b — full-range designer brands:** Công Trí, Lê Thanh Hòa, Lâm Gia Khang, Trung Thanh Phong, Đỗ Long, Minh Hạnh, Thủy Design House, Hà Linh Thư.
+**Full-range designer brands (POV 2–3):** Công Trí, Lê Thanh Hòa, Lâm Gia Khang, Đỗ Long, Tùng Vũ, Chu Thanh Phong, Trung Thanh Phong.
 
-**Foreign (Asian-inspired, nearer Maison's positioning):** Seoul Lee (Hong Kong).
+**Foreign (Asian-inspired, nearer Maison's positioning):** Seoul Lee / "Shuo Lei" (Hong Kong), Kim Shui.
 
-**Caveats (MD, 27/6):**
-- **Đỗ Long / Lê Thanh Hòa** — showbiz positioning, **not** a benchmark for Maison.
-- **Huy Võ** — overlaps only on the áo dài segment, not a full-range designer comparison.
+**Explicitly excluded (Chi):** **Kelly Bùi**; and mass/different-tier names — Xéo Xọ (pairs with La Lình/Linh Đan), Mira Mira, MiraMira (*"tệp phú nhuận, không phải tệp muốn chi tiền"*).
+
+**Caveats (Chi, 27/6):**
+- **Đỗ Long / Lê Thanh Hòa** — designer, but read too **showbiz / pageant** → positioning caution, not a clean benchmark.
+- **Huy Võ** — overlaps only on the **áo dài** category (per-category overlap, not whole-brand).
+- **Tùng Vũ** — **not cheaper** (it's expensive); the mismatch is **aesthetic** (*"kiểu công chúa, bánh bèo, hột lựu"*), not price.
+- **Evening/occasion vs áo dài** must be treated as **separate** competitor+keyword sets (MD-038) — foreigners read áo dài *as* occasion wear; scrape occasion-wear keywords **internationally**.
 
 ## Prior research competitors (search/SimilarWeb, layer 1 + earlier)
 

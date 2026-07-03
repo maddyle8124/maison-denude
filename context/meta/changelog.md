@@ -2,6 +2,19 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-06-27 — JTBD + đọc sâu transcript đầy đủ call 27/6 (Maddy)
+
+- **File mới `client-context/jtbd.md`:** 2 lăng kính JTBD — (A) Maison-là-khách-của-mình (data→hành động, online presence, ICP đúng, giữ định vị designer House, học đối thủ đúng cách) + (B) khách cuối của Maison (độc bản cho cột mốc; cảm xúc "đặc biệt, không quá cô-dâu-truyền-thống"; xã hội status/di sản). Là thước đo cho proposal.
+- **Sửa: HAI founder khác nhau** — Chi (chủ/NTK, thẳng, người phản biện) vs **Michelle (người hệ thống hoá — tác giả mô hình 3-POV)**. `stakeholders.md` trước ghi sai Michelle "defer strategy / hiếm khi khởi xướng". Đã sửa.
+- **MD-037 (đối thủ = consideration set)** + **MD-038 (tách sub-page áo dài vs occasion)**. `competitors.md`: tiêu chí consideration-set + triangle 3-POV + danh sách mở rộng (thêm Huy Trần, Vũ Việt Hà, Minh Hạnh, Thủy Design House, Hà Linh Thư, Chu/Trung Thanh Phong; **loại Kelly Bùi**; caveat Tùng Vũ = đắt-nhưng-thẩm-mỹ-công-chúa, Huy Võ = chỉ overlap áo dài, Đỗ Long/Lê Thanh Hòa = showbiz).
+- **Luận điểm inbound bị làm yếu:** Michelle đính chính — Việt Kiều order bespoke online + ship, **không cần về VN**; chị vẫn có khách vậy. Làm mềm `_pointer.md` + `positioning.md`.
+- **Khám phá = social-media-led** (IG/FB/Messenger của họ) hơn WOM; chỉ referrer ngành (wedding planner/stylist) đủ tầm; cưới viral khuếch đại → chỉnh lại `personas.md`.
+- **Triết lý đặt tên brand (mới):** cố tình KHÔNG lấy tên cá nhân — *"Maison = House, một team không phải cá nhân, một religion"* → `positioning.md`.
+- **Cơ cấu sản phẩm ~50/50** áo dài vs (sườn xám + occasion); occasion tăng vì mặc-lại-được; áo dài bị hạ giá/commoditize → `brand.md` (bỏ dòng cũ "swimwear core" + "no international customers").
+- **Tệp sức mua cao (Michelle):** HSBC Premier (HSBC mời Maison co-host event), BĐS cao cấp, đồng hồ/trang sức, phụ huynh trường QT **chỉ tệp VN** (loại expat/công ty trả), booking khách sạn 5 sao qua OTA → `personas.md`.
+- **Reddit:** mẫu nhỏ, thread cũ, demographic chưa rõ → Maddy re-scope thread gần/liên quan; founder gợi ý **RedNote + Taobao** cho tệp tiếng Hoa → `_pointer.md`.
+- **OQ-013** (sign-off methodology) mới; OQ-008 do CẢ HAI founder hoãn. SEMrush do Maison cấp (MD-030 giữ nguyên — tool chính vẫn SimilarWeb). QA tên brand: deck viết sai "Maison Dénudé" — siết chính tả/dấu.
+
 ## 2026-06-27 — Cập nhật context từ call 27/6 (Maddy)
 
 - **Quyết định mới (MD-031→036) + session log** trong `decisions.md`: nhịp báo cáo (weekly 3–5 bullet + monthly chi tiết, MD-031); stack tracking thêm screen-recording/heatmap + rate-limit/bot-detection, bật bảo mật sau khi traffic ổn (MD-032); chiến thuật launch content độc quyền lên web trước rồi mới FB/IG (MD-033); web phải sẵn sàng trước BST mới, target đầu tháng 7 (MD-034); **đối thủ chia 3 lớp** keyword / sức mua / loại sản phẩm — benchmark định vị chỉ từ lớp 2–3 (MD-035); **ICP-first** chốt ICP nội địa trước khi cào nước ngoài (MD-036).

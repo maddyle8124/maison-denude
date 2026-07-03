@@ -43,8 +43,26 @@ _Append-only: add the next `MD-xxx`; never rewrite history. Last updated: 2026-0
 | MD-034 | 2026-06-27 | Website must be **ready before the next collection launch**; target **early next month (~early July)**; Chi confirms design direction within this week → designer builds ~1 week after brief | New casual/occasion-wear collection is nearly done; the site needs to lead it |
 | MD-035 | 2026-06-27 | Competitor research restructured into **3 layers**: (1) keyword/SEO — learn traffic tactics, NOT a positioning benchmark; (2) selling-point / purchasing-power — designer brands near Maison's price (MD supplies the list); (3) product category — áo dài + full-range designer brands. Named list lives in `client-context/competitors.md` | Earlier keyword-only list (MiraMira, Tùng Vũ, Xéo Xọ) mispositioned Maison against mass/lower-price brands; positioning benchmark must come from layers 2–3 only |
 | MD-036 | 2026-06-27 | **ICP-first sequencing**: lock the domestic Ideal Customer Profile first, then reuse its criteria to scrape foreign markets | Without a clear ICP all research is diluted; the domestic profile is the firmer base to extend abroad |
+| MD-037 | 2026-06-27 | Competitor-selection criterion = **consideration set** (brands a real Maison customer would cross-shop), operationalized via Michelle's **3-POV "triangle"** (keyword ↔ purchasing-power ↔ brand-category, rotate between them). Refines MD-035 | Chi: *"không có khách nào consider Maison với Xéo Sọ hết"* — audience-overlap/keyword picks pulled in mass brands from the wrong segment |
+| MD-038 | 2026-06-27 | Product **sub-pages split áo dài vs occasion/evening** (never combined); occasion/evening keyword research done **internationally** (English term), not domestically | Different customers/needs; and foreigners read áo dài *as* occasion/evening wear, not traditional dress → separate pages help SEO + wishlist UX |
 
 ## Session Log
+
+### 2026-06-27 — Deep transcript pass: JTBD + expectations + direction (full 27/6 call)
+- Read the full 2,720-line call transcript (recap was a thin summary). Logged two **JTBD lenses** in new `client-context/jtbd.md`: (A) Maison-as-client (data→action, online presence, correct ICP, hold designer-House position, learn from competitors correctly) + (B) end-customer (one-of-a-kind for a milestone; emotional "special, not too-traditional-bride"; social status/heritage).
+- **Two distinct founders (correction):** Chi = blunt owner/designer + objector; **Michelle = the systematizer who authored the 3-POV competitor model** (prior stakeholders.md wrongly had Michelle "defers strategy / rarely originates"). Fixed `stakeholders.md`.
+- **MD-037 (competitor = consideration set)** and **MD-038 (product sub-page split)** logged from Chi/Michelle's feedback. Expanded competitor list + exclusions in `competitors.md`.
+- **Inbound-tourism thesis weakened:** Michelle corrected it — Việt Kiều order bespoke online + ship, **do NOT need to fly to VN**; she already has such customers. Softened `_pointer.md` working thesis + `positioning.md` "come directly" claim.
+- **Discovery is social-media-led** (their own IG/FB/Messenger), more than WOM; only *industry* referrers (wedding planners/stylists) have reach; viral weddings amplify; attribution fuzzy → re-weighted `personas.md`.
+- **Brand-naming philosophy (new):** deliberately anti-eponym — *"Maison = House, a team not a person, một religion"* → `positioning.md`.
+- **Product mix ~50/50** áo dài vs (sườn xám + occasion); occasion grows on re-wearability; áo dài being commoditized/price-cut → `brand.md` (also deprecated stale "swimwear core" + "no international customers" lines).
+- **HNW sourcing leads (Michelle):** HSBC Premier (HSBC inviting Maison to co-host an event), luxury real estate, watches/jewelry, VN-only intl-school parents (exclude expat/company-paid), 5-star hotel bookings via OTAs → `personas.md`.
+- **Reddit critique:** sample small, threads stale, demographic unclear → Maddy to re-scope recent/relevant; founders suggest **RedNote (Xiaohongshu) + Taobao** for Chinese-speaking → `_pointer.md`.
+- **Keyword nuance:** use *custom dress / custom bridal / Asian bridal core*; avoid "24h tailoring" cheap association; run **hidden branded search ads** (surface Maison on competitor-name searches, never name competitors in visible content).
+- **Committed deliverable:** Maddy's **data-sourcing methodology proposal** (feasibility × output-type × use, for sign-off before deeper scraping) due mid next week + deck PDF → OQ updated.
+- **Tooling note:** Maison provided **SEMrush** access; team's method stays SimilarWeb (MD-030 unchanged — SimilarWeb is the working tool).
+- **Brand-name QA:** the deck misspelled/mis-cased "Maison Dénudé" repeatedly (Chi noticed) — enforce exact spelling/accents in all deliverables; confirm canonical form with founders.
+- **OQ-008 "success-model brand"** deferred by BOTH founders (owed).
 
 ### 2026-06-27 — Website tracking/launch alignment + research reframe (27/6 call)
 - **Website tracking & reporting (MD-031, MD-032):** agreed weekly 3–5-bullet update in chat + monthly detailed report; densest tracking post-launch and around collection/peak windows. Matthew integrated screen recording/heatmap + rate-limiting/bot-detection; security layers turn on after traffic stabilizes. Matthew to add the team to the tracking tools ASAP.

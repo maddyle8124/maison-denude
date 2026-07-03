@@ -1,6 +1,6 @@
 # Maison Dénudé — Brand
 
-_Last updated: 2026-06-21. Source: BrandHub, social proof, overview._
+_Last updated: 2026-06-27. Source: BrandHub, social proof, overview + Week-1 call transcript (27/6)._
 
 ## Snapshot
 
@@ -10,7 +10,7 @@ _Last updated: 2026-06-21. Source: BrandHub, social proof, overview._
 | **Address** | 194 Lê Thánh Tôn, Quận 1, TP.HCM (tầng 2) |
 | **Founder** | chị Chi (fashion designer) — see `stakeholders.md` |
 | **Positioning** | Premium bespoke & artisanal fashion — unique design, NOT fast fashion |
-| **Core products** | Bespoke áo dài, occasion wear, bespoke tailoring, swimwear |
+| **Core products** | Made-to-measure áo dài + occasion/evening wear (sườn xám, đầm tiệc) + bridal — now ~**50/50 áo dài vs occasion** (was áo-dài-majority last year). Occasion grew on re-wearability; áo dài is being commoditized/price-cut. (Swimwear descoped 6/21.) Split áo dài vs occasion into separate site sub-pages (MD-038) |
 | **Tone** | Sultry, feminine power (nữ quyền), heritage-inspired, luxury Saigon |
 | **Price segment** | £££ (premium) |
 | **Facebook followers** | ~4.4K |
@@ -29,14 +29,14 @@ Full data: `/social proof maison denude.md`, `/maison_denude_posts.csv`.
 ## What's working
 
 - Solid foothold in premium áo dài + occasion wear; recurring presence at major events (WeChoice, Vạn Xuân, Lễ Hội Áo Dài, Marie Claire Fashion Night Out).
-- **Swimwear** emerging as a breakout, more internationally accessible angle.
 - **Bridal / ăn hỏi** is a rich niche (Cô Em Trendy post ~9K, The Planners).
+- _(Swimwear was previously flagged a breakout angle — descoped 6/21, not relevant to this segment.)_
 - Multi-tier KOL reach (singers, models, classical artists).
 
 ## Gaps / watch-outs
 
 - **Low UGC** — almost all mentions are KOL/verified; little organic customer voice or mass-tier word-of-mouth.
-- **No international customers yet** → no starting point for international WOM (the core expansion bottleneck).
+- **International WOM is thin** — but there ARE overseas customers now (Việt Kiều order bespoke + ship; corrected 27/6). The gap is organic international *word-of-mouth*, not the absence of foreign buyers.
 - **Few Reels/video** — mostly static imagery; video reach untapped.
 - **Followers low vs. editorial coverage** — awareness not yet converted to owned audience.
 

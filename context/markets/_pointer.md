@@ -13,12 +13,15 @@ The Digital Marketing Playbook for **3 target export markets** is a named Phase-
 - **5 candidates:** Dubai/UAE · Hàn Quốc (Korea) · Singapore · Trung Quốc (China) · Nhật Bản (Japan).
 - **Decision point:** confirm 3 markets at the 1st Progress Presentation (Saturday). Until then, this is open.
 - **ICP-first sequencing (27/6, MD-036):** lock the **domestic ICP first** (OQ-012 — the current #1 blocker), then reuse its criteria to scrape foreign markets. Foreign-market selection now waits on the domestic profile. Add **Xiaohongshu / RedNote** for the Chinese-speaking segment; **Seoul Lee (HK)** as a near-positioning foreign reference.
+- **Data-sourcing (27/6):** Maddy owes a **methodology proposal** (feasible sources × output types [geo/age/country/source] × what each enables) for founder sign-off **before deeper scraping** (OQ-013, due mid next week) + deck PDF. Domestic keyword/brand/purchasing-power scraping can proceed now; foreign work waits on ICP.
+- **Reddit critique (Chi, 27/6):** sample too small, threads too old ("dòng chảy thời trang rất nhanh"), demographic fit unclear, operationally heavy → **re-scope to recent/relevant threads**. Founders suggest **RedNote (Xiaohongshu) + Taobao** for the Chinese-speaking audience instead. (Maddy's defense: Reddit is easy to scrape, durable, AI-cited/Google-indexed — keep but tighten.)
 
 ## Working thesis (Maddy, 2026-06-21)
 
 Refines the BrandHub TK insight (§4.3 "bespoke doesn't scale abroad → fit-giữa entry"). Two shifts in how the market question is framed:
 
 1. **Inbound, not outbound.** Instead of "which foreign market do we export bespoke to," ask "**which markets send tourists to Vietnam** who'd want a premium fashion / made-to-measure *experience* while travelling." Bespoke is a sensory, in-person chain (fabric, fitting, skin-tone matching) — it makes sense done **in Saigon**, not shipped overseas. This favours high inbound-tourism source markets (China, Korea, Japan overlap with the existing candidate list).
+   - **⚠️ Weakened 27/6:** Michelle corrected this — **Việt Kiều already order bespoke online and ship home; they do NOT need to come to VN**, and she serves such customers today. So the "must-be-inbound" premise is too narrow. The inbound *experience* is one route; **remote bespoke + ship** is a proven parallel route. Reframe from "who comes to VN" toward "who buys (inbound OR ship), for what milestone." See `client-context/jtbd.md`.
 2. **Accessible line, not pure bespoke.** For anything that travels home with the buyer or ships, Maison needs a **"fit giữa" / shippable ready-to-wear** line that does *not* require the bespoke experience. **Open whether such a line exists or should** — needs founder input (OQ-009).
 
 ### Tension to resolve (flag for the team)
@@ -36,6 +39,7 @@ Each market scored on: **Value Fit · Market Share & White Space · Policy & Bar
 
 ## Where the research lives
 
+- **Data-sourcing methodology proposal (client-facing, VN) → [`de-xuat-data-sourcing.md`](./de-xuat-data-sourcing.md)** ← the 27/6-committed proposal (OQ-013): sources × feasibility × output × decision, 3-POV, sequencing. For founder sign-off before deeper scraping.
 - **FULL report + action plan → [`bao-cao-tong-hop.md`](./bao-cao-tong-hop.md)** (Vietnamese) ← the canonical aggregated deliverable: context + demand + competitors + customer-groups/markets/positioning + action plan. Visual showcase (with charts): [`bao-cao-tong-hop.html`](./bao-cao-tong-hop.html).
 - **Broad market research (detail) → [`broad-market-research.md`](./broad-market-research.md)** ← research-detail text feeding the full report. SimilarWeb raw → [`data_logs/`](./data_logs/).
 - Strategic framework + tactical intel → `/MDenude_BrandHub_Internal.md` (internal only).
