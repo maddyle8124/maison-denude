@@ -62,9 +62,9 @@ export const landingSections: Section[] = [
     taglineTitle: 'Shade of Living',
     taglineBody: 'Beyond the fleeting form, each individual embodies the totality of their experiences and emotions. Maison Denude walks alongside you in the art of being, where every shade, every movement, every version of the self is honored and celebrated.',
     socials: [
-      { label: 'Zalo',      href: '#', icon: 'zalo' },
-      { label: 'Facebook',  href: '#', icon: 'facebook' },
-      { label: 'Instagram', href: '#', icon: 'instagram' },
+      // Zalo removed — no URL exists yet (open item; re-add when the official Zalo link is confirmed)
+      { label: 'Facebook',  href: 'https://www.facebook.com/MaisonDenude', icon: 'facebook' },
+      { label: 'Instagram', href: 'https://www.instagram.com/maisondenude.official', icon: 'instagram' },
     ],
   },
 ];

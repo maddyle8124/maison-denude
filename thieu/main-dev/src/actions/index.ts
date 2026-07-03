@@ -4,6 +4,7 @@ import { z } from 'astro:schema';
 // Worker env (secrets + vars) via the `cloudflare:workers` virtual module instead.
 import { env } from 'cloudflare:workers';
 import { supabaseAdmin, type SupabaseEnv } from '../lib/supabase';
+import { resolveEmailConfig, sendBookingNotification, type EmailEnv } from '../lib/email';
 
 export const server = {
   createBooking: defineAction({
@@ -32,7 +33,16 @@ export const server = {
         });
       }
 
-      // Email notification deferred (D-BOOK-01 email half); not called this round.
+      // Email notification (D-BOOK-02): best-effort AFTER the successful insert.
+      // An email failure must never fail the booking — log and return success.
+      const emailResult = await sendBookingNotification(
+        input,
+        resolveEmailConfig(env as unknown as EmailEnv),
+      );
+      if (!emailResult.ok) {
+        console.error('[email] booking notification failed:', emailResult.error);
+      }
+
       return { success: true };
     },
   }),

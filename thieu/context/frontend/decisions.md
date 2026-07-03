@@ -121,6 +121,22 @@ _Use this as the approval record before implementation starts._
 
 ---
 
+## Session 2026-07-03 — production-ready push (BINDING)
+
+| ID | Decision | Detail |
+|----|----------|--------|
+| D-NAV-01 | **Hide BLOG, SOCIAL CLUB, FEATURING from nav + footer** | Links removed (nav.ts data edit + footer), landing sections stay visible. Nav = INTRODUCTION · COLLECTION · BOOKING. Blog/social-club/featuring return when content + FQ-01..03 answers exist. Kills the live `/blog` 404. |
+| D-BOOK-02 | **Email provider = Resend; sender `contact@maisondenude.com` (apex domain `maisondenude.com` is the one verified in Resend — corrected 2026-07-03 during live smoke test: no `contact.` subdomain exists in the account); recipient `thieuxmaison@gmail.com` until OQ-001** | Implements the deferred email half of D-BOOK-01. Built test-driven (vitest). Email failure must never fail the booking insert (insert first, email best-effort). `RESEND_API_KEY` + `BOOKING_NOTIFY_EMAIL` in `.env` + as Worker secrets. |
+| D-SCOPE-03 | **/collections enters scope NOW as a config-driven static page (partially supersedes D-SCOPE-02)** | Built from the Instagram export (`C:\maison\ig_maisondenude.official_profile_download_all_2026-07-03T10-07-02-644Z`), curated imagery, luxury black/white aesthetic per design-system.md. NOT Supabase-backed yet — content layer = `content/collections.ts` + ImageKeys, same pattern as landing, so the client's future design/data swaps in without code rewrites. Supabase/admin/wishlist remain deferred. |
+| D-BOOK-03 | **Booking page UX/UI redesigned by orchestrator (2026-07-03, user directive: current page "a disaster")** | Luxury editorial treatment consistent with design-system.md + /collections: black/white, ABChanel Corpo, token-driven, whitespace-led, no AI-slop patterns (no cards/shadows/gradients/rounded corners). Form logic/action untouched (D-BOOK-01/02 seams intact); presentation only. |
+| D-NAV-02 | **Nav = HOME · ABOUT US · COLLECTION · BOOKING, all absolute page routes (2026-07-03)** | Anchors removed from nav (they broke off-homepage: `#...` applied to the current page). INTRODUCTION renamed ABOUT US → new `/about` page (resolves FQ-01 provisionally: About = maison story page). HOME added. |
+| D-SEO-01 | **SEO foundation + entity-claiming JSON-LD sitewide** | `site = https://maisondenude.com` in astro.config; canonical, OG/Twitter meta, robots.txt, sitemap.xml, per-page titles/descriptions. JSON-LD: Organization (+ClothingStore/LocalBusiness), WebSite, WebPage/Breadcrumb; entity claiming via `sameAs` (official profiles) + `subjectOf`/`mentions` (press/KOL coverage URLs) from the mention-research report in `context/SEO/`. Brand-language law applies (never "high end"/"tailor"). |
+| D-ARCH-02 | **Static-first: ALL pages prerendered, everything fetched/served at build time (2026-07-03, user directive)** | Root cause of "slow media": `image.service.entrypoint: 'astro/assets/services/compile'` in astro.config was a nonexistent module → Astro silently fell back to passthrough → originals shipped unoptimized (one 18MB JPEG live). Fix: adapter option `cloudflare({ imageService: 'compile' })` (sharp at build), remove the bogus manual service. `/booking` flips back to `prerender = true`; its form switches from no-JS POST (needs SSR `Astro.getActionResult`) to a client-side Astro Actions call (`actions.createBooking(formData)` from `astro:actions`) — the `/_actions/*` endpoint stays server-rendered under `output:'server'`. Trade-off accepted: booking form now requires JS. Dynamic rendering returns ONLY for /collections when the client's design brief arrives. |
+| D-HERO-01 | **Hero logo = 70% viewport width on desktop, never full-bleed (2026-07-03, user directive)** | The regressed `width: 2184px` made the logo overflow/full-width, breaking balance and readability. Desktop rule: `width: 70%` of the hero. Mobile keeps its own compact treatment (right-aligned, 240px). |
+| D-BRAND-02 | **Favicon = client-supplied `C:\maison\favicon.png` (1080×1080)** | Transformed at build prep into `public/`: `favicon.ico` (16/32/48), `favicon-96.png`, `apple-touch-icon.png` (180), `icon-192.png`/`icon-512.png` + head links in Base.astro. Replaces the placeholder `favicon.svg` reference. |
+
+---
+
 ## Still open from client (Chi / Michelle)
 
 | ID | Question |

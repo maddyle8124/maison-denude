@@ -1,0 +1,49 @@
+---
+export const prerender = true;
+
+import Base from '../layouts/Base.astro';
+import Nav from '../components/ui/Nav.astro';
+import Footer from '../components/sections/Footer.astro';
+import CollectionHeader from '../components/collections/CollectionHeader.astro';
+import CollectionHero from '../components/collections/CollectionHero.astro';
+import ManifestoStrip from '../components/collections/ManifestoStrip.astro';
+import PairRow from '../components/collections/PairRow.astro';
+import MuseGrid from '../components/collections/MuseGrid.astro';
+import ClosingCta from '../components/collections/ClosingCta.astro';
+import { renaissance } from '../content/collections';
+import { landingSections } from '../content/landing';
+import { pages } from '../content/seo';
+import type { FooterSection } from '../content/types';
+
+// The site footer is defined once in the landing content — reuse it (doc-is-truth, DRY).
+const footer = landingSections.find((s): s is FooterSection => s.type === 'footer');
+---
+
+<Base title={pages.collections.title} description={pages.collections.description}>
+  <Nav />
+  <main class="collections-page">
+    <CollectionHeader
+      title={renaissance.title}
+      season={renaissance.season}
+      showCredit={renaissance.showCredit}
+    />
+    <CollectionHero image={renaissance.hero} />
+    <ManifestoStrip lines={renaissance.manifesto} images={renaissance.manifestoImages} />
+    {renaissance.sections.map((section) =>
+      section.layout === 'pair' ? (
+        <PairRow label={section.label} items={section.items} />
+      ) : (
+        <MuseGrid label={section.label} items={section.items} />
+      )
+    )}
+    <ClosingCta label={renaissance.cta.label} href={renaissance.cta.href} />
+  </main>
+  {footer && <Footer {...footer} />}
+</Base>
+
+<style>
+  .collections-page {
+    background: var(--color-bg);
+    min-height: 100vh;
+  }
+</style>

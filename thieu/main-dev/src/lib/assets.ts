@@ -31,8 +31,20 @@ import imgSableRedLaceAodai          from '../assets/landing/sable-red-lace-aoda
 import imgSableGreenLaceCape         from '../assets/landing/sable-green-lace-cape-red-curtain.jpg';
 import imgFooterAtelier              from '../assets/landing/footer-atelier-chair-dark-wood.jpg';
 import imgPlaceholder                from '../assets/landing/_placeholder.jpg';
+import imgRenHeroWhiteJacquard       from '../assets/collections/renaissance/hero-white-jacquard-aodai.jpg';
+import imgRenRunwayVelvetDuo         from '../assets/collections/renaissance/runway-velvet-noir-duo.jpg';
+import imgRenRunwayPinkSequin        from '../assets/collections/renaissance/runway-pink-sequin-halter.jpg';
+import imgRenMuseGigiStage           from '../assets/collections/renaissance/muse-gigi-sequin-floral-stage.jpg';
+import imgRenMuseGigiConstellation   from '../assets/collections/renaissance/muse-gigi-pink-constellation.jpg';
+import imgRenMuseTuAnhBlushLace      from '../assets/collections/renaissance/muse-tu-anh-blush-lace.jpg';
+import imgRenMuseAlitaBlackLace      from '../assets/collections/renaissance/muse-alita-black-lace-blossom.jpg';
+import imgRenMuseEasternForest       from '../assets/collections/renaissance/muse-eastern-forest-embroidered-coat.jpg';
+import imgRenMuseThuAnhSequin        from '../assets/collections/renaissance/muse-thu-anh-black-sequin-mandarin.jpg';
+import imgRenManifestoBrocade        from '../assets/collections/renaissance/manifesto-renaissance-brocade.jpg';
+import imgRenManifestoJacquard       from '../assets/collections/renaissance/manifesto-renaissance-jacquard.jpg';
+import imgBookingCover               from '../assets/booking/cover-blush-metallic-lace.jpg';
 
-// All landing page images. Add keys here when new images land; never use raw paths in components.
+// All site images (landing + collections). Add keys here when new images land; never use raw paths in components.
 export type ImageKey =
   | 'heroEmbroideredGown'
   | 'heroSilkHalter'
@@ -64,7 +76,19 @@ export type ImageKey =
   | 'sableRedLaceAodai'
   | 'sableGreenLaceCape'
   | 'footerAtelier'
-  | 'placeholder';
+  | 'placeholder'
+  | 'renHeroWhiteJacquard'
+  | 'renRunwayVelvetDuo'
+  | 'renRunwayPinkSequin'
+  | 'renMuseGigiStage'
+  | 'renMuseGigiConstellation'
+  | 'renMuseTuAnhBlushLace'
+  | 'renMuseAlitaBlackLace'
+  | 'renMuseEasternForest'
+  | 'renMuseThuAnhSequin'
+  | 'renManifestoBrocade'
+  | 'renManifestoJacquard'
+  | 'bookingCover';
 
 const assetMap: Record<ImageKey, ImageMetadata> = {
   heroEmbroideredGown:          imgHeroEmbroideredGown,
@@ -98,6 +122,18 @@ const assetMap: Record<ImageKey, ImageMetadata> = {
   sableGreenLaceCape:           imgSableGreenLaceCape,
   footerAtelier:                imgFooterAtelier,
   placeholder:                  imgPlaceholder,
+  renHeroWhiteJacquard:         imgRenHeroWhiteJacquard,
+  renRunwayVelvetDuo:           imgRenRunwayVelvetDuo,
+  renRunwayPinkSequin:          imgRenRunwayPinkSequin,
+  renMuseGigiStage:             imgRenMuseGigiStage,
+  renMuseGigiConstellation:     imgRenMuseGigiConstellation,
+  renMuseTuAnhBlushLace:        imgRenMuseTuAnhBlushLace,
+  renMuseAlitaBlackLace:        imgRenMuseAlitaBlackLace,
+  renMuseEasternForest:         imgRenMuseEasternForest,
+  renMuseThuAnhSequin:          imgRenMuseThuAnhSequin,
+  renManifestoBrocade:          imgRenManifestoBrocade,
+  renManifestoJacquard:         imgRenManifestoJacquard,
+  bookingCover:                 imgBookingCover,
 };
 
 export function getAsset(key: ImageKey): ImageMetadata {

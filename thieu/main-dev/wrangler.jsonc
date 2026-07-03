@@ -2,7 +2,7 @@
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"compatibility_date": "2026-06-24",
 	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "main-dev",
+	"name": "maisondenude-web",
 	"account_id": "73fb68b2979b1b17abbafc4eccdbc354",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {

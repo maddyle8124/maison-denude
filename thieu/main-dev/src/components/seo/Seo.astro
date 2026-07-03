@@ -1,0 +1,123 @@
+---
+/*
+ * Seo.astro (D-SEO-01) — rendered once in Base.astro's <head>.
+ * Emits: title, meta description, canonical, Open Graph, Twitter Card, and
+ * JSON-LD (Organization+ClothingStore, WebSite, per-page WebPage/BreadcrumbList).
+ * ALL data comes from src/content/seo.ts — nothing entity-related is inline here.
+ */
+import { getAsset } from '../../lib/assets';
+import { org, site as siteSeo, getPageSeo } from '../../content/seo';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+
+// Astro.site is set in astro.config.mjs (https://maisondenude.com).
+const site = Astro.site ?? new URL(org.url);
+const pathname = Astro.url.pathname;
+const page = getPageSeo(pathname);
+
+const canonicalUrl = new URL(pathname, site).href;
+const ogImageUrl = new URL(getAsset(siteSeo.ogImageKey).src, site).href;
+const logoUrl = new URL(org.logoPath, site).href;
+
+const orgId = new URL('/#organization', site).href;
+const websiteId = new URL('/#website', site).href;
+
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': ['Organization', 'ClothingStore'],
+  '@id': orgId,
+  name: org.name,
+  alternateName: org.alternateName,
+  url: org.url,
+  logo: logoUrl,
+  image: ogImageUrl,
+  description: org.description,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: org.address.streetAddress,
+    addressLocality: org.address.addressLocality,
+    addressRegion: org.address.addressRegion,
+    addressCountry: org.address.addressCountry,
+  },
+  founder: {
+    '@type': 'Person',
+    name: org.founder.name,
+    jobTitle: org.founder.jobTitle,
+  },
+  foundingLocation: {
+    '@type': 'Place',
+    name: org.foundingLocation,
+  },
+  sameAs: org.sameAs,
+  subjectOf: org.subjectOf.map((url) => ({ '@type': 'CreativeWork', url })),
+  mentions: org.mentions.map((url) => ({ '@type': 'CreativeWork', url })),
+  knowsAbout: org.knowsAbout,
+};
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': websiteId,
+  name: siteSeo.siteName,
+  url: org.url,
+  publisher: { '@id': orgId },
+};
+
+const webPageLd = page && {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: page.title,
+  description: page.description,
+  isPartOf: { '@id': websiteId },
+  about: { '@id': orgId },
+};
+
+// Served URLs carry a trailing slash (Cloudflare static-asset auto-trailing-slash),
+// so breadcrumb item URLs are normalized to match the canonical form.
+const withTrailingSlash = (path: string) => (path.endsWith('/') ? path : `${path}/`);
+
+const breadcrumbLd = page?.breadcrumb && {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: page.breadcrumb.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.name,
+    item: new URL(withTrailingSlash(item.path), site).href,
+  })),
+};
+
+const noindex = page?.noindex === true;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+{noindex ? (
+  <meta name="robots" content="noindex" />
+) : (
+  <link rel="canonical" href={canonicalUrl} />
+)}
+
+<meta property="og:site_name" content={siteSeo.siteName} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:locale" content={siteSeo.locale} />
+<meta property="og:image" content={ogImageUrl} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
+{webPageLd && <script type="application/ld+json" set:html={JSON.stringify(webPageLd)} />}
+{breadcrumbLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />}

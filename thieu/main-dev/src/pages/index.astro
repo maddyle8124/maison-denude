@@ -5,9 +5,10 @@ import Base from '../layouts/Base.astro';
 import Nav from '../components/ui/Nav.astro';
 import SectionRenderer from '../components/SectionRenderer.astro';
 import { landingSections } from '../content/landing';
+import { pages } from '../content/seo';
 ---
 
-<Base title="Maison Dénudé" description="Vietnamese fashion house — couture áo dài and bridal.">
+<Base title={pages.home.title} description={pages.home.description}>
   <Nav />
   {landingSections.map(section => (
     <SectionRenderer section={section} />

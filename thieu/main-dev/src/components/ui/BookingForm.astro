@@ -1,69 +1,149 @@
 ---
-import { actions } from 'astro:actions';
+import { bookingForm } from '../../content/booking';
 
 // Reusable booking form (used on /booking now, persistent modal later).
-// Progressive enhancement: posts to the createBooking action and works without JS.
-const result = Astro.getActionResult(actions.createBooking);
-const success = result && !result.error;
-const failed = result && result.error;
+// Submits client-side via astro:actions (D-ARCH-02) so the page itself stays
+// fully prerendered — the injected /_actions/* endpoint is the only server route.
+// All copy comes from content/booking.ts (invariant 1); this file is presentation only.
+const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fields;
 ---
 
-{success ? (
-  <p class="booking__success">We'll reach out within 24h.</p>
-) : (
-  <form method="POST" action={actions.createBooking} class="booking">
-    {failed && (
-      <p class="booking__error">
-        Something went wrong. Please check your details and try again.
-      </p>
-    )}
+<div class="booking booking--success" id="booking-success" hidden>
+  <p class="booking__success-title">{bookingForm.success.title}</p>
+  <hr class="booking__success-rule" />
+  <p class="booking__success-body">{bookingForm.success.body}</p>
+  <a class="booking__success-link" href={bookingForm.success.linkHref}>
+    {bookingForm.success.linkLabel}
+  </a>
+</div>
+
+<form class="booking" id="booking-form" data-sending-label={bookingForm.sendingLabel}>
+  <p class="booking__error" id="booking-error" hidden>{bookingForm.error}</p>
 
     <div class="booking__field">
-      <label class="booking__label" for="name">Name</label>
-      <input class="booking__input" type="text" id="name" name="name" required />
+      <label class="booking__label" for="name">
+        <span class="booking__index">{nameField.index}</span>
+        {nameField.label}
+      </label>
+      <input class="booking__input" type="text" id="name" name="name" required autocomplete="name" />
     </div>
 
     <div class="booking__field">
-      <label class="booking__label" for="phone">Phone / Zalo / WhatsApp</label>
-      <input class="booking__input" type="tel" id="phone" name="phone" required minlength="6" />
+      <label class="booking__label" for="phone">
+        <span class="booking__index">{phoneField.index}</span>
+        {phoneField.label}
+      </label>
+      <input class="booking__input" type="tel" id="phone" name="phone" required minlength="6" autocomplete="tel" />
+    </div>
+
+    <div class="booking__row">
+      <div class="booking__field">
+        <label class="booking__label" for="date">
+          <span class="booking__index">{dateField.index}</span>
+          {dateField.label}
+        </label>
+        <input class="booking__input" type="date" id="date" name="date" required />
+      </div>
+
+      <div class="booking__field">
+        <label class="booking__label" for="consultationType">
+          <span class="booking__index">{typeField.index}</span>
+          {typeField.label}
+        </label>
+        <div class="booking__select-wrap">
+          <select class="booking__input booking__select" id="consultationType" name="consultationType" required>
+            {typeField.options?.map((opt) => (
+              <option value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+          <span class="booking__select-caret" aria-hidden="true">↓</span>
+        </div>
+      </div>
     </div>
 
     <div class="booking__field">
-      <label class="booking__label" for="date">Preferred date</label>
-      <input class="booking__input" type="date" id="date" name="date" required />
+      <label class="booking__label" for="notes">
+        <span class="booking__index">{notesField.index}</span>
+        {notesField.label}
+      </label>
+      <textarea class="booking__input booking__textarea" id="notes" name="notes" rows="3"></textarea>
     </div>
 
-    <div class="booking__field">
-      <label class="booking__label" for="consultationType">Consultation type</label>
-      <select class="booking__input booking__select" id="consultationType" name="consultationType" required>
-        <option value="atelier">Atelier visit</option>
-        <option value="virtual">Virtual consultation</option>
-        <option value="event">Event / occasion</option>
-      </select>
-    </div>
+    <button class="booking__submit" type="submit">{bookingForm.submitLabel}</button>
+</form>
 
-    <div class="booking__field">
-      <label class="booking__label" for="notes">Message</label>
-      <textarea class="booking__input booking__textarea" id="notes" name="notes" rows="4"></textarea>
-    </div>
+<script>
+  import { actions } from 'astro:actions';
 
-    <button class="booking__submit" type="submit">Request consultation</button>
-  </form>
-)}
+  const form = document.getElementById('booking-form') as HTMLFormElement | null;
+  const successEl = document.getElementById('booking-success');
+  const errorEl = document.getElementById('booking-error');
+
+  if (form && successEl && errorEl) {
+    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const idleLabel = submit?.textContent ?? '';
+    const sendingLabel = form.dataset.sendingLabel || idleLabel;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      errorEl.hidden = true;
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = sendingLabel;
+      }
+
+      const { error } = await actions.createBooking(new FormData(form));
+
+      if (error) {
+        errorEl.hidden = false;
+        if (submit) {
+          submit.disabled = false;
+          submit.textContent = idleLabel;
+        }
+        return;
+      }
+
+      form.hidden = true;
+      successEl.hidden = false;
+    });
+  }
+</script>
 
 <style>
   .booking {
     display: flex;
     flex-direction: column;
-    gap: var(--form-field-gap);
-    max-width: var(--form-max-width);
+    gap: var(--booking-field-gap);
+    max-width: var(--booking-form-max);
     width: 100%;
   }
+  /* display:flex above beats the UA [hidden] rule — restate it so the JS
+     form/success toggle actually hides the inactive element. */
+  .booking[hidden] {
+    display: none;
+  }
+
   .booking__field {
     display: flex;
     flex-direction: column;
     gap: var(--form-label-gap);
+    flex: 1;
+    min-width: 0;
   }
+
+  /* Date + consultation share a line on wider screens */
+  .booking__row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--booking-field-gap);
+  }
+  @media (min-width: 640px) {
+    .booking__row {
+      flex-direction: row;
+      gap: var(--gap-section);
+    }
+  }
+
   .booking__label {
     font-family: var(--font-primary);
     font-size: var(--text-label);
@@ -71,39 +151,68 @@ const failed = result && result.error;
     text-transform: uppercase;
     letter-spacing: var(--ls-label);
     color: var(--color-text);
+    display: flex;
+    align-items: baseline;
+    gap: var(--form-label-gap);
   }
+
+  .booking__index {
+    font-size: var(--text-collection-sub);
+    letter-spacing: var(--ls-collection-sub);
+    opacity: 0.45;
+  }
+
   .booking__input {
     font-family: var(--font-primary);
     font-size: var(--text-field);
     font-weight: var(--fw-extralight);
     color: var(--color-text);
-    background: var(--color-bg);
+    background: transparent;
     border: none;
     border-bottom: var(--field-border);
     padding: var(--field-padding-y) 0;
     width: 100%;
     border-radius: 0;
+    letter-spacing: 0.04em;
+    transition: border-color 0.3s ease;
   }
   .booking__input:focus {
     outline: none;
     border-bottom: var(--field-border-focus);
   }
+  /* Firefox keeps native date text washed out otherwise */
+  .booking__input::placeholder {
+    color: var(--color-text);
+    opacity: 0.35;
+  }
+
+  .booking__select-wrap {
+    position: relative;
+  }
   .booking__select {
     appearance: none;
     cursor: pointer;
+    padding-right: 24px;
   }
   .booking__select option {
     background: var(--color-bg);
     color: var(--color-text);
   }
+  .booking__select-caret {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--text-label);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
   .booking__textarea {
     resize: vertical;
-    border: var(--field-border);
-    padding: var(--field-padding-y);
+    min-height: 72px;
   }
-  .booking__textarea:focus {
-    border: var(--field-border-focus);
-  }
+
   .booking__submit {
     font-family: var(--font-primary);
     font-size: var(--text-label);
@@ -112,28 +221,77 @@ const failed = result && result.error;
     letter-spacing: var(--ls-label);
     color: var(--color-text);
     background: transparent;
-    border: var(--field-border);
-    padding: var(--field-padding-y) var(--gap-section);
+    border: 1px solid var(--color-text);
+    padding: calc(var(--field-padding-y) + 4px) 0;
+    width: 100%;
     cursor: pointer;
-    align-self: flex-start;
-    transition: opacity 0.2s;
+    margin-top: var(--form-label-gap);
+    transition: background-color 0.35s ease, color 0.35s ease;
   }
-  .booking__submit:hover {
-    opacity: 0.6;
+  .booking__submit:hover,
+  .booking__submit:focus-visible {
+    background: var(--color-text);
+    color: var(--color-bg);
+    outline: none;
   }
-  .booking__success {
-    font-family: var(--font-primary);
-    font-size: var(--text-footer-tagline);
-    font-weight: var(--fw-extralight);
-    color: var(--color-text);
-  }
+
   .booking__error {
     font-family: var(--font-primary);
     font-size: var(--text-field);
     font-weight: var(--fw-extralight);
     color: var(--color-text);
-    opacity: 0.7;
+    border-left: 1px solid var(--color-text);
+    padding-left: var(--form-label-gap);
+    opacity: 0.8;
+    margin: 0;
   }
+
+  /* ——— Success state ——— */
+  .booking--success {
+    gap: var(--form-field-gap);
+    padding: var(--gap-section) 0;
+  }
+  .booking__success-title {
+    font-family: var(--font-primary);
+    font-size: var(--text-booking-title);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-video);
+    line-height: 1;
+    margin: 0;
+  }
+  .booking__success-rule {
+    border: none;
+    border-top: 1px solid var(--color-rule);
+    width: var(--collection-rule-width);
+    margin: 0;
+  }
+  .booking__success-body {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-body);
+    font-weight: var(--fw-extralight);
+    line-height: 1.8;
+    max-width: 42ch;
+    opacity: 0.85;
+    margin: 0;
+  }
+  .booking__success-link {
+    font-family: var(--font-primary);
+    font-size: var(--text-label);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-label);
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-text);
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: opacity 0.25s ease;
+  }
+  .booking__success-link:hover {
+    opacity: 0.6;
+  }
+
   /* Normalize the native date picker indicator on dark bg */
   .booking__input::-webkit-calendar-picker-indicator {
     filter: invert(1);

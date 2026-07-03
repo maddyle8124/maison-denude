@@ -1,21 +1,52 @@
 ---
+// Static by design (declared intent, invariant 4; D-ARCH-02): the whole site is
+// prerendered so images optimize at build time. The booking form submits from the
+// client via astro:actions to the server-rendered /_actions/* endpoint — never as
+// a raw page POST (a POST to a prerendered page would 405 at the assets layer).
 export const prerender = true;
 
 import Base from '../layouts/Base.astro';
 import Nav from '../components/ui/Nav.astro';
+import SmartImage from '../components/ui/SmartImage.astro';
 import BookingForm from '../components/ui/BookingForm.astro';
+import { bookingPage } from '../content/booking';
+import { pages } from '../content/seo';
 ---
 
-<Base title="Booking — Maison Dénudé" description="Request a private consultation with Maison Dénudé.">
+<Base title={pages.booking.title} description={pages.booking.description}>
   <Nav />
   <main class="booking-page">
-    <header class="booking-page__intro">
-      <h1 class="booking-page__title">Booking</h1>
-      <p class="booking-page__lede">
-        Request a private consultation. Share your details and we'll be in touch.
-      </p>
-    </header>
-    <BookingForm />
+    <!-- Left pane — full-height editorial cover -->
+    <aside class="booking-page__cover" aria-hidden="true">
+      <SmartImage
+        src={bookingPage.cover}
+        alt={bookingPage.coverAlt}
+        loading="eager"
+        fit="cover"
+        widths={[600, 900, 1400]}
+        sizes="(max-width: 1023px) 100vw, 44vw"
+      />
+    </aside>
+
+    <!-- Right pane — the invitation -->
+    <section class="booking-page__panel">
+      <header class="booking-page__intro">
+        <p class="booking-page__eyebrow">{bookingPage.eyebrow}</p>
+        <h1 class="booking-page__title">{bookingPage.title}</h1>
+        <p class="booking-page__lede">{bookingPage.lede}</p>
+      </header>
+
+      <hr class="booking-page__rule" />
+
+      <BookingForm />
+
+      <footer class="booking-page__meta">
+        <p class="booking-page__address">
+          {bookingPage.addressLines.map((line) => <span>{line}</span>)}
+        </p>
+        <p class="booking-page__note">{bookingPage.responseNote}</p>
+      </footer>
+    </section>
   </main>
 </Base>
 
@@ -26,28 +57,156 @@ import BookingForm from '../components/ui/BookingForm.astro';
     color: var(--color-text);
     display: flex;
     flex-direction: column;
+  }
+
+  /* ——— Cover pane ——— */
+  .booking-page__cover {
+    position: relative;
+    height: var(--booking-cover-mobile-h);
+    overflow: hidden;
+  }
+  .booking-page__cover :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ——— Panel ——— */
+  .booking-page__panel {
+    display: flex;
+    flex-direction: column;
     gap: var(--gap-section);
     padding: var(--gap-section) var(--label-left);
-    max-width: var(--form-max-width);
+    max-width: calc(var(--booking-form-max) + 2 * var(--label-left));
+    width: 100%;
   }
+
   .booking-page__intro {
     display: flex;
     flex-direction: column;
-    gap: var(--form-label-gap);
+    gap: 20px;
   }
-  .booking-page__title {
+
+  .booking-page__eyebrow {
     font-family: var(--font-primary);
-    font-size: var(--text-collection-name);
+    font-size: var(--text-collection-sub);
     font-weight: var(--fw-extralight);
     text-transform: uppercase;
-    letter-spacing: var(--ls-label);
+    letter-spacing: var(--ls-collection-sub);
+    opacity: 0.65;
     margin: 0;
   }
+
+  .booking-page__title {
+    font-family: var(--font-primary);
+    font-size: var(--text-booking-title);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-video);
+    line-height: 1.05;
+    margin: 0;
+  }
+
   .booking-page__lede {
     font-family: var(--font-primary);
     font-size: var(--text-footer-body);
     font-weight: var(--fw-extralight);
-    color: var(--color-text);
+    line-height: 1.8;
+    max-width: 46ch;
+    opacity: 0.85;
     margin: 0;
+  }
+
+  .booking-page__rule {
+    border: none;
+    border-top: 1px solid var(--color-rule);
+    width: var(--collection-rule-width);
+    margin: 0;
+  }
+
+  /* ——— Meta footer ——— */
+  .booking-page__meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-label-gap);
+  }
+  .booking-page__address {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-bar);
+    font-weight: var(--fw-extralight);
+    letter-spacing: var(--ls-nav);
+    text-transform: uppercase;
+    line-height: 2;
+    opacity: 0.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .booking-page__note {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-bar);
+    font-weight: var(--fw-extralight);
+    letter-spacing: var(--ls-nav);
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin: 0;
+  }
+
+  /* ——— Entrance motion: one staggered reveal, CSS only ——— */
+  .booking-page__intro,
+  .booking-page__rule,
+  .booking-page__panel :global(.booking),
+  .booking-page__meta {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: booking-rise 0.7s ease forwards;
+  }
+  .booking-page__rule { animation-delay: 0.12s; }
+  .booking-page__panel :global(.booking) { animation-delay: 0.2s; }
+  .booking-page__meta { animation-delay: 0.32s; }
+
+  @keyframes booking-rise {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .booking-page__intro,
+    .booking-page__rule,
+    .booking-page__panel :global(.booking),
+    .booking-page__meta {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* ——— Desktop: two-pane split ——— */
+  @media (min-width: 1024px) {
+    .booking-page {
+      flex-direction: row;
+    }
+    .booking-page__cover {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      width: var(--booking-pane-width);
+      flex-shrink: 0;
+    }
+    .booking-page__panel {
+      flex: 1;
+      /* Clear the right nav rail; center the column in the remaining space. */
+      padding: calc(var(--gap-section) * 1.25) calc(var(--nav-right) * 3)
+        var(--gap-section) calc(var(--label-left) * 2.5);
+      max-width: none;
+    }
+    .booking-page__intro,
+    .booking-page__rule,
+    .booking-page__panel :global(.booking),
+    .booking-page__meta {
+      max-width: var(--booking-form-max);
+    }
   }
 </style>

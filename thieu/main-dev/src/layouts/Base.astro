@@ -1,13 +1,15 @@
 ---
 import '../styles/global.css';
+import Seo from '../components/seo/Seo.astro';
+import { pages } from '../content/seo';
 
 interface Props {
   title?: string;
   description?: string;
 }
 const {
-  title = 'Maison Dénudé',
-  description = 'Vietnamese fashion house — couture áo dài and bridal.',
+  title = pages.home.title,
+  description = pages.home.description,
 } = Astro.props;
 
 const gtmId = import.meta.env.PUBLIC_GTM_ID;
@@ -23,9 +25,11 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
-    <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <Seo title={title} description={description} />
+    <!-- Favicon set generated from the client-supplied mark (D-BRAND-02) -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/favicon-96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <link
       rel="preload"

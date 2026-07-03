@@ -44,6 +44,19 @@
   --text-field: 13px;
   --text-label: 11px;
   --ls-label: 0.15em;
+
+  /* Collections page (added D-SCOPE-03 — /collections) */
+  --label-line-gap: 4px;
+  --collection-hero-max: 720px;
+  --collection-manifesto-max: 640px;
+  --collection-rule-width: 48px;
+
+  /* Booking page redesign (added D-BOOK-03) */
+  --booking-pane-width: 44vw;
+  --booking-form-max: 560px;
+  --booking-field-gap: 44px;
+  --text-booking-title: clamp(34px, 4.5vw, 64px);
+  --booking-cover-mobile-h: 46vh;
 }
 
 @media (max-width: 767px) {

@@ -1,0 +1,22 @@
+---
+/* Small uppercase tracked section label, house collection-label style. */
+interface Props {
+  label: string;
+}
+const { label } = Astro.props;
+---
+
+<h2 class="section-label">{label}</h2>
+
+<style>
+  .section-label {
+    font-family: var(--font-primary);
+    font-size: var(--text-collection-name);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0 0 var(--label-bottom);
+  }
+</style>

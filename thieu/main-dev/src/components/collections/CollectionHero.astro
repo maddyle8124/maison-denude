@@ -1,0 +1,37 @@
+---
+import SmartImage from '../ui/SmartImage.astro';
+import type { CollectionImage } from '../../content/collections';
+
+/*
+ * Large centered editorial placement — NOT full-bleed. The curated cards carry
+ * their own white frame, so they float on black with generous margin.
+ */
+interface Props {
+  image: CollectionImage;
+}
+const { image } = Astro.props;
+---
+
+<section class="col-hero">
+  <div class="col-hero__frame">
+    <SmartImage
+      src={image.imageKey}
+      alt={image.alt}
+      fit="contain"
+      loading="eager"
+      widths={[800, 1200, 1440]}
+      sizes="(max-width: 768px) 100vw, 720px"
+    />
+  </div>
+</section>
+
+<style>
+  .col-hero {
+    background: var(--color-bg);
+    padding: var(--gap-section) var(--label-left) 0;
+  }
+  .col-hero__frame {
+    max-width: var(--collection-hero-max);
+    margin: 0 auto;
+  }
+</style>

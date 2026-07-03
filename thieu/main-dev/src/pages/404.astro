@@ -1,0 +1,60 @@
+---
+export const prerender = true;
+
+import Base from '../layouts/Base.astro';
+import Nav from '../components/ui/Nav.astro';
+import { pages } from '../content/seo';
+---
+
+<Base title={pages.notFound.title} description={pages.notFound.description}>
+  <Nav />
+  <main class="not-found">
+    <p class="not-found__code">404</p>
+    <h1 class="not-found__title">Page Not Found</h1>
+    <a class="not-found__link" href="/">Return to Maison Dénudé</a>
+  </main>
+</Base>
+
+<style>
+  .not-found {
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--form-field-gap);
+    text-align: center;
+    padding: var(--gap-section) var(--label-left);
+  }
+  .not-found__code {
+    font-family: var(--font-primary);
+    font-size: var(--text-video-label);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-video);
+    margin: 0;
+  }
+  .not-found__title {
+    font-family: var(--font-primary);
+    font-size: var(--text-collection-name);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-collection-sub);
+    margin: 0;
+  }
+  .not-found__link {
+    font-family: var(--font-primary);
+    font-size: var(--text-nav);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: var(--field-border);
+    padding-bottom: var(--form-label-gap);
+  }
+  .not-found__link:hover {
+    border-bottom: var(--field-border-focus);
+  }
+</style>

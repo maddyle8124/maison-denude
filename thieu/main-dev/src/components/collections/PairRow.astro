@@ -1,0 +1,45 @@
+---
+import SmartImage from '../ui/SmartImage.astro';
+import SectionLabel from './SectionLabel.astro';
+import type { CollectionImage } from '../../content/collections';
+
+/* Labelled 2-up grid (desktop), stacked on mobile. Cards keep their own frames — no crop. */
+interface Props {
+  label: string;
+  items: CollectionImage[];
+}
+const { label, items } = Astro.props;
+---
+
+<section class="pair-row">
+  <SectionLabel label={label} />
+  <div class="pair-row__grid">
+    {items.map((item) => (
+      <SmartImage
+        src={item.imageKey}
+        alt={item.alt}
+        fit="contain"
+        widths={[400, 800, 1200]}
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+  .pair-row {
+    background: var(--color-bg);
+    padding: var(--gap-section) var(--label-left) 0;
+  }
+  .pair-row__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-image);
+    align-items: start;
+  }
+  @media (max-width: 767px) {
+    .pair-row__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import SmartImage from '../ui/SmartImage.astro';
+import type { CollectionImage } from '../../content/collections';
+
+/* Short manifesto excerpt (2-3 lines) with an optional editorial image pairing. */
+interface Props {
+  lines: string[];
+  images?: CollectionImage[];
+}
+const { lines, images = [] } = Astro.props;
+---
+
+<section class="manifesto">
+  <div class="manifesto__lines">
+    {lines.map((line) => <p class="manifesto__line">{line}</p>)}
+  </div>
+  {images.length > 0 && (
+    <div class="manifesto__pair">
+      {images.map((image) => (
+        <SmartImage
+          src={image.imageKey}
+          alt={image.alt}
+          fit="contain"
+          widths={[400, 800, 1200]}
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      ))}
+    </div>
+  )}
+</section>
+
+<style>
+  .manifesto {
+    background: var(--color-bg);
+    padding: var(--gap-section) var(--label-left) 0;
+  }
+  .manifesto__lines {
+    max-width: var(--collection-manifesto-max);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-label-gap);
+    text-align: center;
+  }
+  .manifesto__line {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-tagline);
+    font-weight: var(--fw-extralight);
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .manifesto__pair {
+    max-width: var(--collection-hero-max);
+    margin: var(--gap-section) auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-image);
+    align-items: start;
+  }
+  @media (max-width: 767px) {
+    .manifesto__pair {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

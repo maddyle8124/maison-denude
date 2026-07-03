@@ -4,10 +4,12 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { label: 'INTRODUCTION', href: '#introduction' },
-  { label: 'COLLECTION',   href: '#collection' },
-  { label: 'SOCIAL CLUB',  href: '#featuring' },
-  { label: 'FEATURING',    href: '#featuring' },
-  { label: 'BLOG',         href: '/blog' },
+  // Absolute page routes only (D-NAV-02) — anchors break when the nav is rendered off-homepage.
+  { label: 'HOME',         href: '/' },
+  { label: 'ABOUT US',     href: '/about' },
+  { label: 'COLLECTION',   href: '/collections' },
+  // { label: 'SOCIAL CLUB',  href: '#featuring' }, // hidden per D-NAV-01 — restore when content exists
+  // { label: 'FEATURING',    href: '#featuring' }, // hidden per D-NAV-01 — restore when content exists
+  // { label: 'BLOG',         href: '/blog' },      // hidden per D-NAV-01 — restore when content exists
   { label: 'BOOKING',      href: '/booking' },
 ];

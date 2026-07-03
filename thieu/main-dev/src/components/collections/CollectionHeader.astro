@@ -1,0 +1,52 @@
+---
+/* Minimal page header: collection title + season sub-line + one-line show credit. */
+interface Props {
+  title: string;
+  season: string;
+  showCredit: string;
+}
+const { title, season, showCredit } = Astro.props;
+---
+
+<header class="col-header">
+  <h1 class="col-header__title">{title}</h1>
+  <p class="col-header__season">{season}</p>
+  <p class="col-header__credit">{showCredit}</p>
+</header>
+
+<style>
+  .col-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--label-line-gap);
+    background: var(--color-bg);
+    padding: var(--gap-section) var(--label-left) 0;
+    text-align: center;
+  }
+  .col-header__title {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-tagline);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    color: var(--color-text);
+    margin: 0;
+  }
+  .col-header__season {
+    font-size: var(--text-collection-name);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-collection-sub);
+    color: var(--color-text);
+    margin: 0;
+  }
+  .col-header__credit {
+    font-size: var(--text-collection-sub);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    color: var(--color-text);
+    margin: 0;
+  }
+</style>

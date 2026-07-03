@@ -1,0 +1,175 @@
+---
+export const prerender = true;
+
+import Base from '../layouts/Base.astro';
+import Nav from '../components/ui/Nav.astro';
+import Footer from '../components/sections/Footer.astro';
+import SmartImage from '../components/ui/SmartImage.astro';
+import ClosingCta from '../components/collections/ClosingCta.astro';
+import { aboutPage } from '../content/about';
+import { landingSections } from '../content/landing';
+import { pages } from '../content/seo';
+import type { FooterSection } from '../content/types';
+
+// The site footer is defined once in the landing content — reuse it (DRY).
+const footer = landingSections.find((s): s is FooterSection => s.type === 'footer');
+---
+
+<Base title={pages.about.title} description={pages.about.description}>
+  <Nav />
+  <main class="about-page">
+    <div class="about-page__body">
+      <header class="about-page__intro">
+        <p class="about-page__eyebrow">{aboutPage.eyebrow}</p>
+        <h1 class="about-page__title">{aboutPage.title}</h1>
+      </header>
+
+      <hr class="about-page__rule" />
+
+      <div class="about-page__paragraphs">
+        {aboutPage.paragraphs.map((text) => <p class="about-page__paragraph">{text}</p>)}
+      </div>
+
+      <div class="about-page__address">
+        <p class="about-page__address-label">{aboutPage.addressLabel}</p>
+        <p class="about-page__address-lines">
+          {aboutPage.addressLines.map((line) => <span>{line}</span>)}
+        </p>
+      </div>
+    </div>
+
+    <figure class="about-page__figure">
+      <SmartImage
+        src={aboutPage.image}
+        alt={aboutPage.imageAlt}
+        loading="eager"
+        fit="contain"
+        widths={[600, 900, 1200]}
+        sizes="(max-width: 1023px) 100vw, 40vw"
+      />
+    </figure>
+  </main>
+  <ClosingCta label={aboutPage.cta.label} href={aboutPage.cta.href} />
+  {footer && <Footer {...footer} />}
+</Base>
+
+<style>
+  .about-page {
+    background: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-section);
+    padding: var(--gap-section) var(--label-left);
+  }
+
+  .about-page__body {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap-section) / 2);
+    max-width: var(--collection-manifesto-max);
+  }
+
+  .about-page__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-page__eyebrow {
+    font-family: var(--font-primary);
+    font-size: var(--text-collection-sub);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-collection-sub);
+    opacity: 0.65;
+    margin: 0;
+  }
+
+  .about-page__title {
+    font-family: var(--font-primary);
+    font-size: var(--text-booking-title);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-video);
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .about-page__rule {
+    border: none;
+    border-top: 1px solid var(--color-rule);
+    width: var(--collection-rule-width);
+    margin: 0;
+  }
+
+  .about-page__paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--form-field-gap) / 1.5);
+  }
+
+  .about-page__paragraph {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-body);
+    font-weight: var(--fw-extralight);
+    line-height: 1.9;
+    max-width: 52ch;
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  .about-page__address {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-label-gap);
+  }
+
+  .about-page__address-label {
+    font-family: var(--font-primary);
+    font-size: var(--text-label);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-label);
+    margin: 0;
+  }
+
+  .about-page__address-lines {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-bar);
+    font-weight: var(--fw-extralight);
+    letter-spacing: var(--ls-nav);
+    text-transform: uppercase;
+    line-height: 2;
+    opacity: 0.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-page__figure {
+    margin: 0;
+    max-width: var(--collection-hero-max);
+    width: 100%;
+  }
+
+  /* Desktop: text and portrait side by side */
+  @media (min-width: 1024px) {
+    .about-page {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: calc(var(--gap-section) * 1.25);
+      /* Right padding must clear the fixed nav rail (nav text + --nav-right offset). */
+      padding: calc(var(--gap-section) * 1.25) calc(var(--nav-right) * 6)
+        var(--gap-section) calc(var(--label-left) * 2.5);
+    }
+    .about-page__body {
+      flex: 1;
+    }
+    .about-page__figure {
+      width: 40vw;
+      max-width: var(--collection-hero-max);
+      flex-shrink: 0;
+    }
+  }
+</style>
