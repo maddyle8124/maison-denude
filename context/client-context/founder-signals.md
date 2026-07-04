@@ -1,6 +1,6 @@
 # Maison Dénudé — Founder Signals (reading the founders' intent)
 
-_Last updated: 2026-06-27. Source: WhatsApp project chat (5/16–6/12) + Week-1 call transcript (27/6), synthesized._
+_Last updated: 2026-07-04. Source: WhatsApp project chat (5/16–6/12) + Week-1 call transcript (27/6, full 2h read), synthesized._
 _Companion to [`stakeholders.md`](stakeholders.md), [`positioning.md`](positioning.md), [`brand.md`](brand.md). Where those define facts, this captures the **signals and boundaries** the founders revealed in conversation — the "why" behind their reactions._
 
 ## 1. Brand positioning — the lines the founders drew
@@ -23,7 +23,7 @@ _Companion to [`stakeholders.md`](stakeholders.md), [`positioning.md`](positioni
 - **Language must be refined, international, premium — never cheap.** The "high end" episode shows the founders are hypersensitive to wording; one wrong word reads as cheap. Avoid clichéd marketing-speak; favor premium / upscale / editorial register.
 - **Editorial / heritage tone.** The presence they're proud of is LinkedIn + ELLE Vietnam + heritage-fashion features — story, not sales catalog. The brand wants to be *read like a cultural narrative.*
 - **Edgy, independent.** Anti-bride, independent designer — not safe, not mass.
-- **Founder = the designer.** Chi wants "+ designer" searches to evoke *a specific person* (her). Personal brand is fused with the house brand → content should build the designer character.
+- **House brand, NOT personal branding — corrected 27/6.** Earlier WhatsApp signals read as "fuse the designer's persona with the brand," but on the Week-1 call Chi drew the line explicitly (≈1:15): *"chị phải làm personal branding này nọ kia thì chị không thích như vậy… Brand á, nó là một team em."* Maison follows the **House model** (Dior, Valentino — "Maison of"), not the Vietnamese designer-name model (Công Trí, Lê Thanh Hòa, Huy Võ). The designer's craft may appear in content, but no strategy should hang on Chi's personal name or require her to perform as the face.
 
 ## 3. Working with the founders
 
@@ -65,6 +65,38 @@ Full breakdown in [`jtbd.md`](jtbd.md). The signals behind it:
 
 The Week-1 deck repeatedly **misspelled/mis-cased "Maison Dénudé"** (wrong accents, all-caps, "De Nuit"-style slips) and Chi called it out. **Render the name exactly right in every deliverable** — confirm the canonical accented form with the founders and never all-caps or re-accent it.
 
+## 7. Consultation psychology — what Maison is really asking (Week-1 call, full read)
+
+Week 1 was, in effect, a **trust audit**: with no results yet to judge, the founders audit the *method* ("em đã dùng những cái gì để em cào?", "tiêu chí gì?", "tại sao em chọn Reddit dợ?"). Six questions run under everything they said:
+
+1. **"Are you researching MY market, or A market?"** — The sharpest pushback of the call (0:26–0:58): *"Không có khách nào mà consider Maison với Xéo Sọ hết em"*; the deck was *"tùm lum tè le hết trơn"*. Mis-tiering the brand is not read as an analysis error — it's read as **not understanding who they are**.
+2. **"What's protectable when we go online?"** (3:34–16:30) — *"Chị muốn đọc được của website người khác nhưng người khác không đọc được website của chị."* The real question is **moat anxiety**: the business grew through closed relationships, and a website feels like exposure. The answer that landed: valuable data (conversion, wishlist, what actually sells) stays internal; the public surface is guessable by anyone anyway.
+3. **"What do the numbers mean I should DO?"** — *"Chị cần solution… cái gì là action của team"; "số liệu nhiều quá chị bị rối."* They're buying **judgment, not dashboards**. Corollary: the sentinel role — *"em thấy có cái biến gì em phải la lên liền… la lên càng sớm càng tốt"* — because their internal production (content, photos) is slow, **reaction time is their scarcest asset**.
+4. **"Nó có possible hay không?"** (≈1:08) — Before any scope expands, show the causal chain **keyword → data → action → customer**. New methods are welcome only behind a feasibility proof.
+5. **"Do you speak luxury?"** — House not personal brand; *"custom như một dạng investment chứ không phải tiêu dùng nhanh"* (≈1:48); keywords must **repel** bargain shoppers; the brand name spelled exactly right. Small details are read as tier-comprehension tests.
+6. **"How do we work together?"** — Weekly few-bullet signal message (not reports; monthly report is fine); close tracking in the first 2–3 months, around each collection launch, and 1–2 months pre-Tết; relaxed in low season. And they **co-produce**: Chi writes ICP criteria herself, sends the bridal/occasion brand list, proposes wealth proxies. This client wants to co-pilot, not outsource.
+
+**The psychology underneath:**
+- **Loss aversion beats growth appetite.** Fear of being copied / wasted effort got more airtime than any growth topic. Frame recommendations as *protection first, upside second*.
+- **Trust in process precedes trust in results.** Every research deliverable should carry a visible method box (tools, selection criteria, sample size, data recency, demographic checks) — answer the audit before it's asked.
+- **Identity protection is the hard boundary.** Tier errors (wrong competitors, wrong register, wrong name) get corrected instantly and publicly; technical detours are forgiven warmly — *"cái của chị nó hơi đặc thù… vòng vòng cũng là chuyện bình thường"* (1:59). They still teach and reassure → the relationship is healthy; what's on probation is the method.
+
+## 8. Market research — the questions the research must answer (agreed 27/6)
+
+**Sequence is a founder requirement — sequential, not parallel** (Michelle, 1:33–1:37): ① VN customer profile with tight criteria → ② benchmark domestic designer-tier brands → ③ only then international markets/brands.
+
+**RQ1 — Who exactly is the Maison customer?** Current *and* expected customers (chân dung khách hàng, bullet-point form). Founders supply ICP criteria; team validates. Wealth proxies to test (founder-proposed): premier-tier banking (HSBC Premier), luxury real estate buyers, international-school parents, luxury-hotel **suite-level** bookings via OTA (booking.com/Agoda). Each proxy needs a feasibility check before committing — note Michelle's caveat that older wealthy VN customers live on Facebook/Zalo, not websites.
+
+**RQ2 — Who is the real competitive set, per tier?** Direct competitor = same **price tier + bespoke model + customer pool** (Huy Võ is the benchmark; Công Trí as an already-international reference). Exclude the mass tier entirely (Xéo Sọ, Lava, Mira…). Separate founder-supplied list coming for **bridal / áo dài cưới / occasion wear**.
+
+**RQ3 — Which keywords attract investment-minded buyers and repel bargain shoppers?** Anchor on *custom dress / custom bridal dress* framed as investment; founder-coined territory: **"Asian Bridal Core"**. Avoid the generic "shopping (Vietnam)" cluster — it pulls the fast-fashion crowd Maison actively distances from.
+
+**RQ4 — Where do these customers actually talk and search?** Multi-source validation, never Reddit-only. Chi's three standing objections to any single-source read (1:40–1:42): sample too small to generalize, stale threads irrelevant in fashion, no age/demographic check. Founder-suggested channels to test: Taobao, RedNote/Xiaohongshu (Chinese-speaking travelers); Instagram acknowledged as valuable but hard to scrape.
+
+**RQ5 — Can each data type be turned into action?** Every dataset must map to a concrete use in SEO or ads — Michelle: research exists so that *"mình biết người dùng của mình là ai và mình tìm được nhiều hơn cái người dùng của mình."* Plus an operational-feasibility filter: *"cái nào không khả thi về mặt vận hành… chọn phương án nhẹ nhàng hơn"* (1:43).
+
+**Agreed outputs (in order):** ① customer profile → ② reference brand list by category → ③ website timeline linked to collection launches → ④ foreign brand list (only after ①–③). Near-term commitments: Maddy sends the data-sourcing proposal (feasibility-validated, listing scrapable data types + their use) mid-week; founders send ICP criteria + bridal/occasion brand list; Thiệu claims existing brand mentions into the site.
+
 ## Quick do / don't
 
 | Do | Don't |
@@ -74,3 +106,7 @@ The Week-1 deck repeatedly **misspelled/mis-cased "Maison Dénudé"** (wrong acc
 | Frame as heritage / editorial story | Frame as Vietnam shopping haul / cheap deal |
 | Explain the *why* to Chi; annotate references clearly | Hand Chi unlabeled data and let her infer |
 | Keep scope lean, low-cost, automated | Over-scope against a low budget |
+| Open every research deliverable with a method box (tools, criteria, sample, recency) | Make Chi ask *"em dùng tool gì?"* |
+| Sequence research VN → domestic benchmark → international | Run scattered parallel sweeps across markets |
+| Raise anomalies the moment you see them ("la lên") | Sit on a signal until the weekly message |
+| Build on the House model (brand = team) | Propose anything requiring Chi's personal branding |
