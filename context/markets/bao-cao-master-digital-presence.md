@@ -43,6 +43,24 @@ _Bản trình bày (deck): [`dao-sau-congtri-phanhuy.html`](./dao-sau-congtri-ph
 **Làm rõ (trả lời câu hỏi):** (a) **Traffic/visits = toàn cầu tất-cả-nước**, không phải 1 nước. (b) **Keyword volume trước đây là US-only; nay đã đo đa quốc gia.** (c) Không trộn "website visits" với "keyword search volume" — hai metric khác nhau.
 **Giới hạn lớn (không suy diễn như chắc chắn):** Công Trí/Thuỷ/Phương My — mọi metric traffic bị gated. **Huy Võ dưới ngưỡng SimilarWeb** → không đo được traffic/keyword (chỉ đọc web được). Geo NTK Việt đều thiếu → **không so được geo VN-designer vs VN-mass**. Split social chỉ có ở Sau Lee. Demographics chỉ có Sau Lee.
 
+### 2.1 Phương pháp — mỗi phát hiện đến từ tool nào + độ phủ (minh bạch)
+
+Mỗi con số trong báo cáo này truy được về đúng 1 endpoint. Cột "Độ phủ" cho biết brand nào **có data** vs **gated (dưới ngưỡng → trả 404, KHÔNG bịa)**.
+
+| Phát hiện | Tool / endpoint | Tool trả về gì | Độ phủ (ai có data / ai gated) |
+|---|---|---|---|
+| Lưu lượng website | `get-websites-traffic-and-engagement` | Tổng lượt truy cập toàn cầu/tháng | Hầu hết brand ✅; maisondenude (site mới) + huy-vo (nhỏ) = no data |
+| % theo quốc gia | `get-websites-geography-agg` | Share + visits theo nước | Brand foreign lớn ✅; **NTK Việt phần lớn gated** |
+| Kênh (organic/direct/social/paid %) | `get-websites-traffic-channels` (**cửa sổ 12 tháng**) | Visits theo kênh | Phan Huy, Xéo Xọ + foreign lớn ✅; **Công Trí 404** |
+| Từ khoá + % branded/non-branded | `get-website-analysis-keywords-agg` | Từ khoá organic + clicks/share | Brand có organic search ✅ |
+| Volume + độ khó + intent từ khoá | `get-keywords-overview` | Volume/difficulty/competition/intent **theo nước** | Đo theo TỪ KHOÁ (không theo brand); CN không hỗ trợ, SG/KR/HK trả 0 |
+| **% traffic từng subpage** | `get-pages-popular-pages-agg` | Share traffic theo URL/folder | Brand trên ngưỡng ✅ (Công Trí CÓ subpage %); Thuỷ/Phương My gated |
+| **Audience-interests (adjacency — "khách còn ghé web nào")** | `get-websites-audience-interests-agg` | Các website tệp khách hay ghé (affinity) | **CHỈ brand quốc tế lớn** (Sau Lee, Sabyasachi, Elie Saab, Galia Lahav, Monique). **TẤT CẢ brand VN đã test 03/07 = 404** (Công Trí, Phan Huy, Huy Võ, Thuỷ, Phương My, Xéo Xọ, Hà Cúc) |
+| Tuổi/giới | `get-websites-demographics` | Age/gender | **Chỉ Sau Lee** |
+| Cấu trúc web / offering / giá / social link | **WebFetch (đọc web trực tiếp)** | Sitemap, hero, giá, RTW-vs-bespoke, link social | **Tất cả brand** (không phụ thuộc ngưỡng SimilarWeb) |
+
+**Hệ quả minh bạch quan trọng:** phần **adjacency / "khách còn quan tâm gì"** (mục 18.5) **KHÔNG đo được cho bất kỳ brand Việt nào** — nó được rút từ **brand quốc tế lớn** (Sau Lee, Sabyasachi…) rồi *suy luận* cho Maison. Vì vậy kết luận adjacency là **tham chiếu quốc tế + giả thuyết cho Maison**, không phải đo trực tiếp trên tệp khách NTK Việt.
+
 ---
 
 ## 3 · Deep-dive: Công Trí
@@ -417,6 +435,7 @@ US #1/top-2 gần như mọi brand; CA/UK/AU lặp lại top-6; **India có mặ
 
 ### 18.5 Adjacency trace — TRẢ LỜI "trace sang hàng high-end (đồng hồ/BĐS/khách sạn)?"
 **Kết luận: KHÔNG có tín hiệu** trace couture-buyer sang đồng hồ / trang sức-house / bất động sản / khách sạn 5 sao / du lịch xa xỉ — **0 site các ngành đó** xuất hiện trong audience-interests của mọi brand. 🔴
+> **Minh bạch (đã test 03/07):** endpoint audience-interests **áp cho 7 brand Việt** (Công Trí, Phan Huy, Huy Võ, Thuỷ, Phương My, Xéo Xọ, Hà Cúc) → **tất cả trả 404 (gated)**. Nghĩa là adjacency dưới đây rút từ **brand quốc tế lớn** (Sau Lee/Sabyasachi/Elie Saab/Galia/Monique), KHÔNG đo được trên tệp khách NTK Việt → là tham chiếu + suy luận, không phải đo trực tiếp cho Maison.
 - **Cái CÓ thấy (adjacency dùng được):** Instagram (Sabyasachi affinity 76 — mạnh nhất) · Pinterest (Galia 69) · YouTube/TikTok = **lớp discovery**; **department store** Saks/Nordstrom; **resale** TheRealReal/Poshmark; **contemporary e-com** Revolve/Reformation/BHLDN; **đối thủ couture** (so sánh). Và **AI tools (ChatGPT/Claude/Gemini) dùng nhiều** → tối ưu AI-search là kênh mới nổi.
 - **Ý nghĩa:** targeting audience "khách couture cũng lướt đồng hồ/khách sạn" **không có cơ sở dữ liệu**. Adjacency **có cơ sở** để nhắm = **IG/Pinterest + khách Saks/Nordstrom + resale TheRealReal + Revolve/Reformation** (qua lookalike/interest). (Vắng data ≠ chứng minh không có hành vi — site hard-luxury có thể quá thưa để nổi lên.)
 - **Đưa Maison VÀO hành trình:** là bước tạo audience trong **Google Ads** (In-market/Custom/Lookalike) — cần **tài khoản Ads đầy đủ**; **google-ads-mcp read-only không làm được** (chỉ đọc account của chính mình, không có keyword planner/audience/data đối thủ).
@@ -433,3 +452,10 @@ US #1/top-2 gần như mọi brand; CA/UK/AU lặp lại top-6; **India có mặ
 | P7 | Cân nhắc **dòng accessory/entry-tier** để mở phễu (Sabyasachi accessories 3–6%, "cheaper line" searches) | Med | pattern; cần Maison quyết |
 
 **Giới hạn §18:** đây là nhà quốc tế 100K+/tháng, brand equity nhiều năm → scale không chuyển 1:1; % branded là ước lượng từ click-share; không có data VN (India là analog Á gần nhất); Reem Acra + Zuhair Murad audience-interests gated → adjacency dựa trên 4/6 brand; vắng hard-luxury là vắng-data không phải bằng chứng tuyệt đối.
+
+### 18.7 Cross-check trên analog nhỏ/VN (04/07, workflow wq5w039dv) + DECK 1-FILE
+_Bổ sung mảnh §18 còn thiếu — pattern đo trên **nhà Việt + brand &lt;$2000** (thay vì chỉ nhà quốc tế 100K+): kết luận **trùng khớp**, tăng độ tin. Raw: [`data_logs/highend-pattern-adjacency_2026-07.json`](./data_logs/highend-pattern-adjacency_2026-07.json)._
+- **Gradient branded theo giá (đo được):** Elie Saab ~90% · Phan Huy ~90–92% · Công Trí ~75% · Galia Lahav 61% → **Shanghai Tang 44% · Qipology 13%** (accessible-luxury). Xác nhận: **giá càng cao càng đi bằng tên**; category-SEO là sân của brand giá thấp. ✅
+- **Non-branded của nhà Việt:** "vietnamese dress designers" = **52,8%** non-branded của Phan Huy (khớp P3 — editorial/nhận diện là beachhead). ✅
+- **Adjacency:** workflow độc lập cũng ra **NO** (khớp §18.5); lớp phản biện đã loại số overlap bịa → §18.5 giữ nguyên là kết luận đúng.
+- **Deck trình bày 1-FILE (thay 2 deck cũ, chart-first):** [`deck-hien-dien-so-maison.html`](./deck-hien-dien-so-maison.html) — 9 slide chart, trả lời trực tiếp Câu-1 (pattern→playbook) + Câu-2 (adjacency = NO).
