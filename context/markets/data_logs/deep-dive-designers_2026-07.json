@@ -12,7 +12,9 @@
     "pinterest_correlates_designer": "PARTIAL — Pinterest nav-link skews to VN contact-price designers (Công Trí/Thuỷ/Phương My) vs 0/2 mass; BUT Phan Huy + Guo Pei (couture) have none; Sau Lee shows Pinterest=36% of social despite no captured link.",
     "vietnamese_dress_designers_intent": "INFORMATIONAL (research), NOT commercial 'find-a-designer'. Do not claim purchase intent.",
     "niche_aodai_longtail_demand": "ZERO everywhere (custom/bespoke/luxury/evening/beaded ao dai, hand embroidered silk gown, VN long-tail). Real demand = generic occasionwear.",
-    "congtri_phanhuy_offering": "BOTH offer real bespoke/made-to-order (NOT RTW-only) + a separate RTW line; both contact-for-price. Phan Huy leans haute-couture/bespoke language; Công Trí frames MTO as personalization."
+    "congtri_phanhuy_offering": "BOTH offer real bespoke/made-to-order (NOT RTW-only) + a separate RTW line. CORRECTION: Phan Huy's RTW/Shop line SHOWS public prices (~$2,277-2,648 per Shop screenshot) — earlier 'no price shown' was wrong; it's mixed like Qipology (RTW public, couture/bespoke by appointment). Công Trí = contact-for-price across the board.",
+    "huy_vo": "Below SimilarWeb traffic threshold → NO traffic/keyword measurable (only WebFetch). Offering = RTW áo dài by SIZE CHART (Madame/FirstLady/Gabriella) + womenswear/menswear/bags/shoes/eyewear + bridal; public prices 10.8-36.8M VND (~$430-1,470); EN+USD toggle; ships US/UK/JP/KR/SG; a 'Customize' button exists (function unclear). NOT bespoke. Note: Huy Võ DOES sell bags/shoes (accessory adjacency).",
+    "accessory_adjacency_test_us": "MEASURED: 'evening bag' US ~1,000-1,196/mo (transactional, difficulty 2-5, competition 100/max); 'bridal clutch' US ~795 peak Apr (transactional, competition 100). VERDICT: real seasonal demand BUT max competition + Maison sells no accessories → keyword-search ads not advisable; audience/awareness only. Whether ads 'surface Maison in the journey' = NOT measurable via SimilarWeb (ad-config question)."
   },
   "keyword_demand_us_au_ca_ww_vn": {
     "wedding guest dress": {"US": 83255, "AU": 6625, "CA": 6499, "WW": 147576, "VN": 0, "diff": 5, "intent": "transactional"},

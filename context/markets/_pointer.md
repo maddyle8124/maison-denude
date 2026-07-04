@@ -39,6 +39,7 @@ Each market scored on: **Value Fit · Market Share & White Space · Policy & Bar
 
 ## Where the research lives
 
+- **MASTER report hiện diện số (VN) → [`bao-cao-master-digital-presence.md`](./bao-cao-master-digital-presence.md)** ← báo cáo tổng hợp đầy đủ: exec summary, deep-dive Công Trí/Phan Huy, RTW-vs-bespoke, keyword gap đa quốc gia, mass-vs-designer, channel/Pinterest, web structure, ads + adjacency test, 7 recommendation (What/Why/Evidence/How/Owner/Priority/Confidence/Timeline), deck outline, QA checklist, 14 câu hỏi lõi, remaining gaps.
 - **Đào sâu Công Trí & Phan Huy (deep-dive, VN) → [`dao-sau-congtri-phanhuy.html`](./dao-sau-congtri-phanhuy.html)** ← insight deck (03/07): trust-subpages + subpage traffic-share % + RTW-vs-bespoke + mass-vs-designer geo + multi-country keyword/intent + Pinterest. Raw: `data_logs/deep-dive-designers_2026-07.json`.
 - **Playbook hiện diện số (action, VN) → [`playbook-hien-dien-so.html`](./playbook-hien-dien-so.html)** ← what-to-do deck: country priority · channel decision tree · recommended sitemap (w/ Matthew) · keyword list by intent · sequencing + owner/priority/confidence.
 - **Data-sourcing methodology proposal (client-facing, VN) → [`de-xuat-data-sourcing.md`](./de-xuat-data-sourcing.md)** ← the 27/6-committed proposal (OQ-013): sources × feasibility × output × decision, 3-POV, sequencing. For founder sign-off before deeper scraping.
