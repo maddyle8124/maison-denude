@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "purpose": "Công Trí + Phan Huy deep-dive + 10-brand competitor pass (SimilarWeb + WebFetch), adversarially verified",
+    "source": "SimilarWeb MCP + WebFetch, via 35-agent workflow wf_8c33669b-e2b",
+    "windows": "traffic/geo 2025-12..2026-05; channels 12-mo 2025-06..2026-05; keywords 2026-03..2026-05",
+    "run_date": "2026-07-03",
+    "honesty": "Every number below is measured. GATED = SimilarWeb returned no data (below threshold) — never fabricated."
+  },
+  "verified_verdicts": {
+    "mass_vs_designer_geo_asymmetry": "UNSUPPORTED — SG/HK presence tracks brand HOME MARKET (HK/TW houses), not designer-vs-mass. KR/JP absent from every brand's top-6 geo. US = universal top diaspora market. VN designer+mass geo both gated → no VN comparison possible.",
+    "designer_social_more_than_mass": "CONTRADICTED where data exists — Xéo Xọ (mass) 9.3% social > Phan Huy (designer) 6.5%.",
+    "pinterest_correlates_designer": "PARTIAL — Pinterest nav-link skews to VN contact-price designers (Công Trí/Thuỷ/Phương My) vs 0/2 mass; BUT Phan Huy + Guo Pei (couture) have none; Sau Lee shows Pinterest=36% of social despite no captured link.",
+    "vietnamese_dress_designers_intent": "INFORMATIONAL (research), NOT commercial 'find-a-designer'. Do not claim purchase intent.",
+    "niche_aodai_longtail_demand": "ZERO everywhere (custom/bespoke/luxury/evening/beaded ao dai, hand embroidered silk gown, VN long-tail). Real demand = generic occasionwear.",
+    "congtri_phanhuy_offering": "BOTH offer real bespoke/made-to-order (NOT RTW-only) + a separate RTW line; both contact-for-price. Phan Huy leans haute-couture/bespoke language; Công Trí frames MTO as personalization."
+  },
+  "keyword_demand_us_au_ca_ww_vn": {
+    "wedding guest dress": {"US": 83255, "AU": 6625, "CA": 6499, "WW": 147576, "VN": 0, "diff": 5, "intent": "transactional"},
+    "gala dress": {"US": 953, "AU": 857, "CA": 238, "WW": 5853, "intent": "transactional"},
+    "silk gown": {"US": 207, "AU": 610, "WW": 4398, "intent": "transactional"},
+    "vietnamese wedding dress": {"US": 1075, "CA": 396, "AU": 96, "WW": 1958, "intent": "informational"},
+    "modern ao dai": {"US": 868, "AU": 350, "WW": 1154, "JP": 65, "diff": 6, "intent": "transactional"},
+    "vietnamese designer dress": {"US": 527, "WW": 527, "diff": 13, "intent": "informational"},
+    "vietnamese dress designers": {"WW": 803, "diff": 14, "intent": "informational"},
+    "ao dai wedding dress": {"US": 268, "WW": 268, "intent": "informational"},
+    "hot fashion designers saigon": {"AU": 338, "WW": 338, "intent": "none"},
+    "ao dai cuoi (VN)": {"VN": 1863, "diff": 2, "intent": "transactional"},
+    "ZERO_everywhere": ["custom ao dai", "bespoke ao dai", "luxury ao dai", "evening ao dai", "beaded evening ao dai", "hand embroidered silk gown", "wedding ao dai designer", "vietnamese bridal designer", "vietnamese wedding outfit", "luxury evening dress", "bridal ao dai", "ao dai may do cao cap", "dam da hoi thiet ke", "ao dai theu tay", "suon xam cao cap"],
+    "notes": "CN endpoint unsupported; SG/KR/HK all tested EN terms = 0 (may be no-data not true-zero)."
+  },
+  "per_brand": {
+    "congtri.com": {"role": "VN-designer-target", "subpages_pct": {"/collection/spring-summer-2026": 17.14, "/vi/shop": 8.57, "collection_folder": 28.57}, "offering": "couture + RTW + made-to-order (personalization); contact-for-price", "pinterest": true, "socials": ["FB","IG","Pinterest","YT"], "celebs": "Michelle Obama, Beyonce, Rihanna, BLACKPINK, Zhang Ziyi", "gated": ["visits","geo","channels","demographics","social","referrals"]},
+    "phanhuy.net": {"role": "VN-designer-target", "channels_pct": {"OrganicSearch": 57.9, "Direct": 32.3, "OrganicSocial": 4.4, "Referrals": 3.3, "PaidSocial": 2.1, "PaidSearch": 0}, "subpages_pct": {"homepage": 41.58, "/product-category/all": 15.72, "/about-us": 4.66, "/fall-winter-2026-show": 4.04}, "offering": "haute couture + bespoke + RTW (Collections); appointment-only; Paris HC Week", "pinterest": false, "socials": ["IG","FB","TikTok"], "celebs": "Miss Universe, Zhao Lusi, Yang Mi, Ho Ngoc Ha, Jhene Aiko", "gated": ["geo","demographics","social","referrals"]},
+    "thuydesignhouse.com": {"role": "VN-designer", "offering": "ao dai/dress/art-piece; no explicit bespoke label", "pinterest": true, "gated": ["everything incl popular-pages, visits, price"]},
+    "phuongmy.com": {"role": "VN-designer", "offering": "RTW (Collection) + Bridal (Espoir); no explicit bespoke", "pinterest": true, "gated": ["everything incl popular-pages, visits"]},
+    "xeoxo.com": {"role": "VN-mass-ref", "channels_pct": {"OrganicSearch": 59.5, "Direct": 31.2, "PaidSocial": 5.8, "OrganicSocial": 3.5}, "subpages_pct": {"ao-dai_folder": 19.05, "nu": 10.48, "ao-dai-nu": 8.57}, "note": "homepage = unconfigured WooCommerce skeleton", "pinterest": false, "gated": ["geo","demographics"]},
+    "hacuc.com.vn": {"role": "VN-mass-ref", "subpages_pct": {"homepage": 31.25, "/tue-cat": 12.5, "/san-pham": 6.25, "/ao-dai-truyen-thong": 6.25}, "offering": "traditional ao dai; per-item may-do (MTM) + rental; all contact", "pinterest": false, "gated": ["geo(empty)","channels","visits"]},
+    "sau-lee.com": {"role": "HK-cheongsam-ref", "geo_pct": {"US": 45.42, "UK": 11.06, "CA": 8.76, "AU": 6.77, "IN": 2.98}, "demographics": {"female": 83.98, "age_25_34": 32.16}, "channels_pct": {"OrganicSearch": 38.59, "PaidSearch": 25.26, "Direct": 17.28, "DisplayAds": 5.87, "OrganicSocial": 3.03}, "social_pct": {"Instagram": 40.39, "Pinterest": 36.06, "Reddit": 13.74, "Youtube": 5.47, "Facebook": 2.38}, "subpages_pct": {"collections_folder": 46.16, "products_folder": 28.71, "/collections/dresses": 5.29, "/modern-cheongsam": 3.15, "/wedding-guest": 3.13}, "offering": "RTW only + bridal RTW; NO bespoke", "price": "public US$475-895", "pinterest_link_scan": false},
+    "shanghaitang.com": {"role": "HK-ref", "geo_pct": {"SG": 21.53, "US": 15.92, "UK": 11.71, "AU": 6.49, "CA": 4.36, "IN": 3.76}, "channels_pct": {"OrganicSearch": 51.04, "PaidSearch": 16.51, "Direct": 14.87, "Mail": 5.08}, "subpages_pct": {"women_folder": 26.8, "/women/clothing/all": 4.37, "/new/women": 3.34, "/dresses": 2.72}, "offering": "RTW + separate Bespoke 'Imperial Tailoring Atelier'", "price": "RTW public; bespoke appointment"},
+    "qipology.com": {"role": "HK-ref-STRUCTURE-TEACHER", "geo_pct": {"US": 29.51, "CA": 15.7, "UK": 12.37, "SG": 11.19, "HK": 9.46, "AU": 8.95}, "subpages_pct": {"collections_folder": 60.95, "pages_folder": 12.19, "blogs_folder": 4.57, "/collections/dresses": 5.49, "/womens-tang-jacket": 5.49, "/cocktail-qipao": 4.73, "blog_qipao-vs-cheongsam": 3.05}, "offering": "RTW + Bespoke Bridal Qipao + Ready-Made Bridal + Cocktail/Evening; made-to-measure", "price": "RTW public $890-13,800; bespoke appointment", "pinterest": true, "socials": ["IG","FB","YT","Pinterest","Xiaohongshu"], "press": "Vogue HK, SCMP", "custom_made_share": "NOT MEASURABLE (channels/pages gated for isolated subpage)"},
+    "shiatzychen.com": {"role": "TW-ref", "geo_pct": {"US": 53.31, "TW": 19.62, "ID": 9.55, "IQ": 8.24}, "channels_pct": {"OrganicSearch": 56.65, "Mail": 25.42, "OrganicSocial": 6.36}, "offering": "high-end RTW + accessories; NO bespoke"},
+    "guopei.com": {"role": "CN-couture-ref", "geo_pct": {"US": 59.18, "UK": 19.98, "UA": 9.08, "NL": 6.27}, "channels_pct": {"OrganicSocial": 49.72, "OrganicSearch": 34.36, "note": "single month 2026-05, small sample"}, "subpages_pct": {"/classic": 12.31, "/events-1": 10.77, "/bio": 4.62}, "offering": "haute couture only; appointment", "pinterest": false},
+    "yi-ming.asia": {"role": "HK-mass-ref", "geo_pct": {"HK": 46.7, "US": 41.5, "SG": 9.7, "TW": 1.4}, "subpages_pct": {"/collections/qipao-cheongsam": 10.4, "/mens-sportswear": 8.8, "/cape-and-jacket": 4.1}, "offering": "RTW cheongsam e-commerce; NO bespoke", "price": "public add-to-cart"}
+  }
+}

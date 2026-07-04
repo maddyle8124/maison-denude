@@ -39,7 +39,11 @@ Each market scored on: **Value Fit · Market Share & White Space · Policy & Bar
 
 ## Where the research lives
 
+- **Đào sâu Công Trí & Phan Huy (deep-dive, VN) → [`dao-sau-congtri-phanhuy.html`](./dao-sau-congtri-phanhuy.html)** ← insight deck (03/07): trust-subpages + subpage traffic-share % + RTW-vs-bespoke + mass-vs-designer geo + multi-country keyword/intent + Pinterest. Raw: `data_logs/deep-dive-designers_2026-07.json`.
+- **Playbook hiện diện số (action, VN) → [`playbook-hien-dien-so.html`](./playbook-hien-dien-so.html)** ← what-to-do deck: country priority · channel decision tree · recommended sitemap (w/ Matthew) · keyword list by intent · sequencing + owner/priority/confidence.
 - **Data-sourcing methodology proposal (client-facing, VN) → [`de-xuat-data-sourcing.md`](./de-xuat-data-sourcing.md)** ← the 27/6-committed proposal (OQ-013): sources × feasibility × output × decision, 3-POV, sequencing. For founder sign-off before deeper scraping.
+
+**Research lessons learned (03/07):** (1) SimilarWeb **channels endpoint needs a 12-month window** (6-mo returns 404). (2) keyword volume must be pulled **per country** (was US-only). (3) **VERIFIED corrections:** the "designer attracts more Asia than mass" hypothesis is UNSUPPORTED (SG/HK = brand home-market effect; KR/JP absent); English áo-dài-bespoke long-tail = **0 demand everywhere**; real demand = generic occasionwear ("wedding guest dress" US 83K) + "modern ao dai" + "áo dài cưới" (VN); "vietnamese dress designers" = informational intent, not commercial. Always validate keyword volume before calling something "white space".
 - **FULL report + action plan → [`bao-cao-tong-hop.md`](./bao-cao-tong-hop.md)** (Vietnamese) ← the canonical aggregated deliverable: context + demand + competitors + customer-groups/markets/positioning + action plan. Visual showcase (with charts): [`bao-cao-tong-hop.html`](./bao-cao-tong-hop.html).
 - **Broad market research (detail) → [`broad-market-research.md`](./broad-market-research.md)** ← research-detail text feeding the full report. SimilarWeb raw → [`data_logs/`](./data_logs/).
 - Strategic framework + tactical intel → `/MDenude_BrandHub_Internal.md` (internal only).

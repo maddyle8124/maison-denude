@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "purpose": "Full-brand website scan (visits) — domestic + foreign, from MD competitor list",
+    "source": "SimilarWeb MCP, visits total, 2025-12..2026-05 (avg/mo)",
+    "run_date": "2026-07-03"
+  },
+  "domestic_visits_avg": {
+    "xeoxo.com": 16800,
+    "hacuc.com.vn": 3700,
+    "phanhuy.net": 9700,
+    "congtri.com": 6900,
+    "lahangdesign.com": 1030,
+    "vuvietha.com": 1510,
+    "thuydesignhouse.com": 1260,
+    "phuongmy.com": 1050,
+    "lilam.vn": "below threshold (~500 sporadic)",
+    "huy-vo.com": "below threshold",
+    "trinhhoangdieu": "no website",
+    "maisondenude.com": "no data (new site)"
+  },
+  "foreign_visits_avg": {
+    "sau-lee.com": 152000,
+    "shanghaitang.com": 75000,
+    "qipology.com": 23000,
+    "guopei.com": 10000,
+    "jinzaoriental.com": 6300,
+    "shiatzychen.com": 6300,
+    "yi-ming.asia": 5000,
+    "ao-yes.com": 3600,
+    "samuelguiyang.com": 1600,
+    "jacqueswei": "domain unconfirmed (jacqueswei.shop? .com=404)",
+    "heavengaia": "domain unconfirmed (heavengaia.com=404)"
+  },
+  "read": "Foreign cheongsam/qipao players dwarf VN designers online: Sau Lee ~152K, Shanghai Tang ~75K, Qipology ~23K — the modern-cheongsam/qipao category has a large English-search audience. Among VN, Xéo Xọ (mass áo dài) + Phan Huy (diaspora couture) lead; Công Trí strongest designer. These foreign brands are REFERENCE/channel benchmarks (P3), not consideration-set competitors — pull geo/channels/keywords next to see which sit on US/diaspora + the cheongsam keyword universe (relevant to Maison's sườn xám line)."
+}

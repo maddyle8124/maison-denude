@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "purpose": "Step 1 — domestic competitor website scan (POV 1) to pick brands to race + seed keyword list",
+    "source": "SimilarWeb MCP",
+    "web_data_latest": "2026-05",
+    "window": "2025-12 .. 2026-05",
+    "run_date": "2026-07-03",
+    "channels_note": "CORRECTION: channels ARE retrievable — the 404s were caused by using a 6-month window. A 12-month window (2025-06..2026-05) returns data for xeoxo.com + phanhuy.net (only the months SimilarWeb has channel-model data for). congtri.com still 404s even at 12mo (no channel data for that site). Lesson: query channels with a 12-month window.",
+    "channels": {
+      "phanhuy.net_2026-01_pct": {"organic_search": 0.621, "direct": 0.292, "organic_social": 0.051, "paid_social": 0.024, "referrals": 0.012, "paid_search": 0.0},
+      "xeoxo.com_2026-02_pct": {"organic_search": 0.595, "direct": 0.316, "paid_social": 0.056, "organic_social": 0.033, "paid_search": 0.0},
+      "congtri.com": "404 no channel data even at 12-month window",
+      "takeaway": "Both race targets win via ~60% Organic Search with ~0 Paid Search → the 'vietnamese designer/dress' SERP is winnable organically."
+    },
+    "maison_note": "maisondenude.com = 404 no data (new site, below threshold)."
+  },
+  "visits_avg_monthly": {
+    "xeoxo.com": 16807, "phanhuy.net": 9730, "congtri.com": 6885, "hacuc.com.vn": 3710,
+    "vuvietha.com": 1513, "thuydesignhouse.com": 1264, "phuongmy.com": 1048, "lahangdesign.com": 1025,
+    "lilam.vn": "below threshold", "huy-vo.com": "below threshold", "maisondenude.com": "no data"
+  },
+  "visits_monthly_12-25_to_05-26": {
+    "xeoxo.com": [23473, 22760, 17652, 17117, 11412, 8429],
+    "phanhuy.net": [7162, 12935, 13205, 8566, 8269, 8240],
+    "congtri.com": [6560, 8330, 6138, 6876, 7627, 5777],
+    "hacuc.com.vn": [4657, 3593, 3800, 3887, 2724, 3598],
+    "vuvietha.com": [2429, 676, 1312, 1346, 1653, 1664],
+    "thuydesignhouse.com": [1193, 1021, 733, 2142, 1320, 1176],
+    "phuongmy.com": [610, 919, 408, 1806, 2109, 438],
+    "lahangdesign.com": [917, 1562, 1305, 775, 677, 915]
+  },
+  "geography_share": {
+    "congtri.com": {"US": 0.607, "VN": 0.288, "CA": 0.066, "AU": 0.020},
+    "phanhuy.net": {"US": 0.451, "VN": 0.321, "UK": 0.072, "CA": 0.059, "AU": 0.035, "PH": 0.032},
+    "xeoxo.com": {"VN": 0.735, "US": 0.140, "AU": 0.109, "FR": 0.008, "DE": 0.007},
+    "hacuc.com.vn": {"VN": 0.894, "US": 0.106},
+    "vuvietha.com": {"VN": 0.788, "US": 0.212},
+    "phuongmy.com": {"VN": 0.784, "US": 0.202, "JP": 0.014},
+    "lahangdesign.com": {"VN": 1.0}, "thuydesignhouse.com": {"VN": 1.0}, "lilam.vn": {"VN": 1.0}
+  },
+  "non_branded_organic_keywords_top": {
+    "phanhuy.net": ["vietnamese dress designers (227cl, 53%)", "vietnamese designers", "vietnamese designer dress", "couture", "wedding dress", "high fashion", "2026 vietnam fashion"],
+    "congtri.com": ["hot fashion designers saigon (93cl)", "poplin shirt dress", "cotton poplin shirt dress", "taffeta shorts", "short skirt with train"],
+    "xeoxo.com": ["áo dài (1285cl, 42%)", "áo dài nam (387)", "ao dai (241)", "áo dài mộc", "áo dài nữ"],
+    "lahangdesign.com": ["ao dai cuoi 2026 (blog listicle)", "may đo thiết kế hà nội", "(else branded 'áo dài ngân an')"],
+    "vuvietha.com": ["áo dài 1930", "áo dài thổ cẩm dân tộc", "(mostly branded)"],
+    "thuydesignhouse.com": ["~91% branded"], "phuongmy.com": ["~all branded"]
+  },
+  "verdict": {
+    "race_now_english_diaspora": ["congtri.com", "phanhuy.net"],
+    "tactic_teacher_ao_dai_generic": ["xeoxo.com", "hacuc.com.vn"],
+    "weak_branded_or_low": ["vuvietha.com", "lahangdesign.com", "thuydesignhouse.com", "phuongmy.com", "lilam.vn", "huy-vo.com"]
+  }
+}

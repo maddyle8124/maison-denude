@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "purpose": "Keyword-gap: Maison vs Công Trí + Phan Huy → priority keyword list",
+    "source": "SimilarWeb MCP (organic keywords, 2026-03..2026-05)",
+    "note": "Maison has no SW data (new site) → 'gap' = keyword universe the 2 targets own or leave open, prioritized for Maison. Both targets are 75-90% branded → non-branded SERP is thin/winnable."
+  },
+  "congtri_keywords": {
+    "branded_share_est": 0.75,
+    "industry": ["hot fashion designers saigon (93cl)"],
+    "product_english": ["poplin shirt dress", "cotton poplin shirt dress", "taffeta shorts", "short skirt with train", "blazer with train", "crystal embellished", "tweed luxury pleated dress", "mini skirt with train", "cropped jersey t shirt", "poplin pleated pants"],
+    "us_nonbranded_top": ["poplin shirt dress (15%)", "cotton poplin shirt dress (10%)", "taffeta shorts (9%)", "blazer with train", "crystal embellished", "tweed dress", "(+ celebrity: wu jinyan, kelsey merritt, li yitong)"],
+    "channels": "404 no data"
+  },
+  "phanhuy_keywords": {
+    "branded_share_est": 0.90,
+    "industry_english": ["vietnamese dress designers (227cl, 5.7%)", "vietnamese designers", "vietnam designers", "vietnamese designer dress", "couture", "high fashion", "wedding dress", "2026 vietnam fashion"],
+    "us_nonbranded_top": ["vietnamese designers (52%)", "vietnamese designer dress (6%)", "haute couture dresses (0)", "halter neck ho chi minh city (0)"],
+    "channels_2026-01_pct": {"organic_search": 0.621, "direct": 0.292, "organic_social": 0.051, "paid_social": 0.024, "referrals": 0.012, "paid_search": 0.0}
+  },
+  "priority_keywords_for_maison": [
+    {"kw": "vietnamese dress designer(s)", "owner": "Phan Huy", "opp": "steal — thin SERP", "seg": "Việt Kiều identity", "pri": 1},
+    {"kw": "vietnamese designer dress", "owner": "Phan Huy", "opp": "steal", "seg": "Việt Kiều identity", "pri": 1},
+    {"kw": "independent vietnamese designer", "owner": "open", "opp": "white space", "seg": "identity", "pri": 1},
+    {"kw": "hot fashion designers saigon", "owner": "Công Trí", "opp": "steal", "seg": "identity", "pri": 2},
+    {"kw": "custom ao dai", "owner": "open (EN)", "opp": "white space", "seg": "áo dài / Việt Kiều", "pri": 1},
+    {"kw": "vietnamese wedding ao dai / ao dai wedding dress", "owner": "open (EN)", "opp": "white space", "seg": "bridal", "pri": 1},
+    {"kw": "modern ao dai", "owner": "open (EN)", "opp": "white space", "seg": "áo dài", "pri": 2},
+    {"kw": "ao dai designer", "owner": "open (EN)", "opp": "white space", "seg": "áo dài", "pri": 2},
+    {"kw": "vietnamese wedding dress", "owner": "Phan Huy (weak)", "opp": "steal/open", "seg": "bridal", "pri": 1},
+    {"kw": "custom bridal dress vietnam", "owner": "open", "opp": "white space", "seg": "bridal", "pri": 2},
+    {"kw": "asian bridal / asian bridal core", "owner": "open", "opp": "white space", "seg": "bridal", "pri": 2},
+    {"kw": "bespoke wedding dress vietnam", "owner": "open", "opp": "white space", "seg": "bridal", "pri": 3},
+    {"kw": "vietnamese evening dress", "owner": "open", "opp": "white space (int'l crawl, MD-038)", "seg": "occasion", "pri": 2},
+    {"kw": "custom evening gown", "owner": "open", "opp": "white space", "seg": "occasion", "pri": 3},
+    {"kw": "occasion dress vietnam", "owner": "open", "opp": "white space", "seg": "occasion", "pri": 3},
+    {"kw": "[material]+[silhouette] gown (hand-embroidered silk gown, beaded evening gown)", "owner": "Công Trí (tactic)", "opp": "copy tactic — per-product EN pages", "seg": "product long-tail", "pri": 2},
+    {"kw": "hand embroidery dress / embroidered ao dai", "owner": "open", "opp": "white space + brand DNA", "seg": "craft", "pri": 2},
+    {"kw": "áo dài cưới / áo dài may đo cao cấp", "owner": "Xéo Xọ/La Hằng (VN)", "opp": "domestic, learn structure", "seg": "áo dài VN", "pri": 3}
+  ],
+  "volume_validation_us_2026": {
+    "method": "SimilarWeb keywords-overview, country=us, 2026-03..2026-05",
+    "kept_real_demand": {
+      "modern ao dai": {"volume": 900, "difficulty": 6},
+      "vietnamese designer dress": {"volume": 527, "difficulty": 13},
+      "ao dai wedding dress": {"volume": 330, "difficulty": "low"}
+    },
+    "killed_volume_zero": ["custom ao dai", "ao dai designer", "vietnamese evening dress", "asian bridal", "custom bridal dress", "embroidered ao dai", "custom evening gown"],
+    "notes": "7/9 of the self-inferred 'white space' keywords had 0 US volume → 'no one ranks' mostly meant 'no one searches'. 'vietnamese dress designers' returned [] (exact-match limit) despite Phan Huy earning 227 clicks from it. US-English only; AU/CA + Vietnamese-language not yet measured. 'vietnamese wedding dress' pending (429 rate-limit)."
+  }
+}
