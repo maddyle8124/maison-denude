@@ -31,7 +31,7 @@ describe('buildBookingEmail', () => {
   it('returns { from, to, subject, html, text } with the verified sender and configured recipient', () => {
     const email = buildBookingEmail(baseBooking, 'team@example.com');
 
-    expect(email.from).toBe('Maison Dénudé <contact@maisondenude.com>');
+    expect(email.from).toBe('Maison Denude <contact@maisondenude.com>');
     expect(email.from).toBe(BOOKING_SENDER);
     expect(email.to).toBe('team@example.com');
     expect(typeof email.subject).toBe('string');

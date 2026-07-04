@@ -1,4 +1,4 @@
-# Maison Dénudé — Bản Đồ SEO Landscape (Bối Cảnh Tìm Kiếm)
+# Maison Denude — Bản Đồ SEO Landscape (Bối Cảnh Tìm Kiếm)
 
 Tài liệu 1/2 trong gói **Keyword Research \+ 10 Blog Brief** (deliverable Tuần 1 — 12–18/6/2026, theo Proposal v11). Tài liệu 2: [02\_blog\_briefs.md](http://./02_blog_briefs.md) — 10 blog brief xây nền semantic network.
 
@@ -8,7 +8,7 @@ Tài liệu 1/2 trong gói **Keyword Research \+ 10 Blog Brief** (deliverable Tu
 
 ## 0\. Tóm tắt cho người bận (Executive Summary)
 
-**Câu hỏi cốt lõi:** Maison Dénudé có thể lên top Google nhanh ở đâu để đạt KPI *Top-10 cho ≥3 từ khoá trong 3 tháng sau go-live*?
+**Câu hỏi cốt lõi:** Maison Denude có thể lên top Google nhanh ở đâu để đạt KPI *Top-10 cho ≥3 từ khoá trong 3 tháng sau go-live*?
 
 **3 phát hiện quyết định chiến lược (kèm số liệu):**
 

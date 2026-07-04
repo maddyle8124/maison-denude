@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yensaotanhung.vn — Analytics Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+    --border: #e8eaed;
+    --text-primary: #202124;
+    --text-secondary: #5f6368;
+    --text-meta: #80868b;
+    --blue: #1a73e8;
+    --blue-light: #e8f0fe;
+    --green: #188038;
+    --green-light: #e6f4ea;
+    --red: #c5221f;
+    --red-light: #fce8e6;
+    --orange: #e37400;
+    --orange-light: #fef3e2;
+    --purple: #7b1fa2;
+    --sidebar-bg: #202124;
+    --sidebar-text: #e8eaed;
+    --sidebar-active: #8ab4f8;
+    --header-h: 64px;
+    --sidebar-w: 220px;
+    --radius: 8px;
+    --shadow: 0 1px 3px rgba(60,64,67,.15), 0 1px 2px rgba(60,64,67,.1);
+    --shadow-md: 0 2px 6px rgba(60,64,67,.15), 0 1px 3px rgba(60,64,67,.1);
+  }
+
+  body {
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: var(--header-h);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; padding: 0 24px;
+    gap: 16px;
+  }
+  .header-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 18px; font-weight: 500; color: var(--text-secondary);
+    letter-spacing: -.3px;
+  }
+  .header-logo svg { width: 28px; height: 28px; }
+  .header-divider { width: 1px; height: 28px; background: var(--border); }
+  .header-prop {
+    font-size: 14px; color: var(--text-primary);
+    display: flex; flex-direction: column; gap: 1px;
+  }
+  .header-prop-name { font-weight: 500; }
+  .header-prop-url { font-size: 12px; color: var(--text-secondary); }
+  .header-spacer { flex: 1; }
+  .header-date {
+    font-size: 13px; color: var(--text-secondary);
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 20px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .data-badge {
+    font-size: 11px; background: var(--blue-light); color: var(--blue);
+    padding: 3px 10px; border-radius: 12px; font-weight: 500;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    position: fixed; left: 0; top: var(--header-h); bottom: 0; z-index: 90;
+    width: var(--sidebar-w);
+    background: var(--sidebar-bg);
+    padding: 16px 0;
+    overflow-y: auto;
+  }
+  .sidebar-section { padding: 8px 0; }
+  .sidebar-label {
+    font-size: 11px; font-weight: 600; letter-spacing: .8px;
+    color: #9aa0a6; padding: 6px 20px 4px;
+    text-transform: uppercase;
+  }
+  .sidebar-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 20px; cursor: pointer; border-radius: 0;
+    color: #bdc1c6; font-size: 13px; font-weight: 400;
+    transition: all .15s;
+    border-left: 3px solid transparent;
+  }
+  .sidebar-item:hover { background: rgba(255,255,255,.06); color: #e8eaed; }
+  .sidebar-item.active {
+    background: rgba(138,180,248,.12);
+    color: var(--sidebar-active);
+    border-left-color: var(--sidebar-active);
+    font-weight: 500;
+  }
+  .sidebar-item svg { width: 16px; height: 16px; opacity: .7; flex-shrink: 0; }
+  .sidebar-item.active svg { opacity: 1; }
+
+  /* ── MAIN ── */
+  .main {
+    margin-left: var(--sidebar-w);
+    padding-top: var(--header-h);
+    min-height: 100vh;
+  }
+  .content { padding: 24px 28px; max-width: 1400px; }
+
+  /* ── PAGE TITLE ── */
+  .page-title {
+    font-size: 22px; font-weight: 400; color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .page-subtitle {
+    font-size: 13px; color: var(--text-secondary);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
+
+  /* ── SECTION HEADER ── */
+  .section-title {
+    font-size: 15px; font-weight: 500; color: var(--text-primary);
+    margin-bottom: 16px; margin-top: 32px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-title:first-child { margin-top: 0; }
+  .section-badge {
+    font-size: 11px; font-weight: 500;
+    padding: 2px 8px; border-radius: 10px;
+    background: var(--blue-light); color: var(--blue);
+  }
+
+  /* ── KPI CARDS ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .kpi-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .kpi-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .kpi-card.blue::before { background: var(--blue); }
+  .kpi-card.green::before { background: var(--green); }
+  .kpi-card.orange::before { background: var(--orange); }
+  .kpi-card.red::before { background: var(--red); }
+  .kpi-card.purple::before { background: var(--purple); }
+  .kpi-card.teal::before { background: #00897b; }
+  .kpi-label {
+    font-size: 11px; font-weight: 500; color: var(--text-secondary);
+    letter-spacing: .3px; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .kpi-value {
+    font-size: 24px; font-weight: 400; color: var(--text-primary);
+    line-height: 1; margin-bottom: 6px;
+  }
+  .kpi-sub {
+    font-size: 11px; color: var(--text-meta);
+  }
+  .kpi-change {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 12px; font-weight: 500;
+    padding: 2px 6px; border-radius: 4px;
+    margin-top: 4px;
+  }
+  .kpi-change.up { color: var(--green); background: var(--green-light); }
+  .kpi-change.down { color: var(--red); background: var(--red-light); }
+  .kpi-change.neutral { color: var(--text-secondary); background: var(--bg); }
+
+  /* ── CHART CARDS ── */
+  .chart-grid-2 {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; margin-bottom: 16px;
+  }
+  .chart-grid-3 {
+    display: grid; grid-template-columns: 2fr 1fr;
+    gap: 16px; margin-bottom: 16px;
+  }
+  .chart-grid-full { margin-bottom: 16px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .card-header {
+    padding: 16px 20px 0;
+    display: flex; align-items: flex-start; justify-content: space-between;
+  }
+  .card-title {
+    font-size: 13px; font-weight: 500; color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+  .card-sub { font-size: 11px; color: var(--text-secondary); }
+  .card-body { padding: 16px 20px 20px; }
+  .chart-wrap { position: relative; }
+
+  /* ── TABLE ── */
+  .data-table {
+    width: 100%; border-collapse: collapse;
+    font-size: 13px;
+  }
+  .data-table thead th {
+    text-align: left; padding: 8px 12px;
+    font-size: 11px; font-weight: 600; letter-spacing: .4px;
+    text-transform: uppercase; color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    background: #f8f9fa;
+  }
+  .data-table thead th.right { text-align: right; }
+  .data-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background .1s;
+  }
+  .data-table tbody tr:hover { background: #f8f9fa; }
+  .data-table tbody tr:last-child { border-bottom: none; }
+  .data-table td { padding: 10px 12px; vertical-align: middle; }
+  .data-table td.right { text-align: right; }
+  .data-table .rank-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--blue-light); color: var(--blue);
+    font-size: 11px; font-weight: 600;
+  }
+  .intent-badge {
+    font-size: 10px; font-weight: 500;
+    padding: 2px 7px; border-radius: 10px;
+  }
+  .intent-local { background: #e6f4ea; color: #188038; }
+  .intent-branded { background: #e8f0fe; color: #1a73e8; }
+  .intent-howto { background: #fef3e2; color: #e37400; }
+  .intent-product { background: #f3e8fd; color: #7b1fa2; }
+  .bar-cell { display: flex; align-items: center; gap: 8px; }
+  .bar-bg {
+    flex: 1; height: 6px; background: var(--border);
+    border-radius: 3px; overflow: hidden; max-width: 100px;
+  }
+  .bar-fill { height: 100%; border-radius: 3px; }
+  .bar-blue { background: var(--blue); }
+  .bar-green { background: var(--green); }
+  .bar-orange { background: var(--orange); }
+
+  /* ── MINI STATS ── */
+  .mini-stats {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 1px; background: var(--border);
+    border-top: 1px solid var(--border);
+  }
+  .mini-stat {
+    background: var(--surface); padding: 14px 16px;
+    text-align: center;
+  }
+  .mini-stat-val { font-size: 18px; font-weight: 400; color: var(--text-primary); }
+  .mini-stat-lbl { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+
+  /* ── ALERT BOX ── */
+  .alert {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 12px 16px; border-radius: var(--radius);
+    font-size: 13px; margin-bottom: 12px;
+    border: 1px solid;
+  }
+  .alert.warn { background: #fef3e2; border-color: #f9ab00; color: #7a4f01; }
+  .alert.info { background: var(--blue-light); border-color: #a8c7fa; color: #1557b0; }
+  .alert.danger { background: var(--red-light); border-color: #f28b82; color: #8c1d18; }
+  .alert.success { background: var(--green-light); border-color: #81c995; color: #0d652d; }
+  .alert-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+  .alert strong { font-weight: 600; }
+
+  /* ── INSIGHT PILLS ── */
+  .insights-grid {
+    display: grid; grid-template-columns: repeat(2,1fr);
+    gap: 10px; margin-top: 16px;
+  }
+  .insight-pill {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 12px 14px;
+    font-size: 12px; color: var(--text-secondary);
+    display: flex; align-items: flex-start; gap: 8px;
+  }
+  .insight-pill .icon { font-size: 16px; flex-shrink: 0; }
+  .insight-pill strong { color: var(--text-primary); }
+
+  /* ── GEO DOT ── */
+  .geo-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 0; border-bottom: 1px solid var(--border);
+  }
+  .geo-item:last-child { border-bottom: none; }
+  .geo-left { display: flex; align-items: center; gap: 10px; }
+  .geo-flag { font-size: 20px; }
+  .geo-name { font-size: 13px; font-weight: 500; }
+  .geo-rank { font-size: 11px; color: var(--text-secondary); }
+  .geo-share-text { font-size: 14px; font-weight: 500; color: var(--blue); }
+  .geo-bar { height: 4px; background: var(--border); border-radius: 2px; margin-top: 6px; }
+  .geo-bar-fill { height: 100%; background: var(--blue); border-radius: 2px; }
+
+  /* ── WATERMARK ── */
+  .watermark {
+    text-align: center; padding: 32px 0 24px;
+    font-size: 12px; color: var(--text-meta);
+  }
+
+  /* ── TOOLTIP OVERRIDE ── */
+  .chartjs-tooltip { pointer-events: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1200px) {
+    .kpi-grid { grid-template-columns: repeat(3,1fr); }
+    .chart-grid-2 { grid-template-columns: 1fr; }
+    .chart-grid-3 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-logo">
+    <svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+      <rect width="192" height="192" rx="32" fill="#e8f0fe"/>
+      <circle cx="96" cy="96" r="52" fill="none" stroke="#1a73e8" stroke-width="18"/>
+      <path d="M96 44 L96 96 L132 68" stroke="#e37400" stroke-width="14" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span>Analytics</span>
+  </div>
+  <div class="header-divider"></div>
+  <div class="header-prop">
+    <div class="header-prop-name">Yến Sào Tấn Hưng</div>
+    <div class="header-prop-url">yensaotanhung.vn</div>
+  </div>
+  <div class="header-spacer"></div>
+  <span class="data-badge">SimilarWeb Data</span>
+  <div class="header-date">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f6368" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Dec 2025 – May 2026
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-label">Tổng quan</div>
+    <div class="sidebar-item active">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+      Trang chính
+    </div>
+    <div class="sidebar-item">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+      Traffic
+    </div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Acquisition</div>
+    <div class="sidebar-item">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      Keywords
+    </div>
+    <div class="sidebar-item">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+      Referrals
+    </div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Audience</div>
+    <div class="sidebar-item">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Địa lý
+    </div>
+    <div class="sidebar-item">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      Demographics
+    </div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Content</div>
+    <div class="sidebar-item">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      Landing Pages
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+<div class="content">
+
+  <div class="page-title">Báo cáo tổng quan</div>
+  <div class="page-subtitle">
+    <span class="dot"></span>
+    yensaotanhung.vn &nbsp;·&nbsp; Dữ liệu SimilarWeb &nbsp;·&nbsp; Dec 2025 – May 2026 &nbsp;·&nbsp; Cập nhật: 31/05/2026
+  </div>
+
+  <!-- ── KPI CARDS ── -->
+  <div class="kpi-grid">
+    <div class="kpi-card blue">
+      <div class="kpi-label">Total Visits (6 tháng)</div>
+      <div class="kpi-value">8,149</div>
+      <div class="kpi-sub">Trung bình 1,358/tháng</div>
+      <div class="kpi-change up">▲ +43% Dec→Apr</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">Vietnam Rank</div>
+      <div class="kpi-value">#401K</div>
+      <div class="kpi-sub">100% traffic từ VN</div>
+      <div class="kpi-change neutral">ww: #6.2M – #13.9M</div>
+    </div>
+    <div class="kpi-card orange">
+      <div class="kpi-label">Avg Bounce Rate</div>
+      <div class="kpi-value">39.4%</div>
+      <div class="kpi-sub">Jan tốt nhất: 31.6%</div>
+      <div class="kpi-change up">▼ cải thiện Jan–Apr</div>
+    </div>
+    <div class="kpi-card teal">
+      <div class="kpi-label">Avg Session Duration</div>
+      <div class="kpi-value">119s</div>
+      <div class="kpi-sub">Jan: 160s (đỉnh)</div>
+      <div class="kpi-change neutral">Không đo Dec/May</div>
+    </div>
+    <div class="kpi-card purple">
+      <div class="kpi-label">Pages / Visit</div>
+      <div class="kpi-value">3.0</div>
+      <div class="kpi-sub">Jan: 5.1 (đỉnh)</div>
+      <div class="kpi-change down">▼ giảm dần Mar–Apr</div>
+    </div>
+    <div class="kpi-card red">
+      <div class="kpi-label">Referral Sources</div>
+      <div class="kpi-value">2</div>
+      <div class="kpi-sub">~65 visits / 6 tháng</div>
+      <div class="kpi-change down">Cực thấp — rủi ro</div>
+    </div>
+  </div>
+
+  <!-- ── ALERTS ── -->
+  <div class="alert warn">
+    <span class="alert-icon">⚠️</span>
+    <div><strong>Traffic nhỏ dưới ngưỡng phân tích đầy đủ:</strong> Demographics, Traffic Channels breakdown, Similar Sites và Audience Interests không có đủ dữ liệu — site chưa đạt minimum traffic threshold của SimilarWeb (~5,000 visits/tháng).</div>
+  </div>
+  <div class="alert danger">
+    <span class="alert-icon">📉</span>
+    <div><strong>Drop mạnh tháng 5/2026:</strong> Visits giảm từ 1,932 (Apr) xuống 1,124 (May) — mức thấp nhất 6 tháng. Global rank rơi từ #6.2M về #13.85M. Cần audit ngay: technical issue, algorithm update, hoặc nội dung ngừng publish.</div>
+  </div>
+
+  <!-- ── CHART: VISITS + RANK ── -->
+  <div class="section-title">Traffic & Ranking theo thời gian <span class="section-badge">6 tháng</span></div>
+
+  <div class="chart-grid-full card">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Lượt truy cập hàng tháng (Visits)</div>
+        <div class="card-sub">Tổng visits + Bounce Rate · ww · Dec 2025 – May 2026</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="chart-wrap" style="height:260px">
+        <canvas id="visitsChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-grid-2">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Global Rank</div>
+          <div class="card-sub">Thứ hạng toàn cầu — thấp hơn = tốt hơn</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:220px">
+          <canvas id="rankChart"></canvas>
+        </div>
+      </div>
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="mini-stat-val">#6.2M</div>
+          <div class="mini-stat-lbl">Tốt nhất (Apr)</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat-val">#13.9M</div>
+          <div class="mini-stat-lbl">Thấp nhất (May)</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat-val">#401K</div>
+          <div class="mini-stat-lbl">Vietnam rank</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Engagement Metrics</div>
+          <div class="card-sub">Bounce Rate · Pages/Visit · Avg Duration (s)</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:220px">
+          <canvas id="engagementChart"></canvas>
+        </div>
+      </div>
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="mini-stat-val">39.4%</div>
+          <div class="mini-stat-lbl">Avg Bounce</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat-val">3.0</div>
+          <div class="mini-stat-lbl">Avg Pages</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat-val">119s</div>
+          <div class="mini-stat-lbl">Avg Duration</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION: GEO + CHANNELS ── -->
+  <div class="section-title">Địa lý & Nguồn traffic <span class="section-badge">Aggregate</span></div>
+
+  <div class="chart-grid-2">
+    <!-- GEO -->
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Top Quốc gia</div>
+          <div class="card-sub">Phân bổ traffic theo địa lý</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex; gap:24px; align-items:center">
+          <div style="width:180px; height:180px; flex-shrink:0; position:relative;">
+            <canvas id="geoChart"></canvas>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
+              <div style="font-size:22px;font-weight:500;">100%</div>
+              <div style="font-size:11px;color:#5f6368;">Vietnam</div>
+            </div>
+          </div>
+          <div style="flex:1">
+            <div class="geo-item">
+              <div class="geo-left">
+                <span class="geo-flag">🇻🇳</span>
+                <div>
+                  <div class="geo-name">Vietnam</div>
+                  <div class="geo-rank">Rank: #401,577</div>
+                </div>
+              </div>
+              <div>
+                <div class="geo-share-text">100.0%</div>
+                <div class="geo-bar"><div class="geo-bar-fill" style="width:100%"></div></div>
+              </div>
+            </div>
+            <div style="margin-top:16px; padding:12px; background:#f8f9fa; border-radius:6px; font-size:12px; color:#5f6368;">
+              <strong style="color:#202124;">Không có traffic quốc tế</strong><br>
+              Dù site có trang /en/ và /ko/, 100% visitors đến từ Việt Nam. Trang đa ngôn ngữ chưa thu hút được người dùng nước ngoài.
+            </div>
+            <div style="margin-top:10px; display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+              <div style="background:#e8f0fe;border-radius:6px;padding:10px;text-align:center;">
+                <div style="font-size:16px;font-weight:500;color:#1a73e8;">40.1%</div>
+                <div style="font-size:10px;color:#5f6368;">Bounce Rate VN</div>
+              </div>
+              <div style="background:#e6f4ea;border-radius:6px;padding:10px;text-align:center;">
+                <div style="font-size:16px;font-weight:500;color:#188038;">82.6s</div>
+                <div style="font-size:10px;color:#5f6368;">Avg Duration VN</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFERRALS -->
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Referral Sources</div>
+          <div class="card-sub">Nguồn traffic từ domain khác · 6 tháng</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="alert info" style="margin-bottom:14px">
+          <span class="alert-icon">ℹ️</span>
+          <div>Chỉ <strong>2 referring domain</strong> được phát hiện. Cả 2 đều liên quan đến developer/designer của site — không phải genuine backlink.</div>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th class="right">Visits</th>
+              <th class="right">Share</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="font-weight:500">studio.thieun.com</div>
+                <div style="font-size:11px;color:#5f6368">Developer portfolio</div>
+              </td>
+              <td class="right">~32</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>50%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:50%"></div></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="font-weight:500">thieuxbyd.pages.dev</div>
+                <div style="font-size:11px;color:#5f6368">Staging / Cloudflare Pages</div>
+              </td>
+              <td class="right">~32</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>50%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-orange" style="width:50%"></div></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px; padding:10px 12px; background:#fce8e6; border-radius:6px; font-size:12px; color:#8c1d18; border:1px solid #f28b82;">
+          <strong>Điểm yếu nghiêm trọng:</strong> Không có backlink thực từ báo chí, blog ẩm thực, sàn TMĐT, hay đối tác ngành. Domain authority cực thấp.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION: KEYWORDS ── -->
+  <div class="section-title">Keywords — Organic Search <span class="section-badge">Mar–May 2026 · VN</span></div>
+
+  <div class="chart-grid-3">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Top Keywords theo clicks</div>
+          <div class="card-sub">Từ khoá dẫn traffic organic về site</div>
+        </div>
+      </div>
+      <div class="card-body" style="padding-top:0">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Keyword</th>
+              <th class="right">Clicks</th>
+              <th class="right">Share</th>
+              <th class="right">Pos</th>
+              <th>Intent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank-badge">1</span></td>
+              <td><strong>yến sào đà nẵng</strong></td>
+              <td class="right">266</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>58.6%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:100%"></div></div>
+                </div>
+              </td>
+              <td class="right"><strong style="color:#188038">#3</strong></td>
+              <td><span class="intent-badge intent-local">Local</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">2</span></td>
+              <td>cách chưng tổ yến tấn hưng</td>
+              <td class="right">95</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>20.9%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:36%"></div></div>
+                </div>
+              </td>
+              <td class="right" style="color:#5f6368">—</td>
+              <td><span class="intent-badge intent-howto">How-to</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">3</span></td>
+              <td>tấn hưng đà nẵng</td>
+              <td class="right">44</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>9.6%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:16%"></div></div>
+                </div>
+              </td>
+              <td class="right" style="color:#5f6368">—</td>
+              <td><span class="intent-badge intent-branded">Branded</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">4</span></td>
+              <td>yến sào tấn hưng</td>
+              <td class="right">24</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>5.4%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:9%"></div></div>
+                </div>
+              </td>
+              <td class="right" style="color:#5f6368">—</td>
+              <td><span class="intent-badge intent-branded">Branded</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">5</span></td>
+              <td>rượu yến</td>
+              <td class="right">21</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>4.5%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:8%"></div></div>
+                </div>
+              </td>
+              <td class="right"><strong style="color:#188038">#2</strong></td>
+              <td><span class="intent-badge intent-product">Product</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">6</span></td>
+              <td style="font-size:12px">yến sào tấn hưng - tổ yến trên đá cao cấp</td>
+              <td class="right">4</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>0.9%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:2%"></div></div>
+                </div>
+              </td>
+              <td class="right" style="color:#5f6368">#3</td>
+              <td><span class="intent-badge intent-branded">Branded</span></td>
+            </tr>
+            <tr>
+              <td style="color:#5f6368">7</td>
+              <td style="color:#5f6368">cách làm yến chưng đường phèn</td>
+              <td class="right" style="color:#5f6368">~0</td>
+              <td class="right" style="color:#5f6368">0%</td>
+              <td class="right" style="color:#e37400">#29</td>
+              <td><span class="intent-badge intent-howto">How-to</span></td>
+            </tr>
+            <tr>
+              <td style="color:#5f6368">8</td>
+              <td style="color:#5f6368">tuyết yến cần ngâm trước bao lâu</td>
+              <td class="right" style="color:#5f6368">~0</td>
+              <td class="right" style="color:#5f6368">0%</td>
+              <td class="right" style="color:#e37400">#21</td>
+              <td><span class="intent-badge intent-howto">How-to</span></td>
+            </tr>
+            <tr>
+              <td style="color:#5f6368">9</td>
+              <td style="color:#5f6368">uống nước yến buổi tối được không</td>
+              <td class="right" style="color:#5f6368">~0</td>
+              <td class="right" style="color:#5f6368">0%</td>
+              <td class="right" style="color:#e37400">#30</td>
+              <td><span class="intent-badge intent-howto">How-to</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <!-- Keyword Distribution Donut -->
+      <div class="card" style="flex:1">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Phân bổ clicks theo intent</div>
+            <div class="card-sub">Mar–May 2026</div>
+          </div>
+        </div>
+        <div class="card-body" style="display:flex;align-items:center;gap:16px;padding-top:8px">
+          <div style="width:130px;height:130px;flex-shrink:0;position:relative">
+            <canvas id="intentChart"></canvas>
+          </div>
+          <div style="flex:1;font-size:12px;">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+              <div style="width:10px;height:10px;border-radius:2px;background:#1a73e8;flex-shrink:0"></div>
+              <span>Local: <strong>58.6%</strong></span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+              <div style="width:10px;height:10px;border-radius:2px;background:#8ab4f8;flex-shrink:0"></div>
+              <span>Branded: <strong>15.8%</strong></span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+              <div style="width:10px;height:10px;border-radius:2px;background:#e37400;flex-shrink:0"></div>
+              <span>How-to: <strong>20.9%</strong></span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:10px;height:10px;border-radius:2px;background:#7b1fa2;flex-shrink:0"></div>
+              <span>Product: <strong>4.5%</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keyword opportunity -->
+      <div class="card" style="flex:1">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Keywords tiềm năng</div>
+            <div class="card-sub">Đang rank nhưng chưa có clicks</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div style="font-size:12px;color:#5f6368;margin-bottom:10px">Ranking trang 2–3 → có thể bứt lên top 10</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:#fef3e2;border-radius:6px;font-size:12px;">
+              <span>tuyết yến ngâm bao lâu</span>
+              <span style="color:#e37400;font-weight:600">#21</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:#fef3e2;border-radius:6px;font-size:12px;">
+              <span>cách làm yến chưng đường phèn</span>
+              <span style="color:#e37400;font-weight:600">#29</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:#fef3e2;border-radius:6px;font-size:12px;">
+              <span>uống nước yến buổi tối</span>
+              <span style="color:#e37400;font-weight:600">#30</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:#fef3e2;border-radius:6px;font-size:12px;">
+              <span>lưu tấn yến</span>
+              <span style="color:#e37400;font-weight:600">#34</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION: LANDING PAGES ── -->
+  <div class="section-title">Landing Pages — Organic <span class="section-badge">May 2026</span></div>
+
+  <div class="chart-grid-3">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Top Landing Pages từ Organic Search</div>
+          <div class="card-sub">Clicks · Traffic Share · Device split</div>
+        </div>
+      </div>
+      <div class="card-body" style="padding-top:0">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>URL</th>
+              <th class="right">Clicks</th>
+              <th class="right">Share</th>
+              <th>Desktop</th>
+              <th>Mobile</th>
+              <th>Top Keyword</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8f9fe">
+              <td>
+                <div style="font-weight:600;color:#1a73e8">/ (Homepage)</div>
+                <div style="font-size:11px;color:#5f6368">3 keywords</div>
+              </td>
+              <td class="right"><strong>274</strong></td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <strong>73.6%</strong>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:100%"></div></div>
+                </div>
+              </td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px;font-size:12px">
+                  <div style="height:6px;width:40px;background:#e8eaed;border-radius:3px;overflow:hidden"><div style="height:100%;width:57%;background:#1a73e8;border-radius:3px"></div></div>
+                  57%
+                </div>
+              </td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px;font-size:12px">
+                  <div style="height:6px;width:40px;background:#e8eaed;border-radius:3px;overflow:hidden"><div style="height:100%;width:43%;background:#34a853;border-radius:3px"></div></div>
+                  43%
+                </div>
+              </td>
+              <td style="font-size:11px;color:#5f6368">yến sào đà nẵng</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:#1a73e8;font-size:12px">/en/cach-chung-yen-lam-sach-kho</div>
+                <div style="font-size:11px;color:#e37400">⚠ Cannibalization</div>
+              </td>
+              <td class="right">47</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>12.7%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:17%"></div></div>
+                </div>
+              </td>
+              <td><span style="font-size:11px">100%</span></td>
+              <td><span style="font-size:11px">0%</span></td>
+              <td style="font-size:11px;color:#5f6368">cách chưng tổ yến</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:#1a73e8;font-size:12px">/ko/preparation-guide</div>
+                <div style="font-size:11px;color:#e37400">⚠ Cannibalization</div>
+              </td>
+              <td class="right">47</td>
+              <td class="right">
+                <div class="bar-cell" style="justify-content:flex-end">
+                  <span>12.7%</span>
+                  <div class="bar-bg"><div class="bar-fill bar-blue" style="width:17%"></div></div>
+                </div>
+              </td>
+              <td><span style="font-size:11px">100%</span></td>
+              <td><span style="font-size:11px">0%</span></td>
+              <td style="font-size:11px;color:#5f6368">cách chưng tổ yến</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="font-size:12px">/san-pham/yensaotanhung.vn</div>
+              </td>
+              <td class="right">2.4</td>
+              <td class="right">0.7%</td>
+              <td><span style="font-size:11px">0%</span></td>
+              <td><span style="font-size:11px">100%</span></td>
+              <td style="font-size:11px;color:#5f6368">yến sào tấn hưng - tổ...</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="font-size:12px">/san-pham/yen-sach-long-loai-dac-biet-100gr</div>
+              </td>
+              <td class="right">0.5</td>
+              <td class="right">0.1%</td>
+              <td><span style="font-size:11px">0%</span></td>
+              <td><span style="font-size:11px">100%</span></td>
+              <td style="font-size:11px;color:#5f6368">branded</td>
+            </tr>
+            <tr>
+              <td colspan="6" style="padding:6px 12px;background:#fce8e6;font-size:11px;color:#8c1d18;text-align:center">
+                Tất cả product pages còn lại: 0 organic clicks — không có SEO visibility
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <!-- Landing page donut -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Traffic share by page</div>
+            <div class="card-sub">Organic clicks May 2026</div>
+          </div>
+        </div>
+        <div class="card-body" style="display:flex;justify-content:center;align-items:center;flex-direction:column;gap:12px;padding-top:8px">
+          <div style="width:150px;height:150px;position:relative">
+            <canvas id="landingChart"></canvas>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center">
+              <div style="font-size:14px;font-weight:600">372</div>
+              <div style="font-size:10px;color:#5f6368">total clicks</div>
+            </div>
+          </div>
+          <div style="font-size:11px;display:flex;flex-direction:column;gap:5px;width:100%">
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#1a73e8;flex-shrink:0"></div>Homepage: 73.6%</div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#e37400;flex-shrink:0"></div>/en/ prep guide: 12.7%</div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#fbbc04;flex-shrink:0"></div>/ko/ prep guide: 12.7%</div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#e8eaed;flex-shrink:0"></div>Others: 1.0%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">Cảnh báo: Keyword Cannibalization</div></div>
+        </div>
+        <div class="card-body">
+          <div style="font-size:12px;color:#5f6368;line-height:1.6">
+            <div class="alert warn" style="margin-bottom:10px;padding:10px 12px">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>/en/</strong> và <strong>/ko/</strong> đang cạnh tranh cùng keyword <em>"cách chưng tổ yến tấn hưng"</em> — chia cắt link juice, gây nhầm cho Google.</div>
+            </div>
+            <div style="background:#f8f9fa;border-radius:6px;padding:10px;font-size:11px">
+              <strong>Giải pháp:</strong><br>
+              1. Thêm hreflang đúng (vi/en/ko)<br>
+              2. Hoặc consolidate nếu không có traffic EN/KO thực sự<br>
+              3. Canonical tag về trang VN gốc
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION: INSIGHTS ── -->
+  <div class="section-title">Tổng hợp Insights & Khuyến nghị</div>
+
+  <div class="card chart-grid-full">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Phân tích Chuỗi Cung ứng Thông tin</div>
+        <div class="card-sub">Luồng thông tin từ nội dung → SEO → Traffic → Conversion</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <!-- Flow diagram -->
+      <div style="display:flex;align-items:stretch;gap:0;margin-bottom:20px;overflow-x:auto;">
+        <div style="flex:1;min-width:120px;background:#e8f0fe;border-radius:8px 0 0 8px;padding:14px 12px;text-align:center;border-right:2px solid #fff;">
+          <div style="font-size:20px;margin-bottom:6px">📝</div>
+          <div style="font-size:12px;font-weight:600;color:#1a73e8">Nội dung</div>
+          <div style="font-size:10px;color:#5f6368;margin-top:4px">Blog + Product + Multilang</div>
+          <div style="margin-top:8px;font-size:10px;background:#1a73e8;color:#fff;border-radius:10px;padding:2px 6px">Trung bình</div>
+        </div>
+        <div style="display:flex;align-items:center;color:#5f6368;font-size:18px;padding:0 4px">→</div>
+        <div style="flex:1;min-width:120px;background:#e6f4ea;padding:14px 12px;text-align:center;border-right:2px solid #fff;">
+          <div style="font-size:20px;margin-bottom:6px">🔍</div>
+          <div style="font-size:12px;font-weight:600;color:#188038">SEO Rank</div>
+          <div style="font-size:10px;color:#5f6368;margin-top:4px">Branded + Local #2–3</div>
+          <div style="margin-top:8px;font-size:10px;background:#188038;color:#fff;border-radius:10px;padding:2px 6px">Tốt (niche)</div>
+        </div>
+        <div style="display:flex;align-items:center;color:#5f6368;font-size:18px;padding:0 4px">→</div>
+        <div style="flex:1;min-width:120px;background:#fef3e2;padding:14px 12px;text-align:center;border-right:2px solid #fff;">
+          <div style="font-size:20px;margin-bottom:6px">👥</div>
+          <div style="font-size:12px;font-weight:600;color:#e37400">Traffic</div>
+          <div style="font-size:10px;color:#5f6368;margin-top:4px">~1,350/tháng · 100% VN</div>
+          <div style="margin-top:8px;font-size:10px;background:#e37400;color:#fff;border-radius:10px;padding:2px 6px">Thấp</div>
+        </div>
+        <div style="display:flex;align-items:center;color:#5f6368;font-size:18px;padding:0 4px">→</div>
+        <div style="flex:1;min-width:120px;background:#fce8e6;padding:14px 12px;text-align:center;border-right:2px solid #fff;">
+          <div style="font-size:20px;margin-bottom:6px">📊</div>
+          <div style="font-size:12px;font-weight:600;color:#c5221f">Engagement</div>
+          <div style="font-size:10px;color:#5f6368;margin-top:4px">Bounce 39% · 119s</div>
+          <div style="margin-top:8px;font-size:10px;background:#c5221f;color:#fff;border-radius:10px;padding:2px 6px">Trung bình</div>
+        </div>
+        <div style="display:flex;align-items:center;color:#5f6368;font-size:18px;padding:0 4px">→</div>
+        <div style="flex:1;min-width:120px;background:#f3e8fd;border-radius:0 8px 8px 0;padding:14px 12px;text-align:center;">
+          <div style="font-size:20px;margin-bottom:6px">💰</div>
+          <div style="font-size:12px;font-weight:600;color:#7b1fa2">Conversion</div>
+          <div style="font-size:10px;color:#5f6368;margin-top:4px">Không đo được</div>
+          <div style="margin-top:8px;font-size:10px;background:#7b1fa2;color:#fff;border-radius:10px;padding:2px 6px">Unknown</div>
+        </div>
+      </div>
+
+      <div class="insights-grid">
+        <div class="insight-pill">
+          <span class="icon">💡</span>
+          <div><strong>Homepage over-concentration</strong><br>73.6% traffic dồn vào trang chủ. Rủi ro: nếu rank "yến sào đà nẵng" giảm, toàn bộ traffic sẽ sụp.</div>
+        </div>
+        <div class="insight-pill">
+          <span class="icon">🚀</span>
+          <div><strong>How-to content là cơ hội lớn</strong><br>4 keyword how-to đang rank #21–34 với 0 clicks. Tối ưu bài blog có thể tăng 30–50% visits chỉ trong 2–3 tháng.</div>
+        </div>
+        <div class="insight-pill">
+          <span class="icon">🍷</span>
+          <div><strong>"Rượu yến" — rank #2, clicks thấp</strong><br>Đang rank rất tốt (#2) cho "rượu yến" nhưng clicks chỉ 21. Trang product cần cải thiện title/description để tăng CTR.</div>
+        </div>
+        <div class="insight-pill">
+          <span class="icon">🌏</span>
+          <div><strong>Đa ngôn ngữ chưa hoạt động</strong><br>Trang /en/ và /ko/ thu hút 0 traffic từ nước ngoài. Cần chiến lược riêng: backlink tiếng Anh, targeting Việt kiều Hàn Quốc.</div>
+        </div>
+        <div class="insight-pill">
+          <span class="icon">📅</span>
+          <div><strong>Seasonality: Tết và Q1 là đỉnh</strong><br>Traffic tốt nhất Jan–Apr (mùa quà tặng, Tết). Nên đẩy content và ads trước tháng 1, 8, 9 (Trung Thu).</div>
+        </div>
+        <div class="insight-pill">
+          <span class="icon">🔗</span>
+          <div><strong>0 backlink thực — ưu tiên số 1</strong><br>Chỉ có 2 link từ developer. Cần PR bài trên báo ẩm thực, hợp tác blogger, đăng sàn TMĐT để tăng Domain Authority.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WATERMARK ── -->
+  <div class="watermark">
+    Dữ liệu: SimilarWeb API · Dec 2025 – May 2026 · Tạo: 27/06/2026<br>
+    yensaotanhung.vn — Yến Sào Tấn Hưng, Đà Nẵng
+  </div>
+
+</div>
+</main>
+
+<script>
+// ── THEME ──
+const palette = {
+  blue:   '#1a73e8',
+  green:  '#188038',
+  orange: '#e37400',
+  red:    '#c5221f',
+  purple: '#7b1fa2',
+  teal:   '#00897b',
+  gray:   '#80868b',
+  border: '#e8eaed',
+  blueA:  'rgba(26,115,232,.15)',
+  greenA: 'rgba(24,128,56,.15)',
+};
+
+Chart.defaults.font.family = "'Google Sans', Roboto, Arial, sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.color = '#5f6368';
+Chart.defaults.plugins.legend.display = false;
+
+const months = ['Dec 2025','Jan 2026','Feb 2026','Mar 2026','Apr 2026','May 2026'];
+const visits = [1349, 1132, 1072, 1540, 1932, 1124];
+const bounce  = [0.5866, 0.3163, 0.4118, 0.3537, 0.3677, 0.3743];
+
+// ── VISITS CHART ──
+new Chart(document.getElementById('visitsChart'), {
+  type: 'bar',
+  data: {
+    labels: months,
+    datasets: [
+      {
+        type: 'bar',
+        label: 'Visits',
+        data: visits,
+        backgroundColor: visits.map((v, i) => i === 4 ? palette.blue : 'rgba(26,115,232,.55)'),
+        borderRadius: 4,
+        borderSkipped: false,
+        yAxisID: 'y',
+        order: 2,
+      },
+      {
+        type: 'line',
+        label: 'Bounce Rate',
+        data: bounce.map(b => +(b*100).toFixed(1)),
+        borderColor: palette.orange,
+        backgroundColor: 'rgba(227,116,0,.08)',
+        borderWidth: 2,
+        pointBackgroundColor: palette.orange,
+        pointRadius: 4,
+        tension: .4,
+        yAxisID: 'y2',
+        order: 1,
+        fill: true,
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: true, position: 'top',
+        labels: { usePointStyle: true, pointStyle: 'circle', padding: 16, font: { size: 12 } }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.datasetIndex === 0
+            ? ` Visits: ${ctx.raw.toLocaleString()}`
+            : ` Bounce: ${ctx.raw}%`
+        }
+      }
+    },
+    scales: {
+      y: {
+        position: 'left',
+        grid: { color: '#f1f3f4' },
+        ticks: { callback: v => v.toLocaleString() },
+        title: { display: true, text: 'Visits', color: palette.blue }
+      },
+      y2: {
+        position: 'right',
+        min: 0, max: 100,
+        grid: { drawOnChartArea: false },
+        ticks: { callback: v => v + '%' },
+        title: { display: true, text: 'Bounce %', color: palette.orange }
+      },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// ── RANK CHART ──
+const ranks = [13005808, 9624702, 8533568, 7780802, 6167260, 13850001];
+new Chart(document.getElementById('rankChart'), {
+  type: 'line',
+  data: {
+    labels: months,
+    datasets: [{
+      data: ranks.map(r => r/1000000),
+      borderColor: palette.purple,
+      backgroundColor: 'rgba(123,31,162,.08)',
+      borderWidth: 2.5,
+      pointBackgroundColor: ranks.map((r, i) => i === 4 ? palette.green : palette.purple),
+      pointRadius: ranks.map((r, i) => i === 4 ? 7 : 4),
+      tension: .3,
+      fill: true,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: ctx => ` Rank: #${ranks[ctx.dataIndex].toLocaleString()} (${ctx.raw.toFixed(1)}M)`
+        }
+      }
+    },
+    scales: {
+      y: {
+        reverse: true,
+        grid: { color: '#f1f3f4' },
+        ticks: { callback: v => '#' + v + 'M' },
+        title: { display: true, text: 'Global Rank (thấp = tốt)', color: palette.purple }
+      },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// ── ENGAGEMENT CHART ──
+const durations = [null, 160.2, 137.2, 104.0, 95.5, null];
+const pagesPerVisit = [1.003, 5.117, 4.466, 3.246, 3.107, 1.016];
+new Chart(document.getElementById('engagementChart'), {
+  type: 'line',
+  data: {
+    labels: months,
+    datasets: [
+      {
+        label: 'Avg Duration (s)',
+        data: durations,
+        borderColor: palette.teal,
+        backgroundColor: 'rgba(0,137,123,.08)',
+        borderWidth: 2,
+        pointBackgroundColor: palette.teal,
+        pointRadius: 4,
+        tension: .3,
+        yAxisID: 'y',
+        spanGaps: false,
+      },
+      {
+        label: 'Pages/Visit',
+        data: pagesPerVisit,
+        borderColor: palette.blue,
+        backgroundColor: 'rgba(26,115,232,.06)',
+        borderWidth: 2,
+        pointBackgroundColor: palette.blue,
+        pointRadius: 4,
+        tension: .3,
+        yAxisID: 'y2',
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: {
+        display: true, position: 'top',
+        labels: { usePointStyle: true, pointStyle: 'circle', padding: 14, font: { size: 11 } }
+      }
+    },
+    scales: {
+      y: {
+        position: 'left',
+        grid: { color: '#f1f3f4' },
+        ticks: { callback: v => v + 's' },
+        title: { display: true, text: 'Duration (s)', color: palette.teal }
+      },
+      y2: {
+        position: 'right',
+        min: 0,
+        grid: { drawOnChartArea: false },
+        title: { display: true, text: 'Pages', color: palette.blue }
+      },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// ── GEO DONUT ──
+new Chart(document.getElementById('geoChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Vietnam', 'Other'],
+    datasets: [{
+      data: [100, 0.001],
+      backgroundColor: [palette.blue, palette.border],
+      borderWidth: 0,
+      hoverOffset: 4,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '72%',
+    plugins: { tooltip: { callbacks: { label: ctx => ctx.label + ': ' + (ctx.dataIndex === 0 ? '100%' : '—') } } }
+  }
+});
+
+// ── INTENT DONUT ──
+new Chart(document.getElementById('intentChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Local', 'How-to', 'Branded', 'Product'],
+    datasets: [{
+      data: [58.6, 20.9, 15.8, 4.5],
+      backgroundColor: [palette.blue, palette.orange, '#8ab4f8', palette.purple],
+      borderWidth: 0,
+      hoverOffset: 4,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '68%',
+    plugins: {
+      tooltip: { callbacks: { label: ctx => ctx.label + ': ' + ctx.raw + '%' } }
+    }
+  }
+});
+
+// ── LANDING PAGES DONUT ──
+new Chart(document.getElementById('landingChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Homepage', '/en/ guide', '/ko/ guide', 'Others'],
+    datasets: [{
+      data: [73.6, 12.7, 12.7, 1.0],
+      backgroundColor: [palette.blue, palette.orange, '#fbbc04', palette.border],
+      borderWidth: 0,
+      hoverOffset: 4,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '68%',
+    plugins: {
+      tooltip: { callbacks: { label: ctx => ctx.label + ': ' + ctx.raw + '%' } }
+    }
+  }
+});
+</script>
+</body>
+</html>

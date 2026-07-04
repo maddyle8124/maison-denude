@@ -1,4 +1,4 @@
-# Maison Dénudé — Open Questions
+# Maison Denude — Open Questions
 
 When an OQ is resolved:
 1. Update the row here (Status → ✅ Resolved, fill in Answer + date)
@@ -10,10 +10,10 @@ When an OQ is resolved:
 
 | ID | Question | Who to ask | Status | Answer | Resolved date |
 |----|---------|------------|--------|--------|---------------|
-| OQ-001 | Which email address receives booking form submissions? | Maison Dénudé | ❌ Open | — | — |
-| OQ-002 | What is Maison Dénudé's domain? Do they have one yet? | Maison Dénudé | ✅ Resolved | maisondenude.com — connected to CF Worker, live on prod | 2026-06-26 |
-| OQ-003 | Blog content language: Vietnamese only, or also English? | Maison Dénudé | ❌ Open | — | — |
-| OQ-004 | Booking popup trigger timing: confirm 30s default? | Maison Dénudé | ❌ Open | — | — |
+| OQ-001 | Which email address receives booking form submissions? | Maison Denude | ❌ Open | — | — |
+| OQ-002 | What is Maison Denude's domain? Do they have one yet? | Maison Denude | ✅ Resolved | maisondenude.com — connected to CF Worker, live on prod | 2026-06-26 |
+| OQ-003 | Blog content language: Vietnamese only, or also English? | Maison Denude | ❌ Open | — | — |
+| OQ-004 | Booking popup trigger timing: confirm 30s default? | Maison Denude | ❌ Open | — | — |
 | OQ-005 | Multi-language (ZH/KO) — when, or is it ever in scope? | Internal decision | ⏸ Deferred | Deferred — English default confirmed; ZH/KO = major architecture change | 2026-05-31 |
 | OQ-008 | Admin (`/admin`) auth method — shared Supabase account vs. magic-link to Maison's email? | Internal + Maison | ❌ Open | — | — |
 | OQ-009 | Collection data shape — final fields, image hosting confirmed (R2, MD-038), ordering convention? | Internal | ⚠ Partly resolved | Image hosting = Cloudflare R2 (MD-038); fields/ordering TBD | — |

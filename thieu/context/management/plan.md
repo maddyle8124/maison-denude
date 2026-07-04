@@ -1,4 +1,4 @@
-# Maison Dénudé — Implementation Plan
+# Maison Denude — Implementation Plan
 
 ## Project Goal
 
@@ -33,8 +33,8 @@ Ship a production-grade website that:
 
 **Goal:** Everything wired up and ready to build.
 
-- [ ] Get booking destination email from Maison Dénudé (OQ-001)
-- [ ] Get domain from Maison Dénudé or confirm status (OQ-002)
+- [ ] Get booking destination email from Maison Denude (OQ-001)
+- [ ] Get domain from Maison Denude or confirm status (OQ-002)
 - [ ] Create GitHub repo: `maison-denude`
 - [ ] Scaffold Astro project with Cloudflare adapter
 - [ ] Connect repo to Cloudflare Pages (auto-deploy from `main`)
@@ -54,10 +54,10 @@ Ship a production-grade website that:
 - [ ] GTM installed on site, GA4 and Search Console firing
 - [ ] Google Business Profile updated/claimed (address, hours, photos)
 - [ ] Keyword map finalized (7 target keywords + long-tail variants)
-- [ ] Homepage design wireframe approved by Maison Dénudé
+- [ ] Homepage design wireframe approved by Maison Denude
 - [ ] Entity claiming started (audit all external mentions)
 
-**Exit criteria:** GA4 showing live data. Keyword baseline document shared with Maison Dénudé.
+**Exit criteria:** GA4 showing live data. Keyword baseline document shared with Maison Denude.
 
 ---
 
@@ -81,7 +81,7 @@ Ship a production-grade website that:
 
 - [ ] `/blog` listing page live
 - [ ] `/blog/[slug]` individual post pages working
-- [ ] First 2–3 blog posts published (content from Maison Dénudé, structured by Thiệu)
+- [ ] First 2–3 blog posts published (content from Maison Denude, structured by Thiệu)
 - [ ] Blog posts targeting priority keywords (see SEO Blog Strategy below)
 - [ ] Initial backlink outreach started (fashion directories, existing mentions)
 - [ ] Entity claiming batch 1 completed
@@ -178,18 +178,18 @@ Ship a production-grade website that:
 - [ ] Handover doc: how to view Supabase bookings
 - [ ] Baseline rankings documented (all 7 target keywords)
 
-**Exit criteria:** Site live on Maison Dénudé's domain. All tracking firing. Handover doc delivered.
+**Exit criteria:** Site live on Maison Denude's domain. All tracking firing. Handover doc delivered.
 
 ---
 
 ## SEO Blog Strategy
 
-Maison Dénudé provides content (raw copy, brief, or draft). Thiệu structures for SEO and publishes.
+Maison Denude provides content (raw copy, brief, or draft). Thiệu structures for SEO and publishes.
 
 | Priority | Topic | Target Keyword |
 |---------|-------|----------------|
 | 1 | The story behind a bespoke áo dài — process & craftsmanship | `bespoke ao dai` |
-| 2 | Maison Dénudé at [major event] — the outfit story | `bespoke saigon` |
+| 2 | Maison Denude at [major event] — the outfit story | `bespoke saigon` |
 | 3 | How to choose occasion wear for the modern Vietnamese woman | `occasional wear vietnam` |
 | 4 | Vietnamese fashion on the world map | `artisanal bespoke fashion` |
 | 5 | Bespoke vs. ready-to-wear — why the difference matters | `heritage inspired dress` |
@@ -210,8 +210,8 @@ Each blog post must:
 - ELLE Vietnam — request link update to new domain
 - Marie Claire Vietnam — request link update
 - Miss Universe Vietnam — confirm link exists
-- The Planners (wedding planner) — featured Maison Dénudé bridal
-- TIE Men (bridal) — featured Maison Dénudé
+- The Planners (wedding planner) — featured Maison Denude bridal
+- TIE Men (bridal) — featured Maison Denude
 - KOL posts that tag brand — ensure website URL in link chain
 - Google Business Profile (self-owned, high authority)
 

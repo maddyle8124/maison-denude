@@ -1,4 +1,4 @@
-# CONTINUITY — Maison Dénudé Frontend (Preview + Booking)
+# CONTINUITY — Maison Denude Frontend (Preview + Booking)
 
 > **Read this first after any compaction or new session.** This is the resume anchor — current state only, not history (see `status_log.md` beside this file) and not decisions (see `../frontend/decisions.md` for frontend D-rows, `../decision.md` for master MD-rows).
 >
@@ -43,14 +43,14 @@ Site **live on maisondenude.com** with traffic, all tracking verified. Latest de
 ## Next 1–3 actions
 1. **Commit + push this session's work** — user decision, not yet made. A large set of tracked-file changes plus new untracked files (SEO module, collections page, robots/sitemap, test infra, this architecture/favicon/hero-logo block) are sitting uncommitted; confirm with the user before committing/pushing. This is now the #1 open action.
 2. **Claim the Google Business Profile / Knowledge Graph entity** (client-owned action, place_id `ChIJR-cAGAAvdTERBu4E3UwrRlE`) — flagged in `context/SEO/03_entity_mentions.md` as the single highest-leverage entity action, still open.
-3. **OQ-001** — swap `BOOKING_NOTIFY_EMAIL` to a real team inbox once Maison Dénudé confirms one (currently defaults to `thieuxmaison@gmail.com`; no code change needed, just the Worker secret/var).
+3. **OQ-001** — swap `BOOKING_NOTIFY_EMAIL` to a real team inbox once Maison Denude confirms one (currently defaults to `thieuxmaison@gmail.com`; no code change needed, just the Worker secret/var).
 4. **Review the Cloudflare zone-level "content signals" robots.txt toggle** — CF prepends a managed block disallowing GPTBot/ClaudeBot/CCBot/etc. (`ai-train=no`) ahead of our own `robots.txt`; our `Allow: /` + `Sitemap:` line is still intact below it. Revisit if AI-engine discovery matters for the entity strategy.
 5. **Roadmap items from plan.md, not yet started:** booking modal (auto-trigger at 30s, MD-009) and the blog (`/blog` + `/blog/[slug]` MDX, first 2–3 SEO-targeted posts).
 6. **Non-blocking loose end:** wire `icon-192.png`/`icon-512.png` into a `manifest.json` or head links if/when a PWA-style icon set is wanted; currently unused static files (no decisions.md requirement forces this).
 - Non-blocking: 4 landing ImageKeys still `_placeholder` (PT-01). Video files/URLs from Maison still pending (PT-06, FQ-04).
 
 ## Active blockers / watch-items
-- **OQ-001 (booking email recipient):** Maison Dénudé hasn't confirmed the team inbox; recipient is `thieuxmaison@gmail.com` (default, D-BOOK-02) until answered — swap via `BOOKING_NOTIFY_EMAIL` env, no code change needed.
+- **OQ-001 (booking email recipient):** Maison Denude hasn't confirmed the team inbox; recipient is `thieuxmaison@gmail.com` (default, D-BOOK-02) until answered — swap via `BOOKING_NOTIFY_EMAIL` env, no code change needed.
 - **Cloudflare content-signals robots.txt block:** zone-level managed block prepended ahead of our `robots.txt` (disallows AI crawlers). Not yet reviewed/decided — see Next Actions item 5.
 - **Non-blocking open deps:** video URLs (FQ-04), clean KOL/Sable images (PT-01), nav-item meanings (FQ-01..03), blog language (OQ-003), Zalo URL not yet provided (social icon removed from footer until confirmed). All swap in via config — never block the build.
 - **D-DEPLOY-03:** resolved 2026-06-26 — stray Worker deleted.

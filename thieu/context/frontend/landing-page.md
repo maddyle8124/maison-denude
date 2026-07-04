@@ -175,7 +175,7 @@ _Approve by reviewing each section and replying with changes or "approved"._
 
 **Recommended standard footer additions (below the hero footer image):**
 ```
-© 2025 Maison Dénudé  ·  194 Lê Thánh Tôn, Q.1, TP.HCM  ·  Blog  ·  Booking
+© 2025 Maison Denude  ·  194 Lê Thánh Tôn, Q.1, TP.HCM  ·  Blog  ·  Booking
 ```
 
 ---

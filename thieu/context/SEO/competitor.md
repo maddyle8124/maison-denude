@@ -1,6 +1,6 @@
-# Maison Dénudé — Đối Thủ Cạnh Tranh Trong Cầu Tìm Kiếm: **Thị Trường Việt Nam**
+# Maison Denude — Đối Thủ Cạnh Tranh Trong Cầu Tìm Kiếm: **Thị Trường Việt Nam**
 
-Tài liệu phân tích **các doanh nghiệp giành cùng lượt tìm kiếm của khách *tại Việt Nam*** với Maison Dénudé — chủ yếu truy vấn **tiếng Việt** trên Google.com.vn, cộng phần nhỏ tiếng Anh của expat/du khách đang ở VN. **Đã loại bỏ** nhóm seller diaspora Mỹ/Úc (East Meets Dress, Dream Dresses…) vì họ không cạnh tranh cầu tìm kiếm nội địa.
+Tài liệu phân tích **các doanh nghiệp giành cùng lượt tìm kiếm của khách *tại Việt Nam*** với Maison Denude — chủ yếu truy vấn **tiếng Việt** trên Google.com.vn, cộng phần nhỏ tiếng Anh của expat/du khách đang ở VN. **Đã loại bỏ** nhóm seller diaspora Mỹ/Úc (East Meets Dress, Dream Dresses…) vì họ không cạnh tranh cầu tìm kiếm nội địa.
 
 **Nguồn dữ liệu:** SerpApi → Google.com.vn thực tế (gl=vn, hl=vi, vị trí TP.HCM, tháng 6/2026) · SimilarWeb lọc **`country=vn`** (lượt truy cập từ người dùng tại VN, cập nhật 2026-05-31). **Ngày thực hiện:** 21/6/2026. Raw: [`data_logs/2026-06-21_competitor_VN-market_traffic_and_serp.json`](./data_logs/2026-06-21_competitor_VN-market_traffic_and_serp.json).
 
@@ -161,7 +161,7 @@ Kênh traffic toàn cầu (SimilarWeb, 5/2026):
 - **Định vị sản phẩm:** *"taffeta structure meets silk softness"* — RTW thanh lịch/hiện đại + cưới + resort, **không phải bespoke couture thuần**. Tầm giá retail ~5,5 triệu/áo dài.
 - **Làm chủ SERP thương hiệu:** gõ `huong boutique áo dài` (6/2026) → **Local Pack** 2 cửa hàng (357 Võ Văn Tần 4.6★/186; Union Square 5.0★/219) + organic toàn tài sản của chính họ (FB, IG, .com, blog, Shopee, đối tác thuê). Cầu thương hiệu rõ ràng.
 
-### 7.4 Ý nghĩa cho Maison Dénudé
+### 7.4 Ý nghĩa cho Maison Denude
 
 1. **Phân loại đúng đối thủ:** với khách **VN nội địa**, HUONG chỉ ngang phân khúc (~5,6K lượt VN/tháng — sẽ đứng hạng ~4 trong bảng §1, giữa Nicole 7,5K và Overa 5,2K). Nhưng với khách **Việt kiều/quốc tế**, HUONG là **đối thủ nặng ký nhất** đã đo được — trùng định vị "thiết kế tại VN, ship toàn cầu" với Maison nhiều nhất.
 2. **Bài học omnichannel + paid:** HUONG cho thấy con đường scale ra quốc tế là **kết hợp brand mạnh (direct 26%) + organic + mua paid search/social**, không chỉ SEO. Maison nếu nhắm quốc tế phải tính ngân sách paid, không thể chỉ trông vào organic.

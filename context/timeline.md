@@ -1,4 +1,4 @@
-# Maison Dénudé — Timeline
+# Maison Denude — Timeline
 
 _7-week Phase 1. Kickoff 2026-05-31 · target go-live ~2026-07-19 · hard backstop 2026-07-30._
 _Last updated: 2026-06-21._

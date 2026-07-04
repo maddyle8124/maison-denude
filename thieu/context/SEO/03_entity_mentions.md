@@ -1,4 +1,4 @@
-# 03 — Entity Mentions: Maison Dénudé across the internet
+# 03 — Entity Mentions: Maison Denude across the internet
 
 > Research date: 2026-07-03. Purpose: feed entity-claiming JSON-LD (`sameAs` / `subjectOf` / `mentions`) on maisondenude.com.
 > Method: SerpAPI (google + google_light, EN/VI, quoted variants + site-restricted queries) + WebSearch, with live WebFetch verification of every non-seed URL. Facebook KOL permalinks come from the pre-verified seed doc `C:\maison\social proof maison denude.md` (2 spot-checked live, both PASS).

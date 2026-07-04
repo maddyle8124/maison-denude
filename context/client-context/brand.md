@@ -1,4 +1,4 @@
-# Maison Dénudé — Brand
+# Maison Denude — Brand
 
 _Last updated: 2026-06-21. Source: BrandHub, social proof, overview._
 
@@ -6,7 +6,7 @@ _Last updated: 2026-06-21. Source: BrandHub, social proof, overview._
 
 | | |
 |--|--|
-| **Brand** | Maison Dénudé |
+| **Brand** | Maison Denude |
 | **Address** | 194 Lê Thánh Tôn, Quận 1, TP.HCM (tầng 2) |
 | **Founder** | chị Chi (fashion designer) — see `stakeholders.md` |
 | **Positioning** | Premium bespoke & artisanal fashion — unique design, NOT fast fashion |
@@ -20,7 +20,7 @@ _Last updated: 2026-06-21. Source: BrandHub, social proof, overview._
 
 Strong KOL + editorial coverage despite a small owned following.
 
-**Notable KOLs who have worn Maison Dénudé:** Chi Pu, Văn Mai Hương, Bích Phương, Chau Bui, Linh An, Băng Di, Cô Em Trendy, Võ Điền Gia Huy (MV, ~26K reactions), Nguyễn Lâm Thảo Tâm, and others.
+**Notable KOLs who have worn Maison Denude:** Chi Pu, Văn Mai Hương, Bích Phương, Chau Bui, Linh An, Băng Di, Cô Em Trendy, Võ Điền Gia Huy (MV, ~26K reactions), Nguyễn Lâm Thảo Tâm, and others.
 
 **Editorial / institutional coverage:** L'Officiel Vietnam, ELLE Vietnam, Marie Claire Vietnam, Miss Universe Vietnam, The Planners (wedding), TIE Men (bridal), Dzung Yoko.
 

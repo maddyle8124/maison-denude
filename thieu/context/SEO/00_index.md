@@ -1,4 +1,4 @@
-# Maison Dénudé — SEO (Mục Lục)
+# Maison Denude — SEO (Mục Lục)
 
 Gói deliverable **Keyword Research + 10 Blog Brief** (Tuần 1 — 12–18/6/2026, theo Proposal v11).
 

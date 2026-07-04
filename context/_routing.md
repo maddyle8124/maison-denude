@@ -1,4 +1,4 @@
-# Maison Dénudé — Routing Config
+# Maison Denude — Routing Config
 
 _Where new information goes. Read during Discovery before writing. Last updated: 2026-06-21._
 

@@ -114,12 +114,12 @@ VN_ROWS = [
 ]
 
 INTRO_EN = [
-    "Maison Dénudé — Keyword thị trường (tiếng Anh), đã xác minh số liệu",
+    "Maison Denude — Keyword thị trường (tiếng Anh), đã xác minh số liệu",
     "Bộ từ khoá đại trà của ngành (váy/đầm dạ hội, couture, áo dài, đặt may), tổng hợp từ các topic Google Trends "
     "rồi rút gọn còn 10 từ khoá có volume/traffic cao nhất sau khi xác minh bằng SimilarWeb.",
 ]
 INTRO_VN = [
-    "Maison Dénudé — Đề xuất keyword tiếng Việt, đã xác minh số liệu",
+    "Maison Denude — Đề xuất keyword tiếng Việt, đã xác minh số liệu",
     "Bộ từ khoá tiếng Việt của thị trường nội địa, cùng phương pháp với bảng tiếng Anh: tổng hợp từ Google Trends "
     "Việt Nam rồi rút gọn còn 10 từ khoá có volume/traffic cao nhất theo SimilarWeb (chế độ Việt Nam).",
 ]

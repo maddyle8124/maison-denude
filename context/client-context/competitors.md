@@ -1,4 +1,4 @@
-# Maison Dénudé — Competitors
+# Maison Denude — Competitors
 
 _Skeleton. Last updated: 2026-06-21. To be populated from Maddy's research + SimilarWeb runs._
 

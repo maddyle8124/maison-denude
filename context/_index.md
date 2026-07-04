@@ -1,11 +1,11 @@
-# Maison Dénudé — Master Context
+# Maison Denude — Master Context
 
-_The single source of truth for the Maison Dénudé engagement. Read this first._
+_The single source of truth for the Maison Denude engagement. Read this first._
 _Last updated: 2026-06-21._
 
 ## What this is
 
-This folder is the **shared, canonical context** for the whole Maison Dénudé project — read by the team (Thiệu + Maddy) and by AI sessions. If a fact about the project matters to more than one person, it lives here.
+This folder is the **shared, canonical context** for the whole Maison Denude project — read by the team (Thiệu + Maddy) and by AI sessions. If a fact about the project matters to more than one person, it lives here.
 
 - **Master (`/context`)** = shared truth. Decisions, scope, brand, stakeholders, timeline.
 - **Personal (`/thieu/context`)** = Thiệu's dev scratchpad (frontend/backend specs, prototypes, SEO data logs). It *links up* to master; master never depends on it.
@@ -15,7 +15,7 @@ When master and any other doc disagree, **master wins**. `decisions.md` is the l
 ## Language policy
 
 - **Internal docs (this folder): English-first** — for AI consistency and clean diffs. Vietnamese is fine inline where it's clearer.
-- **All client-side deliverables: Vietnamese.** Anything shown to Maison Dénudé (proposals, playbook, handover docs, reports) must be in Vietnamese.
+- **All client-side deliverables: Vietnamese.** Anything shown to Maison Denude (proposals, playbook, handover docs, reports) must be in Vietnamese.
 
 ## Map
 
@@ -38,7 +38,7 @@ When master and any other doc disagree, **master wins**. `decisions.md` is the l
 
 ## Key facts (30-second brief)
 
-- **Client:** Maison Dénudé — premium bespoke / artisanal fashion (áo dài, occasion wear, swimwear), Saigon. NOT fast fashion.
+- **Client:** Maison Denude — premium bespoke / artisanal fashion (áo dài, occasion wear, swimwear), Saigon. NOT fast fashion.
 - **Engagement:** Phase 1, 7 weeks, kickoff 2026-05-31, target go-live ~2026-07-19. **8M VND** base (+ optional add-ons).
 - **Deliverables:** SEO-optimized Astro website (3 pages) + digital tracking infra (GA4/GTM/GSC/GBP) + Digital Marketing Playbook (3 markets).
 - **Team:** Thiệu/Matthew (dev + SEO), Maddy (research).

@@ -1,4 +1,4 @@
-# PowerShell script to copy and convert images for Maison Dénudé landing page
+# PowerShell script to copy and convert images for Maison Denude landing page
 
 $sourceBase = "C:\maison\thieu\context\reference\maison_denude_assets"
 $targetLanding = "C:\maison\thieu\main-dev\src\assets\landing"

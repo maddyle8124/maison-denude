@@ -1,10 +1,10 @@
-# Maison Dénudé — Project Overview
+# Maison Denude — Project Overview
 
 ## Client
 
 | | |
 |--|--|
-| **Brand** | Maison Dénudé |
+| **Brand** | Maison Denude |
 | **Address** | 194 Lê Thánh Tôn, Quận 1, TP.HCM (tầng 2) |
 | **Founder** | Chi Bui (to be confirmed) |
 | **Positioning** | Premium bespoke & artisanal fashion — NOT fast fashion |

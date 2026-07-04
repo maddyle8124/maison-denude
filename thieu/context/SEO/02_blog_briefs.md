@@ -1,9 +1,9 @@
-# Maison Dénudé — 10 Blog Brief (Cụm Chủ Đề SEO)
+# Maison Denude — 10 Blog Brief (Cụm Chủ Đề SEO)
 
 > Tài liệu 2/2 trong gói **Keyword Research + 10 Blog Brief** (deliverable Tuần 1 — 12–18/6/2026).
 > Dựa trên: [`01_seo_landscape.md`](./01_seo_landscape.md).
 >
-> **Loại brief:** *Strategic brief* — định hướng từ khoá, intent, góc tiếp cận, ý chính, internal link, meta. **Phần kể chuyện thương hiệu & nội dung chữ do Maison Dénudé cung cấp**, Thiệu cấu trúc chuẩn SEO và đăng tải (đúng phạm vi hợp đồng).
+> **Loại brief:** *Strategic brief* — định hướng từ khoá, intent, góc tiếp cận, ý chính, internal link, meta. **Phần kể chuyện thương hiệu & nội dung chữ do Maison Denude cung cấp**, Thiệu cấu trúc chuẩn SEO và đăng tải (đúng phạm vi hợp đồng).
 > **Ngôn ngữ bài viết:** tiếng Anh (mặc định site). Brief này viết tiếng Việt để team nội bộ dùng.
 
 ---
@@ -56,7 +56,7 @@ Mục tiêu KPI: **Top-10 cho ≥3 từ khoá trong 3 tháng**. Site mới = ch�
 | **Đối tượng** | Nhóm 1 (expat) + Nhóm 2 (traveler) |
 | **Góc tiếp cận / ý chính** | Định nghĩa "bespoke" khác gì may sẵn/chợ; quy trình Maison từ tư vấn → số đo → chọn lụa → thử → hoàn thiện; tay nghề thủ công (hand embroidery, beading); vì sao "made in Saigon" có giá trị; ai nên đặt bespoke. Đây là trang "tất cả đường dẫn về" của cụm. |
 | **Internal links** | → #4 (chi phí), #6 (lụa), #7 (custom cho người nước ngoài), #9 (bridal), `/booking` |
-| **Meta title (≤60)** | Bespoke Áo Dài in Saigon — Custom-Tailored by Maison Dénudé |
+| **Meta title (≤60)** | Bespoke Áo Dài in Saigon — Custom-Tailored by Maison Denude |
 | **Meta description (≤155)** | Discover the art of a bespoke áo dài, hand-tailored in Saigon. See the process, craftsmanship, and how to book your own custom fitting. |
 | **Độ dài** | 1.500–2.200 từ (pillar dài) |
 | **Phễu / CTA** | MOFU→BOFU · CTA: "Book a bespoke consultation" |

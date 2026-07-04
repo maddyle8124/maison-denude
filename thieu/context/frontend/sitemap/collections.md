@@ -54,7 +54,7 @@ Builder MUST visually open each chosen file (Read tool) and confirm it is a bran
 - New page `src/pages/collections.astro`, `export const prerender = true`, uses `Base.astro`.
 - New presentation components additive under `src/components/collections/` (do not modify existing sections). Keep them thin: layout + tokens only.
 - Nav: flip `COLLECTION` href from `#collection` → `/collections` in `nav.ts` as part of THIS phase.
-- Page `<title>`/`description` props: `Renaissance — Spring Summer 2026 | Maison Dénudé` / one-sentence description using bespoke/artisanal vocabulary (final SEO pass comes in a later phase; don't add meta beyond Base props).
+- Page `<title>`/`description` props: `Renaissance — Spring Summer 2026 | Maison Denude` / one-sentence description using bespoke/artisanal vocabulary (final SEO pass comes in a later phase; don't add meta beyond Base props).
 - Alt text: descriptive, garment-focused, English.
 
 ## Out of scope

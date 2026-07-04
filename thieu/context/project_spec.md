@@ -1,4 +1,4 @@
-# Maison Dénudé — Project Specification
+# Maison Denude — Project Specification
 
 ## Contract Summary
 
@@ -7,8 +7,8 @@
 | **Phase 1 total** | 8,000,000 VND |
 | **Duration** | 7 weeks (kickoff: 2026-05-31) |
 | **Dev lead** | Thiệu (Matthew) |
-| **Client** | Maison Dénudé |
-| **Domain** | NOT included — Maison Dénudé purchases their own (OQ-002) |
+| **Client** | Maison Denude |
+| **Domain** | NOT included — Maison Denude purchases their own (OQ-002) |
 
 ## Pricing
 
@@ -29,7 +29,7 @@
 - Backlink building — initial batch (fashion sites, directories, existing mentions)
 - Entity claiming — link all external mentions to official site
 - Keyword map + baseline rankings (7 target keywords documented)
-- SEO blog posts — published & optimized (Maison Dénudé provides content; Thiệu structures & publishes)
+- SEO blog posts — published & optimized (Maison Denude provides content; Thiệu structures & publishes)
 
 ### Website Build
 - `/` — Home / Landing page (full brand landing page UI)
@@ -51,13 +51,13 @@
 
 ## Add-on A — Google Calendar (+500,000 VND)
 
-Optional — pending Maison Dénudé confirmation.
+Optional — pending Maison Denude confirmation.
 
 When a booking is submitted, a calendar event is automatically created in the sales manager's personal Google Calendar with all booking details. No manual data entry needed. Implementation details → `backend.md`.
 
 ## Add-on B — Wishlist (+1,000,000 VND)
 
-Optional — pending Maison Dénudé confirmation.
+Optional — pending Maison Denude confirmation.
 
 Users browse designs and save items to an anonymous wishlist (no login). The wishlist is now **server-stored** (anon cookie id, MD-033) so it persists across cache clears and feeds interaction metrics. When they submit a booking, the wishlist is included automatically — the team sees exactly what the client is interested in without needing screenshots. Monthly behaviour-metrics report (views, wishlists, conversion) is prepared by Thiệu and included in maintenance (MD-034/MD-016). Implementation details → `backend.md`.
 
@@ -66,7 +66,7 @@ Users browse designs and save items to an anonymous wishlist (no login). The wis
 - Cloudflare Pages configuration maintenance
 - Backend health monitoring (automated via n8n — see `backend.md`)
 - Booking form bug fixes
-- Monthly booking report to Maison Dénudé team
+- Monthly booking report to Maison Denude team
 - Monthly wishlist analytics report (if Add-on B purchased) — automated via n8n
 - SSL monitoring
 - Minor content updates (count TBD)
@@ -74,14 +74,14 @@ Users browse designs and save items to an anonymous wishlist (no login). The wis
 ## KPIs
 
 - 4/4 tracking tools live and collecting data (GTM, GA4, GSC, Business Profile)
-- All Maison Dénudé blog content published + structured for target keywords
+- All Maison Denude blog content published + structured for target keywords
 - Baseline keyword rankings documented for all 7 keywords
 - All website pages live on Cloudflare Pages (`/`, `/blog`, `/collections`, `/booking`, `/admin`)
 - Booking form → email flow functional (test submission confirmed)
 - Lighthouse performance score > 90 (mobile)
 - 3 months post-launch: Top 10 ranking for at least 3 target keywords
 
-## Requirements from Maison Dénudé
+## Requirements from Maison Denude
 
 - [ ] Domain name — for Cloudflare Pages config (OQ-002)
 - [ ] Booking email address — where submissions go (OQ-001)
@@ -96,7 +96,7 @@ Users browse designs and save items to an anonymous wishlist (no login). The wis
 
 - Domain purchase or registration
 - Custom email domain
-- Writing blog content (Maison Dénudé provides; Thiệu structures & publishes)
+- Writing blog content (Maison Denude provides; Thiệu structures & publishes)
 - CMS for **blog/page** self-editing (the `/admin` CMS is collections-only, MD-031; blog stays MDX managed by Thiệu)
 - Multi-language site ZH/KO (deferred — OQ-005)
 - Social media management

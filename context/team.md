@@ -1,4 +1,4 @@
-# Maison Dénudé — Team & Working Model
+# Maison Denude — Team & Working Model
 
 _Last updated: 2026-06-21._
 

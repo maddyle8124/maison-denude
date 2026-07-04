@@ -1,4 +1,4 @@
-# Maison Dénudé — Markets & Digital Marketing Playbook (Pointer)
+# Maison Denude — Markets & Digital Marketing Playbook (Pointer)
 
 _Pointer only. Last updated: 2026-06-21._
 _Not built out yet — the structure here gets fleshed out once 3 target markets are confirmed at the Saturday presentation._

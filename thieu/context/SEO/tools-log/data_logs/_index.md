@@ -1,4 +1,4 @@
-# Data logs — Keyword thị trường (Maison Dénudé)
+# Data logs — Keyword thị trường (Maison Denude)
 
 Toàn bộ dữ liệu thô cho deliverable `../MaisonDenude_Keyword_ThiTruong_2026-06.xlsx`.
 Thực hiện 2026-06-11. Hai nguồn: **SerpApi Google Trends** (xu hướng 12 tháng, 0–100) và **SimilarWeb keywords-overview** (volume + click tuyệt đối, T3–T5/2026).

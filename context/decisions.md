@@ -1,4 +1,4 @@
-# Maison Dénudé — Decision Log
+# Maison Denude — Decision Log
 
 _The legal source of truth. If any doc disagrees with a row here, this wins._
 _Append-only: add the next `MD-xxx`; never rewrite history. Last updated: 2026-06-21._
@@ -49,7 +49,7 @@ _Append-only: add the next `MD-xxx`; never rewrite history. Last updated: 2026-0
 ## Session Log
 
 ### 2026-05-31 — Project kickoff
-- Kickoff with Maison Dénudé. Major scope change: website now included (was SEO-only).
+- Kickoff with Maison Denude. Major scope change: website now included (was SEO-only).
 - Pricing defined: 8M base + 500k Add-on A + 1M Add-on B + 1M/year maintenance.
 - Logged MD-001 to MD-021.
 - Blocked on OQ-001 (email) and OQ-002 (domain) to start Phase 0.

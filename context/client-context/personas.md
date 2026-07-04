@@ -1,4 +1,4 @@
-# Maison Dénudé — End-Customer Personas
+# Maison Denude — End-Customer Personas
 
 _Skeleton. Last updated: 2026-06-21. To be populated as market research and customer data firm up._
 

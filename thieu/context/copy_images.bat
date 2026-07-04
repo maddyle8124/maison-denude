@@ -1,5 +1,5 @@
 @echo off
-REM Batch script to copy and convert images for Maison Dénudé landing page
+REM Batch script to copy and convert images for Maison Denude landing page
 
 setlocal enabledelayedexpansion
 

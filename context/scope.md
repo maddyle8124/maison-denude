@@ -1,4 +1,4 @@
-# Maison Dénudé — Scope
+# Maison Denude — Scope
 
 _Phase 1 contract scope. Last updated: 2026-06-21. Source of truth for "is this in scope?"._
 
@@ -8,11 +8,11 @@ _Phase 1 contract scope. Last updated: 2026-06-21. Source of truth for "is this 
 |--|--|
 | **Phase 1 total** | 8,000,000 VND (Net) |
 | **Duration** | 7 weeks (kickoff 2026-05-31) |
-| **Client** | Maison Dénudé (Bên A) |
+| **Client** | Maison Denude (Bên A) |
 | **Contractor** | Nguyễn Thái Thiệu / Matthew (Bên B) |
 | **Contract no.** | 01/2026/HĐCTV-MD |
 | **Payment** | Đợt 1 (cọc) 2,000,000 on signing · Đợt 2 (còn lại) 7,500,000 on acceptance end of Week 7 |
-| **Domain** | NOT included — Maison Dénudé buys their own (OQ-002) |
+| **Domain** | NOT included — Maison Denude buys their own (OQ-002) |
 
 ## Pricing
 
@@ -78,7 +78,7 @@ Domain purchase · custom email domain · writing blog content (Maison provides)
 - Lighthouse > 90 (mobile).
 - 3 months post-launch: Top 10 for ≥3 target keywords.
 
-## Requirements owed by Maison Dénudé
+## Requirements owed by Maison Denude
 
 - [ ] Booking email address (OQ-001)
 - [ ] Domain (OQ-002)

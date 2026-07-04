@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Build Maison Dénudé SEO Research & Strategy workbook (client-facing, VN prose)."""
+"""Build Maison Denude SEO Research & Strategy workbook (client-facing, VN prose)."""
 import os
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -112,7 +112,7 @@ def note_line(ws, row, text, span=6, color=GREY, italic=True, height=None):
 # 0. MỤC LỤC
 # =====================================================================
 ws = new_sheet("0. Mục lục")
-r = title_block(ws, "Maison Dénudé — Nghiên Cứu & Chiến Lược SEO",
+r = title_block(ws, "Maison Denude — Nghiên Cứu & Chiến Lược SEO",
     "Tài liệu tổng hợp (gộp từ Bản đồ SEO Landscape + 10 Blog Brief) — phiên bản trình bày cho khách hàng. "
     "Nguồn dữ liệu: SimilarWeb MCP + SerpApi/Google Trends thực tế + SERP đo thật. Ngày thực hiện: 11/6/2026.", span=3)
 
@@ -159,7 +159,7 @@ r = title_block(ws, "Tổng Quan & Quyết Định Chiến Lược",
 # core question
 r = section_label(ws, r, "Câu hỏi cốt lõi & Mục tiêu (KPI)", span=3)
 ws.merge_cells(start_row=r, start_column=1, end_row=r, end_column=3)
-c = ws.cell(r, 1, "Maison Dénudé có thể lên top Google nhanh ở đâu để đạt KPI: Top-10 cho ≥3 từ khoá trong 3 tháng sau go-live?")
+c = ws.cell(r, 1, "Maison Denude có thể lên top Google nhanh ở đâu để đạt KPI: Top-10 cho ≥3 từ khoá trong 3 tháng sau go-live?")
 c.font = F(11, True, NAVY); c.alignment = WRAP; ws.row_dimensions[r].height = 30
 r += 2
 
@@ -440,7 +440,7 @@ briefs = [
      "Trans + Info", "Nhóm 1 (expat) + Nhóm 2 (traveler)",
      "Định nghĩa ‘bespoke’ khác may sẵn/chợ; quy trình Maison (tư vấn→số đo→chọn lụa→thử→hoàn thiện); tay nghề thủ công; vì sao ‘made in Saigon’ có giá trị; ai nên đặt bespoke. Trang ‘tất cả đường dẫn về’ của cụm.",
      "→ #4, #6, #7, #9, /booking",
-     "Bespoke Áo Dài in Saigon — Custom-Tailored by Maison Dénudé",
+     "Bespoke Áo Dài in Saigon — Custom-Tailored by Maison Denude",
      "Discover the art of a bespoke áo dài, hand-tailored in Saigon. See the process, craftsmanship, and how to book your own custom fitting.",
      "1.500–2.200 từ", "MOFU→BOFU · ‘Book a bespoke consultation’"],
     [2, "🏛 Pillar B", "The Bridal Áo Dài: A Saigon Atelier's Guide to Your Wedding Áo Dài",

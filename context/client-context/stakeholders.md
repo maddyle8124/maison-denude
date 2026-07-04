@@ -1,4 +1,4 @@
-# Maison Dénudé — Client Stakeholders (Bên A)
+# Maison Denude — Client Stakeholders (Bên A)
 
 _Last updated: 2026-06-21. Source: WhatsApp project chat (5/16–6/18)._
 
@@ -14,7 +14,7 @@ _Last updated: 2026-06-21. Source: WhatsApp project chat (5/16–6/18)._
 
 - Founder and fashion designer. **Final authority on scope, budget, brand, and content direction.** Fast-moving and decisive — chats often, decides quickly, expects responsiveness.
 - **More digitally engaged than expected.** She actively debates strategy: asks about RedNote/Xiaohongshu as a channel, asks whether the team has SEMrush Pro, weighs niche-vs-broad keyword strategy, and made the call herself ("bỏ qua keyword lớn, tập trung keyword ngách; nuôi keyword rộng sau"). Don't condescend — explain the *why*, she engages with it.
-- **Strong, specific opinions on brand language.** Rejected "high end" outright ("nghe stupid"; says only "Asians with weak English" use it) — prefers **premium / upscale**. Holds that **"bespoke" already implies luxury**. Insists Maison Dénudé **is not a "tailor."** Treat her wording preferences as brand law.
+- **Strong, specific opinions on brand language.** Rejected "high end" outright ("nghe stupid"; says only "Asians with weak English" use it) — prefers **premium / upscale**. Holds that **"bespoke" already implies luxury**. Insists Maison Denude **is not a "tailor."** Treat her wording preferences as brand law.
 - **Owns the keyword/content vocabulary.** Personally supplied target terms: independent/Vietnamese/local fashion designer, Vietnamese bridal designer, bridal/unconventional/anti-bride, bespoke dress/fashion/bridal, embroidered áo dài/dress, hand embroidery / hand-guided embroidery / hand embellished / hand beading / beadwork, high embroidery, embroidery art, IT girls shop. Wants "+ designer" searches to evoke *her*.
 - **Commercial pragmatist on terms.** Drove the gross→net→net-final payment decision, requested force-majeure/handover clauses, and prioritizes "chất lượng công việc và commitment" over fee mechanics.
 

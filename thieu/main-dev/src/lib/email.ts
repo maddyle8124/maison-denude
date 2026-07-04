@@ -48,7 +48,7 @@ export type SendResult =
 
 /** Sender identity — apex domain maisondenude.com is the one verified in Resend
  * (checked via GET /domains 2026-07-03; a contact. subdomain is NOT registered there). */
-export const BOOKING_SENDER = 'Maison Dénudé <contact@maisondenude.com>';
+export const BOOKING_SENDER = 'Maison Denude <contact@maisondenude.com>';
 
 /** Fallback recipient until OQ-001 (team inbox) is answered. */
 export const DEFAULT_NOTIFY_EMAIL = 'thieuxmaison@gmail.com';
@@ -141,7 +141,7 @@ export function buildBookingEmail(
 </html>`;
 
   const text = [
-    'MAISON DÉNUDÉ — new booking request',
+    'Maison Denude — new booking request',
     '',
     ...rows.map(([label, value]) => `${label}: ${value}`),
     '',

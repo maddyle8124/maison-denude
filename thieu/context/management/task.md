@@ -1,4 +1,4 @@
-# Task Tracker — Maison Dénudé Frontend (Preview + Booking)
+# Task Tracker — Maison Denude Frontend (Preview + Booking)
 
 > Phase tracker. Live status also mirrored in the harness Task list. History → `status_log.md`; resume anchor → `CONTINUITY.md`; decisions → `../frontend/decisions.md` (D-rows) + `../decision.md` (MD-rows).
 

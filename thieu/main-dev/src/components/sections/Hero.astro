@@ -1,6 +1,6 @@
 ---
-import type { HeroSection } from '../../content/types';
-import SmartImage from '../ui/SmartImage.astro';
+import type { HeroSection } from "../../content/types";
+import SmartImage from "../ui/SmartImage.astro";
 
 type Props = HeroSection;
 const { imageDesktop, imageMobile } = Astro.props;
@@ -29,7 +29,7 @@ const { imageDesktop, imageMobile } = Astro.props;
   </div>
 
   <div class="hero__logo-wrap" id="hero-logo-inline">
-    <img src="/logo_white.svg" class="hero__logo" alt="Maison Dénudé" />
+    <img src="/logo_white.svg" class="hero__logo" alt="Maison Denude" />
   </div>
 </section>
 
@@ -38,22 +38,22 @@ const { imageDesktop, imageMobile } = Astro.props;
 </div>
 
 <script>
-  const heroSection = document.getElementById('hero-section');
-  const inHeroLogo  = document.getElementById('hero-logo-inline');
-  const fixedLogo   = document.getElementById('hero-logo-fixed');
+  const heroSection = document.getElementById("hero-section");
+  const inHeroLogo = document.getElementById("hero-logo-inline");
+  const fixedLogo = document.getElementById("hero-logo-fixed");
 
   if (heroSection && inHeroLogo && fixedLogo) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) {
-          fixedLogo.style.opacity = '1';
-          inHeroLogo.style.opacity = '0';
+          fixedLogo.style.opacity = "1";
+          inHeroLogo.style.opacity = "0";
         } else {
-          fixedLogo.style.opacity = '0';
-          inHeroLogo.style.opacity = '1';
+          fixedLogo.style.opacity = "0";
+          inHeroLogo.style.opacity = "1";
         }
       },
-      { threshold: 0 }
+      { threshold: 0 },
     );
     observer.observe(heroSection);
   }

@@ -20,7 +20,7 @@ Nếu founder đề cập muốn chủ động trong việc sản xuất video h
 
 | | |
 |--|--|
-| **Tên thương hiệu** | Maison Dénudé |
+| **Tên thương hiệu** | Maison Denude |
 | **Địa chỉ** | 194 Lê Thánh Tôn, Quận 1, TP.HCM (tầng 2) |
 | **Định vị** | Premium bespoke & artisanal fashion — phân khúc unique design, không phải fast fashion |
 | **Sản phẩm cốt lõi** | Áo dài bespoke, occasion wear, bespoke tailoring, swimwear |

@@ -19,7 +19,7 @@ export const bookingPage = {
   cover: 'bookingCover' as ImageKey,
   coverAlt:
     'Model in a blush metallic-lace áo dài against an antiqued gold mirror wall',
-  eyebrow: 'Maison Dénudé — Saigon',
+  eyebrow: 'Maison Denude — Saigon',
   title: 'Private Consultation',
   lede:
     'Every piece begins with a conversation. Share your occasion and our atelier will arrange a fitting — in person above Lê Thánh Tôn, or wherever you are.',

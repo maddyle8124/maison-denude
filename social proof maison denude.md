@@ -124,7 +124,7 @@ Hầu hết các bài đều đến từ KOL/verified account. Chưa thấy nhi�
 
 **6. Không gian phát triển: Reels & video**
 Kết quả tìm kiếm chủ yếu là ảnh tĩnh. Nếu Maison Denude đẩy mạnh Reels/video sẽ có thể tăng reach đáng kể.
-Dưới đây là danh sách các **nghệ sĩ / người nổi tiếng** đã được mention đến brand **Maison Dénudé** qua các bài post trên Facebook: [facebook](https://www.facebook.com/search/top?q=maison%20denude&locale=vi_VN)
+Dưới đây là danh sách các **nghệ sĩ / người nổi tiếng** đã được mention đến brand **Maison Denude** qua các bài post trên Facebook: [facebook](https://www.facebook.com/search/top?q=maison%20denude&locale=vi_VN)
 
 ***
 
@@ -160,8 +160,8 @@ Dưới đây là danh sách các **nghệ sĩ / người nổi tiếng** đã �
 
 ***
 
-**Tóm lại**, Maison Dénudé được mention chủ yếu trong các ngữ cảnh: **MV âm nhạc, fashion editorial, sự kiện thảm đỏ (WechoiceAwards, Fashion Night Out), fashion show và đám cưới**. Các nghệ sĩ nổi bật nhất gắn với brand gồm: Võ Điền Gia Huy, Văn Mai Hương, Bích Phương, Băng Di, Negav, Uyển Ân, Jmi Ko và Nguyễn Quỳnh Anh (Miss Universe Vietnam).
-Đây là danh sách đầy đủ các nghệ sĩ / người nổi tiếng mention **Maison Dénudé** kèm link bài post: [facebook](https://www.facebook.com/search/top?q=maison%20denude&locale=vi_VN)
+**Tóm lại**, Maison Denude được mention chủ yếu trong các ngữ cảnh: **MV âm nhạc, fashion editorial, sự kiện thảm đỏ (WechoiceAwards, Fashion Night Out), fashion show và đám cưới**. Các nghệ sĩ nổi bật nhất gắn với brand gồm: Võ Điền Gia Huy, Văn Mai Hương, Bích Phương, Băng Di, Negav, Uyển Ân, Jmi Ko và Nguyễn Quỳnh Anh (Miss Universe Vietnam).
+Đây là danh sách đầy đủ các nghệ sĩ / người nổi tiếng mention **Maison Denude** kèm link bài post: [facebook](https://www.facebook.com/search/top?q=maison%20denude&locale=vi_VN)
 
 ***
 

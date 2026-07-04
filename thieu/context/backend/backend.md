@@ -1,4 +1,4 @@
-# Maison Dénudé — Backend Architecture
+# Maison Denude — Backend Architecture
 
 ## Stack Overview
 
@@ -198,7 +198,7 @@ n8n is self-hosted on Thiệu's VPS. It handles all scheduled and event-driven t
 ---
 
 #### 3. `monthly-booking-report`
-**Why:** Give Maison Dénudé a monthly summary of consultation inquiries without manual export.
+**Why:** Give Maison Denude a monthly summary of consultation inquiries without manual export.
 **Trigger:** Cron — 1st of each month at 08:00 (`0 8 1 * *`)
 **Action:**
 1. HTTP GET to Supabase REST API → fetch all bookings from previous month
@@ -214,7 +214,7 @@ n8n is self-hosted on Thiệu's VPS. It handles all scheduled and event-driven t
 1. HTTP GET → aggregate `interaction_events` for previous month: views / wishlists / unwishlists per item
 2. HTTP GET → `wishlist_items` (most-saved items) and `booking_wishlist` (which items convert to bookings)
 3. Compute: top-viewed, top-wishlisted, view→wishlist rate, wishlist→booking rate
-4. Format as report → email to Maison Dénudé team + Thiệu
+4. Format as report → email to Maison Denude team + Thiệu
 
 ---
 
@@ -265,7 +265,7 @@ Target keywords to track: `bespoke saigon`, `bespoke ho chi minh`, `artisanal be
 - Sends booking details to team email (OQ-001)
 - If Add-on B: email includes wishlist summary
 - API key stored as Supabase secret `RESEND_API_KEY`
-- From address: a verified sender domain (to be configured in Resend — can use a subdomain of Maison Dénudé's domain once OQ-002 is resolved)
+- From address: a verified sender domain (to be configured in Resend — can use a subdomain of Maison Denude's domain once OQ-002 is resolved)
 
 ---
 

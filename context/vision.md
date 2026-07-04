@@ -1,10 +1,10 @@
-# Maison Dénudé — Vision & Definition of Done
+# Maison Denude — Vision & Definition of Done
 
 _Last updated: 2026-06-21._
 
 ## Project goal
 
-Ship a production-grade, SEO-optimized website for Maison Dénudé and stand up the digital foundation that lets the brand grow organic, international reach — backed by a Digital Marketing Playbook for 3 target export markets.
+Ship a production-grade, SEO-optimized website for Maison Denude and stand up the digital foundation that lets the brand grow organic, international reach — backed by a Digital Marketing Playbook for 3 target export markets.
 
 The website must:
 1. Pass a full technical SEO audit before go-live.
@@ -14,7 +14,7 @@ The website must:
 
 ## Why it matters (strategic context)
 
-Maison Dénudé has strong earned media in Vietnam (KOLs, editorial: ELLE, L'Officiel, Miss Universe VN) but **~4.4K followers** and **no international customers yet** — awareness hasn't converted to owned audience or word-of-mouth abroad. Bespoke/luxury can't be sold with paid ads alone; it needs trust. This engagement builds the owned digital surface (site + tracking + SEO) and a researched market-entry plan so the brand has a credible base to expand from.
+Maison Denude has strong earned media in Vietnam (KOLs, editorial: ELLE, L'Officiel, Miss Universe VN) but **~4.4K followers** and **no international customers yet** — awareness hasn't converted to owned audience or word-of-mouth abroad. Bespoke/luxury can't be sold with paid ads alone; it needs trust. This engagement builds the owned digital surface (site + tracking + SEO) and a researched market-entry plan so the brand has a credible base to expand from.
 
 ## Definition of Done (Phase 1)
 

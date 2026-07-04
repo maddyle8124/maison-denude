@@ -44,13 +44,13 @@ export const mentions: string[] = [
 
 /** Canonical organization entity facts. */
 export const org = {
-  name: 'Maison Dénudé',
+  name: 'Maison Denude',
   alternateName: 'Maison Denude',
   url: 'https://maisondenude.com',
   /** Public path to the logo asset; made absolute via Astro.site at render. */
   logoPath: '/logo_white.svg',
   description:
-    'Maison Dénudé is a bespoke fashion house in Ho Chi Minh City, Vietnam — heritage-inspired áo dài, occasion wear and swimwear, artisanal and made in Saigon.',
+    'Maison Denude is a bespoke fashion house in Ho Chi Minh City, Vietnam — heritage-inspired áo dài, occasion wear and swimwear, artisanal and made in Saigon.',
   address: {
     streetAddress: '194 Lê Thánh Tôn, 2nd Floor',
     addressLocality: 'District 1',
@@ -78,7 +78,7 @@ export const org = {
 
 /** Site-wide SEO config. */
 export const site = {
-  siteName: 'Maison Dénudé',
+  siteName: 'Maison Denude',
   locale: 'en_US',
   /**
    * Default social-share image. The Renaissance collection hero (a real
@@ -109,15 +109,15 @@ export interface PageSeo {
 export const pages = {
   home: {
     path: '/',
-    title: 'Maison Dénudé — Bespoke Áo Dài & Occasion Wear, Saigon',
+    title: 'Maison Denude — Bespoke Áo Dài & Occasion Wear, Saigon',
     description:
-      'Maison Dénudé is a bespoke fashion house in Saigon — heritage-inspired áo dài, occasion wear and artisanal craft at 194 Lê Thánh Tôn, District 1.',
+      'Maison Denude is a bespoke fashion house in Saigon — heritage-inspired áo dài, occasion wear and artisanal craft at 194 Lê Thánh Tôn, District 1.',
   },
   about: {
     path: '/about',
-    title: 'About the Maison — Maison Dénudé, Saigon',
+    title: 'About the Maison — Maison Denude, Saigon',
     description:
-      'The story of Maison Dénudé — a bespoke fashion house in Saigon founded by Chi Bui: heritage-inspired áo dài, occasion wear and artisanal craft.',
+      'The story of Maison Denude — a bespoke fashion house in Saigon founded by Chi Bui: heritage-inspired áo dài, occasion wear and artisanal craft.',
     breadcrumb: [
       { name: 'Home', path: '/' },
       { name: 'About Us', path: '/about' },
@@ -125,9 +125,9 @@ export const pages = {
   },
   collections: {
     path: '/collections',
-    title: 'Renaissance — Spring Summer 2026 Collection | Maison Dénudé',
+    title: 'Renaissance — Spring Summer 2026 Collection | Maison Denude',
     description:
-      'Renaissance, the Spring Summer 2026 collection by Maison Dénudé — bespoke áo dài and artisanal occasion wear, unveiled at Hôtel des Arts Saigon.',
+      'Renaissance, the Spring Summer 2026 collection by Maison Denude — bespoke áo dài and artisanal occasion wear, unveiled at Hôtel des Arts Saigon.',
     breadcrumb: [
       { name: 'Home', path: '/' },
       { name: 'Collections', path: '/collections' },
@@ -135,9 +135,9 @@ export const pages = {
   },
   booking: {
     path: '/booking',
-    title: 'Book a Private Consultation — Maison Dénudé, Saigon',
+    title: 'Book a Private Consultation — Maison Denude, Saigon',
     description:
-      'Request a private consultation at the Maison Dénudé atelier in Saigon — bespoke áo dài, bridal and occasion wear, fitted to you in District 1.',
+      'Request a private consultation at the Maison Denude atelier in Saigon — bespoke áo dài, bridal and occasion wear, fitted to you in District 1.',
     breadcrumb: [
       { name: 'Home', path: '/' },
       { name: 'Booking', path: '/booking' },
@@ -145,9 +145,9 @@ export const pages = {
   },
   notFound: {
     path: '/404',
-    title: 'Page Not Found — Maison Dénudé',
+    title: 'Page Not Found — Maison Denude',
     description:
-      'The page you are looking for does not exist. Return to Maison Dénudé — bespoke áo dài and occasion wear, made in Saigon.',
+      'The page you are looking for does not exist. Return to Maison Denude — bespoke áo dài and occasion wear, made in Saigon.',
     noindex: true,
   },
 } satisfies Record<string, PageSeo>;

@@ -1,10 +1,10 @@
-# Maison Dénudé — Brand Intelligence
+# Maison Denude — Brand Intelligence
 
 ## Brand Snapshot
 
 | | |
 |--|--|
-| **Brand name** | Maison Dénudé |
+| **Brand name** | Maison Denude |
 | **Address** | 194 Lê Thánh Tôn, Quận 1, TP.HCM (tầng 2) |
 | **Positioning** | Premium bespoke & artisanal fashion — unique design, not fast fashion |
 | **Core products** | Áo dài bespoke, occasion wear, tailoring, swimwear |
@@ -21,7 +21,7 @@
 
 ## Client Communication Style
 
-**Maison Dénudé's team is non-technical.** When presenting or communicating:
+**Maison Denude's team is non-technical.** When presenting or communicating:
 - Never use technical terms (Supabase, Astro, Edge Functions, CDN, etc.)
 - Never lead with "free hosting" or "zero operating cost" — sounds cheap for a premium brand; their trust comes from quality and outcomes, not cost savings
 - Always translate tech into business outcomes: "Google tìm thấy nhanh hơn", "team nhận thông báo ngay", "không bỏ sót khách hàng"
@@ -39,7 +39,7 @@
 | Person | Role | Context | Reactions |
 |--------|------|---------|-----------|
 | Võ Điền Gia Huy | Singer/Actor | MV "Triều Tâm – Thanh Phú thời quá khứ" | 26K |
-| Cô Em Trendy | Lifestyle influencer | Ăn hỏi "Linh Kông" — wore Maison Dénudé as bride | 9K |
+| Cô Em Trendy | Lifestyle influencer | Ăn hỏi "Linh Kông" — wore Maison Denude as bride | 9K |
 | Chi Pu | Singer/Actor (verified) | Vạn Xuân Awards 2024 | 6.2K |
 | Linh An | Model (verified) | Swimwear at Zannier Bāi San Hô | 2K |
 | Chau Bui | Fashion influencer (verified) | Biển Vĩnh Hy beach shoot | 1.1K |

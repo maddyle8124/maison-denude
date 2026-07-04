@@ -1,4 +1,4 @@
-# Maison Dénudé — Positioning
+# Maison Denude — Positioning
 
 _Last updated: 2026-06-21. Source: BrandHub §3._
 
@@ -29,7 +29,7 @@ Chi has explicit, non-negotiable wording preferences (WhatsApp 6/11–6/12):
 
 - **Never "high end"** — she finds it cheap-sounding ("nghe stupid"). Use **premium** or **upscale**.
 - **"Bespoke" already implies luxury** — don't stack "luxury bespoke."
-- **Not a "tailor"** — Maison Dénudé is a designer house, not a tailoring shop. Avoid "tailor" / "may đo" as the brand's own descriptor.
+- **Not a "tailor"** — Maison Denude is a designer house, not a tailoring shop. Avoid "tailor" / "may đo" as the brand's own descriptor.
 - Lean into **artisanal / heritage / hand-craft** vocabulary: hand embroidery, hand-guided embroidery, hand embellished, hand beading, embroidery art.
 
 ## Messaging note

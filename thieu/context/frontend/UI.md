@@ -1,4 +1,4 @@
-# Maison Dénudé — UI & Frontend Architecture
+# Maison Denude — UI & Frontend Architecture
 
 > Backend architecture (Supabase, Cloudflare R2, n8n, Edge Functions, schema) → see `backend.md`
 
@@ -21,7 +21,7 @@
 | Frontend | Astro | SSG/SSR hybrid — max SEO, fast output |
 | Hosting | Cloudflare Pages (free tier) | Global CDN, auto-deploy from GitHub |
 | Analytics | GA4 + GTM + Google Search Console | Tracking + SEO monitoring |
-| Domain | Purchased by Maison Dénudé | Not in contract — OQ-002 |
+| Domain | Purchased by Maison Denude | Not in contract — OQ-002 |
 | Backend | Supabase + Cloudflare R2 + n8n | Single DB backend; media on R2 (MD-038). See `backend.md` |
 
 ## Rendering Strategy — Hybrid (MD-035)

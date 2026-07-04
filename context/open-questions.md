@@ -1,4 +1,4 @@
-# Maison Dénudé — Open Questions
+# Maison Denude — Open Questions
 
 _Last updated: 2026-06-21._
 

@@ -1,4 +1,4 @@
-# Maison Dénudé — Decision Log
+# Maison Denude — Decision Log
 
 ## Decision Registry
 
@@ -10,17 +10,17 @@
 | MD-004 | 2026-05-31 | Domain: client buys their own | Thiệu does not purchase or own client domains |
 | MD-005 | 2026-05-31 | Tech stack: Astro + Cloudflare Pages + Supabase | Free hosting, SEO-optimized output, Supabase free tier |
 | MD-006 | 2026-05-31 | GA4 + GTM + Search Console installed on new Astro site, not old | Old site is being replaced entirely |
-| MD-007 | 2026-05-31 | Old website (built by other company) is replaced by this build | Maison Dénudé ended prior web engagement |
+| MD-007 | 2026-05-31 | Old website (built by other company) is replaced by this build | Maison Denude ended prior web engagement |
 | MD-008 | 2026-05-31 | Website = 3 pages: /, /blog, /booking | MVP scope; no collections or about page yet |
 | MD-009 | 2026-05-31 | Booking modal auto-triggers 30s after page load | Proactive conversion UX — reconfirm timing with client (OQ-004) |
 | MD-010 | 2026-05-31 | Base booking: form → Supabase Edge Function → email to team | Simplest viable booking flow |
 | MD-011 | 2026-05-31 | Sales manager handles accept/decline manually via Zalo/WhatsApp | Team prefers direct human conversation for high-value bespoke consultations |
-| MD-012 | 2026-05-31 | No CMS needed — Thiệu manages all content | Maison Dénudé does not self-edit site |
+| MD-012 | 2026-05-31 | No CMS needed — Thiệu manages all content | Maison Denude does not self-edit site |
 | MD-013 | 2026-05-31 | Multi-language deferred — English is default | ZH/KO = major architecture change; deferred to later decision (OQ-005) |
 | MD-014 | 2026-05-31 | Add-on A: Google Calendar — sales manager's personal calendar | Simplest integration; shared calendar would require service account |
 | MD-015 | 2026-05-31 | Add-on B: Wishlist is anonymous, no auth required | Login = major scope increase; localStorage sufficient for use case |
 | MD-016 | 2026-05-31 | Add-on B analytics: Thiệu manually exports Supabase data monthly | Included in maintenance; no custom admin dashboard needed |
-| MD-017 | 2026-05-31 | Tính năng thêm A & B are upsells — Maison Dénudé chooses | They are optional, not default scope |
+| MD-017 | 2026-05-31 | Tính năng thêm A & B are upsells — Maison Denude chooses | They are optional, not default scope |
 | MD-018 | 2026-05-31 | Add-on B wishlist price = 1,000,000 VND | Confirmed |
 | MD-019 | 2026-05-31 | Add-on A Google Calendar price = 500,000 VND | Confirmed |
 | MD-020 | 2026-05-31 | Supabase free tier limits acknowledged: 500MB DB, 500k Edge invocations/month | Within expected usage for MVP |
@@ -39,7 +39,7 @@
 ### 2026-05-31 — Project Kickoff
 
 **What happened:**
-- Kickoff meeting with Maison Dénudé
+- Kickoff meeting with Maison Denude
 - Major scope change: website now included (was SEO-only)
 - Defined full pricing: 8M base + 500k add-on A + 1M add-on B + 1M/year maintenance
 - Initialized `thieu_context` folder
@@ -54,10 +54,10 @@
 
 **Blocked on:**
 - Cannot start Phase 0 until OQ-001 (email) and OQ-002 (domain) answered
-- Cannot confirm Tính năng thêm A & B until Maison Dénudé decides
+- Cannot confirm Tính năng thêm A & B until Maison Denude decides
 
 **Next priorities:**
-1. Send OQ-001, OQ-002, OQ-003, OQ-004 to Maison Dénudé
+1. Send OQ-001, OQ-002, OQ-003, OQ-004 to Maison Denude
 2. Present add-on A & B upsells to client
 3. Start Phase 0 as soon as answers received
 
