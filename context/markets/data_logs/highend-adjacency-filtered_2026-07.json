@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "purpose": "HK/SG + couture/bridal adjacency for Maison, FILTERED to >$1000 (Maison tier). (a) top-sites HK/SG, (b) similar-sites Sabyasachi/Elie Saab/Galia, (c) 4 cheongsam traffic/geo. Price confirmed via WebFetch.",
+    "run_date": "2026-07-04",
+    "workflow": "wf_e608dfd5-efd + follow-up WebFetch price-check",
+    "filter": ">$1000 typical piece AND single-designer house (not multi-brand marketplace, not mass)"
+  },
+  "a_hksg_designers_over1000": {
+    "result": "NONE found via measurable web data.",
+    "why": "HK Lifestyle/Fashion top-sites = mass + mega-luxury + media only (uniqlo/zara/LV/chanel/dior/coach/farfetch/charleskeith/vogue/hypebeast). SG top-sites returned NO data (gated). No independent HK/SG couture house ranks in category top-sites.",
+    "read": "Independent HK/SG couture likely lives on IG/WeChat/RED/boutique, below SimilarWeb's web-traffic threshold — not discoverable this way. The measurable HK/SG-audience players are the cheongsam houses already known (Shanghai Tang, Qipology, Yi-ming)."
+  },
+  "b_couture_bridal_over1000_single_houses": [
+    {"brand": "Saiid Kobeisy", "domain": "saiidkobeisy.com", "hq": "UAE/Dubai", "price_usd": "~2,300-7,150 (CONFIRMED on-site)", "offering": "couture + bridal + eveningwear + RTW + made-to-measure", "why": "BEST analog: Middle-East couture, occasion+bridal, MTM, >$1000. Surfaced from Elie Saab similar-sites.", "confidence": "High (price confirmed)"},
+    {"brand": "Panache Haute Couture", "domain": "panachehautecouture.com", "hq": "Australia/Sydney", "price_usd": ">$1000 (bespoke, not listed)", "offering": "bespoke bridal atelier, founder-led custom, appointment", "why": "MODEL analog for Maison's bespoke flow (private advisory concept→creation).", "confidence": "Med (couture bespoke; price gated)"},
+    {"brand": "Manish Malhotra", "domain": "manishmalhotra.in", "hq": "India", "price_usd": ">$1000 (couture, not listed)", "offering": "couture + bridal + RTW; bespoke consultations", "why": "Indian heritage-couture giant; diaspora + occasion+bridal parallel to Maison.", "confidence": "High (couture positioning)"},
+    {"brand": "Danielle Frankel", "domain": "daniellefrankelstudio.com", "hq": "US/NYC", "price_usd": "~$4,000-8,000 (known; on-site by appointment)", "offering": "made-to-order bridal", "why": "US MTO bridal couture; appointment model.", "confidence": "Med (price not on-site)"},
+    {"brand": "Lihi Hod", "domain": "lihihod.com", "hq": "Israel", "price_usd": ">$1000 (couture, appointment)", "offering": "couture bridal", "confidence": "Med (price gated)"},
+    {"brand": "Grace Loves Lace", "domain": "graceloveslace.com", "hq": "Australia", "price_usd": "~$1,500-3,000 (known)", "offering": "bridal, made-to-order + RTW", "confidence": "Med (price not on homepage)"},
+    {"brand": "Vera Wang", "domain": "verawang.com", "hq": "US", "price_usd": ">$1000 bridal couture (+ cheaper David's Bridal collab line)", "offering": "bridal couture + Haute RTW", "confidence": "Med"},
+    {"brand": "Indian couturiers (via platforms)", "domain": "Tarun Tahiliani, Amit Aggarwal, Arpita Mehta", "hq": "India", "price_usd": ">$1000", "offering": "Indian couture; sold via Ensemble/Aza", "why": "worth individual look; heritage-couture analog", "confidence": "Med"}
+  ],
+  "excluded_multibrand_platforms_over1000": [
+    {"brand": "Aza Fashions", "domain": "azafashions.com", "note": "multi-brand marketplace (1500+ designers), India, >$1000 — a CHANNEL not a house. Excluded from house list; relevant as 'where Indian couture is sold online'."},
+    {"brand": "Ensemble India", "domain": "ensembleindia.com", "note": "multi-brand luxury platform (50+ designers incl. Tarun Tahiliani), India, mostly >$1000. Channel, not a house."},
+    {"brand": "Aashni & Co", "domain": "aashniandco.com", "note": "multi-brand Indian luxury platform (redirect; not fetched). Channel."}
+  ],
+  "c_cheongsam_below1000_excluded": [
+    {"brand": "mycheongsam.com", "visits_avg": 3654, "geo": "US 43 / SG 19 / AU 15 / MY 13", "read": "Western + SEA diaspora, no HK-local; accessible RTW cheongsam <$1000"},
+    {"brand": "thepankou.com", "visits_avg": 10972, "geo": "US 54 / GB 18 / CA 15 / SG 8", "read": "Heavily Western; accessible cheongsam"},
+    {"brand": "orientalmestore.com", "visits_avg": 25155, "geo": "US 32 / DE 16 / AU 14 / CA 13", "read": "Broad-Western high-volume; mass cheongsam"},
+    {"brand": "hangrace.com.au", "visits_avg": 17893, "geo": "AU 60 / US 24", "read": "Australia-domestic retailer; accessible"}
+  ],
+  "verdict": "The >$1000 adjacency Maison should study is COUTURE/BRIDAL, not HK/SG cheongsam. Best transferable references: Saiid Kobeisy (UAE couture, price-confirmed), Panache Haute Couture (AU bespoke-bridal model), Manish Malhotra (heritage-couture + diaspora). HK/SG independent couture = not measurable on web. The 4 new cheongsam brands are all sub-$1000/Western → not Maison-tier peers.",
+  "gaps": [
+    "SG top-sites gated (no data) — could not scan SG category.",
+    "Several couture-bridal prices gated on homepage (Danielle Frankel, Lihi Hod, Grace Loves Lace, Vera Wang) → >$1000 inferred from known positioning, not on-site confirmed.",
+    "HK top-sites surfaced no independent designer → HK/SG couture scene invisible to web-traffic tools.",
+    "similar-sites ~80 credits/call; only ran Sabyasachi/Elie Saab/Galia (+earlier Shanghai Tang/Qipology/Sau Lee)."
+  ]
+}
