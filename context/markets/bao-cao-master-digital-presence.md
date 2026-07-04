@@ -394,3 +394,42 @@ _(Deck HTML action-first đã dựng: `playbook-hien-dien-so.html`; deck insight
 6. **[Thấp] Giá RTW Maison + năng lực nhận bespoke** — chưa có (nội bộ). *Cần:* Chi/Michelle xác nhận để chốt R1/R6.
 
 **Câu hỏi chốt với Chi/Michelle trước khi present:** (1) dựng dòng RTW giá-công-khai online song song bespoke? (2) ngân sách ad/KOL/Pinterest test? (3) 3 tháng đầu ưu tiên nội địa hay Việt Kiều?
+
+---
+
+## 18 · Pattern fashion $2000+ + adjacency trace (bổ sung 03/07)
+
+_Cào 6 nhà couture/bridal $2000+ **đo được** (khác NTK Việt bị gated): Sabyasachi (~230K/th, di sản Ấn — analog gần Maison nhất), Elie Saab (~130K), Galia Lahav (~110K), Monique Lhuillier (~84K), Zuhair Murad (~50K), Reem Acra (~7.5K). Raw: [`data_logs/pattern-2000plus_2026-07.json`](./data_logs/pattern-2000plus_2026-07.json)._
+
+### 18.1 Pattern kênh — organic + direct thống trị
+$2000+ couture = **Organic Search + Direct = 82–95%**, **paid search ~0** ở nhà di sản (Zuhair Murad 89%/paid 0; Sabyasachi 94,9%/paid 0; Monique 82%/paid 1%). Ngoại lệ mua ads: Elie Saab (paid search 8,4% — PMax cho RTW), Galia Lahav (paid search 10,8% + display, chạy đợt rồi tắt). **Quy luật: càng couture/di sản → càng ít paid; càng RTW/dễ tiếp cận → càng nhiều paid** (Sau Lee $475–895 = paid search 25%). ✅
+
+> **⚠️ CAVEAT then chốt (quan trọng nhất):** "0% paid" là **trạng thái ĐÍCH của nhà đã nổi tiếng** — họ *thu hoạch* recall đã có. **Maison còn phải TẠO cầu** → giai đoạn đầu **có thể cần NHIỀU paid/social seeding hơn**, không phải ít. Đừng đọc "0% paid" thành "đừng chạy ads".
+
+### 18.2 Pattern keyword — 85–98% branded, tìm bằng TÊN
+Discovered **by name** (Reem Acra ~97%, Sabyasachi ~88%, Zuhair ~85% branded). Từ khoá ngành generic ("luxury dress") mỗi cái <5% → **ngõ cụt**. Non-branded *thật sự* kéo khách: (1) **celebrity/thảm đỏ** (mạnh nhất: "zendaya wedding dress", "alia bhatt met gala saree"); (2) **occasion/bridal**; (3) **accessory/entry** ("sabyasachi clutch bag", "earrings") + **"cheaper line"** = cầu entry-tier các nhà này bỏ ngỏ. ✅
+
+### 18.3 Pattern geo — US + diaspora
+US #1/top-2 gần như mọi brand; CA/UK/AU lặp lại top-6; **India có mặt top-6 ở TẤT CẢ**. Nhà di sản = **home-market + diaspora** (Sabyasachi India 59% + Pakistan/US/AU/CA/UAE). → **analog Maison (giả thuyết, không có data VN): Việt Nam + Việt kiều US/AU/CA** — khớp kết luận §8. 🟡
+
+### 18.4 Pattern subpage — động cơ traffic
+**Bridal/weddings hub** + **trang bộ sưu tập theo mùa có tên** (Zuhair /couture-spring-summer-2026 = **16,1%**, trang lớn nhất cả bộ) + **PDP deep-link** (homepage chỉ ~3%) + **trang APPOINTMENT** = điểm chốt couture (Reem Acra /appointments = trang #2, 8,1%) + **cụm accessories/jewellery** (entry-tier). → couture chuyển đổi bằng **đặt lịch hẹn, không phải add-to-cart**. ✅
+
+### 18.5 Adjacency trace — TRẢ LỜI "trace sang hàng high-end (đồng hồ/BĐS/khách sạn)?"
+**Kết luận: KHÔNG có tín hiệu** trace couture-buyer sang đồng hồ / trang sức-house / bất động sản / khách sạn 5 sao / du lịch xa xỉ — **0 site các ngành đó** xuất hiện trong audience-interests của mọi brand. 🔴
+- **Cái CÓ thấy (adjacency dùng được):** Instagram (Sabyasachi affinity 76 — mạnh nhất) · Pinterest (Galia 69) · YouTube/TikTok = **lớp discovery**; **department store** Saks/Nordstrom; **resale** TheRealReal/Poshmark; **contemporary e-com** Revolve/Reformation/BHLDN; **đối thủ couture** (so sánh). Và **AI tools (ChatGPT/Claude/Gemini) dùng nhiều** → tối ưu AI-search là kênh mới nổi.
+- **Ý nghĩa:** targeting audience "khách couture cũng lướt đồng hồ/khách sạn" **không có cơ sở dữ liệu**. Adjacency **có cơ sở** để nhắm = **IG/Pinterest + khách Saks/Nordstrom + resale TheRealReal + Revolve/Reformation** (qua lookalike/interest). (Vắng data ≠ chứng minh không có hành vi — site hard-luxury có thể quá thưa để nổi lên.)
+- **Đưa Maison VÀO hành trình:** là bước tạo audience trong **Google Ads** (In-market/Custom/Lookalike) — cần **tài khoản Ads đầy đủ**; **google-ads-mcp read-only không làm được** (chỉ đọc account của chính mình, không có keyword planner/audience/data đối thủ).
+
+### 18.6 Playbook rút từ pattern (bổ sung)
+| # | Điều rút ra | Confidence | Cơ sở |
+|---|---|---|---|
+| P1 | Ưu tiên **Organic + brand-name (Direct)** làm lõi; paid = campaign/seeding (nhưng giai đoạn đầu Maison cần seeding NHIỀU hơn nhà đã nổi) | High | data + caveat scale |
+| P2 | **Tạo cầu tên thương hiệu off-site** (IG/Pinterest + press/celebrity) rồi thu branded search; bỏ category SEO | High | 85–98% branded |
+| P3 | **Celebrity/thảm đỏ + occasion SEO** là kênh non-branded đáng tin duy nhất (KOL địa phương + trang occasion/bridal) | High | Galia/Sabyasachi |
+| P4 | Site = **bridal hub + trang BST theo mùa + PDP deep-link + trang Đặt lịch + accessories entry-tier** | High | subpage pattern |
+| P5 | **Đặt lịch/consultation** là điểm chốt couture (không phải checkout); e-com để cho RTW/entry | Med | Reem Acra + Phan Huy |
+| P6 | Adjacency nhắm **IG/Pinterest + Saks/Nordstrom + TheRealReal + Revolve/Reformation** — KHÔNG phải đồng hồ/BĐS/khách sạn | Med | audience-interests |
+| P7 | Cân nhắc **dòng accessory/entry-tier** để mở phễu (Sabyasachi accessories 3–6%, "cheaper line" searches) | Med | pattern; cần Maison quyết |
+
+**Giới hạn §18:** đây là nhà quốc tế 100K+/tháng, brand equity nhiều năm → scale không chuyển 1:1; % branded là ước lượng từ click-share; không có data VN (India là analog Á gần nhất); Reem Acra + Zuhair Murad audience-interests gated → adjacency dựa trên 4/6 brand; vắng hard-luxury là vắng-data không phải bằng chứng tuyệt đối.

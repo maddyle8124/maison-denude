@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "purpose": "Pattern analysis of $2000+ couture/bridal fashion brands → keyword+channel+geo+subpage+adjacency pattern for Maison",
+    "source": "SimilarWeb MCP, workflow wf_d7417ce1-f84 (6 brands + cached refs)",
+    "brands": ["sabyasachi.com (~230K/mo, Indian heritage bridal — closest analog)", "eliesaab.com (~130K)", "galialahav.com (~110K bridal couture)", "moniquelhuillier.com (~84K bridal+RTW)", "zuhairmurad.com (~50K couture eveningwear)", "reemacra.com (~7.5K)"],
+    "run_date": "2026-07-03"
+  },
+  "channel_pattern": {
+    "headline": "$2000+ couture = ORGANIC + DIRECT dominant (82-95%), near-ZERO paid for heritage houses. More couture/heritage → less paid; more accessible/RTW → more paid.",
+    "examples": {"Zuhair Murad": "organic 68.7 + direct 20.4 = 89%, paid search 0", "Sabyasachi": "organic 82.3 + direct 12.6 = 94.9%, paid 0", "Monique Lhuillier": "82%, paid 1%", "Elie Saab": "82.9% + paid search 8.4% (PMax on RTW)", "Galia Lahav": "organic 50% + paid search 10.8% + display 6.3% (campaign burst)"},
+    "contrast": "Sau Lee ($475-895) paid search 25.3%; Guo Pei (couture-only) OrganicSocial 49.7% > search. Lower price = more paid."
+  },
+  "keyword_pattern": {
+    "branded_share": "85-98% BRANDED — discovered BY NAME, not category. (Reem Acra ~97%, Sabyasachi ~88%, Zuhair ~85%, Elie Saab ~90%, Monique ~85%; Galia Lahav outlier ~50% via celebrity-wedding SEO)",
+    "nonbranded_that_converts": ["CELEBRITY/RED-CARPET (strongest): 'zendaya wedding dress', 'alia bhatt met gala saree', 'met gala 2025'", "OCCASION/BRIDAL: 'white wedding lehenga', 'haute couture wedding guest dresses'", "generic gown/couture (low share each)", "ACCESSORY/entry (name+product): 'sabyasachi clutch bag', 'sabyasachi earrings'", "season/collection names: 'couture spring summer 2026'", "PRICE-PROBING: 'monique lhuillier cheaper line'", "localized/diaspora branded (Arabic/Japanese renderings)"],
+    "insight": "Category head terms ('luxury dress') each cap <5% → dead end. Win by celebrity-name halo + occasion+brand long-tail. Accessory + 'cheaper line' searches reveal entry-tier demand these houses under-serve."
+  },
+  "geo_pattern": {
+    "headline": "US #1 or top-2 for almost all; CA/UK/AU recur as top-6 (Anglophone diaspora); India in top-6 of ALL.",
+    "diaspora_archetype": "Sabyasachi = India 59% + Pakistan 9 / US 8 / AU 4 / CA 4 / UAE 2.9 → heritage house = home-market + diaspora. Maison analog (HYPOTHESIS, no VN data): Vietnam + Việt diaspora US/AU/CA.",
+    "gulf": "modest — Elie Saab Saudi 6.2%; strongest for Middle-East-heritage houses."
+  },
+  "subpage_pattern": {
+    "engines": ["BRIDAL/WEDDINGS hub (Sabyasachi /weddings 8.4%, Galia /bridal-couture 6.6%)", "NAMED SEASONAL COLLECTION landing (Zuhair /couture-spring-summer-2026 = 16.1%, biggest page in set)", "deep-linkable PDPs (social/press traffic; homepage only ~3%)", "APPOINTMENT/consultation page as couture conversion endpoint (Reem Acra /appointments = #2 page 8.1%)", "ACCESSORIES/jewellery sub-engine (Sabyasachi /accessories 5.7%, /fine-jewellery 3.1%)"],
+    "takeaway": "Homepage is NOT the entry. Winning structure = bridal hub + named collection pages + deep-link PDPs + appointment page + accessories entry-tier."
+  },
+  "adjacency_trace_ANSWER_to_highend_journey_question": {
+    "verdict": "WEAK-TO-ABSENT for watches / jewelry-houses / real-estate / 5-star-hotels / luxury-travel. NO co-visitation to those verticals surfaced for ANY brand.",
+    "what_IS_seen": {"discovery_social": "Instagram (Sabyasachi affinity 76 = strongest co-visit), Pinterest (Galia 69), YouTube, TikTok", "gen_ai_tools": "ChatGPT / Claude / Gemini heavy (Sabyasachi, Elie Saab, Monique) → AI-search optimization is an emerging channel", "department_stores": "Saks + Nordstrom (Monique L.)", "luxury_resale": "TheRealReal (Galia 37), Poshmark (36)", "couture_competitors": "Sabyasachi→ManishMalhotra; Galia→GraceLovesLace", "contemporary_ecom": "Revolve, Reformation, Anthropologie/BHLDN"},
+    "what_is_NOT_seen": "watches/jewelry brand sites, real estate portals, hotel/airline/travel — NONE.",
+    "conclusion": "CANNOT credibly target 'couture buyers also browse watches/hotels/RE' on this evidence. Defensible adjacency audiences = IG/Pinterest visual discovery + luxury dept-store shoppers (Saks/Nordstrom) + luxury-resale (TheRealReal) + elevated contemporary e-com (Revolve/Reformation). NOTE: absence of data ≠ proof of no behavior (hard-luxury sites may be too low-frequency to surface)."
+  },
+  "CRITICAL_caveat_scale_mismatch": "These are 100K+/mo houses with decades of brand equity. Their ORGANIC+BRANDED dominance & 0% paid is the END STATE of houses that ALREADY won brand recall. Maison is emerging → must CREATE demand → likely needs MORE paid/social seeding early. Do NOT read '0% paid search' as 'avoid paid'; read it as the target state after brand recall is built.",
+  "google_ads_mcp_assessment": "Official Google repo but minimal + READ-ONLY: 3 tools (search account / metadata / list-customers). NO keyword planner, NO campaign creation, NO competitor/audience/market data — only the connected account's own data. Needs Ads account + developer token + OAuth. Cannot answer 'what luxury shoppers search' nor build audiences. Keyword Planner + In-market/Custom audiences live in the FULL Google Ads API/UI, not this MCP."
+}
