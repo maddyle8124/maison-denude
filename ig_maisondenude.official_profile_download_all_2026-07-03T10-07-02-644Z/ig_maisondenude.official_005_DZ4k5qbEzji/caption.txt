@@ -1,0 +1,11 @@
+Caption:
+Eden of roses, fleeting and permanent all at once.
+
+--------
+Meta:
+	date(YYYY-MM-DD): 2026-06-22
+	shortcode: DZ4k5qbEzji
+	profile_order: 005
+	pk: 17897315694496976
+	created_at_raw: 1782122370
+	

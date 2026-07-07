@@ -1,0 +1,13 @@
+Caption:
+In conversation with Skye Lin 
+
+“My life has always been about challenging the status quo and constantly asking if things can be done or seen differently.”
+
+--------
+Meta:
+	date(YYYY-MM-DD): 2026-05-13
+	shortcode: DYR4pl9k5We
+	profile_order: 015
+	pk: 18079585988553936
+	created_at_raw: 1778676618
+	

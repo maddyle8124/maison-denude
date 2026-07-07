@@ -1,0 +1,11 @@
+Caption:
+Escapism has a name.
+
+--------
+Meta:
+	date(YYYY-MM-DD): 2026-06-05
+	shortcode: DZM8EbCk8r-
+	profile_order: 008
+	pk: 17892533556528015
+	created_at_raw: 1780658230
+	

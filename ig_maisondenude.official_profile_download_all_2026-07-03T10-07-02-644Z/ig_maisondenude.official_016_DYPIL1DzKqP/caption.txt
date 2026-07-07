@@ -1,0 +1,13 @@
+Caption:
+In conversation with Skye Lin 
+
+“ I think I’ve always been a soft person and it didn’t sit well with me. I always thought I have to be strong and over time I’ve learned to fully embrace my softness, especially in a society where sometimes gentleness is often valued as weakness. “
+
+--------
+Meta:
+	date(YYYY-MM-DD): 2026-05-12
+	shortcode: DYPIL1DzKqP
+	profile_order: 016
+	pk: 17874547521601464
+	created_at_raw: 1778589642
+	

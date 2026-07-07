@@ -1,0 +1,16 @@
+Caption:
+Meet the founder who turns crisis into bouquets.
+
+Skye Lin is an interdisciplinary artist and designer who has carved a distinctive place in the creative landscape. Her practice spans photography, artistic direction, scenography, and large-scale installations.
+
+Her authentic approach and boundary-pushing vision are reshaping botanical artistry, earning her a place on Forbes 30 Under 30 in 2024 as a trailblazer in fashion and the arts.
+This recognition speaks not only to Lin’s entrepreneurial success, but to her role in redefining the intersection of floristry, art, and commerce. Through Pinker Times, she continues to push creative boundaries, inviting audiences into a world where botanicals become art and every arrangement carries a story.
+
+--------
+Meta:
+	date(YYYY-MM-DD): 2026-05-12
+	shortcode: DYOucj6E0sU
+	profile_order: 017
+	pk: 18094781138185586
+	created_at_raw: 1778571272
+	

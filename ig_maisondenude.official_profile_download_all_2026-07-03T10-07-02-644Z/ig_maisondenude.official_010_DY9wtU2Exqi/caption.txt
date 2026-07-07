@@ -1,0 +1,13 @@
+Caption:
+People o MAISON DENUDE. 
+
+Gigi Hương Giang, a pink constellation caught in motion.
+
+--------
+Meta:
+	date(YYYY-MM-DD): 2026-05-30
+	shortcode: DY9wtU2Exqi
+	profile_order: 010
+	pk: 17939924880245983
+	created_at_raw: 1780148849
+	

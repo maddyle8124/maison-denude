@@ -1,0 +1,11 @@
+Caption:
+The Royal Purple
+
+--------
+Meta:
+	date(YYYY-MM-DD): 2026-06-18
+	shortcode: DZu5qRCk7yf
+	profile_order: 006
+	pk: 18105696415988193
+	created_at_raw: 1781826702
+	

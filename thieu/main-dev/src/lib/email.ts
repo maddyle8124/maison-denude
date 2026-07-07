@@ -123,7 +123,7 @@ export function buildBookingEmail(
   <body style="margin:0;padding:0;background-color:#f7f7f7;font-family:Georgia,'Times New Roman',serif;">
     <div style="max-width:560px;margin:0 auto;padding:32px 16px;">
       <div style="background-color:#000000;color:#ffffff;text-align:center;padding:24px 16px;letter-spacing:0.35em;font-size:16px;">
-        MAISON D&Eacute;NUD&Eacute;
+        MAISON DENUDE
       </div>
       <div style="background-color:#ffffff;padding:24px 0;">
         <p style="margin:0 16px 16px;color:#111111;font-size:14px;">
@@ -134,7 +134,7 @@ export function buildBookingEmail(
         </table>
       </div>
       <p style="text-align:center;color:#999999;font-size:11px;letter-spacing:0.08em;margin-top:16px;">
-        Maison D&eacute;nud&eacute; — booking notification
+        Maison Denude — booking notification
       </p>
     </div>
   </body>

@@ -1,0 +1,11 @@
+Caption:
+Intellectual feminine envisioned in wearable form.
+
+--------
+Meta:
+	date(YYYY-MM-DD): 2026-06-28
+	shortcode: DaHsEzBKb6v
+	profile_order: 004
+	pk: 18076852148674413
+	created_at_raw: 1782629731
+	
