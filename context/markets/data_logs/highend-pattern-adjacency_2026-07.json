@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "purpose": "$2000+ fashion keyword/traffic PATTERN + HNW-adjacency interception test — VERIFIED (adversarial workflow wq5w039dv)",
+    "date": "2026-07-04",
+    "critical": "Workflow's first-pass synthesis FABRICATED data; adversarial verify caught it. This file stores ONLY what survived verification. Fabricated & cut: Shiatzy '99% branded' + Guo Pei '93%' (no keyword data); a mis-merged '8-brand $2000+ cohort' + '92% median'; celebrity click counts (973 zendaya, Cong Tri celeb=10% NB); Phan Huy '+80% seasonal'; and the ENTIRE Q2 adjacency overlap dataset (Cartier 6.40% etc. — no overlap call was ever run)."
+  },
+  "q1_pattern_verified": {
+    "branded_share_measured": {"elie_saab": 90, "phan_huy": 92, "cong_tri": 75, "galia_lahav": 61, "shanghai_tang": 44, "qipology": 13, "xeoxo": 60},
+    "xeoxo_note": "Xéo Xọ (VN mass áo dài, CHEAP) = ~60% branded (branded_type=all share-of-total; 'xéo xọ' alone = 43.5% of clicks). HIGHER branded than pricier Shanghai Tang (44%) / Qipology (13%). → BREAKS the clean price→branded story: the real driver is brand FAME/recall, not price. A cheap-but-cult brand is name-driven; a pricier-but-obscure one is category-driven. Strategic reframe: Maison must MANUFACTURE recall (press/celebrity/social), not rely on price tier.",
+    "vn_keyword_overlap_set_branded_pct": {
+      "_method": "branded_type=all, share-of-total sum of brand-name terms, organic, 2026-03..2026-05",
+      "phuong_my": {"branded": 100, "type": "designer", "volume": "tiny (~tens clicks)"},
+      "thuy_design_house": {"branded": 99, "type": "designer", "volume": "tiny"},
+      "la_hang": {"branded": 95, "type": "áo dài designer", "volume": "tiny", "note": "measured via collection name 'áo dài ngân an'; nobody searches 'la hằng' directly"},
+      "phan_huy": {"branded": 90, "type": "couture", "volume": "meaningful"},
+      "cong_tri": {"branded": 75, "type": "couture", "volume": "meaningful"},
+      "xeoxo": {"branded": 60, "type": "mass áo dài (cult)", "volume": "meaningful"},
+      "vu_viet_ha": {"branded": 45, "type": "áo dài", "volume": "very tiny"},
+      "ha_cuc": {"branded": 44, "type": "mass áo dài", "volume": "meaningful", "note": "lives on generic 'áo dài hcm / áo dài hà nội / áo dài truyền thống' — category-driven"}
+    },
+    "vn_set_reading": "VN designer/couture brands = name-driven (75-100% branded); VN mass áo dài (Hà Cúc 44%) = category-driven ('áo dài + location/type'). Xéo Xọ (60%) > Hà Cúc (44%) because of cult-fame. Confirms: designer ⇒ own the NAME; generic 'áo dài …' terms = the mass brands' turf. Caveat: 4 of 8 (Phương My/Thuỷ/La Hằng/Vũ Việt Hà) have tiny organic volume → directional not precise.",
+    "reading": "Discovery is NAME-DRIVEN when a brand has RECALL/fame (couture usually does; Xéo Xọ shows a cheap brand can too). Category head-terms cap <5% for famous brands; category/product search dominates only OBSCURE brands (Qipology 87% non-branded). Lever = fame, not price. NO CONFLICT with SEO: still do brand-name SEO + product SEO on SPECIFIC demand terms (wedding guest dress / modern ao dai / áo dài cưới); only skip GENERIC head-terms (luxury/designer dress) where cheap mass retailers dominate.",
+    "channel_mix_measured_pct": {
+      "elie_saab": {"organic_search": 60.6, "direct": 17.2, "paid_search": 10.6, "organic_social": 5.5, "paid_social": 2.9, "referral": 3.4},
+      "galia_lahav": {"organic_search": 53.9, "direct": 20.1, "paid_search": 13.1, "organic_social": 4, "paid_social": 0.6, "referral": 5.9},
+      "phan_huy_feb": {"organic_search": 47.6, "direct": 40.1, "paid_search": 0, "organic_social": 2.8, "paid_social": 1.9, "referral": 7.6},
+      "shanghai_tang": {"organic_search": 61.9, "direct": 18.3, "paid_search": 8.8, "organic_social": 1.9, "paid_social": 6.7, "referral": 2}
+    },
+    "channel_reading": "Organic + Direct = 78-88% owned-intent. Paid thin BUT present at bridal houses fighting occasion terms (Galia 13.1%, Elie 10.6% paid search) + accessible-luxury (Shanghai Tang). Cong Tri channels GATED (404).",
+    "geo_measured": {
+      "cong_tri": {"US": 60.7, "VN": 28.8, "CA": 6.6},
+      "phan_huy": {"US": 45.1, "VN": 32.1, "GB": 7.2},
+      "galia_lahav": {"US": 48.8, "CA": 8.1, "GB": 6.3},
+      "shiatzy_chen": {"US": 53.3, "TW": 19.6, "ID": 9.6},
+      "elie_saab": {"US": 20.5, "IN": 8.1, "GB": 7.4, "SA": 6.2},
+      "shanghai_tang": {"SG": 21.5, "US": 15.9, "GB": 12}
+    },
+    "geo_reading": "US #1 near-universal (couture 45-61%); VN #2 for both VN analogs (29-32%) = the Maison fingerprint. Elie Saab outlier (MENA/S-Asia heritage). Shanghai Tang (sub-$2000) breaks US-#1 (SG home market).",
+    "nonbranded_beachhead": {"phan_huy_vietnamese_dress_designers_pct_of_nonbranded": 52.8, "qipology_qipao": 12.6, "shanghai_tang_tang_jacket": 17.5, "couture_celebrity_and_product": "PRESENT but per-page click% fabricated → qualitative only"},
+    "site_structure_from_repo_real_study": "collection folders drive 28-61% of traffic; Zuhair /couture-ss-2026 = top page 16.1%; Reem Acra /appointments = #2 8.1%; homepages only 3-11%; Cong Tri /collection ~28.6%."
+  },
+  "q1_playbook_verified": [
+    {"p": "Build for brand-NAME search (all diacritic/EN/VN variants) as primary SEO/SEM asset", "conf": "HIGH"},
+    {"p": "Own 'Vietnamese designer' identity/editorial terms as non-branded beachhead", "conf": "HIGH", "evi": "vietnamese dress designers = 52.8% of Phan Huy non-branded"},
+    {"p": "Site = named collection pages + bridal/occasion hub + appointment endpoint (not homepage/cart)", "conf": "HIGH"},
+    {"p": "US-first, VN-diaspora-second (USD, US press, VN secondary)", "conf": "HIGH-caveat (Maison VN-leg is hypothesis)"},
+    {"p": "Bilingual SEO (EN + VN diacritic/non-diacritic)", "conf": "MEDIUM"},
+    {"p": "One indexed landing page per celebrity dressing (/[celeb]-in-maison)", "conf": "MEDIUM (no fabricated click numbers)"},
+    {"p": "REVERSAL: do NOT read tier's ~0% paid as 'avoid paid' — emerging Maison needs MORE paid/social seeding early to CREATE demand", "conf": "MEDIUM"},
+    {"p": "REVERSAL: LIST public RTW prices; gate only bespoke/couture", "conf": "MEDIUM"}
+  ],
+  "wedding_seasonality_proxy_2025-06_to_2026-05": {
+    "_method": "SimilarWeb keyword-trend endpoints hard-cap at 3 months → cannot show 12-mo seasonality curve. PROXY = monthly website visits (allows long windows) of 2 big wedding-attire retailers, worldwide total. NOT keyword search volume; US-centric retailers = Western/N-hemisphere season.",
+    "azazie.com_visits_M": {"2025-06":6.81,"2025-07":6.77,"2025-08":7.74,"2025-09":7.07,"2025-10":5.73,"2025-11":5.52,"2025-12":5.51,"2026-01":9.92,"2026-02":11.20,"2026-03":13.08,"2026-04":13.66,"2026-05":12.43},
+    "davidsbridal.com_visits_M": {"2025-06":2.73,"2025-07":2.94,"2025-08":3.05,"2025-09":3.36,"2025-10":3.21,"2025-11":3.15,"2025-12":3.07,"2026-01":4.26,"2026-02":3.70,"2026-03":5.57,"2026-04":4.53,"2026-05":4.68},
+    "reading": "Both: trough Oct-Dec → sharp climb from Jan → peak Mar-Apr → high through spring. Driver = engagement season (Nov-Feb proposals) → dress shopping Jan-Apr. 'wedding guest dress' keyword (US) still rising Apr→May (67K→83K) → guest-dress buying peaks later (into summer). ACTION: publish wedding content/collection late-year (Oct-Dec) to catch the Jan-Apr surge.",
+    "caveats": ["proxy = site traffic not search volume", "US retailers = Western season", "VN 'áo dài cưới' seasonality (likely Oct-Dec + post-Tết) NOT measured — hard 3-mo keyword cap"]
+  },
+  "q2_adjacency_verdict": {
+    "verdict": "NO — Maison cannot be shown to intercept HNW-adjacency (hotels/RE/watches/jewelry) as an intent-capture channel.",
+    "why": "The entire adjacency overlap dataset was FABRICATED (no SimilarWeb overlap call ever run vs Cartier/Tiffany/Sotheby's/Aman/Four Seasons/Rolex). The only REAL adjacency crawl (6 fashion houses, prior repo work) found the OPPOSITE: NO co-visitation to watches/jewelry/RE/hotels for any brand.",
+    "real_couture_adjacency": ["Instagram", "Pinterest", "department stores (Saks/Nordstrom)", "luxury resale (TheRealReal)", "contemporary e-com (Revolve/Reformation)"],
+    "founder_hnw_leads_status": "HSBC Premier / luxury RE / watches-jewelry / 5-star hotels = founder hypotheses marked 'needs validation'; never crawled; require primary validation before spend.",
+    "if_tested": "At most top-of-funnel AWARENESS (Google Ads custom-intent/Display or co-marketing) — cannot be proven to convert a $2000+ bespoke sale in SimilarWeb (ad-config/attribution outcome); sequence AFTER owned/direct channels; validate VN/SEA geo first.",
+    "confidence": "HIGH"
+  }
+}

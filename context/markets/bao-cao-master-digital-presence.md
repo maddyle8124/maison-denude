@@ -458,4 +458,10 @@ _Bổ sung mảnh §18 còn thiếu — pattern đo trên **nhà Việt + brand 
 - **Gradient branded theo giá (đo được):** Elie Saab ~90% · Phan Huy ~90–92% · Công Trí ~75% · Galia Lahav 61% → **Shanghai Tang 44% · Qipology 13%** (accessible-luxury). Xác nhận: **giá càng cao càng đi bằng tên**; category-SEO là sân của brand giá thấp. ✅
 - **Non-branded của nhà Việt:** "vietnamese dress designers" = **52,8%** non-branded của Phan Huy (khớp P3 — editorial/nhận diện là beachhead). ✅
 - **Adjacency:** workflow độc lập cũng ra **NO** (khớp §18.5); lớp phản biện đã loại số overlap bịa → §18.5 giữ nguyên là kết luận đúng.
-- **Deck trình bày 1-FILE (thay 2 deck cũ, chart-first):** [`deck-hien-dien-so-maison.html`](./deck-hien-dien-so-maison.html) — 9 slide chart, trả lời trực tiếp Câu-1 (pattern→playbook) + Câu-2 (adjacency = NO).
+- **Deck trình bày 1-FILE (thay 2 deck cũ, chart-first):** [`deck-hien-dien-so-maison.html`](./deck-hien-dien-so-maison.html) — 13 slide chart (gồm Sabyasachi = analog gần nhất), trả lời trực tiếp Câu-1 (pattern→playbook) + Câu-2 (adjacency = NO).
+
+**Ads-config test cho HNW-adjacency (đề xuất stakeholder — vẫn muốn thử):** dù adjacency = NO như *kênh bắt-intent*, vẫn test được như **phép thử AWARENESS có kỷ luật** (🟡, P2, không cam kết):
+- **Audience, KHÔNG Search:** Google Ads Custom-Intent (URL/keyword khách sạn 5★/BĐS/đồng hồ) + In-market (Luxury Travelers/Real Estate/Luxury Goods/Bridal) + Affinity → Display/Demand Gen/YouTube; Meta interest + **Lookalike từ list khách**.
+- **Đo bằng GA của Maison** (SimilarWeb không đo được convert): view-through + assisted conversion + **branded-search lift** + form "đặt lịch"; có **holdout** + **tiêu chí dừng** (0 assisted + CP-lead cao sau 3–4 tuần → tắt).
+- **Kỳ vọng:** đầu phễu, convert trực tiếp thấp; thành công = brand-search lift + reach rẻ đúng tệp. Sau kênh owned; validate VN/SEA trước.
+- **Công cụ:** google-ads MCP read-only → không dựng audience được; cần **tài khoản Google Ads đầy đủ** (Matthew/performance).

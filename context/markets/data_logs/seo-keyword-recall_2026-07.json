@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "purpose": "Branded-share (recall) spectrum + category-SEO ownership — for the SEO bucket of the digital-marketing plan deck",
+    "source": "SimilarWeb keywords-agg branded_type=all (share-of-total), organic, 2026 (3-mo windows 03-05 / 04-06)",
+    "key_insight": "RECALL (not price tier) determines how a brand is found. High-recall brands (couture + cult) are name-led; low-recall brands win via category/product SEO. The generic wedding/dress/áo-dài category turf is OWNED by category-SEO players (LAHAVA 15%, MEAN BLVD 28%) — Maison cannot out-SEO them on generic terms, but the specific winnable subset (custom wedding ao dai / vietnamese wedding dress / vietnamese bridal couture) is real demand LAHAVA proves."
+  },
+  "branded_share_spectrum_pct": {
+    "lahava.com": 15, "meanblvd.com": 28, "xeoxo.com": 60, "cong_tri": 75, "galia_lahav": 61, "sabyasachi": 88, "phan_huy": 90, "elie_saab": 90, "huongboutique.com": 90
+  },
+  "category_seo_winners": {
+    "lahava.com": {"branded": 15, "type": "made-to-measure bridal, diaspora", "owns": ["vietnam bridal boutique (9%)", "gown makers in vietnam (8.4%)", "vietnam(ese) wedding dress (~15% combined)", "custom wedding ao dai (2.9%)", "vietnamese bridal couture (2.2%)", "ao dai online usa (2%)", "vietnam wedding dress shop online international shipping"], "read": "Owns the diaspora wedding-áo-dài category search + international-shipping intent. Proves the wedding-áo-dài category is real demand & winnable via SEO (not all mass red-ocean)."},
+    "meanblvd.com": {"branded": 28, "type": "designer-platform / RTW", "owns": ["vietnam cocktail dress", "vietnamese dresses", "elegant black silk dress with long sleeves", "vietnamese clothing brands", "vietnamese fashion", "singapore/vietnam clothing stores that ships to us", "formal wear for women"], "read": "Classic product/occasion-descriptor SEO engine — many product pages each catching long-tail."}
+  },
+  "cult_recall_brands": {
+    "huongboutique.com": {"branded": 90, "note": "'huong boutique' alone = 65% of organic clicks. Mass RTW but ~90% name-led → cult diaspora recall. Proves recall>tier."},
+    "xeoxo.com": {"branded": 60, "note": "cheap áo dài but cult-famous → 60% name."}
+  },
+  "resolution_of_congtri_conflict": "NOT a contradiction. (a) 'custom/bespoke/luxury ao dai' EN long-tail = ~0 demand → do NOT chase those exact phrases. (b) Công Trí's /collection folder = 28.6% of traffic because it has MANY well-structured product/collection pages, each named in English after DEMAND-BACKED descriptors (silk gown, poplin dress) — collectively a crawlable browse-engine + the landing set for branded-search visitors. So: product-page SEO works as STRUCTURE (many pages, demand-backed English names), NOT by ranking #1 for a single zero-demand bespoke head-term. Name product pages after terms with demand (silk evening gown, wedding guest dress, modern ao dai), not 'hand-embroidered bespoke ao dai'.",
+  "action_split": {
+    "Matthew_SEO": "Embed the winnable specific terms into SEO config + name product/collection pages in English after demand-backed descriptors; ensure branded-search for 'Maison Dénudé' + all diacritic/EN/VN variants resolves to the site with rich info to shorten the decision.",
+    "Maison_brand": "Build NAME RECALL (the actual lever) via social/media/PR — currently only FB + IG; expanding channels is Maison's decision. Marketing can suggest, but brand narrative/voice = Maison, not Maddy/Matthew.",
+    "caveat": "Suggesting Maison can 'own high-tier keywords' must be checked against data — generic category terms are owned by LAHAVA/MEAN BLVD; Maison's realistic SEO win = brand-name + specific winnable occasion/wedding terms + on-site conversion, NOT generic head-terms."
+  }
+}

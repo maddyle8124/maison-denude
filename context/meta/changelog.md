@@ -12,6 +12,7 @@ _Change log for the `/context` master repo. Newest first._
 - **`founder-signals.md`:** §4 thêm tín hiệu W2 (diaspora tăng tốc, gut overseas-first của Chi, ranh giới KHÔNG-ultra-couture, web = nhà trust/branding). §6 brand-name QA **tái diễn** (Google hiện logo/tên sai — Matthew đã sửa on-site, là độ trễ re-index). §3 thêm caveat Michelle mic hỏng (chat-only → follow up bằng văn bản) + read quan hệ W2 (ấm hơn/on-track, Chi vẫn hỏi chi tiết, Matthew thẳng thắn về blocker Meta).
 - **`timeline.md`:** current status 04/07 — web LIVE + 2 luồng + ads hoãn + họp cấu trúc tối mai + build ~2–4 tuần rồi chụp BST tháng 7 lên site; thêm milestone 04/07 (web live), 05/07 (họp structure), 09/07 (hạn Maddy gỡ Meta), late-July (build xong).
 - **`markets/_pointer.md`:** block "Week-2 update" — web live, diaspora là centre of gravity, thị trường ứng viên (SG/HK/TW + US/AU/CA), Pinterest, ranh giới couture-adjacent.
+- **Biên bản họp tiếng Việt (mới):** tạo `context/meetings/bien-ban-hop-tuan-2-2026-07-04.md` — bản synthesize đầy đủ tiếng Việt (cập nhật kỹ thuật · insight + phản hồi team · quyết định · việc cần làm theo người · câu hỏi mở · thay đổi vs 27/6 · không khí buổi họp · nguồn+độ tin cậy), có ô giải nghĩa từ chuyên môn + cảnh báo caption. Mở thư mục `context/meetings/` làm nơi lưu biên bản họp; đăng ký trong `_index.md`. Đã QA đối chiếu transcript + brand-language qua workflow verify.
 - Nguồn: `call transcript w2 .srt`. Chưa push/host trừ khi được yêu cầu.
 
 ## 2026-07-03 — Nhận ICP từ MD team → fold vào context + proposal (Maddy)

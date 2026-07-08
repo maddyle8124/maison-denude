@@ -1,7 +1,7 @@
 # Maison Dénudé — Master Context
 
 _The single source of truth for the Maison Dénudé engagement. Read this first._
-_Last updated: 2026-07-03._
+_Last updated: 2026-07-04._
 
 ## What this is
 
@@ -36,6 +36,7 @@ When master and any other doc disagree, **master wins**. `decisions.md` is the l
 | `client-context/jtbd.md` | Jobs-to-be-Done — Maison-as-client + end-customer | seeded (27/6 transcript) |
 | `client-context/competitors.md` | Competitive landscape | seeded (consideration-set + 3-POV, 27/6) |
 | `markets/_pointer.md` | Market research + Playbook (pointer only) | pointer |
+| `meetings/` | Synthesized meeting notes (biên bản họp), one file per call | seeded (W2 27/6→4/7) |
 | `meta/changelog.md` | Change log for this context repo | seeded |
 
 ## Key facts (30-second brief)
@@ -44,7 +45,7 @@ When master and any other doc disagree, **master wins**. `decisions.md` is the l
 - **Engagement:** Phase 1, 7 weeks, kickoff 2026-05-31, target go-live ~2026-07-19. **8M VND** base (+ optional add-ons).
 - **Deliverables:** SEO-optimized Astro website (3 pages) + digital tracking infra (GA4/GTM/GSC/GBP) + Digital Marketing Playbook (3 markets).
 - **Team:** Thiệu/Matthew (dev + SEO), Maddy (research).
-- **Status:** project live (deposit 6/18, domain resolved). Site to lead the next collection ~early July. **ICP delivered (4 personas, OQ-012 resolved); RTW line confirmed (OQ-009).** Next: data-sourcing sign-off (OQ-013) + pick 1–2 competitors to race keywords. Still need OQ-001 (booking email). Buyer base shifting VN → Việt Kiều.
+- **Status (4/7):** **website is LIVE (demo)** with real global traffic; GA4 + Search Console shared. Priority = website + content, two workstreams in parallel, **ads deferred** (paid social blocked — OQ-015). ICP delivered (4 personas, OQ-012); RTW line confirmed (OQ-009); booking email resolved (OQ-001). **Diaspora/overseas now the strategic centre of gravity; sequencing unresolved (OQ-014).** Positioning boundary: premium made-to-measure / couture-adjacent, NOT ultra-couture.
 
 ## Related (outside master)
 
