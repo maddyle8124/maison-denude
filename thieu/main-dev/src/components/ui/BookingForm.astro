@@ -562,9 +562,16 @@ const f = bookingFlow;
     letter-spacing: 0.04em;
     transition: border-color 0.3s ease;
   }
+  .booking__input:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
   .booking__input:focus {
     outline: none;
     border-bottom: var(--field-border-focus);
+  }
+  /* Filled fields keep a brighter rule so completed fields read as "done". */
+  .booking__input:not(:placeholder-shown) {
+    border-bottom-color: rgba(255, 255, 255, 0.45);
   }
   .booking__input::placeholder {
     color: var(--color-text);
@@ -630,43 +637,68 @@ const f = bookingFlow;
   }
   .booking__cal-nav {
     display: flex;
-    gap: 14px;
+    gap: 6px;
   }
   .booking__cal-arrow {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1;
     color: var(--color-text);
     background: transparent;
-    border: none;
+    border: 1px solid transparent;
+    border-radius: 0;
     cursor: pointer;
-    padding: 4px 6px;
-    opacity: 0.75;
-    transition: opacity 0.25s ease;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
   }
   .booking__cal-arrow:hover:not(:disabled) {
     opacity: 1;
+    border-color: var(--color-rule);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .booking__cal-arrow:focus-visible {
+    outline: 1px solid var(--color-text);
+    outline-offset: 2px;
+  }
+  .booking__cal-arrow:active:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
   }
   .booking__cal-arrow:disabled {
-    opacity: 0.2;
+    opacity: 0.18;
     cursor: default;
   }
 
   .booking__cal-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 2px;
+    gap: 6px;
   }
   .booking__cal-dow {
     text-align: center;
     font-family: var(--font-primary);
     font-size: var(--text-footer-bar);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    opacity: 0.4;
-    padding-bottom: 10px;
+    opacity: 0.35;
+    padding-bottom: 12px;
   }
-  .booking__cal-cell {
+
+  /* ——— Calendar day states ———
+     NOTE: `.booking__cal-cell` nodes are created in the client <script> via
+     document.createElement, so they DON'T carry Astro's scoping attribute.
+     Every selector below is wrapped in :global() so it actually applies to the
+     JS-built elements (a plain scoped selector would match nothing).
+
+     Unavailable : dim, no ring, no interaction.
+     Available   : circular hairline ring + full-white numeral (reads "choosable").
+     Hover       : ring fills faintly, numeral brightens.
+     Selected    : solid white disc, black numeral — the single filled circle. */
+  .booking :global(.booking__cal-cell) {
     aspect-ratio: 1;
     display: flex;
     align-items: center;
@@ -675,47 +707,43 @@ const f = bookingFlow;
     font-family: var(--font-primary);
     font-size: var(--text-field);
     font-weight: var(--fw-extralight);
-    color: var(--color-text);
+    color: rgba(255, 255, 255, 0.2);
     background: transparent;
     border: none;
-    border-radius: 0;
-    cursor: pointer;
-    letter-spacing: 0.02em;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  .booking__cal-cell--blank {
-    cursor: default;
-  }
-  .booking__cal-cell.is-muted {
-    color: rgba(255, 255, 255, 0.16);
-    cursor: default;
-  }
-  /* Availability marker — monochrome by design (design-system: "No accent
-     color"). A small low-opacity dot in the site's own text colour. */
-  .booking__cal-cell.has-slots::after {
-    content: '';
-    position: absolute;
-    bottom: 7px;
-    width: 3px;
-    height: 3px;
     border-radius: 50%;
-    background: var(--color-text);
-    opacity: 0.55;
+    cursor: default;
+    letter-spacing: 0.02em;
+    transition: background-color 0.18s ease, color 0.18s ease,
+      box-shadow 0.18s ease;
   }
-  .booking__cal-cell.has-slots:hover {
-    background: rgba(255, 255, 255, 0.07);
+  .booking :global(.booking__cal-cell.is-muted) {
+    color: rgba(255, 255, 255, 0.14);
   }
-  .booking__cal-cell.is-active {
+
+  /* Available day — a circular hairline ring; no heavy square outline. */
+  .booking :global(.booking__cal-cell.has-slots) {
+    color: var(--color-text);
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  }
+  .booking :global(.booking__cal-cell.has-slots:hover) {
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: inset 0 0 0 1px var(--color-text);
+  }
+  .booking :global(.booking__cal-cell.has-slots:active) {
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  /* Selected day — a solid white disc with black numeral. One at a time. */
+  .booking :global(.booking__cal-cell.is-active),
+  .booking :global(.booking__cal-cell.has-slots.is-active:hover) {
     background: var(--color-text);
     color: var(--color-bg);
+    box-shadow: inset 0 0 0 1px var(--color-text);
   }
-  .booking__cal-cell.is-active::after {
-    background: var(--color-bg);
-    opacity: 0.7;
-  }
-  .booking__cal-cell:focus-visible {
+  .booking :global(.booking__cal-cell.has-slots:focus-visible) {
     outline: 1px solid var(--color-text);
-    outline-offset: -1px;
+    outline-offset: 2px;
   }
 
   /* ——— Time column ——— */
@@ -746,29 +774,52 @@ const f = bookingFlow;
     flex-direction: column;
     gap: 10px;
   }
-  .booking__time {
+  /* ——— Time-slot state system (mirrors the calendar's ring→fill language) ———
+     Available : hairline ring, centred time.
+     Hover     : ring fills faintly + brightens.
+     Selected  : solid white fill, black text, leading check. */
+  /* Like the calendar cells, `.booking__time` nodes are JS-created — wrap in
+     :global() so these styles actually apply (see the cal-cell note above). */
+  .booking :global(.booking__time) {
     font-family: var(--font-primary);
     font-size: var(--text-field);
     font-weight: var(--fw-extralight);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.1em;
     color: var(--color-text);
     background: transparent;
-    border: 1px solid var(--color-rule);
+    border: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
     border-radius: 0;
-    padding: 12px 18px;
-    text-align: left;
+    padding: 14px 18px;
+    text-align: center;
     cursor: pointer;
-    transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+    position: relative;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   }
-  .booking__time:hover,
-  .booking__time:focus-visible {
-    border-color: var(--color-text);
-    outline: none;
+  .booking :global(.booking__time:hover) {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 0 1px var(--color-text);
   }
-  .booking__time.is-active {
+  .booking :global(.booking__time:focus-visible) {
+    outline: 1px solid var(--color-text);
+    outline-offset: 2px;
+  }
+  .booking :global(.booking__time:active) {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  /* Selected slot — solid fill, black text, a leading check. Clearly the pick. */
+  .booking :global(.booking__time.is-active) {
     background: var(--color-text);
     color: var(--color-bg);
-    border-color: var(--color-text);
+    box-shadow: inset 0 0 0 1px var(--color-text);
+  }
+  .booking :global(.booking__time.is-active)::before {
+    content: '✓';
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.85em;
   }
 
   /* ——— Consultation type chips ——— */
@@ -839,17 +890,28 @@ const f = bookingFlow;
     width: 100%;
     cursor: pointer;
     margin-top: var(--form-label-gap);
-    transition: background-color 0.35s ease, color 0.35s ease;
+    transition: background-color 0.35s ease, color 0.35s ease, opacity 0.2s ease;
   }
-  .booking__submit:hover,
+  .booking__submit:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
   .booking__submit:focus-visible {
     background: var(--color-text);
     color: var(--color-bg);
-    outline: none;
+    outline: 1px solid var(--color-text);
+    outline-offset: 3px;
+  }
+  .booking__submit:active {
+    opacity: 0.8;
   }
   .booking__submit:disabled {
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: default;
+  }
+  .booking__submit:disabled:hover {
+    background: transparent;
+    color: var(--color-text);
   }
 
   .booking__error {
