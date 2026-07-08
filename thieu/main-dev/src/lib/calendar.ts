@@ -111,6 +111,10 @@ export function buildEventPayload(input: EventInput): Record<string, unknown> {
 
   const typeLabelVn = input.type === 'Online' ? 'Tư vấn trực tuyến' : 'Tư vấn tại xưởng';
   const typeLabelEn = input.type === 'Online' ? 'Online consultation' : 'In-store atelier visit';
+  // D-BOOK-EMAIL-01: the calendar-invite SUBJECT (Google shows `summary` as the
+  // email title) is an elegant English line — brand + type, no client name, no
+  // VN/EN cram. The client name + bilingual detail live in the event body below.
+  const subjectType = input.type === 'Online' ? 'Online' : 'In Person';
   const cancelUrl = escapeHtml(input.cancelUrl);
   const placeVn = input.type === 'Online'
     ? 'Buổi tư vấn diễn ra qua Google Meet (liên kết ở trên).'
@@ -119,8 +123,10 @@ export function buildEventPayload(input: EventInput): Record<string, unknown> {
     ? 'This consultation takes place over Google Meet (link above).'
     : `Location: ${escapeHtml(input.atelierAddress)}`;
 
-  // D-9 — bilingual summary: VN first, EN after (plain text — Google shows it raw).
-  const summary = `Maison Denude — ${typeLabelVn} / ${typeLabelEn}: ${namePlain}`;
+  // D-BOOK-EMAIL-01 — elegant English subject: "Private Consultation — Maison
+  // Denude (Online|In Person)". (Supersedes the old bilingual+name summary for
+  // the title only; the body below stays bilingual per D-9.)
+  const summary = `Private Consultation — Maison Denude (${subjectType})`;
 
   // D-9 — bilingual description. Google renders a limited HTML subset in the
   // event body; use it for a clean, on-brand layout instead of a raw field dump.

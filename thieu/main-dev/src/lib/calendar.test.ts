@@ -168,11 +168,16 @@ describe('buildEventPayload', () => {
     expect(desc).toContain('<b>Maison Denude</b>');
   });
 
-  it('summary is present and bilingual-ready (non-empty string)', () => {
-    const p = buildEventPayload(baseInput) as { summary: string };
-    expect(typeof p.summary).toBe('string');
-    expect(p.summary.length).toBeGreaterThan(0);
-    expect(p.summary).toContain(baseInput.clientName);
+  it('summary (email subject) is the elegant English line — brand + type, no client name (D-BOOK-EMAIL-01)', () => {
+    const online = buildEventPayload(baseInput) as { summary: string };
+    expect(online.summary).toBe('Private Consultation — Maison Denude (Online)');
+
+    const instore = buildEventPayload({ ...baseInput, type: 'Instore' }) as { summary: string };
+    expect(instore.summary).toBe('Private Consultation — Maison Denude (In Person)');
+
+    // The client name must NOT leak into the subject (it lives in the body only).
+    expect(online.summary).not.toContain(baseInput.clientName);
+    expect(instore.summary).not.toContain(baseInput.clientName);
   });
 
   it('does not inject unescaped HTML tags from user values into the description', () => {
