@@ -6,6 +6,14 @@
 > log a new decision row (proposed id **D-BOOK-04**) in `context/frontend/decisions.md`
 > and this doc becomes the buildable page spec.
 >
+> **D-BOOK-INFRA-01 (2026-07-08, binding correction from user):** the Cloudflare Worker
+> `maisondenude-web` MUST live in the **thieuxmaison@gmail.com** account (ID
+> `73fb68b2979b1b17abbafc4eccdbc354`), NOT nguyenthaithieu (`ecb2e6bb13ae7aeba7fa7c23b64d43a0`).
+> The domain **maisondenude.com is managed within the thieuxmaison account.** `wrangler.jsonc`
+> historically had the wrong `account_id` (`ecb2e6bb…`) — an ERROR to fix, not intended state.
+> All Worker secrets (GOOGLE_*/GCAL_*/SUPABASE_*/RESEND_*) and the production deploy target
+> thieuxmaison. Consistent with D-12 (thieuxmaison = canonical project account for ALL registrations).
+>
 > **Why this exists:** turn the current "request → team replies within 24h" flow (Supabase
 > insert + Resend notification email, D-BOOK-01/02) into an **instant self-serve booking**:
 > the client picks a real open time slot, and on submit the system creates a confirmed

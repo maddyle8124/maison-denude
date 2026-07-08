@@ -3,7 +3,9 @@
 	"compatibility_date": "2026-06-24",
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "maisondenude-web",
-	"account_id": "ecb2e6bb13ae7aeba7fa7c23b64d43a0",
+	// D-BOOK-INFRA-01: the worker + domain live in the thieuxmaison account.
+	// The previous id (ecb2e6bb… = nguyenthaithieu) was an error.
+	"account_id": "73fb68b2979b1b17abbafc4eccdbc354",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
 		"directory": "./dist",
