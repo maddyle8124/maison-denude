@@ -6,6 +6,18 @@
 > log a new decision row (proposed id **D-BOOK-04**) in `context/frontend/decisions.md`
 > and this doc becomes the buildable page spec.
 >
+> **D-BOOK-EMAIL-01 (2026-07-08, user-approved):** the Google Calendar invite SUBJECT
+> (Google renders the event `summary` as the invitation email title) is a clean English
+> line: **`Private Consultation — Maison Denude (Online)`** / **`(In Person)`**. It drops
+> the old cluttered brand+bilingual+name format for the TITLE only — the client name and
+> the full VN+EN detail stay in the event BODY (D-9 body unchanged). Note: Gmail's
+> "Invitation from an unknown sender:" prefix and the trailing time/organizer address are
+> added by the recipient's Gmail and are NOT under our control. Implemented in
+> `main-dev/src/lib/calendar.ts` (`summary`). Also on 2026-07-08 the prod Worker's Google
+> secrets were synced to thieuxmaison so the invite ORGANIZER shown to clients is
+> `thieuxmaison@gmail.com` (was still nguyenthaithieu on prod) — consistent with
+> D-BOOK-INFRA-01 / D-12.
+>
 > **D-BOOK-INFRA-01 (2026-07-08, binding correction from user):** the Cloudflare Worker
 > `maisondenude-web` MUST live in the **thieuxmaison@gmail.com** account (ID
 > `73fb68b2979b1b17abbafc4eccdbc354`), NOT nguyenthaithieu (`ecb2e6bb13ae7aeba7fa7c23b64d43a0`).

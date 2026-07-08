@@ -4,6 +4,17 @@
 
 ---
 
+## 2026-07-08 (Booking invite subject cleaned up + prod organizer switched to thieuxmaison) — DONE, LIVE
+
+- **Report:** the calendar-invite email title was ugly — "Invitation from an unknown sender: Maison Denude — Tư vấn trực tuyến / Online consultation: {name} @ … (nguyenthaithieu@gmail.com)". User wanted an elegant "[event name] (Online/In person)" title.
+- **What's ours vs Gmail's:** the "Invitation from an unknown sender:" prefix and the trailing "@ time (organizer@…)" are added by the recipient's Gmail — NOT settable by us. The middle part is our event `summary` (calendar.ts) — fully ours. The `(nguyenthaithieu@gmail.com)` in the suffix was a real bug: prod was still organizing events as the OLD test account.
+- **Fix 1 — subject (D-BOOK-EMAIL-01, commit `f75a602`):** changed `summary` in `main-dev/src/lib/calendar.ts` from the bilingual+name cram to `Private Consultation — Maison Denude (Online|In Person)` (English, no client name — name stays in the bilingual body, D-9 body unchanged). Updated `calendar.test.ts` to assert the exact new subject for both types + that the client name does NOT leak into it. 41/41 calendar tests green.
+- **Fix 2 — organizer account:** verified the LOCAL `.dev.vars` refresh token already authenticates as thieuxmaison (primary calendar = thieuxmaison@gmail.com) and can read the configured calendar — so local was correct; PROD secrets were stale (old nguyenthaithieu token/calendar). Synced 5 prod Worker secrets to the thieuxmaison values via `wrangler secret put` (GOOGLE_REFRESH_TOKEN/CLIENT_ID/CLIENT_SECRET/CALENDAR_ID + GCAL_OWNER_EMAIL). Deployed version `82422b17`.
+- **Verified end-to-end on prod:** booked a live slot via the prod action under `thieu.dachill@gmail.com` → inspected the created event with the thieuxmaison token → **SUMMARY = "Private Consultation — Maison Denude (Online)"**, **ORGANIZER = thieuxmaison@gmail.com (self)**. (First booking right after deploy still showed the old subject — Worker version not yet propagated; a 15s wait + re-book confirmed the new subject.) Both test events deleted from the calendar (204).
+- **Gotcha logged:** a booking made in the first ~10s after `wrangler deploy` can still run the previous Worker bundle — wait for propagation before verifying server-side output.
+
+---
+
 ## 2026-07-08 (Booking "Confirm does nothing" dead-click — root-caused + fixed) — DONE, LIVE
 
 - **Report:** user said clicking Confirm on live `/booking` did nothing; "renders the click animation but no effect." Reproduced on prod with the Playwright MCP.
