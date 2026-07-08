@@ -1,0 +1,431 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gợi ý Wireframe Website — Maison Dénudé</title>
+<style>
+:root{
+  --bg:#f3efe8; --card:#fffdfa; --ink:#1c1a17; --taupe:#463f36; --muted:#8a8175;
+  --line:#d8cfbf; --line2:#e7e0d5; --green:#2e7d5b; --gold:#8a6d3b; --blue:#3a6ea1;
+  --red:#a83a3a; --wffill:#f7f2ea; --wffill2:#efe8db;
+  --shadow:0 1px 3px rgba(70,63,54,.08),0 8px 24px rgba(70,63,54,.06);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:15px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:600;color:var(--taupe);letter-spacing:.2px}
+a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{display:grid;grid-template-columns:250px 1fr;max-width:1240px;margin:0 auto}
+.toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:26px 16px;border-right:1px solid var(--line);background:linear-gradient(180deg,#f6f2ec,#efe9df)}
+.toc .brand{font-family:'Playfair Display',Georgia,serif;font-size:18px;color:var(--taupe);line-height:1.25}
+.toc .sub{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin:4px 0 16px}
+.toc a{display:block;color:var(--taupe);font-size:13px;padding:5px 10px;border-radius:7px}
+.toc a:hover{background:#fff;text-decoration:none}
+.toc .grp{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:15px 0 3px;padding-left:10px}
+.main{padding:34px 40px 90px;min-width:0}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 32px;box-shadow:var(--shadow);margin-bottom:22px}
+.hero .kick{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.hero h1{font-size:31px;margin:0 0 8px}
+.lead{font-size:16px;color:#3d3730;margin:0}
+.callout{background:#f6f1e8;border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:13px 18px;margin:16px 0;font-size:14.5px}
+.grid3{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:20px 0 6px}
+.stat{background:var(--wffill);border:1px solid var(--line2);border-radius:11px;padding:13px}
+.stat b{display:block;font-size:21px;color:var(--taupe);font-family:'Playfair Display',Georgia,serif;line-height:1.1}
+.stat span{font-size:12px;color:var(--muted)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:#4a4038;margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line2)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.dot.p{background:var(--green)} .dot.t{background:var(--gold)} .dot.a{background:var(--red)}
+.page{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);margin:20px 0;overflow:hidden;scroll-margin-top:12px}
+.page > .head{padding:20px 26px 16px;border-bottom:1px solid var(--line2);background:linear-gradient(180deg,#fffdfa,#faf6ef)}
+.page .no{font-size:11.5px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase}
+.page h2{font-size:21px;margin:3px 0 6px}
+.page .goal{font-size:14px;color:#4a4038;margin:0}
+.meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.chip{font-size:11.5px;padding:4px 10px;border-radius:20px;background:#efe8db;color:#5a4a2e;border:1px solid var(--line2)}
+.chip.route{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#eef2f8;color:#33507a;border-color:#d6e0ee}
+.chip.cta{background:#e7f1ea;color:#245c43;border-color:#c2e0d0}
+.body{display:grid;grid-template-columns:1.1fr 1fr}
+.device{padding:20px 22px;background:repeating-linear-gradient(45deg,#faf7f1,#faf7f1 10px,#f7f3ec 10px,#f7f3ec 20px);border-right:1px solid var(--line2)}
+.screen{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px;box-shadow:0 2px 10px rgba(70,63,54,.05)}
+.bar{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line2);padding-bottom:7px;margin-bottom:8px;font-size:10px;color:var(--muted)}
+.bar .nav{display:flex;gap:7px}.bar .nav span{background:#efe8db;border-radius:4px;padding:2px 6px}
+.wfb{border:1.5px dashed #c3b8a5;border-radius:8px;background:var(--wffill);padding:11px;margin:7px 0;position:relative}
+.wfb .lab{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--taupe)}
+.wfb .pp{font-size:11.5px;color:var(--muted);margin-top:2px}
+.wfb .n{position:absolute;top:-9px;left:-9px;width:19px;height:19px;border-radius:50%;background:var(--taupe);color:#fff;font-size:10.5px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.wfb.hero-b{background:var(--wffill2);}
+.wfrow{display:flex;gap:7px}.wfrow .wfb{flex:1}
+.grid-ph{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:7px}
+.imgph{background:#ece3d4;border-radius:6px;min-height:42px;display:flex;align-items:center;justify-content:center;color:#c3b39a;font-size:17px}
+.notes{padding:18px 22px}
+.an{border-left:2px solid var(--line);padding:2px 0 13px 14px;margin-left:9px;position:relative}
+.an:last-child{padding-bottom:2px}
+.an .num{position:absolute;left:-10px;top:1px;width:18px;height:18px;border-radius:50%;background:#fff;border:1.5px solid var(--taupe);color:var(--taupe);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.an .lab{font-weight:700;font-size:13px;color:var(--taupe)}
+.an .lab .b{font-size:10px;font-weight:700;margin-left:6px;padding:1px 6px;border-radius:10px;vertical-align:middle}
+.b.p{background:#e5f1ea;color:var(--green)} .b.t{background:#f5ecd8;color:var(--gold)} .b.a{background:#faeceb;color:var(--red)}
+.an .why{font-size:12.7px;color:#4a4038;margin:2px 0 3px}
+.an .src{font-size:11.3px;color:var(--muted)}
+.an .src b{color:var(--gold);font-weight:600}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 26px;box-shadow:var(--shadow);margin:20px 0}
+.box h2{font-size:20px;margin:0 0 12px}
+.box ul{margin:0;padding-left:20px}.box li{margin:7px 0}
+.q{background:#faf5ec;border:1px dashed var(--gold);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:14px}
+.src-list{font-size:13px;color:#4a4038;columns:2;column-gap:26px}
+.src-list div{margin:5px 0;break-inside:avoid}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.toc{display:none}.body{grid-template-columns:1fr}.device{border-right:none;border-bottom:1px solid var(--line2)}.main{padding:20px}.grid3{grid-template-columns:repeat(2,1fr)}.src-list{columns:1}}
+</style>
+
+<div class="wrap">
+<nav class="toc">
+  <div class="brand">Maison Dénudé</div>
+  <div class="sub">Gợi ý Wireframe Website</div>
+  <a href="#top">▚ Tổng quan &amp; nguyên tắc</a>
+  <div class="grp">Điều hướng</div>
+  <a href="#p01">01 · Sơ đồ trang (IA) + Nav</a>
+  <div class="grp">Trang bán</div>
+  <a href="#p02">02 · Trang chủ</a>
+  <a href="#p03">03 · Bộ sưu tập / Lookbook</a>
+  <a href="#p04">04 · Trang sản phẩm</a>
+  <a href="#p05">05 · Bespoke / Atelier</a>
+  <div class="grp">Trang SEO theo dịp</div>
+  <a href="#p06">06 · Áo dài cưới</a>
+  <a href="#p07">07 · Đầm dạ tiệc / Occasion</a>
+  <div class="grp">Trang niềm tin</div>
+  <a href="#p08">08 · Sao &amp; khách mặc · Báo chí</a>
+  <a href="#p09">09 · Journal / Blog</a>
+  <a href="#p11">11 · Câu chuyện NTK / Di sản</a>
+  <div class="grp">Chuyển đổi</div>
+  <a href="#p10">10 · Đặt lịch tư vấn</a>
+  <div class="grp">Cuối</div>
+  <a href="#open">Câu hỏi mở</a>
+  <a href="#src">Nguồn</a>
+</nav>
+
+<main class="main" id="top">
+  <div class="hero">
+    <div class="kick">Deliverable · dựa trên báo cáo Đợt 1 + Đợt 2 · 08/07/2026</div>
+    <h1>Gợi ý cấu trúc &amp; wireframe website cho Maison Dénudé</h1>
+    <p class="lead">Đây là bản phác bố cục (wireframe lo-fi) cho từng trang của website Maison — <b>mỗi khối màn hình đều được gắn lý do và nguồn</b> lấy từ các báo cáo đã làm. Mục tiêu: đưa từ phân tích sang bản vẽ mà Matthew có thể dựng, và Maison có thể duyệt.</p>
+
+    <div class="callout"><b>Nguyên tắc số 1 — trang chủ KHÔNG phải cửa vào chính.</b> Ở mọi đối thủ, cụm trang <b>Bộ sưu tập / Sản phẩm</b> mới là nơi hút khách (28–61% lưu lượng), còn trang chủ chỉ là điểm trung chuyển. Vì vậy website phải được thiết kế quanh các trang bộ sưu tập / sản phẩm / cưới / dạ tiệc làm "cửa hàng", không dồn mọi thứ vào trang chủ.</p></div>
+
+    <div class="grid3">
+      <div class="stat"><b>28–61%</b><span>lưu lượng đổ vào cụm /collection ở mọi đối thủ (Công Trí, Phan Huy, Sau Lee, Qipology, Shanghai Tang)</span></div>
+      <div class="stat"><b>85–98%</b><span>lưu lượng của nhà couture $2000+ là tìm bằng TÊN → phải có trang niềm tin để nuôi recall</span></div>
+      <div class="stat"><b>2 luồng</b><span>tách rõ Ready-to-wear ↔ Bespoke ngay từ thanh điều hướng (mẫu Qipology / Shanghai Tang)</span></div>
+      <div class="stat"><b>83K / 1.863</b><span>"wedding guest dress" (US) &amp; "áo dài cưới" (VN) — cầu giao dịch rõ nhất → cần landing riêng</span></div>
+    </div>
+
+    <div class="legend">
+      <span>Độ tin cậy mỗi khối:</span>
+      <span><span class="dot p"></span><b>Proven</b> — có số liệu / đã chứng minh</span>
+      <span><span class="dot t"></span><b>Nên thử</b> — hợp lý, cần test</span>
+      <span><span class="dot a"></span><b>Tránh</b> — có bằng chứng là sai hướng</span>
+    </div>
+  </div>
+
+  <!-- 01 IA -->
+  <section class="page" id="p01">
+    <div class="head">
+      <div class="no">01 · Điều hướng</div>
+      <h2>Sơ đồ trang (IA) + Thanh điều hướng</h2>
+      <p class="goal">Bản đồ toàn bộ website: tách 2 luồng RTW ↔ Bespoke ngay trong menu, và làm nổi các trang là "cửa vào SEO".</p>
+      <div class="meta"><span class="chip route">sitemap</span><span class="chip">11 trang lõi · quyết định MD-034</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="bar"><span style="font-family:Georgia,serif;color:#463f36;font-size:12px">Maison Dénudé</span><div class="nav"><span>Bộ sưu tập</span><span>May đo</span><span>Cưới</span><span>Dạ tiệc</span><span>Câu chuyện</span><span>Đặt lịch</span></div></div>
+        <div class="wfb"><span class="n">1</span><div class="lab">Menu chính — 2 nhánh</div><div class="pp">Ready-to-wear (may sẵn) · Bespoke / May đo (đặt lịch) tách riêng</div></div>
+        <div class="wfrow">
+          <div class="wfb"><span class="n">2</span><div class="lab">Cửa vào SEO</div><div class="pp">Bộ sưu tập · Sản phẩm · Áo dài cưới · Đầm dạ tiệc</div></div>
+          <div class="wfb"><span class="n">3</span><div class="lab">Trang niềm tin</div><div class="pp">Sao &amp; khách mặc · Báo chí · Câu chuyện NTK</div></div>
+        </div>
+        <div class="wfrow">
+          <div class="wfb"><span class="n">4</span><div class="lab">Journal (SEO)</div></div>
+          <div class="wfb"><span class="n">5</span><div class="lab">Đặt lịch tư vấn</div></div>
+        </div>
+        <div class="wfb"><span class="n">6</span><div class="lab">Footer</div><div class="pp">Newsletter · Pinterest / Instagram · liên hệ · chính sách</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Menu tách 2 nhánh RTW ↔ Bespoke <span class="b p">Proven</span></div><div class="why">Nhà mốt cùng phân khúc tách rõ luồng "mẫu có sẵn" với "may đo riêng" — hai hành trình khách khác hẳn nhau.</div><div class="src"><b>Nguồn:</b> Playbook §3 (việc ưu tiên #1); mẫu Qipology, Shanghai Tang, Phan Huy.</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Đánh dấu "cửa vào SEO" <span class="b p">Proven</span></div><div class="why">Cụm bộ sưu tập / sản phẩm chiếm 28–61% lưu lượng ở mọi đối thủ; đây mới là nơi khách vào, không phải trang chủ. Quảng cáo cũng đổ về đây, không về trang chủ.</div><div class="src"><b>Nguồn:</b> Deep-dive Công Trí/Phan Huy (folder share); Playbook §3.</div></div>
+        <div class="an"><span class="num">3</span><div class="lab">Cụm trang niềm tin trong nav <span class="b p">Proven</span></div><div class="why">85–98% khách couture cao cấp tìm bằng TÊN → cần các trang chứng minh danh tiếng để nuôi recall và chốt khách.</div><div class="src"><b>Nguồn:</b> Playbook §3; Deck Hiện diện số (branded share).</div></div>
+        <div class="an"><span class="num">4</span><div class="lab">Sitemap 11 trang lõi <span class="b p">Proven</span></div><div class="why">Home · Bespoke · RTW · Áo dài cưới · Đầm dạ tiệc · Sao &amp; khách mặc · Báo chí · Bộ sưu tập · Câu chuyện NTK · Đặt lịch · Journal. Dựng trước khi launch bộ sưu tập.</div><div class="src"><b>Nguồn:</b> Playbook §3 (quyết định MD-034, owner Matthew + Maison).</div></div>
+        <div class="an"><span class="num">6</span><div class="lab">Footer gắn Pinterest/IG <span class="b t">Nên thử</span></div><div class="why">Pinterest là kênh khám phá đầu phễu mạnh của cả phân khúc; đưa liên kết social ở footer + newsletter để giữ khách.</div><div class="src"><b>Nguồn:</b> Deck Kế hoạch (Pinterest discovery); Deep-dive §7 Social.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 HOME -->
+  <section class="page" id="p02">
+    <div class="head">
+      <div class="no">02 · Trang bán</div>
+      <h2>Trang chủ (Homepage)</h2>
+      <p class="goal">Giới thiệu thương hiệu &amp; phân luồng khách vào đúng nhánh — là điểm trung chuyển, không phải cửa vào chính.</p>
+      <div class="meta"><span class="chip route">/</span><span class="chip cta">CTA: Khám phá bộ sưu tập · Đặt lịch may đo</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="bar"><span style="font-family:Georgia,serif;color:#463f36;font-size:12px">Maison Dénudé</span><div class="nav"><span>Menu</span></div></div>
+        <div class="wfb hero-b"><span class="n">1</span><div class="lab">Hero — hình BST + câu định vị di sản</div><div class="imgph">◫</div></div>
+        <div class="wfrow">
+          <div class="wfb"><span class="n">2</span><div class="lab">Lối vào Ready-to-wear</div><div class="pp">May sẵn · giá công khai</div></div>
+          <div class="wfb"><span class="n">2</span><div class="lab">Lối vào Bespoke</div><div class="pp">May đo · đặt lịch</div></div>
+        </div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Bộ sưu tập nổi bật</div><div class="grid-ph"><div class="imgph">▦</div><div class="imgph">▦</div><div class="imgph">▦</div></div></div>
+        <div class="wfb"><span class="n">4</span><div class="lab">Hàng logo báo chí</div><div class="pp">"As seen in…"</div></div>
+        <div class="wfb"><span class="n">5</span><div class="lab">Sao &amp; khách mặc Maison</div></div>
+        <div class="wfrow"><div class="wfb"><span class="n">6</span><div class="lab">Áo dài cưới</div></div><div class="wfb"><span class="n">6</span><div class="lab">Đầm dạ tiệc</div></div></div>
+        <div class="wfb"><span class="n">7</span><div class="lab">Dải Đặt lịch tư vấn</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Hero kể di sản, không phải bán ngay <span class="b p">Proven</span></div><div class="why">Định vị Maison là nhà thiết kế/atelier premium; recall theo tên là đòn bẩy, nên hero dựng thương hiệu chứ không giảm giá.</div><div class="src"><b>Nguồn:</b> Báo cáo tổng hợp (định vị); Deck Hiện diện số.</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Hai lối vào RTW &amp; Bespoke <span class="b p">Proven</span></div><div class="why">Phân luồng khách ngay: người mua sẵn và người muốn may đo có nhu cầu khác nhau; đừng bắt họ tự mò.</div><div class="src"><b>Nguồn:</b> Playbook §3; mẫu Qipology/Shanghai Tang.</div></div>
+        <div class="an"><span class="num">3</span><div class="lab">Bộ sưu tập nổi bật → đẩy sang "cửa hàng" <span class="b p">Proven</span></div><div class="why">Vì cụm collection hút 28–61% traffic, trang chủ nên dẫn nhanh xuống đó thay vì giữ khách ở lại.</div><div class="src"><b>Nguồn:</b> Deep-dive (Công Trí BST spring-summer = 17,1% traffic, trang #1 sau home).</div></div>
+        <div class="an"><span class="num">4</span><div class="lab">Logo báo chí + <span class="num" style="position:static;display:inline-flex">5</span> Sao mặc <span class="b p">Proven</span></div><div class="why">Bằng chứng xã hội ngay trên trang chủ để chốt niềm tin cho khách cao cấp.</div><div class="src"><b>Nguồn:</b> Deep-dive (Công Trí: Michelle Obama, Beyoncé, Rihanna, BLACKPINK; Phan Huy: Miss Universe, Hồ Ngọc Hà).</div></div>
+        <div class="an"><span class="num">6</span><div class="lab">Lối tắt Cưới &amp; Dạ tiệc <span class="b p">Proven</span></div><div class="why">Hai dòng doanh thu theo dịp có cầu tìm kiếm rõ → cho vào trang chủ để bắt cả khách duyệt lẫn SEO.</div><div class="src"><b>Nguồn:</b> Master sheet – Blog Keywords (cưới, dạ tiệc).</div></div>
+        <div class="an"><span class="num">7</span><div class="lab">Dải đặt lịch <span class="b p">Proven</span></div><div class="why">Đặt lịch tư vấn là điểm chốt của bespoke; nhắc lại ở cuối trang chủ.</div><div class="src"><b>Nguồn:</b> Playbook §3 (Đặt lịch tư vấn).</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 COLLECTION -->
+  <section class="page" id="p03">
+    <div class="head">
+      <div class="no">03 · Trang bán</div>
+      <h2>Bộ sưu tập / Lookbook (Collection)</h2>
+      <p class="goal">"Cửa hàng" thật của website — trang hút traffic lớn nhất; là tài sản SEO chính, không phải trang trưng bày phụ.</p>
+      <div class="meta"><span class="chip route">/bo-suu-tap · /collections</span><span class="chip cta">CTA: Xem chi tiết · Đặt lịch may đo</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfb"><span class="n">1</span><div class="lab">Tiêu đề BST + bộ lọc theo dịp/chất liệu</div></div>
+        <div class="wfb"><span class="n">2</span><div class="lab">Lưới sản phẩm</div><div class="grid-ph"><div class="imgph">▦</div><div class="imgph">▦</div><div class="imgph">▦</div><div class="imgph">▦</div><div class="imgph">▦</div><div class="imgph">▦</div></div></div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Tên danh mục theo từ khoá có cầu</div><div class="pp">"Modern áo dài" · "Silk gown" · "Gala dress"</div></div>
+        <div class="wfb"><span class="n">4</span><div class="lab">Dải bắc cầu sang May đo</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Bộ lọc theo dịp &amp; chất liệu <span class="b t">Nên thử</span></div><div class="why">Giúp khách tự phân loại theo nhu cầu (cưới / dạ tiệc / chất liệu) và tạo URL con bắt long-tail.</div><div class="src"><b>Nguồn:</b> Deep-dive (mô hình Sau Lee /collections + /products).</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Đầu tư lưới BST như tài sản SEO <span class="b p">Proven</span></div><div class="why">Cụm collection là động cơ traffic ở TẤT CẢ đối thủ — nên coi đây là trang chính để tối ưu, không chỉ làm trang chủ đẹp.</div><div class="src"><b>Nguồn:</b> Deep-dive folder share — Công Trí 28,6% · Phan Huy 22,6% · Sau Lee 46,2%+28,7% · Shanghai Tang 26,8% · Qipology 61,0%.</div></div>
+        <div class="an"><span class="num">3</span><div class="lab">Tên danh mục = từ khoá có cầu <span class="b p">Proven</span></div><div class="why">Đặt tên danh mục theo cụm đối thủ đã chứng minh có cầu (modern ao dai US 868, gala dress US 953, silk gown WW 4.398) để danh mục tự lên top.</div><div class="src"><b>Nguồn:</b> Master sheet – Blog Keywords; Playbook §4.</div></div>
+        <div class="an"><span class="num">4</span><div class="lab">Bắc cầu sang Bespoke <span class="b p">Proven</span></div><div class="why">Khách xem mẫu có sẵn là cơ hội mời may đo riêng — điểm chuyển giá trị cao.</div><div class="src"><b>Nguồn:</b> Playbook §3 (2 nhánh nối nhau).</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 PRODUCT -->
+  <section class="page" id="p04">
+    <div class="head">
+      <div class="no">04 · Trang bán</div>
+      <h2>Trang sản phẩm (Product detail)</h2>
+      <p class="goal">Mỗi mẫu = 1 trang riêng, đặt tên tiếng Anh theo [chất liệu]+[dáng]+[dịp] để bắt tìm kiếm dài — học tactic Công Trí.</p>
+      <div class="meta"><span class="chip route">/san-pham/[ten-mau]</span><span class="chip cta">CTA kép: Mua (RTW) · Đặt lịch may đo</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfrow">
+          <div class="wfb"><span class="n">1</span><div class="lab">Gallery ảnh</div><div class="imgph" style="min-height:90px">◫</div></div>
+          <div class="wfb"><span class="n">2</span><div class="lab">Tên mẫu EN + giá</div><div class="pp">"Hand-embroidered silk gown"</div><div class="wfb" style="margin-top:8px"><span class="lab">3 · CTA kép</span><div class="pp">Mua · Đặt lịch may đo</div></div></div>
+        </div>
+        <div class="wfb"><span class="n">4</span><div class="lab">Kể chất liệu &amp; tay nghề atelier</div></div>
+        <div class="wfb"><span class="n">5</span><div class="lab">Gợi ý phối / mẫu cùng BST</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Mỗi mẫu 1 trang riêng <span class="b p">Proven</span></div><div class="why">Công Trí rank được nhờ mỗi sản phẩm là một trang có slug/metadata tiếng Anh mô tả kiểu dáng + chất liệu.</div><div class="src"><b>Nguồn:</b> Deep-dive (Công Trí — trang sản phẩm EN rank từ khoá ngành).</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Đặt tên [chất liệu]+[dáng] có cầu <span class="b t">Nên thử</span></div><div class="why">Nhắm cụm có cầu và gắn dịp (vd "silk evening gown", "áo dài wedding") để bắt long-tail giao dịch.</div><div class="src"><b>Nguồn:</b> Playbook §4 (owner Matthew, 1–3 tháng).</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">TRÁNH slug bespoke/custom/luxury tiếng Anh <span class="b a">Tránh</span></div><div class="why">Các cụm "custom / bespoke / luxury / evening ao dai" có 0 lượt tìm — đặt tên theo chúng là phí công, không ra traffic.</div><div class="src"><b>Nguồn:</b> Playbook §4; Master sheet (cụm 0 volume đã loại).</div></div>
+        <div class="an"><span class="num">3</span><div class="lab">CTA kép: Mua + Đặt lịch may đo <span class="b p">Proven</span></div><div class="why">Bắc cầu từ trang sản phẩm RTW sang bespoke — nơi giá trị đơn hàng cao nhất.</div><div class="src"><b>Nguồn:</b> Playbook §3 (đặt lịch = điểm chốt bespoke).</div></div>
+        <div class="an"><span class="num">4</span><div class="lab">Kể chất liệu &amp; tay nghề <span class="b t">Nên thử</span></div><div class="why">Câu chuyện thủ công biện minh cho mức giá premium và nuôi định vị atelier.</div><div class="src"><b>Nguồn:</b> Báo cáo tổng hợp (định vị premium, brand-language founder).</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 BESPOKE -->
+  <section class="page" id="p05">
+    <div class="head">
+      <div class="no">05 · Trang bán</div>
+      <h2>Hành trình Bespoke / Atelier</h2>
+      <p class="goal">Landing riêng cho may đo theo số đo — dẫn khách qua câu chuyện → quy trình → đặt lịch. Điểm chốt chính của phân khúc cao cấp.</p>
+      <div class="meta"><span class="chip route">/may-do · /bespoke</span><span class="chip cta">CTA: Đặt lịch tư vấn may đo</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfb hero-b"><span class="n">1</span><div class="lab">Hero atelier — "May đo theo số đo"</div><div class="imgph">◫</div></div>
+        <div class="wfb"><span class="n">2</span><div class="lab">Quy trình từng bước</div><div class="wfrow" style="margin-top:6px"><div class="imgph" style="min-height:30px">1</div><div class="imgph" style="min-height:30px">2</div><div class="imgph" style="min-height:30px">3</div><div class="imgph" style="min-height:30px">4</div></div></div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Chất liệu &amp; tay nghề</div></div>
+        <div class="wfb"><span class="n">4</span><div class="lab">Lookbook may đo + lời chứng khách</div></div>
+        <div class="wfb"><span class="n">5</span><div class="lab">Form / dải Đặt lịch tư vấn</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Landing bespoke tách riêng <span class="b p">Proven</span></div><div class="why">Việc ưu tiên #1 với Matthew: tách nhánh may đo (landing riêng + đặt lịch) khỏi nhánh mua sẵn.</div><div class="src"><b>Nguồn:</b> Playbook §3 (bước "Ngay"); mẫu Qipology "Bespoke Bridal Qipao".</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Quy trình từng bước <span class="b t">Nên thử</span></div><div class="why">Khách may đo cần hiểu quy trình (tư vấn → chốt mẫu → đo → thử → giao) trước khi cam kết; giảm ma sát đặt lịch.</div><div class="src"><b>Nguồn:</b> Deck Hiện diện số (trang atelier là bậc thang tin cậy).</div></div>
+        <div class="an"><span class="num">4</span><div class="lab">Lookbook + lời chứng <span class="b p">Proven</span></div><div class="why">Bằng chứng tay nghề + khách thật là thứ chốt đơn bespoke cao cấp.</div><div class="src"><b>Nguồn:</b> Deep-dive (trang About/atelier hút traffic thật, vd Phan Huy /about 4,66%).</div></div>
+        <div class="an"><span class="num">5</span><div class="lab">Đặt lịch ngay trên landing <span class="b p">Proven</span></div><div class="why">Đặt lịch tư vấn = điểm chuyển đổi của bespoke → phải nằm ngay trong landing, không bắt khách đi tìm.</div><div class="src"><b>Nguồn:</b> Playbook §3 ("landing riêng + đặt lịch").</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 WEDDING -->
+  <section class="page" id="p06">
+    <div class="head">
+      <div class="no">06 · SEO theo dịp</div>
+      <h2>Áo dài cưới / Wedding (landing)</h2>
+      <p class="goal">Landing SEO cho cụm cưới — phục vụ cả khách Việt Nam lẫn Việt kiều; chuẩn bị nội dung TRƯỚC mùa cưới cao điểm T1–T4.</p>
+      <div class="meta"><span class="chip route">/ao-dai-cuoi · /wedding</span><span class="chip cta">CTA: Đặt lịch tư vấn cưới</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfb hero-b"><span class="n">1</span><div class="lab">Hero cưới + H1 theo từ khoá</div><div class="imgph">◫</div></div>
+        <div class="wfb"><span class="n">2</span><div class="lab">Gallery áo dài cưới / wedding looks</div><div class="grid-ph"><div class="imgph">▦</div><div class="imgph">▦</div><div class="imgph">▦</div></div></div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Nội dung: phong tục cưới + cách chọn</div></div>
+        <div class="wfb"><span class="n">4</span><div class="lab">Lời chứng cô dâu + báo chí cưới</div></div>
+        <div class="wfb"><span class="n">5</span><div class="lab">Dải Đặt lịch tư vấn cưới</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">H1 theo từ khoá giao dịch <span class="b p">Proven</span></div><div class="why">"áo dài cưới" (VN) có cầu giao dịch rõ nhất tiếng Việt và độ khó rất thấp; "vietnamese wedding dress"/"ao dai wedding" bắt cầu diaspora.</div><div class="src"><b>Nguồn:</b> Playbook §4; Master sheet — áo dài cưới VN 1.863 (khó 2), vietnamese wedding dress US 1.075.</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Occasion landing cho quảng cáo <span class="b p">Proven</span></div><div class="why">"wedding guest dress" (US 83K) là đích cho ads — quảng cáo phải đổ về landing này, KHÔNG về trang chủ.</div><div class="src"><b>Nguồn:</b> Playbook §4 + Ad config ("landing riêng, không đổ về home").</div></div>
+        <div class="an"><span class="num">3</span><div class="lab">Nội dung phong tục + hướng dẫn <span class="b t">Nên thử</span></div><div class="why">Cụm cưới có nhiều ý định "thông tin" → nội dung hướng dẫn xây topical authority và kéo organic.</div><div class="src"><b>Nguồn:</b> Master sheet (intent cưới); SOP (nội dung theo intent).</div></div>
+        <div class="an"><span class="num">5</span><div class="lab">Chuẩn bị TRƯỚC mùa T1–T4 <span class="b t">Nên thử</span></div><div class="why">Mùa cưới cao điểm đầu năm (proxy retailer Mỹ) → dựng landing + nội dung trước đỉnh để kịp bắt cầu.</div><div class="src"><b>Nguồn:</b> Insights (mùa cưới); Master sheet – Action Plan (lịch nội dung).</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 OCCASION -->
+  <section class="page" id="p07">
+    <div class="head">
+      <div class="no">07 · SEO theo dịp</div>
+      <h2>Đầm dạ tiệc / Occasion (Evening &amp; Gala)</h2>
+      <p class="goal">Trang riêng cho đồ dạ tiệc — TÁCH khỏi áo dài (quyết định MD-038). Nhắm phần THẮNG của occasion: gala &amp; silk gown.</p>
+      <div class="meta"><span class="chip route">/dam-da-tiec · /occasion</span><span class="chip cta">CTA: Đặt lịch · Xem bộ sưu tập dạ tiệc</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfb hero-b"><span class="n">1</span><div class="lab">Hero dạ tiệc</div><div class="imgph">◫</div></div>
+        <div class="wfb"><span class="n">2</span><div class="lab">Lưới đầm dạ tiệc theo chất liệu/dáng</div><div class="grid-ph"><div class="imgph">▦</div><div class="imgph">▦</div><div class="imgph">▦</div></div></div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Khối editorial "gala/evening styling"</div></div>
+        <div class="wfb"><span class="n">4</span><div class="lab">Dải Đặt lịch may đo dạ tiệc</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Tách khỏi áo dài <span class="b p">Proven</span></div><div class="why">Đầm dạ tiệc là dòng sản phẩm riêng, có tệp khách và từ khoá riêng — không gộp chung áo dài.</div><div class="src"><b>Nguồn:</b> Playbook §3 (quyết định MD-038).</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Nhắm gala dress + silk gown <span class="b p">Proven</span></div><div class="why">Đây là phần SEO thắng được của occasionwear (cạnh tranh vừa), khác với "evening/cocktail dress" chung.</div><div class="src"><b>Nguồn:</b> Master sheet — gala dress US 953/WW 5.853, silk gown WW 4.398.</div></div>
+        <div class="an"><span class="num">3</span><div class="lab">Evening/cocktail chỉ để editorial <span class="b a">Tránh</span></div><div class="why">"cocktail dress" (~42K) &amp; "evening gown/dress" cầu lớn nhưng cạnh tranh KỊCH TRẦN (retailer khổng lồ sở hữu) → không đua SEO head-on; chỉ dùng blog/Pinterest/ads.</div><div class="src"><b>Nguồn:</b> SimilarWeb T4–T6/2026; Master sheet cụm ⑥.</div></div>
+        <div class="an"><span class="num">4</span><div class="lab">Landing cho ads dạ tiệc <span class="b p">Proven</span></div><div class="why">Giống cưới: quảng cáo dạ tiệc đổ về landing may đo, không về trang chủ.</div><div class="src"><b>Nguồn:</b> Playbook Ad config.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 TRUST -->
+  <section class="page" id="p08">
+    <div class="head">
+      <div class="no">08 · Trang niềm tin</div>
+      <h2>Sao &amp; khách mặc Maison · Báo chí</h2>
+      <p class="goal">Bậc thang tin cậy chuẩn của phân khúc — bằng chứng xã hội để chốt khách cao cấp và nuôi recall theo tên.</p>
+      <div class="meta"><span class="chip route">/sao-mac · /bao-chi</span><span class="chip">Việc ưu tiên #1 · làm trước launch</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfb"><span class="n">1</span><div class="lab">Grid "Sao &amp; khách mặc Maison"</div><div class="grid-ph"><div class="imgph">★</div><div class="imgph">★</div><div class="imgph">★</div><div class="imgph">★</div><div class="imgph">★</div><div class="imgph">★</div></div></div>
+        <div class="wfb"><span class="n">2</span><div class="lab">Hàng logo báo chí + trích dẫn</div></div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Mỗi mục link về sản phẩm liên quan</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Trang "Sao &amp; khách mặc" bắt buộc <span class="b p">Proven</span></div><div class="why">Với couture cao cấp, 85–98% khách tìm bằng tên; non-branded chỉ thắng qua celebrity/thảm đỏ. Trang này là nơi biến danh tiếng thành traffic.</div><div class="src"><b>Nguồn:</b> Deep-dive (Công Trí NEWS: Michelle Obama, Beyoncé, Rihanna, BLACKPINK; Phan Huy Celebrities: Miss Universe, Zhao Lusi, Hồ Ngọc Hà).</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Trang Báo chí (Press) <span class="b p">Proven</span></div><div class="why">Bậc thang tin cậy thứ hai; củng cố định vị và hỗ trợ recall theo tên.</div><div class="src"><b>Nguồn:</b> Playbook §3; Deck Hiện diện số (trang niềm tin chuẩn phân khúc).</div></div>
+        <div class="an"><span class="num">3</span><div class="lab">Link chéo về sản phẩm <span class="b t">Nên thử</span></div><div class="why">Biến sự chú ý (ai đó mặc gì) thành hành động (xem/đặt mẫu đó) — nối trust page với "cửa hàng".</div><div class="src"><b>Nguồn:</b> Deep-dive (cỗ máy awareness → tin tưởng → sản phẩm).</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 JOURNAL -->
+  <section class="page" id="p09">
+    <div class="head">
+      <div class="no">09 · Trang niềm tin / SEO</div>
+      <h2>Journal / Blog (editorial SEO)</h2>
+      <p class="goal">Trung tâm nội dung cho các cụm từ khoá "thông tin" — xây topical authority và điều hướng về sản phẩm/bespoke.</p>
+      <div class="meta"><span class="chip route">/journal</span><span class="chip cta">CTA: Khám phá bộ sưu tập liên quan</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfb"><span class="n">1</span><div class="lab">Bài theo cụm chủ đề (cluster)</div><div class="grid-ph"><div class="imgph">✎</div><div class="imgph">✎</div><div class="imgph">✎</div></div></div>
+        <div class="wfb"><span class="n">2</span><div class="lab">Bài trụ: wedding guest · modern áo dài · vietnamese designers</div></div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Mỗi bài kết bằng link sản phẩm/BST</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Blog tách khỏi trang bán <span class="b p">Proven</span></div><div class="why">Nuôi awareness cho các từ khoá ý định "thông tin" mà không làm loãng trang sản phẩm.</div><div class="src"><b>Nguồn:</b> Playbook §3 ("Journal (SEO)") + §4 (keyword thông tin đổ về Blog).</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Bài trụ theo cụm đối thủ đã chứng minh <span class="b p">Proven</span></div><div class="why">Viết quanh cụm đã có cầu &amp; đối thủ đã kéo được traffic: wedding guest dress, modern ao dai styling, vietnamese dress designers.</div><div class="src"><b>Nguồn:</b> Master sheet – Blog Keywords (P1); Phan Huy 52,8% traffic non-branded từ "vietnamese designers".</div></div>
+        <div class="an"><span class="num">3</span><div class="lab">Kết bài → sản phẩm <span class="b t">Nên thử</span></div><div class="why">Chuyển người đọc editorial thành khách xem/đặt mẫu — khép vòng từ nội dung sang bán.</div><div class="src"><b>Nguồn:</b> SOP (điều hướng navigational); Deep-dive (chuyển awareness → sản phẩm).</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 APPOINTMENT -->
+  <section class="page" id="p10">
+    <div class="head">
+      <div class="no">10 · Chuyển đổi</div>
+      <h2>Đặt lịch tư vấn (Book appointment)</h2>
+      <p class="goal">Điểm chuyển đổi chính của bespoke — form đặt lịch gọn, có lựa chọn online cho khách Việt kiều ở xa.</p>
+      <div class="meta"><span class="chip route">/dat-lich</span><span class="chip cta">CTA: Xác nhận đặt lịch</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfb"><span class="n">1</span><div class="lab">Chọn dịch vụ/dịp</div><div class="pp">Áo dài cưới · dạ tiệc · may đo chung</div></div>
+        <div class="wfrow"><div class="wfb"><span class="n">2</span><div class="lab">Tại atelier</div></div><div class="wfb"><span class="n">2</span><div class="lab">Online (Việt kiều)</div></div></div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Chọn thời gian + thông tin liên hệ</div><div class="ph" style="height:8px;background:#e7ded0;border-radius:4px;margin:6px 0"></div><div class="ph" style="height:8px;background:#e7ded0;border-radius:4px;width:60%"></div></div>
+        <div class="wfb"><span class="n">4</span><div class="lab">Trấn an: riêng tư · không ép mua</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Form đặt lịch = điểm chốt <span class="b p">Proven</span></div><div class="why">Đặt lịch tư vấn là điểm chuyển đổi của bespoke; là một trang riêng trong sitemap và nhúng ở landing may đo.</div><div class="src"><b>Nguồn:</b> Playbook §3 (Đặt lịch tư vấn).</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Có lựa chọn Online cho diaspora <span class="b t">Nên thử</span></div><div class="why">Khách chính là Việt kiều Mỹ/Úc/Canada — cần kênh tư vấn từ xa, không chỉ tại atelier.</div><div class="src"><b>Nguồn:</b> Deck Hiện diện số (geo US/AU/CA + diaspora); Báo cáo tổng hợp (nỗi đau mua từ xa).</div></div>
+        <div class="an"><span class="num">4</span><div class="lab">Trấn an riêng tư <span class="b t">Nên thử</span></div><div class="why">Giảm ma sát tâm lý khi đặt lịch lần đầu với dịch vụ cao cấp.</div><div class="src"><b>Nguồn:</b> SOP (giảm ma sát chuyển đổi); tiếng nói khách (e ngại mua online).</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 ABOUT -->
+  <section class="page" id="p11">
+    <div class="head">
+      <div class="no">11 · Trang niềm tin</div>
+      <h2>Câu chuyện NTK &amp; Di sản (About)</h2>
+      <p class="goal">Nền cho recall theo TÊN — mô hình Sabyasachi: di sản Việt + kết nối Việt kiều. Câu chuyện nhà thiết kế, triết lý, tay nghề atelier.</p>
+      <div class="meta"><span class="chip route">/cau-chuyen · /about</span><span class="chip">Bắt cả keyword identity</span></div>
+    </div>
+    <div class="body">
+      <div class="device"><div class="screen">
+        <div class="wfb hero-b"><span class="n">1</span><div class="lab">Chân dung + câu chuyện nhà thiết kế</div><div class="imgph">◫</div></div>
+        <div class="wfb"><span class="n">2</span><div class="lab">Triết lý &amp; di sản Việt</div></div>
+        <div class="wfb"><span class="n">3</span><div class="lab">Tay nghề atelier (ảnh hậu trường)</div></div>
+        <div class="wfb"><span class="n">4</span><div class="lab">Cầu nối Việt kiều + dải đặt lịch</div></div>
+      </div></div>
+      <div class="notes">
+        <div class="an"><span class="num">1</span><div class="lab">Câu chuyện NTK nuôi recall theo tên <span class="b p">Proven</span></div><div class="why">Các trang About/atelier hút traffic thật ở đối thủ và là nơi khách "kết" với thương hiệu để nhớ tên mà quay lại.</div><div class="src"><b>Nguồn:</b> Deep-dive (Phan Huy /about-us 4,66%; Công Trí trang atelier/tiểu sử NTK).</div></div>
+        <div class="an"><span class="num">2</span><div class="lab">Mô hình di sản + diaspora <span class="b p">Proven</span></div><div class="why">Sabyasachi tăng trưởng bằng công thức di sản + cộng đồng hải ngoại, ~95% traffic sở hữu — công thức "Việt Nam + Việt kiều" cho Maison.</div><div class="src"><b>Nguồn:</b> Báo cáo tổng hợp / pattern couture (Sabyasachi 88% recall).</div></div>
+        <div class="an"><span class="num">4</span><div class="lab">Bắt keyword identity <span class="b t">Nên thử</span></div><div class="why">Cụm "vietnamese designer/dress designers" có cầu editorial → trang câu chuyện + blog bắt được nhóm tìm hiểu NTK.</div><div class="src"><b>Nguồn:</b> Master sheet — vietnamese designer dress US 527/WW 803.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN QUESTIONS -->
+  <section class="box" id="open">
+    <h2>Câu hỏi mở — cần Maison / chị Chi chốt trước khi Matthew dựng</h2>
+    <div class="q"><b>1. Có dựng dòng Ready-to-wear giá công khai (bán online) song song bespoke không?</b> — Mô hình Sau Lee/Qipology có RTW giá công khai. Nếu KHÔNG, các trang Bộ sưu tập/Sản phẩm sẽ chỉ là lookbook dẫn tới đặt lịch, không có nút "Mua". Quyết định này đổi hẳn wireframe trang 03–04. <span class="src" style="display:block;margin-top:4px"><b>Nguồn:</b> Playbook §5 (câu hỏi mở #1 cho Chi/Michelle).</span></div>
+    <div class="q"><b>2. Mức độ công khai giá</b> — bespoke thường "liên hệ báo giá"; RTW cần giá công khai để SEO/mua online. Cần chốt cho từng nhánh.</div>
+    <div class="q"><b>3. Ngôn ngữ &amp; thị trường ưu tiên khi launch</b> — song ngữ Việt/Anh? Ưu tiên landing tiếng Việt (áo dài cưới VN) hay tiếng Anh (diaspora US) trước?</div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="box" id="src">
+    <h2>Nguồn — mọi khối ở trên truy ngược về đây</h2>
+    <div class="src-list">
+      <div><b>Playbook hiện diện số</b> — §3 Cấu trúc website đề xuất, §4 Keyword theo intent &amp; trang, §5 câu hỏi mở, Ad config. <a href="playbook-hien-dien-so.html">mở</a></div>
+      <div><b>Đào sâu Công Trí &amp; Phan Huy</b> — folder share, cỗ máy subpage, RTW vs Bespoke (Qipology), trang niềm tin/celebrity. <a href="dao-sau-congtri-phanhuy.html">mở</a></div>
+      <div><b>Deck Hiện diện số (Đợt 1)</b> — popular pages, trang niềm tin, branded share, geo. <a href="deck-hien-dien-so-maison.html">mở</a></div>
+      <div><b>Báo cáo thị trường &amp; cạnh tranh</b> — định vị, ô trắng atelier áo-dài-lõi, hành vi khách. <a href="bao-cao-tong-hop.html">mở</a></div>
+      <div><b>Deck Kế hoạch marketing (Đợt 2)</b> — kế hoạch Website (Option 1), Pinterest, thứ tự. <a href="deck-ke-hoach-marketing-so.html">mở</a></div>
+      <div><b>Master Sheet</b> — tab Blog Keywords (bộ từ khoá + volume), Action Plan, Insights. <a href="Maison_Denude_Master_Sheet.xlsx">mở</a></div>
+      <div><b>SimilarWeb</b> — volume/độ khó/cạnh tranh từ khoá (T3–T6/2026); log tại <code>data_logs/</code>.</div>
+    </div>
+    <p style="font-size:12.5px;color:#8a8175;margin-top:14px">Ghi chú độ tin cậy theo SOP: <span class="dot p"></span>proven = có số/đã chứng minh · <span class="dot t"></span>nên thử = hợp lý, cần test · <span class="dot a"></span>tránh = có bằng chứng là sai hướng. Wireframe là bản phác để bàn với Matthew, chưa phải bản thiết kế cuối.</p>
+  </section>
+
+</main>
+</div>
