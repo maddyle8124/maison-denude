@@ -140,11 +140,17 @@ const f = bookingFlow;
     <textarea class="booking__input booking__textarea" id="notes" name="notes" rows="3"></textarea>
   </div>
 
+  <!-- Selected-slot summary + a slot-required hint, sitting right above the
+       submit so the client always sees whether they've picked a time. -->
+  <p class="booking__slot-summary" id="slot-summary" hidden></p>
+  <p class="booking__error booking__error--inline" id="booking-error-inline" hidden></p>
+
   <button
     class="booking__submit"
     type="submit"
     data-idle={f.submitLabel}
     data-sending={f.sendingLabel}
+    aria-describedby="slot-summary booking-error-inline"
   >
     {f.submitLabel}
   </button>
@@ -161,6 +167,8 @@ const f = bookingFlow;
   const form = el<HTMLFormElement>('booking-form');
   const successEl = el('booking-success');
   const errorEl = el('booking-error');
+  const errorInlineEl = el('booking-error-inline');
+  const slotSummaryEl = el('slot-summary');
   const pickerStatus = el('picker-status');
   const freebusyNote = el('picker-freebusy');
   const calendarWrap = el('calendar-wrap');
@@ -238,6 +246,33 @@ const f = bookingFlow;
     if (timeChips) timeChips.innerHTML = '';
     if (timePrompt) timePrompt.hidden = false;
     if (timeHead) timeHead.textContent = 'Available times';
+    refreshSlotUi();
+  }
+
+  // Keep the submit button, its label, and the selected-slot summary in lockstep
+  // with whether a time is chosen — so the "you must pick a time" state is always
+  // visible right next to the button (never a silent dead click).
+  function refreshSlotUi() {
+    const chosen = slotInput?.value ?? '';
+    if (submit) {
+      submit.disabled = !chosen;
+      submit.textContent = chosen
+        ? (submit.dataset.idle ?? 'Confirm booking')
+        : 'Choose a time to confirm';
+    }
+    if (slotSummaryEl) {
+      if (chosen) {
+        const key = localDateKey(chosen);
+        const { y, m, d } = ymd(key);
+        const labelDate = new Date(Date.UTC(y, m - 1, d));
+        const dow = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][labelDate.getUTCDay()];
+        slotSummaryEl.textContent = `Selected — ${dow} ${d} ${MONTHS[m - 1]}, ${localTime(chosen)} (Saigon time)`;
+        slotSummaryEl.hidden = false;
+      } else {
+        slotSummaryEl.hidden = true;
+        slotSummaryEl.textContent = '';
+      }
+    }
   }
 
   // Mon-first weekday index (0=Mon … 6=Sun) for the 1st of the view month.
@@ -361,6 +396,8 @@ const f = bookingFlow;
       b.classList.toggle('is-active', b.dataset.start === startIso);
     });
     if (errorEl) errorEl.hidden = true;
+    if (errorInlineEl) errorInlineEl.hidden = true;
+    refreshSlotUi();
   }
 
   // ——— Consultation type selector (radio-style chips) ———
@@ -427,28 +464,47 @@ const f = bookingFlow;
   }
 
   // ——— Submit ———
+  // Show the error in BOTH places: the top-of-form banner AND an inline copy
+  // right above the submit button, then scroll the inline one into view. The
+  // button lives at the bottom of a long form, so a top-only error reads as
+  // "nothing happened" — this guarantees the user always sees why.
   function showError(msg: string) {
-    if (!errorEl) return;
-    errorEl.textContent = msg;
-    errorEl.hidden = false;
+    if (errorEl) {
+      errorEl.textContent = msg;
+      errorEl.hidden = false;
+    }
+    if (errorInlineEl) {
+      errorInlineEl.textContent = msg;
+      errorInlineEl.hidden = false;
+      errorInlineEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 
   function setSubmitting(on: boolean) {
     if (!submit) return;
-    submit.disabled = on;
-    const label = on ? submit.dataset.sending : submit.dataset.idle;
-    if (label) submit.textContent = label;
+    if (on) {
+      submit.disabled = true;
+      const label = submit.dataset.sending;
+      if (label) submit.textContent = label;
+    } else {
+      // Hand the button's disabled/label state back to the slot-aware logic.
+      refreshSlotUi();
+    }
   }
 
   if (form && successEl && errorEl && submit) {
-    // Kick off availability on mount.
+    // Kick off availability on mount, and set the button to its slot-aware
+    // "choose a time" disabled state so the requirement is obvious immediately.
+    refreshSlotUi();
     loadAvailability();
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       errorEl.hidden = true;
+      if (errorInlineEl) errorInlineEl.hidden = true;
 
-      // Guard: a slot must be chosen.
+      // Guard: a slot must be chosen. (The button is disabled without one, but
+      // keep the guard for keyboard/enter submits.)
       if (!slotInput?.value) {
         showError(MSG.needSlot);
         return;
@@ -924,6 +980,28 @@ const f = bookingFlow;
     opacity: 0.85;
     margin: 0;
     line-height: 1.5;
+  }
+  /* Inline error sits right above the submit button so a blocked submit is
+     never off-screen; slightly stronger emphasis than the top banner. */
+  .booking__error--inline {
+    opacity: 1;
+    margin-top: var(--form-label-gap);
+  }
+
+  /* Selected-slot summary — confirms the picked time next to the button. */
+  .booking__slot-summary {
+    font-family: var(--font-primary);
+    font-size: var(--text-field);
+    font-weight: var(--fw-extralight);
+    letter-spacing: 0.03em;
+    color: var(--color-text);
+    opacity: 0.85;
+    margin: var(--form-label-gap) 0 0;
+    line-height: 1.5;
+  }
+  .booking__slot-summary[hidden],
+  .booking__error--inline[hidden] {
+    display: none;
   }
 
   /* ——— Success state ——— */
