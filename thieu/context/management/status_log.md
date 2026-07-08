@@ -4,6 +4,14 @@
 
 ---
 
+## 2026-07-08 (Booking feature SHIPPED to prod + scoped-style root-cause fix) — DONE, LIVE
+
+- **Prod rollout to thieuxmaison account (D-BOOK-INFRA-01):** user corrected that the worker `maisondenude-web` + the maisondenude.com domain must live on the **thieuxmaison** CF account (`73fb68b2…`), not nguyenthaithieu (`ecb2e6bb…`) — the old `wrangler.jsonc account_id` was an error. Fixed the id, set all 11 Worker secrets on the thieuxmaison worker via `wrangler secret put` (incl. **GCAL_SEND_UPDATES=all** for prod), deployed. Live-verified on maisondenude.com: new page renders, real free/busy, full e2e booking → Meet link → cancel → slot freed. Committed `18e1594` (feature) + `f20e08e` (infra fix).
+- **⚠ ROOT-CAUSE BUG (the "your edits do nothing" mystery), fixed in `262fb8c`:** the calendar cells + time slots are built in the client `<script>` via `document.createElement`, so they never receive Astro's `data-astro-cid-*` scoping attribute → every scoped `.booking__time[data-astro-cid-…]` rule matched ZERO elements → buttons rendered as unstyled default boxes. Every visual edit for ~an hour applied to nothing while the served CSS always looked correct (verified repeatedly), and even incognito showed the broken version (ruling out caching). FIX: wrap dynamic-element selectors in `.booking :global(.booking__time)` so the scope sits on the templated parent and the child selector is unqualified. Also refined the picker to a clean ring→fill state language (available = hairline ring, selected = solid fill; disc for days, filled box + ✓ for times). Deployed + live-verified — user confirmed "it is working." **Lesson for the whole codebase: any JS-injected element needs `:global()` or its styles silently do nothing.**
+- Net: the entire Google Calendar self-serve booking feature is DONE and LIVE. Only optional deferred items left: promote spec → D-BOOK-04, rotate the pasted OAuth secret.
+
+---
+
 ## 2026-07-08 (Booking page UI redesign — full English + month-calendar picker) — pm-PASSED
 
 - **Trigger:** user reviewed the live booking page and gave two directives: (1) the whole booking UI must be **full English** (the VN-over-EN bilingual pairs on every label were cluttered/unprofessional); (2) the slot picker — which dumped ~40 full-date buttons in a grid — was "a disaster"; keep the two-pane layout but redesign the right panel.
