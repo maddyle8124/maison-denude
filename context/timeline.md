@@ -1,7 +1,7 @@
 # Maison Dénudé — Timeline
 
-_7-week Phase 1. Kickoff 2026-05-31 · target go-live ~2026-07-19 · hard backstop 2026-07-30._
-_Last updated: 2026-06-27._
+_7-week Phase 1. Kickoff 2026-05-31 · **website live (demo) 2026-07-04** · hard backstop 2026-07-30._
+_Last updated: 2026-07-04._
 
 ## Phase summary
 
@@ -17,7 +17,16 @@ _Last updated: 2026-06-27._
 
 Detailed phase checklists live in `/thieu/context/management/plan.md` (personal). This is the shared summary.
 
-## Current status (2026-06-27)
+## Current status (2026-07-04)
+
+- **⭐ Website is LIVE (demo, public).** Went live around the Week-2 call with real global traffic (GSC 88 impressions / 33 clicks; GA4 ~49 users / 374 clicks; visitors US/AU/UK/DE/FR/CA). Pages: Home, Collection, Booking, About. Booking form → email working (Google Calendar auto-scheduling due this week). Team added to GA4 + Search Console. Decision: **stay live now and iterate in place**, don't wait for perfection (MD-040) — SEO compounds with domain age.
+- **Priority = website + content (MD-041);** two workstreams run in parallel — (A) site structure/design/content, (B) SEO/keyword/backlinks. **Ads deferred** until the site is complete AND the Meta/IG ad-restriction is resolved (MD-044 / OQ-015).
+- **Site structure built jointly** (Maison + Matthew + Maddy) — two lanes RTW vs Bespoke/Couture + trust pages + SEO product pages (MD-042). **Next joint session: tomorrow night** (~8–8:30pm) on structure; Michelle sends UI/design reference; Chi provides design direction/mood.
+- **Pinterest adopted** as a discovery channel (Chi opens account, Matthew backlinks); FB/IG kept for branding (MD-043).
+- **Maddy's build estimate: ~2–4 weeks** to get structure + SEO + content in place, then measure the site's traffic — aiming to shoot the new **July collection** onto the finished site.
+- **Diaspora/overseas is now the strategic centre of gravity** (OQ-014) — Chi leans overseas-first; market sequencing not yet settled.
+
+### Prior status (2026-06-27)
 
 - **Website must lead the next collection.** Agreed at the 27/6 call: site ready **before the next casual/occasion-wear collection launches**; target **~early July** (MD-034). Chi confirms design direction **this week** → graphic designer builds **~1 week after brief**; Hà/content preps exclusive teaser content before launch.
 - **Launch tactic (MD-033):** publish exclusive content on the website first (a few days), then push to Facebook/Instagram — pull traffic to the site early.
@@ -34,8 +43,10 @@ Detailed phase checklists live in `/thieu/context/management/plan.md` (personal)
 | 2026-05-31 | Kickoff |
 | ~2026-06-21 (Sat) | 1st Progress Presentation — confirm 3 markets, demo, keyword validation |
 | ~2026-06-28 | MD team returns ICP draft + brand-list-by-category (27/6 tasks) |
-| ~early July | Website ready before next collection launch (MD-034) |
-| ~2026-07-19 | Target go-live |
+| 2026-07-04 | **Week-2 call — website went LIVE (demo)**; tracking shared; two-lane structure + Pinterest agreed |
+| ~2026-07-05 | Joint website-structure session (tomorrow night) |
+| ~2026-07-09 (Thu) | Maddy's deadline to find a Meta/IG ad-restriction fix (else make a new IG) |
+| ~late July | Structure + SEO + content built (~2–4 wks); shoot July collection onto finished site |
 | 2026-07-30 | Hard backstop (contract buffer limit) |
 
 ## Buffer (contract)

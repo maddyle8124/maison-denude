@@ -1,6 +1,6 @@
 # Maison Dénudé — Founder Signals (reading the founders' intent)
 
-_Last updated: 2026-07-04. Source: WhatsApp project chat (5/16–6/12) + Week-1 call transcript (27/6, full 2h read), synthesized._
+_Last updated: 2026-07-04. Source: WhatsApp project chat (5/16–6/12) + Week-1 call transcript (27/6, full read) + Week-2 call transcript (4/7, full read — captions garbled, key items flagged), synthesized._
 _Companion to [`stakeholders.md`](stakeholders.md), [`positioning.md`](positioning.md), [`brand.md`](brand.md). Where those define facts, this captures the **signals and boundaries** the founders revealed in conversation — the "why" behind their reactions._
 
 ## 1. Brand positioning — the lines the founders drew
@@ -36,6 +36,12 @@ _Companion to [`stakeholders.md`](stakeholders.md), [`positioning.md`](positioni
 
 **Michelle / Miseo (co-founder, process & terms):**
 - Structured and detail-oriented on terms: design briefs, timeline buffer (+1–2 weeks if MD is slow), maintenance package, appendix clauses. → With Michelle, **everything must be documented, buffered, and checklisted.**
+- **W2 caveat:** her audio was broken the whole call — she participated **via chat only**, relayed second-hand. Her strategic input ("do everything but phase it," feed VN-online-brand data, the >$1–2k competitor instruction, logistics concern on overseas) likely landed with reduced fidelity. **Follow up her points in writing** so nothing is lost.
+
+**W2 relationship read (4/7):**
+- **Warmer, more on-track.** Chi herself: *"lần này nó đã bắt đầu đi on track hơn lần trước rồi… quan trọng là kết quả thôi."* Friendly close (jokes about phở/bún bò, plans to meet in person).
+- **Chi still drills specifics** regardless of how broadly you frame — a freelancer off-mic: *"em nói bao quát trước bao nhiêu thì chị Chi vẫn sẽ hỏi [chi tiết]."* Come to every call with the specifics ready.
+- **Matthew is candid about limits** — openly admitted no fix yet for the Meta/IG block (*"hiện tại tụi em không có câu trả lời cho cái này thiệt sự"*). Honesty accepted, but Chi expects the team's network to solve it. Don't bluff a blocker; state it + a plan.
 
 **The founder team in general:**
 - **Budget is low and they say so plainly.** Don't over-scope; favor high-leverage / low-cost moves (the niche-keyword play fits this).
@@ -53,6 +59,12 @@ The MD team's own read of who they serve — treat as founder-stated signal feed
 - **Acquisition = social + WOM via viral weddings;** customers rarely recall the source. → measurable attribution is weak; the site/tracking is partly to fix this.
 - **Reaffirmed self-image:** designer / bespoke / **private appointment**, high-invest, personalized A-to-Z — consistent with §1's "not mass, not tailor."
 
+**Sharpened at the 4/7 (Week-2) call:**
+- **The diaspora shift is now the centre of gravity — and accelerating.** Chi: the overseas ratio *"quá lớn so với những năm trước"* (jumped sharply this year). Customers are ethnically Vietnamese living/studying abroad (family base + paying parents still in VN). A creative-director contact independently told Chi the *ideal* Maison customer is exactly this diaspora-student segment. → weight the ICP toward Việt Kiều (see [`personas.md`](personas.md)).
+- **Chi's gut = go overseas-market-first.** Her reasons: (a) overseas/returnee customers *"có một cái ngôn ngữ chung"* with the brand; (b) diaspora audiences **use websites far more** than domestic VN buyers (*"người Việt Nam mình xài website ít"*); (c) foreigners are discovering VN via social while **Google is "cửa mà họ đang bỏ ngõ"** → be first-mover on SEO/web. This is in tension with Michelle's logistics concern + a domestic-first phasing → **unresolved (OQ-014).**
+- **Positioning boundary — NOT ultra-couture.** Chi was *"confused"* by the reference clips (Sabyasachi et al.) because *"nó quá khác với mình"* — those houses differ in aesthetic AND price (*"có những chiếc váy mấy tỷ"*), and Sabyasachi is Indian high-jewelry + couture. *"Mình chưa đến mức độ cộc trua [couture]."* → Maison = **premium made-to-measure / couture-adjacent, NOT ultra-couture**; learn peer *structure*, never imply the same tier.
+- **Website reframed (repeatedly) as the serious/trust/branding home.** Chi kept re-asking *why* she wants the site; the landed answer: a full site (vs a standalone landing page) lets you control where users land, measure conversion, and retarget — social = branding/reach, Pinterest = discovery funnel, website = the home that converts and compounds on SEO.
+
 ## 5. What they hired us to do (Maison-as-client JTBD) — 27/6
 
 Full breakdown in [`jtbd.md`](jtbd.md). The signals behind it:
@@ -64,6 +76,8 @@ Full breakdown in [`jtbd.md`](jtbd.md). The signals behind it:
 ## 6. Brand-name QA (hard rule)
 
 The Week-1 deck repeatedly **misspelled/mis-cased "Maison Dénudé"** (wrong accents, all-caps, "De Nuit"-style slips) and Chi called it out. **Render the name exactly right in every deliverable** — confirm the canonical accented form with the founders and never all-caps or re-accent it.
+
+**Recurred at the Week-2 call (4/7):** during the live demo Chi spotted the brand **name/logo showing wrong in Google's search listing** — *"tại sao chị thấy tên, logo của brand mình nó cứ Sai hết vậy? … trời ơi làm cho brand mà Sai tên brand."* Resolution: Matthew had **already fixed it on-site** the prior week after her earlier note; the stale result is a **Google re-index lag, not an un-fixed error** — expected to update within the day (the duplicate "home" page in analytics is an old renamed path still being indexed). **Lesson:** the founders read a wrong name/logo as a tier-comprehension failure and react instantly — QA the brand name on-site *and* watch how it renders in search/social listings, and when it's a propagation lag say so explicitly.
 
 ## 7. Consultation psychology — what Maison is really asking (Week-1 call, full read)
 

@@ -2,6 +2,18 @@
 
 _Change log for the `/context` master repo. Newest first._
 
+## 2026-07-04 — Synthesize call Tuần 2 (04/07) → fold vào context (Maddy)
+
+- **Đọc trọn transcript call W2** (`call transcript w2 .srt`; caption lởm — đã chuẩn hoá, đánh dấu số/tên brand chưa chắc). Cấu trúc: Matthew present technical + config → Maddy present insight → Chi/Michelle/Hà = team Maison.
+- **State change: web đã LIVE** (demo, public) có traffic toàn cầu. GSC 88 impression / 33 click; GA4 ~49 user / 374 click; khách US(12)/AU(6)/UK/DE/FR/CA. Trang: Home/Collection/Booking/About. Booking → email (Google Calendar sắp xong). Team đã được add vào GA4 + GSC. Backlink báo chí bằng structured-data (tuoitre/vanhoa/VTV/vietnam.vn). → **MD-040, MD-045**; **resolve OQ-001** (email booking = account riêng Matthew tạo).
+- **Quyết định mới `decisions.md` (MD-040→045):** web live ngay (MD-040); ưu tiên website+content, 2 luồng song song, ads hoãn (MD-041); cấu trúc web làm CHUNG — 2 nhánh RTW vs Bespoke/Couture + trust page + product page chuẩn SEO (MD-042); mở Pinterest, giữ FB/IG cho branding (MD-043); **paid social bị chặn** — FB/IG Business Manager restricted, ads hoãn tới khi gỡ được (MD-044); phương pháp backlink báo chí + quy trình team gửi press mới cho Matthew (MD-045).
+- **`open-questions.md`:** **resolve OQ-001** (booking email). Thêm **OQ-014** (dịch chuyển diaspora là riêng Maison hay cả làn sóng VN-fashion-hot-abroad? + overseas-first của Chi vs phased của Michelle — chưa chốt) và **OQ-015** (gỡ chặn quảng cáo Meta/IG — Maddy tìm cách qua network trước ~thứ Năm, fallback IG mới). OQ-013 → note: deck insight đã present W2, hướng được chấp nhận, vẫn còn nợ proposal chính thức.
+- **`personas.md`:** củng cố dịch chuyển diaspora là **trung tâm** — tỷ lệ tăng vọt năm nay + creative-director quen Chi độc lập chỉ đúng tệp du học sinh/Việt Kiều là khách lý tưởng; web-first một phần vì diaspora dùng web nhiều hơn khách VN.
+- **`founder-signals.md`:** §4 thêm tín hiệu W2 (diaspora tăng tốc, gut overseas-first của Chi, ranh giới KHÔNG-ultra-couture, web = nhà trust/branding). §6 brand-name QA **tái diễn** (Google hiện logo/tên sai — Matthew đã sửa on-site, là độ trễ re-index). §3 thêm caveat Michelle mic hỏng (chat-only → follow up bằng văn bản) + read quan hệ W2 (ấm hơn/on-track, Chi vẫn hỏi chi tiết, Matthew thẳng thắn về blocker Meta).
+- **`timeline.md`:** current status 04/07 — web LIVE + 2 luồng + ads hoãn + họp cấu trúc tối mai + build ~2–4 tuần rồi chụp BST tháng 7 lên site; thêm milestone 04/07 (web live), 05/07 (họp structure), 09/07 (hạn Maddy gỡ Meta), late-July (build xong).
+- **`markets/_pointer.md`:** block "Week-2 update" — web live, diaspora là centre of gravity, thị trường ứng viên (SG/HK/TW + US/AU/CA), Pinterest, ranh giới couture-adjacent.
+- Nguồn: `call transcript w2 .srt`. Chưa push/host trừ khi được yêu cầu.
+
 ## 2026-07-03 — Nhận ICP từ MD team → fold vào context + proposal (Maddy)
 
 - **ICP draft (MD team) → `personas.md`:** 4 persona theo khung 7 tiêu chí — P1 Cô dâu (bespoke bridal, 30–<100tr), P2 The Event Connoisseur (20–70tr, có thể >100tr; tệp chi cao nhất), P3 Artistic Lifestyle (20–50tr, cộng đồng sáng tạo), P4 **Conscious Muse = dòng RTW** (10–25tr, mua online). P1–P3 = nhóm "Heritage Seeker". **Resolve OQ-012.**

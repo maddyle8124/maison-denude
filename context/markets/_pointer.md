@@ -1,7 +1,15 @@
 # Maison Dénudé — Markets & Digital Marketing Playbook (Pointer)
 
-_Pointer only. Last updated: 2026-06-21._
+_Pointer only. Last updated: 2026-07-04._
 _Not built out yet — the structure here gets fleshed out once 3 target markets are confirmed at the Saturday presentation._
+
+## Week-2 update (2026-07-04 call)
+
+- **Website is LIVE (demo)** with real global traffic (US/AU/UK/DE/FR/CA); tracking (GA4 + GSC) shared with the team. Priority is now **website + content, ads deferred** (MD-040/041; paid social blocked, OQ-015).
+- **Diaspora/overseas is the strategic centre of gravity** — Chi says the overseas ratio jumped sharply this year and leans **overseas-market-first**; a creative-director contact named the diaspora-student segment as the ideal customer. Market sequencing (overseas-first vs Michelle's phased domestic-first) is **unresolved → OQ-014.**
+- **Data-derived candidate international markets:** Singapore, Hong Kong, Taiwan (from competitor audiences) + US / Australia / Canada (buying power, easy shipping, large diaspora) — validate by ad tests, don't assume.
+- **Channel:** **Pinterest adopted** (discovery funnel, can link images→product); FB/IG kept for branding (MD-043).
+- **Positioning boundary:** Maison = premium made-to-measure / couture-**adjacent**, NOT ultra-couture (Chi: Sabyasachi & "mấy tỷ" gowns are above tier). Study peer *structure*, not tier.
 
 ## What this is
 
