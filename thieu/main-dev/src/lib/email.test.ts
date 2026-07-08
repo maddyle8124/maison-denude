@@ -19,7 +19,7 @@ const baseBooking: BookingNotification = {
   name: 'Nguyễn Thị Ánh',
   phone: '+84 905 123 456',
   date: '2026-07-15',
-  consultationType: 'atelier',
+  consultationType: 'Instore',
   notes: 'Tư vấn áo dài cưới — cần gấp, cảm ơn ạ!',
 };
 
@@ -57,7 +57,7 @@ describe('buildBookingEmail', () => {
       expect(body).toContain('Nguyễn Thị Ánh');
       expect(body).toContain('+84 905 123 456');
       expect(body).toContain('2026-07-15');
-      expect(body.toLowerCase()).toContain('atelier');
+      expect(body.toLowerCase()).toContain('in-store atelier visit');
       expect(body).toContain('Tư vấn áo dài cưới — cần gấp, cảm ơn ạ!');
     }
   });
@@ -90,12 +90,16 @@ describe('buildBookingEmail', () => {
     },
   );
 
-  it.each(['atelier', 'virtual', 'event'] as const)(
+  it.each(['Online', 'Instore'] as const)(
     'renders consultation type "%s" in both bodies',
     (consultationType) => {
+      const expectedLabel = {
+        Online: 'online consultation',
+        Instore: 'in-store atelier visit',
+      }[consultationType];
       const email = buildBookingEmail({ ...baseBooking, consultationType });
-      expect(email.html.toLowerCase()).toContain(consultationType);
-      expect(email.text.toLowerCase()).toContain(consultationType);
+      expect(email.html.toLowerCase()).toContain(expectedLabel);
+      expect(email.text.toLowerCase()).toContain(expectedLabel);
     },
   );
 

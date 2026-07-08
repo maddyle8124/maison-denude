@@ -1,106 +1,504 @@
 ---
-import { bookingForm } from '../../content/booking';
+import { bookingFlow } from '../../content/booking';
 
-// Reusable booking form (used on /booking now, persistent modal later).
-// Submits client-side via astro:actions (D-ARCH-02) so the page itself stays
-// fully prerendered — the injected /_actions/* endpoint is the only server route.
-// All copy comes from content/booking.ts (invariant 1); this file is presentation only.
-const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fields;
+// Live self-serve slot-picker booking form (booking-calendar D-1..D-9,
+// D-BOOK-UI-01/02). Submits client-side via astro:actions (D-ARCH-02) so the
+// page stays fully prerendered — the injected /_actions/* endpoint is the only
+// server route. All copy comes from content/booking.ts (invariant 1); this file
+// is presentation.
+//
+// LANGUAGE: full English (D-BOOK-UI-01).
+// PICKER: month-calendar grid → time column (D-BOOK-UI-02). Days with
+// availability are clickable + carry a gold dot; days without are dimmed +
+// disabled. Selecting a day reveals its open times.
+//
+// Slots always display Saigon +07 wall time — the startIso carries +07 and we
+// string-parse it, never converting to the viewer's timezone.
+
+const f = bookingFlow;
 ---
 
+<!-- Success confirmation (revealed by JS on a successful booking) -->
 <div class="booking booking--success" id="booking-success" hidden>
-  <p class="booking__success-title">{bookingForm.success.title}</p>
+  <p class="booking__success-title">{f.success.title}</p>
   <hr class="booking__success-rule" />
-  <p class="booking__success-body">{bookingForm.success.body}</p>
-  <a class="booking__success-link" href={bookingForm.success.linkHref}>
-    {bookingForm.success.linkLabel}
+  <p class="booking__success-body" id="booking-success-body">{f.success.body}</p>
+  <!-- Meet / pending extra line, filled by JS -->
+  <p class="booking__success-note" id="booking-success-extra" hidden></p>
+  <a class="booking__success-link" id="booking-meet-link" href="#" target="_blank" rel="noopener" hidden>
+    {f.success.meetLinkLabel}
+  </a>
+  <p class="booking__success-note">{f.success.cancelNote}</p>
+  <a class="booking__success-link" id="booking-cancel-link" href="#" hidden>
+    {f.success.cancelLinkLabel}
   </a>
 </div>
 
-<form class="booking" id="booking-form" data-sending-label={bookingForm.sendingLabel}>
-  <p class="booking__error" id="booking-error" hidden>{bookingForm.error}</p>
+<form class="booking" id="booking-form" novalidate>
+  <p class="booking__error" id="booking-error" hidden></p>
 
-    <div class="booking__field">
-      <label class="booking__label" for="name">
-        <span class="booking__index">{nameField.index}</span>
-        {nameField.label}
-      </label>
-      <input class="booking__input" type="text" id="name" name="name" required autocomplete="name" />
+  <!-- ——— Slot picker: month calendar → time column ——— -->
+  <div class="booking__field booking__picker" aria-live="polite">
+    <div class="booking__label booking__picker-heading">
+      <span class="booking__index">{f.fields.slot.index}</span>
+      <span>{f.picker.dateHeading}</span>
     </div>
 
-    <div class="booking__field">
-      <label class="booking__label" for="phone">
-        <span class="booking__index">{phoneField.index}</span>
-        {phoneField.label}
-      </label>
-      <input class="booking__input" type="tel" id="phone" name="phone" required minlength="6" autocomplete="tel" />
-    </div>
+    <p class="booking__tz">{f.picker.timezoneNote}</p>
 
-    <div class="booking__row">
-      <div class="booking__field">
-        <label class="booking__label" for="date">
-          <span class="booking__index">{dateField.index}</span>
-          {dateField.label}
-        </label>
-        <input class="booking__input" type="date" id="date" name="date" required />
-      </div>
+    <!-- Loading / empty / freebusy status -->
+    <p class="booking__picker-status" id="picker-status">{f.picker.loading}</p>
+    <p class="booking__picker-status booking__picker-status--soft" id="picker-freebusy" hidden>
+      {f.picker.freeBusyNote}
+    </p>
 
-      <div class="booking__field">
-        <label class="booking__label" for="consultationType">
-          <span class="booking__index">{typeField.index}</span>
-          {typeField.label}
-        </label>
-        <div class="booking__select-wrap">
-          <select class="booking__input booking__select" id="consultationType" name="consultationType" required>
-            {typeField.options?.map((opt) => (
-              <option value={opt.value}>{opt.label}</option>
-            ))}
-          </select>
-          <span class="booking__select-caret" aria-hidden="true">↓</span>
+    <!-- Calendar + times, revealed once availability loads -->
+    <div class="booking__calendar-wrap" id="calendar-wrap" hidden>
+      <div class="booking__calendar">
+        <div class="booking__cal-head">
+          <span class="booking__cal-month" id="cal-month">—</span>
+          <span class="booking__cal-nav">
+            <button type="button" class="booking__cal-arrow" id="cal-prev" aria-label={f.picker.prevMonthLabel}>‹</button>
+            <button type="button" class="booking__cal-arrow" id="cal-next" aria-label={f.picker.nextMonthLabel}>›</button>
+          </span>
+        </div>
+        <div class="booking__cal-grid" id="cal-grid" role="grid">
+          {f.picker.weekdays.map((d) => (
+            <span class="booking__cal-dow" role="columnheader">{d}</span>
+          ))}
+          <!-- day cells injected by JS -->
         </div>
       </div>
+
+      <div class="booking__times" id="time-column">
+        <p class="booking__times-head" id="time-head">{f.picker.timeHeading}</p>
+        <p class="booking__times-prompt" id="time-prompt">{f.picker.pickDatePrompt}</p>
+        <div class="booking__times-list" id="time-chips" role="group"></div>
+      </div>
     </div>
 
-    <div class="booking__field">
-      <label class="booking__label" for="notes">
-        <span class="booking__index">{notesField.index}</span>
-        {notesField.label}
-      </label>
-      <textarea class="booking__input booking__textarea" id="notes" name="notes" rows="3"></textarea>
-    </div>
+    <input type="hidden" id="slotStart" name="slotStart" />
+  </div>
 
-    <button class="booking__submit" type="submit">{bookingForm.submitLabel}</button>
+  <!-- ——— Consultation type ——— -->
+  <div class="booking__field">
+    <div class="booking__label">
+      <span>{f.consultationType.label}</span>
+    </div>
+    <div class="booking__chips booking__chips--type" role="radiogroup">
+      {f.consultationType.options.map((opt, i) => (
+        <button
+          type="button"
+          class="booking__chip booking__chip--type"
+          role="radio"
+          aria-checked={i === 0 ? 'true' : 'false'}
+          data-type={opt.value}
+        >
+          <span class="booking__chip-title">{opt.label}</span>
+          <span class="booking__chip-desc">{opt.descriptor}</span>
+        </button>
+      ))}
+    </div>
+    <input
+      type="hidden"
+      id="consultationType"
+      name="consultationType"
+      value={f.consultationType.options[0].value}
+    />
+  </div>
+
+  <!-- ——— Text fields ——— -->
+  <div class="booking__field">
+    <label class="booking__label" for="name">
+      <span class="booking__index">{f.fields.name.index}</span>
+      <span>{f.fields.name.label}</span>
+    </label>
+    <input class="booking__input" type="text" id="name" name="name" required autocomplete="name" />
+  </div>
+
+  <div class="booking__field">
+    <label class="booking__label" for="email">
+      <span class="booking__index">{f.fields.email.index}</span>
+      <span>{f.fields.email.label}</span>
+    </label>
+    <input class="booking__input" type="email" id="email" name="email" required autocomplete="email" />
+  </div>
+
+  <div class="booking__field">
+    <label class="booking__label" for="phone">
+      <span class="booking__index">{f.fields.phone.index}</span>
+      <span>{f.fields.phone.label}</span>
+    </label>
+    <input class="booking__input" type="tel" id="phone" name="phone" required minlength="6" autocomplete="tel" />
+  </div>
+
+  <div class="booking__field">
+    <label class="booking__label" for="notes">
+      <span class="booking__index">{f.fields.notes.index}</span>
+      <span>{f.fields.notes.label}</span>
+    </label>
+    <textarea class="booking__input booking__textarea" id="notes" name="notes" rows="3"></textarea>
+  </div>
+
+  <button
+    class="booking__submit"
+    type="submit"
+    data-idle={f.submitLabel}
+    data-sending={f.sendingLabel}
+  >
+    {f.submitLabel}
+  </button>
 </form>
 
 <script>
   import { actions } from 'astro:actions';
 
-  const form = document.getElementById('booking-form') as HTMLFormElement | null;
-  const successEl = document.getElementById('booking-success');
-  const errorEl = document.getElementById('booking-error');
+  type Slot = { startIso: string; endIso: string };
 
-  if (form && successEl && errorEl) {
-    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
-    const idleLabel = submit?.textContent ?? '';
-    const sendingLabel = form.dataset.sendingLabel || idleLabel;
+  const el = <T extends HTMLElement = HTMLElement>(id: string) =>
+    document.getElementById(id) as T | null;
+
+  const form = el<HTMLFormElement>('booking-form');
+  const successEl = el('booking-success');
+  const errorEl = el('booking-error');
+  const pickerStatus = el('picker-status');
+  const freebusyNote = el('picker-freebusy');
+  const calendarWrap = el('calendar-wrap');
+  const calMonth = el('cal-month');
+  const calGrid = el('cal-grid');
+  const calPrev = el<HTMLButtonElement>('cal-prev');
+  const calNext = el<HTMLButtonElement>('cal-next');
+  const timeHead = el('time-head');
+  const timePrompt = el('time-prompt');
+  const timeChips = el('time-chips');
+  const slotInput = el<HTMLInputElement>('slotStart');
+  const typeInput = el<HTMLInputElement>('consultationType');
+  const submit = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+  // English JS-toggled messages (kept in sync with content/booking.ts by shape).
+  const MSG = {
+    loading: 'Loading available times…',
+    empty: 'No open times at the moment — please check back soon.',
+    needSlot: 'Please choose a time above.',
+    slotTaken: 'That time was just booked. Please choose another.',
+    error: 'Something went wrong. Please check your details and try again.',
+    pickDate: 'Select a date to see open times.',
+    meetBody: 'The invitation includes a Google Meet link for your video consultation.',
+    meetFallback: 'The Meet link is in your calendar invitation.',
+    pendingBody:
+      'We are finalising your confirmation and the invitation will arrive by email shortly.',
+  };
+
+  const MONTHS = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+
+  // ——— +07 wall-time parsing (NEVER convert to viewer tz) ———
+  // startIso looks like "2026-07-15T10:00:00+07:00". Slice the textual fields.
+  function localDateKey(iso: string): string {
+    return iso.slice(0, 10); // YYYY-MM-DD (the +07 calendar date)
+  }
+  function localTime(iso: string): string {
+    return iso.slice(11, 16); // HH:mm
+  }
+  // Parse the +07 date key into y/m/d numbers (no Date object → no tz drift).
+  function ymd(dateKey: string): { y: number; m: number; d: number } {
+    const [y, m, d] = dateKey.split('-').map(Number);
+    return { y, m, d };
+  }
+
+  // Slots grouped by +07 local date; the set of dates that HAVE availability.
+  let grouped: Map<string, Slot[]> = new Map();
+  // The month currently displayed, as {y, m} where m is 0-based.
+  let viewYear = 0;
+  let viewMonth = 0;
+  // The month keys (YYYY-MM) that contain at least one open slot, sorted.
+  let availableMonths: string[] = [];
+  let selectedDateKey: string | null = null;
+
+  function monthKey(y: number, m: number): string {
+    return `${y}-${String(m + 1).padStart(2, '0')}`;
+  }
+
+  function groupSlots(slots: Slot[]): Map<string, Slot[]> {
+    const map = new Map<string, Slot[]>();
+    for (const s of slots) {
+      const key = localDateKey(s.startIso);
+      const arr = map.get(key) ?? [];
+      arr.push(s);
+      map.set(key, arr);
+    }
+    return map;
+  }
+
+  function clearSelection() {
+    if (slotInput) slotInput.value = '';
+    selectedDateKey = null;
+    if (timeChips) timeChips.innerHTML = '';
+    if (timePrompt) timePrompt.hidden = false;
+    if (timeHead) timeHead.textContent = 'Available times';
+  }
+
+  // Mon-first weekday index (0=Mon … 6=Sun) for the 1st of the view month.
+  function firstWeekdayMonFirst(y: number, m: number): number {
+    const jsDow = new Date(Date.UTC(y, m, 1)).getUTCDay(); // 0=Sun … 6=Sat
+    return (jsDow + 6) % 7; // shift so Mon=0
+  }
+  function daysInMonth(y: number, m: number): number {
+    return new Date(Date.UTC(y, m + 1, 0)).getUTCDate();
+  }
+
+  function renderCalendar() {
+    if (!calGrid || !calMonth) return;
+
+    calMonth.textContent = `${MONTHS[viewMonth]} ${viewYear}`;
+
+    // Remove previously-rendered day cells (keep the 7 dow headers).
+    calGrid.querySelectorAll('.booking__cal-cell').forEach((n) => n.remove());
+
+    const lead = firstWeekdayMonFirst(viewYear, viewMonth);
+    const total = daysInMonth(viewYear, viewMonth);
+
+    // Leading blanks so day 1 lands under its weekday column.
+    for (let i = 0; i < lead; i++) {
+      const blank = document.createElement('span');
+      blank.className = 'booking__cal-cell booking__cal-cell--blank';
+      blank.setAttribute('aria-hidden', 'true');
+      calGrid.appendChild(blank);
+    }
+
+    for (let day = 1; day <= total; day++) {
+      const key = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      const has = grouped.has(key);
+      const cell = document.createElement('button');
+      cell.type = 'button';
+      cell.className = 'booking__cal-cell';
+      cell.textContent = String(day);
+      cell.dataset.date = key;
+      if (has) {
+        cell.classList.add('has-slots');
+        cell.setAttribute('aria-pressed', key === selectedDateKey ? 'true' : 'false');
+        if (key === selectedDateKey) cell.classList.add('is-active');
+        cell.addEventListener('click', () => selectDate(key));
+      } else {
+        cell.classList.add('is-muted');
+        cell.disabled = true;
+      }
+      calGrid.appendChild(cell);
+    }
+
+    updateMonthNav();
+  }
+
+  // Enable/disable ‹ › based on whether an adjacent month has availability.
+  function updateMonthNav() {
+    if (!calPrev || !calNext) return;
+    const cur = monthKey(viewYear, viewMonth);
+    const idx = availableMonths.indexOf(cur);
+    // Prev enabled if any available month is strictly earlier than the view.
+    const hasPrev = availableMonths.some((k) => k < cur);
+    const hasNext = availableMonths.some((k) => k > cur);
+    calPrev.disabled = !hasPrev;
+    calNext.disabled = !hasNext;
+    void idx;
+  }
+
+  function gotoAdjacentMonth(dir: -1 | 1) {
+    const cur = monthKey(viewYear, viewMonth);
+    const candidates =
+      dir === -1
+        ? availableMonths.filter((k) => k < cur).slice(-1)
+        : availableMonths.filter((k) => k > cur).slice(0, 1);
+    if (candidates.length === 0) return;
+    const [y, m] = candidates[0].split('-').map(Number);
+    viewYear = y;
+    viewMonth = m - 1;
+    renderCalendar();
+  }
+
+  function selectDate(key: string) {
+    selectedDateKey = key;
+    if (slotInput) slotInput.value = '';
+    // Repaint pressed state across day cells.
+    calGrid?.querySelectorAll<HTMLButtonElement>('.booking__cal-cell').forEach((b) => {
+      const active = b.dataset.date === key;
+      b.classList.toggle('is-active', active);
+      if (b.classList.contains('has-slots')) {
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      }
+    });
+    renderTimes(key);
+  }
+
+  function renderTimes(key: string) {
+    if (!timeChips || !timeHead || !timePrompt) return;
+    timeChips.innerHTML = '';
+    timePrompt.hidden = true;
+
+    const { y, m, d } = ymd(key);
+    const labelDate = new Date(Date.UTC(y, m - 1, d));
+    const dow = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][labelDate.getUTCDay()];
+    timeHead.textContent = `${dow} ${d} ${MONTHS[m - 1]}`;
+
+    const slots = grouped.get(key) ?? [];
+    for (const s of slots) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'booking__time';
+      btn.dataset.start = s.startIso;
+      btn.setAttribute('aria-pressed', 'false');
+      btn.textContent = localTime(s.startIso);
+      btn.addEventListener('click', () => selectTime(s.startIso));
+      timeChips.appendChild(btn);
+    }
+  }
+
+  function selectTime(startIso: string) {
+    if (slotInput) slotInput.value = startIso;
+    timeChips?.querySelectorAll<HTMLButtonElement>('.booking__time').forEach((b) => {
+      b.setAttribute('aria-pressed', b.dataset.start === startIso ? 'true' : 'false');
+      b.classList.toggle('is-active', b.dataset.start === startIso);
+    });
+    if (errorEl) errorEl.hidden = true;
+  }
+
+  // ——— Consultation type selector (radio-style chips) ———
+  const typeChips = form?.querySelectorAll<HTMLButtonElement>('.booking__chip--type');
+  typeChips?.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      typeChips.forEach((c) => c.setAttribute('aria-checked', 'false'));
+      chip.setAttribute('aria-checked', 'true');
+      if (typeInput) typeInput.value = chip.dataset.type ?? 'Online';
+    });
+  });
+
+  function currentType(): string {
+    return typeInput?.value ?? 'Online';
+  }
+
+  // ——— Month navigation wiring ———
+  calPrev?.addEventListener('click', () => gotoAdjacentMonth(-1));
+  calNext?.addEventListener('click', () => gotoAdjacentMonth(1));
+
+  // ——— Availability fetch ———
+  async function loadAvailability() {
+    if (pickerStatus) {
+      pickerStatus.hidden = false;
+      pickerStatus.textContent = MSG.loading;
+    }
+    if (calendarWrap) calendarWrap.hidden = true;
+    clearSelection();
+
+    const { data, error } = await actions.getAvailability({});
+    if (error || !data) {
+      if (pickerStatus) {
+        pickerStatus.hidden = false;
+        pickerStatus.textContent = MSG.empty;
+      }
+      return;
+    }
+
+    if (freebusyNote) freebusyNote.hidden = !data.freeBusyUnavailable;
+
+    grouped = groupSlots(data.slots);
+
+    if (grouped.size === 0) {
+      if (pickerStatus) {
+        pickerStatus.hidden = false;
+        pickerStatus.textContent = MSG.empty;
+      }
+      if (calendarWrap) calendarWrap.hidden = true;
+      return;
+    }
+
+    // Compute the sorted set of months that contain availability, and open on
+    // the earliest one.
+    availableMonths = Array.from(
+      new Set(Array.from(grouped.keys()).map((k) => k.slice(0, 7))),
+    ).sort();
+    const [firstY, firstM] = availableMonths[0].split('-').map(Number);
+    viewYear = firstY;
+    viewMonth = firstM - 1;
+
+    if (pickerStatus) pickerStatus.hidden = true;
+    if (calendarWrap) calendarWrap.hidden = false;
+    renderCalendar();
+  }
+
+  // ——— Submit ———
+  function showError(msg: string) {
+    if (!errorEl) return;
+    errorEl.textContent = msg;
+    errorEl.hidden = false;
+  }
+
+  function setSubmitting(on: boolean) {
+    if (!submit) return;
+    submit.disabled = on;
+    const label = on ? submit.dataset.sending : submit.dataset.idle;
+    if (label) submit.textContent = label;
+  }
+
+  if (form && successEl && errorEl && submit) {
+    // Kick off availability on mount.
+    loadAvailability();
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       errorEl.hidden = true;
-      if (submit) {
-        submit.disabled = true;
-        submit.textContent = sendingLabel;
+
+      // Guard: a slot must be chosen.
+      if (!slotInput?.value) {
+        showError(MSG.needSlot);
+        return;
       }
 
-      const { error } = await actions.createBooking(new FormData(form));
+      setSubmitting(true);
+
+      const { data, error } = await actions.createBooking(new FormData(form));
 
       if (error) {
-        errorEl.hidden = false;
-        if (submit) {
-          submit.disabled = false;
-          submit.textContent = idleLabel;
+        if (error.code === 'CONFLICT') {
+          showError(MSG.slotTaken);
+          setSubmitting(false);
+          await loadAvailability();
+          return;
         }
+        showError(MSG.error);
+        setSubmitting(false);
         return;
+      }
+
+      // ——— Success — build the rich confirmation ———
+      const isOnline = currentType() === 'Online';
+      const extraEl = el('booking-success-extra');
+      const meetLink = el<HTMLAnchorElement>('booking-meet-link');
+      const cancelLink = el<HTMLAnchorElement>('booking-cancel-link');
+      const bodyEl = el('booking-success-body');
+
+      if (data?.pending && bodyEl) {
+        bodyEl.textContent = MSG.pendingBody;
+      }
+
+      if (extraEl) {
+        if (isOnline && data?.meetUrl) {
+          extraEl.textContent = MSG.meetBody;
+          extraEl.hidden = false;
+        } else if (isOnline) {
+          extraEl.textContent = MSG.meetFallback;
+          extraEl.hidden = false;
+        }
+      }
+
+      if (meetLink && isOnline && data?.meetUrl) {
+        meetLink.href = data.meetUrl;
+        meetLink.hidden = false;
+      }
+
+      if (cancelLink && data?.cancelUrl) {
+        cancelLink.href = data.cancelUrl;
+        cancelLink.hidden = false;
       }
 
       form.hidden = true;
@@ -131,19 +529,6 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     min-width: 0;
   }
 
-  /* Date + consultation share a line on wider screens */
-  .booking__row {
-    display: flex;
-    flex-direction: column;
-    gap: var(--booking-field-gap);
-  }
-  @media (min-width: 640px) {
-    .booking__row {
-      flex-direction: row;
-      gap: var(--gap-section);
-    }
-  }
-
   .booking__label {
     font-family: var(--font-primary);
     font-size: var(--text-label);
@@ -162,6 +547,7 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     opacity: 0.45;
   }
 
+  /* ——— Text inputs ——— */
   .booking__input {
     font-family: var(--font-primary);
     font-size: var(--text-field);
@@ -180,32 +566,9 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     outline: none;
     border-bottom: var(--field-border-focus);
   }
-  /* Firefox keeps native date text washed out otherwise */
   .booking__input::placeholder {
     color: var(--color-text);
     opacity: 0.35;
-  }
-
-  .booking__select-wrap {
-    position: relative;
-  }
-  .booking__select {
-    appearance: none;
-    cursor: pointer;
-    padding-right: 24px;
-  }
-  .booking__select option {
-    background: var(--color-bg);
-    color: var(--color-text);
-  }
-  .booking__select-caret {
-    position: absolute;
-    right: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: var(--text-label);
-    opacity: 0.5;
-    pointer-events: none;
   }
 
   .booking__textarea {
@@ -213,6 +576,256 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     min-height: 72px;
   }
 
+  /* ——— Slot picker shell ——— */
+  .booking__picker {
+    gap: var(--form-label-gap);
+  }
+  .booking__tz {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-bar);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-nav);
+    opacity: 0.55;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .booking__picker-status {
+    font-family: var(--font-primary);
+    font-size: var(--text-field);
+    font-weight: var(--fw-extralight);
+    opacity: 0.7;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .booking__picker-status--soft {
+    font-size: var(--text-footer-bar);
+    opacity: 0.55;
+  }
+
+  /* ——— Calendar + times two-column layout ——— */
+  .booking__calendar-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--form-field-gap);
+    margin-top: var(--form-label-gap);
+  }
+  .booking__calendar-wrap[hidden] {
+    display: none;
+  }
+
+  .booking__cal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .booking__cal-month {
+    font-family: var(--font-primary);
+    font-size: var(--text-field);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-label);
+  }
+  .booking__cal-nav {
+    display: flex;
+    gap: 14px;
+  }
+  .booking__cal-arrow {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    line-height: 1;
+    color: var(--color-text);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    opacity: 0.75;
+    transition: opacity 0.25s ease;
+  }
+  .booking__cal-arrow:hover:not(:disabled) {
+    opacity: 1;
+  }
+  .booking__cal-arrow:disabled {
+    opacity: 0.2;
+    cursor: default;
+  }
+
+  .booking__cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+  .booking__cal-dow {
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-bar);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    padding-bottom: 10px;
+  }
+  .booking__cal-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: var(--font-primary);
+    font-size: var(--text-field);
+    font-weight: var(--fw-extralight);
+    color: var(--color-text);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .booking__cal-cell--blank {
+    cursor: default;
+  }
+  .booking__cal-cell.is-muted {
+    color: rgba(255, 255, 255, 0.16);
+    cursor: default;
+  }
+  /* Availability marker — monochrome by design (design-system: "No accent
+     color"). A small low-opacity dot in the site's own text colour. */
+  .booking__cal-cell.has-slots::after {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--color-text);
+    opacity: 0.55;
+  }
+  .booking__cal-cell.has-slots:hover {
+    background: rgba(255, 255, 255, 0.07);
+  }
+  .booking__cal-cell.is-active {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+  .booking__cal-cell.is-active::after {
+    background: var(--color-bg);
+    opacity: 0.7;
+  }
+  .booking__cal-cell:focus-visible {
+    outline: 1px solid var(--color-text);
+    outline-offset: -1px;
+  }
+
+  /* ——— Time column ——— */
+  .booking__times {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .booking__times-head {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-bar);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-label);
+    opacity: 0.55;
+    margin: 0 0 4px;
+  }
+  .booking__times-prompt {
+    font-family: var(--font-primary);
+    font-size: var(--text-field);
+    font-weight: var(--fw-extralight);
+    opacity: 0.5;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .booking__times-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .booking__time {
+    font-family: var(--font-primary);
+    font-size: var(--text-field);
+    font-weight: var(--fw-extralight);
+    letter-spacing: 0.06em;
+    color: var(--color-text);
+    background: transparent;
+    border: 1px solid var(--color-rule);
+    border-radius: 0;
+    padding: 12px 18px;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  }
+  .booking__time:hover,
+  .booking__time:focus-visible {
+    border-color: var(--color-text);
+    outline: none;
+  }
+  .booking__time.is-active {
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-color: var(--color-text);
+  }
+
+  /* ——— Consultation type chips ——— */
+  .booking__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-image);
+  }
+  .booking__chips--type {
+    flex-direction: column;
+  }
+  .booking__chip {
+    font-family: var(--font-primary);
+    font-size: var(--text-field);
+    font-weight: var(--fw-extralight);
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+    background: transparent;
+    border: 1px solid var(--color-rule);
+    border-radius: 0;
+    padding: 10px 16px;
+    cursor: pointer;
+    line-height: 1.4;
+    transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .booking__chip:hover,
+  .booking__chip:focus-visible {
+    border-color: var(--color-text);
+    outline: none;
+  }
+  .booking__chip[aria-checked='true'] {
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-color: var(--color-text);
+  }
+  .booking__chip--type {
+    width: 100%;
+    padding: 14px 16px;
+    gap: 4px;
+  }
+  .booking__chip-title {
+    font-size: var(--text-field);
+  }
+  .booking__chip-desc {
+    font-size: var(--text-footer-bar);
+    opacity: 0.6;
+    line-height: 1.4;
+  }
+  .booking__chip[aria-checked='true'] .booking__chip-desc {
+    opacity: 0.7;
+  }
+
+  /* ——— Submit ——— */
   .booking__submit {
     font-family: var(--font-primary);
     font-size: var(--text-label);
@@ -234,6 +847,10 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     color: var(--color-bg);
     outline: none;
   }
+  .booking__submit:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
 
   .booking__error {
     font-family: var(--font-primary);
@@ -242,8 +859,9 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     color: var(--color-text);
     border-left: 1px solid var(--color-text);
     padding-left: var(--form-label-gap);
-    opacity: 0.8;
+    opacity: 0.85;
     margin: 0;
+    line-height: 1.5;
   }
 
   /* ——— Success state ——— */
@@ -257,7 +875,7 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     font-weight: var(--fw-extralight);
     text-transform: uppercase;
     letter-spacing: var(--ls-video);
-    line-height: 1;
+    line-height: 1.05;
     margin: 0;
   }
   .booking__success-rule {
@@ -266,7 +884,8 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     width: var(--collection-rule-width);
     margin: 0;
   }
-  .booking__success-body {
+  .booking__success-body,
+  .booking__success-note {
     font-family: var(--font-primary);
     font-size: var(--text-footer-body);
     font-weight: var(--fw-extralight);
@@ -274,6 +893,9 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     max-width: 42ch;
     opacity: 0.85;
     margin: 0;
+  }
+  .booking__success-note {
+    opacity: 0.7;
   }
   .booking__success-link {
     font-family: var(--font-primary);
@@ -292,10 +914,12 @@ const [nameField, phoneField, dateField, typeField, notesField] = bookingForm.fi
     opacity: 0.6;
   }
 
-  /* Normalize the native date picker indicator on dark bg */
-  .booking__input::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    opacity: 0.6;
-    cursor: pointer;
+  /* ——— Desktop: calendar left, times right ——— */
+  @media (min-width: 560px) {
+    .booking__calendar-wrap {
+      grid-template-columns: 1fr 190px;
+      gap: 32px;
+      align-items: start;
+    }
   }
 </style>

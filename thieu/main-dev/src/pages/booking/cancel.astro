@@ -1,0 +1,233 @@
+---
+// Cancel landing (D-8): the tokened cancel link target. MUST be exactly
+// /booking/cancel — the action defaults cancelBaseUrl to
+// https://maisondenude.com/booking/cancel.
+//
+// Prerendered (D-ARCH-02): the token is read client-side from ?token=… and the
+// cancel runs via astro:actions against the server-rendered /_actions/* route.
+// Language: full English (D-BOOK-UI-01).
+export const prerender = true;
+
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/ui/Nav.astro';
+import { bookingCancel } from '../../content/booking';
+import { pages } from '../../content/seo';
+
+const c = bookingCancel;
+---
+
+<Base title={pages.booking.title} description={pages.booking.description}>
+  <Nav />
+  <main class="cancel-page">
+    <section class="cancel-page__panel">
+      <p class="cancel-page__eyebrow">{c.eyebrow}</p>
+
+      <!-- ——— Confirm-cancel prompt (default) ——— -->
+      <div class="cancel-block" id="cancel-prompt" hidden>
+        <h1 class="cancel-page__title">{c.prompt.title}</h1>
+        <hr class="cancel-page__rule" />
+        <p class="cancel-page__body">{c.prompt.body}</p>
+        <div class="cancel-page__actions">
+          <button
+            class="cancel-page__btn"
+            type="button"
+            id="cancel-confirm"
+            data-idle={c.prompt.confirmLabel}
+            data-sending={c.sending}
+          >
+            {c.prompt.confirmLabel}
+          </button>
+          <a class="cancel-page__link" href="/booking" id="cancel-keep">
+            {c.prompt.keepLabel}
+          </a>
+        </div>
+      </div>
+
+      <!-- ——— Success ——— -->
+      <div class="cancel-block" id="cancel-success" hidden>
+        <h1 class="cancel-page__title">{c.success.title}</h1>
+        <hr class="cancel-page__rule" />
+        <p class="cancel-page__body">{c.success.body}</p>
+        <a class="cancel-page__link" href={c.success.linkHref}>{c.success.linkLabel}</a>
+      </div>
+
+      <!-- ——— No / unknown token (friendly) ——— -->
+      <div class="cancel-block" id="cancel-missing" hidden>
+        <h1 class="cancel-page__title">{c.missing.title}</h1>
+        <hr class="cancel-page__rule" />
+        <p class="cancel-page__body">{c.missing.body}</p>
+        <a class="cancel-page__link" href={c.missing.linkHref}>{c.missing.linkLabel}</a>
+      </div>
+    </section>
+  </main>
+</Base>
+
+<script>
+  import { actions } from 'astro:actions';
+
+  const el = (id: string) => document.getElementById(id);
+  const prompt = el('cancel-prompt');
+  const success = el('cancel-success');
+  const missing = el('cancel-missing');
+  const confirmBtn = el('cancel-confirm') as HTMLButtonElement | null;
+
+  const token = new URLSearchParams(window.location.search).get('token');
+
+  if (!token) {
+    // No token → friendly missing state.
+    if (missing) missing.hidden = false;
+  } else if (prompt && success && confirmBtn) {
+    prompt.hidden = false;
+
+    confirmBtn.addEventListener('click', async () => {
+      confirmBtn.disabled = true;
+      const sending = confirmBtn.dataset.sending;
+      if (sending) confirmBtn.textContent = sending;
+
+      // The action is always friendly (idempotent) — success on any outcome.
+      await actions.cancelBooking({ token });
+
+      prompt.hidden = true;
+      success.hidden = false;
+    });
+  } else if (missing) {
+    missing.hidden = false;
+  }
+</script>
+
+<style>
+  .cancel-page {
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap-section) var(--label-left);
+  }
+
+  .cancel-page__panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: var(--booking-form-max);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .cancel-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .cancel-block[hidden] {
+    display: none;
+  }
+
+  .cancel-page__eyebrow {
+    font-family: var(--font-primary);
+    font-size: var(--text-collection-sub);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-collection-sub);
+    opacity: 0.65;
+    margin: 0;
+  }
+
+  .cancel-page__title {
+    font-family: var(--font-primary);
+    font-size: var(--text-booking-title);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-video);
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .cancel-page__rule {
+    border: none;
+    border-top: 1px solid var(--color-rule);
+    width: var(--collection-rule-width);
+    margin: 0;
+  }
+
+  .cancel-page__body {
+    font-family: var(--font-primary);
+    font-size: var(--text-footer-body);
+    font-weight: var(--fw-extralight);
+    line-height: 1.8;
+    max-width: 46ch;
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  .cancel-page__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--form-field-gap);
+    margin-top: 8px;
+  }
+
+  .cancel-page__btn {
+    font-family: var(--font-primary);
+    font-size: var(--text-label);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-label);
+    color: var(--color-text);
+    background: transparent;
+    border: 1px solid var(--color-text);
+    padding: calc(var(--field-padding-y) + 4px) 32px;
+    cursor: pointer;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+  .cancel-page__btn:hover,
+  .cancel-page__btn:focus-visible {
+    background: var(--color-text);
+    color: var(--color-bg);
+    outline: none;
+  }
+  .cancel-page__btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .cancel-page__link {
+    font-family: var(--font-primary);
+    font-size: var(--text-label);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-label);
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.25s ease;
+  }
+  .cancel-page__link:hover {
+    opacity: 1;
+  }
+
+  /* Entrance motion — one gentle rise, CSS only */
+  .cancel-page__panel {
+    animation: cancel-rise 0.7s ease forwards;
+  }
+  @keyframes cancel-rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cancel-page__panel {
+      animation: none;
+    }
+  }
+</style>

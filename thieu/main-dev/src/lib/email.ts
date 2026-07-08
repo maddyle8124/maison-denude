@@ -16,7 +16,7 @@ export interface BookingNotification {
   name: string;
   phone: string;
   date: string;
-  consultationType: 'atelier' | 'virtual' | 'event';
+  consultationType: 'Online' | 'Instore';
   notes?: string | null;
 }
 
@@ -57,9 +57,8 @@ const RESEND_ENDPOINT = 'https://api.resend.com/emails';
 
 /** Human labels for the consultation type enum (content, not schema). */
 const CONSULTATION_LABELS: Record<BookingNotification['consultationType'], string> = {
-  atelier: 'Atelier visit',
-  virtual: 'Virtual consultation',
-  event: 'Event consultation',
+  Online: 'Online consultation',
+  Instore: 'In-store atelier visit',
 };
 
 /** Resolve email config from the Worker env. Pure — call it with `env`, never import env here. */
