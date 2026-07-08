@@ -4,12 +4,14 @@
 >
 > **Doc map:** `context/management/` = plan.md, open_questions.md, CONTINUITY.md, status_log.md (project-wide). `context/frontend/` = frontend specs + decisions.md (D-rows). `context/decision.md` = master legal decisions (MD-rows).
 
-_Last refreshed: 2026-07-08 (Google Calendar self-serve booking feature + full-English month-calendar UI SHIPPED to prod on the thieuxmaison account, live-verified end-to-end; commit `262fb8c`, deploy `f3e78b7c`. Working tree clean, git == prod. Compaction-safe.)_
+_Last refreshed: 2026-07-08 (Google Calendar self-serve booking SHIPPED + live; then FIXED the "Confirm does nothing" dead-click — slot selection is now required-and-visible. Commit `9995e6c`, deploy `55a3d5da`, live-verified via Playwright on prod. Working tree clean, git == prod. Compaction-safe.)_
 
 ---
 
 ## Now-line
-**DONE & LIVE (2026-07-08): Google Calendar self-serve booking feature + full-English month-calendar UI are shipped to production on maisondenude.com and verified end-to-end.** `/booking` is now instant self-serve slot booking → atomic claim → confirmed Google Calendar event + Meet link (Online) + invites to team & client → tokened cancel. Nothing in flight; working tree clean, git == prod. Only two OPTIONAL deferred items remain (see below).
+**DONE & LIVE (2026-07-08): Google Calendar self-serve booking + full-English month-calendar UI shipped to prod AND the "Confirm booking does nothing" dead-click is fixed.** `/booking` is instant self-serve slot booking → atomic claim → confirmed Google Calendar event + Meet link (Online) + invites → tokened cancel. Nothing in flight; working tree clean, git == prod. Only two OPTIONAL deferred items remain (see below).
+
+**Dead-click fix (commit `9995e6c`, deploy `55a3d5da`):** ROOT CAUSE — the backend always worked (Playwright proved a real booking + Meet link), but the Confirm button sits at the bottom of a long form while the "Please choose a time above." validation error rendered only in the top-of-form banner, off-screen. A user who filled the fields but never picked a time slot clicked Confirm, saw the click animation, and nothing visible happened → "the button is broken." FIX in `BookingForm.astro`: (1) submit button is **disabled until a slot is chosen**, labelled "Choose a time to confirm" → "Confirm booking" — a dead click is now structurally impossible; (2) a **selected-slot summary** ("Selected — Fri 10 July, 12:00 (Saigon time)") renders right above the button; (3) validation/errors now also render **inline above the button + scrollIntoView** so a blocked submit is never off-screen. Verified end-to-end on prod. **Lesson: a bottom-of-form submit must never surface its validation error only at the top.**
 
 **Current shipped state (all committed + deployed):**
 - **Latest commit:** `262fb8c` on `main` (pushed to github.com/maddyle8124/maison-denude). Working tree clean, `main` in sync with origin (0/0).

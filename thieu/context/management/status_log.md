@@ -4,6 +4,16 @@
 
 ---
 
+## 2026-07-08 (Booking "Confirm does nothing" dead-click — root-caused + fixed) — DONE, LIVE
+
+- **Report:** user said clicking Confirm on live `/booking` did nothing; "renders the click animation but no effect." Reproduced on prod with the Playwright MCP.
+- **Diagnosis (not a backend bug):** the very first Playwright run booked successfully end-to-end — `createBooking` returned 200 with a real Meet URL + cancel URL, i.e. the server flow was fine. The failure was purely front-end/UX: the Confirm button sits at the **bottom** of a long form, but the "Please choose a time above." validation error (fired when no time slot is selected) rendered **only** in the top-of-form `#booking-error` banner, scrolled far out of view. A user who filled Name/Email/Phone/Occasion but never clicked a date+time chip clicked Confirm → click animation, no visible result, error off-screen → "the button is broken." Confirmed via `elementFromPoint`/DOM inspection: on a slot-less submit, `slotStart=''`, error text set, but positioned above the fold.
+- **Fix (`BookingForm.astro`, commit `9995e6c`, deploy `55a3d5da`):** (1) submit button **disabled until a slot is chosen** — labelled "Choose a time to confirm" → "Confirm booking"; the dead click is now structurally impossible. (2) A **selected-slot summary** renders right above the button ("Selected — Fri 10 July, 12:00 (Saigon time)"). (3) Validation/errors now also render **inline above the button + `scrollIntoView`**, so a blocked submit is never off-screen. `refreshSlotUi()` keeps button disabled-state/label + summary in lockstep with `slotStart`; `setSubmitting(false)` hands control back to it.
+- **Verified:** local `wrangler dev` + Playwright (disabled on load → enables on pick, summary shows); 135/135 unit tests green; deployed to thieuxmaison worker (version `55a3d5da`); live-verified on maisondenude.com (new script `Bqv4ZRMm.js`, disabled+hinted on load, enables + summary on day+time pick).
+- **Lesson:** a bottom-of-form submit must never surface its validation error only at the top of the form — mirror it inline next to the button (or disable the button until valid).
+
+---
+
 ## 2026-07-08 (Booking feature SHIPPED to prod + scoped-style root-cause fix) — DONE, LIVE
 
 - **Prod rollout to thieuxmaison account (D-BOOK-INFRA-01):** user corrected that the worker `maisondenude-web` + the maisondenude.com domain must live on the **thieuxmaison** CF account (`73fb68b2…`), not nguyenthaithieu (`ecb2e6bb…`) — the old `wrangler.jsonc account_id` was an error. Fixed the id, set all 11 Worker secrets on the thieuxmaison worker via `wrangler secret put` (incl. **GCAL_SEND_UPDATES=all** for prod), deployed. Live-verified on maisondenude.com: new page renders, real free/busy, full e2e booking → Meet link → cancel → slot freed. Committed `18e1594` (feature) + `f20e08e` (infra fix).
