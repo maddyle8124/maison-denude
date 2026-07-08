@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "purpose": "Find adjacent brands (esp. HK/SG cheongsam) via SimilarWeb similar-sites, seeded from Shanghai Tang / Qipology / Sau Lee",
+    "method": "get-websites-similar-sites-agg (audience-similarity), 2026-03..2026-05, sort affinity",
+    "cost_note": "~80 credits per call (heavy).",
+    "run_date": "2026-07-04",
+    "gating": "audience-interests for Shanghai Tang + Qipology = 404 (gated, retried). Yi-ming similar-sites = 404 (below threshold). So discovery relies on similar-sites of the 3 measurable HK brands."
+  },
+  "honest_read": "similar-sites clusters by AUDIENCE, so the seeds (cheongsam houses) surface a CHEONGSAM/QIPAO/HANFU category cluster (mostly Chinese-diaspora e-com), NOT specifically HK/SG designer houses. Few are HK/SG-headquartered. This IS, however, the competitive set a modern sườn-xám line would sit in. Sau Lee (US-led) additionally surfaces mainstream Western luxury e-com.",
+  "shanghaitang_similar": {
+    "cheongsam_hanfu_cluster": ["hanfumodern.com (aff 1.0)", "qipology.com (0.98)", "eastmeetsdress.com (0.95)", "thehanfustory.com (0.93)", "mycheongsam.com (0.92)", "chineseclothingonline.com (0.89)", "nuwahanfu.com (0.86)", "fashionhanfu.com (0.69)"],
+    "other": ["hangrace.com.au (AU, 0.87)", "kateyang.co.uk (UK)", "hanaunni.com (0.81)", "missmuse.in (India)", "dustyman.vn (VN!)", "sau-lee.com (0.71)", "luxeorienta.com"]
+  },
+  "qipology_similar": {
+    "cheongsam_bridal_cluster": ["orientalmestore.com (aff 1.0, oriental wedding)", "eastmeetsdress.com (0.92)", "thepankou.com (0.90, cheongsam)", "shanghaitang.com (0.85)", "hangrace.com.au (0.80)", "fairebelle.com (0.78)"],
+    "modest_curve_indian": ["chicandmodesty.com", "houseofhind.com", "islamitischekleding.nl", "arpitamehtaofficial.com (India designer)", "hellocurve.com / curvafabulous.com (plus-size)", "qiszar.com"]
+  },
+  "saulee_similar": {
+    "cheongsam": ["eastmeetsdress.com (1.0)", "qipology.com (0.98)", "mycheongsam.com (0.93)", "shanghaitang.com (0.92)"],
+    "mainstream_luxury_ecom": ["modaoperandi.com", "net-a-porter.com", "saksfifthavenue.com", "revolve.com", "fwrd.com", "theoutnet.com", "anthropologie.com", "bloomingdales.com"],
+    "occasion_bridal": ["rachelgilbert.us (AU occasion)", "ajeworld.com (AU contemporary)", "meshki.us", "lulus.com", "azazie.com (bridal marketplace)"]
+  },
+  "new_brands_worth_a_look_for_maison": {
+    "modern_cheongsam_suon_xam_set": ["mycheongsam.com", "thepankou.com", "orientalmestore.com", "chineseclothingonline.com", "eastmeetsdress.com", "hangrace.com.au (AU diaspora)"],
+    "hanfu_chinese_traditional": ["hanfumodern.com", "thehanfustory.com", "nuwahanfu.com", "fashionhanfu.com"],
+    "note": "For a true HK/SG DESIGNER-house list, similar-sites is not ideal (audience clusters by category, not HQ). Better = category top-sites filtered to SG/HK, or manual. Offered as next step."
+  }
+}

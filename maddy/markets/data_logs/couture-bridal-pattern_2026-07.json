@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "purpose": "Keyword + traffic-source pattern for 7 >$1000 couture/BRIDAL houses → confirm/extend the $2000+ pattern for Maison's bridal/occasion play",
+    "source": "SimilarWeb MCP, workflow wf_d034353e-51c. channels 12-mo 2025-06..2026-05; keywords 2026-03..2026-05",
+    "run_date": "2026-07-04"
+  },
+  "per_brand": {
+    "saiidkobeisy.com": {"hq": "UAE", "channels_pct": {"OrganicSearch_real": 21.8, "Direct": 12.3, "PaidSearch": 2.9, "note": "Display Ads 52.9% = Jun/Sep spike artifact, excluded"}, "geo": {"SA": 35.9, "US": 29.9, "GB": 14, "IN": 11.7, "AE": 5}, "branded_pct": 55, "nonbranded": "occasion/bridal + Arabic wedding terms (فساتين افراح) + product (beaded/embroidered dress)"},
+    "verawang.com": {"hq": "US", "channels_pct": {"OrganicSearch": 88, "Direct": 10, "PaidSearch": 0}, "geo": {"US": 32.5, "GB": 6.2, "AU": 5.8, "CA": 4.8, "IN": 3.9}, "branded_pct": 84, "nonbranded": "ranks GENERIC head terms 'wedding dresses'/'wedding dress'/'gown' (mega-brand can)"},
+    "graceloveslace.com": {"hq": "AU", "channels_pct": {"OrganicSearch": 38.7, "PaidSearch": 25.5, "Direct": 16.8, "PaidSocial": 7.9}, "geo": {"US": 85.3, "GB": 4.1}, "branded_pct": 22, "nonbranded": "'wedding dresses' + product/fit ('lace/corset/basque wedding dress') + SIZING GUIDES ('how to measure bust')", "note": "DTC made-to-order OUTLIER — ~33% paid, category-head-driven"},
+    "manishmalhotra.in": {"hq": "India", "channels_pct": {"OrganicSearch": 69.8, "Direct": 17.3, "Referrals": 9.9, "PaidSearch": 0}, "geo": {"IN": 79.4, "US": 4.4, "PK": 4.2, "CA": 2.3, "SG": 2.1}, "branded_pct": 85, "nonbranded": "celebrity (kiara advani saree, kareena) + occasion (bridal lehenga, sherwani for groom) + product"},
+    "daniellefrankelstudio.com": {"hq": "US", "channels_pct": {"OrganicSearch": 45.8, "Direct": 23, "OrganicSocial": 16.6, "PaidSearch": 5.2}, "geo": {"US": 52.1, "GB": 20.1, "AU": 8.1, "IN": 5.9, "CA": 4.7}, "branded_pct": 85, "nonbranded": "collab (birkenstock/juno heel) + veil + 'wedding dress brands' + silk wedding dresses"},
+    "lihihod.com": {"hq": "Israel", "channels_pct": {"OrganicSearch": 57.7, "Referrals": 17.1, "OrganicSocial": 16, "Direct": 8.8, "PaidSearch": 0}, "geo": {"US": 50, "GB": 36.3, "IL": 3.9, "AU": 3.6}, "branded_pct": 80, "nonbranded": "GEO-DESIGNER search: 'israeli wedding dress designers', 'small israeli wedding designers'", "note": "small/gated (4 of 12 months)"},
+    "panachehautecouture.com": {"hq": "AU (India-focused)", "channels_pct": {"OrganicSearch": 69.7, "OrganicSocial": 16.4, "Direct": 10.8, "PaidSearch": 3.1}, "geo": {"IN": 66.5, "US": 13.7, "AU": 10.7}, "branded_pct": 7.5, "nonbranded": "ranks COMPETITOR 'sabyasachi' + 'sabyasachi lehenga dupe' (leakage, cautionary)", "note": "small/gated (Feb+Mar only)"}
+  },
+  "pattern_verdict": {
+    "confirms": "organic+direct dominance (heritage houses Vera Wang ~98%, Manish 87%, Lihi 66%, Panache 80%, paid ~0-3%); branded discovery (80-85% for heritage); US + Anglophone diaspora geo; celebrity + occasion non-branded.",
+    "extends": [
+      "OCCASION/BRIDAL is now the PRIMARY non-branded cluster (was secondary to celebrity in eveningwear couture) — bridal intent is more searchable.",
+      "Two non-Western FIRST-ORDER home markets: Gulf/MENA (Saiid Kobeisy Saudi 35.9% + Arabic keywords) + India (Manish 79%, Panache 67%).",
+      "Boutique bridal = high Referrals + Organic Social (Lihi Hod 17%+16%, Danielle Frankel 16.6%) → discovered via bridal directories/salons/Instagram, not name-search.",
+      "New non-branded sub-type: 'country + wedding designer' ('israeli wedding dress designers')."
+    ],
+    "breaks_business_model_specific": "DTC/mass-premium bridal breaks 2 couture rules: Grace Loves Lace = 33% paid (25.5% paid search) + ranks GENERIC 'wedding dresses' + only 22% branded. Vera Wang (mega) also ranks category head terms. → 'paid ~0 / no category head' is a couture-ATELIER effect, not universal."
+  },
+  "maison_implications": [
+    "Branded-discovery + owned-organic engine first, NOT paid (heritage houses paid ~0-3%). [High]",
+    "Build an occasion/BRIDAL hub for 'wedding'+occasion intent — the one non-branded surface worth ranking; pair with appointment/atelier page. [High]",
+    "Spend on paid ONLY if running a DTC/lower-price made-to-order line (Grace 33% paid vs atelier ~0). Paid = business-model lever, not bridal lever. [High]",
+    "Court bridal directories + salon/stockist referrals + Instagram for a boutique atelier (Lihi Hod/Danielle Frankel Ref+Social heavy). [Med]",
+    "Geo = strong home base + Anglophone/Asian diaspora tail (US/CA/UK/AU + SG). [Med]",
+    "Rank 'Vietnamese wedding dress designer / Vietnam couture atelier' (country+designer search); add Gulf/India language landing ONLY if targeting those (proven first-order bridal markets). [Med]"
+  ],
+  "gated_caveats": "Lihi Hod + Panache small/gated (few months); Saiid Kobeisy Display-spike excluded; branded % are estimates with brand-term leakage; referral/social referrer identities not itemized (directory/salon attribution inferred)."
+}

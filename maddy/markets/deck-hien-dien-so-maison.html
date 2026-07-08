@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Dénudé — Hiện diện số (bản dễ đọc)</title>
+<style>
+  :root{
+    --ink:#1c1a17;--muted:#6f6a62;--line:#e7e2d9;--bg:#f7f4ef;--card:#fffdfa;
+    --gold:#8a6d3b;--green:#2e7d5b;--red:#a83a3a;--blue:#3a6ea1;--purple:#7a5ea1;--taupe:#c3b8a5;--gray:#b9b3a8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.55;}
+  .deck{max-width:960px;margin:0 auto;padding:24px 20px 90px;}
+  .slide{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 32px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,.03);}
+  .kicker{font-family:Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px;}
+  h1{font-size:30px;line-height:1.2;letter-spacing:.2px;margin-bottom:14px;}
+  h2{font-size:23px;line-height:1.25;margin-bottom:6px;}
+  .take{font-size:15.5px;color:var(--ink);background:#f2ede4;border-left:3px solid var(--gold);padding:11px 15px;border-radius:0 6px 6px 0;margin:14px 0 18px;line-height:1.55;}
+  .take.no{border-color:var(--red);background:#faf0ef;}
+  .take.yes{border-color:var(--green);background:#eef6f1;}
+  .take b{color:var(--gold);}.take.no b{color:var(--red);}.take.yes b{color:var(--green);}
+  p,li{font-size:14px;color:var(--muted);font-family:Arial,sans-serif;}
+  .q{font-family:Arial,sans-serif;font-size:15px;color:var(--ink);margin:8px 0;padding-left:26px;position:relative;}
+  .q::before{content:"→";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .gloss{background:#fbf7f0;border:1px dashed var(--line);border-radius:8px;padding:12px 15px;margin-top:16px;font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);}
+  .gloss b{color:var(--ink);}
+  .maison{font-family:Arial,sans-serif;font-size:13.5px;color:var(--ink);background:#eef6f1;border-left:3px solid var(--green);padding:9px 13px;border-radius:0 6px 6px 0;margin-top:14px;}
+  .maison b{color:var(--green);}
+  .row{display:flex;align-items:center;gap:12px;margin:9px 0;font-family:Arial,sans-serif;}
+  .row .name{width:200px;flex:none;font-size:12.5px;color:var(--ink);text-align:right;}
+  .row .name small{color:var(--muted);}
+  .bar{flex:1;display:flex;height:26px;border-radius:5px;overflow:hidden;background:#efeae1;}
+  .seg{display:flex;align-items:center;justify-content:center;font-size:10.5px;color:#fff;font-weight:700;min-width:0;white-space:nowrap;overflow:hidden;}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;font-family:Arial,sans-serif;font-size:11.5px;color:var(--muted);margin-top:14px;}
+  .legend span{display:inline-flex;align-items:center;gap:5px;}
+  .sw{width:11px;height:11px;border-radius:2px;display:inline-block;}
+  .note{font-family:Arial,sans-serif;font-size:11.5px;color:var(--muted);margin-top:12px;border-top:1px dashed var(--line);padding-top:8px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;}
+  .pcard{border:1px solid var(--line);border-radius:9px;padding:12px 14px;background:#fffdfa;}
+  .pcard.rev{border-color:var(--red);background:#fdf5f4;}
+  .pcard .pt{font-family:Arial,sans-serif;font-size:13px;color:var(--ink);font-weight:600;line-height:1.35;}
+  .pcard .ev{font-family:Arial,sans-serif;font-size:11.5px;color:var(--muted);margin-top:5px;}
+  .badge{display:inline-block;font-family:Arial,sans-serif;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:20px;color:#fff;margin-top:7px;}
+  .bh{background:var(--green);}.bm{background:var(--gold);}.bl{background:var(--gray);}.brev{background:var(--red);}
+  .strike{text-decoration:line-through;color:var(--gray);}
+  table{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:12.5px;margin-top:6px;}
+  td,th{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#777;background:#f2ede4;}
+  svg{max-width:100%;height:auto;}
+  .foot{font-family:Arial,sans-serif;font-size:11.5px;color:var(--muted);text-align:center;margin-top:30px;}
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- 0 TITLE -->
+  <section class="slide">
+    <div class="kicker">Maison Dénudé · Nghiên cứu hiện diện số · 04/07/2026</div>
+    <h1>Nhà mốt đắt tiền được khách tìm thấy bằng cách nào — và Maison có “bám” được vào tệp khách siêu giàu không?</h1>
+    <p class="q"><b>Câu 1:</b> Nhìn các nhà mốt giá cao ($2000+/bộ) — khách tìm & vào web họ ra sao → rút bài học cho Maison.</p>
+    <p class="q"><b>Câu 2:</b> Người hay mua đồng hồ / nhà đất / ở khách sạn 5 sao — mình có quảng cáo chen vào để họ biết Maison được không?</p>
+    <div class="gloss">
+      <b>Vài chữ hay gặp trong báo cáo (đọc 1 lần cho dễ):</b><br>
+      • <b>Vào web từ Google (tự nhiên)</b> = khách tự gõ tìm trên Google rồi bấm vào, mình KHÔNG trả tiền. · <b>Gõ thẳng</b> = khách gõ thẳng tên web (đã biết brand). · <b>Quảng cáo (trả tiền)</b> = mình trả tiền để hiện lên. · <b>Mạng xã hội</b> = vào từ IG/FB/Pinterest. · <b>Web khác giới thiệu</b> = từ 1 trang khác bấm qua.<br>
+      • <b>Tìm bằng TÊN</b> = gõ đúng tên thương hiệu (“Phan Huy”). · <b>Tìm bằng từ chung</b> = gõ loại đồ (“đầm cưới”), không có tên brand.<br>
+      • <b>Couture</b> = hàng thửa riêng cao cấp. · <b>May sẵn (RTW)</b> = mua là mặc, có sẵn size. · <b>May riêng (bespoke)</b> = thiết kế riêng từng khách. · <b>Kiều bào</b> = người Việt sống ở nước ngoài.
+    </div>
+    <p style="margin-top:14px;font-size:12.5px;">Nguồn: SimilarWeb (công cụ đo lưu lượng web) + đọc web trực tiếp. Đã có bước tự kiểm tra để loại số liệu bịa. Chỉ trình bày số <b>đo được thật</b>.</p>
+  </section>
+
+  <!-- 0b EXECUTIVE SUMMARY -->
+  <section class="slide">
+    <div class="kicker">Tóm tắt điều hành — đọc 1 phút</div>
+    <h2>2 câu hỏi → 2 câu trả lời (đã kiểm chứng đối kháng)</h2>
+    <div class="grid">
+      <div class="pcard"><div class="pt">Câu 1 · Phân khúc $2000+ tìm theo pattern nào?</div><div class="ev">
+        • Tìm bằng <b>TÊN</b> (designer/couture 75–100%); từ chung &lt;5%. Đòn bẩy là <b>DANH TIẾNG</b>, không phải giá (Xéo Xọ rẻ vẫn 60% gõ-tên).<br>
+        • Cầu thật = <b>đồ dự tiệc/cưới</b> (“wedding guest dress” 83K/th ở Mỹ) + “modern ao dai” + (VN) “áo dài cưới”; áo-dài-bespoke tiếng Anh = <b>0 cầu</b>.<br>
+        • Traffic sống bằng <b>Organic + Direct (78–88%)</b>. Địa lý = <b>Mỹ #1 + Việt Kiều #2</b> (Sabyasachi = hình mẫu gần nhất).<br>
+        • Web hiệu quả = <b>trang BST + hub cưới/dạ-tiệc + đặt-lịch</b> (không phải trang chủ/giỏ hàng).</div>
+        <span class="badge bh">Playbook: xây TÊN · SEO từ cụ thể · tách bespoke/RTW</span></div>
+      <div class="pcard rev"><div class="pt">Câu 2 · Chen vào hành trình khách siêu giàu (khách sạn/BĐS/đồng hồ)?</div><div class="ev">
+        🔴 <b>KHÔNG</b> (như kênh bắt-intent): khách couture gần như không cùng-truy-cập đồng hồ/trang sức/BĐS/khách sạn (crawl thật). Tệp kề cận thật = <b>IG/Pinterest + Saks/Nordstrom + TheRealReal</b>.<br>
+        Vẫn <b>test được</b> ở dạng awareness (Google Ads audience) — nhưng SimilarWeb không chứng minh được convert; xếp <b>sau</b> kênh owned.</div>
+        <span class="badge brev">Adjacency = NO · chỉ test awareness</span></div>
+    </div>
+    <div class="take">🗓️ <b>Mùa vụ (mới):</b> cầu đồ cưới toàn cầu <b>đỉnh Tháng 1–4</b> (sau mùa cầu hôn T11–T2 → đổ đi mua sắm), <b>đáy Tháng 10–12</b>. → Maison nên tung nội dung/BST cưới từ <b>cuối năm</b> để đón sóng đầu năm. (Áo dài cưới VN lệch mùa — chưa đo được.)</div>
+    <div class="maison"><b>Làm gì trước (P0):</b> tách trang <b>Bespoke ↔ RTW</b> · trang <b>Sao-mặc/Báo-chí</b> · SEO “<b>đầm dự tiệc/cưới + áo dài hiện đại + áo dài cưới</b>” · tập trung <b>Mỹ + Việt Kiều</b>, hoãn pivot Á-đông. <b>2 điều đảo chiều:</b> đừng bỏ paid (brand mới cần seeding sớm) · niêm yết giá RTW công khai.</div>
+    <div class="note">Chi tiết + biểu đồ ở các slide sau. Nguồn: SimilarWeb + đọc web; đã loại số liệu bịa qua bước phản biện.</div>
+  </section>
+
+  <!-- 1 BRANDED PATTERN -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Phát hiện 1 — Khách tìm bằng cách nào</div>
+    <h2>Hàng càng đắt, khách càng gõ ĐÚNG TÊN để tìm</h2>
+    <div class="take">Nhà mốt $2000+: <b>75–90% khách gõ đúng tên thương hiệu</b> (“Elie Saab”, “Phan Huy”) mới ra web họ; gõ từ chung (“đầm cao cấp”) &lt;5%. <b>Nhưng đòn bẩy thật là DANH TIẾNG, không phải giá</b> — Xéo Xọ (áo dài phổ thông, RẺ) vẫn 60% gõ-tên vì có tên tuổi cult.</div>
+    <div>
+      <div class="row"><div class="name">Elie Saab <small>couture</small></div><div class="bar"><div class="seg" style="width:90%;background:var(--taupe)">Tên 90%</div><div class="seg" style="width:10%;background:var(--green)">10</div></div></div>
+      <div class="row"><div class="name">Phan Huy <small>couture Việt</small></div><div class="bar"><div class="seg" style="width:90%;background:var(--taupe)">Tên 90%</div><div class="seg" style="width:10%;background:var(--green)">10</div></div></div>
+      <div class="row"><div class="name">Sabyasachi <small>giống Maison nhất</small></div><div class="bar"><div class="seg" style="width:88%;background:var(--taupe)">Tên 88%</div><div class="seg" style="width:12%;background:var(--green)">12</div></div></div>
+      <div class="row"><div class="name">Công Trí <small>couture Việt</small></div><div class="bar"><div class="seg" style="width:75%;background:var(--taupe)">Tên 75%</div><div class="seg" style="width:25%;background:var(--green)">25</div></div></div>
+      <div class="row"><div class="name">Galia Lahav <small>đầm cưới cao cấp</small></div><div class="bar"><div class="seg" style="width:61%;background:var(--taupe)">Tên 61%</div><div class="seg" style="width:39%;background:var(--green)">Từ chung 39</div></div></div>
+      <div class="row"><div class="name">Shanghai Tang <small>rẻ hơn $2000</small></div><div class="bar"><div class="seg" style="width:44%;background:var(--taupe)">44%</div><div class="seg" style="width:56%;background:var(--green)">Từ chung 56</div></div></div>
+      <div class="row"><div class="name">Qipology <small>rẻ hơn $2000</small></div><div class="bar"><div class="seg" style="width:13%;background:var(--taupe)">13</div><div class="seg" style="width:87%;background:var(--green)">Từ chung 87%</div></div></div>
+    </div>
+    <div style="margin-top:14px;border-top:1px dashed var(--line);padding-top:12px;">
+      <p style="font-family:Arial;font-size:12.5px;color:var(--red);font-weight:700;margin-bottom:6px;">⚠️ Ngoại lệ quan trọng — hàng phổ thông VN nhưng CÓ tên tuổi:</p>
+      <div class="row"><div class="name">Xéo Xọ <small>áo dài phổ thông, RẺ</small></div><div class="bar"><div class="seg" style="width:60%;background:var(--taupe)">Tên 60%</div><div class="seg" style="width:40%;background:var(--green)">Từ chung 40</div></div></div>
+      <p style="font-family:Arial;font-size:12px;color:var(--muted);margin-top:6px;">Rẻ nhưng <b>60% gõ-tên</b> (riêng “xéo xọ” = 43% lượt) — cao hơn cả Shanghai Tang/Qipology đắt hơn. → Cái quyết định là <b>DANH TIẾNG</b>, không phải giá. (Đây là brand Maison gợi ý, đã cào ở đợt trước.)</p>
+    </div>
+    <div class="legend"><span><i class="sw" style="background:var(--taupe)"></i>Gõ đúng TÊN thương hiệu</span><span><i class="sw" style="background:var(--green)"></i>Gõ TỪ CHUNG (loại đồ, không có tên)</span></div>
+    <div class="maison"><b>→ Cho Maison:</b> việc số 1 = xây <b>DANH TIẾNG</b> để người ta nhớ & gõ tên (báo chí, người nổi tiếng, mạng xã hội). <b>KHÔNG mâu thuẫn với làm SEO</b> — vẫn tối ưu (a) <b>SEO tên thương hiệu</b> và (b) <b>SEO trang sản phẩm cho từ CỤ THỂ có người mua</b> (“đầm dự tiệc/cưới”, “áo dài hiện đại”, “áo dài cưới”); CHỈ không đốt tiền vào từ CHUNG mông lung (“đầm cao cấp”) mà hàng giá rẻ thống trị.</div>
+    <div class="note">Số = % trong lượt khách tìm tự nhiên trên Google (đo bằng SimilarWeb, 3–5/2026). Xéo Xọ: branded 60% (branded_type=all, share-of-total). Đã bỏ Shiatzy/Guo Pei vì không có số từ khoá thật.</div>
+  </section>
+
+  <!-- 1b VN KEYWORD-OVERLAP SET -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Phát hiện 1b — Toàn bộ brand Việt (nhóm trùng từ khoá)</div>
+    <h2>Nhìn cả nhóm brand Việt: designer = gõ-TÊN; áo dài phổ thông = gõ TỪ CHUNG</h2>
+    <div class="take">Không chỉ Xéo Xọ — cào cả nhóm brand Việt (bộ Maison gợi ý, trùng từ khoá): các nhà <b>designer/couture 75–100% gõ-tên</b>; các brand <b>áo dài phổ thông (Hà Cúc 44%) sống bằng từ chung</b> (“áo dài hcm / hà nội / truyền thống”). Xéo Xọ 60% cao hơn Hà Cúc vì có tên tuổi cult.</div>
+    <div>
+      <div class="row"><div class="name">Phương My <small>designer</small></div><div class="bar"><div class="seg" style="width:99%;background:var(--taupe)">Tên ~100%</div><div class="seg" style="width:1%;background:var(--green)"></div></div></div>
+      <div class="row"><div class="name">Thuỷ Design House <small>designer</small></div><div class="bar"><div class="seg" style="width:99%;background:var(--taupe)">Tên ~99%</div><div class="seg" style="width:1%;background:var(--green)"></div></div></div>
+      <div class="row"><div class="name">La Hằng <small>áo dài designer</small></div><div class="bar"><div class="seg" style="width:95%;background:var(--taupe)">Tên ~95%*</div><div class="seg" style="width:5%;background:var(--green)"></div></div></div>
+      <div class="row"><div class="name">Phan Huy <small>couture</small></div><div class="bar"><div class="seg" style="width:90%;background:var(--taupe)">Tên 90%</div><div class="seg" style="width:10%;background:var(--green)">10</div></div></div>
+      <div class="row"><div class="name">Công Trí <small>couture</small></div><div class="bar"><div class="seg" style="width:75%;background:var(--taupe)">Tên 75%</div><div class="seg" style="width:25%;background:var(--green)">25</div></div></div>
+      <div class="row"><div class="name">Xéo Xọ <small>phổ thông, cult</small></div><div class="bar"><div class="seg" style="width:60%;background:var(--taupe)">Tên 60%</div><div class="seg" style="width:40%;background:var(--green)">Chung 40</div></div></div>
+      <div class="row"><div class="name">Vũ Việt Hà <small>áo dài</small></div><div class="bar"><div class="seg" style="width:45%;background:var(--taupe)">Tên ~45%</div><div class="seg" style="width:55%;background:var(--green)">Chung 55</div></div></div>
+      <div class="row"><div class="name">Hà Cúc <small>áo dài phổ thông</small></div><div class="bar"><div class="seg" style="width:44%;background:var(--taupe)">Tên 44%</div><div class="seg" style="width:56%;background:var(--green)">Chung 56 (“áo dài hcm/hà nội”)</div></div></div>
+    </div>
+    <div class="legend"><span><i class="sw" style="background:var(--taupe)"></i>Gõ đúng TÊN</span><span><i class="sw" style="background:var(--green)"></i>Gõ TỪ CHUNG</span></div>
+    <div class="maison"><b>→ Cho Maison:</b> đây chính là quy luật — vào nhóm <b>designer thì phải đi bằng TÊN</b>. Muốn có khách gõ-tên thì phải xây danh tiếng; còn từ chung “áo dài …” là sân của hàng phổ thông (Hà Cúc/Xéo Xọ), đừng đua ở đó.</div>
+    <div class="note">Branded % = tổng share-of-total các cụm chứa tên brand (branded_type=all, 3–5/2026). <b>⚠️ Lưu ý volume:</b> chỉ Công Trí / Phan Huy / Xéo Xọ / Hà Cúc có lưu lượng đáng kể; Phương My / Thuỷ / La Hằng / Vũ Việt Hà volume rất nhỏ (vài chục click/tháng) → % đúng hướng, không chính xác cao. *La Hằng đo qua tên bộ sưu tập “Ngân An” (không ai gõ “la hằng” trực tiếp).</div>
+  </section>
+
+  <!-- 2 TRAFFIC PATTERN -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Phát hiện 2 — Khách vào web từ đâu</div>
+    <h2>Chủ yếu tự tìm tới: Google (tự nhiên) + gõ thẳng tên = 78–88%</h2>
+    <div class="take">Khách vào web nhà mốt phần lớn do <b>TỰ tìm</b> (Google) hoặc <b>gõ thẳng tên</b> — tức họ đã biết brand từ trước. Quảng cáo trả tiền rất ít (chỉ vài nhà đầm cưới chạy đua mùa cưới). <b>Lưu ý:</b> điều này KHÔNG có nghĩa Maison nên bỏ quảng cáo (xem slide kế hoạch).</div>
+    <div>
+      <div class="row"><div class="name">Elie Saab</div><div class="bar">
+        <div class="seg" style="width:60.6%;background:var(--green)">Google 61</div><div class="seg" style="width:17.2%;background:var(--gold)">Gõ thẳng 17</div><div class="seg" style="width:10.6%;background:var(--red)">QC 11</div><div class="seg" style="width:5.5%;background:var(--blue)"></div><div class="seg" style="width:2.9%;background:var(--purple)"></div><div class="seg" style="width:3.4%;background:var(--gray)"></div></div></div>
+      <div class="row"><div class="name">Galia Lahav</div><div class="bar">
+        <div class="seg" style="width:53.9%;background:var(--green)">Google 54</div><div class="seg" style="width:20.1%;background:var(--gold)">Gõ thẳng 20</div><div class="seg" style="width:13.1%;background:var(--red)">QC 13</div><div class="seg" style="width:4%;background:var(--blue)"></div><div class="seg" style="width:0.6%;background:var(--purple)"></div><div class="seg" style="width:5.9%;background:var(--gray)">GT</div></div></div>
+      <div class="row"><div class="name">Phan Huy <small>(tháng 2)</small></div><div class="bar">
+        <div class="seg" style="width:47.6%;background:var(--green)">Google 48</div><div class="seg" style="width:40.1%;background:var(--gold)">Gõ thẳng 40</div><div class="seg" style="width:0%;background:var(--red)"></div><div class="seg" style="width:2.8%;background:var(--blue)"></div><div class="seg" style="width:1.9%;background:var(--purple)"></div><div class="seg" style="width:7.6%;background:var(--gray)">GT</div></div></div>
+      <div class="row"><div class="name">Sabyasachi <small>giống Maison</small></div><div class="bar">
+        <div class="seg" style="width:82.3%;background:var(--green)">Google 82</div><div class="seg" style="width:12.6%;background:var(--gold)">Gõ thẳng 13</div><div class="seg" style="width:0%;background:var(--red)"></div><div class="seg" style="width:5.1%;background:var(--gray)">khác</div></div></div>
+      <div class="row"><div class="name">Shanghai Tang <small>rẻ hơn $2000</small></div><div class="bar">
+        <div class="seg" style="width:61.9%;background:var(--green)">Google 62</div><div class="seg" style="width:18.3%;background:var(--gold)">Gõ thẳng 18</div><div class="seg" style="width:8.8%;background:var(--red)">QC 9</div><div class="seg" style="width:1.9%;background:var(--blue)"></div><div class="seg" style="width:6.7%;background:var(--purple)">MXH</div><div class="seg" style="width:2%;background:var(--gray)"></div></div></div>
+    </div>
+    <div class="legend"><span><i class="sw" style="background:var(--green)"></i>Google (tự nhiên)</span><span><i class="sw" style="background:var(--gold)"></i>Gõ thẳng tên</span><span><i class="sw" style="background:var(--red)"></i>Quảng cáo Google (trả tiền)</span><span><i class="sw" style="background:var(--blue)"></i>Mạng xã hội (tự nhiên)</span><span><i class="sw" style="background:var(--purple)"></i>Mạng xã hội (trả tiền)</span><span><i class="sw" style="background:var(--gray)"></i>Web khác giới thiệu</span></div>
+    <div class="note">Đo trong 12 tháng gần nhất. Công Trí không có số (web nhỏ, SimilarWeb thiếu dữ liệu). Phan Huy chỉ có riêng tháng 2.</div>
+  </section>
+
+  <!-- 3 GEO -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Phát hiện 3 — Khách ở nước nào</div>
+    <h2>Mỹ đứng #1, Việt Nam/kiều bào #2 — đúng “chân dung” Maison</h2>
+    <div class="take">Mỹ dẫn đầu ở hầu hết nhà mốt (45–61%); với 2 nhà Việt thì Việt Nam là #2 rõ ràng (29–32%). → nên để giá bằng USD, làm PR hướng Mỹ, và theo dõi tệp kiều bào là #2.</div>
+    <div>
+      <div class="row"><div class="name">Công Trí <small>Việt</small></div><div class="bar"><div class="seg" style="width:61%;background:var(--gold)">🇺🇸 Mỹ 61</div><div class="seg" style="width:29%;background:var(--green)">🇻🇳 VN 29</div><div class="seg" style="width:7%;background:var(--gray)">Canada 7</div></div></div>
+      <div class="row"><div class="name">Phan Huy <small>Việt</small></div><div class="bar"><div class="seg" style="width:45%;background:var(--gold)">🇺🇸 Mỹ 45</div><div class="seg" style="width:32%;background:var(--green)">🇻🇳 VN 32</div><div class="seg" style="width:7%;background:var(--gray)">Anh 7</div></div></div>
+      <div class="row"><div class="name">Sabyasachi <small>giống Maison</small></div><div class="bar"><div class="seg" style="width:59%;background:var(--green)">🇮🇳 Sân nhà 59</div><div class="seg" style="width:9%;background:var(--gray)">Pakistan 9</div><div class="seg" style="width:8%;background:var(--gold)">Mỹ 8</div><div class="seg" style="width:11%;background:#d8d2c6">Úc/Canada/UAE…</div></div></div>
+      <div class="row"><div class="name">Galia Lahav</div><div class="bar"><div class="seg" style="width:49%;background:var(--gold)">🇺🇸 Mỹ 49</div><div class="seg" style="width:8%;background:var(--green)">Canada 8</div><div class="seg" style="width:6%;background:var(--gray)">Anh 6</div></div></div>
+      <div class="row"><div class="name">Elie Saab <small>khác biệt</small></div><div class="bar"><div class="seg" style="width:21%;background:var(--gold)">Mỹ 21</div><div class="seg" style="width:8%;background:var(--green)">Ấn 8</div><div class="seg" style="width:7%;background:var(--gray)">Anh 7</div></div></div>
+      <div class="row"><div class="name">Shanghai Tang <small>rẻ hơn $2000</small></div><div class="bar"><div class="seg" style="width:22%;background:var(--blue)">Singapore 22</div><div class="seg" style="width:16%;background:var(--gold)">Mỹ 16</div><div class="seg" style="width:12%;background:var(--gray)">Anh 12</div></div></div>
+    </div>
+    <div class="legend"><span><i class="sw" style="background:var(--gold)"></i>Mỹ (nước nào cũng đứng đầu)</span><span><i class="sw" style="background:var(--green)"></i>Sân nhà / kiều bào (#2)</span><span><i class="sw" style="background:var(--blue)"></i>Sân nhà (Singapore)</span></div>
+    <div class="maison"><b>→ Cho Maison:</b> Sabyasachi (nhà mốt di sản Ấn Độ) là hình mẫu GẦN NHẤT — sống bằng <b>sân nhà #1 (Ấn 59%) + kiều bào khắp nơi</b>. Maison nên nhắm giống vậy: <b>Việt Nam #1 + kiều bào Mỹ/Úc/Canada</b>.</div>
+    <div class="note">Elie Saab lệch về Trung Đông/Nam Á (gốc Liban). Shanghai Tang (rẻ hơn $2000) có Singapore #1 vì là brand gốc Hồng Kông/Singapore (khách sân nhà).</div>
+  </section>
+
+  <!-- 4 NON-BRANDED BEACHHEAD -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Phát hiện 4 — Ai không gõ tên thì gõ gì?</div>
+    <h2>Cửa “không-tên” của nhà mốt = cụm “nhà thiết kế nước X”, không phải từ sản phẩm</h2>
+    <div class="take">Với nhà Việt gần Maison nhất (Phan Huy), trong số ít khách KHÔNG gõ tên, <b>hơn nửa (53%) gõ “vietnamese dress designers”</b> (tìm “nhà thiết kế Việt”) — gần như là cửa duy nhất. Còn từ theo loại sản phẩm chỉ đông ở brand rẻ hơn.</div>
+    <div>
+      <div class="row"><div class="name" style="width:300px">Phan Huy · “vietnamese dress designers” <small>(tìm nhà thiết kế)</small></div><div class="bar"><div class="seg" style="width:53%;background:var(--green)">53% lượng không-tên</div><div class="seg" style="width:47%;background:#efeae1"></div></div></div>
+      <div class="row"><div class="name" style="width:300px">Shanghai Tang · “tang jacket” <small>(tên sản phẩm, rẻ hơn)</small></div><div class="bar"><div class="seg" style="width:17.5%;background:var(--blue)">17.5%</div><div class="seg" style="width:82.5%;background:#efeae1"></div></div></div>
+      <div class="row"><div class="name" style="width:300px">Qipology · “qipao” <small>(tên sản phẩm, rẻ hơn)</small></div><div class="bar"><div class="seg" style="width:12.6%;background:var(--blue)">12.6%</div><div class="seg" style="width:87.4%;background:#efeae1"></div></div></div>
+    </div>
+    <p style="margin-top:14px;font-size:13px;">Nhà mốt cũng hiện lên khi người ta tìm tên <b>người nổi tiếng</b> (Công Trí có trang riêng “/wu-jinyan-in-cong-tri”; Galia Lahav hiện lên với “zendaya wedding dress”) — có thật, nhưng số lượt cụ thể không đáng tin nên chỉ nói định tính.</p>
+    <div class="maison"><b>→ Cho Maison:</b> đáng chiếm cụm <b>“vietnamese wedding / ao dai designer”</b> (người ta tìm “nhà thiết kế Việt”) + làm trang riêng cho mỗi lần người nổi tiếng mặc Maison.</div>
+  </section>
+
+  <!-- 4b KEYWORD DEMAND -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Phát hiện 5 — Người ta thật sự tìm GÌ (số lượt/tháng)</div>
+    <h2>Cầu nằm ở “đồ dự tiệc/cưới” — KHÔNG ở “áo dài cao cấp” tiếng Anh</h2>
+    <div class="take no">Các từ “áo dài cao cấp / may riêng” bằng tiếng Anh (custom / bespoke / luxury / evening ao dai…) = <b>gần như 0 người tìm ở mọi nước</b> → đừng tốn công SEO/quảng cáo cho chúng. Người ta tìm nhiều là <b>đồ dự tiệc/cưới</b> + “áo dài hiện đại” + (tiếng Việt) “áo dài cưới”.</div>
+    <table>
+      <thead><tr><th>Người ta gõ gì (số lượt tìm/tháng)</th><th>Mỹ</th><th>Toàn cầu</th><th>VN</th><th>Ý định</th></tr></thead>
+      <tbody>
+        <tr><td><b>“wedding guest dress” (đầm đi dự đám cưới)</b></td><td><b>83.255</b></td><td>147.576</td><td>0</td><td>Muốn mua ✅</td></tr>
+        <tr><td>“gala dress” (đầm dạ tiệc)</td><td>953</td><td>5.853</td><td>0</td><td>Muốn mua</td></tr>
+        <tr><td>“silk gown” (đầm lụa)</td><td>207</td><td>4.398</td><td>0</td><td>Muốn mua</td></tr>
+        <tr><td><b>“modern ao dai” (áo dài hiện đại)</b></td><td>868</td><td>1.154</td><td>0</td><td>Muốn mua ✅</td></tr>
+        <tr><td><b>“áo dài cưới” (tiếng Việt)</b></td><td>—</td><td>—</td><td><b>1.863</b></td><td>Muốn mua ✅</td></tr>
+        <tr><td>“vietnamese wedding dress”</td><td>1.075</td><td>1.958</td><td>0</td><td>Tìm hiểu</td></tr>
+        <tr><td class="strike">custom/bespoke/luxury/evening ao dai · hand-embroidered silk gown</td><td colspan="3" style="text-align:center">= <b>0 ở mọi nước</b></td><td><span class="badge brev">KHÔNG AI TÌM</span></td></tr>
+      </tbody>
+    </table>
+    <div class="maison"><b>→ Cho Maison:</b> làm SEO/nội dung cho <b>“đầm dự tiệc/cưới” + “áo dài hiện đại” + “áo dài cưới”</b> (có người tìm thật), bỏ hẳn cụm “áo dài bespoke” tiếng Anh (không ai tìm).</div>
+    <div class="note"><b>“Ý định” lấy THẲNG từ trường phân loại của SimilarWeb</b> (transactional = Muốn mua / informational = Tìm hiểu), không phải suy đoán. Đã verify: “wedding guest dress” = 100% transactional; “modern ao dai” = 100% transactional; “vietnamese wedding dress” = 100% informational. Đây là intent-model của SimilarWeb (tín hiệu mạnh, mỗi từ gán 1 intent trội — không phải chân lý tuyệt đối). Đo 3–5/2026, Mỹ/Úc/Canada/VN/toàn cầu; Trung Quốc không hỗ trợ; Singapore/Hàn/HK trả 0 (= thiếu-data, khác với “không ai tìm”).</div>
+  </section>
+
+  <!-- 4c SEASONALITY -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Phát hiện 5b — Khi nào cầu đồ cưới LÊN (mùa vụ, toàn cầu)</div>
+    <h2>Cầu đồ cưới đỉnh Tháng 1–4, đáy Tháng 10–12</h2>
+    <div class="take">Sau “mùa cầu hôn” (Lễ Tạ Ơn → Valentine, T11–T2), người ta đổ đi mua đồ cưới <b>T1–T4</b> (mạnh nhất T3–T4). Đáy là <b>T10–T12</b>. → Tung nội dung/BST cưới từ <b>cuối năm</b> để đón sóng đầu năm.</div>
+    <svg viewBox="0 0 720 200" role="img" aria-label="Mùa vụ cầu đồ cưới 12 tháng (proxy lưu lượng Azazie)">
+      <line x1="30" y1="160" x2="700" y2="160" stroke="#ccc"/>
+      <text x="380" y="32" text-anchor="middle" font-family="Arial" font-size="12" fill="var(--gold)" font-weight="bold">▲ ĐỈNH T3–T4</text>
+      <text x="348" y="150" text-anchor="middle" font-family="Arial" font-size="11" fill="var(--gray)" font-weight="bold">▼ ĐÁY T10–T12</text>
+      <g>
+        <rect x="40" y="100" width="42" height="60" fill="var(--taupe)"/>
+        <rect x="96" y="101" width="42" height="59" fill="var(--taupe)"/>
+        <rect x="152" y="92" width="42" height="68" fill="var(--taupe)"/>
+        <rect x="208" y="98" width="42" height="62" fill="var(--taupe)"/>
+        <rect x="264" y="110" width="42" height="50" fill="var(--gray)"/>
+        <rect x="320" y="112" width="42" height="48" fill="var(--gray)"/>
+        <rect x="376" y="112" width="42" height="48" fill="var(--gray)"/>
+        <rect x="432" y="73" width="42" height="87" fill="var(--taupe)"/>
+        <rect x="488" y="62" width="42" height="98" fill="var(--taupe)"/>
+        <rect x="544" y="45" width="42" height="115" fill="var(--gold)"/>
+        <rect x="600" y="40" width="42" height="120" fill="var(--gold)"/>
+        <rect x="656" y="51" width="42" height="109" fill="var(--taupe)"/>
+      </g>
+      <g font-family="Arial" font-size="10" fill="#888" text-anchor="middle">
+        <text x="61" y="174">T6</text><text x="117" y="174">T7</text><text x="173" y="174">T8</text><text x="229" y="174">T9</text><text x="285" y="174">T10</text><text x="341" y="174">T11</text><text x="397" y="174">T12</text><text x="453" y="174">T1</text><text x="509" y="174">T2</text><text x="565" y="174">T3</text><text x="621" y="174">T4</text><text x="677" y="174">T5</text>
+      </g>
+      <g font-family="Arial" font-size="9" fill="#666" text-anchor="middle">
+        <text x="285" y="122">5.7</text><text x="341" y="124">5.5</text><text x="397" y="124">5.5</text><text x="565" y="57">13.1</text><text x="621" y="52">13.7</text>
+      </g>
+    </svg>
+    <div class="note"><b>Đây là PROXY — không phải volume tìm kiếm trực tiếp.</b> SimilarWeb khoá keyword-trend ở 3 tháng, nên mùa vụ đo bằng <b>lưu lượng web 12 tháng của 2 nhà bán đồ cưới lớn</b> (biểu đồ: Azazie, triệu lượt/tháng; David’s Bridal cùng hình: đáy T10–12, vọt T1, đỉnh T3). ⚠️ Đây là retailer <b>Mỹ</b> → mùa cưới phương Tây/Bắc bán cầu. <b>“Áo dài cưới” VN lệch mùa</b> (thường T10–12 + sau Tết) và CHƯA đo được ở đây. Từ khoá “wedding guest dress” (đầm khách mời) còn tăng tiếp vào T5 → đồ khách-mời đỉnh muộn hơn (hè).</div>
+  </section>
+
+  <!-- 5 SCATTER -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Tóm lại cả 5 phát hiện</div>
+    <h2>DANH TIẾNG (không phải giá) quyết định “tìm-bằng-tên”. Đua “từ chung” là sân hàng giá rẻ</h2>
+    <div class="take">Maison thắng bằng <b>DANH TIẾNG</b> (tên + báo chí + niềm tin), không phải nhờ giá cao — Xéo Xọ rẻ mà vẫn 60% gõ-tên. <b>KHÔNG mâu thuẫn với SEO:</b> vẫn tối ưu <b>SEO tên thương hiệu</b> + <b>SEO sản phẩm cho từ CỤ THỂ có người mua</b> (“đầm dự tiệc/cưới”, “áo dài hiện đại”, “áo dài cưới”); chỉ không đốt tiền vào từ CHUNG mông lung (“đầm cao cấp”) mà hàng giá rẻ thống trị.</div>
+    <svg viewBox="0 0 720 300" role="img" aria-label="Tìm bằng tên so với tầng giá">
+      <line x1="70" y1="250" x2="690" y2="250" stroke="#ccc"/>
+      <line x1="70" y1="30" x2="70" y2="250" stroke="#ccc"/>
+      <text x="380" y="285" text-anchor="middle" font-family="Arial" font-size="12" fill="#777">Giá (rẻ → couture đắt) →</text>
+      <text x="24" y="140" text-anchor="middle" font-family="Arial" font-size="12" fill="#777" transform="rotate(-90 24 140)">% khách tìm bằng TÊN →</text>
+      <g font-family="Arial" font-size="10" fill="#aaa">
+        <text x="60" y="253">0</text><text x="55" y="145">50</text><text x="55" y="45">90</text>
+      </g>
+      <circle cx="140" cy="221" r="7" fill="var(--blue)"/><text x="140" y="240" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Qipology 13%</text>
+      <circle cx="245" cy="153" r="7" fill="var(--blue)"/><text x="245" y="140" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Shanghai Tang 44%</text>
+      <circle cx="470" cy="116" r="7" fill="var(--gold)"/><text x="470" y="103" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Galia Lahav 61%</text>
+      <circle cx="540" cy="85" r="7" fill="var(--gold)"/><text x="540" y="72" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Công Trí 75%</text>
+      <circle cx="620" cy="52" r="7" fill="var(--gold)"/><text x="628" y="50" font-family="Arial" font-size="10" fill="#555">Phan Huy 90%</text>
+      <circle cx="600" cy="52" r="7" fill="var(--gold)"/><text x="560" y="40" font-family="Arial" font-size="10" fill="#555">Elie Saab 90%</text>
+      <circle cx="500" cy="57" r="8" fill="var(--gold)" stroke="#5a4420" stroke-width="2"/><text x="500" y="76" text-anchor="middle" font-family="Arial" font-size="10" fill="#5a4420" font-weight="bold">Sabyasachi 88% (giống Maison)</text>
+      <line x1="150" y1="210" x2="620" y2="70" stroke="#ccc" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="330" y="188" font-family="Arial" font-size="10.5" fill="#999" font-style="italic">xu hướng chung: giá ↑ ~ tìm-tên ↑</text>
+      <circle cx="108" cy="118" r="8" fill="var(--taupe)" stroke="var(--red)" stroke-width="2.5"/><text x="122" y="112" font-family="Arial" font-size="10" fill="var(--red)" font-weight="bold">Xéo Xọ 60% — RẺ mà nổi tiếng</text>
+      <text x="122" y="126" font-family="Arial" font-size="9" fill="var(--red)" font-style="italic">→ danh tiếng, không phải giá</text>
+    </svg>
+    <div class="legend"><span><i class="sw" style="background:var(--gold)"></i>Couture $2000+ (sân của Maison)</span><span><i class="sw" style="background:var(--blue)"></i>Hàng cao cấp giá vừa (dưới $2000)</span></div>
+  </section>
+
+  <!-- 5c BRIDAL/COUTURE PATTERN EXTENSION -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Phát hiện 6 — Nhóm đầm cưới/couture đắt tiền</div>
+    <h2>Nhóm đầm cưới xác nhận quy luật — và mở thêm 3 điều</h2>
+    <div class="take">Xem thêm 7 nhà đầm cưới/couture >$1000: vẫn đúng — khách <b>tự tìm + gõ tên</b>. Nhưng đầm cưới có 3 điểm khác: <b>người ta tìm nhiều theo “dịp cưới”</b>, có thêm 2 thị trường sân nhà (<b>Vùng Vịnh, Ấn Độ</b>), và tiệm nhỏ sống nhờ <b>web giới thiệu + mạng xã hội</b>.</div>
+    <table>
+      <thead><tr><th>Nhà mốt (nước)</th><th>Vào web chủ yếu từ</th><th>Khách ở nước nào</th><th>Tìm bằng tên</th><th>Người không-tên gõ gì</th></tr></thead>
+      <tbody>
+        <tr><td>Saiid Kobeisy (UAE)</td><td>Google 22 · Gõ thẳng 12 · QC 3</td><td>🇸🇦Ả Rập Xê Út 36 · Mỹ 30 · Anh 14 · Ấn 12</td><td>55%</td><td>đồ cưới + <b>từ khoá tiếng Ả Rập</b></td></tr>
+        <tr><td>Vera Wang (Mỹ)</td><td>Google 88 · Gõ thẳng 10 · QC ~0</td><td>Mỹ 33 · Anh 6 · Úc 6</td><td>84%</td><td>hiện cả với “wedding dresses” (chỉ hãng lớn mới được)</td></tr>
+        <tr><td>Manish Malhotra (Ấn)</td><td>Google 70 · Gõ thẳng 17 · Web giới thiệu 10</td><td>🇮🇳Ấn 79 · Mỹ 4 · Singapore 2</td><td>85%</td><td>tên sao (Kiara/Kareena) + đồ cưới Ấn</td></tr>
+        <tr><td>Danielle Frankel (Mỹ)</td><td>Google 46 · Gõ thẳng 23 · <b>MXH 17</b></td><td>Mỹ 52 · Anh 20 · Úc 8</td><td>85%</td><td>hợp tác (Birkenstock) + mạng che mặt</td></tr>
+        <tr><td>Lihi Hod (Israel)</td><td>Google 58 · <b>Giới thiệu 17 · MXH 16</b></td><td>Mỹ 50 · Anh 36</td><td>80%</td><td><b>“israeli wedding dress designers”</b> (tìm NTK theo nước)</td></tr>
+        <tr><td class="strike">Grace Loves Lace (Úc) — khác biệt</td><td><b>Quảng cáo 33</b> · Google 39</td><td>Mỹ 85</td><td>22%</td><td>“wedding dresses” + hướng dẫn đo size</td></tr>
+      </tbody>
+    </table>
+    <div class="grid">
+      <div class="pcard"><div class="pt">✓ VẪN ĐÚNG</div><div class="ev">Chủ yếu tự tìm + gõ tên (nhà lâu đời hầu như không chạy quảng cáo); 80–85% tìm bằng tên; Mỹ + kiều bào.</div><span class="badge bh">giữ nguyên</span></div>
+      <div class="pcard"><div class="pt">➕ MỞ THÊM (mới)</div><div class="ev">(1) “dịp cưới” là cụm từ-chung được tìm nhiều nhất; (2) Vùng Vịnh (Ả Rập Xê Út 36% + tiếng Ả Rập) & Ấn Độ (79%) là thị trường lớn; (3) tiệm nhỏ sống nhờ web giới thiệu + mạng xã hội; (4) người ta tìm “nhà thiết kế [nước]”.</div><span class="badge bm">mới</span></div>
+      <div class="pcard rev"><div class="pt">⟳ NGOẠI LỆ (chỉ với hàng bán online giá vừa)</div><div class="ev">Grace Loves Lace chạy quảng cáo mạnh (33%) + hiện với từ chung “wedding dresses” + chỉ 22% tìm bằng tên. → luật “không chạy quảng cáo / không đua từ chung” chỉ đúng với tiệm couture, KHÔNG đúng với hàng bán online giá vừa.</div><span class="badge brev">bán online ≠ tiệm couture</span></div>
+    </div>
+    <div class="maison"><b>→ Cho Maison:</b> dòng đầm cưới DỄ được tìm hơn đầm dạ tiệc (vì người ta tìm theo “dịp cưới” rõ ràng) — nhưng chỉ hãng lớn mới hiện với “wedding dresses”; Maison nên nhắm <b>“vietnamese/ao dai wedding” + các trang giới thiệu (directory) cưới + Instagram</b>, và chốt hàng may riêng bằng <b>đặt lịch tư vấn</b>.</div>
+    <div class="note">Lihi Hod, Panache là web nhỏ (chỉ vài tháng có số) → số mang tính định hướng. Nguồn: <code>data_logs/couture-bridal-pattern_2026-07.json</code>.</div>
+  </section>
+
+  <!-- 5b CASE STUDY CÔNG TRÍ & PHAN HUY -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Nhìn kỹ 2 nhà Việt gần Maison nhất</div>
+    <h2>Cả hai đều có may sẵn + may riêng; xây niềm tin bằng người nổi tiếng / báo chí / bộ sưu tập</h2>
+    <div class="take">Công Trí & Phan Huy <b>không chỉ bán đồ may sẵn</b> — mỗi bên đều có luồng may-riêng thật, song song dòng may sẵn. Các trang “sao mặc / báo chí / bộ sưu tập” vừa xây niềm tin vừa <b>kéo khách vào web</b>.</div>
+    <div class="grid">
+      <div class="pcard"><div class="pt">Công Trí — couture + may sẵn + may theo mẫu</div><div class="ev"><b>Tất cả đều “liên hệ để biết giá”</b>, đặt lịch hẹn. Sao mặc: Michelle Obama, Beyoncé, Rihanna, BLACKPINK. Trang bộ sưu tập /spring-summer-2026 = <b>17% lượng khách</b> (trang đông nhất sau trang chủ).</div><span class="badge bh">có số thật</span></div>
+      <div class="pcard"><div class="pt">Phan Huy — haute couture + may riêng + dòng may sẵn</div><div class="ev"><b>Dòng may sẵn CÓ ghi giá công khai (~$2.277–2.648)</b>; couture/may riêng thì hẹn gặp. Vào web: 88% từ Google (gần như không quảng cáo). Sao: Miss Universe, Zhao Lusi, Hồ Ngọc Hà. Từng lên Paris Haute Couture.</div><span class="badge bh">có số thật</span></div>
+      <div class="pcard"><div class="pt">Bài học 1 — TÁCH rõ “may riêng” và “may sẵn”</div><div class="ev">Qipology & Shanghai Tang làm rất rõ: đồ may sẵn ghi giá + trang “may riêng” riêng biệt + đặt lịch. Maison nên có trang “May đo theo số đo / Tư vấn riêng” tách khỏi đồ may sẵn.</div><span class="badge bm">hình mẫu</span></div>
+      <div class="pcard"><div class="pt">Bài học 2 — Trang “Sao mặc / Báo chí / Bộ sưu tập” = niềm tin + khách</div><div class="ev">Biến danh tiếng thành trang xem-được; riêng cụm bộ sưu tập đã kéo 28–61% lượng khách ở mọi brand.</div><span class="badge bm">quan trọng</span></div>
+    </div>
+    <div class="note">Đính chính: bản nháp trước ghi Phan Huy “không ghi giá” là SAI — dòng may sẵn CÓ ghi giá công khai. Công Trí thì SimilarWeb không có số lưu lượng (web nhỏ), chỉ đo được % từng trang.</div>
+  </section>
+
+  <!-- 6 PLAYBOOK -->
+  <section class="slide">
+    <div class="kicker">Câu 1 · Trả lời — Kế hoạch cho Maison</div>
+    <h2>8 việc nên làm (đã tự kiểm tra chéo)</h2>
+    <div class="take yes">Thắng bằng <b>TÊN + báo chí/nhận diện + cấu trúc web (bộ sưu tập/cưới/đặt lịch) + Mỹ rồi kiều bào</b>. Hai điều <b>ĐẢO NGƯỢC</b> so với bản nháp đầu (ô đỏ).</div>
+    <div class="grid">
+      <div class="pcard"><div class="pt">1. Làm cho người ta nhớ & gõ <b>ĐÚNG TÊN</b> (đủ biến thể có dấu/không dấu, Anh/Việt) — tài sản số 1.</div><div class="ev">75–90% khách tìm bằng tên; từ chung <5%.</div><span class="badge bh">RẤT NÊN</span></div>
+      <div class="pcard"><div class="pt">2. Chiếm cụm <b>“vietnamese/ao dai designer”</b> làm cửa ngõ cho người chưa biết tên.</div><div class="ev">= 53% lượng “không-tên” của Phan Huy.</div><span class="badge bh">RẤT NÊN</span></div>
+      <div class="pcard"><div class="pt">3. Cấu trúc web = <b>trang bộ sưu tập + trang cưới/dạ-tiệc + trang đặt lịch</b> (đừng chỉ chăm trang chủ/giỏ hàng).</div><div class="ev">Cụm bộ sưu tập kéo 28–61% khách; trang “đặt lịch” là trang đông thứ 2.</div><span class="badge bh">RẤT NÊN</span></div>
+      <div class="pcard"><div class="pt">4. <b>Mỹ trước, kiều bào sau</b> — để giá USD, PR hướng Mỹ, theo dõi VN #2.</div><div class="ev">Mỹ #1 ở mọi brand; VN 29–32% ở 2 nhà Việt.</div><span class="badge bm">NÊN</span></div>
+      <div class="pcard"><div class="pt">5. Làm nội dung <b>song ngữ</b> (Anh + Việt, có/không dấu).</div><div class="ev">Tên Công Trí được tìm bằng đủ kiểu viết.</div><span class="badge bm">VỪA PHẢI</span></div>
+      <div class="pcard"><div class="pt">6. Mỗi lần <b>người nổi tiếng mặc Maison = làm 1 trang riêng</b> (vd /ten-sao-in-maison).</div><div class="ev">Công Trí/Galia Lahav làm vậy.</div><span class="badge bm">VỪA PHẢI</span></div>
+      <div class="pcard rev"><div class="pt">7. ⟳ ĐỪNG hiểu “nhà mốt ~0% quảng cáo” = “bỏ quảng cáo”. Maison mới → cần <b>chạy quảng cáo/mạng xã hội để gieo nhận biết ban đầu</b>.</div><div class="ev">0% quảng cáo là ĐÍCH của nhà đã nổi tiếng; nhà đầm cưới đang lên vẫn chạy quảng cáo 11–13%.</div><span class="badge brev">ĐẢO NGƯỢC</span></div>
+      <div class="pcard rev"><div class="pt">8. ⟳ <b>Đồ may sẵn thì GHI GIÁ công khai</b>; chỉ để “liên hệ” với hàng may riêng/couture.</div><div class="ev">Phan Huy/Qipology/Shanghai Tang đều ghi giá đồ may sẵn.</div><span class="badge brev">ĐẢO NGƯỢC</span></div>
+    </div>
+  </section>
+
+  <!-- 7 ADJACENCY VERDICT -->
+  <section class="slide">
+    <div class="kicker">Câu 2 · Trả lời</div>
+    <h2>Chen vào hành trình khách siêu giàu (khách sạn/BĐS/đồng hồ)? — KHÔNG có bằng chứng</h2>
+    <div class="take no">Mọi con số kiểu “khách trùng với Cartier/Tiffany/Sotheby’s/Aman…” trong bản nháp cũ là <b>BỊA</b> (chưa hề đo). Lần đo THẬT (xem 6 nhà mốt: khách của họ còn hay vào web nào khác) cho kết quả <b>NGƯỢC lại</b>: khách couture gần như KHÔNG cùng vào web đồng hồ/trang sức/BĐS/khách sạn.</div>
+    <table>
+      <thead><tr><th>Tệp “siêu sang” từng nêu</th><th>Số “trùng khách” từng ghi</th><th>Sự thật</th></tr></thead>
+      <tbody>
+        <tr><td>Cartier</td><td class="strike">6.40%</td><td>BỊA — không có trong dữ liệu; đo thật: không thấy liên hệ</td></tr>
+        <tr><td>Tiffany</td><td class="strike">4.45%</td><td>BỊA — chưa từng đo</td></tr>
+        <tr><td>Sotheby’s (BĐS)</td><td class="strike">2.40%</td><td>BỊA — chưa từng đo</td></tr>
+        <tr><td>Aman / Four Seasons (khách sạn)</td><td class="strike">~2%</td><td>BỊA — chưa từng đo</td></tr>
+        <tr><td>Rolex</td><td class="strike">1.36%</td><td>BỊA — chưa từng đo</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;font-size:13px;">Đã đo THẬT “khách còn hay vào web nào khác” cho 6 nhà quốc tế → <b>0 tín hiệu</b> đồng hồ/trang sức/BĐS/khách sạn (chỉ thấy thời trang + mạng xã hội + cửa hàng cao cấp). Cũng đã thử <b>7 brand Việt</b> (Công Trí, Phan Huy, Huy Võ, Thuỷ, Phương My, Xéo Xọ, Hà Cúc) → web quá nhỏ, SimilarWeb <b>không có số</b>. Các “tệp siêu giàu” (HSBC Premier, BĐS, đồng hồ, khách sạn) vẫn chỉ là <b>giả thuyết cần kiểm chứng</b> — chưa có bằng chứng; nên tiếp cận qua <b>hợp tác/sự kiện</b> trước khi chi tiền quảng cáo.</p>
+  </section>
+
+  <!-- 8 REAL ADJACENCY + CAVEAT -->
+  <section class="slide">
+    <div class="kicker">Câu 2 · Cái Maison DÙNG được thật</div>
+    <h2>Khách couture thật ra hay lui tới đâu? → thời trang, không phải hàng siêu-sang chéo ngành</h2>
+    <div class="take">Muốn “xuất hiện trong hành trình” của họ, hãy vào đúng hệ sinh thái thời trang — nơi khách couture thật sự hay vào.</div>
+    <div class="grid">
+      <div class="pcard"><div class="pt">Instagram + <b>Pinterest</b> (nơi tìm cảm hứng hình ảnh)</div></div>
+      <div class="pcard"><div class="pt">Trung tâm cao cấp: <b>Saks / Nordstrom</b></div></div>
+      <div class="pcard"><div class="pt">Bán đồ hiệu cũ: <b>TheRealReal</b></div></div>
+      <div class="pcard"><div class="pt">Web thời trang phổ biến: <b>Revolve / Reformation</b></div></div>
+    </div>
+    <p style="margin-top:14px;font-size:13px;">Nếu vẫn muốn thử tệp siêu giàu chéo ngành: chỉ nên ở mức <b>gây nhận biết</b> (quảng cáo nhắm nhóm người quan tâm, hoặc hợp tác với địa điểm cưới/khách sạn) — <b>không có công cụ nào chứng minh nó bán được 1 đơn may riêng $2000+</b>. Nên xếp <b>sau</b> các kênh tự-nhiên/gõ-thẳng, và thử ở tệp VN/Đông Nam Á trước.</p>
+    <div class="note">Cùng kết luận với phần phụ kiện (túi/clutch) trước đó: người ta có lướt xem hàng xa xỉ ≠ mình chen vào bán được. “Có liên quan” không bằng “chốt được đơn”.</div>
+  </section>
+
+  <!-- 8c ADS-CONFIG TEST -->
+  <section class="slide">
+    <div class="kicker">Câu 2 · Nếu vẫn muốn THỬ</div>
+    <h2>Không chứng minh được ≠ không thử được — đây là cách thử ĐÚNG</h2>
+    <div class="take">Coi đây là <b>phép thử để gây nhận biết</b>, KHÔNG phải kênh bán trực tiếp: ngân sách nhỏ, đo bằng công cụ của chính Maison, có nhóm đối chứng + mốc dừng. Làm <b>sau</b> khi web + kênh tự-nhiên đã chạy; thử <b>VN/Đông Nam Á trước</b>.</div>
+    <div class="grid">
+      <div class="pcard"><div class="pt">1 · Nhắm AI — theo nhóm sở thích, không theo tìm kiếm</div><div class="ev"><b>Google:</b> nhắm nhóm người quan tâm khách sạn 5★ / BĐS / đồng hồ + nhóm “hay du lịch sang / sắp cưới” → chạy quảng cáo hình ảnh/video (Display/YouTube). KHÔNG chạy quảng cáo tìm-kiếm (không ai gõ “áo dài” lúc đang xem đồng hồ).<br><b>Facebook/IG:</b> nhắm sở thích du lịch sang/trang sức + <b>“nhóm giống khách hiện có”</b> (tải danh sách khách cũ lên → hệ thống tìm người tương tự — mạnh nhất).</div></div>
+      <div class="pcard"><div class="pt">2 · Đo bằng gì — vì SimilarWeb không đo được</div><div class="ev">Dùng Google Analytics của web Maison: xem quảng cáo có làm <b>tăng lượt tìm tên “Maison”</b> không + số người <b>bấm “Đặt lịch tư vấn”</b>. Giữ một <b>nhóm không thấy quảng cáo</b> để so sánh.</div></div>
+      <div class="pcard"><div class="pt">3 · Kỳ vọng đúng — đừng hứa quá</div><div class="ev">Đây là bước gây nhận biết: bán ngay rất ít. <b>Thành công = số người tìm tên Maison tăng + tới đúng tệp với chi phí rẻ</b>, KHÔNG phải đơn hàng ngay. Đặt mốc: 3–4 tuần không hiệu quả → tắt.</div></div>
+      <div class="pcard"><div class="pt">4 · Ai làm — công cụ</div><div class="ev">Công cụ google-ads MCP hiện chỉ <b>đọc</b> tài khoản của mình, <b>không dựng được nhóm nhắm</b>. Phải làm trong <b>tài khoản Google Ads đầy đủ</b> → giao <b>Matthew</b> làm.</div></div>
+    </div>
+    <div class="note"><b>Độ tin: 🟡 Thử, không cam kết.</b> Phép thử này trả lời được “quảng cáo tới tệp siêu giàu có làm tăng nhận biết không” — nhưng KHÔNG chứng minh được nó bán được đơn may riêng $2000+. Ưu tiên thấp, làm sau khi web + kênh tự-nhiên chạy.</div>
+  </section>
+
+  <!-- 9 METHOD / HONESTY -->
+  <section class="slide">
+    <div class="kicker">Cách làm & sự trung thực</div>
+    <h2>Vì sao tin được bản này</h2>
+    <ul style="margin-left:18px;font-size:13px;line-height:1.8;">
+      <li>Nhiều nhóm “trợ lý AI” chạy song song: đi lấy số (SimilarWeb + đọc web) → phân tích → <b>một nhóm chuyên phản biện, bắt lỗi</b> → tổng hợp.</li>
+      <li>Bước phản biện đã <b>bắt và loại số bịa</b>: gộp sai nhóm brand, % “tìm bằng tên” của vài brand không có dữ liệu, số lượt của người nổi tiếng, và <b>toàn bộ số “trùng khách” ở Câu 2</b>.</li>
+      <li>Chỉ trình bày số <b>đo được thật</b>. Chỗ nào web quá nhỏ nên thiếu số thì ghi rõ (Công Trí thiếu số kênh; các nhà Việt phần lớn thiếu số nước).</li>
+      <li>Lưu ý: web các nhà Việt còn nhỏ (Phan Huy ~9.700, Công Trí ~6.900 lượt/tháng) → % đúng hướng nhưng không chính xác tuyệt đối. Ý “VN là #2 của Maison” là suy luận (chưa đo trực tiếp cho chính Maison).</li>
+    </ul>
+    <div class="foot">Maison Dénudé · Nghiên cứu (Maddy) · Số gốc lưu ở thư mục <code>data_logs/</code> · Báo cáo chi tiết: <code>bao-cao-master-digital-presence.md</code> · Nội bộ · Không chứa mật khẩu/API.</div>
+  </section>
+
+</div>
+</body>
+</html>
