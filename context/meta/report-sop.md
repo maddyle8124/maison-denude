@@ -79,6 +79,7 @@ Trước khi viết một chữ, chốt rõ 4 lớp đầu vào (ghi lại trong
 - **Mọi nhận định về giá/hành vi phải có URL gốc** (kèm trích nguyên văn nếu là forum/báo). Không có nguồn → **bỏ**, hoặc dán nhãn rõ "giả thuyết — chưa có nguồn".
 - **Phân loại độ tin cậy:** ✅ Đã chứng minh · 🟡 Nên thử (cần test) · 🔴 Đừng cam kết.
 - **Tự kiểm & đính chính lỗi của chính mình** một cách minh bạch (vd: nhầm tên brand, nhầm tệp khách). Luôn _be critical_ với chính output.
+- **Không tin cột phân tích do máy sinh trong dữ liệu nguồn — phải mở ảnh/creative gốc.** _(bổ sung 2026-08-07, từ báo cáo quảng cáo Maison)_ Tệp `ads/Meta visual analysis.xlsx` có cột "Creative & Visual Execution Analysis" mô tả CHICING/Kisserine là "sảnh khách sạn, bar sân thượng, váy ôm sát, son đỏ, cắt dựng kiểu TikTok"; creative thật lại là váy lụa dáng suông trong biệt thự Pháp cổ. Cùng lỗi đó khiến MARYMY bị xếp nhầm là "váy tiệc, xa Maison nhất" trong khi họ có hẳn một trang **áo dài sui** cạnh tranh trực diện. **Quy tắc: mọi nhận định về mỹ thuật/định vị của đối thủ phải đối chiếu creative gốc trước khi vào báo cáo, và creative đó nên được nhúng luôn làm bằng chứng.**
 - **Audit thiên lệch:** đừng để kết luận bị "nhiễm" theo cách đặt câu hỏi/prompt; không thổi phồng cầu (cầu mỏng thì nói thẳng là khoảng trống, không tô vẽ).
 
 ---
