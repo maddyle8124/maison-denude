@@ -93,18 +93,18 @@ itself is sent by Google to attendees.
   (chị Michelle, per client-stakeholders). **For testing NOW, use `thieuxmaison@gmail.com`**
   as the source/owner calendar (revised 2026-07-08 per D-12: the project account owns test events,
   not the personal email). `GOOGLE_CALENDAR_ID` = `GCAL_OWNER_EMAIL` = `thieuxmaison@gmail.com`.
-  `nguyenthaithieu@gmail.com` remains a test INVITEE (D-5) but is no longer the calendar owner.
+  `nguyenthaithieu@gmail.com` is no longer a team invitee (D-5) or the calendar owner.
   Switch to the marketing manager's calendar before go-live.
 - **D-12 — Canonical project account = `thieuxmaison@gmail.com`** (2026-07-08 user directive).
   ALL registrations for this project — Google Cloud, OAuth clients, third-party services —
   are under `thieuxmaison@gmail.com` (the 2-month engagement's dedicated email), NEVER a personal
   email. The booking OAuth client lives in Google Cloud project `maison-denude` under
-  thieuxmaison. `nguyenthaithieu@gmail.com` is the user's PERSONAL email, used here ONLY as the
-  interim test calendar owner / test invitee — not the account infrastructure is registered under.
+  thieuxmaison. `nguyenthaithieu@gmail.com` is the user's PERSONAL email and is not used as a
+  team invitee or as the account under which infrastructure is registered.
   OAuth Web client id `1052017137688-...apps.googleusercontent.com`, cred file (git-ignored)
   `main-dev/env/maison-denude-booking.json`.
 - **D-5 — Team invitees** (attendees added to every event, in addition to the client):
-  `nhokieunhan@gmail.com`, `nguyenthaithieu@gmail.com`, and `nhokieunhan3@gmail.com`.
+  `311chiadriana@gmail.com`, `Mitodaseo@gmail.com`, and `hamynganlh@gmail.com`.
   (These double as the early test recipients before real client traffic.)
 - **D-6 — Working hours:** Mon–Sat 10:00–18:00, **60-min slots** (start times 10:00–17:00),
   closed Sunday, tz **Asia/Ho_Chi_Minh**. Both Online and Instore share this window.
@@ -245,7 +245,7 @@ Google emails the calendar invite to both parties.
 - [ ] Slot claim is provably atomic (concurrent double-book test fails the 2nd insert).
 - [ ] Server re-validates availability at submit (no client-trusted slot).
 - [ ] Calendar event created with correct tz, duration, attendees, and Meet link per type.
-- [ ] Test invites to `nhokieunhan@gmail.com` + `nguyenthaithieu@gmail.com` succeed end-to-end.
+- [ ] Test invites to `311chiadriana@gmail.com`, `Mitodaseo@gmail.com`, and `hamynganlh@gmail.com` succeed end-to-end.
 - [ ] Calendar/email failure contract implemented (no silent confirmed-without-event).
 - [ ] Client-facing copy/invite language per OQ-CAL-06.
 ```

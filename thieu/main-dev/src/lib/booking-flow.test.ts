@@ -48,11 +48,11 @@ const baseInput: BookSlotInput = {
 };
 
 const TEAM = [
-  'nhokieunhan@gmail.com',
-  'nguyenthaithieu@gmail.com',
-  'nhokieunhan3@gmail.com',
+  '311chiadriana@gmail.com',
+  'Mitodaseo@gmail.com',
+  'hamynganlh@gmail.com',
 ];
-const OWNER = 'nguyenthaithieu@gmail.com';
+const OWNER = 'owner@gmail.com';
 
 /**
  * In-memory BookingStore fake with call records. `claimResult` lets a test force
@@ -177,6 +177,8 @@ function makeDeps(
     teamInvitees: TEAM,
     ownerEmail: OWNER,
     atelierAddress: '194 Lê Thánh Tôn, 2nd Floor, District 1',
+    // Keep the booking window deterministic as the real calendar advances.
+    now: new Date('2026-07-01T00:00:00Z'),
     ...overrides,
   };
 }

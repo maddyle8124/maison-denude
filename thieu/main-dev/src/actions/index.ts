@@ -50,9 +50,9 @@ const SLOT_MINUTES = WEEKLY_RULES.slotMinutes;
 
 /** D-5 — team invitees added to every event (in addition to the client). */
 const TEAM_INVITEES = [
-  'nhokieunhan@gmail.com',
-  'nguyenthaithieu@gmail.com',
-  'nhokieunhan3@gmail.com',
+  '311chiadriana@gmail.com',
+  'Mitodaseo@gmail.com',
+  'hamynganlh@gmail.com',
 ];
 
 const DEFAULT_CANCEL_BASE_URL = 'https://maisondenude.com/booking/cancel';

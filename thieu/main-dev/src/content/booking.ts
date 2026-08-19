@@ -21,7 +21,7 @@ export const bookingPage = {
     'Model in a blush metallic-lace áo dài against an antiqued gold mirror wall',
   eyebrow: 'Maison Denude — Saigon',
   title: 'Private Consultation',
-  lede: 'Every piece begins with a conversation. Choose a time below and we will confirm your fitting at once — online, or in person above Lê Thánh Tôn.',
+  lede: 'Every piece begins with a conversation. Choose a time below and we will confirm your fitting at once — online, or in person at Lê Thánh Tôn.',
   addressLines: ['194 Lê Thánh Tôn, 2nd Floor', 'District 1, Ho Chi Minh City'],
   responseNote: 'Confirmed the moment you book.',
 };

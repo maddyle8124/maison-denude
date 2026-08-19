@@ -25,11 +25,12 @@ const SLOT = {
   endIso: '2026-07-15T11:00:00+07:00',
 };
 
-const OWNER = 'nguyenthaithieu@gmail.com';
+const OWNER = 'owner@gmail.com';
 const TEAM = [
-  'nhokieunhan@gmail.com',
-  'nguyenthaithieu@gmail.com', // == OWNER — must be filtered out of attendees
-  'nhokieunhan3@gmail.com',
+  '311chiadriana@gmail.com',
+  'Mitodaseo@gmail.com',
+  'hamynganlh@gmail.com',
+  'owner@gmail.com', // == OWNER — must be filtered out of attendees
 ];
 
 const baseInput: EventInput = {
@@ -118,8 +119,9 @@ describe('buildEventPayload', () => {
     // Client present.
     expect(emails).toContain('client@example.com');
     // Non-owner team members present.
-    expect(emails).toContain('nhokieunhan@gmail.com');
-    expect(emails).toContain('nhokieunhan3@gmail.com');
+    expect(emails).toContain('311chiadriana@gmail.com');
+    expect(emails).toContain('mitodaseo@gmail.com');
+    expect(emails).toContain('hamynganlh@gmail.com');
     // Owner filtered out even though present in teamInvitees.
     expect(emails).not.toContain(OWNER.toLowerCase());
     // No duplicates.
@@ -129,7 +131,7 @@ describe('buildEventPayload', () => {
   it('filters the owner out case-insensitively', () => {
     const p = buildEventPayload({
       ...baseInput,
-      teamInvitees: ['NguyenThaiThieu@Gmail.com', 'nhokieunhan@gmail.com'],
+      teamInvitees: ['Owner@Gmail.com', '311chiadriana@gmail.com'],
     }) as { attendees: Array<{ email: string }> };
     const emails = p.attendees.map((a) => a.email.toLowerCase());
     expect(emails).not.toContain(OWNER.toLowerCase());
@@ -138,10 +140,10 @@ describe('buildEventPayload', () => {
   it('dedupes when the client email equals a team email (case-insensitive, no duplicate attendee)', () => {
     const p = buildEventPayload({
       ...baseInput,
-      clientEmail: 'NhoKieuNhan@gmail.com', // same as a team member, different case
+      clientEmail: 'MitodaSEO@gmail.com', // same as a team member, different case
     }) as { attendees: Array<{ email: string }> };
     const emails = p.attendees.map((a) => a.email.toLowerCase());
-    const count = emails.filter((e) => e === 'nhokieunhan@gmail.com').length;
+    const count = emails.filter((e) => e === 'mitodaseo@gmail.com').length;
     expect(count).toBe(1);
   });
 
